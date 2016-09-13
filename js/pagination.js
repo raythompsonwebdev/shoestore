@@ -1,6 +1,6 @@
   $(document).ready(function(){
   
-  $('#results').before('<form id="pag_search" ><input type="text" name="text" pattern="[a-z A-Z]"><input type="submit" value="Search"></form><nav id="pagination"></nav>');
+  $('#results').before('<form id="pag_search" ><label>New Products</label> <select name="gender"><option value="Men">Men</option><option value="Women">Women</option>      <option value="Women">Children</option></select></form><nav id="pagination"></nav>');
   
   var rowsShown = 4;
   var rowsTotal = $('#results div').length;
@@ -9,7 +9,7 @@
   
 for(i = 0;i<numPages;i++) {
 		var pageNum = i + 1;
-		$('#pagination').append('<a href="#" rel="'+i+'">Page '+pageNum+'</a> ');
+		$('#pagination').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
 	}
       
     $('#results div').hide();

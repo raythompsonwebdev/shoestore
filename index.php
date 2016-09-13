@@ -6,13 +6,11 @@
 <meta name="description" content="shoe store website selling the latest shoes and accessories at affordable prices. " />
 <meta name="keywords" content="Shoes, Boots, Footware, Handbags, Hats, " />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--Scale-->
 <meta name="viewport" content="minimum-scale=0">
 <meta name="viewport" content="user-scalable=yes">
-<!--combined viewpoint values-->
+<meta name="viewport" content="target-densitydpi=device-dpi">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--End Scale-->
-<title>shoestore-Home-Page</title>
+<title>Shoestore-Home-Page</title>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css" />
@@ -35,7 +33,7 @@
 <!--Header-->  
 <header role="banner">
   <figure id="logo">
-  <img src="images/page1_03.png" alt="logo" >
+  <img src="images/shoe-store-logo.png" alt="shoe-store-logo" >
   </figure>
 </header>
 <!--End of header-->
@@ -89,41 +87,65 @@
   <!--Second nav box-->
   <nav id="sec_nav">
 
-    <div id="accordion">
+  <div id="accordion">
       <h3>Men&acute;s Shoes</h3>
-        <div>
-          <ul>
-            <li>Casual</li>
-            <li>Dress</li>
-            <li>Boots</li>
-             <li>Trainers</li>
-          </ul>
-        </div>
+      <div>
+      <ul>
+      <li>Athletics</li>
+      <li>Boat Shoes</li>
+      <li>Fashion Sneakers</li>
+      <li>Formal &amp;Tuxedo</li>
+      <li>Shoes</li>
+      <li>Lace-Ups</li>
+      <li>Loafers &amp; Slips-ons</li>
+      <li>Outdoor</li>
+      <li>Sandals</li>
+      <li>Slippers</li>
+      <li>Work &amp; Safety</li>
+      <li></li>
+      </ul>
+      </div>
       <h3>Women&acute;s  Shoes</h3>
-        <div>
-          <ul>
-            <li>Casual</li>
-            <li>Dress</li>
-            <li>Boots</li>
-             <li>Trainers</li>
-          </ul>
-        </div>
+      <div>
+      <ul>
+      <li>Athletics</li>
+      <li>Boat Shoes</li>
+      <li>Fashion Sneakers</li>
+      <li>Formal &amp;Tuxedo</li>
+      <li>Shoes</li>
+      <li>Lace-Ups</li>
+      <li>Loafers &amp; Slips-ons</li>
+      <li>Outdoor</li>
+      <li>Sandals</li>
+      <li>Slippers</li>
+      <li>Work &amp; Safety</li>
+      <li></li>
+      </ul>
+      </div>
       <h3>Kid&acute;s Shoes</h3>
       <div>
-        <ul>
-          <li>Casual</li>
-          <li>Dress</li>
-          <li>Boots</li>
-          <li>Trainers</li>
-        </ul>
+      <ul>
+      <li>Athletics</li>
+      <li>Boat Shoes</li>
+      <li>Fashion Sneakers</li>
+      <li>Formal &amp;Tuxedo</li>
+      <li>Shoes</li>
+      <li>Lace-Ups</li>
+      <li>Loafers &amp; Slips-ons</li>
+      <li>Outdoor</li>
+      <li>Sandals</li>
+      <li>Slippers</li>
+      <li>Work &amp; Safety</li>
+      <li></li>
+      </ul>
       </div>
       <h3>Bag&acute;s &amp; Accessories</h3>
       <div>
-          <ul>
-            <li>List item one</li>
-            <li>List item two</li>
-            <li>List item three</li>
-          </ul>
+      <ul>
+      <li>Handbags</li>
+      <li>Scarfs</li>
+      <li>Belts</li>
+      </ul>
       </div>
     </div>
   </nav>
@@ -169,7 +191,7 @@
 
   <!--product boxes-->
   <article class="product_box">
-  <figure class="product_boximg"><img src="images/page1_18.png" alt="Trainers" /></figure>
+  <figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
   <article class="product_boxdetails"> 
   <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>     
   <span class="price"> Trainers</span>
@@ -179,7 +201,7 @@
 
   <!--product boxes-->
   <article class="product_box">
-  <figure class="product_boximg"><img src="images/page1_20.png" alt="Suede shoe" /></figure>
+  <figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
    <article class="product_boxdetails"> 
   <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>      
   <span class="price">Skate Shoes</span>
@@ -189,7 +211,7 @@
 
   <!--product boxes-->
   <article class="product_box">
-  <figure class="product_boximg"><img src="images/page1_22.png"  alt="Fur lined Ladies Boots" /></figure>
+  <figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
   <article class="product_boxdetails"> 
   <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>  
   <span class="price">Boots</span>
@@ -199,7 +221,7 @@
 
   <!--product boxes-->
   <article class="product_box">
-  <figure class="product_boximg"><img src="images/page1_25.png" alt="Boot" /></figure>
+  <figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" /></figure>
   <article class="product_boxdetails"> 
   <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>  
   <span class="price">Womens Boots</span>
@@ -213,7 +235,8 @@
 
   <!--product box-->
   <article class="product_box">
-  <figure class="product_boximg"><img src="images/page1_18.png" alt="Trainers" /></figure>
+    <figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
+
   <article class="product_boxdetails"> 
   <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>       
   <span class="price"> Trainers</span>
@@ -223,7 +246,7 @@
 
   <!--product box-->
   <article class="product_box">
-  <figure class="product_boximg"><img src="images/page1_20.png" alt="Suede shoe" /></figure>
+  <figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
   <article class="product_boxdetails"> 
   <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>       
   <span class="price">Skate Shoes</span>
@@ -233,7 +256,7 @@
 
   <!--product box-->
   <article class="product_box">
-  <figure class="product_boximg"><img src="images/page1_22.png"  alt="Fur lined Ladies Boots" /></figure>
+   <figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
   <article class="product_boxdetails"> 
   <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>  
   <span class="price">Boots</span>
@@ -243,7 +266,7 @@
 
   <!--product boxes-->
   <article class="product_box">
-  <figure class="product_boximg"><img src="images/page1_25.png" alt="Boot" /></figure>
+ <figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" /></figure>
   <article class="product_boxdetails"> 
   <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>  
   <span class="price">Womens Boots</span>
@@ -259,8 +282,11 @@
 </section>
 <!--end of content section-->
 
-</section><!--end of content-->
+</section>
+
 <div class="clearfix"></div>
+
+<hr><!--end of content-->
 <!--Footer--> 
 <footer>
   <ul class="footer_nav">
@@ -272,10 +298,13 @@
     <li><a href="contact_us.php">Contact</a></li>
   </ul>
 </footer><!--end of footer-->
+
 <div class="clearfix"></div>
+
+<br/>
+
 <p class="copyr">2014 - Built by Raymond Thompson - Website Design from phpjabber.com 
-<br/>-This website is a demo and not functional -
-<br/>see other demo websites at raythompwebdesign.com
+-This website is a demo and not functional -see other demo websites at raythompwebdesign.com
 <br/>
 <script type="text/javascript">
 document.write("Page Last Updated: " + document.lastModified);
@@ -294,7 +323,7 @@ window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js">\x3C/scri
       collapsible: true
     });
   });
-  </script>
+ </script>
   
   <!-- Include either the minifed or production version, NOT both!! -->
 <script type="text/javascript" src="js/qtip/jquery.qtip.min.js"></script>

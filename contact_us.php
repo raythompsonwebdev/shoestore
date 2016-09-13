@@ -5,14 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="shoe store website selling the latest shoes and accessories at affordable prices. " />
 <meta name="keywords" content="Shoes, Boots, Footware, Handbags, Hats, " />
-<!--Scale-->
 <meta name="viewport" content="minimum-scale=0">
 <meta name="viewport" content="user-scalable=yes">
-
-<!--combined viewpoint values-->
+<meta name="viewport" content="target-densitydpi=device-dpi">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--End Scale-->
-<title>shoestore-contact-page</title>
+<title>Shoestore-Contact-Page</title>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css" />
@@ -33,7 +30,7 @@
 <!--Header-->  
 <header>
  <figure id="logo">
-<img src="images/page1_03.png" alt="logo" />
+<img src="images/shoe-store-logo.png" alt="shoe-store-logo" />
 </figure>
 </header>
 
@@ -58,47 +55,52 @@
 <br/>
 
 <div class="text_boxa"> <br/>
-  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    Morbi vel rutrum ante<br/>
+ <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+  <p>Morbi vel rutrum ante. Vivamus adipiscing tincidunt purus at adipiscing. Proin orci metus, gravida in cursus et, egestas in leo. Suspendisse potenti. Vivamus congue sapien nec velit adipiscing a tincidunt massa porta.</p>
+  <br/>
+  <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </h1>
+   <p>Nulla quis urna nisl. Nulla dolor magna, pretium ac elementum nec, tristique eu sem. Sed lectus arcu, ultrices at mattis id, elementum in nisl. Sed condimentum adipiscing urna, id venenatis ante placerat vel.</p>
+   <br/>
+    <h1>Integer pellentesque lorem quis libero consectetur ac egestas magna tincidunt.</h1>
+    <p>Vivamus sit amet ipsum a neque elementum imperdiet vitae nec velit. Cras id diam sapien. Phasellus malesuada congue est, eget vulputate est dignissim vitae. Ut faucibus dapibus sollicitudin. Vestibulum vitae purus et leo vulputate ultrices eget vel odio.</p>
     <br/>
-    Vivamus adipiscing tincidunt purus at adipiscing
-    Proin orci metus, gravida in cursus et, egestas 
-    Suspendisse potenti<br/>
+    <h1>Sed sagittis aliquet risus tempor varius.</h1>
+    <p>Integer eget dui vel tortor fermentum tincidunt. Nullam vitae odio nec lorem porttitor tristique porta id sapien. Mauris ornare leo at mi tempor eget tincidunt nulla auctor. Fusce adipiscing lacinia erat nec molestie. Aenean diam justo, faucibus et feugiat non, viverra ac turpis.</p>
     <br/>
-    Vivamus congue sapien nec velit adipiscing a tincidunt 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    Nulla quis urna nisl<br/>
-    <br/>
-    Nulla dolor magna, pretium ac elementum nec, tristique
-    Sed lectus arcu, ultrices at mattis id, elementum in nisl
-    Sed condimentum adipiscing urna, id venenatis ante<br/>
-  </li>
 </div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem explicabo, ab expedita rem temporibus repellendus eum, omnis, distinctio est ipsum vel voluptate perspiciatis, quis earum accusantium unde nisi quas. Voluptatum.</p>
 
 <div id="stylized" class="myform">
 
 <form  id="form" method="post" action="" role="form">
- <label for="nume">Your Name: </label>
+<ul>
+<li>
+ <label for="nume">Name</label>
  <input type="text" name="name" id="name" pattern="[a-z A-Z]"required  />
- <br />
- <label for="email">Your E-mail:</label> 
- <input type="text" name="email" id="email" required /><br />
- <label for="subject">Subject: </label> 
- <input type="text" name="subject" id="subject" pattern="[a-z A-Z]" />
- <br /><br/>
- <label for="message">Your message: (<i>maximum 500 characters</i>)</label><br />
- <textarea name="message" id="message" cols="35" rows="20" pattern="[a-z A-Z]"></textarea>
+</li>
+<li>
+ <label for="email">E-mail</label> 
+ <input type="text" name="email" id="email" required />
+ </li>
+<li>
+ <label for="message">Message</label>
+ <textarea name="message" id="message" cols="35" rows="15" pattern="[a-z A-Z]"></textarea>
  <input type="hidden" name="anti_spam" id="anti_spam" value="" />
- <br />
- <a href="" title="" target="_blank" style="font-size:8px; color:#eaeafe;"> </a>
- <br />
- <input type="submit" value="Send" id="submit" />
+  <a href="" title="" target="_blank" style="font-size:8px; color:#eaeafe;"> </a>
+</li>
+<li>
+ 	<input type="submit" value="Send" id="submit" />
+</li>
+ <ul/>
+ 
 </form>
 
 </div> <!-- end of form class -->
 
 </section>  <!--end of content-->
 <div class="clearfix"></div>
+<hr>
 <footer>
   <ul class="footer_nav">
   <li><a href="index.php">Home</a></li>
@@ -108,12 +110,12 @@
   <li><a href="faqs.html">FAQS</a></li>
   <li><a href="contact_us.php">Contact</a></li>
   </ul>
-           
+ 
 </footer><!--end of footer-->
 <div class="clearfix"></div>
+<br/>
 <p class="copyr">2014 - Built by Raymond Thompson - Website Design from phpjabber.com 
-<br/>-This website is a demo and not functional -
-<br/>see other demo websites at raythompwebdesign.com
+-This website is a demo and not functional see other demo websites at raythompwebdesign.com
 <br/>
 <script type="text/javascript">
 document.write("Page Last Updated: " + document.lastModified);
