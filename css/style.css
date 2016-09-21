@@ -43,7 +43,7 @@ form, button { border: 0; margin: 0; padding: 0; }
 
 hr { display: block; clear: both; }
 
-.myCustomClass .qtip-content { font-size: 1.3em; width: 175px; height: 40px; outline: none; color: #1B7D7F; letter-spacing: 0.01em; font-family: arial, sans-serif; line-height: 1.5em; font-weight: bold; text-transform: uppercase; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; -ms-transition: all ease .2s; transition: all ease .2s; border: 0; background-color: rgba(0, 0, 0, 0.7); }
+.myCustomClass .qtip-content { width: 175px; height: 40px; outline: none; color: #1B7D7F; letter-spacing: 0.01em; font-family: arial, sans-serif; line-height: 1.5em; font-weight: bold; text-transform: uppercase; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; -ms-transition: all ease .2s; transition: all ease .2s; border: 0; background-color: rgba(0, 0, 0, 0.7); }
 .myCustomClass .qtip-content span:first-of-type { color: #fff; display: inline-block; font-size: 1.6em; width: 70%; font-size: 1.35em; letter-spacing: 0.02em; }
 .myCustomClass .qtip-content span:last-of-type { color: #ea3411; display: inline-block; font-size: 1.2em; width: 29%; float: right; margin: 0; text-align: center; line-height: 1.5em; letter-spacing: 0.02em; }
 .myCustomClass .qtip-default { background-color: rgba(0, 0, 0, 0.7); padding: 1%; }
@@ -71,13 +71,13 @@ hr { display: block; clear: both; }
 #Wrapper #content { height: auto; width: 100%; margin: 1% 0px; min-height: 1200px; font-family: "bauerb", arial, helvetica, sans-serif; /*rightside content section within content div*/ /*leftbar*/ }
 #Wrapper #content p { font-size: 0.95em; line-height: 1.6em; }
 #Wrapper #content p.copyr { margin: 0; color: #000; font-size: 0.6em; width: 100%; letter-spacing: 0.1em; font-family: bauber, sans-serif; line-height: 1.5em; }
-#Wrapper #content .text_boxa { width: 390px; height: auto; display: block; float: right; background-color: #f9f9f9; padding: 1%; border: 2px #cbc5c5 solid; }
-#Wrapper #content .text_boxa h1 { font-size: 0.9em; color: #ed735c; font-weight: bold; }
+#Wrapper #content .text_boxa { width: 32.50%; height: auto; display: block; float: right; background-color: #f9f9f9; padding: 1%; border: 2px #cbc5c5 solid; }
+#Wrapper #content .text_boxa h1 { font-size: 0.9em; color: #ed735c; line-height: 1.5em; font-weight: bold; }
 #Wrapper #content .text_boxa p { width: 100%; margin: auto; font-family: "bauerb", arial, helvetica, sans-serif; font-size: 0.9em; line-height: 1.8em; }
 #Wrapper #content #stylized #form { width: 100%; padding: 0; font-family: "bauerb", arial, helvetica, sans-serif; }
-#Wrapper #content #stylized #form ul { height: 550x; display: block; }
+#Wrapper #content #stylized #form ul { height: auto; display: block; }
 #Wrapper #content #stylized #form ul li, #Wrapper #content #stylized #form ul li:nth-of-type(3) { height: 50px; display: block; margin: 0; padding: 0; }
-#Wrapper #content #stylized #form ul li label, #Wrapper #content #stylized #form ul li:nth-of-type(3) label { width: 15%; float: left; display: inline-block; line-height: 40px; font-size: 0.9em; }
+#Wrapper #content #stylized #form ul li label, #Wrapper #content #stylized #form ul li:nth-of-type(3) label { width: 15%; float: left; display: inline-block; line-height: 40px; font-size: 0.9em; text-align: center; }
 #Wrapper #content #stylized #form ul li input, #Wrapper #content #stylized #form ul li:nth-of-type(3) input { width: 75%; height: 30px; display: inline-block; }
 #Wrapper #content #stylized #form ul li textarea, #Wrapper #content #stylized #form ul li:nth-of-type(3) textarea { width: 75%; margin: 0; padding: 0; display: inline-block; }
 #Wrapper #content #stylized #form ul li input:focus, #Wrapper #content #stylized #form ul li textarea:focus, #Wrapper #content #stylized #form ul li:nth-of-type(3) input:focus, #Wrapper #content #stylized #form ul li:nth-of-type(3) textarea:focus { background-color: #f9f9f9; outline: 0; }
@@ -85,14 +85,14 @@ hr { display: block; clear: both; }
 #Wrapper #content #stylized #form ul li #submit:hover, #Wrapper #content #stylized #form ul li:nth-of-type(3) #submit:hover { background-color: #FFF; color: #ea3411; border: 0; cursor: pointer; margin-left: 15%; }
 #Wrapper #content #stylized #form ul li:nth-of-type(3) { height: 265px; }
 #Wrapper #content .myform { width: 50%; margin-left: 5%; margin-top: 5%; }
-#Wrapper #content .context { width: 50%; margin: 0px 0px 0px 3%; margin-bottom: 10px; font-family: Arial, Helvetica, sans-serif; line-height: 1.6em; font-size: 0.8em; }
+#Wrapper #content .context { width: 60%; margin: 0 0 0 3%; margin-bottom: 2%; font-family: Arial, Helvetica, sans-serif; line-height: 1.6em; font-size: 0.8em; }
 #Wrapper #content .context_title { font-weight: bold; color: #C60; font-size: 1.1em; }
 #Wrapper #content #content_section { float: right; height: auto; width: 76%; margin: 0 0 20px 0; /*Index page banner box*/ /*product boxes*/ }
 #Wrapper #content #content_section h1 { height: 40px; margin: 0px; text-indent: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 1.5em; line-height: 40px; }
-#Wrapper #content #content_section #bannerbox { height: 400px; width: 100%; margin: 10px 0; }
+#Wrapper #content #content_section #bannerbox { height: 400px; width: 100%; margin: 0; }
 #Wrapper #content #content_section #bannerbox p { font-family: Arial, Helvetica, sans-serif; font-size: 1.2em; height: auto; line-height: 35px; position: absolute; margin: 0; top: 170px; left: 425px; z-index: 2; width: 40%; }
 #Wrapper #content #content_section #bannerbox p:first-line { font-size: 1.9em; color: #999999; }
-#Wrapper #content #content_section #bannerbox #bannerboximg { width: 555px; height: 346px; margin: 0; padding: 0; display: inline-block; }
+#Wrapper #content #content_section #bannerbox #bannerboximg { width: 555px; margin: 0; padding: 0; display: inline-block; }
 #Wrapper #content #content_section #bannerbox #apDiv1 { margin: 12% 3% 0 1%; width: 23%; height: 200px; float: left; display: inline-block; }
 #Wrapper #content #content_section #bannerbox #apDiv1 a { background-color: #ea3411; display: inline-block; height: 35px; width: 100%; margin-top: 3%; color: #FFF; font-size: 1.25em; line-height: 35px; text-align: center; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; -ms-transition: all ease .2s; transition: all ease .2s; }
 #Wrapper #content #content_section #bannerbox #apDiv1 a:hover { background-color: #FFF; display: inline-block; height: 35px; width: 100%; float: left; margin-top: 3%; color: #ea3411; font-size: 1.35em; text-align: center; }
@@ -158,24 +158,166 @@ hr { display: block; clear: both; }
   #Wrapper #searchbar h1 { font-size: 1.5em; }
   #Wrapper #searchbar #searcher2 label { font-size: 1.4em; }
   #Wrapper nav li a { font-size: 0.9em; }
+  #Wrapper #content p { font-size: 0.85em; line-height: 1.6em; }
+  #Wrapper #content #stylized #form { width: 100%; }
+  #Wrapper #content #stylized #form ul { height: auto; display: block; }
+  #Wrapper #content #stylized #form ul li, #Wrapper #content #stylized #form ul li:nth-of-type(3) { height: 50px; display: block; margin: 0; padding: 0; }
+  #Wrapper #content #stylized #form ul li label, #Wrapper #content #stylized #form ul li:nth-of-type(3) label { width: 20%; font-size: 0.9em; }
+  #Wrapper #content #stylized #form ul li input, #Wrapper #content #stylized #form ul li:nth-of-type(3) input { width: 75%; }
+  #Wrapper #content #stylized #form ul li textarea, #Wrapper #content #stylized #form ul li:nth-of-type(3) textarea { width: 75%; }
+  #Wrapper #content #stylized #form ul li input:focus, #Wrapper #content #stylized #form ul li textarea:focus, #Wrapper #content #stylized #form ul li:nth-of-type(3) input:focus, #Wrapper #content #stylized #form ul li:nth-of-type(3) textarea:focus { outline: 0; }
+  #Wrapper #content #stylized #form ul li #submit, #Wrapper #content #stylized #form ul li:nth-of-type(3) #submit { height: 30px; font-size: 1.1em; margin-left: 18%; }
+  #Wrapper #content #stylized #form ul li #submit:hover, #Wrapper #content #stylized #form ul li:nth-of-type(3) #submit:hover { background-color: #FFF; margin-left: 18%; }
+  #Wrapper #content #stylized #form ul li:nth-of-type(3) { height: 238px; }
+  #Wrapper #content .text_boxa p { font-size: 0.8em; }
   #Wrapper #content .context { font-size: 0.75em; }
+  #Wrapper #content #content_section { /*product boxes*/ }
   #Wrapper #content #content_section #pagination { width: 35%; }
+  #Wrapper #content #content_section .product_boxes, #Wrapper #content #content_section form #results .product_boxes { height: 235px; /*Individual product box*/ }
+  #Wrapper #content #content_section .product_boxes h1, #Wrapper #content #content_section form #results .product_boxes h1 { height: 30px; font-size: 0.9em; line-height: 30px; }
+  #Wrapper #content #content_section .product_boxes p, #Wrapper #content #content_section form #results .product_boxes p { height: 10px; font-size: 0.8em; margin-top: 30px; }
+  #Wrapper #content #content_section .product_boxes .product_box, #Wrapper #content #content_section form #results .product_boxes .product_box { width: 25%; margin-bottom: 15px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boximg, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boximg { width: 80%; margin: 5px auto; height: 140px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails { height: 55px; padding: 4% 0 0 0; /*Price Icon*/ }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .price, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .price { font-size: 0.75em; margin: 3% 0 0 3%; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .product_icon, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .product_icon { margin: 1% 2% 0 0; }
   #Wrapper #content #content_section #bannerbox { height: 330px; }
   #Wrapper #content #content_section #bannerbox p { top: 150px; left: 280px; font-size: 1.1em; width: 49%; }
-  #Wrapper #content #content_section #bannerbox #bannerboximg { width: 511px; height: 346px; }
+  #Wrapper #content #content_section #bannerbox #bannerboximg { width: 511px; }
   #Wrapper #content #content_section #bannerbox #apDiv1 a { font-size: 1.15em; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a:hover { font-size: 1.20em; }
+  #Wrapper #content #content_section .product_boxes_longer { height: 160px; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer { max-height: 160px; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boxdetails_longer p { font-size: 0.75em; }
   #Wrapper #content #left_bar #searchbox #searcher h1 { font-size: 1.3em; }
-  #Wrapper #content #stylized #form label { font-size: 0.9em; }
-  #Wrapper #content #stylized #form #submit { font-size: 1.1em; }
-  #Wrapper footer ul.footer_nav li a { font-size: 0.9em; } }
+  #Wrapper #content #left_bar #searchbox #searcher select { font-size: 1.2em; }
+  #Wrapper #content #left_bar #sec_nav #accordion ul li { font-size: 0.75em; }
+  #Wrapper footer ul.footer_nav li a { font-size: 0.8em; } }
 @media all and (max-width: 980px) { #Wrapper nav li a { font-size: 0.8em; }
   #Wrapper #searchbar #searcher2 label { font-size: 1.3em; }
+  #Wrapper #content .text_boxa p { font-size: 0.8em; }
+  #Wrapper #content #stylized #form { width: 100%; }
+  #Wrapper #content #stylized #form ul { height: auto; display: block; }
+  #Wrapper #content #stylized #form ul li label, #Wrapper #content #stylized #form ul li:nth-of-type(3) label { width: 18%; font-size: 0.8em; }
+  #Wrapper #content #stylized #form ul li input, #Wrapper #content #stylized #form ul li:nth-of-type(3) input { width: 75%; }
+  #Wrapper #content #stylized #form ul li textarea, #Wrapper #content #stylized #form ul li:nth-of-type(3) textarea { width: 76%; }
+  #Wrapper #content #stylized #form ul li input:focus, #Wrapper #content #stylized #form ul li textarea:focus, #Wrapper #content #stylized #form ul li:nth-of-type(3) input:focus, #Wrapper #content #stylized #form ul li:nth-of-type(3) textarea:focus { outline: 0; }
+  #Wrapper #content #stylized #form ul li #submit, #Wrapper #content #stylized #form ul li:nth-of-type(3) #submit { font-size: 1em; }
+  #Wrapper #content #stylized #form ul li #submit:hover, #Wrapper #content #stylized #form ul li:nth-of-type(3) #submit:hover { margin-left: 18%; }
+  #Wrapper #content #stylized #form ul li:nth-of-type(3) { height: 238px; }
+  #Wrapper #content #content_section { /*product boxes*/ }
   #Wrapper #content #content_section h1 { font-size: 1.3em; }
-  #Wrapper #content #content_section #bannerbox p { top: 167px; left: 268px; font-size: 1em; line-height: 30px; }
-  #Wrapper #content #content_section #bannerbox #bannerboximg { width: 489px; height: 285px; }
-  #Wrapper #content #content_section #bannerbox #apDiv1 a { font-size: 1.15em; }
-  #Wrapper #content #content_section #bannerbox #apDiv1 a:hover { font-size: 1.05em; }
+  #Wrapper #content #content_section #bannerbox { height: 291px; }
+  #Wrapper #content #content_section #bannerbox p { top: 131px; left: 268px; font-size: 1.2em; width: 54%; line-height: 30px; }
+  #Wrapper #content #content_section #bannerbox #bannerboximg { width: 410px; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 { margin: 7% 1% 0 4%; width: 26%; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a { font-size: 1.05em; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a:hover { font-size: 1.15em; }
+  #Wrapper #content #content_section .product_boxes, #Wrapper #content #content_section form #results .product_boxes { height: 235px; /*Individual product box*/ }
+  #Wrapper #content #content_section .product_boxes h1, #Wrapper #content #content_section form #results .product_boxes h1 { height: 30px; font-size: 0.9em; line-height: 30px; }
+  #Wrapper #content #content_section .product_boxes p, #Wrapper #content #content_section form #results .product_boxes p { height: 10px; font-size: 0.8em; margin-top: 30px; }
+  #Wrapper #content #content_section .product_boxes .product_box, #Wrapper #content #content_section form #results .product_boxes .product_box { width: 25%; margin-bottom: 15px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boximg, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boximg { width: 80%; height: 140px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails { padding: 4% 0 0 0; /*Price Icon*/ }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .price, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .price { font-size: 0.70em; margin: 3% 0 0 3%; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .product_icon, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .product_icon { margin: 1% 2% 0 0; }
+  #Wrapper #content #left_bar #sec_nav #accordion ul li { font-size: 0.70em; }
   #Wrapper #content #left_bar #searchbox #searcher h1 { font-size: 1.2em; }
+  #Wrapper #content #left_bar #searchbox #searcher select { font-size: 1.1em; }
+  #Wrapper footer ul.footer_nav { width: 80%; }
   #Wrapper footer ul.footer_nav li a { font-size: 0.8em; } }
+@media all and (max-width: 800px) { #Wrapper nav li a { font-size: 0.8em; }
+  #Wrapper #searchbar #searcher2 label { font-size: 1.2em; }
+  #Wrapper #content .text_boxa p { font-size: 0.8em; }
+  #Wrapper #content #content_section { /*product boxes*/ }
+  #Wrapper #content #content_section h1 { font-size: 1.3em; }
+  #Wrapper #content #content_section #pag_search label { font-size: 0.7em; }
+  #Wrapper #content #content_section #pagination { width: 42%; }
+  #Wrapper #content #content_section #bannerbox { height: 299px; }
+  #Wrapper #content #content_section #bannerbox p { top: 140px; left: 238px; font-size: 1em; width: 54%; line-height: 30px; }
+  #Wrapper #content #content_section #bannerbox #bannerboximg { width: 370px; margin-top: 4%; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 { margin: 10% 1% 0 2%; width: 26%; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a { font-size: 1em; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a:hover { font-size: 1.05em; }
+  #Wrapper #content #content_section .product_boxes, #Wrapper #content #content_section form #results .product_boxes { height: 235px; /*Individual product box*/ }
+  #Wrapper #content #content_section .product_boxes h1, #Wrapper #content #content_section form #results .product_boxes h1 { height: 30px; font-size: 0.9em; line-height: 30px; }
+  #Wrapper #content #content_section .product_boxes p, #Wrapper #content #content_section form #results .product_boxes p { height: 10px; font-size: 0.8em; margin-top: 30px; }
+  #Wrapper #content #content_section .product_boxes .product_box, #Wrapper #content #content_section form #results .product_boxes .product_box { width: 25%; margin-bottom: 15px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boximg, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boximg { width: 80%; height: 140px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails { padding: 4% 0 0 0; /*Price Icon*/ }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .price, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .price { font-size: 0.70em; margin: 3% 0 0 3%; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .product_icon, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .product_icon { margin: 1% 2% 0 0; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boxdetails_longer p { font-size: 0.70em; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boxdetails_longer .price_longer { font-size: 0.75em; }
+  #Wrapper #content #left_bar #sec_nav #accordion ul li { font-size: 0.70em; }
+  #Wrapper #content #left_bar #searchbox #searcher h1 { font-size: 1.1em; }
+  #Wrapper #content #left_bar #searchbox #searcher select { font-size: 1.1em; }
+  #Wrapper footer ul.footer_nav { width: 90%; }
+  #Wrapper footer ul.footer_nav li a { font-size: 0.8em; } }
+@media all and (max-width: 768px) { #Wrapper nav li a { font-size: 0.75em; }
+  #Wrapper nav span { width: 21%; font-size: 0.9em; }
+  #Wrapper #searchbar #searcher2 label { font-size: 1.2em; }
+  #Wrapper #content .text_boxa p { font-size: 0.8em; }
+  #Wrapper #content #content_section { /*product boxes*/ }
+  #Wrapper #content #content_section h1 { font-size: 1.3em; }
+  #Wrapper #content #content_section #pag_search { width: 37%; }
+  #Wrapper #content #content_section #pag_search label { font-size: 0.7em; }
+  #Wrapper #content #content_section #pagination { width: 44%; }
+  #Wrapper #content #content_section #bannerbox { height: 299px; }
+  #Wrapper #content #content_section #bannerbox p { top: 140px; left: 216px; font-size: 1em; width: 56%; line-height: 30px; }
+  #Wrapper #content #content_section #bannerbox #bannerboximg { width: 370px; margin-top: 4%; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 { margin: 10% 1% 0 2%; width: 26%; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a { font-size: 1em; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a:hover { font-size: 1.05em; }
+  #Wrapper #content #content_section .product_boxes, #Wrapper #content #content_section form #results .product_boxes { height: 235px; /*Individual product box*/ }
+  #Wrapper #content #content_section .product_boxes h1, #Wrapper #content #content_section form #results .product_boxes h1 { height: 30px; font-size: 0.9em; line-height: 30px; }
+  #Wrapper #content #content_section .product_boxes p, #Wrapper #content #content_section form #results .product_boxes p { height: 10px; font-size: 0.8em; margin-top: 30px; }
+  #Wrapper #content #content_section .product_boxes .product_box, #Wrapper #content #content_section form #results .product_boxes .product_box { width: 25%; margin-bottom: 15px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boximg, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boximg { width: 80%; height: 140px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails { padding: 4% 0 0 0; /*Price Icon*/ }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .price, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .price { font-size: 0.70em; margin: 3% 0 0 3%; width: 68%; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .product_icon, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .product_icon { margin: 1% 2% 0 0; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boximg_longer { margin: 4.9% 1.5%; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boxdetails_longer p { font-size: 0.70em; width: 70%; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boxdetails_longer .price_longer { font-size: 0.75em; }
+  #Wrapper #content #left_bar #sec_nav #accordion ul li { font-size: 0.65em; }
+  #Wrapper #content #left_bar #searchbox #searcher h1 { font-size: 1.1em; line-height: 34px; }
+  #Wrapper #content #left_bar #searchbox #searcher select { font-size: 1em; }
+  #Wrapper #content #left_bar #searchbox #searcher .find { font-size: 1em; }
+  #Wrapper footer ul.footer_nav li a { font-size: 0.75em; } }
+@media all and (max-width: 667px) { #Wrapper nav li a { font-size: 0.65em; }
+  #Wrapper nav span { width: 21%; font-size: 0.75em; }
+  #Wrapper #searchbar #searcher2 select { width: 16.8%; font-size: 0.9em; }
+  #Wrapper #content .text_boxa p { font-size: 0.75em; }
+  #Wrapper #content #content_section { width: 100%; /*product boxes*/ }
+  #Wrapper #content #content_section h1 { font-size: 1.3em; }
+  #Wrapper #content #content_section #pag_search { width: 37%; }
+  #Wrapper #content #content_section #pag_search label { font-size: 0.7em; }
+  #Wrapper #content #content_section #pagination { width: 44%; }
+  #Wrapper #content #content_section #bannerbox { height: 299px; }
+  #Wrapper #content #content_section #bannerbox p { top: 140px; left: 45px; font-size: 1em; width: 66%; line-height: 30px; }
+  #Wrapper #content #content_section #bannerbox #bannerboximg { width: 420px; margin-top: 4%; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 { margin: 10% 1% 0 2%; width: 26%; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a { font-size: 1em; }
+  #Wrapper #content #content_section #bannerbox #apDiv1 a:hover { font-size: 1.05em; }
+  #Wrapper #content #content_section .product_boxes, #Wrapper #content #content_section form #results .product_boxes { height: 235px; /*Individual product box*/ }
+  #Wrapper #content #content_section .product_boxes h1, #Wrapper #content #content_section form #results .product_boxes h1 { height: 30px; font-size: 0.9em; line-height: 30px; }
+  #Wrapper #content #content_section .product_boxes p, #Wrapper #content #content_section form #results .product_boxes p { height: 10px; font-size: 0.8em; margin-top: 30px; }
+  #Wrapper #content #content_section .product_boxes .product_box, #Wrapper #content #content_section form #results .product_boxes .product_box { width: 25%; margin-bottom: 15px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boximg, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boximg { width: 80%; height: 140px; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails { padding: 4% 0 0 0; /*Price Icon*/ }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .price, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .price { font-size: 0.70em; margin: 3% 0 0 3%; width: 68%; }
+  #Wrapper #content #content_section .product_boxes .product_box .product_boxdetails .product_icon, #Wrapper #content #content_section form #results .product_boxes .product_box .product_boxdetails .product_icon { margin: 1% 2% 0 0; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boximg_longer { margin: 4.9% 1.5%; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boxdetails_longer p { font-size: 0.70em; width: 70%; }
+  #Wrapper #content #content_section .product_boxes_longer .product-box_longer .product_boxdetails_longer .price_longer { font-size: 0.75em; }
+  #Wrapper #content #left_bar { display: none; }
+  #Wrapper #content #left_bar #sec_nav #accordion ul li { font-size: 0.65em; }
+  #Wrapper #content #left_bar #searchbox #searcher h1 { font-size: 1.1em; line-height: 34px; }
+  #Wrapper #content #left_bar #searchbox #searcher select { font-size: 1em; }
+  #Wrapper #content #left_bar #searchbox #searcher .find { font-size: 1em; }
+  #Wrapper #content #left_bar #searchbox #searcher label { font-size: 0.9em; }
+  #Wrapper footer ul.footer_nav { width: 100%; }
+  #Wrapper footer ul.footer_nav li a { font-size: 0.75em; } }
 
 /*# sourceMappingURL=style.css.map */

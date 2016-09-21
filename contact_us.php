@@ -35,7 +35,7 @@
 </header>
 
 <!--Navigation-->  
-<nav>
+<nav role="navigation">
 <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
 <ul >
 <li><a href="index.php">Home</a></li>
@@ -51,7 +51,7 @@
   <h1>Contact Us</h1>
 </div>
 <!--Content-->  
-<section id="content">
+<section id="content" role="main">
 <br/>
 
 <div class="text_boxa"> <br/>
@@ -76,21 +76,21 @@
 <form  id="form" method="post" action="" role="form">
 <ul>
 <li>
- <label for="nume">Name</label>
+ <label for="nume">Name:&#32; </label>
  <input type="text" name="name" id="name" pattern="[a-z A-Z]"required  />
 </li>
 <li>
- <label for="email">E-mail</label> 
+ <label for="email">E-mail:&#32; </label> 
  <input type="text" name="email" id="email" required />
  </li>
 <li>
- <label for="message">Message</label>
+ <label for="message">Message:&#32; </label>
  <textarea name="message" id="message" cols="35" rows="15" pattern="[a-z A-Z]"></textarea>
  <input type="hidden" name="anti_spam" id="anti_spam" value="" />
   <a href="" title="" target="_blank" style="font-size:8px; color:#eaeafe;"> </a>
 </li>
 <li>
- 	<input type="submit" value="Send" id="submit" />
+ 	<label for=""></label><input type="submit" value="Send" id="submit" />
 </li>
  <ul/>
  

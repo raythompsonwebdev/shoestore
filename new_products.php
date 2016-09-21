@@ -38,7 +38,7 @@
 </header>
 
 <!--Navigation-->  
-<nav>
+<nav role="navigation">
   <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
     <ul class="nav">
       <li><a href="index.php">Home</a></li>
@@ -83,27 +83,27 @@
 </div>
 
 <!--Content-->  
-<section id="content">
+<section id="content" role="main">
 
 <!--Left bar-->               
-<div id="left_bar">
+<div id="left_bar" role="complimentary">
 
-  <div id="sec_nav">
+  <div id="sec_nav" role="navigation">
     <div id="accordion">
       <h3>Men&acute;s Shoes</h3>
       <div>
       <ul>
       <li>Athletics</li>
-      <li>Boat Shoes</li>
-      <li>Fashion Sneakers</li>
-      <li>Formal &amp;Tuxedo</li>
+      <li>Boat </li>
+      <li>Fashion</li>
+      <li>Formal </li>
       <li>Shoes</li>
       <li>Lace-Ups</li>
-      <li>Loafers &amp; Slips-ons</li>
+      <li>Loafers </li>
       <li>Outdoor</li>
       <li>Sandals</li>
       <li>Slippers</li>
-      <li>Work &amp; Safety</li>
+      <li>Work </li>
       <li></li>
       </ul>
       </div>
@@ -111,16 +111,16 @@
       <div>
       <ul>
       <li>Athletics</li>
-      <li>Boat Shoes</li>
-      <li>Fashion Sneakers</li>
-      <li>Formal &amp;Tuxedo</li>
+      <li>Boat</li>
+      <li>Fashion</li>
+      <li>Formal </li>
       <li>Shoes</li>
       <li>Lace-Ups</li>
-      <li>Loafers &amp; Slips-ons</li>
+      <li>Loafers</li>
       <li>Outdoor</li>
       <li>Sandals</li>
       <li>Slippers</li>
-      <li>Work &amp; Safety</li>
+      <li>Work </li>
       <li></li>
       </ul>
       </div>
@@ -128,16 +128,16 @@
       <div>
       <ul>
       <li>Athletics</li>
-      <li>Boat Shoes</li>
-      <li>Fashion Sneakers</li>
-      <li>Formal &amp;Tuxedo</li>
+      <li>Boat </li>
+      <li>Fashion</li>
+      <li>Formal </li>
       <li>Shoes</li>
       <li>Lace-Ups</li>
-      <li>Loafers &amp; Slips-ons</li>
+      <li>Loafers </li>
       <li>Outdoor</li>
       <li>Sandals</li>
       <li>Slippers</li>
-      <li>Work &amp; Safety</li>
+      <li>Work </li>
       <li></li>
       </ul>
       </div>
