@@ -162,13 +162,6 @@
   <br/>
   <p>LORUM IPSUN DOLOR AMET <br/>
   The best shoes available on the planet</p>
-    <nav id="apDiv1">
-      <a href="#" alt="Womens-shoes">Women's Shoes</a>
-      <a href="#" alt="Mens-shoes">Men's Shoes</a>
-      <a href="#" alt="Kids-Shoes">Kid's Shoes</a>
-      <a href="#" alt="Bags">Bags</a>
-      <a href="#" alt="Accessories">Accessories</a>
-    </nav>        
   <figure id="bannerboximg"> 
 
     <img src="images/page1_09.png" alt="bannerimage" usemap="#Map" />
@@ -182,6 +175,14 @@
       <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
     </map>
   </figure>
+    <nav id="apDiv1">
+      <a href="#" alt="Womens-shoes">Women's Shoes</a>
+      <a href="#" alt="Mens-shoes">Men's Shoes</a>
+      <a href="#" alt="Kids-Shoes">Kid's Shoes</a>
+      <a href="#" alt="Bags">Bags</a>
+      <a href="#" alt="Accessories">Accessories</a>
+    </nav>        
+  
 </section>
 
 <h1>Featured</h1>
