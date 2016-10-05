@@ -188,96 +188,125 @@
 <h1>Featured</h1>
 
 <!--product boxes-->
-<section class="product_boxes" ><!--product sections-->
+<div class="product_boxes" ><!--product sections-->
 
   <!--product boxes-->
-  <article class="product_box">
-  <figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-  <article class="product_boxdetails"> 
-  <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>     
+
+  <figure class="product_box">
+    <img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+ <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />     
   <span class="price"> Trainers</span>
   <span class="price">&pound;80.00</span> 
-  </article>
-  </article>
+  </figcaption>
+  </figure>
+  
+
 
   <!--product boxes-->
-  <article class="product_box">
-  <figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-   <article class="product_boxdetails"> 
-  <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>      
+
+  <figure class="product_box">
+    <img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+  <figcaption class="product_boxdetails"> 
+  <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />      
   <span class="price">Skate Shoes</span>
   <span class="price">&pound;100.00</span>
-  </article>
-  </article>
+  </figcaption>  
+  </figure>
+   
+
 
   <!--product boxes-->
-  <article class="product_box">
-  <figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-  <article class="product_boxdetails"> 
-  <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>  
+ 
+  <figure class="product_box">
+
+    <img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
+ <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price">Boots</span>
   <span class="price">&pound;120.00</span> 
-  </article>
-  </article>
+  </figcaption>
 
-  <!--product boxes-->
-  <article class="product_box">
-  <figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" /></figure>
-  <article class="product_boxdetails"> 
-  <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>  
-  <span class="price">Womens Boots</span>
-  <span class="price">&pound;100.00</span> 
-  </article>
-  </article>
-</section>
+  </figure>
+
+
+<!--product boxes-->
+ 
+<figure class="product_box">
+
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" />
+
+<figcaption class="product_boxdetails"> 
+<img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+<span class="price">Womens Boots</span>
+<span class="price">&pound;100.00</span> 
+</figcaption>
+
+</figure>
+  
+
+</div>
 
 <!--product boxes-->
 <section class="product_boxes" >
 
   <!--product box-->
-  <article class="product_box">
-    <figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
+    <figure class="product_box">
 
-  <article class="product_boxdetails"> 
-  <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>       
+      <img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+
+ <figcaption class="product_boxdetails"> 
+ <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />      
   <span class="price"> Trainers</span>
   <span class="price">&pound;80.00</span> 
-  </article>
-  </article>
+  </figcaption>
+    </figure>
+
+ 
 
   <!--product box-->
-  <article class="product_box">
-  <figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-  <article class="product_boxdetails"> 
-  <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>       
+
+  <figure class="product_box">
+
+    <img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+ <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />       
   <span class="price">Skate Shoes</span>
   <span class="price">&pound;100.00</span>
-  </article>
-  </article>
+  </figcaption>
+
+  </figure>
+  
+
 
   <!--product box-->
-  <article class="product_box">
-   <figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-  <article class="product_boxdetails"> 
-  <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>  
+
+   <figure class="product_box">
+
+    <img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+
+ <figcaption class="product_boxdetails"> 
+ <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price">Boots</span>
   <span class="price">&pound;120.00</span> 
-  </article>
-  </article>
+  </figcaption>
+
+  </figure>
+ 
+
 
   <!--product boxes-->
-  <article class="product_box">
- <figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" /></figure>
-  <article class="product_boxdetails"> 
-  <figure class="product_icon"><img src="images/shoppingcart.gif"  alt="shoppingcart" /></figure>  
+
+ <figure class="product_box">
+
+  <img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" />
+  <figcaption class="product_boxdetails"> 
+  <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price">Womens Boots</span>
   <span class="price">&pound;100.00</span> 
-  </article>
+  </figcaption>
+</figure>
 
-  <br/>
-  <br/>
-  <br/>
-  </article>
 </section><!--product boxes end-->
 
 </section>

@@ -51,7 +51,7 @@
 </nav>
 
 <!-- name="searchbar" -->
-<div id="searchbar">
+<aside id="searchbar">
 <form id="searcher2" action="" method="get">
   <label>New Products</label>
     <select name="gender">
@@ -80,13 +80,13 @@
     </select>
   <input name="find" class="find2" type="submit" value="Go" />
 </form>
-</div>
+</aside>
 
 <!--Content-->  
 <section id="content" role="main">
 
 <!--Left bar-->               
-<div id="left_bar" role="complimentary">
+<aside id="left_bar" role="complimentary">
 
   <div id="sec_nav" role="navigation">
     <div id="accordion">
@@ -153,7 +153,7 @@
   </div>
   <!--end of sec nav-->
 
-</div>
+</aside>
 <!--end of left bar-->
 
 <!--Content_section-->
@@ -166,279 +166,213 @@
 <div class="product_boxes_longer"><!--product boxes-->
  
   <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
-    </figure>
+  <figure class="product-box_longer">
+    	<img class="product_boximg_longer" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+   <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 001</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
     
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
   
 </div><!--end of product boxes longer-->
+
+
 <div class="product_boxes_longer"><!--product boxes-->
- 
+
   <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/fur-lined-hiking-boot.png"  alt="fur-lined-hiking-boot" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 002</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
+  <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/fur-lined-hiking-boot.png"  alt="fur-lined-hiking-boot" />
+   <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 002</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
+  
   
 </div><!--end of product boxes longer-->
+
+
 <div class="product_boxes_longer"><!--product boxes-->
- 
-  <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/basket-ball-shoe.png"  alt="basket-ball-shoe" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
+
+   <!--product box-->
+  <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/basket-ball-shoe.png"  alt="basket-ball-shoe"/>
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 003</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
   
 </div><!--end of product boxes longer-->
+
+
 <div class="product_boxes_longer"><!--product boxes-->
+
+   <!--product box-->
+  <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/kids-trainer.png"  alt="kids-trainer"/>
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 004</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
  
-  <!--product box-->
-  <article class="product-box_longer">
    
-    <figure class="product_boximg_longer">
-    	<img src="images/kids-trainer.png"  alt="kids-trainer" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
-  
 </div><!--end of product boxes longer-->
+
+
 <div class="product_boxes_longer"><!--product boxes-->
- 
-  <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/fur-lined-hiking-boot.png"  alt="fur-lined-hiking-boot" />
-    </figure>
+
+  <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/fur-lined-hiking-boot.png"  alt="fur-lined-hiking-boot"/>
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 005</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
     
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 002</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
-  
 </div><!--end of product boxes longer--> 
+
+
 <div class="product_boxes_longer"><!--product boxes-->
  
-  <!--product box-->
-  <article class="product-box_longer">
+ <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/basket-ball-shoe.png"  alt="basket-ball-shoe"/>
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 006</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
+  
+  
+</div><!--end of product boxes longer-->
+
+
+<div class="product_boxes_longer"><!--product boxes-->
+ 
+<figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/kids-trainer.png"  alt="kids-trainer"/>
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 006</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
+  
+  
+</div><!--end of product boxes longer-->
+<div class="product_boxes_longer"><!--product boxes-->
+
+  <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 007</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
+ 
+  
+</div><!--end of product boxes longer-->
+
+
+<div class="product_boxes_longer"><!--product boxes-->
+ 
+   <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/basket-ball-shoe.png"  alt="basket-ball-shoe" />
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 007</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
    
-    <figure class="product_boximg_longer">
-    	<img src="images/basket-ball-shoe.png"  alt="basket-ball-shoe" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
+</div><!--end of product boxes longer-->
+
+
+<div class="product_boxes_longer"><!--product boxes-->
+
+  <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/kids-trainer.png"  alt="kids-trainer"/>
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 008</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
+
   
 </div><!--end of product boxes longer-->
 <div class="product_boxes_longer"><!--product boxes-->
  
-  <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/kids-trainer.png"  alt="kids-trainer" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
+   <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot"/>
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 008</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
   
 </div><!--end of product boxes longer-->
+
+
 <div class="product_boxes_longer"><!--product boxes-->
- 
-  <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
-    </figure>
+
+  <figure class="product-box_longer">
+      <img class="product_boximg_longer" src="images/fur-lined-hiking-boot.png"  alt="fur-lined-hiking-boot"/>
+  <figcaption class="product_boxdetails_longer"> 
+  <h1>Product 008</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
+  <span class="price_longer">Price :$30.00</span>
+  <span class="price_longer">
+  <img class="product_icon_longer" src="images/shoppingcart.gif" alt="shopping-cart" />
+  Add to Cart</span> 
+  </figcaption>
+  </figure>
     
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
-  
 </div><!--end of product boxes longer-->
-<div class="product_boxes_longer"><!--product boxes-->
- 
-  <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/basket-ball-shoe.png"  alt="basket-ball-shoe" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
-  
-</div><!--end of product boxes longer-->
-<div class="product_boxes_longer"><!--product boxes-->
- 
-  <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/kids-trainer.png"  alt="kids-trainer" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
-  
-</div><!--end of product boxes longer-->
-<div class="product_boxes_longer"><!--product boxes-->
- 
-  <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 001</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
-  
-</div><!--end of product boxes longer-->
-<div class="product_boxes_longer"><!--product boxes-->
- 
-  <!--product box-->
-  <article class="product-box_longer">
-   
-    <figure class="product_boximg_longer">
-    	<img src="images/fur-lined-hiking-boot.png"  alt="fur-lined-hiking-boot" />
-    </figure>
-    
-    <article class="product_boxdetails_longer"> 
-   <h1>Product 002</h1>
-   
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nobis eius error, animi iusto est voluptates, ipsa autem asperiores culpa. Autem dolor similique accusamus praesentium quas expedita quos ratione quibusdam.</p>
-    <span class="price_longer">Price :$30.00</span>
-    <span class="price_longer"><figure class="product_icon_longer">
-		<img src="images/shoppingcart.gif" alt="shopping-cart" />
-	</figure>Add to Cart</span> 
-    		    
-    </article>
-    
-  </article>
-  
-</div><!--end of product boxes longer-->
+
 </section><!--end of results section-->
 
 <br/>

@@ -52,7 +52,7 @@
 </nav>
 
 <!--Search bar-->
-<section id="searchbar">
+<aside id="searchbar">
 	<form id="searcher2" action="" method="get">
 	<label>All Products</label>
 		<select name="gender">
@@ -81,7 +81,7 @@
 		</select>
 	<input name="find" type="submit" value="Go" />
 	</form>
-</section>
+</aside>
 
 <!--Content-->  
 <section id="content" role="main">
@@ -162,517 +162,524 @@
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
+
+<figure class="product_box" >
+	<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
 <figure class="product_icon"><img src="images/page1_32.png" width="34" height="51" /></figure>
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
+
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
+
+
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
+
 </div><!--end of product boxes-->
+
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
+
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg"  src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/page1_18.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
+<figure class="product_box">
+<img class="product_boximg"  src="images/page1_18.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
 <figure class="product_icon"><img src="images/shoppingcart.gif"  /></figure>     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
-
+</figcaption>
+</figure>
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
+
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
 <figure class="product_icon"><img src="images/shoppingcart.gif"  /></figure>
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product boxes-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>     
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />    
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product boxes-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product boxes-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product boxes-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boots</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes--> 
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Fur-lined Boot</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>     
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />    
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>    
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />   
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
+</figcaption>
+</figure>
 
-</article>
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>     
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />    
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
 <figure class="product_icon"><img src="images/shoppingcart.gif"  /></figure>
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
  
  </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
 <figure class="product_icon"><img src="images/page1_32.png" width="34" height="51" /></figure>
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
 <figure class="product_icon"><img src="images/page1_32.png" width="34" height="51" /></figure>
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/page1_18.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
+<figure class="product_box">
+<img class="product_boximg" src="images/page1_18.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
 <figure class="product_icon"><img src="images/shoppingcart.gif"  /></figure>     
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boot</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product box-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
 <figure class="product_icon"><img src="images/shoppingcart.gif"  /></figure>
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 <div class="product_boxes"><!--product boxes-->
 
 <!--product boxes-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/kids-trainer.png" alt="kids-trainer" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>     
+<figure class="product_box">
+<img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />    
 <span class="price">Kids Trainer</span>
 <span class="price">&pound;80.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product boxes-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/basket-ball-shoe.png" alt="basket-ball-shoe" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure>      
+<figure class="product_box">
+<img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />     
 <span class="price">Basketball Shoe</span>
 <span class="price">&pound;100.00</span>
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product boxes-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Fur-Lined Boots</span>
 <span class="price">&pound;120.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 
 <!--product boxes-->
-<article class="product_box">
-<figure class="product_boximg"><img src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" /></figure>
-<article class="product_boxdetails"> 
-<figure class="product_icon"><img src="images/shoppingcart.gif" alt="shopping-cart" /></figure> 
+<figure class="product_box">
+<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-hiking-boot" />
+<figcaption class="product_boxdetails"> 
+<img class="product_icon"src="images/shoppingcart.gif" alt="shopping-cart" />
 <span class="price">Hiking Boots</span>
 <span class="price">&pound;100.00</span> 
-</article>
-</article>
+</figcaption>
+</figure>
 </div><!--end of product boxes-->
 
 </section><!--end of results section-->
