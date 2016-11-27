@@ -1,17 +1,8 @@
 
-$font-list : 'bauerb', arial, helvetica, sans-serif;
+$font-list : 'Old Standard TT', arial, helvetica, sans-serif;
 
 
 @charset "utf-8";
-
-
-@font-face {
-    font-family: 'bauerb';
-    src: font-url('../font/bauerb.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 /*Eric Meyer’s Reset Reloaded*/
 
@@ -71,8 +62,8 @@ figure{margin:0; padding:0;}
     font-family: $font-list;    
     margin:0 auto;
     width: 75%;
-	display:block;
-	p.copyr {margin: 2% auto;  font-size: 0.6em;  width: 100%;   letter-spacing: 0.1em;}
+    display:block;
+    p.copyr {margin: 2% auto;  font-size: 0.6em;  width: 100%;   letter-spacing: 0.1em;}
 	   
 
     /*header*/
@@ -95,7 +86,7 @@ figure{margin:0; padding:0;}
             display:inline-block; 
             float:right; 
             height:50%;
-            a{ display:inline-block; height:100%; line-height:20px; width:32%;font-size:0.80em; text-decoration:none; color:black; border-right:1px solid #0099CC; text-align:center; color:#0099CC; }
+            a{ display:inline-block; height:100%; line-height:20px; width:31%;font-size:0.80em; text-decoration:none; color:black; border-right:1px solid #0099CC; text-align:center; color:#0099CC; }
             a:hover{ color:#ea3411; font-weight:bold;}
         }
 
@@ -183,7 +174,7 @@ figure{margin:0; padding:0;}
 
         .myform{width:58%; margin-left: 5%; margin-top: 5%; height: 390px;}
 
-        .context{ width:60%;margin:0 2% 2% 3%; font-family: Arial, Helvetica, sans-serif;  line-height:1.8em;  font-size: 0.85em; float:left;}
+        .context{ width:60%;margin:0 2% 2% 3%; font-family: $font-list;  line-height:1.8em;  font-size: 0.85em; float:left;}
         .context_title{ font-weight:bold; color:#C60; font-size:1.1em;}
 
         /*rightside content section within content div*/
@@ -194,7 +185,7 @@ figure{margin:0; padding:0;}
             width: 76%; 
             margin:0 0 20px 0;
 
-            h1 { height:40px;  margin:0px; text-indent:5px;font-family:Arial, Helvetica, sans-serif; font-size:1.5em; line-height:40px; }
+            h1 { height:40px;background:none; color:#333; margin:0px; text-indent:5px;font-family:Arial, Helvetica, sans-serif; font-size:1.5em; line-height:40px; }
 
             /*Index page banner box*/
             #bannerbox {
@@ -202,7 +193,7 @@ figure{margin:0; padding:0;}
                 height: 400px;  
                 width: 100%; 
                 margin:0;
-                p{ font-family:Arial, Helvetica, sans-serif; font-size:1.2em; height:auto;line-height:35px;  position:absolute; margin:0; top: 170px; left: 425px; z-index:2; width: 40%; }
+                p{ font-family: $font-list; font-size:1.2em; height:auto;line-height:35px;  position:absolute; margin:0; top: 170px; left: 425px; z-index:2; width: 40%; }
                 p:first-line{font-size:1.9em; color:#999999; }
 
 
@@ -227,7 +218,7 @@ figure{margin:0; padding:0;}
                     display:inline-block;  
                     width: 25%; 
                     float:left; 
-                    font-family:Arial, Helvetica, sans-serif;  
+                    font-family: $font-list;  
                     margin-bottom:15px;
 
                     .product_boximg{ width:80%;    margin:5px auto; height:140px;}
@@ -259,18 +250,18 @@ figure{margin:0; padding:0;}
             }
 			
 			.product_boxes_longer{
-				display:block;
-                height:180px; 
-                width:100%;
-                h1 {height: 30px; margin: 0px; text-align:left; font-family: Arial, Helvetica, sans-serif; font-size: 1em;    line-height: 30px;  }
-                p { height:10px;line-height:0em; font-size:0.8em; width:100%; margin-top:30px; font-weight:bold; height:20px; text-indent:5px; padding:1% 0;}
-				
-				.product-box_longer {  
+                            display:block;
+                            height:180px; 
+                            width:100%;
+                            h1 {height: 30px; margin: 0px; text-align:left; font-family: Arial, Helvetica, sans-serif; font-size: 1em;    line-height: 30px;  }
+                            p { height:10px;line-height:0em; font-size:0.8em; width:100%; margin-top:30px; font-weight:bold; height:20px; text-indent:5px; padding:1% 0;}
+
+                            .product-box_longer {  
                     max-height: 180px; 
                     display:inline-block;  
                     width: 100%; 
                     float:left; 
-                    font-family:Arial, Helvetica, sans-serif;  
+                    font-family: $font-list;  
                     margin-bottom:15px;
 					
 
@@ -319,7 +310,7 @@ figure{margin:0; padding:0;}
 			}
 			
 		    #pag_search{ 
-                width:34%; 
+                width:40%; 
                 display:inline-block; 
                 float:left; 
                 margin:0 0 2% 0; 
@@ -335,23 +326,24 @@ figure{margin:0; padding:0;}
                 display:block;
                 margin:0 0 2% 0;
                 float:right;
-                a{ display:inline-block; height:100%; width:32%; font-size:0.8em; line-height:30px;-webkit-transition: all 0.5s ease;  -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease;  -ms-transition: all 0.5s ease;     transition: all 0.5s ease;  }
+                a{color:#fff; background-color:#ea3411 ; text-align:center; display:inline-block; height:100%; width:32%; font-size:0.8em; line-height:30px;-webkit-transition: all 0.5s ease-in-out;  -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out;  -ms-transition: all 0.5s ease; transition: all 0.5s ease;  }
                 a:hover{font-size:1.05em;}
             }
 
             #results{clear:both; }
             .pag_buttons {
-				display:block;
-				margin:2% 0;
-				input[type="submit"] , input[type="reset"]{ display:inline-block; width:15%;height:30px; background-color: #ea3411;    color: #FFF;border:0;}
-			}
+      				display:block;
+      				margin:2% 0;
+      				clear: both;
+      				input[type="submit"] , input[type="reset"]{ display:inline-block; width:20%;height:30px; background-color: #ea3411;    color: #FFF;border:0;}
+      			}
         }
         /*leftbar*/
         #left_bar {
             float: left;
             width: 23%;  
             margin: 0 0 5px 0; 
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $font-list;
             /*Form*/
             #searchbox{ 
                 width: 94%;   
@@ -364,7 +356,7 @@ figure{margin:0; padding:0;}
                     height:320px; 
                     margin-bottom:1%; 
                     margin:auto;
-                    h1{ font-size:1.5em; color:#fff; width:100%; text-align:center; line-height:36px; height:100px;}
+                    h1{ font-size:1.5em; background:none; color:#fff; width:100%; text-align:center; line-height:36px; height:100px;}
                     select{ width:80%; height:30px; font-size:1.3em; margin: 5px auto; color:#999999; display:block;}
                     .find{width:40%; height:35px;font-size:1.2em;line-height:35px;margin: 5px 0 0 27.5%; background-color: #ea3411;display: block;color: #FFF; border:0; outline:none;}
                     .find:hover{color: #ea3411;display: block;background-color: #FFF; border:0; outline:none; cursor:pointer;}
@@ -377,9 +369,11 @@ figure{margin:0; padding:0;}
                 height: auto;  
                 width: 94%; 
                 color: #7a7777;
-				span{width:8%;}
+                font-family: $font-list;
+				        span{width:8%;}
                 #accordion{ 
-                    font-family:Arial, Helvetica, sans-serif;
+                    font-family: $font-list;
+                    h3{font-size:1em;}
                     ul{ list-style:none; margin:0; padding:0; width:100%;}
                     ul li{line-height:25px; display: inline-block;  height:25px; font-size: 0.8em;  width:100%; text-align:left;}
                     ul li:hover{font-weight:bold;}
@@ -491,23 +485,21 @@ figure{margin:0; padding:0;}
                 h1 {height: 30px;  font-size: 0.9em;  line-height: 30px;    }
                 p { height:10px; font-size:0.8em; margin-top:30px; }
                 /*Individual product box*/
-                .product_box {  
+                figure.product_box {  
                                            
                     width: 25%; 
                                            
                     margin-bottom:15px;
 
                     .product_boximg{ width:80%; margin:5px auto; height:140px;}
-                    .product_boxdetails{ 
+                    figcaption.product_boxdetails{ 
                          
                         height:55px; 
-                        
                         padding:4% 0 0 0; 
                                         
-                        
                         .price{ font-size:0.75em;margin:3% 0 0 3%;  }
                         /*Price Icon*/
-                        .product_icon{  
+                        figure.product_icon{  
                                                         
                             margin:1% 2% 0 0;
                             img{ }
@@ -555,16 +547,13 @@ figure{margin:0; padding:0;}
                 } 
             }
             #sec_nav #accordion {
-
-                ul {
-
-                    li {font-size: 0.75em;}  
-
-                }
+                              
+                h3{font-size:1em;}
+                ul{ list-style:none; margin:0; padding:0; width:100%;}
+                ul li{font-size: 0.75em; }
+               
             }
         }
-
-        
     }
 
     footer{
@@ -638,20 +627,20 @@ figure{margin:0; padding:0;}
                 h1 {height: 30px;  font-size: 0.9em;  line-height: 30px;    }
                 p { height:10px; font-size:0.8em; margin-top:30px; }
                 /*Individual product box*/
-                .product_box {  
+                figure.product_box {  
                                            
                     width: 25%; 
                                
                     margin-bottom:15px;
 
                     .product_boximg{ width:80%;  height:140px;}
-                    .product_boxdetails{ 
+                    figcaption.product_boxdetails{ 
                      
                         padding:4% 0 0 0; 
              
                         .price{ font-size:0.70em;margin:3% 0 0 3%;  }
                         /*Price Icon*/
-                        .product_icon{  
+                        figure.product_icon{  
                                                         
                             margin:1% 2% 0 0;
                             img{ }
@@ -666,6 +655,7 @@ figure{margin:0; padding:0;}
         #left_bar {
 
             #sec_nav #accordion {
+              
 
                 ul {
 
@@ -766,20 +756,20 @@ figure{margin:0; padding:0;}
                 h1 {height: 30px;  font-size: 0.9em;  line-height: 30px;    }
                 p { height:10px; font-size:0.8em; margin-top:30px; }
                 /*Individual product box*/
-                .product_box {  
+                figure.product_box {  
                                            
-                    width: 25%; 
+                    width: 33%; 
                                
                     margin-bottom:15px;
 
                     .product_boximg{ width:80%;  height:140px;}
-                    .product_boxdetails{ 
+                    figcaption.product_boxdetails{ 
                      
                         padding:4% 0 0 0; 
              
                         .price{ font-size:0.70em;margin:3% 0 0 3%;  }
                         /*Price Icon*/
-                        .product_icon{  
+                        figure.product_icon{  
                                                         
                             margin:1% 2% 0 0;
                             img{ }
@@ -807,6 +797,7 @@ figure{margin:0; padding:0;}
         #left_bar {
 
             #sec_nav #accordion {
+                h3{font-size:0.8em;}
 
                 ul {
 
@@ -896,20 +887,19 @@ figure{margin:0; padding:0;}
                 h1 {height: 30px;  font-size: 0.9em;  line-height: 30px;    }
                 p { height:10px; font-size:0.8em; margin-top:30px; }
                 /*Individual product box*/
-                .product_box {  
-                                           
-                    width: 25%; 
-                               
+                figure.product_box {  
+                                  
                     margin-bottom:15px;
+                    width: 33%;
 
                     .product_boximg{ width:80%;  height:140px;}
-                    .product_boxdetails{ 
+                    figcaption.product_boxdetails{ 
                      
                         padding:4% 0 0 0; 
              
                         .price{ font-size:0.70em;margin:3% 0 0 3%; width: 68%; }
                         /*Price Icon*/
-                        .product_icon{  
+                        figcaption.product_icon{  
                                                         
                             margin:1% 2% 0 0;
                             img{ }
@@ -1028,25 +1018,23 @@ figure{margin:0; padding:0;}
                /*product boxes*/
             .product_boxes, form #results .product_boxes{
                 
-                height:235px; 
+                height:225px; 
                 
                 h1 {height: 30px;  font-size: 0.9em;  line-height: 30px;    }
                 p { height:10px; font-size:0.8em; margin-top:30px; }
                 /*Individual product box*/
-                .product_box {  
-                                           
-                    width: 25%; 
-                               
+                figure.product_box {  
+                                    
                     margin-bottom:15px;
 
                     .product_boximg{ width:80%;  height:140px;}
-                    .product_boxdetails{ 
+                    figcaption.product_boxdetails{ 
                      
                         padding:4% 0 0 0; 
              
                         .price{ font-size:0.70em;margin:3% 0 0 3%; width: 68%; }
                         /*Price Icon*/
-                        .product_icon{  
+                        figure.product_icon{  
                                                         
                             margin:1% 2% 0 0;
                             img{ }
@@ -1194,18 +1182,18 @@ figure{margin:0; padding:0;}
                 h1 { font-size: 0.8em;  }
                 p {  font-size:0.75em;  }
                 /*Individual product box*/
-                .product_box {  
+                figure.product_box {  
                                            
                     width: 25%; 
                                
                     .product_boximg{ width:80%;  height:140px;}
-                    .product_boxdetails{ 
+                    figcaption.product_boxdetails{ 
                      
                         padding:4% 0 0 0; 
              
                         .price{ font-size:0.70em;margin:3% 0 0 3%; width: 68%; }
                         /*Price Icon*/
-                        .product_icon{  
+                        figure.product_icon{  
                                                         
                             margin:1% 2% 0 0;
                             img{ }
@@ -1300,8 +1288,9 @@ figure{margin:0; padding:0;}
 
     #searchbar {
         #searcher2 {
-            select {  width: 16.8%; font-size: 0.9em;}
-            label {    font-size: 1em;}
+          height: 35px;
+          select { width: 16.8%; font-size: 0.9em;}
+          label { font-size: 1em;}
         }
     }
 
@@ -1336,7 +1325,7 @@ figure{margin:0; padding:0;}
             h1 {font-size:1.3em;}
 
             #pag_search {
-                width: 37%;
+                width: 40%;
 
                 label {font-size: 0.7em;}
             }
@@ -1358,23 +1347,23 @@ figure{margin:0; padding:0;}
                /*product boxes*/
             .product_boxes, form #results .product_boxes{
                 
-                height:235px; 
+                height:210px; 
                 
                 h1 { font-size: 0.8em;  }
                 p {  font-size:0.75em;  }
                 /*Individual product box*/
-                .product_box {  
+                figure.product_box {  
                                            
-                    width: 25%; 
+                    width: 33%; 
                                
-                    .product_boximg{ width:80%;  height:140px;}
-                    .product_boxdetails{ 
+                    .product_boximg{ width:80%;  height:140px; margin:auto; display: block;}
+                    figcaption.product_boxdetails{ 
                      
                         padding:4% 0 0 0; 
              
                         .price{ font-size:0.70em;margin:3% 0 0 3%; width: 68%; }
                         /*Price Icon*/
-                        .product_icon{  
+                        figure.product_icon{  
                                                         
                             margin:1% 2% 0 0;
                             img{ }
@@ -1472,8 +1461,9 @@ figure{margin:0; padding:0;}
 
     #searchbar {
         #searcher2 {
-            select {  width: 16.8%; font-size: 0.9em;}
-            label {    font-size: 1em;}
+          height:35px;
+          select {  width: 16.8%; font-size: 0.9em;}
+          label { font-size: 1em;}
         }
     }
 
@@ -1535,18 +1525,18 @@ figure{margin:0; padding:0;}
                 h1 { font-size: 0.8em;  }
                 p {  font-size:0.75em;  }
                 /*Individual product box*/
-                .product_box {  
+                figure.product_box {  
                                            
-                    width: 25%; 
+                    width: 42%; 
                                
                     .product_boximg{ width:80%;  height:140px;}
-                    .product_boxdetails{ 
+                    figcaption.product_boxdetails{ 
                      
                         padding:4% 0 0 0; 
              
                         .price{ font-size:0.70em;margin:3% 0 0 3%; width: 68%; }
                         /*Price Icon*/
-                        .product_icon{  
+                        figure.product_icon{  
                                                         
                             margin:1% 2% 0 0;
                             img{ }
@@ -1635,7 +1625,7 @@ figure{margin:0; padding:0;}
         
 
         span {   
-            width: 21%; 
+            width: 24%; 
             font-size: 0.7em;
             a:hover{font-size:0.7em;}
         }
@@ -1788,6 +1778,27 @@ figure{margin:0; padding:0;}
 }
 
 
+@media all and (max-width: 414px) {
+  
+#Wrapper {
+  
+  #content {
+    #content_section {
+      #pag_search {  width: 46%;}
+      
+      #pagination {   
+        width: 49%;
+        a {width:30%;}
+      }
+    }
+  }
+  
+  
+} 
+  
+}
+
+
 @media all and (max-width: 375px) {
 
 #Wrapper{
@@ -1869,7 +1880,7 @@ figure{margin:0; padding:0;}
             #pag_search {
                 width: 46%;
 
-                label {font-size: 0.60em;}
+                label {font-size: 0.55em;}
             }
 
             #pagination {    
@@ -1899,8 +1910,8 @@ figure{margin:0; padding:0;}
                 /*Individual product box*/
                 figure.product_box {  
                                            
-                    width: 40%;
-                    margin-left: 5%; 
+                    width: 47%;
+                    margin-left: 2%; 
                                
                     .product_boximg{ width:80%;  height:140px;}
                     .product_boxdetails{ 
@@ -2005,7 +2016,7 @@ figure{margin:0; padding:0;}
         span {   
             width: 24%; 
             font-size: 0.5em;
-            a:hover{font-size:0.5em;}
+            a:hover{font-size:0.75em;}
         }
     }
 
@@ -2055,7 +2066,7 @@ figure{margin:0; padding:0;}
 
             #pagination {    
                 width: 49%;
-                 a {width: 28%;}
+                 a {width: 30%;}
             }
 
             #bannerbox {
@@ -2080,8 +2091,8 @@ figure{margin:0; padding:0;}
                 /*Individual product box*/
                 figure.product_box {  
                                            
-                    width: 40%;
-                    margin-left: 5%; 
+                    width: 47%;
+                    margin-left: 2%; 
                                
                     .product_boximg{ width:80%;  height:140px;}
                     .product_boxdetails{ 
@@ -2176,9 +2187,10 @@ figure{margin:0; padding:0;}
         
 
         span {   
-            width: 21%; 
+            width: 23%; 
             font-size: 0.7em;
-            a:hover{font-size:0.7em;}
+            a {font-size: 0.50em; line-height: 40px;}
+            a:hover{font-size:0.7em; line-height: 40px;}
         }
     }
 
@@ -2186,7 +2198,7 @@ figure{margin:0; padding:0;}
         input[type="submit"] {   width: 11%; margin: 0 1%; font-size: 1em;}
         #searcher2 {
             select {  width: 16%; font-size: 0.9em;}
-            label {  width: 19%;  font-size: 0.6em;}
+            label {  width: 17%;  font-size: 0.6em;}
         }
     }
 
@@ -2223,18 +2235,19 @@ figure{margin:0; padding:0;}
             #pag_search {
                 width: 48%;
 
-                label {font-size: 0.55em;}
+                label {font-size: 0.50em;}
             }
 
             #pagination {    
                 width: 49%;
-                 a {width: 28%;}
+                 a {width: 30.5%;}
             }
 
             #bannerbox {
                 height: 445px;
-                p { width: 89%; left: 9px; font-size: 0.7em; line-height: 20px; }
-                #bannerboximg { width: 338px; margin-top: 0%;}
+                p { width: 89%; left: 9px; font-size: 0.55em; line-height: 20px; }
+                p:first-line { font-size: 2.3em;}
+                #bannerboximg { width: 298px; margin-top: 0%;}
                 #apDiv1{
                     margin: 0 ;
                     width: 97%;

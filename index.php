@@ -10,27 +10,32 @@
 <meta name="viewport" content="user-scalable=yes">
 <meta name="viewport" content="target-densitydpi=device-dpi">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="RayThompsonWebdev" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="&copy;raymondthompson" />
+<meta name="robots" content="noindex,nofollow">
 <title>Shoestore-Home-Page</title>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="font/font-style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css" />
 <link type="text/css" rel="stylesheet" href="js/qtip/jquery.qtip.css" />
 
-<!--[if lt IE 9 ]>  
+<!--[if lt IE 9 ]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<script type="text/javascript" src="js/html5shiv.min.js"></script>  
+<script type="text/javascript" src="js/html5shiv.min.js"></script>
 <script type="text/javascript" src="js/Respond-master/dest/respond.min.js"></script>
-<script type="text/javascript" src="js/selectivizr.min.js"></script>          
+<script type="text/javascript" src="js/selectivizr.min.js"></script>
 <![endif]-->
-  
+
 </head>
 <body>
 
 <!--Wrapper Start-->
 <div id="Wrapper">
 
-<!--Header-->  
+<!--Header-->
 <header role="banner">
   <figure id="logo">
   <img src="images/shoe-store-logo.png" alt="shoe-store-logo" >
@@ -38,7 +43,7 @@
 </header>
 <!--End of header-->
 
-<!--Navigation-->  
+<!--Navigation-->
 <nav role="navigation">
   <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
   <ul>
@@ -52,10 +57,10 @@
 </nav>
 <!--End of Nav-->
 
-<!--Content-->  
+<!--Content-->
 <section id="content" role="main">
 
-<!--Left bar-->               
+<!--Left bar-->
 <aside id="left_bar" role="complementary">
 
   <!--Search Box-->
@@ -162,12 +167,12 @@
   <br/>
   <p>LORUM IPSUN DOLOR AMET <br/>
   The best shoes available on the planet</p>
-  <figure id="bannerboximg"> 
+  <figure id="bannerboximg">
 
     <img src="images/page1_09.png" alt="bannerimage" usemap="#Map" />
 
     <map id="Map" name="Map" >
-       
+
       <area id="reebok-right-shoe" alt="reebok-right-shoe" title="reebok-right-shoe" href="http://www.image-maps.com/" shape="rect" coords="98,206,151,308" style="outline:none;" target="_self"     />
       <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
 
@@ -181,8 +186,8 @@
       <a href="#" alt="Kids-Shoes">Kid's Shoes</a>
       <a href="#" alt="Bags">Bags</a>
       <a href="#" alt="Accessories">Accessories</a>
-    </nav>        
-  
+    </nav>
+
 </section>
 
 <h1>Featured</h1>
@@ -194,56 +199,56 @@
 
   <figure class="product_box">
     <img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
-<figcaption class="product_boxdetails"> 
- <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />     
+<figcaption class="product_boxdetails">
+ <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price"> Trainers</span>
-  <span class="price">&pound;80.00</span> 
+  <span class="price">&pound;80.00</span>
   </figcaption>
   </figure>
-  
+
 
 
   <!--product boxes-->
 
   <figure class="product_box">
     <img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
-  <figcaption class="product_boxdetails"> 
-  <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />      
+  <figcaption class="product_boxdetails">
+  <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price">Skate Shoes</span>
   <span class="price">&pound;100.00</span>
-  </figcaption>  
+  </figcaption>
   </figure>
-   
+
 
 
   <!--product boxes-->
- 
+
   <figure class="product_box">
 
     <img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
-<figcaption class="product_boxdetails"> 
+<figcaption class="product_boxdetails">
  <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price">Boots</span>
-  <span class="price">&pound;120.00</span> 
+  <span class="price">&pound;120.00</span>
   </figcaption>
 
   </figure>
 
 
 <!--product boxes-->
- 
+
 <figure class="product_box">
 
 <img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" />
 
-<figcaption class="product_boxdetails"> 
+<figcaption class="product_boxdetails">
 <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
 <span class="price">Womens Boots</span>
-<span class="price">&pound;100.00</span> 
+<span class="price">&pound;100.00</span>
 </figcaption>
 
 </figure>
-  
+
 
 </div>
 
@@ -255,28 +260,28 @@
 
       <img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
 
- <figcaption class="product_boxdetails"> 
- <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />      
+ <figcaption class="product_boxdetails">
+ <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price"> Trainers</span>
-  <span class="price">&pound;80.00</span> 
+  <span class="price">&pound;80.00</span>
   </figcaption>
     </figure>
 
- 
+
 
   <!--product box-->
 
   <figure class="product_box">
 
     <img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
-<figcaption class="product_boxdetails"> 
- <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />       
+<figcaption class="product_boxdetails">
+ <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price">Skate Shoes</span>
   <span class="price">&pound;100.00</span>
   </figcaption>
 
   </figure>
-  
+
 
 
   <!--product box-->
@@ -285,14 +290,14 @@
 
     <img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
 
- <figcaption class="product_boxdetails"> 
+ <figcaption class="product_boxdetails">
  <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price">Boots</span>
-  <span class="price">&pound;120.00</span> 
+  <span class="price">&pound;120.00</span>
   </figcaption>
 
   </figure>
- 
+
 
 
   <!--product boxes-->
@@ -300,10 +305,10 @@
  <figure class="product_box">
 
   <img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" />
-  <figcaption class="product_boxdetails"> 
+  <figcaption class="product_boxdetails">
   <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
   <span class="price">Womens Boots</span>
-  <span class="price">&pound;100.00</span> 
+  <span class="price">&pound;100.00</span>
   </figcaption>
 </figure>
 
@@ -317,7 +322,7 @@
 <div class="clearfix"></div>
 
 <hr><!--end of content-->
-<!--Footer--> 
+<!--Footer-->
 <footer>
   <ul class="footer_nav">
     <li><a href="index.php">Home</a></li>
@@ -333,14 +338,14 @@
 
 <br/>
 
-<p class="copyr">2014 - Built by Raymond Thompson - Website Design from phpjabber.com 
+<p class="copyr">2014 - Built by Raymond Thompson - Website Design from phpjabber.com
 -This website is a demo and not functional -see other demo websites at raythompwebdesign.com
 <br/>
 <script type="text/javascript">
 document.write("Page Last Updated: " + document.lastModified);
 </script>
 </p>
-  
+
 </div><!--Wrapper end-->
 
 <script type='text/javascript'>
@@ -354,28 +359,28 @@ window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js">\x3C/scri
     });
   });
  </script>
-  
+
   <!-- Include either the minifed or production version, NOT both!! -->
 <script type="text/javascript" src="js/qtip/jquery.qtip.min.js"></script>
 <script type="text/javascript" src="js/qtip/imagesloaded.pkg.min.js"></script>
- 
+
 <script type="text/javascript">
   $('area').qtip({
-      
+
       position: {
           my:'bottom right',
           at: 'top right'
-     
+
       },
        style: { classes: 'myCustomClass' },
-      
+
        content: {
           text: 'Product price<br/><span>&#163;49.00</span><span>View</span>'
       }
-  	
+
   });
-    
+
 </script>
-  
+
 </body>
 </html>

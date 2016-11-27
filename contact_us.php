@@ -9,16 +9,20 @@
 <meta name="viewport" content="user-scalable=yes">
 <meta name="viewport" content="target-densitydpi=device-dpi">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="RayThompsonWebdev" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="&copy;raymondthompson" />
+<meta name="robots" content="noindex,nofollow">
 <title>Shoestore-Contact-Page</title>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css" />
-<!--[if lt IE 9 ]>  
+<!--[if lt IE 9 ]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<script type="text/javascript" src="js/html5shiv.min.js"></script>  
+<script type="text/javascript" src="js/html5shiv.min.js"></script>
 <script type="text/javascript" src="js/Respond-master/dest/respond.min.js"></script>
-<script type="text/javascript" src="js/selectivizr.min.js"></script>          
+<script type="text/javascript" src="js/selectivizr.min.js"></script>
 <![endif]-->
 
 </head>
@@ -27,14 +31,14 @@
 <!--Wrapper Start-->
 <div id="Wrapper">
 
-<!--Header-->  
+<!--Header-->
 <header>
  <figure id="logo">
 <img src="images/shoe-store-logo.png" alt="shoe-store-logo" />
 </figure>
 </header>
 
-<!--Navigation-->  
+<!--Navigation-->
 <nav role="navigation">
 <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
 <ul >
@@ -46,7 +50,7 @@
 <li><a href="contact_us.php">Contact</a></li>
 </ul>
 </nav>
-<!--Content-->  
+<!--Content-->
 <section id="content" role="main">
 
 <h1>Contact Us</h1>
@@ -65,7 +69,7 @@
  <input type="text" name="name" id="name" pattern="[a-z A-Z]"required  />
 </li>
 <li>
- <label for="email">E-mail:&#32; </label> 
+ <label for="email">E-mail:&#32; </label>
  <input type="text" name="email" id="email" required />
  </li>
 <li>
@@ -78,7 +82,7 @@
  	<label for=""></label><input type="submit" value="Send" id="submit" />
 </li>
  <ul/>
- 
+
 </form>
 
 </div> <!-- end of form class -->
@@ -110,11 +114,11 @@
   <li><a href="faqs.html">FAQS</a></li>
   <li><a href="contact_us.php">Contact</a></li>
   </ul>
- 
+
 </footer><!--end of footer-->
 <div class="clearfix"></div>
 <br/>
-<p class="copyr">2014 - Built by Raymond Thompson - Website Design from phpjabber.com 
+<p class="copyr">2014 - Built by Raymond Thompson - Website Design from phpjabber.com
 -This website is a demo and not functional see other demo websites at raythompwebdesign.com
 <br/>
 <script type="text/javascript">
@@ -127,7 +131,7 @@ document.write("Page Last Updated: " + document.lastModified);
 <script type='text/javascript'>
 window.jQuery || document.write('<script src="js/jquery-1.9.1.js">\x3C/script>')
 </script>
-  
+
 
 </body>
 </html>

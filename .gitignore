@@ -64,7 +64,7 @@ js/jquery-ui-1.10.3.custom.min.js
 js/modernizr-2.8.0.min.js
 js/selectivizr-min.js
 js/selectivizr.js
-
+nbproject/
 images/
 images/images/
 font/
@@ -72,6 +72,8 @@ imagemap-qtip.txt
 .htaccess
 css/custom-theme/
 css/custom-theme/images/
-
+css/.sass-cache/
+css/style.scss
 .gitignore
-
+doc\
+nbproject/
