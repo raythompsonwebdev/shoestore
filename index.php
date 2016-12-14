@@ -34,9 +34,10 @@
 
 <!--Wrapper Start-->
 <div id="Wrapper">
-
+    <div id="side-bar-toggle-btn"></div>
 <!--Header-->
 <header role="banner">
+    
   <figure id="logo">
   <img src="images/shoe-store-logo.png" alt="shoe-store-logo" >
   </figure>
@@ -47,12 +48,12 @@
 <nav role="navigation">
   <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
   <ul>
-    <li><a href="index.php">Home</a></li>
-      <li><a href="new_products.php">New Products</a></li>
-        <li><a href="specials.php">Specials</a></li>
-        <li><a href="all_products.php">All Products</a></li>
-      <li><a href="faq.html">FAQS</a></li>
-    <li><a href="contact_us.php">Contact</a></li>
+    <li><a href="index.php" title="Home Page">Home</a></li>
+      <li><a href="new_products.php" title="New Product Page">New Products</a></li>
+        <li><a href="specials.php" title="Specials Page">Specials</a></li>
+        <li><a href="all_products.php" title="All Products Page">All Products</a></li>
+      <li><a href="faq.html" title="FAQ Page">FAQS</a></li>
+    <li><a href="contact_us.php" title="Contact Page">Contact</a></li>
   </ul>
 </nav>
 <!--End of Nav-->
@@ -68,17 +69,17 @@
     <form id="searcher" action="" method="get">
       <h1>FIND YOUR SHOES</h1>
       <br/>
-      <select name="Gender">
+      <select name="gender">
         <option value="Male">Male</option>
         <option value="Female">Female</option>
       </select>
-      <select name="Foot-Size">
+      <select name="foot-size">
         <option value="1-3">1-3</option>
         <option value="4-7">4-7</option>
         <option value="8-11">8-11</option>
         <option value="11+">11+</option>
       </select>
-      <select name="Type of Shoe">
+      <select name="type-of-shoe">
         <option value="Casual">Casual</option>
         <option value="Dress">Dress</option>
         <option value="Boots">Boots</option>
@@ -179,13 +180,14 @@
       <area id="reebok-left-shoe" alt="reebok-left-shoe" title="reebok-left-shoe" href="http://www.image-maps.com/" shape="rect" coords="336,257,420,295" style="outline:none;" target="_self"     />
       <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
     </map>
+    
   </figure>
     <nav id="apDiv1">
-      <a href="#" alt="Womens-shoes">Women's Shoes</a>
-      <a href="#" alt="Mens-shoes">Men's Shoes</a>
-      <a href="#" alt="Kids-Shoes">Kid's Shoes</a>
-      <a href="#" alt="Bags">Bags</a>
-      <a href="#" alt="Accessories">Accessories</a>
+      <a href="#" title="Womens's Shoes">Women's Shoes</a>
+      <a href="#" title="Men's Shoes">Men's Shoes</a>
+      <a href="#" title="Kids's Shoes">Kid's Shoes</a>
+      <a href="#" title="Bags">Bags</a>
+      <a href="#" title="Accessories">Accessories</a>
     </nav>
 
 </section>
@@ -382,5 +384,6 @@ window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js">\x3C/scri
 
 </script>
 
+<script src="js/custom.js"></script>
 </body>
 </html>

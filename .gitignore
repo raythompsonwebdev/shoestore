@@ -75,5 +75,5 @@ css/custom-theme/images/
 css/.sass-cache/
 css/style.scss
 .gitignore
-doc\
+doc/
 nbproject/

@@ -17,6 +17,7 @@
 <title>Shoestore-New-Products-Page</title>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="font/font-style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css" />
 
 <!--[if lt IE 9 ]>
@@ -44,14 +45,14 @@
 <!--Navigation-->
 <nav role="navigation">
   <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
-    <ul class="nav">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="new_products.php">New Products</a></li>
-      <li><a href="specials.php">Specials</a></li>
-      <li><a href="all_products.php">All Products</a></li>
-      <li><a href="faq.html">FAQS</a></li>
-      <li><a href="contact_us.php">Contact</a></li>
-    </ul>
+    <ul>
+    <li><a href="index.php" title="Home Page">Home</a></li>
+      <li><a href="new_products.php" title="New Product Page">New Products</a></li>
+        <li><a href="specials.php" title="Specials Page">Specials</a></li>
+        <li><a href="all_products.php" title="All Products Page">All Products</a></li>
+      <li><a href="faq.html" title="FAQ Page">FAQS</a></li>
+    <li><a href="contact_us.php" title="Contact Page">Contact</a></li>
+  </ul>
 </nav>
 
 <!-- name="searchbar" -->
