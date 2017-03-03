@@ -35,6 +35,7 @@
 <!--Wrapper Start-->
 <div id="Wrapper">
     <div id="side-bar-toggle-btn"></div>
+    <div id="menu-toggle-btn"></div>
 <!--Header-->
 <header role="banner">
     
@@ -46,15 +47,23 @@
 
 <!--Navigation-->
 <nav role="navigation">
-  <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
-  <ul>
-    <li><a href="index.php" title="Home Page">Home</a></li>
-      <li><a href="new_products.php" title="New Product Page">New Products</a></li>
+    <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
+    <ul>
+        <li><a href="index.php" title="Home Page">Home</a></li>
+        <li><a href="new_products.php" title="New Product Page">New Products</a></li>
         <li><a href="specials.php" title="Specials Page">Specials</a></li>
         <li><a href="all_products.php" title="All Products Page">All Products</a></li>
-      <li><a href="faq.html" title="FAQ Page">FAQS</a></li>
-    <li><a href="contact_us.php" title="Contact Page">Contact</a></li>
-  </ul>
+        <li><a href="faqs.html" title="FAQ Page">FAQS</a></li>
+        <li><a href="contact_us.php" title="Contact Page">Contact</a></li>
+    </ul>
+    <ul id="mobile-nav">
+        <li><a href="index.php" title="Home Page">Home</a></li>
+        <li><a href="new_products.php" title="New Product Page">New Products</a></li>
+        <li><a href="specials.php" title="Specials Page">Specials</a></li>
+        <li><a href="all_products.php" title="All Products Page">All Products</a></li>
+        <li><a href="faqs.html" title="FAQ Page">FAQS</a></li>
+        <li><a href="contact_us.php" title="Contact Page">Contact</a></li>
+    </ul>
 </nav>
 <!--End of Nav-->
 
@@ -340,8 +349,8 @@
 
 <br/>
 
-<p class="copyr">2014 - Built by Raymond Thompson - Website Design from phpjabber.com
--This website is a demo and not functional -see other demo websites at raythompwebdesign.com
+<p class="copyr">2017 - Built by Raymond Thompson - Website Design from phpjabber.com<br/>
+-This see other websites at raythompsonwebdev.co.uk
 <br/>
 <script type="text/javascript">
 document.write("Page Last Updated: " + document.lastModified);

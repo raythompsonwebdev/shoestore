@@ -7,6 +7,12 @@ $(document).ready(function() {
             
         });
         
+        $('div#menu-toggle-btn').bind('click', function(){
+            
+            $('nav ul#mobile-nav').slideToggle(500).css('display' , 'block');
+            
+        });
+        
     
         
 });

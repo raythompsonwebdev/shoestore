@@ -32,7 +32,7 @@
 
         <!--Wrapper Start-->
         <section id="Wrapper">
-
+    <div id="menu-toggle-btn"></div>
             <!--Header-->
             <header>
                 <figure id="logo">
@@ -42,20 +42,25 @@
 
             <!--Navigation-->
             <nav role="navigation">
-                <span>
-                    <a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a>
-                </span>
-                <ul class="nav">
-                    
-                        <li><a href="index.php" title="Home Page">Home</a></li>
-                        <li><a href="new_products.php" title="New Product Page">New Products</a></li>
-                        <li><a href="specials.php" title="Specials Page">Specials</a></li>
-                        <li><a href="all_products.php" title="All Products Page">All Products</a></li>
-                        <li><a href="faq.html" title="FAQ Page">FAQS</a></li>
-                        <li><a href="contact_us.php" title="Contact Page">Contact</a></li>
-                  
+                <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
+                <ul>
+                    <li><a href="index.php" title="Home Page">Home</a></li>
+                    <li><a href="new_products.php" title="New Product Page">New Products</a></li>
+                    <li><a href="specials.php" title="Specials Page">Specials</a></li>
+                    <li><a href="all_products.php" title="All Products Page">All Products</a></li>
+                    <li><a href="faqs.html" title="FAQ Page">FAQS</a></li>
+                    <li><a href="contact_us.php" title="Contact Page">Contact</a></li>
+                </ul>
+                <ul id="mobile-nav">
+                    <li><a href="index.php" title="Home Page">Home</a></li>
+                    <li><a href="new_products.php" title="New Product Page">New Products</a></li>
+                    <li><a href="specials.php" title="Specials Page">Specials</a></li>
+                    <li><a href="all_products.php" title="All Products Page">All Products</a></li>
+                    <li><a href="faqs.html" title="FAQ Page">FAQS</a></li>
+                    <li><a href="contact_us.php" title="Contact Page">Contact</a></li>
                 </ul>
             </nav>
+            <!--End of Nav-->
 
             <!--Search bar-->
             <aside id="searchbar">
@@ -718,8 +723,8 @@
 
                 <div class="clearfix"></div>
 
-                <p class="copyr">2014 - Built by Raymond Thompson - Website Design from phpjabber.com
-                    -This website is a demo and not functional - see other demo websites at raythompwebdesign.com
+                <p class="copyr">2017 - Built by Raymond Thompson - Website Design from phpjabber.com<br/>
+-This see other websites at raythompsonwebdev.co.uk
                     <br/>
                     <script type="text/javascript">
                         document.write("Page Last Updated: " + document.lastModified);
@@ -731,19 +736,20 @@
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script type='text/javascript'>
-                window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js">\x3C/script>')
+                        window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js">\x3C/script>')
             </script>
 
             <script src="js/jquery-ui-1.10.3.custom.js"></script>
             <script>
-                $(function () {
-                    $("#accordion").accordion({
-                        collapsible: true
-                    });
-                });
+                        $(function () {
+                            $("#accordion").accordion({
+                                collapsible: true
+                            });
+                        });
             </script>
 
             <script src="js/pagination.js"></script>
+            <script src="js/custom.js"></script>
 
 
     </body>
