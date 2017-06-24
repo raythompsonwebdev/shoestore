@@ -35,8 +35,6 @@
 <meta name="theme-color" content="#ffffff">
 <!-- end favicon-->
 
-
-<input type="submit" value="" />
 <title>Shoestore-Home-Page</title>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -57,21 +55,26 @@
 
 <!--Wrapper Start-->
 <div id="Wrapper">
-    <div id="side-bar-toggle-btn"></div>
-    <div id="menu-toggle-btn"></div>
+
+<div id="side-bar-toggle-btn"></div>
+<div id="menu-toggle-btn"></div>
 <!--Header-->
 <header role="banner">
-    
-  <figure id="logo">
-  <img src="images/shoe-store-logo.png" alt="shoe-store-logo" >
-  </figure>
+
+    <figure id="logo">
+        <img src="images/shoe-store-logo.png" alt="shoe-store-logo" >
+    </figure>
 </header>
 <!--End of header-->
 
 <!--Navigation-->
-<nav role="navigation">
-    <span><a href="#" alt="">Sign in</a><a href="#" alt="">Login</a><a href="#" alt="">Help</a></span>
-    <ul>
+<nav id="main-nav" role="navigation">
+    <span id="signin-box">
+        <a href="#" alt="">Sign in</a>
+        <a href="#" alt="">Login</a>
+        <a href="#" alt="">Help</a>
+    </span>
+    <ul id="inner-nav">
         <li><a href="index.php" title="Home Page">Home</a></li>
         <li><a href="new_products.php" title="New Product Page">New Products</a></li>
         <li><a href="specials.php" title="Specials Page">Specials</a></li>
@@ -91,265 +94,265 @@
 <!--End of Nav-->
 
 <!--Content-->
-<section id="content" role="main">
+<section id="content" class="clearfix" role="main">
 
-<!--Left bar-->
-<aside id="left_bar" role="complementary">
+    <!--Left bar-->
+    <aside id="left_bar" role="complementary">
 
-  <!--Search Box-->
-  <article id="searchbox">
-    <form id="searcher" action="" method="get">
-      <h1>FIND YOUR SHOES</h1>
-      <br/>
-      <select name="gender">
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-      </select>
-      <select name="foot-size">
-        <option value="1-3">1-3</option>
-        <option value="4-7">4-7</option>
-        <option value="8-11">8-11</option>
-        <option value="11+">11+</option>
-      </select>
-      <select name="type-of-shoe">
-        <option value="Casual">Casual</option>
-        <option value="Dress">Dress</option>
-        <option value="Boots">Boots</option>
-        <option value="Work">Work</option>
-      </select>
-      <input name="find" class="find" type="submit" value="Find" />
-    </form>
-  </article>
-  <!--End of Search Box-->
+        <!--Search Box-->
+        <article id="searchbox">
+            <form id="searcher" action="" method="get">
+                <h1>FIND YOUR SHOES</h1>
+                <br/>
+                <select name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <select name="foot-size">
+                    <option value="1-3">1-3</option>
+                    <option value="4-7">4-7</option>
+                    <option value="8-11">8-11</option>
+                    <option value="11+">11+</option>
+                </select>
+                <select name="type-of-shoe">
+                    <option value="Casual">Casual</option>
+                    <option value="Dress">Dress</option>
+                    <option value="Boots">Boots</option>
+                    <option value="Work">Work</option>
+                </select>
+                <input name="find" class="find" type="submit" value="Find" />
+            </form>
+        </article>
+        <!--End of Search Box-->
 
-  <!--Second nav box-->
-  <nav id="sec_nav" role="navigation">
+        <!--Second nav box-->
+        <nav id="sec_nav" role="navigation">
 
-  <div id="accordion">
-      <h3>Men&acute;s Shoes</h3>
-      <div>
-      <ul>
-      <li>Athletics</li>
-      <li>Boat </li>
-      <li>Fashion</li>
-      <li>Formal </li>
-      <li>Shoes</li>
-      <li>Lace-Ups</li>
-      <li>Loafers </li>
-      <li>Outdoor</li>
-      <li>Sandals</li>
-      <li>Slippers</li>
-      <li>Work </li>
-      <li></li>
-      </ul>
-      </div>
-      <h3>Women&acute;s  Shoes</h3>
-      <div>
-      <ul>
-      <li>Athletics</li>
-      <li>Boat Shoes</li>
-      <li>Fashion</li>
-      <li>Formal </li>
-      <li>Shoes</li>
-      <li>Lace-Ups</li>
-      <li>Loafers </li>
-      <li>Outdoor</li>
-      <li>Sandals</li>
-      <li>Slippers</li>
-      <li>Work </li>
-      <li></li>
-      </ul>
-      </div>
-      <h3>Kid&acute;s Shoes</h3>
-      <div>
-      <ul>
-      <li>Athletics</li>
-      <li>Boat </li>
-      <li>Fashion </li>
-      <li>Formal </li>
-      <li>Shoes</li>
-      <li>Lace-Ups</li>
-      <li>Loafers </li>
-      <li>Outdoor</li>
-      <li>Sandals</li>
-      <li>Slippers</li>
-      <li>Work </li>
-      <li></li>
-      </ul>
-      </div>
-      <h3>Bag&acute;s &amp; Accessories</h3>
-      <div>
-      <ul>
-      <li>Handbags</li>
-      <li>Scarfs</li>
-      <li>Belts</li>
-      </ul>
-      </div>
-    </div>
-  </nav>
-  <!--End of sec_nav -->
-</aside>
-<!--End of left bar-->
+            <div id="accordion">
+                <h3>Men&acute;s Shoes</h3>
+                <div>
+                    <ul>
+                        <li>Athletics</li>
+                        <li>Boat </li>
+                        <li>Fashion</li>
+                        <li>Formal </li>
+                        <li>Shoes</li>
+                        <li>Lace-Ups</li>
+                        <li>Loafers </li>
+                        <li>Outdoor</li>
+                        <li>Sandals</li>
+                        <li>Slippers</li>
+                        <li>Work </li>
+                        <li></li>
+                    </ul>
+                </div>
+                <h3>Women&acute;s  Shoes</h3>
+                <div>
+                    <ul>
+                        <li>Athletics</li>
+                        <li>Boat Shoes</li>
+                        <li>Fashion</li>
+                        <li>Formal </li>
+                        <li>Shoes</li>
+                        <li>Lace-Ups</li>
+                        <li>Loafers </li>
+                        <li>Outdoor</li>
+                        <li>Sandals</li>
+                        <li>Slippers</li>
+                        <li>Work </li>
+                        <li></li>
+                    </ul>
+                </div>
+                <h3>Kid&acute;s Shoes</h3>
+                <div>
+                    <ul>
+                        <li>Athletics</li>
+                        <li>Boat </li>
+                        <li>Fashion </li>
+                        <li>Formal </li>
+                        <li>Shoes</li>
+                        <li>Lace-Ups</li>
+                        <li>Loafers </li>
+                        <li>Outdoor</li>
+                        <li>Sandals</li>
+                        <li>Slippers</li>
+                        <li>Work </li>
+                        <li></li>
+                    </ul>
+                </div>
+                <h3>Bag&acute;s &amp; Accessories</h3>
+                <div>
+                    <ul>
+                        <li>Handbags</li>
+                        <li>Scarfs</li>
+                        <li>Belts</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--End of sec_nav -->
+    </aside>
+    <!--End of left bar-->
 
-<!--Content_section-->
-<section id="content_section" class="group">
+    <!--Content_section-->
+    <section id="content_section" class="group">
 
-<!--bannerbox-->
-<section id="bannerbox">
+        <!--bannerbox-->
+        <section id="bannerbox">
 
-  <br/>
-  <p>LORUM IPSUN DOLOR AMET <br/>
-  The best shoes available on the planet</p>
-  <figure id="bannerboximg">
+            <br/>
+            <p>LORUM IPSUN DOLOR AMET <br/>
+                The best shoes available on the planet</p>
+            <figure id="bannerboximg">
 
-    <img src="images/page1_09.png" alt="bannerimage" usemap="#Map" />
+                <img src="images/page1_09.png" alt="bannerimage" usemap="#Map" />
 
-    <map id="Map" name="Map" >
+                <map id="Map" name="Map" >
 
-      <area id="reebok-right-shoe" alt="reebok-right-shoe" title="reebok-right-shoe" href="http://www.image-maps.com/" shape="rect" coords="98,206,151,308" style="outline:none;" target="_self"     />
-      <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+                    <area id="reebok-right-shoe" alt="reebok-right-shoe" title="reebok-right-shoe" href="http://www.image-maps.com/" shape="rect" coords="98,206,151,308" style="outline:none;" target="_self"     />
+                    <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
 
-      <area id="reebok-left-shoe" alt="reebok-left-shoe" title="reebok-left-shoe" href="http://www.image-maps.com/" shape="rect" coords="336,257,420,295" style="outline:none;" target="_self"     />
-      <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
-    </map>
-    
-  </figure>
-    <nav id="apDiv1">
-      <a href="#" title="Womens's Shoes">Women's Shoes</a>
-      <a href="#" title="Men's Shoes">Men's Shoes</a>
-      <a href="#" title="Kids's Shoes">Kid's Shoes</a>
-      <a href="#" title="Bags">Bags</a>
-      <a href="#" title="Accessories">Accessories</a>
-    </nav>
+                    <area id="reebok-left-shoe" alt="reebok-left-shoe" title="reebok-left-shoe" href="http://www.image-maps.com/" shape="rect" coords="336,257,420,295" style="outline:none;" target="_self"     />
+                    <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+                </map>
 
-</section>
+            </figure>
+            <nav id="apDiv1">
+                <a href="#" title="Womens's Shoes">Women's Shoes</a>
+                <a href="#" title="Men's Shoes">Men's Shoes</a>
+                <a href="#" title="Kids's Shoes">Kid's Shoes</a>
+                <a href="#" title="Bags">Bags</a>
+                <a href="#" title="Accessories">Accessories</a>
+            </nav>
 
-<h1>Featured</h1>
+        </section>
 
-<!--product boxes-->
-<div class="product_boxes" ><!--product sections-->
+        <h1>Featured</h1>
 
-  <!--product boxes-->
+        <!--product boxes-->
+        <div class="product_boxes" ><!--product sections-->
 
-  <figure class="product_box">
-    <img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
-<figcaption class="product_boxdetails">
- <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
-  <span class="price"> Trainers</span>
-  <span class="price">&pound;80.00</span>
-  </figcaption>
-  </figure>
+            <!--product boxes-->
 
-
-
-  <!--product boxes-->
-
-  <figure class="product_box">
-    <img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
-  <figcaption class="product_boxdetails">
-  <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
-  <span class="price">Skate Shoes</span>
-  <span class="price">&pound;100.00</span>
-  </figcaption>
-  </figure>
+            <figure class="product_box">
+                <img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+                <figcaption class="product_boxdetails">
+                    <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+                    <span class="price"> Trainers</span>
+                    <span class="price">&pound;80.00</span>
+                </figcaption>
+            </figure>
 
 
 
-  <!--product boxes-->
+            <!--product boxes-->
 
-  <figure class="product_box">
-
-    <img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
-<figcaption class="product_boxdetails">
- <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
-  <span class="price">Boots</span>
-  <span class="price">&pound;120.00</span>
-  </figcaption>
-
-  </figure>
-
-
-<!--product boxes-->
-
-<figure class="product_box">
-
-<img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" />
-
-<figcaption class="product_boxdetails">
-<img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
-<span class="price">Womens Boots</span>
-<span class="price">&pound;100.00</span>
-</figcaption>
-
-</figure>
-
-
-</div>
-
-<!--product boxes-->
-<section class="product_boxes" >
-
-  <!--product box-->
-    <figure class="product_box">
-
-      <img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
-
- <figcaption class="product_boxdetails">
- <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
-  <span class="price"> Trainers</span>
-  <span class="price">&pound;80.00</span>
-  </figcaption>
-    </figure>
+            <figure class="product_box">
+                <img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+                <figcaption class="product_boxdetails">
+                    <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+                    <span class="price">Skate Shoes</span>
+                    <span class="price">&pound;100.00</span>
+                </figcaption>
+            </figure>
 
 
 
-  <!--product box-->
+            <!--product boxes-->
 
-  <figure class="product_box">
+            <figure class="product_box">
 
-    <img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
-<figcaption class="product_boxdetails">
- <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
-  <span class="price">Skate Shoes</span>
-  <span class="price">&pound;100.00</span>
-  </figcaption>
+                <img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+                <figcaption class="product_boxdetails">
+                    <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+                    <span class="price">Boots</span>
+                    <span class="price">&pound;120.00</span>
+                </figcaption>
 
-  </figure>
-
-
-
-  <!--product box-->
-
-   <figure class="product_box">
-
-    <img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
-
- <figcaption class="product_boxdetails">
- <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
-  <span class="price">Boots</span>
-  <span class="price">&pound;120.00</span>
-  </figcaption>
-
-  </figure>
+            </figure>
 
 
+            <!--product boxes-->
 
-  <!--product boxes-->
+            <figure class="product_box">
 
- <figure class="product_box">
+                <img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" />
 
-  <img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" />
-  <figcaption class="product_boxdetails">
-  <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
-  <span class="price">Womens Boots</span>
-  <span class="price">&pound;100.00</span>
-  </figcaption>
-</figure>
+                <figcaption class="product_boxdetails">
+                    <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+                    <span class="price">Womens Boots</span>
+                    <span class="price">&pound;100.00</span>
+                </figcaption>
 
-</section><!--product boxes end-->
+            </figure>
 
-</section>
-<!--end of content section-->
+
+        </div>
+
+        <!--product boxes-->
+        <section class="product_boxes" >
+
+            <!--product box-->
+            <figure class="product_box">
+
+                <img class="product_boximg" src="images/kids-trainer.png" alt="kids-trainer" />
+
+                <figcaption class="product_boxdetails">
+                    <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+                    <span class="price"> Trainers</span>
+                    <span class="price">&pound;80.00</span>
+                </figcaption>
+            </figure>
+
+
+
+            <!--product box-->
+
+            <figure class="product_box">
+
+                <img class="product_boximg" src="images/basket-ball-shoe.png" alt="basket-ball-shoe" />
+                <figcaption class="product_boxdetails">
+                    <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+                    <span class="price">Skate Shoes</span>
+                    <span class="price">&pound;100.00</span>
+                </figcaption>
+
+            </figure>
+
+
+
+            <!--product box-->
+
+            <figure class="product_box">
+
+                <img class="product_boximg" src="images/fur-lined-ladies-boot.png"  alt="fur-lined-ladies-boot" />
+
+                <figcaption class="product_boxdetails">
+                    <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+                    <span class="price">Boots</span>
+                    <span class="price">&pound;120.00</span>
+                </figcaption>
+
+            </figure>
+
+
+
+            <!--product boxes-->
+
+            <figure class="product_box">
+
+                <img class="product_boximg" src="images/fur-lined-hiking-boot.png" alt="fur-lined-boot" />
+                <figcaption class="product_boxdetails">
+                    <img class="product_icon" src="images/shoppingcart.gif"  alt="shoppingcart" />
+                    <span class="price">Womens Boots</span>
+                    <span class="price">&pound;100.00</span>
+                </figcaption>
+            </figure>
+
+        </section><!--product boxes end-->
+
+    </section>
+    <!--end of content section-->
 
 </section>
 
@@ -358,14 +361,14 @@
 <hr><!--end of content-->
 <!--Footer-->
 <footer>
-  <ul class="footer_nav">
-    <li><a href="index.php">Home</a></li>
-    <li><a href="new_products.php">New Products</a></li>
-    <li><a href="specials.php">Specials</a></li>
-    <li><a href="all_products.php">All Products</a></li>
-    <li><a href="faqs.html">FAQS</a></li>
-    <li><a href="contact_us.php">Contact</a></li>
-  </ul>
+    <ul class="footer_nav">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="new_products.php">New Products</a></li>
+        <li><a href="specials.php">Specials</a></li>
+        <li><a href="all_products.php">All Products</a></li>
+        <li><a href="faqs.html">FAQS</a></li>
+        <li><a href="contact_us.php">Contact</a></li>
+    </ul>
 </footer><!--end of footer-->
 
 <div class="clearfix"></div>
@@ -373,49 +376,51 @@
 <br/>
 
 <p class="copyr">2017 - Built by Raymond Thompson - Website Design from phpjabber.com<br/>
--This see other websites at raythompsonwebdev.co.uk
-<br/>
-<script type="text/javascript">
-document.write("Page Last Updated: " + document.lastModified);
-</script>
+    -This see other websites at raythompsonwebdev.co.uk
+    <br/>
+    <script type="text/javascript">
+        document.write("Page Last Updated: " + document.lastModified);
+    </script>
 </p>
 
 </div><!--Wrapper end-->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type='text/javascript'>
-window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js">\x3C/script>')
+    window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js">\x3C/script>');
 </script>
 <script src="js/jquery-ui-1.10.3.custom.js"></script>
 <script>
-  $(function() {
-    $( "#accordion" ).accordion({
-      collapsible: true
+    $(function () {
+        $("#accordion").accordion({
+            collapsible: true
+        });
     });
-  });
- </script>
+</script>
 
-  <!-- Include either the minifed or production version, NOT both!! -->
+<!-- Include either the minifed or production version, NOT both!! -->
 <script type="text/javascript" src="js/qtip/jquery.qtip.min.js"></script>
 <script type="text/javascript" src="js/qtip/imagesloaded.pkg.min.js"></script>
 
 <script type="text/javascript">
-  $('area').qtip({
+    $('area').qtip({
 
-      position: {
-          my:'bottom right',
-          at: 'top right'
+        position: {
+            my: 'bottom right',
+            at: 'top right'
 
-      },
-       style: { classes: 'myCustomClass' },
+        },
+        style: {classes: 'myCustomClass'},
 
-       content: {
-          text: 'Product price<br/><span>&#163;49.00</span><span>View</span>'
-      }
+        content: {
+            text: 'Product price<br/><span>&#163;49.00</span><span>View</span>'
+        }
 
-  });
+    });
 
 </script>
 
 <script src="js/custom.js"></script>
 </body>
+
 </html>
