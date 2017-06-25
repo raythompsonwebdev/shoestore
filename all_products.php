@@ -32,7 +32,7 @@
 
 <!--Wrapper Start-->
 <section id="Wrapper">
-<div id="menu-toggle-btn"></div>
+<div id="menu-toggle-btn">MENU</div>
     <!--Header-->
     <header>
         <figure id="logo">

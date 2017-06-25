@@ -56,8 +56,8 @@
 <!--Wrapper Start-->
 <div id="Wrapper">
 
-<div id="side-bar-toggle-btn"></div>
-<div id="menu-toggle-btn"></div>
+<div id="side-bar-toggle-btn">SIDE BAR</div>
+<div id="menu-toggle-btn">MENU</div>
 <!--Header-->
 <header role="banner">
 

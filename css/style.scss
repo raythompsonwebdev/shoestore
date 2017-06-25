@@ -3900,19 +3900,32 @@ figure{
     
 #Wrapper{
     width: 96%;
+    
+    p.copyr {
+        margin: 2% auto;  
+        font-size: 0.5em;  
+    }
 
     div#side-bar-toggle-btn{
         display:block;
         position:fixed;
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 92%;
         z-index:99;
-        width: 60px;
-        height: 100px;
-        background-color:$color-black;
+        width: 50px;
+        height: 50px;
+        background-color:$color-white;
+        @include box-sizing($type: border-box);
+        border:2px solid $color-orange ;
+        color:$color-orange;
+        line-height: 23px;
+        text-align:center;
+        font-size:0.9em;
         &:hover{
             background-color:$color-orange; 
             cursor:pointer;
+            border:2px solid $header-color;
+            color:$color-white;
         }
     }
 
@@ -3924,8 +3937,20 @@ figure{
         top: 5.2em;
         width:70px;
         height:50px;
-        background-color:$color-black;
-        &:hover{background-color:$color-orange; cursor:pointer;}
+        line-height:50px;
+        text-align:center;
+        background-color:$color-white;
+        @include box-sizing($type: border-box);
+        border:2px solid $color-black ;
+        color:$color-black;
+        font-size:0.9em;
+        
+        &:hover{
+            background-color:$color-black; 
+            cursor:pointer;
+            border:2px solid $header-color;
+            color:$color-white;
+        }
     }
 
     header {
@@ -4227,7 +4252,7 @@ figure{
             left: 1em;
             width: 30%;
             display:none;
-            height:550px;
+            height: 800px;
             background-color:$color-white;
 
 
@@ -4279,8 +4304,8 @@ figure{
     width: 96%;
 
     div#side-bar-toggle-btn{
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 92%;
         z-index:99;
         &:hover{
             cursor:pointer;
@@ -4560,7 +4585,7 @@ figure{
             left: 1em;
             width: 30%;
             display:none;
-            height:550px;
+            height:800px;
 
             #sec_nav #accordion {
 
@@ -4622,8 +4647,8 @@ figure{
     width: 96%;
 
     div#side-bar-toggle-btn{
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 91%;
         z-index:99;
         &:hover{
             cursor:pointer;
@@ -4893,7 +4918,7 @@ figure{
             position:absolute;
             z-index:100;
             left: 1em;
-            width: 30%;
+            width: 35%;
             display:none;
             height:550px;
 
@@ -4956,8 +4981,8 @@ figure{
     width: 96%;
 
     div#side-bar-toggle-btn{
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 91%;
         z-index:99;
         &:hover{
             cursor:pointer;
@@ -5111,8 +5136,8 @@ figure{
                 p {
                     left: 2%;
                     font-size: 1.1em; 
-                    top: 152px;
-                    width: 90%;
+                    top: 143px;
+                    width: 96%;
                 }
                 #bannerboximg { 
                     width: 373px;
@@ -5229,11 +5254,9 @@ figure{
 
         #left_bar {
             position:absolute;
-            z-index:100;
-            left: 1em;
-            width: 30%;
+            width: 36%;
             display:none;
-            height:550px;
+            height:800px;
 
             #sec_nav #accordion {
 
@@ -5295,8 +5318,8 @@ figure{
     width: 96%;
 
     div#side-bar-toggle-btn{
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 89%;
         z-index:99;
         &:hover{
             cursor:pointer;
@@ -5577,11 +5600,9 @@ figure{
 
         #left_bar {
             position:absolute;
-            z-index:100;
-            left: 1em;
-            width: 30%;
+            width: 43%;
             display:none;
-            height:550px;
+            height:800px;
 
             #sec_nav #accordion {
 
@@ -5647,8 +5668,8 @@ figure{
     width: 96%;
 
     div#side-bar-toggle-btn{
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 87%;
         z-index:99;
         &:hover{
             cursor:pointer;
@@ -5936,10 +5957,10 @@ figure{
         #left_bar {
             position:absolute;
             z-index:100;
-            left: 1em;
-            width: 30%;
+            left: 0.5em;
+            width: 50%;
             display:none;
-            height:550px;
+            height:800px;
 
             #sec_nav #accordion {
 
@@ -6006,8 +6027,8 @@ figure{
     width: 96%;
 
     div#side-bar-toggle-btn{
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 86%;
         z-index:99;
         &:hover{
             cursor:pointer;
@@ -6240,8 +6261,8 @@ figure{
                 }
 
                 figure.product-box_longer {  
-                    max-height: 230px;
-                    height:230px;
+                    max-height: 205px;
+                    height:205px;
                     margin-bottom:15px;
                     
                     
@@ -6252,7 +6273,7 @@ figure{
                     }
                     figcaption.product_boxdetails_longer{ 
                         width:60%; 
-                        height: 220px; 
+                        height: 200px; 
                         padding:1%; 
                         h1{  
                             height:auto; 
@@ -6260,9 +6281,10 @@ figure{
                             text-indent:8%; 
                         }
                         p{
-                            float:right; 
-                            width: 55%; 
-                            font-size: 0.7em; 
+                            float: none;
+                            width: 90%;
+                            font-size: 0.7em;
+                            padding: 5%; 
                         }
                         
                         
@@ -6271,10 +6293,11 @@ figure{
                         }
 
                         span.price_longer{ 
-                            line-height: 70px; 
+                            line-height: 35px; 
                             font-size:0.7em; 
                             width: 45%;
                             text-indent: 1%;
+                            display: inline-block;
 
                             /*Price Icon*/
                             img.product_icon_longer{  
@@ -6293,10 +6316,9 @@ figure{
         #left_bar {
             position:absolute;
             z-index:100;
-            left: 1em;
-            width: 30%;
+            width: 55%;
             display:none;
-            height:550px;
+            height:800px;
 
             #sec_nav #accordion {
 
@@ -6363,8 +6385,8 @@ figure{
     width: 96%;
 
     div#side-bar-toggle-btn{
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 85%;
         z-index:99;
         &:hover{
             cursor:pointer;
@@ -6400,7 +6422,7 @@ figure{
 
         ul#mobile-nav{
             width:94%;
-            top: 7.7em;
+            top: 7.3em;
             li {
                 display:block;
                 a {
@@ -6595,8 +6617,8 @@ figure{
                 }
 
                 figure.product-box_longer {  
-                    max-height: 250px;
-                    height:250px;
+                    max-height: 220px;
+                    height:220px;
                     margin-bottom:15px;
                     
                     
@@ -6607,7 +6629,7 @@ figure{
                     }
                     figcaption.product_boxdetails_longer{ 
                         width:60%; 
-                        height: 240px; 
+                        height: 210px; 
                         padding:1%; 
                         h1{  
                             height:auto; 
@@ -6615,9 +6637,10 @@ figure{
                             text-indent:8%; 
                         }
                         p{
-                            float:right; 
-                            width: 48%; 
-                            font-size: 0.7em; 
+                            float: none;
+                            width: 90%;
+                            font-size: 0.7em;
+                            padding: 5%; 
                         }
                         
                         
@@ -6626,30 +6649,29 @@ figure{
                         }
 
                         span.price_longer{ 
-                            line-height: 70px; 
-                            font-size: 0.75em;
-                            width: 50%;
+                            line-height: 35px; 
+                            font-size:0.7em; 
+                            width: 45%;
                             text-indent: 1%;
+                            display: inline-block;
 
                             /*Price Icon*/
                             img.product_icon_longer{  
-                                width: 26%;
+                                width: 28%;
                                 &:hover{}
                             }
                         }
                     }
                 }
             }
-
         }
 
         #left_bar {
             position:absolute;
             z-index:100;
-            left: 1em;
-            width: 30%;
+            left: 0.1em;
+            width: 58%;
             display:none;
-            height:550px;
 
             #sec_nav #accordion {
 
@@ -6716,8 +6738,8 @@ figure{
     width: 96%;
 
     div#side-bar-toggle-btn{
-        top: 481px;
-        left: 2%;
+        top: 2px;
+        left: 84%;
         z-index:99;
         &:hover{
             cursor:pointer;
@@ -6738,7 +6760,7 @@ figure{
     header {
         height: 61px;
         figure#logo {
-            width: 280px;
+            width: 259px;
         }
     }
 
@@ -6746,7 +6768,7 @@ figure{
         height: 60px;
 
         span#signin-box {
-            width: 55.5%;
+            width: 60.5%;
         }
 
         ul#inner-nav{
@@ -6755,7 +6777,7 @@ figure{
 
         ul#mobile-nav{
             width:94%;
-            top: 7.4em;
+            top: 7em;
             li {
                 display:block;
                 a {
@@ -6788,15 +6810,15 @@ figure{
     #searchbar {
 
         input[type="submit"] {
-            width: 10%;
-            font-size: 1em;
+            width: 11%;
+            font-size: 0.9em;
         }
 
         #searcher2 {
 
             label {
-                font-size: 0.6em;
-                width: 29%;
+                font-size: 0.55em;
+                width: 27%;
             }
 
             select {  
@@ -6841,8 +6863,6 @@ figure{
             font-size: 1.2em;
         }
 
-
-
         #content_section {
             width: 100%;
             h1 {
@@ -6873,10 +6893,16 @@ figure{
 
             #bannerbox {
                 height: 310px;
+                
+                p::first-line {
+                    font-size: 1.7em;
+                    letter-spacing: 0.001em;
+                }
                 p {
                     left: 1%;
                     font-size: 0.75em; 
-                    top: 146px;
+                    top: 138px;
+                    line-height: 22px;
                 }
                 #bannerboximg { 
                     width: 100%;
@@ -6924,7 +6950,7 @@ figure{
                         padding: 7% 0 0 0; 
                         span.price:first-of-type{ }
                         span.price{ 
-                            font-size: 0.75em;
+                            font-size: 0.8em;
                             width:80%;
                         }
 
@@ -6950,8 +6976,8 @@ figure{
                 }
 
                 figure.product-box_longer {  
-                    max-height: 330px;
-                    height: 330px;
+                    max-height: 240px;
+                    height: 240px;
                     margin-bottom:15px;
                     
                     
@@ -6962,7 +6988,7 @@ figure{
                     }
                     figcaption.product_boxdetails_longer{ 
                         width:60%; 
-                        height: 310px; 
+                        height: 250px; 
                         padding:1%; 
                         h1{  
                             height:auto; 
@@ -6970,9 +6996,10 @@ figure{
                             text-indent:8%; 
                         }
                         p{
-                            float:right; 
-                            width: 48%; 
-                            font-size: 0.7em; 
+                            float: none;
+                            width: 90%;
+                            font-size: 0.7em;
+                            padding: 5%; 
                         }
                         
                         
@@ -6981,14 +7008,15 @@ figure{
                         }
 
                         span.price_longer{ 
-                            line-height: 70px; 
-                            font-size: 0.75em;
-                            width: 50%;
+                            line-height: 35px; 
+                            font-size:0.7em; 
+                            width: 48%;
                             text-indent: 1%;
+                            display: inline-block;
 
                             /*Price Icon*/
                             img.product_icon_longer{  
-                                width: 26%;
+                                width: 28%;
                                 &:hover{}
                             }
                         }
@@ -7001,10 +7029,9 @@ figure{
         #left_bar {
             position:absolute;
             z-index:100;
-            left: 1em;
-            width: 30%;
+            left: 0.1em;
+            width: 65%;
             display:none;
-            height:550px;
 
             #sec_nav #accordion {
 
@@ -7050,9 +7077,9 @@ figure{
             li {
                 a {    
                     font-size: 0.5em;
-                    line-height:20px;
+                    line-height: 15px;
                     &:hover{
-                      line-height:20px;  
+                      line-height: 15px;  
                         
                     }
                 }

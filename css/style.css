@@ -2794,18 +2794,31 @@ figure {
 @media all and (max-width: 667px) {
   #Wrapper {
     width: 96%; }
+    #Wrapper p.copyr {
+      margin: 2% auto;
+      font-size: 0.5em; }
     #Wrapper div#side-bar-toggle-btn {
       display: block;
       position: fixed;
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 92%;
       z-index: 99;
-      width: 60px;
-      height: 100px;
-      background-color: #000000; }
+      width: 50px;
+      height: 50px;
+      background-color: #ffffff;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 2px solid #ea3411;
+      color: #ea3411;
+      line-height: 23px;
+      text-align: center;
+      font-size: 0.9em; }
       #Wrapper div#side-bar-toggle-btn:hover {
         background-color: #ea3411;
-        cursor: pointer; }
+        cursor: pointer;
+        border: 2px solid #ed735c;
+        color: #ffffff; }
     #Wrapper div#menu-toggle-btn {
       display: block;
       position: fixed;
@@ -2814,10 +2827,20 @@ figure {
       top: 5.2em;
       width: 70px;
       height: 50px;
-      background-color: #000000; }
+      line-height: 50px;
+      text-align: center;
+      background-color: #ffffff;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 2px solid #000000;
+      color: #000000;
+      font-size: 0.9em; }
       #Wrapper div#menu-toggle-btn:hover {
-        background-color: #ea3411;
-        cursor: pointer; }
+        background-color: #000000;
+        cursor: pointer;
+        border: 2px solid #ed735c;
+        color: #ffffff; }
     #Wrapper header {
       height: 74px;
       width: 100%; }
@@ -3017,7 +3040,7 @@ figure {
       left: 1em;
       width: 30%;
       display: none;
-      height: 550px;
+      height: 800px;
       background-color: #ffffff; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
@@ -3043,8 +3066,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 92%;
       z-index: 99; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -3216,7 +3239,7 @@ figure {
       left: 1em;
       width: 30%;
       display: none;
-      height: 550px; }
+      height: 800px; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -3241,8 +3264,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 91%;
       z-index: 99; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -3407,7 +3430,7 @@ figure {
       position: absolute;
       z-index: 100;
       left: 1em;
-      width: 30%;
+      width: 35%;
       display: none;
       height: 550px; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
@@ -3434,8 +3457,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 91%;
       z-index: 99; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -3524,8 +3547,8 @@ figure {
         #Wrapper #content #content_section #bannerbox p {
           left: 2%;
           font-size: 1.1em;
-          top: 152px;
-          width: 90%; }
+          top: 143px;
+          width: 96%; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
           width: 373px;
           margin-top: 4%; }
@@ -3602,11 +3625,9 @@ figure {
                 width: 23%; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 100;
-      left: 1em;
-      width: 30%;
+      width: 36%;
       display: none;
-      height: 550px; }
+      height: 800px; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -3631,8 +3652,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 89%;
       z-index: 99; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -3803,11 +3824,9 @@ figure {
         max-height: 200px; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 100;
-      left: 1em;
-      width: 30%;
+      width: 43%;
       display: none;
-      height: 550px; }
+      height: 800px; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -3835,8 +3854,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 87%;
       z-index: 99; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -4009,10 +4028,10 @@ figure {
     #Wrapper #content #left_bar {
       position: absolute;
       z-index: 100;
-      left: 1em;
-      width: 30%;
+      left: 0.5em;
+      width: 50%;
       display: none;
-      height: 550px; }
+      height: 800px; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -4040,8 +4059,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 86%;
       z-index: 99; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -4181,41 +4200,42 @@ figure {
           font-size: 1em;
           line-height: 30px; }
         #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-          max-height: 230px;
-          height: 230px;
+          max-height: 205px;
+          height: 205px;
           margin-bottom: 15px; }
           #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
             width: 35%;
             margin: 2.9% 0; }
           #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
             width: 60%;
-            height: 220px;
+            height: 200px;
             padding: 1%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
               height: auto;
               line-height: 30px;
               text-indent: 8%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-              float: right;
-              width: 55%;
-              font-size: 0.7em; }
+              float: none;
+              width: 90%;
+              font-size: 0.7em;
+              padding: 5%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
               color: #0099CC; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-              line-height: 70px;
+              line-height: 35px;
               font-size: 0.7em;
               width: 45%;
               text-indent: 1%;
+              display: inline-block;
               /*Price Icon*/ }
               #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
                 width: 28%; }
     #Wrapper #content #left_bar {
       position: absolute;
       z-index: 100;
-      left: 1em;
-      width: 30%;
+      width: 55%;
       display: none;
-      height: 550px; }
+      height: 800px; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -4243,8 +4263,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 85%;
       z-index: 99; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -4265,7 +4285,7 @@ figure {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
         width: 94%;
-        top: 7.7em; }
+        top: 7.3em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4382,41 +4402,42 @@ figure {
           font-size: 1em;
           line-height: 30px; }
         #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-          max-height: 250px;
-          height: 250px;
+          max-height: 220px;
+          height: 220px;
           margin-bottom: 15px; }
           #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
             width: 35%;
             margin: 2.9% 0; }
           #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
             width: 60%;
-            height: 240px;
+            height: 210px;
             padding: 1%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
               height: auto;
               line-height: 30px;
               text-indent: 8%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-              float: right;
-              width: 48%;
-              font-size: 0.7em; }
+              float: none;
+              width: 90%;
+              font-size: 0.7em;
+              padding: 5%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
               color: #0099CC; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-              line-height: 70px;
-              font-size: 0.75em;
-              width: 50%;
+              line-height: 35px;
+              font-size: 0.7em;
+              width: 45%;
               text-indent: 1%;
+              display: inline-block;
               /*Price Icon*/ }
               #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
-                width: 26%; }
+                width: 28%; }
     #Wrapper #content #left_bar {
       position: absolute;
       z-index: 100;
-      left: 1em;
-      width: 30%;
-      display: none;
-      height: 550px; }
+      left: 0.1em;
+      width: 58%;
+      display: none; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -4444,8 +4465,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 481px;
-      left: 2%;
+      top: 2px;
+      left: 84%;
       z-index: 99; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -4459,16 +4480,16 @@ figure {
     #Wrapper header {
       height: 61px; }
       #Wrapper header figure#logo {
-        width: 280px; }
+        width: 259px; }
     #Wrapper nav#main-nav {
       height: 60px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 55.5%; }
+        width: 60.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
         width: 94%;
-        top: 7.4em; }
+        top: 7em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4485,11 +4506,11 @@ figure {
         #Wrapper nav#main-nav ul#mobile-nav span#signin-box {
           display: none; }
     #Wrapper #searchbar input[type="submit"] {
-      width: 10%;
-      font-size: 1em; }
+      width: 11%;
+      font-size: 0.9em; }
     #Wrapper #searchbar #searcher2 label {
-      font-size: 0.6em;
-      width: 29%; }
+      font-size: 0.55em;
+      width: 27%; }
     #Wrapper #searchbar #searcher2 select {
       width: 14%;
       font-size: 0.65em; }
@@ -4534,10 +4555,14 @@ figure {
           width: 31%; }
       #Wrapper #content #content_section #bannerbox {
         height: 310px; }
+        #Wrapper #content #content_section #bannerbox p::first-line {
+          font-size: 1.7em;
+          letter-spacing: 0.001em; }
         #Wrapper #content #content_section #bannerbox p {
           left: 1%;
           font-size: 0.75em;
-          top: 146px; }
+          top: 138px;
+          line-height: 22px; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
           width: 100%;
           margin-top: 4%; }
@@ -4571,7 +4596,7 @@ figure {
             padding: 7% 0 0 0;
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price, #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.75em;
+              font-size: 0.8em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon, #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
               margin: 0 2% 0 0;
@@ -4585,41 +4610,42 @@ figure {
           font-size: 1em;
           line-height: 30px; }
         #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-          max-height: 330px;
-          height: 330px;
+          max-height: 240px;
+          height: 240px;
           margin-bottom: 15px; }
           #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
             width: 35%;
             margin: 2.9% 0; }
           #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
             width: 60%;
-            height: 310px;
+            height: 250px;
             padding: 1%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
               height: auto;
               line-height: 30px;
               text-indent: 8%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-              float: right;
-              width: 48%;
-              font-size: 0.7em; }
+              float: none;
+              width: 90%;
+              font-size: 0.7em;
+              padding: 5%; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
               color: #0099CC; }
             #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-              line-height: 70px;
-              font-size: 0.75em;
-              width: 50%;
+              line-height: 35px;
+              font-size: 0.7em;
+              width: 48%;
               text-indent: 1%;
+              display: inline-block;
               /*Price Icon*/ }
               #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
-                width: 26%; }
+                width: 28%; }
     #Wrapper #content #left_bar {
       position: absolute;
       z-index: 100;
-      left: 1em;
-      width: 30%;
-      display: none;
-      height: 550px; }
+      left: 0.1em;
+      width: 65%;
+      display: none; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -4640,8 +4666,8 @@ figure {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
         font-size: 0.5em;
-        line-height: 20px; }
+        line-height: 15px; }
         #Wrapper footer ul.footer_nav li a:hover {
-          line-height: 20px; } }
+          line-height: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
