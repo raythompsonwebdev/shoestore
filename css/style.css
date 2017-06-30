@@ -1,17 +1,27 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'Harabara_Bold';
-  src: url("fonts/Harabara_Bold/Harabara.eot");
+  font-family: 'Old Standard TT';
+  font-style: normal;
+  font-weight: 400;
+  src: url("OldStandard/old-standard-tt-v7-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: url("fonts/Harabara_Bold/Harabara.eot?#iefix") format("embedded-opentype"), url("fonts/Harabara_Bold/Harabara.woff") format("woff"), url("fonts/Harabara_Bold/Harabara.ttf") format("truetype"), url("sfonts/Harabara_Bold/Harabara.svg#svgFontName") format("svg");
-  /* Legacy iOS */
-  font-weight: normal; }
+  src: local("Old Standard TT Regular"), local("OldStandardTT-Regular"), url("OldStandard/old-standard-tt-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("OldStandard/old-standard-tt-v7-latin-regular.woff2") format("woff2"), url("OldStandard/old-standard-tt-v7-latin-regular.woff") format("woff"), url("OldStandard/old-standard-tt-v7-latin-regular.ttf") format("truetype"), url("OldStandard/old-standard-tt-v7-latin-regular.svg#OldStandardTT") format("svg");
+  /* Legacy iOS */ }
+/* old-standard-tt-700 - latin */
+@font-face {
+  font-family: 'Old Standard TT';
+  font-style: normal;
+  font-weight: 700;
+  src: url("OldStandard/old-standard-tt-v7-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Old Standard TT Bold"), local("OldStandardTT-Bold"), url("OldStandard/old-standard-tt-v7-latin-700.eot?#iefix") format("embedded-opentype"), url("OldStandard/old-standard-tt-v7-latin-700.woff2") format("woff2"), url("OldStandard/old-standard-tt-v7-latin-700.woff") format("woff"), url("OldStandard/old-standard-tt-v7-latin-700.ttf") format("truetype"), url("OldStandard/old-standard-tt-v7-latin-700.svg#OldStandardTT") format("svg");
+  /* Legacy iOS */ }
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 23-Jun-2017, 20:13:07
     Author     : Ray
 */
@@ -164,7 +174,7 @@ figure {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1%; }
 
-@media all and (max-width: 1920px) {
+@media only screen and (max-width: 1920px) {
   /*Wrapper*/
   #Wrapper {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
@@ -855,7 +865,7 @@ figure {
               color: #ea3411;
               line-height: 50px;
               font-weight: bold; } }
-@media all and (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   /*Wrapper*/
   #Wrapper {
     margin: 1% auto;
@@ -1220,7 +1230,7 @@ figure {
             #Wrapper footer ul.footer_nav li a:hover {
               color: #ea3411;
               line-height: 50px; } }
-@media all and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   /*Wrapper*/
   #Wrapper {
     width: 82%;
@@ -1544,7 +1554,7 @@ figure {
             #Wrapper footer ul.footer_nav li a:hover {
               color: #ea3411;
               line-height: 50px; } }
-@media all and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .myCustomClass .qtip-content {
     font-size: 1.3em;
     width: 150px;
@@ -1874,7 +1884,7 @@ figure {
             #Wrapper footer ul.footer_nav li a:hover {
               color: #ea3411;
               line-height: 50px; } }
-@media all and (max-width: 980px) {
+@media only screen and (max-width: 980px) {
   #Wrapper {
     width: 94%;
     padding: 0 1%;
@@ -2181,7 +2191,7 @@ figure {
             font-size: 0.6em; }
             #Wrapper footer ul.footer_nav li a:hover {
               color: #ea3411; } }
-@media all and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   #Wrapper {
     width: 94%;
     padding: 0 1%;
@@ -2486,7 +2496,7 @@ figure {
             font-size: 0.65em; }
             #Wrapper footer ul.footer_nav li a:hover {
               color: #ea3411; } }
-@media all and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   #Wrapper {
     width: 94%;
     padding: 0 1%;
@@ -2791,7 +2801,7 @@ figure {
             font-size: 0.65em; }
             #Wrapper footer ul.footer_nav li a:hover {
               color: #ea3411; } }
-@media all and (max-width: 667px) {
+@media only screen and (max-width: 667px) {
   #Wrapper {
     width: 96%; }
     #Wrapper p.copyr {
@@ -3062,7 +3072,7 @@ figure {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
         font-size: 0.7em; } }
-@media all and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
@@ -3260,7 +3270,7 @@ figure {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
         font-size: 0.65em; } }
-@media all and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
@@ -3453,7 +3463,7 @@ figure {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
         font-size: 0.6em; } }
-@media all and (max-width: 568px) {
+@media only screen and (max-width: 568px) {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
@@ -3648,7 +3658,7 @@ figure {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
         font-size: 0.6em; } }
-@media all and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
@@ -3850,7 +3860,7 @@ figure {
         line-height: 20px; }
         #Wrapper footer ul.footer_nav li a:hover {
           line-height: 20px; } }
-@media all and (max-width: 414px) {
+@media only screen and (max-width: 414px) {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
@@ -4055,7 +4065,7 @@ figure {
         line-height: 20px; }
         #Wrapper footer ul.footer_nav li a:hover {
           line-height: 20px; } }
-@media all and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
@@ -4259,7 +4269,7 @@ figure {
         line-height: 20px; }
         #Wrapper footer ul.footer_nav li a:hover {
           line-height: 20px; } }
-@media all and (max-width: 360px) {
+@media only screen and (max-width: 360px) {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
@@ -4461,7 +4471,7 @@ figure {
         line-height: 20px; }
         #Wrapper footer ul.footer_nav li a:hover {
           line-height: 20px; } }
-@media all and (max-width: 320px) {
+@media only screen and (max-width: 320px) {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
