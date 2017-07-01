@@ -48,6 +48,7 @@ Temporary Items
 
 sitemockups/
 template93/
+templates/
 js/qtip/
 js/Respond-master/
 js/Respond-master/cross-domain/
@@ -76,4 +77,5 @@ css/.sass-cache/
 css/style.scss
 .gitignore
 doc/
+icons/
 nbproject/
