@@ -122,7 +122,7 @@
     </aside>
 
     <!--Content-->
-    <section id="content" class="clearfix" role="main">
+    <section id="content" class="clearfix">
 
         <!--Left bar-->
         <aside id="left_bar" role="complimentary">
@@ -197,7 +197,7 @@
 
         <!--Content_section-->
 
-        <div id="content_section">
+        <main id="content_section">
             <form action="" method="get" enctype="application/x-www-form-urlencoded">
 
                 <section id="results">
@@ -423,7 +423,7 @@
 
             </form>
             <br/><br/>
-        </div>
+        </main>
 
     </section><!--end of content-->
     <div class="clearfix"></div>

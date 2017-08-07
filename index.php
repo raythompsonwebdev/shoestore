@@ -94,7 +94,7 @@
 <!--End of Nav-->
 
 <!--Content-->
-<section id="content" class="clearfix" role="main">
+<section id="content" class="clearfix">
 
     <!--Left bar-->
     <aside id="left_bar" role="complementary">
@@ -195,7 +195,7 @@
     <!--End of left bar-->
 
     <!--Content_section-->
-    <section id="content_section" class="group">
+    <main id="content_section" role="main" class="group">
 
         <!--bannerbox-->
         <section id="bannerbox">
@@ -351,7 +351,7 @@
 
         </section><!--product boxes end-->
 
-    </section>
+    </main>
     <!--end of content section-->
 
 </section>

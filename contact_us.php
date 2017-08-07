@@ -114,7 +114,7 @@
                     <li>
                         <label for="submit"></label><input type="submit" value="Send" id="submit" name="submit" />
                     </li>
-                    <ul/>
+				</ul>
 
             </form>
 
@@ -134,7 +134,7 @@
             <p>Integer eget dui vel tortor fermentum tincidunt. Nullam vitae odio nec lorem porttitor tristique porta id sapien. Mauris ornare leo at mi tempor eget tincidunt nulla auctor. Fusce adipiscing lacinia erat nec molestie. Aenean diam justo, faucibus et feugiat non, viverra ac turpis.</p>
             <br/>
         </div>
-    </section>  <!--end of content-->
+	</section>  <!--end of content-->
 
     <div class="clearfix"></div>
 

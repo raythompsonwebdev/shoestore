@@ -187,7 +187,7 @@
             </nav>
         </aside>
 
-        <section id="content_section"><!--Content_section-->
+        <main id="content_section"><!--Content_section-->
 
             <form action="" method="get" enctype="application/x-www-form-urlencoded">
 
@@ -725,7 +725,7 @@
 
             </form>
 
-        </section>
+        </main>
 
         <div class="clearfix"></div>
 
