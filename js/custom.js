@@ -1,13 +1,28 @@
 
 $(document).ready(function() {
     
-        $('div#side-bar-toggle-btn').bind('click', function(){
+        $('button#side-bar-toggle-btn').on('click', function(){
             
-            $('#content #left_bar').slideToggle(500);
-            
-        });
+           		show_menu();
+								
+			});
+	
+            function show_menu(){
+			
+			$('#content #left_bar').toggle(500, function(){
+			
+				$(this).animate({'display' : 'block',left :'0.5em' });
+				
+			});
+				
+				
+			
+			}
+	
+	
+	
         
-        $('div#menu-toggle-btn').bind('click', function(){
+        $('button#menu-toggle-btn').on('click', function(){
             
             $('nav ul#mobile-nav').slideToggle(500).css('display' , 'block');
             
