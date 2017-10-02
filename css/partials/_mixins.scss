@@ -11,3 +11,11 @@ transition: $transitioner;
     -moz-box-sizing: $type; // Firefox < 29
     box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
 }
+
+// Border radius
+@mixin bordrady( $bordrady... ) {
+    -webkit-border-radius: $bordrady;
+    -moz-border-radius: $bordrady;
+    -o-border-radius: $bordrady;
+    border-radius: $bordrady;
+}

@@ -71,8 +71,8 @@
 <nav id="main-nav" role="navigation">
     <span id="signin-box">
         <a href="#" alt="">Sign in</a>
-        <a href="#" alt="">Login</a>
-        <a href="#" alt="">Help</a>
+        <a href="#" alt="">my account</a>
+        <a href="#" alt="">help</a>
     </span>
     <ul id="inner-nav">
         <li><a href="index.html" title="Home Page">Home</a></li>
@@ -102,7 +102,7 @@
         <!--Search Box-->
         <article id="searchbox">
             <form id="searcher" action="" method="get">
-                <h1>FIND YOUR SHOES</h1>
+                <h1>FIND <br/>YOUR SHOES</h1>
                 <br/>
                 <select name="gender">
                     <option value="Male">Male</option>
@@ -120,7 +120,7 @@
                     <option value="Boots">Boots</option>
                     <option value="Work">Work</option>
                 </select>
-                <input name="find" class="find" type="submit" value="Find" />
+                <input name="find" class="find" type="submit" value="FIND" />
             </form>
         </article>
         <!--End of Search Box-->
@@ -201,23 +201,24 @@
         <section id="bannerbox">
 
             <br/>
-            <p>LORUM IPSUN DOLOR AMET <br/>
-                The best shoes available on the planet</p>
-            <figure id="bannerboximg">
-
-                <img src="images/page1_09.png" alt="bannerimage" usemap="#Map" />
+            <hgroup>
+                <h1>LORUM IPSUN DOLOR AMET </h1>
+                <h2>ipsum vel voluptate perspiciatis, quis</h2>
+            </hgroup>
+                          <figure id="bannerboximg">
+                
+               <img src="images/bannerimage.jpg" alt="bannerimage" usemap="#Map" />
 
                 <map id="Map" name="Map" >
 
-                    <area id="reebok-right-shoe" alt="reebok-right-shoe" title="reebok-right-shoe" href="http://www.image-maps.com/" shape="rect" coords="98,206,151,308" style="outline:none;" target="_self"     />
-                    <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
-
-                    <area id="reebok-left-shoe" alt="reebok-left-shoe" title="reebok-left-shoe" href="http://www.image-maps.com/" shape="rect" coords="336,257,420,295" style="outline:none;" target="_self"     />
-                    <area shape="rect" coords="553,344,555,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+                    <area id="reebok-right-shoe" alt="reebok-right-shoe" title="reebok-right-shoe" href="http://www.image-maps.com/" shape="rect" coords="22,200,82,273" style="outline:none;" target="_self"     />
+<area id="reebok-left-shoe" alt="reebok-left-shoe" title="reebok-left-shoe" href="http://www.image-maps.com/" shape="rect" coords="258,253,330,294" style="outline:none;" target="_self"     />
+<area shape="rect" coords="498,344,500,346" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
                 </map>
 
             </figure>
-            <nav id="apDiv1">
+                           
+                  <nav id="apDiv1">
                 <a href="#" title="Womens's Shoes">Women's Shoes</a>
                 <a href="#" title="Men's Shoes">Men's Shoes</a>
                 <a href="#" title="Kids's Shoes">Kid's Shoes</a>
@@ -225,6 +226,8 @@
                 <a href="#" title="Accessories">Accessories</a>
             </nav>
 
+            
+          
         </section>
 
         <h1>Featured</h1>
@@ -384,17 +387,16 @@
         </p>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type='text/javascript'>
-    window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js">\x3C/script>');
+<script > window.jQuery || document.write('<script src="js/jquery-3.2.1.js">\x3C/script>')
 </script>
-<script src="js/jquery-ui-1.10.3.custom.js"></script>
+<script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 <script>
-    $(function () {
-        $("#accordion").accordion({
-            collapsible: true
-        });
-    });
-</script>
+
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+    
+  </script>
 
 <!-- Include either the minifed or production version, NOT both!! -->
 <script type="text/javascript" src="js/qtip/jquery.qtip.min.js"></script>

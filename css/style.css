@@ -273,22 +273,24 @@ figure {
         width: 20%;
         display: inline-block;
         float: right;
-        height: 25px; }
+        height: 20px; }
         #Wrapper nav#main-nav span#signin-box a {
           display: inline-block;
           height: 100%;
-          line-height: 25px;
-          width: 31%;
+          line-height: 20px;
+          width: auto;
           font-size: 0.80em;
           text-decoration: none;
           border-right: 1px solid #0099CC;
           text-align: center;
           color: #0099CC;
-          letter-spacing: 0.03em;
-          padding: 0; }
+          letter-spacing: 0.01em;
+          padding: 0 0.5em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             color: #ea3411;
             font-weight: bold; }
+        #Wrapper nav#main-nav span#signin-box a:last-of-type {
+          border: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
         display: none; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -299,12 +301,13 @@ figure {
         display: inline-block; }
         #Wrapper nav#main-nav ul#inner-nav li {
           float: left;
-          width: 16%;
+          width: auto;
           height: 40px;
           margin-right: 0.2em;
           text-align: center;
           display: inline-block; }
           #Wrapper nav#main-nav ul#inner-nav li a {
+            padding: 0 1em;
             text-align: center;
             height: 40px;
             color: #000000;
@@ -314,9 +317,9 @@ figure {
             -moz-transition: all ease 0.2s;
             -o-transition: all ease 0.2s;
             transition: all ease 0.2s;
-            letter-spacing: 0.03em;
             text-transform: uppercase;
-            font-size: 0.8em; }
+            font-size: 1em;
+            letter-spacing: -0.04em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               color: #ea3411;
               font-weight: bold; }
@@ -536,35 +539,45 @@ figure {
           font-size: 1.5em;
           line-height: 40px; }
         #Wrapper #content #content_section #bannerbox {
-          height: 400px;
+          height: 365px;
           width: 100%;
-          margin: 6% 0 0 0; }
-          #Wrapper #content #content_section #bannerbox p {
+          margin: 0;
+          border: solid 1px #7a7777; }
+          #Wrapper #content #content_section #bannerbox hgroup {
             font-family: "Old Standard TT", arial, helvetica, sans-serif;
-            font-size: 1.3em;
-            height: auto;
-            line-height: 30px;
             position: absolute;
-            margin: 0;
-            top: 215px;
-            left: 665px;
-            z-index: 1;
+            z-index: 2;
             width: 40%;
-            letter-spacing: 0.001em; }
-          #Wrapper #content #content_section #bannerbox p:first-line {
-            font-size: 1.9em;
-            color: #999999;
-            font-weight: bold;
-            letter-spacing: 0.001em; }
+            margin: 1em 0 0 0.5em; }
+            #Wrapper #content #content_section #bannerbox hgroup h1 {
+              font-family: "Old Standard TT", arial, helvetica, sans-serif;
+              font-size: 2.35rem;
+              height: 40px;
+              line-height: 40px;
+              width: 100%;
+              text-indent: 0;
+              font-weight: bold;
+              color: #7a7777;
+              letter-spacing: -0.08em; }
+            #Wrapper #content #content_section #bannerbox hgroup h2 {
+              font-size: 1.3rem;
+              color: #333333;
+              font-weight: bold;
+              letter-spacing: 0.001em;
+              text-transform: uppercase;
+              height: 30px;
+              line-height: 30px;
+              letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 555px;
+            width: 65%;
             margin: 0;
             padding: 0;
-            display: inline-block; }
+            display: inline-block;
+            float: right; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            margin: 12% 3% 0 1%;
-            width: 23%;
-            height: 200px;
+            margin: 17% 0 0 1%;
+            width: 27%;
+            height: 12rem;
             float: left;
             display: inline-block; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
@@ -581,7 +594,11 @@ figure {
               -moz-transition: all ease 0.2s;
               -o-transition: all ease 0.2s;
               transition: all ease 0.2s;
-              text-transform: uppercase; }
+              text-transform: uppercase;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              -o-border-radius: 5px;
+              border-radius: 5px; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
                 background-color: #ffffff;
                 height: 35px;
@@ -838,20 +855,21 @@ figure {
             margin: auto;
             font-family: "Old Standard TT", arial, helvetica, sans-serif; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.5em;
+              font-size: 1.75em;
               background: none;
               color: #ffffff;
               width: 100%;
               text-align: center;
-              line-height: 36px;
-              height: 100px;
+              line-height: 30px;
+              height: 90px;
               text-indent: 0px;
-              font-weight: bold; }
+              letter-spacing: -0.08em;
+              padding-top: 0.3em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
-              font-family: "Old Standard TT", arial, helvetica, sans-serif;
+              font-family: sans-serif;
               width: 80%;
               height: 30px;
-              font-size: 1.1em;
+              font-size: 1em;
               margin: 5px auto;
               color: #999999;
               display: block; }
@@ -891,10 +909,11 @@ figure {
               list-style: none;
               margin: 0;
               padding: 0;
-              width: 100%; }
+              width: 100%;
+              display: block; }
               #Wrapper #content #left_bar #sec_nav #accordion ul li {
                 line-height: 30px;
-                display: inline-block;
+                display: block;
                 height: 30px;
                 font-size: 0.8em;
                 width: 100%;
@@ -967,13 +986,9 @@ figure {
       height: 40px;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 22%;
-        height: 25px; }
+        width: 22%; }
         #Wrapper nav#main-nav span#signin-box a {
-          line-height: 25px;
-          width: 31%;
-          font-size: 0.80em;
-          letter-spacing: 0.03em; }
+          font-size: 0.95em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -982,11 +997,9 @@ figure {
         width: 75%;
         height: 40px; }
         #Wrapper nav#main-nav ul#inner-nav li {
-          width: 16%;
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            letter-spacing: 0.03em;
-            font-size: 0.75em; }
+            font-size: 0.95em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -1093,23 +1106,22 @@ figure {
           font-size: 1.5em;
           line-height: 40px; }
         #Wrapper #content #content_section #bannerbox {
-          height: 400px;
+          height: 365px;
           width: 100%;
-          margin: 0; }
-          #Wrapper #content #content_section #bannerbox p {
-            font-size: 1.25em;
-            line-height: 30px;
-            top: 170px;
-            left: 459px;
-            width: 43%;
-            letter-spacing: 0.001em; }
-          #Wrapper #content #content_section #bannerbox p:first-line {
-            font-size: 1.9em;
-            letter-spacing: 0.001em; }
+          margin: 0 0 1.5em 0; }
+          #Wrapper #content #content_section #bannerbox hgroup {
+            width: 40%;
+            margin: 1em 0 0 0.5em; }
+            #Wrapper #content #content_section #bannerbox hgroup h1 {
+              font-size: 2.35rem;
+              letter-spacing: -0.08em; }
+            #Wrapper #content #content_section #bannerbox hgroup h2 {
+              font-size: 1.3rem;
+              letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 555px; }
+            width: 63%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            margin: 12% 3% 0 1%;
+            margin: 15% 3% 0 1%;
             width: 23%;
             height: 200px; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
@@ -1263,8 +1275,7 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.45em;
-              line-height: 37px; }
+              font-size: 1.45em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
               font-size: 1em; }
@@ -1337,13 +1348,9 @@ figure {
       height: 40px;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 22%;
-        height: 25px; }
+        width: 22%; }
         #Wrapper nav#main-nav span#signin-box a {
-          line-height: 25px;
-          width: 31%;
-          font-size: 0.80em;
-          letter-spacing: 0.03em; }
+          font-size: 0.90em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -1352,11 +1359,9 @@ figure {
         width: 75%;
         height: 40px; }
         #Wrapper nav#main-nav ul#inner-nav li {
-          width: 16%;
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            letter-spacing: 0.03em;
-            font-size: 0.75em; }
+            font-size: 0.9em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -1463,19 +1468,20 @@ figure {
         #Wrapper #content #content_section h1 {
           font-size: 1.45em; }
         #Wrapper #content #content_section #bannerbox {
-          height: 400px; }
-          #Wrapper #content #content_section #bannerbox p {
-            font-size: 1.25em;
-            left: 376px;
-            width: 44%; }
-          #Wrapper #content #content_section #bannerbox p:first-line {
-            font-size: 1.9em;
-            letter-spacing: 0.001em; }
+          height: 365px; }
+          #Wrapper #content #content_section #bannerbox hgroup {
+            width: 40%;
+            margin: 1em 0 0 0.5em; }
+            #Wrapper #content #content_section #bannerbox hgroup h1 {
+              font-size: 2.25rem;
+              letter-spacing: -0.08em; }
+            #Wrapper #content #content_section #bannerbox hgroup h2 {
+              font-size: 1.2rem;
+              letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 555px; }
+            width: 62%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            width: 23%;
-            height: 200px; }
+            width: 27%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
               font-size: 1em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -1605,8 +1611,7 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.4em;
-              line-height: 37px; }
+              font-size: 1.45em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
               font-size: 1em; }
@@ -1684,13 +1689,9 @@ figure {
       height: 40px;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 22%;
-        height: 25px; }
+        width: 22%; }
         #Wrapper nav#main-nav span#signin-box a {
-          line-height: 25px;
-          width: 31%;
-          font-size: 0.75em;
-          letter-spacing: 0.03em; }
+          font-size: 0.75em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -1699,11 +1700,9 @@ figure {
         width: 75%;
         height: 40px; }
         #Wrapper nav#main-nav ul#inner-nav li {
-          width: 16%;
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            letter-spacing: 0.03em;
-            font-size: 0.7em; }
+            font-size: 0.9em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -1810,18 +1809,19 @@ figure {
           font-size: 1.4em; }
         #Wrapper #content #content_section #bannerbox {
           height: 360px; }
-          #Wrapper #content #content_section #bannerbox p {
-            font-size: 1.15em;
-            left: 279px;
-            width: 51%; }
-          #Wrapper #content #content_section #bannerbox p:first-line {
-            font-size: 1.9em;
-            letter-spacing: 0.001em; }
+          #Wrapper #content #content_section #bannerbox hgroup {
+            width: 50%;
+            margin: 1em 0 0 0.5em; }
+            #Wrapper #content #content_section #bannerbox hgroup h1 {
+              font-size: 2.25rem;
+              letter-spacing: -0.08em; }
+            #Wrapper #content #content_section #bannerbox hgroup h2 {
+              font-size: 1.2rem;
+              letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 510px; }
+            width: 68%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            width: 22%;
-            height: 200px; }
+            width: 27%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
               font-size: 0.95em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -1948,8 +1948,7 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.4em;
-              line-height: 37px; }
+              font-size: 1.4em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
               font-size: 1em; }
@@ -2014,13 +2013,9 @@ figure {
       height: 40px;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 22%;
-        height: 25px; }
+        width: 22%; }
         #Wrapper nav#main-nav span#signin-box a {
-          line-height: 25px;
-          width: 31%;
-          font-size: 0.75em;
-          letter-spacing: 0.03em; }
+          font-size: 0.75em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -2029,11 +2024,9 @@ figure {
         width: 75%;
         height: 40px; }
         #Wrapper nav#main-nav ul#inner-nav li {
-          width: 16%;
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            letter-spacing: 0.03em;
-            font-size: 0.7em; }
+            font-size: 0.9em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -2134,18 +2127,19 @@ figure {
           font-size: 1.35em; }
         #Wrapper #content #content_section #bannerbox {
           height: 330px; }
-          #Wrapper #content #content_section #bannerbox p {
-            font-size: 1.1em;
-            left: 257px;
-            width: 51%; }
-          #Wrapper #content #content_section #bannerbox p:first-line {
-            font-size: 1.9em;
-            letter-spacing: 0.001em; }
+          #Wrapper #content #content_section #bannerbox hgroup {
+            width: 50%;
+            margin: 1em 0 0 0.5em; }
+            #Wrapper #content #content_section #bannerbox hgroup h1 {
+              font-size: 2.25rem;
+              letter-spacing: -0.08em; }
+            #Wrapper #content #content_section #bannerbox hgroup h2 {
+              font-size: 1.2rem;
+              letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 495px; }
+            width: 61%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            width: 22%;
-            height: 200px; }
+            width: 27%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
               font-size: 0.9em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -2265,8 +2259,7 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.35em;
-              line-height: 37px; }
+              font-size: 1.35em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
               font-size: 0.9em; }
@@ -2329,13 +2322,9 @@ figure {
       height: 40px;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 23.5%;
-        height: 25px; }
+        width: 23.5%; }
         #Wrapper nav#main-nav span#signin-box a {
-          line-height: 25px;
-          width: 31%;
-          font-size: 0.75em;
-          letter-spacing: 0.03em; }
+          font-size: 0.75em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -2344,11 +2333,9 @@ figure {
         width: 75%;
         height: 40px; }
         #Wrapper nav#main-nav ul#inner-nav li {
-          width: 16%;
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            letter-spacing: 0.03em;
-            font-size: 0.6em; }
+            font-size: 0.8em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -2447,20 +2434,21 @@ figure {
         #Wrapper #content #content_section h1 {
           font-size: 1.3em; }
         #Wrapper #content #content_section #bannerbox {
-          height: 325px; }
-          #Wrapper #content #content_section #bannerbox p {
-            font-size: 0.9em;
-            left: 211px;
-            width: 56%; }
-          #Wrapper #content #content_section #bannerbox p:first-line {
-            font-size: 1.9em;
-            letter-spacing: 0.001em; }
+          height: 310px; }
+          #Wrapper #content #content_section #bannerbox hgroup {
+            width: 55%;
+            margin: 0 0 0 0.5em; }
+            #Wrapper #content #content_section #bannerbox hgroup h1 {
+              font-size: 1.8rem;
+              letter-spacing: -0.08em; }
+            #Wrapper #content #content_section #bannerbox hgroup h2 {
+              font-size: 1rem;
+              letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 390px;
-            margin-top: 3%; }
+            margin-top: 0.5em;
+            width: 69%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            width: 26%;
-            height: 200px; }
+            width: 27%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
               font-size: 0.9em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -2580,8 +2568,7 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.25em;
-              line-height: 37px; }
+              font-size: 1.25em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
               font-size: 0.9em; }
@@ -2644,13 +2631,9 @@ figure {
       height: 40px;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 23.5%;
-        height: 25px; }
+        width: 23.5%; }
         #Wrapper nav#main-nav span#signin-box a {
-          line-height: 25px;
-          width: 30%;
-          font-size: 0.75em;
-          letter-spacing: 0.03em; }
+          font-size: 0.75em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -2659,11 +2642,9 @@ figure {
         width: 75%;
         height: 40px; }
         #Wrapper nav#main-nav ul#inner-nav li {
-          width: 16%;
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            letter-spacing: 0.03em;
-            font-size: 0.55em; }
+            font-size: 0.75em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -2761,20 +2742,21 @@ figure {
         #Wrapper #content #content_section h1 {
           font-size: 1.25em; }
         #Wrapper #content #content_section #bannerbox {
-          height: 330px; }
-          #Wrapper #content #content_section #bannerbox p {
-            font-size: 0.9em;
-            left: 202px;
-            width: 56%; }
-          #Wrapper #content #content_section #bannerbox p:first-line {
-            font-size: 1.9em;
-            letter-spacing: 0.001em; }
+          height: 310px; }
+          #Wrapper #content #content_section #bannerbox hgroup {
+            width: 65%;
+            margin: 0 0 0 0.5em; }
+            #Wrapper #content #content_section #bannerbox hgroup h1 {
+              font-size: 1.8rem;
+              letter-spacing: -0.08em; }
+            #Wrapper #content #content_section #bannerbox hgroup h2 {
+              font-size: 1rem;
+              letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 361px;
-            margin-top: 5%; }
+            margin-top: 0.5em;
+            width: 69%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            width: 27%;
-            height: 200px; }
+            width: 27%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
               font-size: 0.85em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -2894,8 +2876,7 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.15em;
-              line-height: 37px; }
+              font-size: 1.15em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
               font-size: 0.9em; }
@@ -2943,11 +2924,11 @@ figure {
     #Wrapper button#side-bar-toggle-btn {
       display: block;
       position: fixed;
-      top: 2px;
-      left: 84%;
+      left: 93%;
       z-index: 4;
-      width: 100px;
-      height: 50px;
+      top: 13.2em;
+      width: 50px;
+      height: 200px;
       background-color: #ffffff;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -2965,12 +2946,12 @@ figure {
     #Wrapper button#menu-toggle-btn {
       display: block;
       position: fixed;
-      left: 2%;
+      top: 1em;
+      left: 81%;
       z-index: 4;
-      top: 5.2em;
-      width: 70px;
+      width: 100px;
       height: 50px;
-      line-height: 50px;
+      line-height: 52px;
       text-align: center;
       background-color: #ffffff;
       -webkit-box-sizing: border-box;
@@ -2992,9 +2973,7 @@ figure {
     #Wrapper nav#main-nav {
       height: 55px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 30.5%;
-        height: 30px;
-        line-height: 30px; }
+        width: 30.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -3093,20 +3072,22 @@ figure {
         width: 44%; }
       #Wrapper #content #content_section #bannerbox {
         height: 335px;
-        width: 96%;
-        margin: 0 auto; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 3%;
-          font-size: 1.2em;
-          width: 85%;
-          line-height: 30px;
-          top: 163px; }
+        width: 99%; }
+        #Wrapper #content #content_section #bannerbox hgroup {
+          width: 90%;
+          margin: 0 0 0 0.5em; }
+          #Wrapper #content #content_section #bannerbox hgroup h1 {
+            font-size: 2rem;
+            letter-spacing: -0.08em; }
+          #Wrapper #content #content_section #bannerbox hgroup h2 {
+            font-size: 1rem;
+            letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
           width: 420px;
           margin-top: 4%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
-          margin: 10% 1% 0 0%;
-          width: 30%; }
+          margin: 16% 0% 0 1%;
+          width: 27%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
             font-size: 0.9em; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -3186,7 +3167,7 @@ figure {
         max-height: 200px; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 2;
+      z-index: 4;
       left: -205px;
       width: 30%;
       display: none;
@@ -3200,7 +3181,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }
@@ -3300,18 +3280,20 @@ figure {
         width: 44%; }
       #Wrapper #content #content_section #bannerbox {
         height: 335px; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 2%;
-          font-size: 1.2em;
-          width: 85%;
-          line-height: 30px;
-          top: 163px; }
+        #Wrapper #content #content_section #bannerbox hgroup {
+          width: 90%;
+          margin: 0 0 0 0.5em; }
+          #Wrapper #content #content_section #bannerbox hgroup h1 {
+            font-size: 2rem;
+            letter-spacing: -0.08em; }
+          #Wrapper #content #content_section #bannerbox hgroup h2 {
+            font-size: 1rem;
+            letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 400px;
-          margin-top: 4%; }
+          width: 68%;
+          margin: 0; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
-          margin: 10% 1% 0 0%;
-          width: 30%; }
+          width: 27%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
             font-size: 0.9em; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -3388,7 +3370,6 @@ figure {
         max-height: 200px; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 2;
       left: -12em;
       width: 30%;
       height: 800px; }
@@ -3400,7 +3381,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }
@@ -3416,12 +3396,12 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      left: 81%; }
+      left: 2%;
+      top: 5.2em; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 2%;
-      top: 5.2em; }
+      left: 81%; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -3497,17 +3477,20 @@ figure {
       #Wrapper #content #content_section #pagination {
         width: 44%; }
       #Wrapper #content #content_section #bannerbox {
-        height: 335px; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 2%;
-          font-size: 1.1em;
-          top: 156px; }
+        height: 310px; }
+        #Wrapper #content #content_section #bannerbox hgroup {
+          width: 90%;
+          margin: 0 0 0 0.5em; }
+          #Wrapper #content #content_section #bannerbox hgroup h1 {
+            font-size: 2rem;
+            letter-spacing: -0.08em; }
+          #Wrapper #content #content_section #bannerbox hgroup h2 {
+            font-size: 1rem;
+            letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 390px;
-          margin-top: 4%; }
+          width: 68%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
-          margin: 10% 1% 0 0%;
-          width: 30%; }
+          width: 27%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
             font-size: 0.9em; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -3595,7 +3578,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }
@@ -3611,13 +3593,11 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      top: 2px;
-      left: 80%; }
+      left: 2%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper buttonv#menu-toggle-btn {
-      left: 2%;
-      top: 4.5em; }
+      left: 80%; }
       #Wrapper buttonv#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -3628,7 +3608,7 @@ figure {
     #Wrapper nav#main-nav {
       height: 55px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 30.5%; }
+        width: 32.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -3696,17 +3676,18 @@ figure {
         width: 44%; }
       #Wrapper #content #content_section #bannerbox {
         height: 310px; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 4%;
-          font-size: 1.1em;
-          top: 143px;
-          width: 96%; }
+        #Wrapper #content #content_section #bannerbox hgroup {
+          width: 90%; }
+          #Wrapper #content #content_section #bannerbox hgroup h1 {
+            font-size: 2rem;
+            letter-spacing: -0.08em; }
+          #Wrapper #content #content_section #bannerbox hgroup h2 {
+            font-size: 1rem;
+            letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 335px;
-          margin-top: 7%; }
+          width: 68%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
-          margin: 10% 1% 0 0%;
-          width: 30%; }
+          width: 27%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
             font-size: 0.9em; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
@@ -3793,7 +3774,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }
@@ -3809,13 +3789,12 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      top: 2px;
-      left: 78%; }
+      left: 2%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 2%;
-      top: 4.9em; }
+      left: 78%;
+      top: 0.5em; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -3924,16 +3903,21 @@ figure {
       #Wrapper #content #content_section #pagination {
         width: 49%; }
       #Wrapper #content #content_section #bannerbox {
-        height: 310px; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 1%;
-          font-size: 1em;
-          top: 170px;
-          width: 98%; }
+        height: auto; }
+        #Wrapper #content #content_section #bannerbox hgroup {
+          position: unset;
+          width: 97%;
+          margin: 0 0 0 0.5em; }
+          #Wrapper #content #content_section #bannerbox hgroup h1 {
+            font-size: 2.1rem;
+            letter-spacing: -0.08em; }
+          #Wrapper #content #content_section #bannerbox hgroup h2 {
+            font-size: 1rem;
+            letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 100%;
-          margin-top: 7%; }
+          width: 100%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
+          float: none;
           margin: 5% auto;
           width: 100%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
@@ -4025,7 +4009,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }
@@ -4044,13 +4027,12 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      top: 2px;
-      left: 74%; }
+      top: 4.9em;
+      left: 2%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 2%;
-      top: 4.9em; }
+      left: 74%; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -4130,23 +4112,23 @@ figure {
         width: 49%; }
         #Wrapper #content #content_section #pagination a {
           width: 31%; }
-      #Wrapper #content #content_section #bannerbox {
-        height: 310px; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 1%;
-          font-size: 0.9em;
-          top: 151px;
-          width: 98%; }
-        #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 100%;
-          margin-top: 7%; }
-        #Wrapper #content #content_section #bannerbox #apDiv1 {
-          margin: 5% auto;
-          width: 100%; }
-          #Wrapper #content #content_section #bannerbox #apDiv1 a {
-            font-size: 0.8em; }
-            #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-              font-size: 0.85em; }
+      #Wrapper #content #content_section #bannerbox hgroup {
+        width: 90%; }
+        #Wrapper #content #content_section #bannerbox hgroup h1 {
+          font-size: 1.7rem;
+          letter-spacing: -0.08em; }
+        #Wrapper #content #content_section #bannerbox hgroup h2 {
+          font-size: 0.9rem;
+          letter-spacing: -0.08em; }
+      #Wrapper #content #content_section #bannerbox #bannerboximg {
+        width: 100%; }
+      #Wrapper #content #content_section #bannerbox #apDiv1 {
+        margin: 5% auto;
+        width: 100%; }
+        #Wrapper #content #content_section #bannerbox #apDiv1 a {
+          font-size: 0.8em; }
+          #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
+            font-size: 0.85em; }
       #Wrapper #content #content_section .product_boxes,
       #Wrapper #content #content_section form #results {
         height: auto;
@@ -4235,7 +4217,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }
@@ -4254,13 +4235,13 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      top: 2px;
-      left: 72%; }
+      top: 5em;
+      left: 2%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 2%;
-      top: 4.5em; }
+      left: 81%;
+      width: 16%; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -4340,22 +4321,23 @@ figure {
         width: 49%; }
         #Wrapper #content #content_section #pagination a {
           width: 31%; }
-      #Wrapper #content #content_section #bannerbox {
-        height: 310px; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 2%;
-          font-size: 0.8em;
-          top: 146px; }
-        #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 100%;
-          margin-top: 7%; }
-        #Wrapper #content #content_section #bannerbox #apDiv1 {
-          margin: 5% auto;
-          width: 100%; }
-          #Wrapper #content #content_section #bannerbox #apDiv1 a {
-            font-size: 0.8em; }
-            #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-              font-size: 0.85em; }
+      #Wrapper #content #content_section #bannerbox hgroup {
+        width: 90%; }
+        #Wrapper #content #content_section #bannerbox hgroup h1 {
+          font-size: 1.5rem;
+          letter-spacing: -0.08em; }
+        #Wrapper #content #content_section #bannerbox hgroup h2 {
+          font-size: 0.9rem;
+          letter-spacing: -0.08em; }
+      #Wrapper #content #content_section #bannerbox #bannerboximg {
+        width: 100%; }
+      #Wrapper #content #content_section #bannerbox #apDiv1 {
+        margin: 5% auto;
+        width: 100%; }
+        #Wrapper #content #content_section #bannerbox #apDiv1 a {
+          font-size: 0.8em; }
+          #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
+            font-size: 0.85em; }
       #Wrapper #content #content_section .product_boxes,
       #Wrapper #content #content_section form #results {
         height: auto;
@@ -4442,7 +4424,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }
@@ -4461,15 +4442,14 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 2px;
-      left: 74%;
+      left: 2%;
       width: 80px;
       font-size: 0.9em; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper div#menu-toggle-btn {
-      left: 2%;
-      top: 4.5em; }
+      left: 81%;
+      width: 16%; }
       #Wrapper div#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -4549,22 +4529,24 @@ figure {
         width: 49%; }
         #Wrapper #content #content_section #pagination a {
           width: 31%; }
-      #Wrapper #content #content_section #bannerbox {
-        height: 310px; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 2%;
-          font-size: 0.75em;
-          top: 146px; }
-        #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 100%;
-          margin-top: 7%; }
-        #Wrapper #content #content_section #bannerbox #apDiv1 {
-          margin: 5% auto;
-          width: 100%; }
-          #Wrapper #content #content_section #bannerbox #apDiv1 a {
-            font-size: 0.8em; }
-            #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-              font-size: 0.85em; }
+      #Wrapper #content #content_section #bannerbox hgroup {
+        width: 90%;
+        margin: 0 0 0 0.5em; }
+        #Wrapper #content #content_section #bannerbox hgroup h1 {
+          font-size: 1.35rem;
+          letter-spacing: -0.08em; }
+        #Wrapper #content #content_section #bannerbox hgroup h2 {
+          font-size: 0.85rem;
+          letter-spacing: -0.08em; }
+      #Wrapper #content #content_section #bannerbox #bannerboximg {
+        width: 100%; }
+      #Wrapper #content #content_section #bannerbox #apDiv1 {
+        margin: 5% auto;
+        width: 100%; }
+        #Wrapper #content #content_section #bannerbox #apDiv1 a {
+          font-size: 0.8em; }
+          #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
+            font-size: 0.85em; }
       #Wrapper #content #content_section .product_boxes,
       #Wrapper #content #content_section form #results {
         height: auto;
@@ -4651,7 +4633,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }
@@ -4670,15 +4651,12 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      top: 2px;
-      left: 79%;
-      width: 60px;
-      font-size: 0.85em; }
+      left: 2%;
+      font-size: 0.8em; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 2%;
-      top: 4.2em; }
+      left: 82%; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -4737,7 +4715,7 @@ figure {
       margin-bottom: 5%; }
     #Wrapper #content p.context {
       width: 95%;
-      font-size: 0.8em; }
+      font-size: 0.7em; }
     #Wrapper #content span.context_title {
       font-size: 1.2em; }
     #Wrapper #content #content_section {
@@ -4758,26 +4736,24 @@ figure {
         width: 49%; }
         #Wrapper #content #content_section #pagination a {
           width: 31%; }
-      #Wrapper #content #content_section #bannerbox {
-        height: 310px; }
-        #Wrapper #content #content_section #bannerbox p::first-line {
-          font-size: 1.7em;
-          letter-spacing: 0.001em; }
-        #Wrapper #content #content_section #bannerbox p {
-          left: 1%;
-          font-size: 0.75em;
-          top: 138px;
-          line-height: 22px; }
-        #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 100%;
-          margin-top: 7%; }
-        #Wrapper #content #content_section #bannerbox #apDiv1 {
-          margin: 5% auto;
-          width: 100%; }
-          #Wrapper #content #content_section #bannerbox #apDiv1 a {
-            font-size: 0.8em; }
-            #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-              font-size: 0.85em; }
+      #Wrapper #content #content_section #bannerbox hgroup {
+        width: 97%;
+        margin: 0 0 0 0.5em; }
+        #Wrapper #content #content_section #bannerbox hgroup h1 {
+          font-size: 1.3rem;
+          letter-spacing: -0.08em; }
+        #Wrapper #content #content_section #bannerbox hgroup h2 {
+          font-size: 0.8rem;
+          letter-spacing: -0.08em; }
+      #Wrapper #content #content_section #bannerbox #bannerboximg {
+        width: 100%; }
+      #Wrapper #content #content_section #bannerbox #apDiv1 {
+        margin: 5% auto;
+        width: 100%; }
+        #Wrapper #content #content_section #bannerbox #apDiv1 a {
+          font-size: 0.8em; }
+          #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
+            font-size: 0.85em; }
       #Wrapper #content #content_section .product_boxes,
       #Wrapper #content #content_section form #results {
         height: auto;
@@ -4864,7 +4840,6 @@ figure {
           width: 98%; }
           #Wrapper #content #left_bar #searchbox #searcher h1 {
             font-size: 1.4em;
-            line-height: 34px;
             text-indent: 0px; }
           #Wrapper #content #left_bar #searchbox #searcher select {
             font-size: 1em; }

@@ -11,7 +11,9 @@ $(document).ready(function() {
 			
 			$('#content #left_bar').toggle(500, function(){
 			
-				$(this).animate({'display' : 'block',left :'0.5em' });
+				$(this).animate({
+                    'display' : 'block',
+                    left :'0.5em' });
 				
 			});
 				

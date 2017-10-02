@@ -282,24 +282,28 @@ figure {
 				width: 20%;
 				display: inline-block;
 				float: right;
-				height: 25px;
+				height: 20px;
 				a {
 					display: inline-block;
 					height: 100%;
-					line-height: 25px;
-					width: 31%;
+					line-height: 20px;
+					width: auto;
 					font-size: 0.80em;
 					text-decoration: none;
 					border-right: 1px solid $login-color;
 					text-align: center;
 					color: $login-color;
-					letter-spacing: 0.03em;
-					padding: 0;
+					letter-spacing: 0.01em;
+					padding: 0 0.5em;
 					&:hover {
 						color: $color-orange;
 						font-weight: bold;
 					}
 				}
+                a:last-of-type{
+                    border:none;
+                }
+                
 			}
 			ul#mobile-nav {
 				display: none;
@@ -312,21 +316,22 @@ figure {
 				display: inline-block;
 				li {
 					float: left;
-					width: 16%;
+					width: auto;
 					height: 40px;
 					margin-right: 0.2em;
 					text-align: center;
 					display: inline-block;
 					a {
+                        padding:0 1em;
 						text-align: center;
 						height: 40px;
 						color: $color-black;
 						line-height: 40px;
 						display: block;
 						@include transitioner(all ease .2s);
-						letter-spacing: 0.03em;
 						text-transform: uppercase;
-						font-size: 0.8em;
+						font-size: 1em;
+                        letter-spacing: -0.04em;
 						&:hover {
 							color: $color-orange;
 							font-weight: bold;
@@ -434,6 +439,7 @@ figure {
 				line-height: 40px;
 				text-transform: uppercase;
 				font-weight: bold;
+                
 			}
 			p {
 				font-size: 0.95em;
@@ -572,38 +578,55 @@ figure {
 				}
 				/*Index page banner box*/
 				#bannerbox {
-					height: 400px;
+					height: 365px;
 					width: 100%;
-					margin: 6% 0 0 0;
-					p {
-						font-family: $font-list;
-						font-size: 1.3em;
-						height: auto;
-						line-height: 30px;
-						position: absolute;
-						margin: 0;
-						top: 215px;
-						left: 665px;
-						z-index: 1;
-						width: 40%;
-						letter-spacing: 0.001em;
-					}
-					p:first-line {
-						font-size: 1.9em;
-						color: $content-color;
-						font-weight: bold;
-						letter-spacing: 0.001em;
-					}
+					margin: 0;
+                    border:solid 1px $content-color1a;
+                    
+                    hgroup{
+                        font-family: $font-list;
+                        position:absolute;
+                        z-index:2;
+                        width: 40%;
+                        margin: 1em 0 0 0.5em;
+                    
+                        h1{
+                            font-family: $font-list;
+                            font-size: 2.35rem;
+                            height: 40px;
+                            line-height: 40px;
+                            width: 100%;
+                            text-indent: 0;
+                            font-weight:bold;
+                            color:$content-color1a;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1.3rem;
+                            color: $content-color2;
+                            font-weight: bold;
+                            letter-spacing: 0.001em;
+                            text-transform: uppercase;
+                            height: 30px;
+                            line-height: 30px;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
+				
 					#bannerboximg {
-						width: 555px;
+                       
+						width:65%;
 						margin: 0;
 						padding: 0;
 						display: inline-block;
+                        float:right;
 					}
 					#apDiv1 {
-						margin: 12% 3% 0 1%;
-						width: 23%;
-						height: 200px;
+						margin:17% 0 0 1%;
+						width: 27%;
+						height: 12rem;
 						float: left;
 						display: inline-block;
 						a {
@@ -618,6 +641,8 @@ figure {
 							text-align: center;
 							@include transitioner(all ease .2s);
 							text-transform: uppercase;
+                            @include bordrady(5px);
+                            
 							&:hover {
 								background-color: $color-white;
 								
@@ -898,21 +923,23 @@ figure {
 						margin: auto;
 						font-family: $font-list;
 						h1 {
-							font-size: 1.5em;
+							font-size: 1.75em;
 							background: none;
 							color: $color-white;
 							width: 100%;
 							text-align: center;
-							line-height: 36px;
-							height: 100px;
+							line-height: 30px;
+							height: 90px;
 							text-indent: 0px;
-							font-weight: bold;
+							
+                            letter-spacing:-0.08em;
+                            padding-top: 0.3em;
 						}
 						select {
-							font-family: $font-list;
+							font-family: sans-serif;
 							width: 80%;
 							height: 30px;
-							font-size: 1.1em;
+							font-size: 1em;
 							margin: 5px auto;
 							color: $content-color;
 							display: block;
@@ -960,9 +987,10 @@ figure {
 							margin: 0;
 							padding: 0;
 							width: 100%;
+                            display:block;
 							li {
 								line-height: 30px;
-								display: inline-block;
+								display: block;
 								height: 30px;
 								font-size: 0.8em;
 								width: 100%;
@@ -1026,6 +1054,8 @@ figure {
 	}
 }
 
+
+
 @media only screen and (max-width: 1440px) {
 	/*Wrapper*/
 	#Wrapper {
@@ -1054,12 +1084,11 @@ figure {
 			margin: 0 0 1% 0;
 			span#signin-box {
 				width: 22%;
-				height: 25px;
+				
 				a {
-					line-height: 25px;
-					width: 31%;
-					font-size: 0.80em;
-					letter-spacing: 0.03em;
+										
+					font-size: 0.95em;
+					
 					&:hover {
 						font-weight: bold;
 					}
@@ -1072,11 +1101,11 @@ figure {
 				width: 75%;
 				height: 40px;
 				li {
-					width: 16%;
+					
 					margin-right: 0.2em;
 					a {
-						letter-spacing: 0.03em;
-						font-size: 0.75em;
+						
+						font-size: 0.95em;
 						&:hover {
 							font-weight: bold;
 						}
@@ -1211,26 +1240,31 @@ figure {
 				}
 				/*Index page banner box*/
 				#bannerbox {
-					height: 400px;
+					height: 365px;
 					width: 100%;
-					margin: 0;
-					p {
-						font-size: 1.25em;
-						line-height: 30px;
-						top: 170px;
-						left: 459px;
-						width: 43%;
-						letter-spacing: 0.001em;
-					}
-					p:first-line {
-						font-size: 1.9em;
-						letter-spacing: 0.001em;
-					}
+					margin: 0 0 1.5em 0;
+					hgroup{
+                        
+                        width: 40%;
+                        margin: 1em 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 2.35rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1.3rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 555px;
+						width: 63%;
 					}
 					#apDiv1 {
-						margin: 12% 3% 0 1%;
+						margin: 15% 3% 0 1%;
 						width: 23%;
 						height: 200px;
 						a {
@@ -1416,7 +1450,6 @@ figure {
 						margin-bottom: 1%;
 						h1 {
 							font-size: 1.45em;
-							line-height: 37px;
 						}
 						select {
 							width: 80%;
@@ -1516,12 +1549,11 @@ figure {
 			margin: 0 0 1% 0;
 			span#signin-box {
 				width: 22%;
-				height: 25px;
+				
 				a {
-					line-height: 25px;
-					width: 31%;
-					font-size: 0.80em;
-					letter-spacing: 0.03em;
+					
+					font-size: 0.90em;
+					
 					&:hover {
 						font-weight: bold;
 					}
@@ -1534,11 +1566,11 @@ figure {
 				width: 75%;
 				height: 40px;
 				li {
-					width: 16%;
+					
 					margin-right: 0.2em;
 					a {
-						letter-spacing: 0.03em;
-						font-size: 0.75em;
+						
+						font-size: 0.9em;
 						&:hover {
 							font-weight: bold;
 						}
@@ -1674,22 +1706,30 @@ figure {
 				}
 				/*Index page banner box*/
 				#bannerbox {
-					height: 400px;
-					p {
-						font-size: 1.25em;
-						left: 376px;
-						width: 44%;
-					}
-					p:first-line {
-						font-size: 1.9em;
-						letter-spacing: 0.001em;
-					}
+					height: 365px;
+					hgroup{
+                        
+                        width: 40%;
+                        margin: 1em 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 2.25rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1.2rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 555px;
+						width: 62%;
 					}
 					#apDiv1 {
-						width: 23%;
-						height: 200px;
+						width: 27%;
+						
 						a {
 							font-size: 1em;
 							&:hover {
@@ -1850,8 +1890,8 @@ figure {
 						height: 320px;
 						margin-bottom: 1%;
 						h1 {
-							font-size: 1.4em;
-							line-height: 37px;
+							font-size: 1.45em;
+							
 						}
 						select {
 							width: 80%;
@@ -1960,12 +2000,11 @@ figure {
 			margin: 0 0 1% 0;
 			span#signin-box {
 				width: 22%;
-				height: 25px;
+				
 				a {
-					line-height: 25px;
-					width: 31%;
+					
 					font-size: 0.75em;
-					letter-spacing: 0.03em;
+					
 					&:hover {
 						font-weight: bold;
 					}
@@ -1978,11 +2017,11 @@ figure {
 				width: 75%;
 				height: 40px;
 				li {
-					width: 16%;
+					
 					margin-right: 0.2em;
 					a {
-						letter-spacing: 0.03em;
-						font-size: 0.7em;
+						
+						font-size: 0.9em;
 						&:hover {
 							font-weight: bold;
 						}
@@ -2117,21 +2156,29 @@ figure {
 				/*Index page banner box*/
 				#bannerbox {
 					height: 360px;
-					p {
-						font-size: 1.15em;
-						left: 279px;
-						width: 51%;
-					}
-					p:first-line {
-						font-size: 1.9em;
-						letter-spacing: 0.001em;
-					}
+					hgroup{
+                        
+                        width: 50%;
+                        margin: 1em 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 2.25rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1.2rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 510px;
+						width: 68%;
 					}
 					#apDiv1 {
-						width: 22%;
-						height: 200px;
+						width: 27%;
+						
 						a {
 							font-size: 0.95em;
 							&:hover {
@@ -2290,7 +2337,7 @@ figure {
 						margin-bottom: 1%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 37px;
+							
 						}
 						select {
 							width: 80%;
@@ -2382,12 +2429,11 @@ figure {
 			margin: 0 0 1% 0;
 			span#signin-box {
 				width: 22%;
-				height: 25px;
+				
 				a {
-					line-height: 25px;
-					width: 31%;
+					
 					font-size: 0.75em;
-					letter-spacing: 0.03em;
+					
 					&:hover {
 						font-weight: bold;
 					}
@@ -2400,11 +2446,11 @@ figure {
 				width: 75%;
 				height: 40px;
 				li {
-					width: 16%;
+					
 					margin-right: 0.2em;
 					a {
-						letter-spacing: 0.03em;
-						font-size: 0.7em;
+						
+						font-size: 0.9em;
 						&:hover {
 							font-weight: bold;
 						}
@@ -2533,21 +2579,29 @@ figure {
 				/*Index page banner box*/
 				#bannerbox {
 					height: 330px;
-					p {
-						font-size: 1.1em;
-						left: 257px;
-						width: 51%;
-					}
-					p:first-line {
-						font-size: 1.9em;
-						letter-spacing: 0.001em;
-					}
+					hgroup{
+                        
+                        width: 50%;
+                        margin: 1em 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 2.25rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1.2rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 495px;
+						width: 61%;
 					}
 					#apDiv1 {
-						width: 22%;
-						height: 200px;
+						width: 27%;
+						
 						a {
 							font-size: 0.9em;
 							&:hover {
@@ -2699,7 +2753,7 @@ figure {
 						margin-bottom: 1%;
 						h1 {
 							font-size: 1.35em;
-							line-height: 37px;
+							
 						}
 						select {
 							width: 80%;
@@ -2789,12 +2843,12 @@ figure {
 			margin: 0 0 1% 0;
 			span#signin-box {
 				width: 23.5%;
-				height: 25px;
+				
 				a {
-					line-height: 25px;
-					width: 31%;
+					
+					
 					font-size: 0.75em;
-					letter-spacing: 0.03em;
+					
 					&:hover {
 						font-weight: bold;
 					}
@@ -2807,11 +2861,11 @@ figure {
 				width: 75%;
 				height: 40px;
 				li {
-					width: 16%;
+					
 					margin-right: 0.2em;
 					a {
-						letter-spacing: 0.03em;
-						font-size: 0.6em;
+						
+						font-size: 0.8em;
 						&:hover {
 							font-weight: bold;
 						}
@@ -2938,23 +2992,33 @@ figure {
 				}
 				/*Index page banner box*/
 				#bannerbox {
-					height: 325px;
-					p {
-						font-size: 0.9em;
-						left: 211px;
-						width: 56%;
-					}
-					p:first-line {
-						font-size: 1.9em;
-						letter-spacing: 0.001em;
-					}
+					height: 310px;
+					hgroup{
+                        
+                        width: 55%;
+                        margin: 0 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 1.8rem;
+                            letter-spacing: -0.08em;
+                            
+                        
+                        }
+                        h2{
+                            font-size: 1rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 390px;
-						margin-top: 3%;
+                        margin-top:0.5em;
+						width:69%;
+						
 					}
 					#apDiv1 {
-						width: 26%;
-						height: 200px;
+						width: 27%;
+						
 						a {
 							font-size: 0.9em;
 							&:hover {
@@ -3105,7 +3169,7 @@ figure {
 						margin-bottom: 1%;
 						h1 {
 							font-size: 1.25em;
-							line-height: 37px;
+							
 						}
 						select {
 							width: 80%;
@@ -3195,12 +3259,12 @@ figure {
 			margin: 0 0 1% 0;
 			span#signin-box {
 				width: 23.5%;
-				height: 25px;
+				
 				a {
-					line-height: 25px;
-					width: 30%;
+					
+					
 					font-size: 0.75em;
-					letter-spacing: 0.03em;
+					
 					&:hover {
 						font-weight: bold;
 					}
@@ -3213,11 +3277,11 @@ figure {
 				width: 75%;
 				height: 40px;
 				li {
-					width: 16%;
+					
 					margin-right: 0.2em;
 					a {
-						letter-spacing: 0.03em;
-						font-size: 0.55em;
+						
+						font-size: 0.75em;
 						&:hover {
 							font-weight: bold;
 						}
@@ -3343,23 +3407,32 @@ figure {
 				}
 				/*Index page banner box*/
 				#bannerbox {
-					height: 330px;
-					p {
-						font-size: 0.9em;
-						left: 202px;
-						width: 56%;
-					}
-					p:first-line {
-						font-size: 1.9em;
-						letter-spacing: 0.001em;
-					}
+					height: 310px;
+					hgroup{
+                        
+                        width: 65%;
+                        margin: 0 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 1.8rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 361px;
-						margin-top: 5%;
+                        margin-top: 0.5em;
+						width: 69%;
+						
 					}
 					#apDiv1 {
 						width: 27%;
-						height: 200px;
+						
 						a {
 							font-size: 0.85em;
 							&:hover {
@@ -3510,7 +3583,7 @@ figure {
 						margin-bottom: 1%;
 						h1 {
 							font-size: 1.15em;
-							line-height: 37px;
+							
 						}
 						select {
 							width: 80%;
@@ -3584,11 +3657,11 @@ figure {
 		button#side-bar-toggle-btn {
 			display: block;
 			position: fixed;
-			top: 2px;
-			left: 84%;
-			z-index: 4;
-			width: 100px;
-			height: 50px;
+            left: 93%;
+            z-index: 4;
+            top: 13.2em;
+            width: 50px;
+            height: 200px;
 			background-color: $color-white;
 			@include box-sizing($type: border-box);
 			border: 2px solid $color-orange;
@@ -3606,12 +3679,12 @@ figure {
 		button#menu-toggle-btn {
 			display: block;
 			position: fixed;
-			left: 2%;
+			top: 1em;
+			left: 81%;
 			z-index: 4;
-			top: 5.2em;
-			width: 70px;
+			width: 100px;
 			height: 50px;
-			line-height: 50px;
+			line-height: 52px;
 			text-align: center;
 			background-color: $color-white;
 			@include box-sizing($type: border-box);
@@ -3636,8 +3709,8 @@ figure {
 			height: 55px;
 			span#signin-box {
 				width: 30.5%;
-				height: 30px;
-				line-height: 30px;
+				
+				
 			}
 			ul#inner-nav {
 				display: none;
@@ -3771,22 +3844,32 @@ figure {
 				}
 				#bannerbox {
 					height: 335px;
-					width: 96%;
-					margin: 0 auto;
-					p {
-						left: 3%;
-						font-size: 1.2em;
-						width: 85%;
-						line-height: 30px;
-						top: 163px;
-					}
+					width: 99%;
+					
+					hgroup{
+                        
+                        width: 90%;
+                        margin: 0 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 2rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
 						width: 420px;
 						margin-top: 4%;
 					}
 					#apDiv1 {
-						margin: 10% 1% 0 0%;
-						width: 30%;
+						margin: 16% 0% 0 1%;
+						width: 27%;
 						a {
 							font-size: 0.9em;
 							&:hover {
@@ -3887,7 +3970,7 @@ figure {
 			}
 			#left_bar {
 				position: absolute;
-				z-index: 2;
+				z-index: 4;
 				left: -205px;
 				width: 30%;
 				display: none;
@@ -3906,7 +3989,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
@@ -4064,20 +4147,31 @@ figure {
 				}
 				#bannerbox {
 					height: 335px;
-					p {
-						left: 2%;
-						font-size: 1.2em;
-						width: 85%;
-						line-height: 30px;
-						top: 163px;
-					}
+					hgroup{
+                        
+                        width: 90%;
+                        margin: 0 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 2rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 400px;
-						margin-top: 4%;
+						width: 68%;
+                        margin:0;
+						
 					}
 					#apDiv1 {
-						margin: 10% 1% 0 0%;
-						width: 30%;
+						
+						width: 27%;
 						a {
 							font-size: 0.9em;
 							&:hover {
@@ -4175,10 +4269,10 @@ figure {
 			}
 			#left_bar {
 				position: absolute;
-				z-index: 2;
+				
 				left: -12em;
 				width: 30%;
-				//display: none;
+				
 				height: 800px;
 				#sec_nav #accordion {
 					ul {
@@ -4193,7 +4287,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
@@ -4226,14 +4320,15 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			left: 81%;
+			left: 2%;
+            top: 5.2em;
 			&:hover {
 				cursor: pointer;
 			}
 		}
 		button#menu-toggle-btn {
-			left: 2%;
-			top: 5.2em;
+			left: 81%;
+			
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
@@ -4347,19 +4442,31 @@ figure {
 					width: 44%;
 				}
 				#bannerbox {
-					height: 335px;
-					p {
-						left: 2%;
-						font-size: 1.1em;
-						top: 156px;
-					}
+					height: 310px;
+					hgroup{
+                        
+                        width: 90%;
+                        margin: 0 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 2rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 390px;
-						margin-top: 4%;
+						width: 68%;
+						
 					}
 					#apDiv1 {
-						margin: 10% 1% 0 0%;
-						width: 30%;
+						
+						width: 27%;
 						a {
 							font-size: 0.9em;
 							&:hover {
@@ -4472,7 +4579,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
@@ -4505,15 +4612,15 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			top: 2px;
-			left: 80%;
+			
+			left: 2%;
 			&:hover {
 				cursor: pointer;
 			}
 		}
 		buttonv#menu-toggle-btn {
-			left: 2%;
-			top: 4.5em;
+			left: 80%;
+			
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
@@ -4528,7 +4635,7 @@ figure {
 		nav#main-nav {
 			height: 55px;
 			span#signin-box {
-				width: 30.5%;
+				width: 32.5%;
 			}
 			ul#inner-nav {
 				display: none;
@@ -4631,19 +4738,30 @@ figure {
 				}
 				#bannerbox {
 					height: 310px;
-					p {
-						left: 4%;
-						font-size: 1.1em;
-						top: 143px;
-						width: 96%;
-					}
+					hgroup{
+                        
+                        width: 90%;
+                        
+                    
+                        h1{
+                            
+                            font-size: 2rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
-						width: 335px;
-						margin-top: 7%;
+						width: 68%;
+						
 					}
 					#apDiv1 {
-						margin: 10% 1% 0 0%;
-						width: 30%;
+						
+						width: 27%;
 						a {
 							font-size: 0.9em;
 							&:hover {
@@ -4755,7 +4873,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
@@ -4788,15 +4906,15 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			top: 2px;
-			left: 78%;
+			
+			left: 2%;
 			&:hover {
 				cursor: pointer;
 			}
 		}
 		button#menu-toggle-btn {
-			left: 2%;
-			top: 4.9em;
+			left: 78%;
+			top:0.5em;
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
@@ -4952,18 +5070,31 @@ figure {
 					width: 49%;
 				}
 				#bannerbox {
-					height: 310px;
-					p {
-						left: 1%;
-						font-size: 1em;
-						top: 170px;
-						width: 98%;
-					}
+					height: auto;
+					hgroup{
+                        position: unset;
+                        width: 97%;
+                        margin: 0 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 2.1rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 1rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
+                        
 						width: 100%;
-						margin-top: 7%;
+						
 					}
 					#apDiv1 {
+                        float: none;
 						margin: 5% auto;
 						width: 100%;
 						a {
@@ -5081,7 +5212,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
@@ -5118,15 +5249,15 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			top: 2px;
-			left: 74%;
+			top: 4.9em;
+			left: 2%;
 			&:hover {
 				cursor: pointer;
 			}
 		}
 		button#menu-toggle-btn {
-			left: 2%;
-			top: 4.9em;
+			left: 74%;
+			
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
@@ -5247,16 +5378,27 @@ figure {
 					}
 				}
 				#bannerbox {
-					height: 310px;
-					p {
-						left: 1%;
-						font-size: 0.9em;
-						top: 151px;
-						width: 98%;
-					}
+					
+					hgroup{
+                        
+                        width: 90%;
+                        
+                    
+                        h1{
+                            
+                            font-size: 1.7rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 0.9rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
 						width: 100%;
-						margin-top: 7%;
+						
 					}
 					#apDiv1 {
 						margin: 5% auto;
@@ -5381,7 +5523,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
@@ -5418,15 +5560,16 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			top: 2px;
-			left: 72%;
+			top: 5em;
+			left: 2%;
 			&:hover {
 				cursor: pointer;
 			}
 		}
 		button#menu-toggle-btn {
-			left: 2%;
-			top: 4.5em;
+            left: 81%;
+            width: 16%;
+			
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
@@ -5547,15 +5690,27 @@ figure {
 					}
 				}
 				#bannerbox {
-					height: 310px;
-					p {
-						left: 2%;
-						font-size: 0.8em;
-						top: 146px;
-					}
+					
+					hgroup{
+                        
+                        width: 90%;
+                        
+                    
+                        h1{
+                            
+                            font-size: 1.5rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 0.9rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
 						width: 100%;
-						margin-top: 7%;
+						
 					}
 					#apDiv1 {
 						margin: 5% auto;
@@ -5677,7 +5832,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
@@ -5714,8 +5869,8 @@ figure {
 	#Wrapper {
 		width: 96%;
 		div#side-bar-toggle-btn {
-			top: 2px;
-			left: 74%;
+			
+			left: 2%;
 			width: 80px;
 			font-size:0.9em;
 			&:hover {
@@ -5723,8 +5878,8 @@ figure {
 			}
 		}
 		div#menu-toggle-btn {
-			left: 2%;
-			top: 4.5em;
+			left: 81%;
+            width: 16%;
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
@@ -5845,15 +6000,27 @@ figure {
 					}
 				}
 				#bannerbox {
-					height: 310px;
-					p {
-						left: 2%;
-						font-size: 0.75em;
-						top: 146px;
-					}
+					
+					hgroup{
+                        
+                        width: 90%;
+                        margin: 0 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 1.35rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 0.85rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
 						width: 100%;
-						margin-top: 7%;
+						
 					}
 					#apDiv1 {
 						margin: 5% auto;
@@ -5975,7 +6142,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
@@ -6012,17 +6179,17 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			top: 2px;
-			left: 79%;
-			width:60px;
-			font-size:0.85em;
+			
+			left: 2%;
+			
+			font-size:0.8em;
 			&:hover {
 				cursor: pointer;
 			}
 		}
 		button#menu-toggle-btn {
-			left: 2%;
-			top: 4.2em;
+			left: 82%;
+			
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
@@ -6114,7 +6281,7 @@ figure {
 			}
 			p.context {
 				width: 95%;
-				font-size: 0.8em;
+				font-size: 0.7em;
 			}
 			span.context_title {
 				font-size: 1.2em;
@@ -6143,20 +6310,27 @@ figure {
 					}
 				}
 				#bannerbox {
-					height: 310px;
-					p::first-line {
-						font-size: 1.7em;
-						letter-spacing: 0.001em;
-					}
-					p {
-						left: 1%;
-						font-size: 0.75em;
-						top: 138px;
-						line-height: 22px;
-					}
+					
+					hgroup{
+                        
+                        width: 97%;
+                        margin: 0 0 0 0.5em;
+                    
+                        h1{
+                            
+                            font-size: 1.3rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                        h2{
+                            font-size: 0.8rem;
+                            letter-spacing: -0.08em;
+                        
+                        }
+                    }
 					#bannerboximg {
 						width: 100%;
-						margin-top: 7%;
+						
 					}
 					#apDiv1 {
 						margin: 5% auto;
@@ -6278,7 +6452,7 @@ figure {
 						width: 98%;
 						h1 {
 							font-size: 1.4em;
-							line-height: 34px;
+							
 							text-indent: 0px;
 						}
 						select {
