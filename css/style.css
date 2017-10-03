@@ -2926,9 +2926,9 @@ figure {
       position: fixed;
       left: 93%;
       z-index: 4;
-      top: 13.2em;
+      top: 12.2em;
       width: 50px;
-      height: 200px;
+      height: 150px;
       background-color: #ffffff;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -2971,7 +2971,7 @@ figure {
       #Wrapper header figure#logo {
         width: 300px; }
     #Wrapper nav#main-nav {
-      height: 55px; }
+      height: 30px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 30.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -3077,10 +3077,10 @@ figure {
           width: 90%;
           margin: 0 0 0 0.5em; }
           #Wrapper #content #content_section #bannerbox hgroup h1 {
-            font-size: 2rem;
+            font-size: 2.25rem;
             letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
-            font-size: 1rem;
+            font-size: 1.2rem;
             letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
           width: 420px;
@@ -3196,7 +3196,6 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      top: 2px;
       left: 92%; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
@@ -3211,7 +3210,7 @@ figure {
       #Wrapper header figure#logo {
         width: 300px; }
     #Wrapper nav#main-nav {
-      height: 55px; }
+      height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 30.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -3287,11 +3286,11 @@ figure {
             font-size: 2rem;
             letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
           width: 68%;
-          margin: 0; }
+          margin: 1% 0 0 0; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
           width: 27%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
@@ -3396,8 +3395,7 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      left: 2%;
-      top: 5.2em; }
+      left: 92%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
@@ -3408,7 +3406,7 @@ figure {
     #Wrapper header {
       height: 74px; }
     #Wrapper nav#main-nav {
-      height: 55px; }
+      height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 30.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -3482,7 +3480,7 @@ figure {
           width: 90%;
           margin: 0 0 0 0.5em; }
           #Wrapper #content #content_section #bannerbox hgroup h1 {
-            font-size: 2rem;
+            font-size: 1.9rem;
             letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
             font-size: 1rem;
@@ -3593,7 +3591,7 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      left: 2%; }
+      left: 92%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper buttonv#menu-toggle-btn {
@@ -3606,7 +3604,7 @@ figure {
       #Wrapper header figure#logo {
         width: 290px; }
     #Wrapper nav#main-nav {
-      height: 55px; }
+      height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 32.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -3679,12 +3677,13 @@ figure {
         #Wrapper #content #content_section #bannerbox hgroup {
           width: 90%; }
           #Wrapper #content #content_section #bannerbox hgroup h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
             font-size: 1rem;
             letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
+          margin: 2% 0 0 0;
           width: 68%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
           width: 27%; }
@@ -3789,7 +3788,7 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      left: 2%; }
+      left: 92%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
@@ -3803,7 +3802,7 @@ figure {
       #Wrapper header figure#logo {
         height: 61px; }
     #Wrapper nav#main-nav {
-      height: 60px; }
+      height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 45.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -3915,6 +3914,7 @@ figure {
             font-size: 1rem;
             letter-spacing: -0.08em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
+          margin: 0;
           width: 100%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
           float: none;
@@ -4027,8 +4027,7 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      top: 4.9em;
-      left: 2%; }
+      left: 89%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
@@ -4041,7 +4040,7 @@ figure {
       #Wrapper header figure#logo {
         width: 290px; }
     #Wrapper nav#main-nav {
-      height: 60px; }
+      height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 45.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -4116,10 +4115,14 @@ figure {
         width: 90%; }
         #Wrapper #content #content_section #bannerbox hgroup h1 {
           font-size: 1.7rem;
-          letter-spacing: -0.08em; }
+          letter-spacing: -0.08em;
+          height: 35px;
+          line-height: 35px; }
         #Wrapper #content #content_section #bannerbox hgroup h2 {
           font-size: 0.9rem;
-          letter-spacing: -0.08em; }
+          letter-spacing: -0.08em;
+          height: 30px;
+          line-height: 30px; }
       #Wrapper #content #content_section #bannerbox #bannerboximg {
         width: 100%; }
       #Wrapper #content #content_section #bannerbox #apDiv1 {
@@ -4235,8 +4238,7 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      top: 5em;
-      left: 2%; }
+      left: 88%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
@@ -4246,11 +4248,11 @@ figure {
         background-color: #ea3411;
         cursor: pointer; }
     #Wrapper header {
-      height: 65px; }
+      height: 60px; }
       #Wrapper header figure#logo {
         width: 280px; }
     #Wrapper nav#main-nav {
-      height: 60px; }
+      height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 50.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -4442,9 +4444,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper div#side-bar-toggle-btn {
-      left: 2%;
-      width: 80px;
-      font-size: 0.9em; }
+      left: 87%;
+      font-size: 0.8em; }
       #Wrapper div#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper div#menu-toggle-btn {
@@ -4458,7 +4459,7 @@ figure {
       #Wrapper header figure#logo {
         width: 260px; }
     #Wrapper nav#main-nav {
-      height: 60px; }
+      height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 55.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
@@ -4651,8 +4652,8 @@ figure {
   #Wrapper {
     width: 96%; }
     #Wrapper button#side-bar-toggle-btn {
-      left: 2%;
-      font-size: 0.8em; }
+      left: 85%;
+      font-size: 0.75em; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
@@ -4665,7 +4666,7 @@ figure {
       #Wrapper header figure#logo {
         width: 259px; }
     #Wrapper nav#main-nav {
-      height: 60px; }
+      height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
         width: 60.5%; }
       #Wrapper nav#main-nav ul#inner-nav {

@@ -3659,9 +3659,9 @@ figure {
 			position: fixed;
             left: 93%;
             z-index: 4;
-            top: 13.2em;
+            top: 12.2em;
             width: 50px;
-            height: 200px;
+            height: 150px;
 			background-color: $color-white;
 			@include box-sizing($type: border-box);
 			border: 2px solid $color-orange;
@@ -3706,7 +3706,7 @@ figure {
 			}
 		}
 		nav#main-nav {
-			height: 55px;
+			height: 30px;
 			span#signin-box {
 				width: 30.5%;
 				
@@ -3853,12 +3853,12 @@ figure {
                     
                         h1{
                             
-                            font-size: 2rem;
+                            font-size: 2.25rem;
                             letter-spacing: -0.08em;
                         
                         }
                         h2{
-                            font-size: 1rem;
+                            font-size: 1.2rem;
                             letter-spacing: -0.08em;
                         
                         }
@@ -4022,7 +4022,7 @@ figure {
 	#Wrapper {
 		width: 96%;
 		div#side-bar-toggle-btn {
-			top: 2px;
+			
 			left: 92%;
 			&:hover {
 				cursor: pointer;
@@ -4043,7 +4043,7 @@ figure {
 			}
 		}
 		nav#main-nav {
-			height: 55px;
+			height: 25px;
 			span#signin-box {
 				width: 30.5%;
 			}
@@ -4159,14 +4159,14 @@ figure {
                         
                         }
                         h2{
-                            font-size: 1rem;
+                            font-size: 1.1rem;
                             letter-spacing: -0.08em;
                         
                         }
                     }
 					#bannerboximg {
 						width: 68%;
-                        margin:0;
+                        margin:1% 0 0 0;
 						
 					}
 					#apDiv1 {
@@ -4320,8 +4320,8 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			left: 2%;
-            top: 5.2em;
+			left: 92%;
+            
 			&:hover {
 				cursor: pointer;
 			}
@@ -4338,7 +4338,7 @@ figure {
 			height: 74px;
 		}
 		nav#main-nav {
-			height: 55px;
+			height: 25px;
 			span#signin-box {
 				width: 30.5%;
 			}
@@ -4450,7 +4450,7 @@ figure {
                     
                         h1{
                             
-                            font-size: 2rem;
+                            font-size: 1.9rem;
                             letter-spacing: -0.08em;
                         
                         }
@@ -4613,7 +4613,7 @@ figure {
 		width: 96%;
 		button#side-bar-toggle-btn {
 			
-			left: 2%;
+			left: 92%;
 			&:hover {
 				cursor: pointer;
 			}
@@ -4633,7 +4633,7 @@ figure {
 			}
 		}
 		nav#main-nav {
-			height: 55px;
+			height: 25px;
 			span#signin-box {
 				width: 32.5%;
 			}
@@ -4745,7 +4745,7 @@ figure {
                     
                         h1{
                             
-                            font-size: 2rem;
+                            font-size: 1.8rem;
                             letter-spacing: -0.08em;
                         
                         }
@@ -4756,6 +4756,7 @@ figure {
                         }
                     }
 					#bannerboximg {
+                        margin: 2% 0 0 0;
 						width: 68%;
 						
 					}
@@ -4907,7 +4908,7 @@ figure {
 		width: 96%;
 		button#side-bar-toggle-btn {
 			
-			left: 2%;
+			left: 92%;
 			&:hover {
 				cursor: pointer;
 			}
@@ -4927,7 +4928,7 @@ figure {
 			}
 		}
 		nav#main-nav {
-			height: 60px;
+			height: 25px;
 			span#signin-box {
 				width: 45.5%;
 			}
@@ -5089,7 +5090,7 @@ figure {
                         }
                     }
 					#bannerboximg {
-                        
+                        margin:0;
 						width: 100%;
 						
 					}
@@ -5249,8 +5250,8 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			top: 4.9em;
-			left: 2%;
+			
+			left: 89%;
 			&:hover {
 				cursor: pointer;
 			}
@@ -5270,7 +5271,7 @@ figure {
 			}
 		}
 		nav#main-nav {
-			height: 60px;
+			height: 25px;
 			span#signin-box {
 				width: 45.5%;
 			}
@@ -5388,11 +5389,15 @@ figure {
                             
                             font-size: 1.7rem;
                             letter-spacing: -0.08em;
+                            height: 35px;
+                            line-height: 35px;
                         
                         }
                         h2{
                             font-size: 0.9rem;
                             letter-spacing: -0.08em;
+                            height: 30px;
+                            line-height: 30px;
                         
                         }
                     }
@@ -5560,8 +5565,8 @@ figure {
 	#Wrapper {
 		width: 96%;
 		button#side-bar-toggle-btn {
-			top: 5em;
-			left: 2%;
+			
+			left: 88%;
 			&:hover {
 				cursor: pointer;
 			}
@@ -5576,13 +5581,13 @@ figure {
 			}
 		}
 		header {
-			height: 65px;
+			height: 60px;
 			figure#logo {
 				width: 280px;
 			}
 		}
 		nav#main-nav {
-			height: 60px;
+			height: 25px;
 			span#signin-box {
 				width: 50.5%;
 			}
@@ -5870,9 +5875,9 @@ figure {
 		width: 96%;
 		div#side-bar-toggle-btn {
 			
-			left: 2%;
-			width: 80px;
-			font-size:0.9em;
+			left: 87%;
+			
+			font-size:0.8em;
 			&:hover {
 				cursor: pointer;
 			}
@@ -5892,7 +5897,7 @@ figure {
 			}
 		}
 		nav#main-nav {
-			height: 60px;
+			height: 25px;
 			span#signin-box {
 				width: 55.5%;
 			}
@@ -6180,9 +6185,9 @@ figure {
 		width: 96%;
 		button#side-bar-toggle-btn {
 			
-			left: 2%;
+			left: 85%;
 			
-			font-size:0.8em;
+			font-size:0.75em;
 			&:hover {
 				cursor: pointer;
 			}
@@ -6202,7 +6207,7 @@ figure {
 			}
 		}
 		nav#main-nav {
-			height: 60px;
+			height: 25px;
 			span#signin-box {
 				width: 60.5%;
 			}
