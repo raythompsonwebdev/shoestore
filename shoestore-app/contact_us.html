@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html >
+<!DOCTYPE html >
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="shoe store website selling the latest shoes and accessories at affordable prices. " />
 <meta name="keywords" content="Shoes, Boots, Footware, Handbags, Hats, " />
-<!--Scale-->
 <meta name="viewport" content="minimum-scale=0">
 <meta name="viewport" content="user-scalable=yes">
 <meta name="viewport" content="target-densitydpi=device-dpi">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="RayThompsonWebdev" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="copyright" content="&copy;raymondthompson" />
 <meta name="robots" content="noindex,nofollow">
@@ -28,14 +28,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-<link rel="manifest" href="icons/manifest.json">
+<link rel="manifest" href="manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<title>Shoestore-Faqs-Page</title>
+<title>Shoestore-Contact-Page</title>
 
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="font/font-style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css" />
 <!--[if lt IE 9 ]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -43,11 +44,13 @@
 <script type="text/javascript" src="js/Respond-master/dest/respond.min.js"></script>
 <script type="text/javascript" src="js/selectivizr.min.js"></script>
 <![endif]-->
+
 </head>
 
 <body>
 <!--Wrapper Start-->
 <div id="Wrapper">
+
 <button id="menu-toggle-btn">MENU</button>
     <!--Header-->
     <header>
@@ -56,7 +59,7 @@
         </figure>
     </header>
 
-   <!--Navigation-->
+ <!--Navigation-->
 <nav id="main-nav" role="navigation">
     <span id="signin-box">
         <a href="#" alt="">Sign in</a>
@@ -81,50 +84,62 @@
     </ul>
 </nav>
 <!--End of Nav-->
-
     <!--Content-->
-    <section id="content" class="clearfix" role="main">
-        <h1>FAQ</h1>
+    <main id="content" class="clearfix" role="main">
+
+        <h1>Contact Us</h1>
+
         <br/>
 
-        <p class="context">
+        <p class="context">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem explicabo, ab expedita rem temporibus repellendus eum, omnis, distinctio est ipsum vel voluptate perspiciatis, quis earum accusantium unde nisi quas. Voluptatum.</p>
 
-            <span class="context_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel rutrum ante.</span>
+
+        <section id="stylized" class="myform">
+
+            <form  id="form" method="post" action="" role="form">
+                <ul>
+                    <li>
+                        <label for="nume">Name:&#32; </label>
+                        <input type="text" name="name" id="name" pattern="[a-z A-Z]"required  />
+                    </li>
+                    <li>
+                        <label for="email">E-mail:&#32; </label>
+                        <input type="text" name="email" id="email" required />
+                    </li>
+                    <li>
+                        <label for="message">Message:&#32; </label>
+                        <textarea name="message" id="message" cols="35" rows="15" pattern="[a-z A-Z]"></textarea>
+                        <input type="hidden" name="anti_spam" id="anti_spam" value="" />
+                        <a href="" title="" target="_blank" style="font-size:8px; color:#eaeafe;"> </a>
+                    </li>
+                    <li>
+                        <label for="submit"></label><input type="submit" value="Send" id="submit" name="submit" />
+                    </li>
+				</ul>
+
+            </form>
+
+        </section> <!-- end of form class -->
+
+        <aside class="text_boxa">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+            <p>Morbi vel rutrum ante. Vivamus adipiscing tincidunt purus at adipiscing. Proin orci metus, gravida in cursus et, egestas in leo. Suspendisse potenti. Vivamus congue sapien nec velit adipiscing a tincidunt massa porta.</p>
             <br/>
-
-            Vivamus adipiscing tincidunt purus at adipiscing. Proin orci metus, gravida in cursus et, egestas in leo. Suspendisse potenti. Vivamus congue sapien nec velit adipiscing a tincidunt massa porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis urna nisl. Nulla dolor magna, pretium ac elementum nec, tristique eu sem. Sed lectus arcu, ultrices at mattis id, elementum in nisl. Sed condimentum adipiscing urna, id venenatis ante placerat vel.<br/>
-            <span class="context_title"> Integer pellentesque lorem quis libero consectetur ac egestas magna tincidunt.<br/>
-            </span>
-
-            Vivamus sit amet ipsum a neque elementum imperdiet vitae nec velit. Cras id diam sapien. Phasellus malesuada congue est, eget vulputate est dignissim vitae. Ut faucibus dapibus sollicitudin. Vestibulum vitae purus et leo vulputate ultrices eget vel odio. Sed sagittis aliquet risus tempor varius. Integer eget dui vel tortor fermentum tincidunt. Nullam vitae odio nec lorem porttitor tristique porta id sapien. Mauris ornare leo at mi tempor eget tincidunt nulla auctor. Fusce adipiscing lacinia erat nec molestie. Aenean diam justo, faucibus et feugiat non, viverra ac turpis.<br/> <span class="context_title"> Curabitur pellentesque facilisis volutpat.
-                Vivamus vel lacus orci. Mauris semper sapien ut massa scelerisque consequat non eu justo.<br/>
-            </span>Morbi non massa lectus. Nullam ac leo in dolor pharetra bibendum at sit amet felis. Nam justo lacus, rhoncus vel viverra quis, dictum eu tortor. Curabitur nunc neque, adipiscing ac suscipit at, cursus ac diam. Aliquam erat volutpat. Integer convallis consequat facilisis. Suspendisse justo eros, egestas dignissim ultricies vel, ullamcorper quis lectus. Donec nisi orci, placerat eget interdum vel, vehicula a massa. Quisque nunc nulla, hendrerit et porttitor ac, pulvinar nec risus. Donec congue mattis porttitor. In id urna a ligula lobortis luctus. Quisque sit amet ligula at arcu bibendum cursus. Vestibulum volutpat suscipit iaculis. <br/> <span class="context_title"> Nam bibendum est quis metus fermentum faucibus.</span><br/>
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean vel nisl metus. Integer sit amet lacus quis purus tempor porta. Fusce mollis purus et ligula imperdiet ut eleifend nunc aliquam. Duis ut ante in enim pulvinar tempor ut ac justo. Nam in erat nulla. Nulla tincidunt nisi vestibulum enim dapibus ut tristique purus vulputate. Nunc et tempus velit. Nullam et augue porta urna rhoncus iaculis vitae et nunc. Nam cursus pharetra magna at vestibulum. Aliquam accumsan, erat a porttitor ultrices, elit elit tristique arcu, et adipiscing mi sem at sapien. Vestibulum fringilla sagittis elit vitae lacinia.<br/> <span class="context_title">Nunc urna metus, luctus et dictum sed, tincidunt a arcu.</span><br/>
-            Donec in sem nisl, a rhoncus leo. Phasellus a ligula non odio euismod ullamcorper vel blandit arcu. Curabitur id magna eget augue dapibus mattis. Vivamus consectetur venenatis aliquet. Donec nec libero placerat mi tincidunt vestibulum sit amet a ipsum.</p>
-
-
-        <aside class="text_boxa"> <br/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                Morbi vel rutrum ante</p>
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </h1>
+            <p>Nulla quis urna nisl. Nulla dolor magna, pretium ac elementum nec, tristique eu sem. Sed lectus arcu, ultrices at mattis id, elementum in nisl. Sed condimentum adipiscing urna, id venenatis ante placerat vel.</p>
             <br/>
-            <p>Vivamus adipiscing tincidunt purus at adipiscing
-                Proin orci metus, gravida in cursus et, egestas
-                Suspendisse potenti</p>
+            <h1>Integer pellentesque lorem quis libero consectetur ac egestas magna tincidunt.</h1>
+            <p>Vivamus sit amet ipsum a neque elementum imperdiet vitae nec velit. Cras id diam sapien. Phasellus malesuada congue est, eget vulputate est dignissim vitae. Ut faucibus dapibus sollicitudin. Vestibulum vitae purus et leo vulputate ultrices eget vel odio.</p>
             <br/>
-            <p>Vivamus congue sapien nec velit adipiscing a tincidunt
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                Nulla quis urna nisl</p>
-            <br/>
-            <p>Nulla dolor magna, pretium ac elementum nec, tristique
-                Sed lectus arcu, ultrices at mattis id, elementum in nisl
-                Sed condimentum adipiscing urna, id venenatis ante</p>
+            <h1>Sed sagittis aliquet risus tempor varius.</h1>
+            <p>Integer eget dui vel tortor fermentum tincidunt. Nullam vitae odio nec lorem porttitor tristique porta id sapien. Mauris ornare leo at mi tempor eget tincidunt nulla auctor. Fusce adipiscing lacinia erat nec molestie. Aenean diam justo, faucibus et feugiat non, viverra ac turpis.</p>
             <br/>
         </aside>
-        
-        
-    </section>  <!--end of content-->
+	</main>  <!--end of content-->
+
     <div class="clearfix"></div>
-    <hr><!--end of content-->
+
+    <hr>
    <!--Footer-->
 <footer>
     <ul class="footer_nav">
@@ -137,19 +152,21 @@
     </ul>
 </footer><!--end of footer-->
     <div class="clearfix"></div>
-    <p class="copyr"> &copy;2017 - Built by Raymond Thompson - website design from phpjabber.com -see this and other websites at raythompsonwebdev.co.uk -
+
+
+
+</div><!--Wrapper end-->
+   <br/>
+   <p class="copyr"> &copy;2017 - Built by Raymond Thompson - website design from phpjabber.com -see this and other websites at raythompsonwebdev.co.uk -
             <script >
                 document.write("Page Last Updated: " + document.lastModified);
             </script>
         </p>
-</div><!--Wrapper end-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script > window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js">\x3C/script>')
 </script>
-
-
-
 <script src="js/custom.js"></script>
+
 
 </body>
 </html>

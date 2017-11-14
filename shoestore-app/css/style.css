@@ -409,7 +409,7 @@ figure {
         margin: 1% 0 0 0;
         height: 40px;
         color: #ffffff;
-        font-size: 2em;
+        font-size: 1.5em;
         text-indent: 1%;
         line-height: 40px;
         text-transform: uppercase;
@@ -467,7 +467,7 @@ figure {
               float: left;
               display: inline-block;
               line-height: 40px;
-              font-size: 0.9em;
+              font-size: 1em;
               text-align: center; }
             #Wrapper #content #stylized #form ul li input,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) input {
@@ -508,7 +508,7 @@ figure {
                 margin-left: 15%; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
             height: 265px; }
-      #Wrapper #content p.context {
+      #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
         font-family: "Old Standard TT", arial, helvetica, sans-serif;
@@ -958,7 +958,7 @@ figure {
   p.copyr {
     margin: 2% auto;
     font-size: 0.6em;
-    width: 100%;
+    width: 50%;
     letter-spacing: 0.1em; } }
 @media only screen and (max-width: 1440px) {
   /*Wrapper*/
@@ -1040,7 +1040,7 @@ figure {
       /*rightside content section within content div*/
       /*leftbar*/ }
       #Wrapper #content h1 {
-        font-size: 1.8em; }
+        font-size: 1.4em; }
       #Wrapper #content p {
         line-height: 1.6em; }
       #Wrapper #content aside.text_boxa {
@@ -1066,7 +1066,7 @@ figure {
             #Wrapper #content #stylized #form ul li:nth-of-type(3) label {
               width: 15%;
               line-height: 40px;
-              font-size: 0.9em; }
+              font-size: 1em; }
             #Wrapper #content #stylized #form ul li input,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) input {
               width: 75%;
@@ -1089,7 +1089,7 @@ figure {
                 cursor: pointer; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
             height: 265px; }
-      #Wrapper #content p.context {
+      #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
         line-height: 1.8em;
@@ -1402,7 +1402,7 @@ figure {
       /*rightside content section within content div*/
       /*leftbar*/ }
       #Wrapper #content h1 {
-        font-size: 1.7em; }
+        font-size: 1.35em; }
       #Wrapper #content p {
         line-height: 1.6em; }
       #Wrapper #content p.copyr {
@@ -1453,7 +1453,7 @@ figure {
                 cursor: pointer; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
             height: 265px; }
-      #Wrapper #content p.context {
+      #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
         line-height: 1.8em;
@@ -1743,7 +1743,7 @@ figure {
       /*rightside content section within content div*/
       /*leftbar*/ }
       #Wrapper #content h1 {
-        font-size: 1.7em; }
+        font-size: 1.35em; }
       #Wrapper #content p {
         line-height: 1.6em;
         font-size: 0.9em; }
@@ -1793,7 +1793,7 @@ figure {
                 cursor: pointer; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
             height: 265px; }
-      #Wrapper #content p.context {
+      #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
         line-height: 1.8em;
@@ -2062,7 +2062,7 @@ figure {
       /*rightside content section within content div*/
       /*leftbar*/ }
       #Wrapper #content h1 {
-        font-size: 1.6em; }
+        font-size: 1.3em; }
       #Wrapper #content p {
         line-height: 1.6em; }
       #Wrapper #content aside.text_boxa {
@@ -2088,7 +2088,7 @@ figure {
             #Wrapper #content #stylized #form ul li:nth-of-type(3) label {
               width: 20%;
               line-height: 40px;
-              font-size: 0.8em; }
+              font-size: 0.85em; }
             #Wrapper #content #stylized #form ul li input,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) input {
               width: 75%;
@@ -2111,7 +2111,7 @@ figure {
                 cursor: pointer; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
             height: 265px; }
-      #Wrapper #content p.context {
+      #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
         line-height: 1.8em;
@@ -2371,7 +2371,7 @@ figure {
       /*rightside content section within content div*/
       /*leftbar*/ }
       #Wrapper #content h1 {
-        font-size: 1.5em; }
+        font-size: 1.2em; }
       #Wrapper #content p {
         line-height: 1.6em;
         font-size: 0.8em; }
@@ -2396,7 +2396,7 @@ figure {
             height: 50px; }
             #Wrapper #content #stylized #form ul li label,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) label {
-              font-size: 0.75em; }
+              font-size: 0.8em; }
             #Wrapper #content #stylized #form ul li input,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) input {
               width: 75%;
@@ -2419,7 +2419,7 @@ figure {
                 cursor: pointer; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
             height: 265px; }
-      #Wrapper #content p.context {
+      #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
         line-height: 1.8em;
@@ -2680,7 +2680,7 @@ figure {
       /*rightside content section within content div*/
       /*leftbar*/ }
       #Wrapper #content h1 {
-        font-size: 1.4em; }
+        font-size: 1.2em; }
       #Wrapper #content p {
         line-height: 1.6em; }
       #Wrapper #content aside.text_boxa {
@@ -2704,7 +2704,7 @@ figure {
             height: 50px; }
             #Wrapper #content #stylized #form ul li label,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) label {
-              font-size: 0.75em; }
+              font-size: 0.8em; }
             #Wrapper #content #stylized #form ul li input,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) input {
               width: 75%;
@@ -2727,7 +2727,7 @@ figure {
                 cursor: pointer; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
             height: 265px; }
-      #Wrapper #content p.context {
+      #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
         line-height: 1.8em;
@@ -3033,7 +3033,7 @@ figure {
       width: 16.8%;
       font-size: 0.9em; }
     #Wrapper #content h1 {
-      font-size: 1.5em; }
+      font-size: 1.2em; }
     #Wrapper #content aside.text_boxa {
       width: 96.5%;
       height: auto;
@@ -3051,7 +3051,7 @@ figure {
       margin-left: 0;
       height: 430px;
       margin-bottom: 5%; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.85em; }
     #Wrapper #content span.context_title {
@@ -3243,7 +3243,7 @@ figure {
       width: 16.8%;
       font-size: 0.8em; }
     #Wrapper #content h1 {
-      font-size: 1.45em; }
+      font-size: 1.25em; }
     #Wrapper #content aside.text_boxa {
       width: 96.5%;
       padding: 1%;
@@ -3258,7 +3258,7 @@ figure {
       margin-left: 0;
       height: 430px;
       margin-bottom: 5%; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.85em; }
     #Wrapper #content span.context_title {
@@ -3439,7 +3439,7 @@ figure {
       width: 16.8%;
       font-size: 0.9em; }
     #Wrapper #content h1 {
-      font-size: 1.4em; }
+      font-size: 1.2em; }
     #Wrapper #content aside.text_boxa {
       width: 96.5%;
       padding: 1%;
@@ -3454,7 +3454,7 @@ figure {
       margin-left: 0;
       height: 430px;
       margin-bottom: 5%; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.85em; }
     #Wrapper #content span.context_title {
@@ -3652,7 +3652,7 @@ figure {
       margin-left: 0;
       height: 430px;
       margin-bottom: 5%; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.8em; }
     #Wrapper #content span.context_title {
@@ -3880,7 +3880,7 @@ figure {
               cursor: pointer; }
         #Wrapper #content #stylized #form ul li:nth-of-type(3) {
           height: 265px; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.8em; }
     #Wrapper #content span.context_title {
@@ -4088,7 +4088,7 @@ figure {
       margin-left: 0;
       height: 430px;
       margin-bottom: 5%; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.8em; }
     #Wrapper #content span.context_title {
@@ -4300,7 +4300,7 @@ figure {
       margin-left: 0;
       height: 430px;
       margin-bottom: 5%; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.8em; }
     #Wrapper #content span.context_title {
@@ -4507,7 +4507,7 @@ figure {
       margin-left: 0;
       height: 430px;
       margin-bottom: 5%; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.8em; }
     #Wrapper #content span.context_title {
@@ -4714,7 +4714,7 @@ figure {
       margin-left: 0;
       height: 430px;
       margin-bottom: 5%; }
-    #Wrapper #content p.context {
+    #Wrapper #content main#context {
       width: 95%;
       font-size: 0.7em; }
     #Wrapper #content span.context_title {
