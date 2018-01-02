@@ -271,7 +271,7 @@ figure {
       padding: 0;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 20%;
+        width: 18%;
         display: inline-block;
         float: right;
         height: 20px; }
@@ -975,7 +975,7 @@ figure {
   /*Wrapper*/
   #Wrapper {
     margin: 1% auto;
-    width: 77%;
+    width: 72%;
     padding: 0 1%;
     /*header*/
     /*Navigation*/
@@ -997,7 +997,7 @@ figure {
       height: 40px;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 22%; }
+        width: 18%; }
         #Wrapper nav#main-nav span#signin-box a {
           font-size: 0.90em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
@@ -1180,7 +1180,7 @@ figure {
                 text-indent: 3%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 4% 0 0;
+                margin: 0 2% 0 0;
                 width: 14%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
@@ -1523,13 +1523,13 @@ figure {
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
                 height: 25px;
                 line-height: 25px;
-                font-size: 0.75em;
+                font-size: 0.7em;
                 width: 82%;
                 text-indent: 3%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 6% 0 0;
-                width: 12%; }
+                margin: 0 2% 0 0;
+                width: 15%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
                   cursor: pointer; }
@@ -1866,8 +1866,8 @@ figure {
                 text-indent: 3%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 6% 0 0;
-                width: 17%; }
+                margin: 0 2% 0 0;
+                width: 18%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
                   cursor: pointer; }
@@ -2178,13 +2178,13 @@ figure {
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
                 height: 25px;
                 line-height: 25px;
-                font-size: 0.7em;
+                font-size: 0.65em;
                 width: 79%;
-                text-indent: 3%; }
+                text-indent: 2%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 3% 0 0;
-                width: 17%; }
+                margin: 0 2% 0 0;
+                width: 18%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
                   cursor: pointer; }
@@ -2488,8 +2488,7 @@ figure {
                 text-indent: 3%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 4% 0 0;
-                width: 18%; }
+                width: 19%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
                   cursor: pointer; }
@@ -2601,7 +2600,7 @@ figure {
     #Wrapper footer {
       height: 50px; }
       #Wrapper footer ul.footer_nav {
-        width: 85%; }
+        width: 90%; }
         #Wrapper footer ul.footer_nav li {
           width: 16.5%; }
           #Wrapper footer ul.footer_nav li a {
@@ -2761,7 +2760,7 @@ figure {
             margin-left: 10px; }
         #Wrapper #content #content_section .product_boxes,
         #Wrapper #content #content_section form #results {
-          height: auto;
+          height: 235px;
           /*Individual product box*/ }
           #Wrapper #content #content_section .product_boxes h1,
           #Wrapper #content #content_section form #results h1 {
@@ -2786,12 +2785,12 @@ figure {
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
                 height: 25px;
                 line-height: 25px;
-                font-size: 0.6em;
-                width: 76%;
-                text-indent: 3%; }
+                font-size: 0.55em;
+                width: 78%;
+                text-indent: 1%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 3% 0 0;
+                margin: 0 2% 0 0;
                 width: 19%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
@@ -2904,7 +2903,7 @@ figure {
     #Wrapper footer {
       height: 50px; }
       #Wrapper footer ul.footer_nav {
-        width: 85%; }
+        width: 95%; }
         #Wrapper footer ul.footer_nav li {
           width: 16.5%; }
           #Wrapper footer ul.footer_nav li a {
@@ -2913,13 +2912,13 @@ figure {
               color: #ea3411; } }
 @media only screen and (max-width: 667px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
       display: block;
       position: fixed;
       left: 93%;
       z-index: 4;
-      top: 32.2em;
+      top: 16.2em;
       width: 50px;
       height: 150px;
       background-color: #ffffff;
@@ -2940,7 +2939,7 @@ figure {
       display: block;
       position: fixed;
       top: 1em;
-      left: 81%;
+      left: 83%;
       z-index: 4;
       width: 100px;
       height: 50px;
@@ -2967,13 +2966,13 @@ figure {
     #Wrapper nav#main-nav {
       height: 30px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 33.5%; }
+        width: 25.5%; }
         #Wrapper nav#main-nav span#signin-box a {
           font-size: 0.8em; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
+        width: 96%;
         background: #000000;
         position: fixed;
         z-index: 4;
@@ -3186,10 +3185,13 @@ figure {
     #Wrapper footer ul.footer_nav {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
-        font-size: 0.7em; } }
+        font-size: 0.7em; }
+
+  p.copyr {
+    width: 90%; } }
 @media only screen and (max-width: 640px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper div#side-bar-toggle-btn {
       left: 92%; }
       #Wrapper div#side-bar-toggle-btn:hover {
@@ -3207,12 +3209,12 @@ figure {
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 33.5%; }
+        width: 27.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.4em; }
+        width: 96%;
+        top: 6.9em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -3315,7 +3317,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.7em;
+              font-size: 0.65em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -3392,7 +3394,7 @@ figure {
         font-size: 0.65em; } }
 @media only screen and (max-width: 600px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
       left: 92%; }
       #Wrapper button#side-bar-toggle-btn:hover {
@@ -3407,12 +3409,12 @@ figure {
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 33.5%; }
+        width: 28.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.4em; }
+        width: 96%;
+        top: 6.9em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -3593,9 +3595,9 @@ figure {
         font-size: 0.6em; } }
 @media only screen and (max-width: 568px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
-      left: 90%; }
+      left: 92%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
@@ -3604,18 +3606,18 @@ figure {
         background-color: #ea3411;
         cursor: pointer; }
     #Wrapper header {
-      height: 65px; }
+      height: 74px; }
       #Wrapper header figure#logo {
         width: 290px; }
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 39.5%; }
+        width: 30.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.7em; }
+        width: 96%;
+        top: 6.2em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -3722,12 +3724,12 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.6em;
-              width: 75%; }
+              font-size: 0.54em;
+              width: 79%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
               margin: 0 2% 0 0;
-              width: 22%; }
+              width: 17%; }
       #Wrapper #content #content_section div.product_boxes_longer {
         display: block;
         height: 170px;
@@ -3785,7 +3787,7 @@ figure {
     #Wrapper footer ul.footer_nav {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
-        font-size: 0.6em; } }
+        font-size: 0.55em; } }
 @media only screen and (max-width: 480px) {
   #Wrapper {
     width: 98%; }
@@ -3794,7 +3796,8 @@ figure {
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 78%;
+      left: 83%;
+      width: 16%;
       top: 0.5em; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
@@ -3807,12 +3810,12 @@ figure {
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 47.5%; }
+        width: 35.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.7em; }
+        width: 96%;
+        top: 6.1em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -3830,13 +3833,13 @@ figure {
           display: none; }
     #Wrapper #searchbar input[type="submit"] {
       width: 10%;
-      font-size: 1em; }
+      font-size: 0.9em; }
     #Wrapper #searchbar #searcher2 label {
-      font-size: 0.7em;
+      font-size: 0.65em;
       width: 26%; }
     #Wrapper #searchbar #searcher2 select {
       width: 15%;
-      font-size: 0.75em; }
+      font-size: 0.7em; }
     #Wrapper #content h1 {
       font-size: 1.35em; }
     #Wrapper #content aside.text_boxa {
@@ -3900,7 +3903,7 @@ figure {
           width: 40%;
           font-size: 0.9em; }
         #Wrapper #content #content_section #pag_search label {
-          font-size: 0.7em;
+          font-size: 0.65em;
           width: 50%; }
       #Wrapper #content #content_section #pagination {
         width: 49%; }
@@ -3938,7 +3941,7 @@ figure {
         #Wrapper #content #content_section .product_boxes figure.product_box,
         #Wrapper #content #content_section form #results figure.product_box {
           height: auto;
-          width: 37%;
+          width: 38%;
           float: none;
           margin: 22px; }
           #Wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
@@ -3953,7 +3956,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.75em;
+              font-size: 0.7em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -4031,7 +4034,8 @@ figure {
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 74%; }
+      left: 83%;
+      width: 16%; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -4048,8 +4052,8 @@ figure {
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.7em; }
+        width: 96%;
+        top: 6.1em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4070,9 +4074,9 @@ figure {
       font-size: 1em; }
     #Wrapper #searchbar #searcher2 label {
       font-size: 0.65em;
-      width: 26%; }
+      width: 28%; }
     #Wrapper #searchbar #searcher2 select {
-      width: 15%;
+      width: 14%;
       font-size: 0.7em; }
     #Wrapper #content h1 {
       font-size: 1.35em; }
@@ -4143,7 +4147,7 @@ figure {
           line-height: 30px; }
         #Wrapper #content #content_section .product_boxes figure.product_box,
         #Wrapper #content #content_section form #results figure.product_box {
-          width: 41%;
+          width: 40%;
           float: none;
           margin: 16px; }
           #Wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
@@ -4158,7 +4162,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.7em;
+              font-size: 0.65em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -4238,8 +4242,9 @@ figure {
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 81%;
-      width: 16%; }
+      left: 83%;
+      width: 16%;
+      font-size: 0.9em; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
@@ -4250,12 +4255,12 @@ figure {
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 50.5%; }
+        width: 41.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.7em; }
+        width: 96%;
+        top: 5.7em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4361,7 +4366,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.75em;
+              font-size: 0.7em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -4452,14 +4457,14 @@ figure {
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 55.5%; }
+        width: 43.5%; }
         #Wrapper nav#main-nav span#signin-box a {
           font-size: 0.7em; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.3em; }
+        width: 96%;
+        top: 6em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4644,23 +4649,24 @@ figure {
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 82%; }
+      left: 82%;
+      font-size: 0.8em; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
     #Wrapper header {
       height: 61px; }
       #Wrapper header figure#logo {
-        width: 205px; }
+        width: 233px; }
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 68.5%; }
+        width: 47.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7em; }
+        width: 96%;
+        top: 5.7em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4769,7 +4775,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.8em;
+              font-size: 0.7em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
