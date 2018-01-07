@@ -25,7 +25,7 @@ and open the template in the editor.
     Created on : 23-Jun-2017, 20:13:07
     Author     : Ray
 */
-/*Eric Meyer’s Reset Reloaded*/
+/*Eric MeyerÔÇÖs Reset Reloaded*/
 html,
 body,
 div,
@@ -442,12 +442,6 @@ figure {
           font-family: "Old Standard TT", arial, helvetica, sans-serif;
           font-size: 0.9em;
           line-height: 1.8em; }
-      #Wrapper #content #summary {
-        width: 80%;
-        margin: 0 auto;
-        display: block;
-        height: 50px;
-        line-height: 1.5em; }
       #Wrapper #content .myform {
         width: 58%;
         margin-left: 5%;
@@ -464,9 +458,9 @@ figure {
           display: block; }
           #Wrapper #content #stylized #form ul li,
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
-            height: auto;
+            height: 50px;
             display: block;
-            margin-bottom: 1em;
+            margin: 0;
             padding: 0; }
             #Wrapper #content #stylized #form ul li label,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) label {
@@ -483,7 +477,7 @@ figure {
               display: inline-block; }
             #Wrapper #content #stylized #form ul li textarea,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) textarea {
-              width: 77%;
+              width: 75%;
               margin: 0;
               padding: 0;
               display: inline-block; }
@@ -514,35 +508,7 @@ figure {
                 cursor: pointer;
                 margin-left: 15%; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
-            height: auto; }
-            #Wrapper #content #stylized #form ul li:nth-of-type(3) label.error,
-            #Wrapper #content #stylized #form ul li:nth-of-type(3) label.notice,
-            #Wrapper #content #stylized #form ul li:nth-of-type(3) label.success {
-              width: 50%;
-              float: none;
-              margin: 0.5em auto;
-              display: block;
-              border: 1px solid #3b3b3b; }
-        #Wrapper #content #stylized #form label.error,
-        #Wrapper #content #stylized #form label.notice,
-        #Wrapper #content #stylized #form label.success {
-          width: 50%;
-          float: none;
-          margin: 0.5em auto;
-          display: block;
-          border: 1px solid #3b3b3b; }
-        #Wrapper #content #stylized #form label.error {
-          background-color: #f9f9f9;
-          color: #000;
-          border-color: red; }
-        #Wrapper #content #stylized #form .notice {
-          background: #FFF6BF;
-          color: #514721;
-          border-color: #FFD324; }
-        #Wrapper #content #stylized #form .success {
-          background: #E6EFC2;
-          color: #264409;
-          border-color: #C6D880; }
+            height: 265px; }
       #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
@@ -1105,7 +1071,7 @@ figure {
           display: block; }
           #Wrapper #content #stylized #form ul li,
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
-            height: auto; }
+            height: 50px; }
             #Wrapper #content #stylized #form ul li label,
             #Wrapper #content #stylized #form ul li:nth-of-type(3) label {
               width: 15%;
@@ -1132,15 +1098,7 @@ figure {
               #Wrapper #content #stylized #form ul li:nth-of-type(3) #submit:hover {
                 cursor: pointer; }
           #Wrapper #content #stylized #form ul li:nth-of-type(3) {
-            height: auto; }
-            #Wrapper #content #stylized #form ul li:nth-of-type(3) label.error,
-            #Wrapper #content #stylized #form ul li:nth-of-type(3) label.notice,
-            #Wrapper #content #stylized #form ul li:nth-of-type(3) label.success {
-              font-size: 0.9em; }
-        #Wrapper #content #stylized #form label.error,
-        #Wrapper #content #stylized #form label.notice,
-        #Wrapper #content #stylized #form label.success {
-          font-size: 0.9em; }
+            height: 265px; }
       #Wrapper #content main#context {
         width: 55%;
         margin: 0 2% 2% 3%;
