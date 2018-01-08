@@ -242,7 +242,8 @@ figure {
   /*Wrapper*/
   #Wrapper {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    margin: 1% auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 55%;
     padding: 0 1%;
     display: block;
@@ -270,7 +271,7 @@ figure {
       padding: 0;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 20%;
+        width: 18%;
         display: inline-block;
         float: right;
         height: 20px; }
@@ -318,7 +319,7 @@ figure {
             -o-transition: all ease 0.2s;
             transition: all ease 0.2s;
             text-transform: uppercase;
-            font-size: 1em;
+            font-size: 0.9em;
             letter-spacing: -0.04em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               color: #ea3411;
@@ -377,7 +378,7 @@ figure {
         height: 30px;
         font-family: "Old Standard TT", arial, helvetica, sans-serif; }
         #Wrapper #searchbar #searcher2 label {
-          font-size: 1.2em;
+          font-size: 1.1em;
           height: 30px;
           width: 23%;
           line-height: 30px;
@@ -547,18 +548,17 @@ figure {
             font-family: "Old Standard TT", arial, helvetica, sans-serif;
             position: absolute;
             z-index: 2;
-            width: 40%;
-            margin: 1em 0 0 0.5em; }
+            width: 41%; }
             #Wrapper #content #content_section #bannerbox hgroup h1 {
               font-family: "Old Standard TT", arial, helvetica, sans-serif;
               font-size: 2.35rem;
               height: 40px;
               line-height: 40px;
-              width: 100%;
-              text-indent: 0;
+              width: auto;
               font-weight: bold;
               color: #7a7777;
-              letter-spacing: -0.08em; }
+              letter-spacing: -0.08em;
+              text-indent: 0.25em; }
             #Wrapper #content #content_section #bannerbox hgroup h2 {
               font-size: 1.3rem;
               color: #333333;
@@ -567,9 +567,11 @@ figure {
               text-transform: uppercase;
               height: 30px;
               line-height: 30px;
-              letter-spacing: -0.08em; }
+              letter-spacing: -0.08em;
+              width: auto;
+              text-indent: 0.5em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 65%;
+            width: 62%;
             margin: 0;
             padding: 0;
             display: inline-block;
@@ -769,7 +771,7 @@ figure {
           padding: 0; }
           #Wrapper #content #content_section #pag_search select {
             font-family: "Old Standard TT", arial, helvetica, sans-serif;
-            width: 60%;
+            width: 50%;
             display: inline-block;
             height: 30px;
             margin: 0 1% 0 0;
@@ -793,7 +795,7 @@ figure {
               cursor: pointer; }
         #Wrapper #content #content_section #pagination {
           height: 30px;
-          width: 30%;
+          width: 33%;
           display: block;
           margin: 0 0 2% 0;
           float: right; }
@@ -855,7 +857,7 @@ figure {
             margin: auto;
             font-family: "Old Standard TT", arial, helvetica, sans-serif; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.75em;
+              font-size: 1.5em;
               background: none;
               color: #ffffff;
               width: 100%;
@@ -877,7 +879,7 @@ figure {
               font-family: "Old Standard TT", arial, helvetica, sans-serif;
               width: 50%;
               height: 35px;
-              font-size: 1.3em;
+              font-size: 1.1em;
               line-height: 35px;
               margin: auto;
               background-color: #ea3411;
@@ -960,6 +962,15 @@ figure {
     font-size: 0.6em;
     width: 50%;
     letter-spacing: 0.1em; } }
+@media only screen and (max-width: 1799px) {
+  #Wrapper {
+    width: 57%; } }
+@media only screen and (max-width: 1630px) {
+  #Wrapper {
+    width: 63%; } }
+@media only screen and (max-width: 1500px) {
+  #Wrapper {
+    width: 68%; } }
 @media only screen and (max-width: 1440px) {
   /*Wrapper*/
   #Wrapper {
@@ -986,9 +997,9 @@ figure {
       height: 40px;
       margin: 0 0 1% 0; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 22%; }
+        width: 18%; }
         #Wrapper nav#main-nav span#signin-box a {
-          font-size: 0.95em; }
+          font-size: 0.90em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -999,7 +1010,7 @@ figure {
         #Wrapper nav#main-nav ul#inner-nav li {
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            font-size: 0.95em; }
+            font-size: 0.9em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -1026,11 +1037,10 @@ figure {
         padding: 0.8%;
         height: 30px; }
         #Wrapper #searchbar #searcher2 label {
-          font-size: 1.2em;
+          font-size: 1.1em;
           height: 30px;
           width: 23%;
-          line-height: 30px;
-          text-indent: 1%; }
+          line-height: 30px; }
         #Wrapper #searchbar #searcher2 select {
           width: 16.5%;
           font-size: 1em;
@@ -1110,8 +1120,7 @@ figure {
           width: 100%;
           margin: 0 0 1.5em 0; }
           #Wrapper #content #content_section #bannerbox hgroup {
-            width: 40%;
-            margin: 1em 0 0 0.5em; }
+            width: 40%; }
             #Wrapper #content #content_section #bannerbox hgroup h1 {
               font-size: 2.35rem;
               letter-spacing: -0.08em; }
@@ -1119,7 +1128,7 @@ figure {
               font-size: 1.3rem;
               letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 63%; }
+            width: 60%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
             margin: 15% 3% 0 1%;
             width: 23%;
@@ -1171,7 +1180,7 @@ figure {
                 text-indent: 3%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 4% 0 0;
+                margin: 0 2% 0 0;
                 width: 14%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
@@ -1235,7 +1244,7 @@ figure {
               cursor: pointer; }
         #Wrapper #content #content_section #pagination {
           height: 30px;
-          width: 30%;
+          width: 33%;
           display: block;
           margin: 0 0 2% 0;
           float: right; }
@@ -1281,7 +1290,7 @@ figure {
               font-size: 1em; }
             #Wrapper #content #left_bar #searchbox #searcher input.find {
               width: 55%;
-              font-size: 1.3em;
+              font-size: 1.1em;
               outline: none; }
               #Wrapper #content #left_bar #searchbox #searcher input.find:hover {
                 outline: none;
@@ -1350,7 +1359,7 @@ figure {
       #Wrapper nav#main-nav span#signin-box {
         width: 22%; }
         #Wrapper nav#main-nav span#signin-box a {
-          font-size: 0.90em; }
+          font-size: 0.80em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -1361,7 +1370,7 @@ figure {
         #Wrapper nav#main-nav ul#inner-nav li {
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            font-size: 0.9em; }
+            font-size: 0.85em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -1388,11 +1397,10 @@ figure {
         padding: 0.8%;
         height: 30px; }
         #Wrapper #searchbar #searcher2 label {
-          font-size: 1.2em;
+          font-size: 1.05em;
           height: 30px;
           width: 23%;
-          line-height: 30px;
-          text-indent: 1%; }
+          line-height: 30px; }
         #Wrapper #searchbar #searcher2 select {
           width: 16.5%;
           font-size: 1em;
@@ -1468,24 +1476,22 @@ figure {
         #Wrapper #content #content_section h1 {
           font-size: 1.45em; }
         #Wrapper #content #content_section #bannerbox {
-          height: 365px; }
+          height: 340px; }
           #Wrapper #content #content_section #bannerbox hgroup {
-            width: 40%;
-            margin: 1em 0 0 0.5em; }
+            width: 48%; }
             #Wrapper #content #content_section #bannerbox hgroup h1 {
-              font-size: 2.25rem;
-              letter-spacing: -0.08em; }
+              font-size: 2.3rem; }
             #Wrapper #content #content_section #bannerbox hgroup h2 {
-              font-size: 1.2rem;
-              letter-spacing: -0.08em; }
+              font-size: 1.2rem; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 62%; }
+            width: 59%;
+            margin-top: 1em; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
             width: 27%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
-              font-size: 1em; }
+              font-size: 0.9em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-                font-size: 1.05em; }
+                font-size: 1em; }
           #Wrapper #content #content_section #bannerbox #btn_div {
             height: 150px;
             width: 100px;
@@ -1517,13 +1523,13 @@ figure {
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
                 height: 25px;
                 line-height: 25px;
-                font-size: 0.75em;
+                font-size: 0.7em;
                 width: 82%;
                 text-indent: 3%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 6% 0 0;
-                width: 12%; }
+                margin: 0 2% 0 0;
+                width: 15%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
                   cursor: pointer; }
@@ -1566,18 +1572,18 @@ figure {
           width: 45%;
           margin: 0 0 2% 0; }
           #Wrapper #content #content_section #pag_search select {
-            width: 60%;
+            width: 50%;
             height: 30px;
             margin: 0 1% 0 0;
             line-height: 30px;
             font-size: 0.85em; }
           #Wrapper #content #content_section #pag_search label {
-            width: 39%;
+            width: 43%;
             font-size: 0.8em; }
             #Wrapper #content #content_section #pag_search label:hover {
               cursor: pointer; }
         #Wrapper #content #content_section #pagination {
-          width: 30%;
+          width: 37%;
           display: block;
           margin: 0 0 2% 0; }
           #Wrapper #content #content_section #pagination a {
@@ -1611,13 +1617,13 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.45em; }
+              font-size: 1.4em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
               font-size: 1em; }
             #Wrapper #content #left_bar #searchbox #searcher input.find {
               width: 55%;
-              font-size: 1.3em;
+              font-size: 1.1em;
               outline: none; }
               #Wrapper #content #left_bar #searchbox #searcher input.find:hover {
                 outline: none;
@@ -1702,7 +1708,7 @@ figure {
         #Wrapper nav#main-nav ul#inner-nav li {
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            font-size: 0.9em; }
+            font-size: 0.8em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -1729,11 +1735,10 @@ figure {
         padding: 0.8%;
         height: 30px; }
         #Wrapper #searchbar #searcher2 label {
-          font-size: 1.1em;
+          font-size: 1em;
           height: 30px;
           width: 23%;
-          line-height: 30px;
-          text-indent: 1%; }
+          line-height: 30px; }
         #Wrapper #searchbar #searcher2 select {
           width: 16.5%;
           font-size: 1em;
@@ -1808,18 +1813,17 @@ figure {
         #Wrapper #content #content_section h1 {
           font-size: 1.4em; }
         #Wrapper #content #content_section #bannerbox {
-          height: 360px; }
+          height: 340px; }
           #Wrapper #content #content_section #bannerbox hgroup {
-            width: 50%;
-            margin: 1em 0 0 0.5em; }
+            width: 60%; }
             #Wrapper #content #content_section #bannerbox hgroup h1 {
-              font-size: 2.25rem;
+              font-size: 2.2rem;
               letter-spacing: -0.08em; }
             #Wrapper #content #content_section #bannerbox hgroup h2 {
               font-size: 1.2rem;
               letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 68%; }
+            width: 62%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
             width: 27%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
@@ -1862,8 +1866,8 @@ figure {
                 text-indent: 3%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 6% 0 0;
-                width: 17%; }
+                margin: 0 2% 0 0;
+                width: 18%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
                   cursor: pointer; }
@@ -1907,16 +1911,15 @@ figure {
           width: 45%;
           margin: 0 0 2% 0; }
           #Wrapper #content #content_section #pag_search select {
-            width: 60%;
+            width: 50%;
             font-size: 0.9em; }
           #Wrapper #content #content_section #pag_search label {
-            width: 39%;
+            width: 43%;
             font-size: 0.75em; }
             #Wrapper #content #content_section #pag_search label:hover {
               cursor: pointer; }
         #Wrapper #content #content_section #pagination {
-          width: 32%;
-          margin: 0 0 2% 0; }
+          width: 36%; }
           #Wrapper #content #content_section #pagination a {
             width: 32%;
             font-size: 1em;
@@ -1948,13 +1951,13 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.4em; }
+              font-size: 1.35em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
-              font-size: 1em; }
+              font-size: 0.9em; }
             #Wrapper #content #left_bar #searchbox #searcher input.find {
               width: 55%;
-              font-size: 1.3em;
+              font-size: 1.1em;
               outline: none; }
               #Wrapper #content #left_bar #searchbox #searcher input.find:hover {
                 outline: none;
@@ -2015,7 +2018,7 @@ figure {
       #Wrapper nav#main-nav span#signin-box {
         width: 22%; }
         #Wrapper nav#main-nav span#signin-box a {
-          font-size: 0.75em; }
+          font-size: 0.7em; }
           #Wrapper nav#main-nav span#signin-box a:hover {
             font-weight: bold; }
       #Wrapper nav#main-nav ul#mobile-nav {
@@ -2026,7 +2029,8 @@ figure {
         #Wrapper nav#main-nav ul#inner-nav li {
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            font-size: 0.9em; }
+            padding: 0 0.5em;
+            font-size: 0.8em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -2050,9 +2054,8 @@ figure {
         margin: 0;
         padding: 0.8%; }
         #Wrapper #searchbar #searcher2 label {
-          font-size: 1em;
-          width: 23%;
-          text-indent: 1%; }
+          font-size: 0.9em;
+          width: 23%; }
         #Wrapper #searchbar #searcher2 select {
           width: 16.5%;
           font-size: 1em;
@@ -2128,22 +2131,22 @@ figure {
         #Wrapper #content #content_section #bannerbox {
           height: 330px; }
           #Wrapper #content #content_section #bannerbox hgroup {
-            width: 50%;
-            margin: 1em 0 0 0.5em; }
+            width: 60%; }
             #Wrapper #content #content_section #bannerbox hgroup h1 {
-              font-size: 2.25rem;
+              font-size: 2.1rem;
               letter-spacing: -0.08em; }
             #Wrapper #content #content_section #bannerbox hgroup h2 {
-              font-size: 1.2rem;
+              font-size: 1.05rem;
               letter-spacing: -0.08em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            width: 61%; }
+            width: 58%;
+            margin-top: 2em; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
             width: 27%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
-              font-size: 0.9em; }
+              font-size: 0.85em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-                font-size: 0.95em; }
+                font-size: 0.9em; }
           #Wrapper #content #content_section #bannerbox #btn_div {
             height: 150px;
             width: 100px;
@@ -2175,13 +2178,13 @@ figure {
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
                 height: 25px;
                 line-height: 25px;
-                font-size: 0.7em;
+                font-size: 0.65em;
                 width: 79%;
-                text-indent: 3%; }
+                text-indent: 2%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 3% 0 0;
-                width: 17%; }
+                margin: 0 2% 0 0;
+                width: 18%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
                   cursor: pointer; }
@@ -2217,18 +2220,17 @@ figure {
                   #Wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer:hover {
                     cursor: pointer; }
         #Wrapper #content #content_section #pag_search {
-          width: 45%;
-          margin: 0 0 2% 0; }
+          width: 45%; }
           #Wrapper #content #content_section #pag_search select {
-            width: 60%;
+            width: 50%;
             font-size: 0.9em; }
           #Wrapper #content #content_section #pag_search label {
-            width: 39%;
-            font-size: 0.65em; }
+            width: 45%;
+            font-size: 0.7em; }
             #Wrapper #content #content_section #pag_search label:hover {
               cursor: pointer; }
         #Wrapper #content #content_section #pagination {
-          width: 34%;
+          width: 41%;
           margin: 0 0 2% 0; }
           #Wrapper #content #content_section #pagination a {
             width: 32%;
@@ -2259,13 +2261,13 @@ figure {
             height: 320px;
             margin-bottom: 1%; }
             #Wrapper #content #left_bar #searchbox #searcher h1 {
-              font-size: 1.35em; }
+              font-size: 1.3em; }
             #Wrapper #content #left_bar #searchbox #searcher select {
               width: 80%;
               font-size: 0.9em; }
             #Wrapper #content #left_bar #searchbox #searcher input.find {
               width: 55%;
-              font-size: 1.2em;
+              font-size: 1.1em;
               outline: none; }
               #Wrapper #content #left_bar #searchbox #searcher input.find:hover {
                 outline: none;
@@ -2335,7 +2337,8 @@ figure {
         #Wrapper nav#main-nav ul#inner-nav li {
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            font-size: 0.8em; }
+            padding: 0 0.5em;
+            font-size: 0.7em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -2359,12 +2362,12 @@ figure {
         margin: 0;
         padding: 0.8%; }
         #Wrapper #searchbar #searcher2 label {
-          font-size: 0.95em;
+          font-size: 0.9em;
           width: 22%;
           text-indent: 1%; }
         #Wrapper #searchbar #searcher2 select {
           width: 16.5%;
-          font-size: 1em;
+          font-size: 0.9em;
           height: 30px; }
     #Wrapper #content {
       margin: 1% 0;
@@ -2436,23 +2439,19 @@ figure {
         #Wrapper #content #content_section #bannerbox {
           height: 310px; }
           #Wrapper #content #content_section #bannerbox hgroup {
-            width: 55%;
-            margin: 0 0 0 0.5em; }
+            width: 55%; }
             #Wrapper #content #content_section #bannerbox hgroup h1 {
-              font-size: 1.8rem;
-              letter-spacing: -0.08em; }
+              font-size: 1.9em; }
             #Wrapper #content #content_section #bannerbox hgroup h2 {
-              font-size: 1rem;
-              letter-spacing: -0.08em; }
+              font-size: 1em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            margin-top: 0.5em;
-            width: 69%; }
+            width: 65%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            width: 27%; }
+            width: 23%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
-              font-size: 0.9em; }
+              font-size: 0.75em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-                font-size: 0.95em; }
+                font-size: 0.8em; }
           #Wrapper #content #content_section #bannerbox #btn_div {
             height: 150px;
             width: 100px;
@@ -2489,8 +2488,7 @@ figure {
                 text-indent: 3%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 4% 0 0;
-                width: 18%; }
+                width: 19%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
                   cursor: pointer; }
@@ -2529,16 +2527,15 @@ figure {
           width: 49%;
           margin: 0 0 2% 0; }
           #Wrapper #content #content_section #pag_search select {
-            width: 60%;
+            width: 50%;
             font-size: 0.85em; }
           #Wrapper #content #content_section #pag_search label {
-            width: 39%;
-            font-size: 0.7em; }
+            width: 43%;
+            font-size: 0.65em; }
             #Wrapper #content #content_section #pag_search label:hover {
               cursor: pointer; }
         #Wrapper #content #content_section #pagination {
-          width: 41%;
-          margin: 0 0 2% 0; }
+          width: 43%; }
           #Wrapper #content #content_section #pagination a {
             width: 32%;
             font-size: 0.9em; }
@@ -2592,7 +2589,7 @@ figure {
             #Wrapper #content #left_bar #sec_nav #accordion ul {
               list-style: none; }
               #Wrapper #content #left_bar #sec_nav #accordion ul li {
-                font-size: 0.75em; }
+                font-size: 0.7em; }
                 #Wrapper #content #left_bar #sec_nav #accordion ul li:hover {
                   font-weight: bold;
                   letter-spacing: 0.2em;
@@ -2603,7 +2600,7 @@ figure {
     #Wrapper footer {
       height: 50px; }
       #Wrapper footer ul.footer_nav {
-        width: 85%; }
+        width: 90%; }
         #Wrapper footer ul.footer_nav li {
           width: 16.5%; }
           #Wrapper footer ul.footer_nav li a {
@@ -2644,7 +2641,7 @@ figure {
         #Wrapper nav#main-nav ul#inner-nav li {
           margin-right: 0.2em; }
           #Wrapper nav#main-nav ul#inner-nav li a {
-            font-size: 0.75em; }
+            font-size: 0.7em; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
               font-weight: bold; }
             #Wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -2744,30 +2741,26 @@ figure {
         #Wrapper #content #content_section #bannerbox {
           height: 310px; }
           #Wrapper #content #content_section #bannerbox hgroup {
-            width: 65%;
-            margin: 0 0 0 0.5em; }
+            width: 71%; }
             #Wrapper #content #content_section #bannerbox hgroup h1 {
-              font-size: 1.8rem;
-              letter-spacing: -0.08em; }
+              font-size: 1.85em; }
             #Wrapper #content #content_section #bannerbox hgroup h2 {
-              font-size: 1rem;
-              letter-spacing: -0.08em; }
+              font-size: 0.9em; }
           #Wrapper #content #content_section #bannerbox #bannerboximg {
-            margin-top: 0.5em;
-            width: 69%; }
+            width: 68%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 {
-            width: 27%; }
+            width: 21%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a {
-              font-size: 0.85em; }
+              font-size: 0.7em; }
               #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-                font-size: 0.9em; }
+                font-size: 0.75em; }
           #Wrapper #content #content_section #bannerbox #btn_div {
             height: 150px;
             width: 100px;
             margin-left: 10px; }
         #Wrapper #content #content_section .product_boxes,
         #Wrapper #content #content_section form #results {
-          height: auto;
+          height: 235px;
           /*Individual product box*/ }
           #Wrapper #content #content_section .product_boxes h1,
           #Wrapper #content #content_section form #results h1 {
@@ -2792,12 +2785,12 @@ figure {
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
                 height: 25px;
                 line-height: 25px;
-                font-size: 0.6em;
-                width: 76%;
-                text-indent: 3%; }
+                font-size: 0.55em;
+                width: 78%;
+                text-indent: 1%; }
               #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
               #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-                margin: 0 3% 0 0;
+                margin: 0 2% 0 0;
                 width: 19%; }
                 #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
                 #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
@@ -2837,16 +2830,15 @@ figure {
           width: 49%;
           margin: 0 0 2% 0; }
           #Wrapper #content #content_section #pag_search select {
-            width: 60%;
-            font-size: 0.85em; }
+            width: 50%;
+            font-size: 0.8em; }
           #Wrapper #content #content_section #pag_search label {
-            width: 39%;
-            font-size: 0.75em; }
+            width: 45%;
+            font-size: 0.65em; }
             #Wrapper #content #content_section #pag_search label:hover {
               cursor: pointer; }
         #Wrapper #content #content_section #pagination {
-          width: 41%;
-          margin: 0 0 2% 0; }
+          width: 50%; }
           #Wrapper #content #content_section #pagination a {
             width: 32%;
             font-size: 0.9em; }
@@ -2900,7 +2892,7 @@ figure {
             #Wrapper #content #left_bar #sec_nav #accordion ul {
               list-style: none; }
               #Wrapper #content #left_bar #sec_nav #accordion ul li {
-                font-size: 0.75em; }
+                font-size: 0.65em; }
                 #Wrapper #content #left_bar #sec_nav #accordion ul li:hover {
                   font-weight: bold;
                   letter-spacing: 0.2em;
@@ -2911,7 +2903,7 @@ figure {
     #Wrapper footer {
       height: 50px; }
       #Wrapper footer ul.footer_nav {
-        width: 85%; }
+        width: 95%; }
         #Wrapper footer ul.footer_nav li {
           width: 16.5%; }
           #Wrapper footer ul.footer_nav li a {
@@ -2920,13 +2912,13 @@ figure {
               color: #ea3411; } }
 @media only screen and (max-width: 667px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
       display: block;
       position: fixed;
       left: 93%;
       z-index: 4;
-      top: 12.2em;
+      top: 16.2em;
       width: 50px;
       height: 150px;
       background-color: #ffffff;
@@ -2947,11 +2939,11 @@ figure {
       display: block;
       position: fixed;
       top: 1em;
-      left: 81%;
+      left: 83%;
       z-index: 4;
       width: 100px;
       height: 50px;
-      line-height: 52px;
+      line-height: 50px;
       text-align: center;
       background-color: #ffffff;
       -webkit-box-sizing: border-box;
@@ -2964,26 +2956,29 @@ figure {
         background-color: #000000;
         cursor: pointer;
         border: 2px solid #ed735c;
-        color: #ffffff; }
+        color: #ffffff;
+        border: none; }
     #Wrapper header {
       height: 74px;
       width: 100%; }
       #Wrapper header figure#logo {
-        width: 300px; }
+        width: 280px; }
     #Wrapper nav#main-nav {
       height: 30px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 30.5%; }
+        width: 25.5%; }
+        #Wrapper nav#main-nav span#signin-box a {
+          font-size: 0.8em; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
+        width: 96%;
         background: #000000;
         position: fixed;
         z-index: 4;
         border: 1px solid #000000;
         height: auto;
-        top: 8.4em;
+        top: 7.4em;
         padding: 1%; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           width: 100%;
@@ -2992,7 +2987,7 @@ figure {
           float: none;
           border-bottom: 2px solid #000000; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
-            font-size: 1.2em;
+            font-size: 1.1em;
             display: block;
             text-align: center;
             line-height: 50px;
@@ -3001,8 +2996,8 @@ figure {
             float: none;
             text-align: center;
             color: #000000;
-            background-color: #ffffff; }
-            #Wrapper nav#main-nav ul#mobile-nav li a:hover, #Wrapper nav#main-nav ul#mobile-nav li a:visited {
+            background-color: #ea3411; }
+            #Wrapper nav#main-nav ul#mobile-nav li a:hover {
               text-decoration: none;
               display: block;
               -moz-border-radius-topleft: none;
@@ -3014,7 +3009,10 @@ figure {
               box-shadow: none;
               background-color: #000000;
               color: #ffffff;
-              border-bottom: 2px solid #ffffff; }
+              border-bottom: none; }
+            #Wrapper nav#main-nav ul#mobile-nav li a:visited {
+              background-color: #ffffff;
+              color: #000000; }
         #Wrapper nav#main-nav ul#mobile-nav li.selected a::hover {
           background-color: rgba(255, 255, 255, 0.8); }
         #Wrapper nav#main-nav ul#mobile-nav li.selected a:link {
@@ -3074,17 +3072,14 @@ figure {
         height: 335px;
         width: 99%; }
         #Wrapper #content #content_section #bannerbox hgroup {
-          width: 90%;
-          margin: 0 0 0 0.5em; }
+          width: 90%; }
           #Wrapper #content #content_section #bannerbox hgroup h1 {
-            font-size: 2.25rem;
-            letter-spacing: -0.08em; }
+            font-size: 2.2rem; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
-            font-size: 1.2rem;
-            letter-spacing: -0.08em; }
+            font-size: 1.05rem; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 420px;
-          margin-top: 4%; }
+          margin-top: 2em;
+          width: 68%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
           margin: 16% 0% 0 1%;
           width: 27%; }
@@ -3167,14 +3162,13 @@ figure {
         max-height: 200px; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 4;
+      z-index: 100;
       left: -205px;
-      width: 30%;
-      display: none;
-      height: 800px;
+      width: 191px;
+      height: auto;
       background-color: #ffffff; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
-        font-size: 0.65em; }
+        font-size: 0.75em; }
       #Wrapper #content #left_bar #searchbox {
         width: 98%; }
         #Wrapper #content #left_bar #searchbox #searcher {
@@ -3187,14 +3181,17 @@ figure {
           #Wrapper #content #left_bar #searchbox #searcher .find {
             font-size: 1.2em; }
           #Wrapper #content #left_bar #searchbox #searcher label {
-            font-size: 0.9em; }
+            font-size: 0.85em; }
     #Wrapper footer ul.footer_nav {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
-        font-size: 0.7em; } }
+        font-size: 0.7em; }
+
+  p.copyr {
+    width: 90%; } }
 @media only screen and (max-width: 640px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper div#side-bar-toggle-btn {
       left: 92%; }
       #Wrapper div#side-bar-toggle-btn:hover {
@@ -3208,24 +3205,24 @@ figure {
     #Wrapper header {
       height: 74px; }
       #Wrapper header figure#logo {
-        width: 300px; }
+        width: 280px; }
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 30.5%; }
+        width: 27.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 8.4em; }
+        width: 96%;
+        top: 6.9em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
-            font-size: 1.2em; }
+            font-size: 1.05em; }
             #Wrapper nav#main-nav ul#mobile-nav li a:hover, #Wrapper nav#main-nav ul#mobile-nav li a:visited {
               text-decoration: none;
               display: block; }
-        #Wrapper nav#main-nav ul#mobile-nav li.selected a::hover {
+        #Wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
           background-color: rgba(255, 255, 255, 0.8); }
         #Wrapper nav#main-nav ul#mobile-nav li.selected a:link {
           background-color: white; }
@@ -3274,29 +3271,25 @@ figure {
           width: 50%;
           font-size: 0.9em; }
         #Wrapper #content #content_section #pag_search label {
-          font-size: 0.7em; }
+          font-size: 0.65em; }
       #Wrapper #content #content_section #pagination {
         width: 44%; }
       #Wrapper #content #content_section #bannerbox {
         height: 335px; }
         #Wrapper #content #content_section #bannerbox hgroup {
-          width: 90%;
-          margin: 0 0 0 0.5em; }
+          width: 90%; }
           #Wrapper #content #content_section #bannerbox hgroup h1 {
-            font-size: 2rem;
-            letter-spacing: -0.08em; }
+            font-size: 2.1em; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
-            font-size: 1.1rem;
-            letter-spacing: -0.08em; }
+            font-size: 1em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 68%;
-          margin: 1% 0 0 0; }
+          width: 68%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
           width: 27%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
-            font-size: 0.9em; }
+            font-size: 0.85em; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-              font-size: 0.95em; }
+              font-size: 0.9em; }
       #Wrapper #content #content_section .product_boxes,
       #Wrapper #content #content_section form #results {
         height: auto;
@@ -3324,7 +3317,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.7em;
+              font-size: 0.65em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -3367,13 +3360,21 @@ figure {
                 width: 20%; }
       #Wrapper #content #content_section .product_boxes_longer .product-box_longer {
         max-height: 200px; }
+      #Wrapper #content #content_section .pag_buttons {
+        margin: 2% 0; }
+        #Wrapper #content #content_section .pag_buttons input[type="submit"],
+        #Wrapper #content #content_section .pag_buttons input[type="reset"] {
+          width: 25%;
+          font-size: 1.1em; }
+          #Wrapper #content #content_section .pag_buttons input[type="submit"]:hover,
+          #Wrapper #content #content_section .pag_buttons input[type="reset"]:hover {
+            background-color: #ffffff; }
     #Wrapper #content #left_bar {
       position: absolute;
-      left: -12em;
-      width: 30%;
-      height: 800px; }
+      width: 191px;
+      height: auto; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
-        font-size: 0.65em; }
+        font-size: 0.75em; }
       #Wrapper #content #left_bar #searchbox {
         width: 98%; }
         #Wrapper #content #left_bar #searchbox #searcher {
@@ -3393,7 +3394,7 @@ figure {
         font-size: 0.65em; } }
 @media only screen and (max-width: 600px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
       left: 92%; }
       #Wrapper button#side-bar-toggle-btn:hover {
@@ -3408,16 +3409,16 @@ figure {
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 30.5%; }
+        width: 28.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 8.4em; }
+        width: 96%;
+        top: 6.9em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
-            font-size: 1.2em; }
+            font-size: 1.05em; }
             #Wrapper nav#main-nav ul#mobile-nav li a:hover, #Wrapper nav#main-nav ul#mobile-nav li a:visited {
               text-decoration: none;
               display: block; }
@@ -3437,7 +3438,7 @@ figure {
       width: 20%; }
     #Wrapper #searchbar #searcher2 select {
       width: 16.8%;
-      font-size: 0.9em; }
+      font-size: 0.8em; }
     #Wrapper #content h1 {
       font-size: 1.2em; }
     #Wrapper #content aside.text_boxa {
@@ -3470,29 +3471,27 @@ figure {
           width: 40%;
           font-size: 0.9em; }
         #Wrapper #content #content_section #pag_search label {
-          font-size: 0.75em;
+          font-size: 0.7em;
           width: 45%; }
       #Wrapper #content #content_section #pagination {
         width: 44%; }
       #Wrapper #content #content_section #bannerbox {
         height: 310px; }
         #Wrapper #content #content_section #bannerbox hgroup {
-          width: 90%;
-          margin: 0 0 0 0.5em; }
+          width: 90%; }
           #Wrapper #content #content_section #bannerbox hgroup h1 {
-            font-size: 1.9rem;
-            letter-spacing: -0.08em; }
+            font-size: 2em; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
-            font-size: 1rem;
-            letter-spacing: -0.08em; }
+            font-size: 0.95em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
-          width: 68%; }
+          width: 68%;
+          margin-top: 2em; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
           width: 27%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
-            font-size: 0.9em; }
+            font-size: 0.85em; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-              font-size: 0.95em; }
+              font-size: 0.9em; }
       #Wrapper #content #content_section .product_boxes,
       #Wrapper #content #content_section form #results {
         height: auto;
@@ -3564,12 +3563,10 @@ figure {
     #Wrapper #content #left_bar {
       position: absolute;
       z-index: 100;
-      left: 1em;
-      width: 35%;
-      display: none;
-      height: 550px; }
+      width: 191px;
+      height: auto; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
-        font-size: 0.65em; }
+        font-size: 0.75em; }
       #Wrapper #content #left_bar #searchbox {
         width: 98%; }
         #Wrapper #content #left_bar #searchbox #searcher {
@@ -3583,39 +3580,48 @@ figure {
             font-size: 1.2em; }
           #Wrapper #content #left_bar #searchbox #searcher label {
             font-size: 0.9em; }
+    #Wrapper #content .pag_buttons {
+      margin: 2% 0; }
+      #Wrapper #content .pag_buttons input[type="submit"],
+      #Wrapper #content .pag_buttons input[type="reset"] {
+        width: 30%;
+        font-size: 1em; }
+        #Wrapper #content .pag_buttons input[type="submit"]:hover,
+        #Wrapper #content .pag_buttons input[type="reset"]:hover {
+          background-color: #ffffff; }
     #Wrapper footer ul.footer_nav {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
         font-size: 0.6em; } }
 @media only screen and (max-width: 568px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
       left: 92%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
-    #Wrapper buttonv#menu-toggle-btn {
-      left: 80%; }
-      #Wrapper buttonv#menu-toggle-btn:hover {
+    #Wrapper button#menu-toggle-btn {
+      left: 78%; }
+      #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
     #Wrapper header {
-      height: 65px; }
+      height: 74px; }
       #Wrapper header figure#logo {
         width: 290px; }
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 32.5%; }
+        width: 30.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.7em; }
+        width: 96%;
+        top: 6.2em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
-            font-size: 1.2em; }
+            font-size: 1em; }
             #Wrapper nav#main-nav ul#mobile-nav li a:hover, #Wrapper nav#main-nav ul#mobile-nav li a:visited {
               text-decoration: none;
               display: block; }
@@ -3631,11 +3637,11 @@ figure {
       width: 10%;
       font-size: 1em; }
     #Wrapper #searchbar #searcher2 label {
-      font-size: 0.7em;
-      width: 20%; }
+      font-size: 0.65em;
+      width: 23%; }
     #Wrapper #searchbar #searcher2 select {
-      width: 16.8%;
-      font-size: 0.9em; }
+      width: 15.4%;
+      font-size: 0.75em; }
     #Wrapper #content h1 {
       font-size: 1.35em; }
     #Wrapper #content aside.text_boxa {
@@ -3668,29 +3674,29 @@ figure {
           width: 40%;
           font-size: 0.9em; }
         #Wrapper #content #content_section #pag_search label {
-          font-size: 0.75em;
+          font-size: 0.65em;
           width: 45%; }
       #Wrapper #content #content_section #pagination {
-        width: 44%; }
+        width: 47%; }
+        #Wrapper #content #content_section #pagination a {
+          width: 30%;
+          font-size: 0.8em; }
       #Wrapper #content #content_section #bannerbox {
         height: 310px; }
         #Wrapper #content #content_section #bannerbox hgroup {
           width: 90%; }
           #Wrapper #content #content_section #bannerbox hgroup h1 {
-            font-size: 1.8rem;
-            letter-spacing: -0.08em; }
+            font-size: 1.9em; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
-            font-size: 1rem;
-            letter-spacing: -0.08em; }
+            font-size: 0.9em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
-          margin: 2% 0 0 0;
           width: 68%; }
         #Wrapper #content #content_section #bannerbox #apDiv1 {
           width: 27%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
-            font-size: 0.9em; }
+            font-size: 0.8em; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-              font-size: 0.95em; }
+              font-size: 0.85em; }
       #Wrapper #content #content_section .product_boxes,
       #Wrapper #content #content_section form #results {
         height: auto;
@@ -3698,7 +3704,7 @@ figure {
         #Wrapper #content #content_section .product_boxes h1,
         #Wrapper #content #content_section form #results h1 {
           height: 30px;
-          font-size: 0.9em;
+          font-size: 0.85em;
           line-height: 30px; }
         #Wrapper #content #content_section .product_boxes figure.product_box,
         #Wrapper #content #content_section form #results figure.product_box {
@@ -3718,12 +3724,12 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.6em;
-              width: 75%; }
+              font-size: 0.54em;
+              width: 79%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
               margin: 0 2% 0 0;
-              width: 22%; }
+              width: 17%; }
       #Wrapper #content #content_section div.product_boxes_longer {
         display: block;
         height: 170px;
@@ -3762,11 +3768,9 @@ figure {
                 width: 23%; }
     #Wrapper #content #left_bar {
       position: absolute;
-      width: 36%;
-      display: none;
-      height: 800px; }
+      height: auto; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
-        font-size: 0.65em; }
+        font-size: 0.7em; }
       #Wrapper #content #left_bar #searchbox {
         width: 98%; }
         #Wrapper #content #left_bar #searchbox #searcher {
@@ -3783,16 +3787,17 @@ figure {
     #Wrapper footer ul.footer_nav {
       width: 100%; }
       #Wrapper footer ul.footer_nav li a {
-        font-size: 0.6em; } }
+        font-size: 0.55em; } }
 @media only screen and (max-width: 480px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
-      left: 92%; }
+      left: 90%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 78%;
+      left: 83%;
+      width: 16%;
       top: 0.5em; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
@@ -3800,16 +3805,17 @@ figure {
     #Wrapper header {
       height: 65px; }
       #Wrapper header figure#logo {
-        height: 61px; }
+        height: 61px;
+        width: 260px; }
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 45.5%; }
+        width: 35.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.7em; }
+        width: 96%;
+        top: 6.1em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -3827,13 +3833,13 @@ figure {
           display: none; }
     #Wrapper #searchbar input[type="submit"] {
       width: 10%;
-      font-size: 1em; }
+      font-size: 0.9em; }
     #Wrapper #searchbar #searcher2 label {
-      font-size: 0.7em;
+      font-size: 0.65em;
       width: 26%; }
     #Wrapper #searchbar #searcher2 select {
       width: 15%;
-      font-size: 0.75em; }
+      font-size: 0.7em; }
     #Wrapper #content h1 {
       font-size: 1.35em; }
     #Wrapper #content aside.text_boxa {
@@ -3897,7 +3903,7 @@ figure {
           width: 40%;
           font-size: 0.9em; }
         #Wrapper #content #content_section #pag_search label {
-          font-size: 0.7em;
+          font-size: 0.65em;
           width: 50%; }
       #Wrapper #content #content_section #pagination {
         width: 49%; }
@@ -3905,14 +3911,11 @@ figure {
         height: auto; }
         #Wrapper #content #content_section #bannerbox hgroup {
           position: unset;
-          width: 97%;
-          margin: 0 0 0 0.5em; }
+          width: 97%; }
           #Wrapper #content #content_section #bannerbox hgroup h1 {
-            font-size: 2.1rem;
-            letter-spacing: -0.08em; }
+            font-size: 1.7em; }
           #Wrapper #content #content_section #bannerbox hgroup h2 {
-            font-size: 1rem;
-            letter-spacing: -0.08em; }
+            font-size: 0.95em; }
         #Wrapper #content #content_section #bannerbox #bannerboximg {
           margin: 0;
           width: 100%; }
@@ -3921,10 +3924,10 @@ figure {
           margin: 5% auto;
           width: 100%; }
           #Wrapper #content #content_section #bannerbox #apDiv1 a {
-            font-size: 0.8em;
+            font-size: 0.9em;
             margin-bottom: 1%; }
             #Wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-              font-size: 0.85em;
+              font-size: 1em;
               margin-bottom: 1%; }
       #Wrapper #content #content_section .product_boxes,
       #Wrapper #content #content_section form #results {
@@ -3938,7 +3941,7 @@ figure {
         #Wrapper #content #content_section .product_boxes figure.product_box,
         #Wrapper #content #content_section form #results figure.product_box {
           height: auto;
-          width: 37%;
+          width: 38%;
           float: none;
           margin: 22px; }
           #Wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
@@ -3953,7 +3956,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.75em;
+              font-size: 0.7em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -3998,11 +4001,11 @@ figure {
         max-height: 200px; }
     #Wrapper #content #left_bar {
       position: absolute;
-      width: 43%;
-      display: none;
-      height: 800px; }
+      width: 200px;
+      left: -200px;
+      height: auto; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
-        font-size: 0.65em; }
+        font-size: 0.7em; }
       #Wrapper #content #left_bar #searchbox {
         width: 98%; }
         #Wrapper #content #left_bar #searchbox #searcher {
@@ -4025,29 +4028,32 @@ figure {
           line-height: 20px; } }
 @media only screen and (max-width: 414px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
       left: 89%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 74%; }
+      left: 83%;
+      width: 16%; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
     #Wrapper header {
       height: 65px; }
       #Wrapper header figure#logo {
-        width: 290px; }
+        width: 260px; }
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 45.5%; }
+        width: 50.5%; }
+        #Wrapper nav#main-nav span#signin-box a {
+          font-size: 0.75em; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.7em; }
+        width: 96%;
+        top: 6.1em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4067,11 +4073,11 @@ figure {
       width: 10%;
       font-size: 1em; }
     #Wrapper #searchbar #searcher2 label {
-      font-size: 0.7em;
-      width: 26%; }
+      font-size: 0.65em;
+      width: 28%; }
     #Wrapper #searchbar #searcher2 select {
-      width: 15%;
-      font-size: 0.75em; }
+      width: 14%;
+      font-size: 0.7em; }
     #Wrapper #content h1 {
       font-size: 1.35em; }
     #Wrapper #content aside.text_boxa {
@@ -4112,15 +4118,13 @@ figure {
         #Wrapper #content #content_section #pagination a {
           width: 31%; }
       #Wrapper #content #content_section #bannerbox hgroup {
-        width: 90%; }
+        width: 97%; }
         #Wrapper #content #content_section #bannerbox hgroup h1 {
-          font-size: 1.7rem;
-          letter-spacing: -0.08em;
+          font-size: 1.6em;
           height: 35px;
           line-height: 35px; }
         #Wrapper #content #content_section #bannerbox hgroup h2 {
-          font-size: 0.9rem;
-          letter-spacing: -0.08em;
+          font-size: 0.8em;
           height: 30px;
           line-height: 30px; }
       #Wrapper #content #content_section #bannerbox #bannerboximg {
@@ -4143,7 +4147,7 @@ figure {
           line-height: 30px; }
         #Wrapper #content #content_section .product_boxes figure.product_box,
         #Wrapper #content #content_section form #results figure.product_box {
-          width: 41%;
+          width: 40%;
           float: none;
           margin: 16px; }
           #Wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
@@ -4158,7 +4162,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.7em;
+              font-size: 0.65em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -4207,13 +4211,9 @@ figure {
         max-height: 200px; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 100;
-      left: 0.5em;
-      width: 50%;
-      display: none;
-      height: 800px; }
+      z-index: 100; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
-        font-size: 0.65em; }
+        font-size: 0.7em; }
       #Wrapper #content #left_bar #searchbox {
         width: 98%; }
         #Wrapper #content #left_bar #searchbox #searcher {
@@ -4234,32 +4234,33 @@ figure {
         line-height: 20px; }
         #Wrapper footer ul.footer_nav li a:hover {
           line-height: 20px; } }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 380px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
       left: 88%; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 81%;
-      width: 16%; }
+      left: 83%;
+      width: 16%;
+      font-size: 0.9em; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
     #Wrapper header {
       height: 60px; }
       #Wrapper header figure#logo {
-        width: 280px; }
+        width: 240px; }
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 50.5%; }
+        width: 41.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.7em; }
+        width: 96%;
+        top: 5.7em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4279,7 +4280,7 @@ figure {
       width: 10%;
       font-size: 1em; }
     #Wrapper #searchbar #searcher2 label {
-      font-size: 0.7em;
+      font-size: 0.65em;
       width: 29%; }
     #Wrapper #searchbar #searcher2 select {
       width: 14%;
@@ -4324,13 +4325,11 @@ figure {
         #Wrapper #content #content_section #pagination a {
           width: 31%; }
       #Wrapper #content #content_section #bannerbox hgroup {
-        width: 90%; }
+        width: 99%; }
         #Wrapper #content #content_section #bannerbox hgroup h1 {
-          font-size: 1.5rem;
-          letter-spacing: -0.08em; }
+          font-size: 1.5em; }
         #Wrapper #content #content_section #bannerbox hgroup h2 {
-          font-size: 0.9rem;
-          letter-spacing: -0.08em; }
+          font-size: 0.8em; }
       #Wrapper #content #content_section #bannerbox #bannerboximg {
         width: 100%; }
       #Wrapper #content #content_section #bannerbox #apDiv1 {
@@ -4367,7 +4366,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.75em;
+              font-size: 0.7em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -4414,10 +4413,7 @@ figure {
                 width: 28%; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 100;
-      width: 55%;
-      display: none;
-      height: 800px; }
+      z-index: 100; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -4442,7 +4438,7 @@ figure {
           line-height: 20px; } }
 @media only screen and (max-width: 360px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper div#side-bar-toggle-btn {
       left: 87%;
       font-size: 0.8em; }
@@ -4461,12 +4457,14 @@ figure {
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 55.5%; }
+        width: 43.5%; }
+        #Wrapper nav#main-nav span#signin-box a {
+          font-size: 0.7em; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7.3em; }
+        width: 96%;
+        top: 6em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4486,7 +4484,7 @@ figure {
       width: 10%;
       font-size: 1em; }
     #Wrapper #searchbar #searcher2 label {
-      font-size: 0.65em;
+      font-size: 0.55em;
       width: 29%; }
     #Wrapper #searchbar #searcher2 select {
       width: 14%;
@@ -4522,23 +4520,20 @@ figure {
         width: 48%; }
         #Wrapper #content #content_section #pag_search select {
           width: 40%;
-          font-size: 0.75em; }
+          font-size: 0.7em; }
         #Wrapper #content #content_section #pag_search label {
-          font-size: 0.6em;
-          width: 56%; }
+          font-size: 0.55em;
+          width: 59%; }
       #Wrapper #content #content_section #pagination {
         width: 49%; }
         #Wrapper #content #content_section #pagination a {
           width: 31%; }
       #Wrapper #content #content_section #bannerbox hgroup {
-        width: 90%;
-        margin: 0 0 0 0.5em; }
+        width: 99%; }
         #Wrapper #content #content_section #bannerbox hgroup h1 {
-          font-size: 1.35rem;
-          letter-spacing: -0.08em; }
+          font-size: 1.35em; }
         #Wrapper #content #content_section #bannerbox hgroup h2 {
-          font-size: 0.85rem;
-          letter-spacing: -0.08em; }
+          font-size: 0.75em; }
       #Wrapper #content #content_section #bannerbox #bannerboximg {
         width: 100%; }
       #Wrapper #content #content_section #bannerbox #apDiv1 {
@@ -4622,10 +4617,7 @@ figure {
                 width: 28%; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 100;
-      left: 0.1em;
-      width: 58%;
-      display: none; }
+      z-index: 100; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
@@ -4650,30 +4642,31 @@ figure {
           line-height: 20px; } }
 @media only screen and (max-width: 320px) {
   #Wrapper {
-    width: 96%; }
+    width: 98%; }
     #Wrapper button#side-bar-toggle-btn {
       left: 85%;
       font-size: 0.75em; }
       #Wrapper button#side-bar-toggle-btn:hover {
         cursor: pointer; }
     #Wrapper button#menu-toggle-btn {
-      left: 82%; }
+      left: 82%;
+      font-size: 0.8em; }
       #Wrapper button#menu-toggle-btn:hover {
         background-color: #ea3411;
         cursor: pointer; }
     #Wrapper header {
       height: 61px; }
       #Wrapper header figure#logo {
-        width: 259px; }
+        width: 233px; }
     #Wrapper nav#main-nav {
       height: 25px; }
       #Wrapper nav#main-nav span#signin-box {
-        width: 60.5%; }
+        width: 47.5%; }
       #Wrapper nav#main-nav ul#inner-nav {
         display: none; }
       #Wrapper nav#main-nav ul#mobile-nav {
-        width: 94%;
-        top: 7em; }
+        width: 96%;
+        top: 5.7em; }
         #Wrapper nav#main-nav ul#mobile-nav li {
           display: block; }
           #Wrapper nav#main-nav ul#mobile-nav li a {
@@ -4693,11 +4686,11 @@ figure {
       width: 11%;
       font-size: 0.9em; }
     #Wrapper #searchbar #searcher2 label {
-      font-size: 0.55em;
+      font-size: 0.5em;
       width: 27%; }
     #Wrapper #searchbar #searcher2 select {
       width: 14%;
-      font-size: 0.65em; }
+      font-size: 0.6em; }
     #Wrapper #content h1 {
       font-size: 1.35em; }
     #Wrapper #content aside.text_boxa {
@@ -4729,23 +4722,23 @@ figure {
         width: 48%; }
         #Wrapper #content #content_section #pag_search select {
           width: 40%;
-          font-size: 0.75em; }
+          font-size: 0.7em; }
         #Wrapper #content #content_section #pag_search label {
-          font-size: 0.55em;
+          font-size: 0.5em;
           width: 56%; }
       #Wrapper #content #content_section #pagination {
         width: 49%; }
         #Wrapper #content #content_section #pagination a {
           width: 31%; }
       #Wrapper #content #content_section #bannerbox hgroup {
-        width: 97%;
-        margin: 0 0 0 0.5em; }
+        width: 99%;
+        margin-left: 1%; }
         #Wrapper #content #content_section #bannerbox hgroup h1 {
-          font-size: 1.3rem;
-          letter-spacing: -0.08em; }
+          font-size: 1.3em;
+          height: auto;
+          line-height: 30px; }
         #Wrapper #content #content_section #bannerbox hgroup h2 {
-          font-size: 0.8rem;
-          letter-spacing: -0.08em; }
+          font-size: 0.7em; }
       #Wrapper #content #content_section #bannerbox #bannerboximg {
         width: 100%; }
       #Wrapper #content #content_section #bannerbox #apDiv1 {
@@ -4782,7 +4775,7 @@ figure {
             /*Price Icon*/ }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-              font-size: 0.8em;
+              font-size: 0.7em;
               width: 80%; }
             #Wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
             #Wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
@@ -4829,10 +4822,7 @@ figure {
                 width: 28%; }
     #Wrapper #content #left_bar {
       position: absolute;
-      z-index: 100;
-      left: 0.1em;
-      width: 65%;
-      display: none; }
+      z-index: 100; }
       #Wrapper #content #left_bar #sec_nav #accordion ul li {
         font-size: 0.65em; }
       #Wrapper #content #left_bar #searchbox {
