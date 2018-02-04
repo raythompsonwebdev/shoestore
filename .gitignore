@@ -46,7 +46,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+.git/
+.sass-cache/
 Files/
+shoestore-app/dist/
 shoestore-app/githeadfiles/
 shoestore-app/js/qtip/
 shoestore-app/js/Respond-master/
@@ -62,7 +65,7 @@ shoestore-app/js/jquery-ui-1.12.1.custom/
 shoestore-app/js/modernizr-2.8.0.min.js
 shoestore-app/js/selectivizr-min.js
 shoestore-app/js/selectivizr.js
-nbproject/
+node_modules/
 shoestore-app/font/
 shoestore-app/images/
 shoestore-app/images/images/
@@ -79,4 +82,3 @@ shoestore-app/css/style.css.map
 shoestore-app/icons/
 
 error_log
-

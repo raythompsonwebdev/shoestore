@@ -1,0 +1,37 @@
+{
+  "name": "shoestore-jquery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/showstore-app/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bower": "^1.8.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-qunit": "^2.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.2.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mkdir": "^1.0.0",
+    "grunt-responsive-images": "^1.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raythompsonwebdev/ShoeStore-Jquery.git"
+  },
+  "author": "raythompsonwebdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raythompsonwebdev/ShoeStore-Jquery/issues"
+  },
+  "homepage": "https://github.com/raythompsonwebdev/ShoeStore-Jquery#readme"
+}

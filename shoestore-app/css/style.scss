@@ -1,67 +1,65 @@
 @import "partials/fonts";
 @import "partials/variables";
 @import "partials/mixins";
-
 /*Eric Meyer’s Reset Reloaded*/
-
-html,
-body,
-div,
-span,
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
+html,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
 q,
 s,
 samp,
 small,
+span,
 strike,
 strong,
 sub,
 sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
 table,
-caption,
 tbody,
+td,
 tfoot,
+th,
 thead,
 tr,
-th,
-td {
+tt,
+ul,
+var {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -72,12 +70,9 @@ td {
 	font-family: inherit;
 	vertical-align: baseline;
 }
-
-
 /* remember to define focus styles! */
-
 html {
-	background-image: url(../images/bg-img.png);
+	background-image: url("../images/bg-img.png");
 	background-repeat: repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -90,7 +85,7 @@ html {
 body {
 	line-height: 1;
 	padding: 0;
-	margin: 0px;
+	margin: 0;
 	height: auto;
 }
 
@@ -98,10 +93,7 @@ ol,
 ul {
 	list-style: none;
 }
-
-
 /* tables still need 'cellspacing="0"' in the markup */
-
 table {
 	border-collapse: separate;
 	border-spacing: 0;
@@ -109,16 +101,16 @@ table {
 }
 
 caption,
-th,
-td {
+td,
+th {
 	text-align: left;
 	font-weight: normal;
 }
 
-blockquote:before,
 blockquote:after,
-q:before,
-q:after {
+blockquote:before,
+q:after,
+q:before {
 	content: "";
 }
 
@@ -127,8 +119,8 @@ q {
 	quotes: "" "";
 }
 
-.group:before,
-.group:after {
+.group:after,
+.group:before {
 	content: "";
 	display: table;
 }
@@ -137,8 +129,8 @@ q {
 	clear: both;
 }
 
-.box-set:before,
-.box-set:after {
+.box-set:after,
+.box-set:before {
 	content: "";
 	display: table;
 }
@@ -188,8 +180,8 @@ img {
 	outline: none;
 }
 
-form,
-button {
+button,
+form {
 	border: 0;
 	margin: 0;
 	padding: 0;
@@ -204,7 +196,6 @@ figure {
 	margin: 0;
 	padding: 0;
 }
-
 //Q-Tip
 .myCustomClass {
 	.qtip-content {
@@ -217,10 +208,11 @@ figure {
 		line-height: 1.5em;
 		font-weight: bold;
 		text-transform: uppercase;
-		@include transitioner(all ease .2s);
+		@include transitioner(all ease 0.2s);
 		border: 0;
 		background-color: rgba(0, 0, 0, 0.7);
 	}
+
 	.qtip-content span:first-of-type {
 		color: $color-white;
 		display: inline-block;
@@ -229,6 +221,7 @@ figure {
 		font-size: 1.35em;
 		letter-spacing: 0.02em;
 	}
+
 	.qtip-content span:last-of-type {
 		color: $color-orange;
 		display: inline-block;
@@ -240,25 +233,27 @@ figure {
 		line-height: 1.5em;
 		letter-spacing: 0.02em;
 	}
+
 	.qtip-default {
 		background-color: rgba(0, 0, 0, 0.7);
 		padding: 1%;
 	}
 }
-
 @media only screen and (max-width: 1920px) {
 	/*Wrapper*/
 	#Wrapper {
 		font-family: $font-list;
-		margin-left:auto;
-		margin-right:auto;
+		margin-left: auto;
+		margin-right: auto;
 		width: 55%;
 		padding: 0 1%;
 		display: block;
 		background-color: $color-white;
+
 		button#side-bar-toggle-btn {
 			display: none;
 		}
+
 		button#menu-toggle-btn {
 			display: none;
 		}
@@ -266,6 +261,7 @@ figure {
 		header {
 			height: 85px;
 			width: 100%;
+
 			figure#logo {
 				width: 341px;
 				margin: 0;
@@ -278,12 +274,14 @@ figure {
 			width: 100%;
 			list-style: none;
 			padding: 0;
-			margin: 0 0 1% 0;
+			margin: 0 0 1%;
+
 			span#signin-box {
 				width: 18%;
 				display: inline-block;
 				float: right;
 				height: 20px;
+
 				a {
 					display: inline-block;
 					height: 100%;
@@ -296,25 +294,29 @@ figure {
 					color: $login-color;
 					letter-spacing: 0.01em;
 					padding: 0 0.5em;
+
 					&:hover {
 						color: $color-orange;
 						font-weight: bold;
 					}
 				}
-                a:last-of-type{
-                    border:none;
-                }
 
+				a:last-of-type {
+					border: none;
+				}
 			}
+
 			ul#mobile-nav {
 				display: none;
 			}
+
 			ul#inner-nav {
 				width: 75%;
 				padding: 0;
 				height: 40px;
 				margin: 0;
 				display: inline-block;
+
 				li {
 					float: left;
 					width: auto;
@@ -322,26 +324,30 @@ figure {
 					margin-right: 0.2em;
 					text-align: center;
 					display: inline-block;
+
 					a {
-                        padding:0 1em;
+						padding: 0 1em;
 						text-align: center;
 						height: 40px;
 						color: $color-black;
 						line-height: 40px;
 						display: block;
-						@include transitioner(all ease .2s);
+						@include transitioner(all ease 0.2s);
 						text-transform: uppercase;
 						font-size: 0.9em;
-                        letter-spacing: -0.04em;
+						letter-spacing: -0.04em;
+
 						&:hover {
 							color: $color-orange;
 							font-weight: bold;
 						}
+
 						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
 					}
 				}
+
 				li a:hover,
 				li a:visited {
 					background-color: rgba(255, 255, 255, 0.4);
@@ -349,12 +355,13 @@ figure {
 					display: block;
 					-moz-border-radius-topleft: 3px;
 					-moz-border-radius-topright: 3px;
-					-webkit-border-radius: 3px 3px 0px 0px;
-					border-radius: 3px 3px 0px 0px;
-					-webkit-box-shadow: 0px -3px 2px 0px rgba(0, 0, 0, 0.2);
-					-moz-box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
-					box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.2);
+					-webkit-border-radius: 3px 3px 0 0;
+					border-radius: 3px 3px 0 0;
+					-webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
+					-moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
+					box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
 				}
+
 				li.selected {
 					a:link,
 					a:visited {
@@ -370,7 +377,8 @@ figure {
 			width: 100%;
 			padding: 0;
 			margin: 1% 0;
-			input[type="submit"] {
+
+			button.find2{
 				width: 8%;
 				font-family: $font-list;
 				height: 30px;
@@ -384,7 +392,8 @@ figure {
 				float: right;
 				display: block;
 				text-align: center;
-				@include transitioner(all ease-in-out .2s);
+				@include transitioner(all ease-in-out 0.2s);
+
 				&:hover {
 					background-color: $color-white;
 					color: $color-black;
@@ -392,6 +401,7 @@ figure {
 					font-weight: bold;
 				}
 			}
+
 			#searcher2 {
 				color: $color-white;
 				background-color: $color-orange;
@@ -399,6 +409,7 @@ figure {
 				padding: 0.8%;
 				height: 30px;
 				font-family: $font-list;
+
 				label {
 					font-size: 1.1em;
 					height: 30px;
@@ -411,6 +422,7 @@ figure {
 					text-transform: uppercase;
 					text-indent: 1%;
 				}
+
 				select {
 					font-family: $font-list;
 					width: 16.5%;
@@ -428,11 +440,12 @@ figure {
 			margin: 1% 0;
 			/*min-height: 1200px;*/
 			font-family: $font-list;
+
 			h1 {
 				background-color: $content-color;
 				font-family: $font-list;
 				width: 100%;
-				margin: 1% 0 0 0;
+				margin: 1% 0 0;
 				height: 40px;
 				color: $color-white;
 				font-size: 1.5em;
@@ -440,8 +453,8 @@ figure {
 				line-height: 40px;
 				text-transform: uppercase;
 				font-weight: bold;
-
 			}
+
 			p {
 				font-size: 0.95em;
 				line-height: 1.6em;
@@ -457,6 +470,7 @@ figure {
 				padding: 1%;
 				border: 2px $content-color1 solid;
 				margin-bottom: 5%;
+
 				h1 {
 					font-size: 1em;
 					color: $header-color;
@@ -466,6 +480,7 @@ figure {
 					line-height: 20px;
 					text-indent: 0;
 				}
+
 				p {
 					width: 100%;
 					margin: auto;
@@ -474,15 +489,7 @@ figure {
 					line-height: 1.8em;
 				}
 			}
-			#summary {
-					width: 80%;
-					margin: 0 auto;
-					display: block;
-					height: 50px;
-					line-height: 1.5em;
-					
-			}
-            
+
 			.myform {
 				width: 58%;
 				margin-left: 5%;
@@ -491,19 +498,23 @@ figure {
 				float: left;
 				display: inline-block;
 			}
+
 			#stylized #form {
 				width: 100%;
 				padding: 0;
 				font-family: $font-list;
+
 				ul {
 					height: auto;
 					display: block;
+
 					li,
 					li:nth-of-type(3) {
-						height: auto;
+						height: 50px;
 						display: block;
-						margin-bottom: 1em;
+						margin: 0;
 						padding: 0;
+
 						label {
 							width: 15%;
 							float: left;
@@ -512,22 +523,26 @@ figure {
 							font-size: 1em;
 							text-align: center;
 						}
+
 						input {
 							width: 75%;
 							height: 30px;
 							display: inline-block;
 						}
+
 						textarea {
-							width: 77%;
+							width: 75%;
 							margin: 0;
 							padding: 0;
 							display: inline-block;
 						}
+
 						input:focus,
 						textarea:focus {
 							background-color: color-white-bg;
 							outline: 0;
 						}
+
 						#submit {
 							font-family: $font-list;
 							margin: 0;
@@ -540,6 +555,7 @@ figure {
 							color: $color-white;
 							border: 0;
 							margin-left: 15%;
+
 							&:hover {
 								background-color: $color-white;
 								color: $color-orange;
@@ -549,55 +565,13 @@ figure {
 							}
 						}
 					}
+
 					li:nth-of-type(3) {
-						height: auto;
-                        label.error,
-                        label.notice,
-                        label.success {
-                            width:50%;
-                            float:none;
-                            margin: 0.5em auto;
-                            display: block;
-                            border:1px solid #3b3b3b;
-                        }
+						height: 265px;
 					}
 				}
-                label.error,
-                label.notice,
-                label.success {
-                    width:50%;
-                    float:none;
-                    margin: 0.5em auto;
-                    display: block;
-                    border:1px solid #3b3b3b;
-                }
-
-
-                label.error {
-                    background-color:$color-white-bg;
-                    color: #000;
-                    border-color: red;
-
-                }
-
-                .notice {
-                    background: #FFF6BF;
-                    color: #514721;
-                    border-color: #FFD324;
-
-                }
-
-                .success {
-                    background: #E6EFC2;
-                    color: #264409;
-                    border-color: #C6D880;
-
-                }
-                
-                
 			}
-            
-            
+
 			main#context {
 				width: 55%;
 				margin: 0 2% 2% 3%;
@@ -606,6 +580,7 @@ figure {
 				font-size: 0.85em;
 				float: left;
 			}
+
 			span.context_title {
 				font-weight: bold;
 				color: $color-orange;
@@ -619,13 +594,14 @@ figure {
 				float: right;
 				height: auto;
 				width: 76%;
-				margin: 0 0 20px 0;
+				margin: 0 0 20px;
+
 				h1 {
 					font-family: $font-list;
 					height: 40px;
 					background: none;
 					color: $content-color2;
-					margin: 0px;
+					margin: 0;
 					text-indent: 5px;
 					font-size: 1.5em;
 					line-height: 40px;
@@ -635,57 +611,55 @@ figure {
 					height: 365px;
 					width: 100%;
 					margin: 0;
-                    border:solid 1px $content-color1a;
+					border: solid 1px $content-color1a;
 
-                    hgroup{
-                        font-family: $font-list;
-                        position:absolute;
-                        z-index:2;
-                        width: 41%;
+					hgroup {
+						font-family: $font-list;
+						position: absolute;
+						z-index: 2;
+						width: 41%;
 
-
-                        h1{
-                            font-family: $font-list;
-                            font-size: 2.35rem;
-                            height: 40px;
-                            line-height: 40px;
-                            width: auto;
-
-                            font-weight:bold;
-                            color:$content-color1a;
-                            letter-spacing: -0.08em;
-							text-indent:0.25em;
-
-                        }
-                        h2{
-                            font-size: 1.3rem;
-                            color: $content-color2;
-                            font-weight: bold;
-                            letter-spacing: 0.001em;
-                            text-transform: uppercase;
-                            height: 30px;
-                            line-height: 30px;
-                            letter-spacing: -0.08em;
+						h1 {
+							font-family: $font-list;
+							font-size: 2.35rem;
+							height: 40px;
+							line-height: 40px;
 							width: auto;
-							text-indent:0.5em;
+							font-weight: bold;
+							color: $content-color1a;
+							letter-spacing: -0.08em;
+							text-indent: 0.25em;
+						}
 
-                        }
-                    }
+						h2 {
+							font-size: 1.3rem;
+							color: $content-color2;
+							font-weight: bold;
+							letter-spacing: 0.001em;
+							text-transform: uppercase;
+							height: 30px;
+							line-height: 30px;
+							letter-spacing: -0.08em;
+							width: auto;
+							text-indent: 0.5em;
+						}
+					}
 
 					#bannerboximg {
-
-						width:62%;
+						width: 62%;
 						margin: 0;
 						padding: 0;
 						display: inline-block;
-                        float:right;
+						float: right;
 					}
+
 					#apDiv1 {
-						margin:17% 0 0 1%;
+						margin: 17% 0 0 1%;
 						width: 27%;
 						height: 12rem;
 						float: left;
 						display: inline-block;
+
 						a {
 							background-color: $color-orange;
 							display: block;
@@ -696,23 +670,22 @@ figure {
 							font-size: 1em;
 							line-height: 35px;
 							text-align: center;
-							@include transitioner(all ease .2s);
+							@include transitioner(all ease 0.2s);
 							text-transform: uppercase;
-                            @include bordrady(5px);
+							@include bordrady(5px);
 
 							&:hover {
 								background-color: $color-white;
-
 								height: 35px;
 								width: 100%;
-
 								margin-bottom: 2%;
 								color: $color-orange;
-								font-weight:bold;
+								font-weight: bold;
 								text-align: center;
 							}
 						}
 					}
+
 					#btn_div {
 						height: 150px;
 						width: 100px;
@@ -727,10 +700,11 @@ figure {
 					height: 235px;
 					width: 100%;
 					font-family: $font-list;
+
 					h1 {
 						font-family: $font-list;
 						height: 35px;
-						margin: 0px;
+						margin: 0;
 						text-align: left;
 						font-size: 1em;
 						line-height: 35px;
@@ -743,23 +717,27 @@ figure {
 						float: left;
 						font-family: $font-list;
 						margin-bottom: 15px;
+
 						.product_boximg {
 							width: 80%;
 							display: block;
 							margin: 5px auto;
 							height: 135px;
 						}
+
 						figcaption.product_boxdetails {
 							width: 100%;
 							height: 55px;
 							margin: 0;
-							padding: 6% 0 0 0;
-							background-image: url('../images/product-info-bg.png');
+							padding: 6% 0 0;
+							background-image: url("../images/product-info-bg.png");
 							background-repeat: no-repeat;
+
 							span.price:first-of-type {
 								color: $login-color;
 								text-transform: uppercase;
 							}
+
 							span.price {
 								height: 25px;
 								line-height: 25px;
@@ -777,6 +755,7 @@ figure {
 								margin: 0 2% 0 0;
 								width: 15%;
 								@include transitioner(all 0.3s ease);
+
 								&:hover {
 									-webkit-transform: rotate(360deg);
 									-moz-transform: rotate(360deg);
@@ -789,18 +768,21 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 180px;
 					width: 100%;
+
 					h1 {
 						height: 30px;
 						font-family: $font-list;
-						margin: 0px;
+						margin: 0;
 						text-align: left;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						display: inline-block;
@@ -808,6 +790,7 @@ figure {
 						float: left;
 						font-family: $font-list;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							width: 18%;
 							float: left;
@@ -815,16 +798,17 @@ figure {
 							margin: 2.9% 1.5%;
 							height: auto;
 						}
+
 						figcaption.product_boxdetails_longer {
 							width: 77%;
 							height: 150px;
-
 							margin: 0;
 							padding: 1%;
 							display: inline-block;
 							float: left;
+
 							h1 {
-								background-image: url('../images/product_headline_bg.png');
+								background-image: url("../images/product_headline_bg.png");
 								background-position: -3% 50%;
 								background-repeat: no-repeat;
 								background-color: $color-white;
@@ -834,20 +818,23 @@ figure {
 								color: $login-color;
 								font-weight: bold;
 							}
+
 							p {
 								float: right;
 								width: 74%;
 								height: auto;
 								display: block;
 								line-height: 1.5em;
-								text-indent: 0%;
+								text-indent: 0;
 								margin: 0;
 								font-size: 0.9em;
 								padding: 0 5% 0 0;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								height: auto;
 								line-height: 50px;
@@ -864,6 +851,7 @@ figure {
 									margin: 0;
 									width: 20%;
 									@include transitioner(all 0.3s ease);
+
 									&:hover {
 										-webkit-transform: rotate(360deg);
 										-moz-transform: rotate(360deg);
@@ -877,12 +865,14 @@ figure {
 						}
 					}
 				}
+
 				#pag_search {
 					width: 45%;
 					display: inline-block;
 					float: left;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
 					padding: 0;
+
 					select {
 						font-family: $font-list;
 						width: 50%;
@@ -893,6 +883,7 @@ figure {
 						line-height: 30px;
 						font-size: 0.85em;
 					}
+
 					label {
 						float: left;
 						width: 39%;
@@ -903,6 +894,7 @@ figure {
 						line-height: 30px;
 						font-size: 0.8em;
 						text-transform: uppercase;
+
 						&:hover {
 							background-color: $color-white;
 							color: $color-orange;
@@ -911,12 +903,14 @@ figure {
 						}
 					}
 				}
+
 				#pagination {
 					height: 30px;
 					width: 33%;
 					display: block;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
 					float: right;
+
 					a {
 						color: $color-white;
 						background-color: $color-orange;
@@ -927,19 +921,23 @@ figure {
 						font-size: 1em;
 						line-height: 30px;
 						@include transitioner(all 0.2s ease-in-out);
+
 						&:hover {
 							font-weight: bold;
 							cursor: pointer;
 						}
 					}
 				}
+
 				#results {
 					clear: both;
 				}
+
 				.pag_buttons {
 					display: block;
 					margin: 2% 0;
 					clear: both;
+
 					input[type="submit"],
 					input[type="reset"] {
 						font-family: $font-list;
@@ -953,6 +951,7 @@ figure {
 						font-size: 1.1em;
 						text-align: center;
 						padding: 0;
+
 						&:hover {
 							color: $color-orange;
 							background-color: $color-white;
@@ -964,21 +963,22 @@ figure {
 			#left_bar {
 				float: left;
 				width: 23%;
-				margin: 0 0 5px 0;
+				margin: 0 0 5px;
 				font-family: $font-list;
 				/*Form*/
 				#searchbox {
 					width: 94%;
 					height: 330px;
 					margin: auto;
+
 					#searcher {
-						background-image: url('../images/form-bg-comp.png');
+						background-image: url("images/form-bg-comp.png");
 						background-repeat: no-repeat;
 						width: 90%;
 						height: 320px;
-						margin-bottom: 1%;
 						margin: auto;
 						font-family: $font-list;
+
 						h1 {
 							font-size: 1.5em;
 							background: none;
@@ -987,11 +987,11 @@ figure {
 							text-align: center;
 							line-height: 30px;
 							height: 90px;
-							text-indent: 0px;
-
-                            letter-spacing:-0.08em;
-                            padding-top: 0.3em;
+							text-indent: 0;
+							letter-spacing: -0.08em;
+							padding-top: 0.3em;
 						}
+
 						select {
 							font-family: sans-serif;
 							width: 80%;
@@ -1001,6 +1001,7 @@ figure {
 							color: $content-color;
 							display: block;
 						}
+
 						input.find {
 							font-family: $font-list;
 							width: 50%;
@@ -1013,6 +1014,7 @@ figure {
 							color: $color-white;
 							border: 0;
 							outline: none;
+
 							&:hover {
 								color: $color-orange;
 								display: block;
@@ -1024,34 +1026,48 @@ figure {
 						}
 					}
 				}
+
 				#sec_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
 					color: $content-color1a;
 					font-family: $font-list;
+
 					span {
 						width: 8%;
 					}
+
+					.ui-accordion .ui-accordion-content {
+						padding: 0.5em;
+						border-top: 0;
+						overflow: auto;
+					}
+
 					#accordion {
 						font-family: $font-list;
+
 						h3 {
 							font-size: 0.8em;
 							text-transform: uppercase;
+							background-color:$color-orange;
 						}
+
 						ul {
 							list-style: none;
 							margin: 0;
 							padding: 0;
 							width: 100%;
-                            display:block;
+							display: block;
+
 							li {
-								line-height: 30px;
+								line-height: 45px;
 								display: block;
-								height: 30px;
+								height: 45px;
 								font-size: 0.8em;
 								width: 100%;
 								text-align: left;
+
 								&:hover {
 									font-weight: bold;
 									letter-spacing: 0.2em;
@@ -1063,6 +1079,7 @@ figure {
 				}
 			}
 		}
+
 		.spacer {
 			clear: both;
 			height: 1px;
@@ -1072,12 +1089,14 @@ figure {
 			clear: both;
 			height: 50px;
 			width: 100%;
+
 			ul.footer_nav {
 				list-style: none;
 				margin: auto;
 				height: 50px;
 				width: 70%;
-				padding: 0px;
+				padding: 0;
+
 				li {
 					float: left;
 					width: 16.5%;
@@ -1085,6 +1104,7 @@ figure {
 					margin: 0;
 					text-align: center;
 					display: inline-block;
+
 					a {
 						text-align: center;
 						line-height: 50px;
@@ -1093,6 +1113,7 @@ figure {
 						display: block;
 						font-size: 0.75em;
 						text-transform: uppercase;
+
 						&:hover {
 							color: $color-orange;
 							line-height: 50px;
@@ -1103,6 +1124,7 @@ figure {
 			}
 		}
 	}
+
 	p.copyr {
 		margin: 2% auto;
 		font-size: 0.6em;
@@ -1110,41 +1132,32 @@ figure {
 		letter-spacing: 0.1em;
 	}
 }
-
 @media only screen and (max-width: 1799px) {
-
-	#Wrapper{
-		width:57%;
+	#Wrapper {
+		width: 57%;
 	}
-
 }
-
 @media only screen and (max-width: 1630px) {
-
-	#Wrapper{
-		width:63%;
+	#Wrapper {
+		width: 63%;
 	}
-
 }
-
 @media only screen and (max-width: 1500px) {
-
-	#Wrapper{
-		width:68%;
+	#Wrapper {
+		width: 68%;
 	}
-
 }
-
-
 @media only screen and (max-width: 1440px) {
 	/*Wrapper*/
 	#Wrapper {
 		margin: 1% auto;
 		width: 72%;
 		padding: 0 1%;
+
 		div#side-bar-toggle-btn {
 			display: none;
 		}
+
 		div#menu-toggle-btn {
 			display: none;
 		}
@@ -1152,6 +1165,7 @@ figure {
 		header {
 			height: 85px;
 			width: 100%;
+
 			figure#logo {
 				width: 341px;
 				margin: 0;
@@ -1161,12 +1175,12 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1% 0;
+			margin: 0 0 1%;
+
 			span#signin-box {
 				width: 18%;
 
 				a {
-
 					font-size: 0.90em;
 
 					&:hover {
@@ -1174,30 +1188,36 @@ figure {
 					}
 				}
 			}
+
 			ul#mobile-nav {
 				display: none;
 			}
+
 			ul#inner-nav {
 				width: 75%;
 				height: 40px;
+
 				li {
-
 					margin-right: 0.2em;
-					a {
 
+					a {
 						font-size: 0.9em;
+
 						&:hover {
 							font-weight: bold;
 						}
+
 						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
 					}
 				}
+
 				li a:hover,
 				li a:visited {
 					background-color: rgba(255, 255, 255, 0.4);
 				}
+
 				li.selected {
 					a:link,
 					a:visited {
@@ -1210,27 +1230,31 @@ figure {
 		#searchbar {
 			height: 50px;
 			margin: 1% 0;
-			input[type="submit"] {
+
+			button.find2 {
 				width: 8%;
 				height: 30px;
 				line-height: 30px;
 				font-size: 1.1em;
+
 				&:hover {
 					cursor: pointer;
 					font-weight: bold;
 				}
 			}
+
 			#searcher2 {
 				margin: 0;
 				padding: 0.8%;
 				height: 30px;
+
 				label {
 					font-size: 1.1em;
 					height: 30px;
 					width: 23%;
 					line-height: 30px;
-
 				}
+
 				select {
 					width: 16.5%;
 					font-size: 1em;
@@ -1241,88 +1265,97 @@ figure {
 		/*Content*/
 		#content {
 			margin: 1% 0;
+
 			h1 {
 				font-size: 1.4em;
 			}
+
 			p {
 				line-height: 1.6em;
 			}
+
 			aside.text_boxa {
 				width: 32.50%;
+
 				h1 {
 					font-size: 1em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.9em;
 					line-height: 1.8em;
 				}
 			}
+
 			.myform {
 				width: 58%;
 				height: 390px;
 			}
+
 			#stylized #form {
 				width: 100%;
+
 				ul {
 					height: auto;
 					display: block;
+
 					li,
 					li:nth-of-type(3) {
-						height: auto;
+						height: 50px;
+
 						label {
 							width: 15%;
 							line-height: 40px;
 							font-size: 1em;
 						}
+
 						input {
 							width: 75%;
 							height: 30px;
 						}
+
 						textarea {
 							width: 75%;
 						}
+
 						input:focus,
 						textarea:focus {
 							background-color: $color-white-bg;
 							outline: 0;
 						}
+
 						#submit {
 							width: 20%;
 							font-size: 1.2em;
+
 							&:hover {
 								cursor: pointer;
 							}
 						}
 					}
+
 					li:nth-of-type(3) {
-						height: auto;
-                        label.error,
-                        label.notice,
-                        label.success {
-                            font-size:0.9em;
-                        }
+						height: 265px;
 					}
 				}
-                label.error,
-                label.notice,
-                label.success {
-                    font-size:0.9em;
-                }
 			}
+
 			main#context {
 				width: 55%;
 				margin: 0 2% 2% 3%;
 				line-height: 1.8em;
 				font-size: 0.85em;
 			}
+
 			span.context_title {
 				font-size: 1.15em;
 			}
 			/*rightside content section within content div*/
 			#content_section {
 				width: 76%;
-				margin: 0 0 20px 0;
+				margin: 0 0 20px;
+
 				h1 {
 					height: 40px;
 					font-size: 1.5em;
@@ -1332,35 +1365,36 @@ figure {
 				#bannerbox {
 					height: 365px;
 					width: 100%;
-					margin: 0 0 1.5em 0;
-					hgroup{
+					margin: 0 0 1.5em;
 
-                        width: 40%;
+					hgroup {
+						width: 40%;
 
+						h1 {
+							font-size: 2.35rem;
+							letter-spacing: -0.08em;
+						}
 
-                        h1{
+						h2 {
+							font-size: 1.3rem;
+							letter-spacing: -0.08em;
+						}
+					}
 
-                            font-size: 2.35rem;
-                            letter-spacing: -0.08em;
-
-                        }
-                        h2{
-                            font-size: 1.3rem;
-                            letter-spacing: -0.08em;
-
-                        }
-                    }
 					#bannerboximg {
 						width: 60%;
 					}
+
 					#apDiv1 {
 						margin: 15% 3% 0 1%;
 						width: 23%;
 						height: 200px;
+
 						a {
 							height: 35px;
 							font-size: 1.05em;
 							line-height: 35px;
+
 							&:hover {
 								height: 35px;
 								margin-top: 3%;
@@ -1368,6 +1402,7 @@ figure {
 							}
 						}
 					}
+
 					#btn_div {
 						height: 150px;
 						width: 100px;
@@ -1378,6 +1413,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: 235px;
+
 					h1 {
 						height: 35px;
 						font-size: 1em;
@@ -1387,17 +1423,21 @@ figure {
 					figure.product_box {
 						width: 25%;
 						margin-bottom: 15px;
+
 						.product_boximg {
 							width: 80%;
 							margin: 5px auto;
 							height: 135px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 55px;
-							padding: 6% 0 0 0;
+							padding: 6% 0 0;
+
 							span.price:first-of-type {
 								color: $login-color;
 							}
+
 							span.price {
 								height: 25px;
 								line-height: 25px;
@@ -1409,6 +1449,7 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 14%;
+
 								&:hover {
 									cursor: pointer;
 								}
@@ -1416,41 +1457,49 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 180px;
 					width: 100%;
+
 					h1 {
 						height: 30px;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							width: 18%;
 							margin: 2.9% 1.5%;
 							height: auto;
 						}
+
 						figcaption.product_boxdetails_longer {
 							width: 77%;
 							height: 150px;
-							;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 45px;
 								text-indent: 4%;
 							}
+
 							p {
 								width: 74%;
 								line-height: 1.5em;
 								font-size: 0.9em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 50px;
 								font-size: 0.85em;
@@ -1459,6 +1508,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 18%;
+
 									&:hover {
 										cursor: pointer;
 									}
@@ -1467,10 +1517,12 @@ figure {
 						}
 					}
 				}
+
 				#pag_search {
 					width: 45%;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
 					padding: 0;
+
 					select {
 						width: 60%;
 						height: 30px;
@@ -1478,46 +1530,55 @@ figure {
 						line-height: 30px;
 						font-size: 0.85em;
 					}
+
 					label {
 						width: 39%;
 						height: 30px;
 						line-height: 30px;
 						font-size: 0.8em;
+
 						&:hover {
 							border: 0;
 							cursor: pointer;
 						}
 					}
 				}
+
 				#pagination {
 					height: 30px;
 					width: 33%;
 					display: block;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
 					float: right;
+
 					a {
 						width: 32%;
 						font-size: 1em;
 						line-height: 30px;
+
 						&:hover {
 							font-weight: bold;
 							cursor: pointer;
 						}
 					}
 				}
+
 				#results {
 					clear: both;
 				}
+
 				.pag_buttons {
 					display: block;
 					margin: 2% 0;
 					clear: both;
+
 					input[type="submit"],
 					input[type="reset"] {
 						width: 20%;
 						height: 30px;
 						line-height: 30px;
 						font-size: 1.2em;
+
 						&:hover {
 							background-color: $color-white;
 						}
@@ -1528,27 +1589,32 @@ figure {
 			#left_bar {
 				float: left;
 				width: 23%;
-				margin: 0 0 5px 0;
+				margin: 0 0 5px;
 				/*Form*/
 				#searchbox {
 					width: 94%;
 					height: 330px;
 					margin: auto;
+
 					#searcher {
 						width: 90%;
 						height: 320px;
 						margin-bottom: 1%;
+
 						h1 {
 							font-size: 1.45em;
 						}
+
 						select {
 							width: 80%;
 							font-size: 1em;
 						}
+
 						input.find {
 							width: 55%;
 							font-size: 1.1em;
 							outline: none;
+
 							&:hover {
 								outline: none;
 								cursor: pointer;
@@ -1556,23 +1622,30 @@ figure {
 						}
 					}
 				}
+
 				#sec_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
+
 					span {
 						width: 8%;
 					}
+
 					#accordion {
 						font-family: $font-list;
+
 						h3 {
 							font-size: 0.8em;
 						}
+
 						ul {
 							list-style: none;
 							width: 100%;
+
 							li {
 								font-size: 0.85em;
+
 								&:hover {
 									font-weight: bold;
 									letter-spacing: 0.2em;
@@ -1584,6 +1657,7 @@ figure {
 				}
 			}
 		}
+
 		.spacer {
 			clear: both;
 			height: 1px;
@@ -1593,17 +1667,21 @@ figure {
 			clear: both;
 			height: 50px;
 			width: 100%;
+
 			ul.footer_nav {
 				list-style: none;
 				height: 50px;
 				width: 70%;
+
 				li {
 					width: 16.5%;
 					height: 50px;
+
 					a {
 						line-height: 50px;
 						height: 50px;
 						font-size: 0.75em;
+
 						&:hover {
 							color: $color-orange;
 							line-height: 50px;
@@ -1614,21 +1692,23 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 1280px) {
 	/*Wrapper*/
 	#Wrapper {
 		width: 82%;
 		padding: 0 1%;
+
 		div#side-bar-toggle-btn {
 			display: none;
 		}
+
 		div#menu-toggle-btn {
 			display: none;
 		}
 		/*header*/
 		header {
 			width: 100%;
+
 			figure#logo {
 				width: 341px;
 			}
@@ -1636,12 +1716,12 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1% 0;
+			margin: 0 0 1%;
+
 			span#signin-box {
 				width: 22%;
 
 				a {
-
 					font-size: 0.80em;
 
 					&:hover {
@@ -1649,30 +1729,36 @@ figure {
 					}
 				}
 			}
+
 			ul#mobile-nav {
 				display: none;
 			}
+
 			ul#inner-nav {
 				width: 75%;
 				height: 40px;
+
 				li {
-
 					margin-right: 0.2em;
-					a {
 
+					a {
 						font-size: 0.85em;
+
 						&:hover {
 							font-weight: bold;
 						}
+
 						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
 					}
 				}
+
 				li a:hover,
 				li a:visited {
 					background-color: rgba(255, 255, 255, 0.4);
 				}
+
 				li.selected {
 					a:link,
 					a:visited {
@@ -1685,27 +1771,31 @@ figure {
 		#searchbar {
 			height: 50px;
 			margin: 1% 0;
-			input[type="submit"] {
+
+			button.find2 {
 				width: 8%;
 				height: 30px;
 				line-height: 30px;
 				font-size: 1.1em;
+
 				&:hover {
 					cursor: pointer;
 					font-weight: bold;
 				}
 			}
+
 			#searcher2 {
 				margin: 0;
 				padding: 0.8%;
 				height: 30px;
+
 				label {
 					font-size: 1.05em;
 					height: 30px;
 					width: 23%;
 					line-height: 30px;
-
 				}
+
 				select {
 					width: 16.5%;
 					font-size: 1em;
@@ -1716,118 +1806,137 @@ figure {
 		/*Content*/
 		#content {
 			margin: 1% 0;
+
 			h1 {
 				font-size: 1.35em;
 			}
+
 			p {
 				line-height: 1.6em;
 			}
+
 			p.copyr {
 				font-size: 0.6em;
 			}
+
 			aside.text_boxa {
 				width: 32.50%;
+
 				h1 {
 					font-size: 1em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.9em;
 					line-height: 1.8em;
 				}
 			}
+
 			.myform {
 				width: 58%;
 				height: 390px;
 			}
+
 			#stylized #form {
 				width: 100%;
+
 				ul {
 					height: auto;
 					display: block;
+
 					li,
 					li:nth-of-type(3) {
 						height: 50px;
+
 						label {
 							width: 15%;
 							line-height: 40px;
 							font-size: 0.9em;
 						}
+
 						input {
 							width: 75%;
 							height: 30px;
 						}
+
 						textarea {
 							width: 75%;
 						}
+
 						input:focus,
 						textarea:focus {
 							background-color: $color-white-bg;
 							outline: 0;
 						}
+
 						#submit {
 							width: 25%;
 							font-size: 1.2em;
+
 							&:hover {
 								cursor: pointer;
 							}
 						}
 					}
+
 					li:nth-of-type(3) {
 						height: 265px;
 					}
 				}
 			}
+
 			main#context {
 				width: 55%;
 				margin: 0 2% 2% 3%;
 				line-height: 1.8em;
 				font-size: 0.85em;
 			}
+
 			span.context_title {
 				font-size: 1.15em;
 			}
 			/*rightside content section within content div*/
 			#content_section {
 				width: 76%;
-				margin: 0 0 20px 0;
+				margin: 0 0 20px;
+
 				h1 {
 					font-size: 1.45em;
 				}
 				/*Index page banner box*/
 				#bannerbox {
 					height: 340px;
-					hgroup{
 
-                        width: 48%;
+					hgroup {
+						width: 48%;
 
+						h1 {
+							font-size: 2.3rem;
+						}
 
-                        h1{
+						h2 {
+							font-size: 1.2rem;
+						}
+					}
 
-                            font-size: 2.3rem;
-
-
-                        }
-                        h2{
-                            font-size: 1.2rem;
-
-
-                        }
-                    }
 					#bannerboximg {
 						width: 59%;
 						margin-top: 1em;
 					}
+
 					#apDiv1 {
 						width: 27%;
 
 						a {
 							font-size: 0.9em;
+
 							&:hover {
 								font-size: 1em;
 							}
 						}
 					}
+
 					#btn_div {
 						height: 150px;
 						width: 100px;
@@ -1838,6 +1947,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: 235px;
+
 					h1 {
 						font-size: 0.95em;
 					}
@@ -1845,16 +1955,20 @@ figure {
 					figure.product_box {
 						width: 25%;
 						margin-bottom: 15px;
+
 						.product_boximg {
 							width: 80%;
 							height: 135px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 60px;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
+
 							span.price:first-of-type {
 								color: $login-color;
 							}
+
 							span.price {
 								height: 25px;
 								line-height: 25px;
@@ -1866,6 +1980,7 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 15%;
+
 								&:hover {
 									cursor: pointer;
 								}
@@ -1873,37 +1988,45 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					height: 180px;
+
 					h1 {
 						height: 30px;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							width: 18%;
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							width: 77%;
 							height: 150px;
-							;
 							padding: 1%;
+
 							h1 {
 								line-height: 45px;
 								text-indent: 4%;
 							}
+
 							p {
 								width: 74%;
 								line-height: 1.5em;
 								font-size: 0.9em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 50px;
 								font-size: 0.85em;
@@ -1912,6 +2035,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 18%;
+
 									&:hover {
 										cursor: pointer;
 									}
@@ -1920,9 +2044,11 @@ figure {
 						}
 					}
 				}
+
 				#pag_search {
 					width: 45%;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
+
 					select {
 						width: 50%;
 						height: 30px;
@@ -1930,38 +2056,47 @@ figure {
 						line-height: 30px;
 						font-size: 0.85em;
 					}
+
 					label {
 						width: 43%;
 						font-size: 0.8em;
+
 						&:hover {
 							cursor: pointer;
 						}
 					}
 				}
+
 				#pagination {
 					width: 37%;
 					display: block;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
+
 					a {
 						width: 32%;
 						font-size: 1em;
 						line-height: 30px;
+
 						&:hover {
 							font-weight: bold;
 							cursor: pointer;
 						}
 					}
 				}
+
 				#results {
 					clear: both;
 				}
+
 				.pag_buttons {
 					margin: 2% 0;
 					clear: both;
+
 					input[type="submit"],
 					input[type="reset"] {
 						width: 25%;
 						font-size: 1.2em;
+
 						&:hover {
 							background-color: $color-white;
 						}
@@ -1971,27 +2106,31 @@ figure {
 			/*leftbar*/
 			#left_bar {
 				width: 23%;
-				margin: 0 0 5px 0;
+				margin: 0 0 5px;
 				/*Form*/
 				#searchbox {
 					width: 94%;
 					height: 330px;
+
 					#searcher {
 						width: 90%;
 						height: 320px;
 						margin-bottom: 1%;
+
 						h1 {
 							font-size: 1.4em;
-
 						}
+
 						select {
 							width: 80%;
 							font-size: 1em;
 						}
+
 						input.find {
 							width: 55%;
 							font-size: 1.1em;
 							outline: none;
+
 							&:hover {
 								outline: none;
 								cursor: pointer;
@@ -1999,23 +2138,30 @@ figure {
 						}
 					}
 				}
+
 				#sec_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
+
 					span {
 						width: 8%;
 					}
+
 					#accordion {
 						font-family: $font-list;
+
 						h3 {
 							font-size: 0.8em;
 						}
+
 						ul {
 							list-style: none;
 							width: 100%;
+
 							li {
 								font-size: 0.85em;
+
 								&:hover {
 									font-weight: bold;
 									letter-spacing: 0.2em;
@@ -2027,6 +2173,7 @@ figure {
 				}
 			}
 		}
+
 		.spacer {
 			clear: both;
 			height: 1px;
@@ -2034,13 +2181,17 @@ figure {
 		/*Footer*/
 		footer {
 			height: 50px;
+
 			ul.footer_nav {
 				height: 50px;
 				width: 70%;
+
 				li {
 					width: 16.5%;
+
 					a {
 						font-size: 0.75em;
+
 						&:hover {
 							color: $color-orange;
 							line-height: 50px;
@@ -2051,7 +2202,6 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 1024px) {
 	.myCustomClass {
 		.qtip-content {
@@ -2060,9 +2210,11 @@ figure {
 			height: 55px;
 			line-height: 1.3em;
 		}
+
 		.qtip-content span:first-of-type {
 			font-size: 1.4em;
 		}
+
 		.qtip-content span:last-of-type {
 			font-size: 1em;
 			margin: 0;
@@ -2072,15 +2224,18 @@ figure {
 	#Wrapper {
 		width: 90%;
 		padding: 0 1%;
+
 		div#side-bar-toggle-btn {
 			display: none;
 		}
+
 		div#menu-toggle-btn {
 			display: none;
 		}
 		/*header*/
 		header {
 			width: 100%;
+
 			figure#logo {
 				width: 341px;
 			}
@@ -2088,12 +2243,12 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1% 0;
+			margin: 0 0 1%;
+
 			span#signin-box {
 				width: 22%;
 
 				a {
-
 					font-size: 0.75em;
 
 					&:hover {
@@ -2101,30 +2256,36 @@ figure {
 					}
 				}
 			}
+
 			ul#mobile-nav {
 				display: none;
 			}
+
 			ul#inner-nav {
 				width: 75%;
 				height: 40px;
+
 				li {
-
 					margin-right: 0.2em;
-					a {
 
+					a {
 						font-size: 0.8em;
+
 						&:hover {
 							font-weight: bold;
 						}
+
 						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
 					}
 				}
+
 				li a:hover,
 				li a:visited {
 					background-color: rgba(255, 255, 255, 0.4);
 				}
+
 				li.selected {
 					a:link,
 					a:visited {
@@ -2137,27 +2298,31 @@ figure {
 		#searchbar {
 			height: 50px;
 			margin: 1% 0;
-			input[type="submit"] {
+
+			button.find2 {
 				width: 8%;
 				height: 30px;
 				line-height: 30px;
 				font-size: 1.1em;
+
 				&:hover {
 					cursor: pointer;
 					font-weight: bold;
 				}
 			}
+
 			#searcher2 {
 				margin: 0;
 				padding: 0.8%;
 				height: 30px;
+
 				label {
 					font-size: 1em;
 					height: 30px;
 					width: 23%;
 					line-height: 30px;
-
 				}
+
 				select {
 					width: 16.5%;
 					font-size: 1em;
@@ -2168,115 +2333,135 @@ figure {
 		/*Content*/
 		#content {
 			margin: 1% 0;
+
 			h1 {
 				font-size: 1.35em;
 			}
+
 			p {
 				line-height: 1.6em;
 				font-size: 0.9em;
 			}
+
 			aside.text_boxa {
 				width: 32.50%;
+
 				h1 {
 					font-size: 0.9em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.85em;
 					line-height: 1.8em;
 				}
 			}
+
 			.myform {
 				width: 58%;
 				height: 390px;
 			}
+
 			#stylized #form {
 				width: 100%;
+
 				ul {
 					height: auto;
 					display: block;
+
 					li,
 					li:nth-of-type(3) {
 						height: 50px;
+
 						label {
 							width: 15%;
 							line-height: 40px;
 							font-size: 0.85em;
 						}
+
 						input {
 							width: 75%;
 							height: 30px;
 						}
+
 						textarea {
 							width: 75%;
 						}
+
 						input:focus,
 						textarea:focus {
 							background-color: $color-white-bg;
 							outline: 0;
 						}
+
 						#submit {
 							width: 20%;
 							font-size: 1.15em;
+
 							&:hover {
 								cursor: pointer;
 							}
 						}
 					}
+
 					li:nth-of-type(3) {
 						height: 265px;
 					}
 				}
 			}
+
 			main#context {
 				width: 55%;
 				margin: 0 2% 2% 3%;
 				line-height: 1.8em;
 				font-size: 0.85em;
 			}
+
 			span.context_title {
 				font-size: 1.1em;
 			}
 			/*rightside content section within content div*/
 			#content_section {
 				width: 76%;
-				margin: 0 0 20px 0;
+				margin: 0 0 20px;
+
 				h1 {
 					font-size: 1.4em;
 				}
 				/*Index page banner box*/
 				#bannerbox {
 					height: 340px;
-					hgroup{
 
-                        width: 60%;
+					hgroup {
+						width: 60%;
 
+						h1 {
+							font-size: 2.2rem;
+							letter-spacing: -0.08em;
+						}
 
-                        h1{
+						h2 {
+							font-size: 1.2rem;
+							letter-spacing: -0.08em;
+						}
+					}
 
-                            font-size: 2.2rem;
-                            letter-spacing: -0.08em;
-
-                        }
-                        h2{
-                            font-size: 1.2rem;
-                            letter-spacing: -0.08em;
-
-                        }
-                    }
 					#bannerboximg {
 						width: 62%;
 					}
+
 					#apDiv1 {
 						width: 27%;
 
 						a {
 							font-size: 0.95em;
+
 							&:hover {
 								font-size: 1em;
 							}
 						}
 					}
+
 					#btn_div {
 						height: 150px;
 						width: 100px;
@@ -2287,6 +2472,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: 235px;
+
 					h1 {
 						font-size: 0.9em;
 					}
@@ -2294,16 +2480,20 @@ figure {
 					figure.product_box {
 						width: 25%;
 						margin-bottom: 15px;
+
 						.product_boximg {
 							width: 80%;
 							height: 135px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 60px;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
+
 							span.price:first-of-type {
 								color: $login-color;
 							}
+
 							span.price {
 								height: 25px;
 								line-height: 25px;
@@ -2315,6 +2505,7 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 18%;
+
 								&:hover {
 									cursor: pointer;
 								}
@@ -2322,38 +2513,46 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					height: 180px;
+
 					h1 {
 						height: 30px;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							width: 18%;
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							width: 77%;
 							height: 150px;
-							;
 							padding: 1%;
+
 							h1 {
 								line-height: 45px;
 								text-indent: 4%;
 							}
+
 							p {
 								width: 74%;
 								line-height: 1.5em;
 								font-size: 0.9em;
 								padding: 0;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 50px;
 								font-size: 0.85em;
@@ -2362,6 +2561,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 18%;
+
 									&:hover {
 										cursor: pointer;
 									}
@@ -2370,21 +2570,26 @@ figure {
 						}
 					}
 				}
+
 				#pag_search {
 					width: 45%;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
+
 					select {
 						width: 50%;
 						font-size: 0.9em;
 					}
+
 					label {
 						width: 43%;
 						font-size: 0.75em;
+
 						&:hover {
 							cursor: pointer;
 						}
 					}
 				}
+
 				#pagination {
 					width: 36%;
 
@@ -2392,22 +2597,27 @@ figure {
 						width: 32%;
 						font-size: 1em;
 						line-height: 30px;
+
 						&:hover {
 							font-weight: bold;
 							cursor: pointer;
 						}
 					}
 				}
+
 				#results {
 					clear: both;
 				}
+
 				.pag_buttons {
 					margin: 2% 0;
 					clear: both;
+
 					input[type="submit"],
 					input[type="reset"] {
 						width: 25%;
 						font-size: 1.2em;
+
 						&:hover {
 							background-color: $color-white;
 						}
@@ -2417,27 +2627,31 @@ figure {
 			/*leftbar*/
 			#left_bar {
 				width: 23%;
-				margin: 0 0 5px 0;
+				margin: 0 0 5px;
 				/*Form*/
 				#searchbox {
 					width: 94%;
 					height: 330px;
+
 					#searcher {
 						width: 90%;
 						height: 320px;
 						margin-bottom: 1%;
+
 						h1 {
 							font-size: 1.35em;
-
 						}
+
 						select {
 							width: 80%;
 							font-size: 0.9em;
 						}
+
 						input.find {
 							width: 55%;
 							font-size: 1.1em;
 							outline: none;
+
 							&:hover {
 								outline: none;
 								cursor: pointer;
@@ -2445,22 +2659,29 @@ figure {
 						}
 					}
 				}
+
 				#sec_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
+
 					span {
 						width: 8%;
 					}
+
 					#accordion {
 						font-family: $font-list;
+
 						h3 {
 							font-size: 0.7em;
 						}
+
 						ul {
 							list-style: none;
+
 							li {
 								font-size: 0.80em;
+
 								&:hover {
 									font-weight: bold;
 									letter-spacing: 0.2em;
@@ -2472,6 +2693,7 @@ figure {
 				}
 			}
 		}
+
 		.spacer {
 			clear: both;
 			height: 1px;
@@ -2479,13 +2701,17 @@ figure {
 		/*Footer*/
 		footer {
 			height: 50px;
+
 			ul.footer_nav {
 				height: 50px;
 				width: 70%;
+
 				li {
 					width: 16.5%;
+
 					a {
 						font-size: 0.75em;
+
 						&:hover {
 							color: $color-orange;
 							line-height: 50px;
@@ -2496,20 +2722,22 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 980px) {
 	#Wrapper {
 		width: 94%;
 		padding: 0 1%;
+
 		div#side-bar-toggle-btn {
 			display: none;
 		}
+
 		div#menu-toggle-btn {
 			display: none;
 		}
 		/*header*/
 		header {
 			width: 100%;
+
 			figure#logo {
 				width: 341px;
 			}
@@ -2517,12 +2745,12 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1% 0;
+			margin: 0 0 1%;
+
 			span#signin-box {
 				width: 22%;
 
 				a {
-
 					font-size: 0.7em;
 
 					&:hover {
@@ -2530,30 +2758,37 @@ figure {
 					}
 				}
 			}
+
 			ul#mobile-nav {
 				display: none;
 			}
+
 			ul#inner-nav {
 				width: 75%;
 				height: 40px;
-				li {
 
+				li {
 					margin-right: 0.2em;
+
 					a {
 						padding: 0 0.5em;
 						font-size: 0.8em;
+
 						&:hover {
 							font-weight: bold;
 						}
+
 						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
 					}
 				}
+
 				li a:hover,
 				li a:visited {
 					background-color: rgba(255, 255, 255, 0.4);
 				}
+
 				li.selected {
 					a:link,
 					a:visited {
@@ -2566,22 +2801,26 @@ figure {
 		#searchbar {
 			height: 50px;
 			margin: 1% 0;
-			input[type="submit"] {
+
+			button.find2 {
 				width: 8%;
 				font-size: 1.1em;
+
 				&:hover {
 					cursor: pointer;
 					font-weight: bold;
 				}
 			}
+
 			#searcher2 {
 				margin: 0;
 				padding: 0.8%;
+
 				label {
 					font-size: 0.9em;
 					width: 23%;
-
 				}
+
 				select {
 					width: 16.5%;
 					font-size: 1em;
@@ -2592,114 +2831,135 @@ figure {
 		/*Content*/
 		#content {
 			margin: 1% 0;
+
 			h1 {
 				font-size: 1.3em;
 			}
+
 			p {
 				line-height: 1.6em;
 			}
+
 			aside.text_boxa {
 				width: 32.50%;
+
 				h1 {
 					font-size: 0.75em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.7em;
 					line-height: 1.8em;
 				}
 			}
+
 			.myform {
 				width: 58%;
 				height: 390px;
 			}
+
 			#stylized #form {
 				width: 100%;
+
 				ul {
 					height: auto;
 					display: block;
+
 					li,
 					li:nth-of-type(3) {
 						height: 50px;
+
 						label {
 							width: 20%;
 							line-height: 40px;
 							font-size: 0.85em;
 						}
+
 						input {
 							width: 75%;
 							height: 30px;
 						}
+
 						textarea {
 							width: 75%;
 						}
+
 						input:focus,
 						textarea:focus {
 							background-color: $color-white-bg;
 							outline: 0;
 						}
+
 						#submit {
 							width: 25%;
 							font-size: 1.15em;
+
 							&:hover {
 								cursor: pointer;
 							}
 						}
 					}
+
 					li:nth-of-type(3) {
 						height: 265px;
 					}
 				}
 			}
+
 			main#context {
 				width: 55%;
 				margin: 0 2% 2% 3%;
 				line-height: 1.8em;
 				font-size: 0.8em;
 			}
+
 			span.context_title {
 				font-size: 1.1em;
 			}
 			/*rightside content section within content div*/
 			#content_section {
 				width: 76%;
-				margin: 0 0 20px 0;
+				margin: 0 0 20px;
+
 				h1 {
 					font-size: 1.35em;
 				}
 				/*Index page banner box*/
 				#bannerbox {
 					height: 330px;
-					hgroup{
 
-                        width: 60%;
+					hgroup {
+						width: 60%;
 
-                        h1{
+						h1 {
+							font-size: 2.1rem;
+							letter-spacing: -0.08em;
+						}
 
-                            font-size: 2.1rem;
-                            letter-spacing: -0.08em;
+						h2 {
+							font-size: 1.05rem;
+							letter-spacing: -0.08em;
+						}
+					}
 
-                        }
-                        h2{
-                            font-size: 1.05rem;
-                            letter-spacing: -0.08em;
-
-                        }
-                    }
 					#bannerboximg {
 						width: 58%;
 						margin-top: 2em;
 					}
+
 					#apDiv1 {
 						width: 27%;
 
 						a {
 							font-size: 0.85em;
+
 							&:hover {
 								font-size: 0.9em;
 							}
 						}
 					}
+
 					#btn_div {
 						height: 150px;
 						width: 100px;
@@ -2710,6 +2970,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: 235px;
+
 					h1 {
 						font-size: 0.9em;
 					}
@@ -2717,16 +2978,20 @@ figure {
 					figure.product_box {
 						width: 25%;
 						margin-bottom: 15px;
+
 						.product_boximg {
 							width: 85%;
 							height: 135px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 60px;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
+
 							span.price:first-of-type {
 								color: $login-color;
 							}
+
 							span.price {
 								height: 25px;
 								line-height: 25px;
@@ -2738,6 +3003,7 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 18%;
+
 								&:hover {
 									cursor: pointer;
 								}
@@ -2745,34 +3011,42 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					height: 180px;
+
 					h1 {
 						height: 30px;
 						font-size: 0.95em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							height: 150px;
-							;
 							padding: 1%;
+
 							h1 {
 								line-height: 45px;
 								text-indent: 4%;
 							}
+
 							p {
 								width: 74%;
 								font-size: 0.8em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								font-size: 0.8em;
 								width: 24%;
@@ -2780,6 +3054,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 20%;
+
 									&:hover {
 										cursor: pointer;
 									}
@@ -2788,6 +3063,7 @@ figure {
 						}
 					}
 				}
+
 				#pag_search {
 					width: 45%;
 
@@ -2795,35 +3071,44 @@ figure {
 						width: 50%;
 						font-size: 0.9em;
 					}
+
 					label {
 						width: 45%;
 						font-size: 0.7em;
+
 						&:hover {
 							cursor: pointer;
 						}
 					}
 				}
+
 				#pagination {
 					width: 41%;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
+
 					a {
 						width: 32%;
 						font-size: 0.95em;
+
 						&:hover {
 							font-weight: bold;
 						}
 					}
 				}
+
 				#results {
 					clear: both;
 				}
+
 				.pag_buttons {
 					margin: 2% 0;
 					clear: both;
+
 					input[type="submit"],
 					input[type="reset"] {
 						width: 25%;
 						font-size: 1.2em;
+
 						&:hover {
 							background-color: $color-white;
 						}
@@ -2833,27 +3118,31 @@ figure {
 			/*leftbar*/
 			#left_bar {
 				width: 23%;
-				margin: 0 0 5px 0;
+				margin: 0 0 5px;
 				/*Form*/
 				#searchbox {
 					width: 94%;
 					height: 330px;
+
 					#searcher {
 						width: 90%;
 						height: 320px;
 						margin-bottom: 1%;
+
 						h1 {
 							font-size: 1.3em;
-
 						}
+
 						select {
 							width: 80%;
 							font-size: 0.9em;
 						}
+
 						input.find {
 							width: 55%;
 							font-size: 1.1em;
 							outline: none;
+
 							&:hover {
 								outline: none;
 								cursor: pointer;
@@ -2861,22 +3150,29 @@ figure {
 						}
 					}
 				}
+
 				#sec_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
+
 					span {
 						width: 8%;
 					}
+
 					#accordion {
 						font-family: $font-list;
+
 						h3 {
 							font-size: 0.7em;
 						}
+
 						ul {
 							list-style: none;
+
 							li {
-								font-size: 0.75em;
+								font-size: 0.8em;
+
 								&:hover {
 									font-weight: bold;
 									letter-spacing: 0.2em;
@@ -2888,6 +3184,7 @@ figure {
 				}
 			}
 		}
+
 		.spacer {
 			clear: both;
 			height: 1px;
@@ -2895,12 +3192,16 @@ figure {
 		/*Footer*/
 		footer {
 			height: 50px;
+
 			ul.footer_nav {
 				width: 80%;
+
 				li {
 					width: 16.5%;
+
 					a {
 						font-size: 0.6em;
+
 						&:hover {
 							color: $color-orange;
 						}
@@ -2910,20 +3211,22 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 800px) {
 	#Wrapper {
 		width: 94%;
 		padding: 0 1%;
+
 		div#side-bar-toggle-btn {
 			display: none;
 		}
+
 		div#menu-toggle-btn {
 			display: none;
 		}
 		/*header*/
 		header {
 			width: 100%;
+
 			figure#logo {
 				width: 341px;
 			}
@@ -2931,13 +3234,12 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1% 0;
+			margin: 0 0 1%;
+
 			span#signin-box {
 				width: 23.5%;
 
 				a {
-
-
 					font-size: 0.75em;
 
 					&:hover {
@@ -2945,30 +3247,37 @@ figure {
 					}
 				}
 			}
+
 			ul#mobile-nav {
 				display: none;
 			}
+
 			ul#inner-nav {
 				width: 75%;
 				height: 40px;
-				li {
 
+				li {
 					margin-right: 0.2em;
+
 					a {
 						padding: 0 0.5em;
 						font-size: 0.7em;
+
 						&:hover {
 							font-weight: bold;
 						}
+
 						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
 					}
 				}
+
 				li a:hover,
 				li a:visited {
 					background-color: rgba(255, 255, 255, 0.4);
 				}
+
 				li.selected {
 					a:link,
 					a:visited {
@@ -2981,22 +3290,27 @@ figure {
 		#searchbar {
 			height: 50px;
 			margin: 1% 0;
-			input[type="submit"] {
+
+			button.find2 {
 				width: 9%;
 				font-size: 1.1em;
+
 				&:hover {
 					cursor: pointer;
 					font-weight: bold;
 				}
 			}
+
 			#searcher2 {
 				margin: 0;
 				padding: 0.8%;
+
 				label {
 					font-size: 0.9em;
 					width: 22%;
 					text-indent: 1%;
 				}
+
 				select {
 					width: 16.5%;
 					font-size: 0.9em;
@@ -3007,116 +3321,131 @@ figure {
 		/*Content*/
 		#content {
 			margin: 1% 0;
+
 			h1 {
 				font-size: 1.2em;
 			}
+
 			p {
 				line-height: 1.6em;
 				font-size: 0.8em;
 			}
+
 			aside.text_boxa {
 				width: 32.50%;
+
 				h1 {
 					font-size: 0.75em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.7em;
 					line-height: 1.7em;
 				}
 			}
+
 			.myform {
 				width: 58%;
 				height: 390px;
 			}
+
 			#stylized #form {
 				width: 100%;
+
 				ul {
 					height: auto;
 					display: block;
+
 					li,
 					li:nth-of-type(3) {
 						height: 50px;
+
 						label {
 							font-size: 0.8em;
 						}
+
 						input {
 							width: 75%;
 							height: 30px;
 						}
+
 						textarea {
 							width: 75%;
 						}
+
 						input:focus,
 						textarea:focus {
 							background-color: $color-white-bg;
 							outline: 0;
 						}
+
 						#submit {
 							width: 25%;
 							font-size: 1.1em;
+
 							&:hover {
 								cursor: pointer;
 							}
 						}
 					}
+
 					li:nth-of-type(3) {
 						height: 265px;
 					}
 				}
 			}
+
 			main#context {
 				width: 55%;
 				margin: 0 2% 2% 3%;
 				line-height: 1.8em;
 				font-size: 0.8em;
 			}
+
 			span.context_title {
 				font-size: 1em;
 			}
 			/*rightside content section within content div*/
 			#content_section {
 				width: 76%;
-				margin: 0 0 20px 0;
+				margin: 0 0 20px;
+
 				h1 {
 					font-size: 1.3em;
 				}
 				/*Index page banner box*/
 				#bannerbox {
 					height: 310px;
-					hgroup{
 
-                        width: 55%;
+					hgroup {
+						width: 55%;
 
+						h1 {
+							font-size: 1.9em;
+						}
 
-                        h1{
-
-                            font-size: 1.9em;
-
-
-
-                        }
-                        h2{
-                            font-size: 1em;
-
-
-                        }
-                    }
-					#bannerboximg {
-
-						width:65%;
-
+						h2 {
+							font-size: 1em;
+						}
 					}
+
+					#bannerboximg {
+						width: 65%;
+					}
+
 					#apDiv1 {
 						width: 23%;
 
 						a {
 							font-size: 0.75em;
+
 							&:hover {
 								font-size: 0.8em;
 							}
 						}
 					}
+
 					#btn_div {
 						height: 150px;
 						width: 100px;
@@ -3127,6 +3456,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: 235px;
+
 					h1 {
 						font-size: 0.9em;
 					}
@@ -3134,27 +3464,31 @@ figure {
 					figure.product_box {
 						width: 25%;
 						margin-bottom: 15px;
+
 						.product_boximg {
 							width: 97%;
 							height: 135px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 60px;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
+
 							span.price:first-of-type {
 								color: $login-color;
 							}
+
 							span.price {
 								height: 25px;
 								line-height: 25px;
-								font-size: 0.6em;
+								font-size: 0.65em;
 								width: 76%;
 								text-indent: 3%;
 							}
 							/*Price Icon*/
 							img.product_icon {
-
 								width: 19%;
+
 								&:hover {
 									cursor: pointer;
 								}
@@ -3162,33 +3496,42 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					height: 180px;
+
 					h1 {
 						height: 30px;
 						font-size: 0.95em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							height: 150px;
 							padding: 1%;
+
 							h1 {
 								line-height: 45px;
 								text-indent: 4%;
 							}
+
 							p {
 								width: 74%;
 								font-size: 0.8em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								font-size: 0.8em;
 								width: 24%;
@@ -3196,6 +3539,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 23%;
+
 									&:hover {
 										cursor: pointer;
 									}
@@ -3204,41 +3548,52 @@ figure {
 						}
 					}
 				}
+
 				#pag_search {
 					width: 49%;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
+
 					select {
 						width: 50%;
 						font-size: 0.85em;
 					}
+
 					label {
 						width: 43%;
 						font-size: 0.65em;
+
 						&:hover {
 							cursor: pointer;
 						}
 					}
 				}
+
 				#pagination {
 					width: 43%;
+
 					a {
 						width: 32%;
 						font-size: 0.9em;
+
 						&:hover {
 							font-weight: bold;
 						}
 					}
 				}
+
 				#results {
 					clear: both;
 				}
+
 				.pag_buttons {
 					margin: 2% 0;
 					clear: both;
+
 					input[type="submit"],
 					input[type="reset"] {
 						width: 25%;
 						font-size: 1.2em;
+
 						&:hover {
 							background-color: $color-white;
 						}
@@ -3248,27 +3603,31 @@ figure {
 			/*leftbar*/
 			#left_bar {
 				width: 23%;
-				margin: 0 0 5px 0;
+				margin: 0 0 5px;
 				/*Form*/
 				#searchbox {
 					width: 94%;
 					height: 330px;
+
 					#searcher {
 						width: 90%;
 						height: 320px;
 						margin-bottom: 1%;
+
 						h1 {
 							font-size: 1.25em;
-
 						}
+
 						select {
 							width: 80%;
 							font-size: 0.9em;
 						}
+
 						input.find {
 							width: 55%;
 							font-size: 1.1em;
 							outline: none;
+
 							&:hover {
 								outline: none;
 								cursor: pointer;
@@ -3276,22 +3635,29 @@ figure {
 						}
 					}
 				}
+
 				#sec_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
+
 					span {
 						width: 8%;
 					}
+
 					#accordion {
 						font-family: $font-list;
+
 						h3 {
 							font-size: 0.7em;
 						}
+
 						ul {
 							list-style: none;
+
 							li {
-								font-size: 0.7em;
+								font-size: 0.8em;
+
 								&:hover {
 									font-weight: bold;
 									letter-spacing: 0.2em;
@@ -3303,6 +3669,7 @@ figure {
 				}
 			}
 		}
+
 		.spacer {
 			clear: both;
 			height: 1px;
@@ -3310,12 +3677,16 @@ figure {
 		/*Footer*/
 		footer {
 			height: 50px;
+
 			ul.footer_nav {
 				width: 90%;
+
 				li {
 					width: 16.5%;
+
 					a {
 						font-size: 0.65em;
+
 						&:hover {
 							color: $color-orange;
 						}
@@ -3325,20 +3696,22 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 768px) {
 	#Wrapper {
 		width: 94%;
 		padding: 0 1%;
+
 		div#side-bar-toggle-btn {
 			display: none;
 		}
+
 		div#menu-toggle-btn {
 			display: none;
 		}
 		/*header*/
 		header {
 			width: 100%;
+
 			figure#logo {
 				width: 341px;
 			}
@@ -3346,44 +3719,48 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1% 0;
+
 			span#signin-box {
-				width: 23.5%;
+				width: 27%;
 
 				a {
-
-
-					font-size: 0.75em;
+					font-size: 0.7em;
 
 					&:hover {
 						font-weight: bold;
 					}
 				}
 			}
+
 			ul#mobile-nav {
 				display: none;
 			}
+
 			ul#inner-nav {
-				width: 75%;
+				width: 70%;
 				height: 40px;
+
 				li {
-
 					margin-right: 0.2em;
-					a {
 
+					a {
 						font-size: 0.7em;
+
 						&:hover {
 							font-weight: bold;
 						}
+
 						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
 					}
 				}
+
 				li a:hover,
 				li a:visited {
 					background-color: rgba(255, 255, 255, 0.4);
 				}
+
 				li.selected {
 					a:link,
 					a:visited {
@@ -3396,22 +3773,27 @@ figure {
 		#searchbar {
 			height: 50px;
 			margin: 1% 0;
-			input[type="submit"] {
+
+			button.find2 {
 				width: 9%;
 				font-size: 1.1em;
+
 				&:hover {
 					cursor: pointer;
 					font-weight: bold;
 				}
 			}
+
 			#searcher2 {
 				margin: 0;
 				padding: 0.8%;
+
 				label {
 					font-size: 0.9em;
 					width: 22%;
 					text-indent: 1%;
 				}
+
 				select {
 					width: 16.5%;
 					font-size: 0.9em;
@@ -3422,114 +3804,130 @@ figure {
 		/*Content*/
 		#content {
 			margin: 1% 0;
+
 			h1 {
 				font-size: 1.2em;
 			}
+
 			p {
 				line-height: 1.6em;
 			}
+
 			aside.text_boxa {
 				width: 32.50%;
+
 				h1 {
 					font-size: 0.7em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.65em;
 					line-height: 1.7em;
 				}
 			}
+
 			.myform {
 				width: 58%;
 				height: 390px;
 			}
+
 			#stylized #form {
 				width: 100%;
+
 				ul {
 					height: auto;
 					display: block;
+
 					li,
 					li:nth-of-type(3) {
 						height: 50px;
+
 						label {
 							font-size: 0.8em;
 						}
+
 						input {
 							width: 75%;
 							height: 30px;
 						}
+
 						textarea {
 							width: 75%;
 						}
+
 						input:focus,
 						textarea:focus {
 							background-color: $color-white-bg;
 							outline: 0;
 						}
+
 						#submit {
 							width: 25%;
 							font-size: 1.1em;
+
 							&:hover {
 								cursor: pointer;
 							}
 						}
 					}
+
 					li:nth-of-type(3) {
 						height: 265px;
 					}
 				}
 			}
+
 			main#context {
 				width: 55%;
 				margin: 0 2% 2% 3%;
 				line-height: 1.8em;
 				font-size: 0.8em;
 			}
+
 			span.context_title {
 				font-size: 1em;
 			}
 			/*rightside content section within content div*/
 			#content_section {
 				width: 76%;
-				margin: 0 0 20px 0;
+				margin: 0 0 20px;
+
 				h1 {
 					font-size: 1.25em;
 				}
 				/*Index page banner box*/
 				#bannerbox {
 					height: 310px;
-					hgroup{
 
-                        width: 71%;
+					hgroup {
+						width: 71%;
 
+						h1 {
+							font-size: 1.85em;
+						}
 
-                        h1{
-
-                            font-size: 1.85em;
-
-
-                        }
-                        h2{
-                            font-size: 0.9em;
-
-
-                        }
-                    }
-					#bannerboximg {
-
-						width: 68%;
-
+						h2 {
+							font-size: 0.9em;
+						}
 					}
+
+					#bannerboximg {
+						width: 68%;
+					}
+
 					#apDiv1 {
-						width: 21%;
+						width: 25%;
 
 						a {
 							font-size: 0.7em;
+
 							&:hover {
 								font-size: 0.75em;
 							}
 						}
 					}
+
 					#btn_div {
 						height: 150px;
 						width: 100px;
@@ -3540,6 +3938,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: 235px;
+
 					h1 {
 						font-size: 0.9em;
 					}
@@ -3547,20 +3946,24 @@ figure {
 					figure.product_box {
 						width: 25%;
 						margin-bottom: 15px;
+
 						.product_boximg {
 							width: 97%;
 							height: 135px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 60px;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
+
 							span.price:first-of-type {
 								color: $login-color;
 							}
+
 							span.price {
 								height: 25px;
-								line-height: 25px;
-								font-size: 0.55em;
+								line-height: 14px;
+								font-size: 0.65em;
 								width: 78%;
 								text-indent: 1%;
 							}
@@ -3568,6 +3971,7 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 19%;
+
 								&:hover {
 									cursor: pointer;
 								}
@@ -3575,40 +3979,50 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					height: 180px;
+
 					h1 {
 						height: 30px;
 						font-size: 0.95em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							height: 150px;
 							padding: 1%;
+
 							h1 {
 								line-height: 45px;
 								text-indent: 4%;
 							}
+
 							p {
 								width: 74%;
 								font-size: 0.8em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
-								font-size: 0.8em;
+								font-size: 0.7em;
 								width: 24%;
 								text-indent: 1%;
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 23%;
+
 									&:hover {
 										cursor: pointer;
 									}
@@ -3617,42 +4031,52 @@ figure {
 						}
 					}
 				}
+
 				#pag_search {
 					width: 49%;
-					margin: 0 0 2% 0;
+					margin: 0 0 2%;
+
 					select {
 						width: 50%;
 						font-size: 0.8em;
 					}
+
 					label {
 						width: 45%;
 						font-size: 0.65em;
+
 						&:hover {
 							cursor: pointer;
 						}
 					}
 				}
+
 				#pagination {
 					width: 50%;
 
 					a {
 						width: 32%;
 						font-size: 0.9em;
+
 						&:hover {
 							font-weight: bold;
 						}
 					}
 				}
+
 				#results {
 					clear: both;
 				}
+
 				.pag_buttons {
 					margin: 2% 0;
 					clear: both;
+
 					input[type="submit"],
 					input[type="reset"] {
 						width: 25%;
 						font-size: 1.2em;
+
 						&:hover {
 							background-color: $color-white;
 						}
@@ -3662,27 +4086,31 @@ figure {
 			/*leftbar*/
 			#left_bar {
 				width: 23%;
-				margin: 0 0 5px 0;
+				margin: 0 0 5px;
 				/*Form*/
 				#searchbox {
 					width: 94%;
 					height: 330px;
+
 					#searcher {
 						width: 90%;
 						height: 320px;
 						margin-bottom: 1%;
+
 						h1 {
 							font-size: 1.15em;
-
 						}
+
 						select {
 							width: 80%;
 							font-size: 0.9em;
 						}
+
 						input.find {
 							width: 55%;
 							font-size: 1.1em;
 							outline: none;
+
 							&:hover {
 								outline: none;
 								cursor: pointer;
@@ -3690,22 +4118,29 @@ figure {
 						}
 					}
 				}
+
 				#sec_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
+
 					span {
 						width: 8%;
 					}
+
 					#accordion {
 						font-family: $font-list;
+
 						h3 {
 							font-size: 0.7em;
 						}
+
 						ul {
 							list-style: none;
+
 							li {
-								font-size: 0.65em;
+								font-size: 0.8em;
+
 								&:hover {
 									font-weight: bold;
 									letter-spacing: 0.2em;
@@ -3717,6 +4152,7 @@ figure {
 				}
 			}
 		}
+
 		.spacer {
 			clear: both;
 			height: 1px;
@@ -3724,12 +4160,16 @@ figure {
 		/*Footer*/
 		footer {
 			height: 50px;
+
 			ul.footer_nav {
 				width: 95%;
+
 				li {
 					width: 16.5%;
+
 					a {
 						font-size: 0.65em;
+
 						&:hover {
 							color: $color-orange;
 						}
@@ -3739,19 +4179,19 @@ figure {
 		}
 	}
 }
-
 //mobile
 @media only screen and (max-width: 667px) {
 	#Wrapper {
 		width: 98%;
+
 		button#side-bar-toggle-btn {
 			display: block;
 			position: fixed;
-			left: 93%;
+			left: 0.25em;
 			z-index: 4;
-			top: 16.2em;
-			width: 50px;
-			height: 150px;
+			top: 4.8em;
+			width: 150px;
+			height: 45px;
 			background-color: $color-white;
 			@include box-sizing($type: border-box);
 			border: 2px solid $color-orange;
@@ -3759,6 +4199,7 @@ figure {
 			line-height: 23px;
 			text-align: center;
 			font-size: 0.9em;
+
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
@@ -3766,6 +4207,7 @@ figure {
 				color: $color-white;
 			}
 		}
+
 		button#menu-toggle-btn {
 			display: block;
 			position: fixed;
@@ -3781,6 +4223,7 @@ figure {
 			border: 2px solid $color-black;
 			color: $color-black;
 			font-size: 0.9em;
+
 			&:hover {
 				background-color: $color-black;
 				cursor: pointer;
@@ -3789,25 +4232,31 @@ figure {
 				border: none;
 			}
 		}
+
 		header {
-			height: 74px;
+			height: 80px;
 			width: 100%;
+
 			figure#logo {
 				width: 280px;
 			}
 		}
+
 		nav#main-nav {
 			height: 30px;
-			span#signin-box {
-				width: 25.5%;
 
-				 a {
+			span#signin-box {
+				width: 31.5%;
+
+				a {
 					font-size: 0.8em;
 				}
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				background: $color-black;
@@ -3817,12 +4266,14 @@ figure {
 				height: auto;
 				top: 7.4em;
 				padding: 1%;
+
 				li {
 					width: 100%;
 					display: block;
 					height: 50px;
 					float: none;
 					border-bottom: 2px solid $color-black;
+
 					a {
 						font-size: 1.1em;
 						display: block;
@@ -3834,6 +4285,7 @@ figure {
 						text-align: center;
 						color: $color-black;
 						background-color: $color-orange;
+
 						&:hover {
 							text-decoration: none;
 							display: block;
@@ -3848,50 +4300,60 @@ figure {
 							color: $color-white;
 							border-bottom: none;
 						}
-						&:visited{
+
+						&:visited {
 							background-color: $color-white;
 							color: $color-black;
-						 }
+						}
 					}
 				}
+
 				li.selected {
 					a {
 						&::hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
+			button.find2 {
 				width: 10%;
 				font-size: 1em;
 			}
+
 			#searcher2 {
 				label {
 					font-size: 0.8em;
 					width: 20%;
 				}
+
 				select {
 					width: 16.8%;
 					font-size: 0.9em;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.2em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				height: auto;
@@ -3899,76 +4361,85 @@ figure {
 				float: left;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.9em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.85em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
 				height: 430px;
 				margin-bottom: 5%;
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.85em;
 			}
+
 			span.context_title {
 				font-size: 1.2em;
 			}
+
 			#content_section {
 				width: 100%;
+
 				h1 {
 					font-size: 1.3em;
 				}
+
 				#pag_search {
 					width: 43%;
+
 					select {
 						width: 50%;
 						font-size: 0.9em;
 					}
+
 					label {
 						font-size: 0.7em;
 					}
 				}
+
 				#pagination {
 					width: 44%;
 				}
+
 				#bannerbox {
 					height: 335px;
 					width: 99%;
 
-					hgroup{
+					hgroup {
+						width: 90%;
 
-                        width: 90%;
+						h1 {
+							font-size: 2.2rem;
+						}
 
+						h2 {
+							font-size: 1.05rem;
+						}
+					}
 
-                        h1{
-
-                            font-size: 2.2rem;
-
-
-                        }
-                        h2{
-                            font-size: 1.05rem;
-
-
-                        }
-                    }
 					#bannerboximg {
-
 						margin-top: 2em;
 						width: 68%;
 					}
+
 					#apDiv1 {
-						margin: 16% 0% 0 1%;
+						margin: 16% 0 0 1%;
 						width: 27%;
+
 						a {
 							font-size: 0.9em;
+
 							&:hover {
 								font-size: 0.95em;
 							}
@@ -3980,6 +4451,7 @@ figure {
 				form #results {
 					display: inline-block;
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.9em;
@@ -3991,15 +4463,21 @@ figure {
 						width: 25%;
 						float: left;
 						margin-bottom: 15px;
+
 						img.product_boximg {
 							width: 90%;
 							height: 125px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0 0;
-							span.price:first-of-type {}
+							padding: 7% 0 0;
+
+							span.price:first-of-type {
+								line-height: 25px;
+							}
+
 							span.price {
 								font-size: 0.7em;
 								width: 80%;
@@ -4008,44 +4486,54 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 18%;
+
 								&:hover {}
 							}
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 170px;
 					width: 100%;
+
 					h1 {
 						height: 30px;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						display: inline-block;
 						float: left;
 						margin-bottom: 15px;
+
 						.product_boximg_longer {
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							height: 140px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 45px;
 								text-indent: 4%;
 							}
+
 							p {
 								float: right;
 								width: 70%;
 								font-size: 0.75em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								height: auto;
 								line-height: 50px;
@@ -4055,44 +4543,58 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 20%;
+
 									&:hover {}
 								}
 							}
 						}
 					}
 				}
+
 				.product_boxes_longer .product-box_longer {
 					max-height: 200px;
 				}
 			}
+
 			#left_bar {
-				position: absolute;
+				position: fixed;
+    		top: 8em;
 				z-index: 100;
 				left: -205px;
 				width: 191px;
 				height: auto;
 				background-color: $color-white;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.75em;
+
+				#sec_nav {
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.85em;
 						}
@@ -4100,9 +4602,11 @@ figure {
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.7em;
@@ -4110,54 +4614,62 @@ figure {
 				}
 			}
 		}
-
 	}
+
 	p.copyr {
 		width: 90%;
-
 	}
 }
-
-
 @media only screen and (max-width: 640px) {
 	#Wrapper {
 		width: 98%;
-		div#side-bar-toggle-btn {
 
-			left: 92%;
+		button#side-bar-toggle-btn {
+			left: 0.25em;
+			top: 4.4em;
+
 			&:hover {
 				cursor: pointer;
 			}
 		}
-		div#menu-toggle-btn {
-			left: 2%;
-			top: 5.2em;
+
+		button#menu-toggle-btn {
+			left: 83%;
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
 			}
 		}
+
 		header {
-			height: 74px;
+			height: 80px;
+
 			figure#logo {
-				width: 280px;
+				width: 261px;
 			}
 		}
+
 		nav#main-nav {
 			height: 25px;
+
 			span#signin-box {
 				width: 27.5%;
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				top: 6.9em;
+
 				li {
 					display: block;
+
 					a {
 						font-size: 1.05em;
+
 						&:hover,
 						&:visited {
 							text-decoration: none;
@@ -4165,116 +4677,133 @@ figure {
 						}
 					}
 				}
+
 				li.selected {
 					a {
 						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
+			button.find2 {
 				width: 10%;
 				font-size: 1em;
 			}
+
 			#searcher2 {
 				label {
 					font-size: 0.75em;
 					width: 20%;
 				}
+
 				select {
 					width: 16.8%;
 					font-size: 0.8em;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.25em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.9em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.80em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
 				height: 430px;
 				margin-bottom: 5%;
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.85em;
 			}
+
 			span.context_title {
 				font-size: 1.2em;
 			}
+
 			#content_section {
 				width: 100%;
+
 				h1 {
 					font-size: 1.3em;
 				}
+
 				#pag_search {
 					width: 43%;
+
 					select {
 						width: 50%;
 						font-size: 0.9em;
 					}
+
 					label {
 						font-size: 0.65em;
 					}
 				}
+
 				#pagination {
 					width: 44%;
 				}
+
 				#bannerbox {
 					height: 335px;
-					hgroup{
 
-                        width: 90%;
+					hgroup {
+						width: 90%;
 
+						h1 {
+							font-size: 2.1em;
+						}
 
-                        h1{
+						h2 {
+							font-size: 1em;
+						}
+					}
 
-                            font-size: 2.1em;
-
-
-                        }
-                        h2{
-                            font-size: 1em;
-
-
-                        }
-                    }
 					#bannerboximg {
 						width: 68%;
-
-
 					}
-					#apDiv1 {
 
+					#apDiv1 {
 						width: 27%;
+
 						a {
 							font-size: 0.85em;
+
 							&:hover {
 								font-size: 0.9em;
 							}
@@ -4285,6 +4814,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.9em;
@@ -4296,14 +4826,16 @@ figure {
 						width: 25%;
 						float: left;
 						margin-bottom: 15px;
+
 						img.product_boximg {
 							width: 90%;
 							height: 125px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
 
 							span.price {
 								font-size: 0.65em;
@@ -4313,43 +4845,53 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 18%;
+
 								&:hover {}
 							}
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 170px;
 					width: 100%;
+
 					h1 {
 						height: 30px;
 						margin: 0;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						.product_boximg_longer {
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							height: 130px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 45px;
 								text-indent: 6%;
 							}
+
 							p {
 								float: right;
 								width: 70%;
 								font-size: 0.8em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 50px;
 								font-size: 0.75em;
@@ -4358,54 +4900,68 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 20%;
+
 									&:hover {}
 								}
 							}
 						}
 					}
 				}
+
 				.product_boxes_longer .product-box_longer {
 					max-height: 200px;
 				}
 
 				.pag_buttons {
 					margin: 2% 0;
+
 					input[type="submit"],
 					input[type="reset"] {
 						width: 25%;
 						font-size: 1.1em;
+
 						&:hover {
 							background-color: $color-white;
 						}
 					}
 				}
 			}
+
 			#left_bar {
-				position: absolute;
 				width: 191px;
 				height: auto;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.75em;
+				top: 7.2em;
+
+				#sec_nav {
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						input.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.9em;
 						}
@@ -4413,9 +4969,11 @@ figure {
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.65em;
@@ -4425,43 +4983,56 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 600px) {
 	#Wrapper {
 		width: 98%;
+
 		button#side-bar-toggle-btn {
-			left: 92%;
+			left: 0.25em;
 
 			&:hover {
 				cursor: pointer;
 			}
 		}
+
 		button#menu-toggle-btn {
 			left: 81%;
+			top: 0.5em;
 
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
 			}
 		}
+
 		header {
-			height: 74px;
+			height: 80px;
+			#Wrapper header figure#logo {
+			    width: 260px;
+			}
 		}
+
 		nav#main-nav {
 			height: 25px;
+
 			span#signin-box {
 				width: 28.5%;
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				top: 6.9em;
+
 				li {
 					display: block;
+
 					a {
 						font-size: 1.05em;
+
 						&:hover,
 						&:visited {
 							text-decoration: none;
@@ -4469,117 +5040,135 @@ figure {
 						}
 					}
 				}
+
 				li.selected {
 					a {
 						&::hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
+			button.find2 {
 				width: 10%;
 				font-size: 1em;
 			}
+
 			#searcher2 {
 				label {
 					font-size: 0.7em;
 					width: 20%;
 				}
+
 				select {
 					width: 16.8%;
 					font-size: 0.8em;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.2em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.9em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.75em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
 				height: 430px;
 				margin-bottom: 5%;
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.85em;
 			}
+
 			span.context_title {
 				font-size: 1.2em;
 			}
+
 			#content_section {
 				width: 100%;
+
 				h1 {
 					font-size: 1.3em;
 				}
+
 				#pag_search {
 					width: 46%;
+
 					select {
 						width: 40%;
 						font-size: 0.9em;
 					}
+
 					label {
 						font-size: 0.7em;
 						width: 45%;
 					}
 				}
+
 				#pagination {
 					width: 44%;
 				}
+
 				#bannerbox {
 					height: 310px;
-					hgroup{
 
-                        width: 90%;
+					hgroup {
+						width: 90%;
 
+						h1 {
+							font-size: 2em;
+						}
 
-                        h1{
+						h2 {
+							font-size: 0.95em;
+						}
+					}
 
-                            font-size: 2em;
-
-
-                        }
-                        h2{
-                            font-size: 0.95em;
-
-
-                        }
-                    }
 					#bannerboximg {
 						width: 68%;
 						margin-top: 2em;
-
 					}
-					#apDiv1 {
 
+					#apDiv1 {
 						width: 27%;
+
 						a {
 							font-size: 0.85em;
+
 							&:hover {
 								font-size: 0.9em;
 							}
@@ -4590,6 +5179,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.9em;
@@ -4601,14 +5191,16 @@ figure {
 						width: 25%;
 						float: left;
 						margin-bottom: 15px;
+
 						img.product_boximg {
 							width: 90%;
 							height: 125px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
 
 							span.price {
 								font-size: 0.6em;
@@ -4622,38 +5214,47 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 170px;
 					width: 100%;
+
 					h1 {
 						height: 30px;
 						margin: 0;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						.product_boximg_longer {
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							height: 130px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 45px;
 								text-indent: 6%;
 							}
+
 							p {
 								float: right;
 								width: 70%;
 								font-size: 0.8em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 50px;
 								font-size: 0.75em;
@@ -4662,6 +5263,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 23%;
+
 									&:hover {}
 								}
 							}
@@ -4669,33 +5271,43 @@ figure {
 					}
 				}
 			}
+
 			#left_bar {
-				position: absolute;
-				z-index: 100;
+				position: fixed;
+
 				width: 191px;
 				height: auto;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.75em;
+
+				#sec_nav {
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						input.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.9em;
 						}
@@ -4705,19 +5317,23 @@ figure {
 
 			.pag_buttons {
 				margin: 2% 0;
+
 				input[type="submit"],
 				input[type="reset"] {
 					width: 30%;
 					font-size: 1em;
+
 					&:hover {
 						background-color: $color-white;
 					}
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.6em;
@@ -4727,17 +5343,18 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 568px) {
 	#Wrapper {
 		width: 98%;
-		button#side-bar-toggle-btn {
 
-			left: 92%;
+		button#side-bar-toggle-btn {
+			left: 0.25em;
+
 			&:hover {
 				cursor: pointer;
 			}
 		}
+
 		button#menu-toggle-btn {
 			left: 78%;
 
@@ -4746,27 +5363,36 @@ figure {
 				cursor: pointer;
 			}
 		}
+
 		header {
-			height: 74px;
+			height: 80px;
+
 			figure#logo {
-				width: 290px;
+				width: 255px;
 			}
 		}
+
 		nav#main-nav {
 			height: 25px;
+
 			span#signin-box {
-				width: 30.5%;
+				width: 34.5%;
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				top: 6.2em;
+
 				li {
 					display: block;
+
 					a {
 						font-size: 1em;
+
 						&:hover,
 						&:visited {
 							text-decoration: none;
@@ -4774,121 +5400,139 @@ figure {
 						}
 					}
 				}
+
 				li.selected {
 					a {
 						&::hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
+			button.find2{
 				width: 10%;
 				font-size: 1em;
 			}
+
 			#searcher2 {
 				label {
 					font-size: 0.65em;
 					width: 23%;
 				}
+
 				select {
 					width: 15.4%;
 					font-size: 0.75em;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.35em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.85em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.75em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
 				height: 430px;
 				margin-bottom: 5%;
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.8em;
 			}
+
 			span.context_title {
 				font-size: 1.1em;
 			}
+
 			#content_section {
 				width: 100%;
+
 				h1 {
-					font-size: 1.2em;
+					font-size: 1.3em;
 				}
+
 				#pag_search {
 					width: 46%;
+
 					select {
 						width: 40%;
 						font-size: 0.9em;
 					}
+
 					label {
 						font-size: 0.65em;
 						width: 45%;
 					}
 				}
+
 				#pagination {
 					width: 47%;
+
 					a {
-							width: 30%;
-							font-size: 0.8em;
+						width: 30%;
+						font-size: 0.8em;
 					}
 				}
+
 				#bannerbox {
 					height: 310px;
-					hgroup{
 
-                        width: 90%;
+					hgroup {
+						width: 90%;
 
+						h1 {
+							font-size: 1.9em;
+						}
 
-                        h1{
-
-                            font-size: 1.9em;
-
-
-                        }
-                        h2{
-                            font-size: 0.9em;
-
-
-                        }
-                    }
-					#bannerboximg {
-
-						width: 68%;
-
+						h2 {
+							font-size: 0.9em;
+						}
 					}
-					#apDiv1 {
 
+					#bannerboximg {
+						width: 68%;
+					}
+
+					#apDiv1 {
 						width: 27%;
+
 						a {
 							font-size: 0.8em;
+
 							&:hover {
 								font-size: 0.85em;
 							}
@@ -4899,6 +5543,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.85em;
@@ -4910,32 +5555,39 @@ figure {
 						width: 25%;
 						float: left;
 						margin-bottom: 15px;
+
 						img.product_boximg {
 							width: 90%;
 							height: 125px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 8.5% 0 0 0;
+							padding: 8.5% 0 0;
 
 							span.price {
-								font-size: 0.54em;
+								font-size: 0.7em;
 								width: 79%;
+							}
+
+							span.price:first-of-type {
+								line-height: 14px;
 							}
 							/*Price Icon*/
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 17%;
-
 							}
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 170px;
 					width: 100%;
+
 					h1 {
 						height: 30px;
 						margin: 0;
@@ -4943,28 +5595,35 @@ figure {
 						line-height: 30px;
 						text-indent: 6%;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						.product_boximg_longer {
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							height: 130px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 30px;
 								text-indent: 6%;
 							}
+
 							p {
 								float: right;
 								width: 70%;
 								font-size: 0.8em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 50px;
 								font-size: 0.75em;
@@ -4973,6 +5632,7 @@ figure {
 								/*Price Icon*/
 								.product_icon_longer {
 									width: 23%;
+
 									&:hover {}
 								}
 							}
@@ -4980,31 +5640,41 @@ figure {
 					}
 				}
 			}
+
 			#left_bar {
-				position: absolute;
+				position: fixed;
 				height: auto;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.7em;
+
+				#sec_nav{
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						input.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.9em;
 						}
@@ -5012,9 +5682,11 @@ figure {
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.55em;
@@ -5024,48 +5696,59 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 480px) {
 	#Wrapper {
 		width: 98%;
-		button#side-bar-toggle-btn {
 
-			left: 90%;
+		button#side-bar-toggle-btn {
+			left: 0.25em;
+			top: 3.8em;
+
 			&:hover {
 				cursor: pointer;
 			}
 		}
+
 		button#menu-toggle-btn {
 			left: 83%;
-			width:16%;
-			top:0.5em;
+			width: 16%;
+			top: 0.5em;
+
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
 			}
 		}
+
 		header {
-			height: 65px;
+			height: 70px;
+
 			figure#logo {
-				height: 61px;
-				width: 260px;
+				width: 225px;
 			}
 		}
+
 		nav#main-nav {
 			height: 25px;
+
 			span#signin-box {
-				width: 35.5%;
+				width: 38.5%;
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				top: 6.1em;
+
 				li {
 					display: block;
+
 					a {
 						font-size: 1.1em;
+
 						&:hover,
 						&:visited {
 							text-decoration: none;
@@ -5073,56 +5756,82 @@ figure {
 						}
 					}
 				}
+
 				li.selected {
 					a {
 						&::hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
-				width: 10%;
-				font-size: 0.9em;
+			height:auto;
+			button.find2 {
+			    width: 100%;
+			    font-size: 0.9em;
+			    float: none;
+			    display: block;
+					height: 40px;
+					line-height: 40px;
 			}
+
 			#searcher2 {
+				height:auto;
 				label {
-					font-size: 0.65em;
-					width: 26%;
+					font-size: 1em;
+					width: 100%;
+					display:block;
+					text-align:center;
+					height: 40px;
+					line-height: 40px;
 				}
+
 				select {
-					width: 15%;
-					font-size: 0.7em;
+					width: 100%;
+					font-size: 1em;
+					display:block;
+					margin-bottom:0.2em;
+					height:45px;
+					line-height:45px;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.35em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.8em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.7em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
@@ -5132,100 +5841,113 @@ figure {
 
 			#stylized #form {
 				width: 100%;
+
 				ul {
 					height: auto;
 
 					li,
 					li:nth-of-type(3) {
 						height: 50px;
+
 						label {
 							font-size: 0.75em;
 						}
+
 						input {
 							width: 75%;
-
 						}
+
 						textarea {
 							width: 75%;
 						}
+
 						input:focus,
 						textarea:focus {
-
 							outline: 0;
 						}
-						#submit {
 
+						#submit {
 							font-size: 1.1em;
 							margin-left: 20%;
+
 							&:hover {
 								cursor: pointer;
 							}
 						}
 					}
+
 					li:nth-of-type(3) {
 						height: 265px;
 					}
 				}
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.8em;
 			}
+
 			span.context_title {
 				font-size: 1.2em;
 			}
+
 			#content_section {
 				width: 100%;
+				margin-top: 1em;
+
 				h1 {
 					font-size: 1.3em;
 					clear: both;
 				}
+
 				#pag_search {
 					width: 46%;
+
 					select {
 						width: 40%;
 						font-size: 0.9em;
 					}
+
 					label {
 						font-size: 0.65em;
 						width: 50%;
 					}
 				}
+
 				#pagination {
 					width: 49%;
 				}
+
 				#bannerbox {
 					height: auto;
-					hgroup{
-                        position: unset;
-                        width: 97%;
 
+					hgroup {
+						position: unset;
+						width: 97%;
 
-                        h1{
+						h1 {
+							font-size: 1.7em;
+						}
 
-                            font-size: 1.7em;
-
-
-                        }
-                        h2{
-                            font-size: 0.95em;
-
-
-                        }
-                    }
-					#bannerboximg {
-                        margin:0;
-						width: 100%;
-
+						h2 {
+							font-size: 0.95em;
+						}
 					}
+
+					#bannerboximg {
+						margin: 0;
+						width: 100%;
+					}
+
 					#apDiv1 {
-                        float: none;
+						float: none;
 						margin: 5% auto;
 						width: 100%;
 
 						a {
 							font-size: 0.9em;
 							margin-bottom: 1%;
+
 							&:hover {
 								font-size: 1em;
 								margin-bottom: 1%;
@@ -5237,6 +5959,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.9em;
@@ -5247,16 +5970,17 @@ figure {
 						height: auto;
 						width: 38%;
 						float: none;
-
 						margin: 22px;
+
 						img.product_boximg {
 							width: 90%;
 							height: 140px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
 
 							span.price {
 								font-size: 0.7em;
@@ -5270,38 +5994,47 @@ figure {
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 170px;
 					width: 100%;
+
 					h1 {
 						height: 30px;
 						margin: 0;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 180px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							margin: 2.9% 1.5%;
 						}
+
 						figcaption.product_boxdetails_longer {
 							height: 130px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 30px;
 								text-indent: 6%;
 							}
+
 							p {
 								float: right;
 								width: 65%;
 								font-size: 0.75em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 50px;
 								font-size: 0.75em;
@@ -5310,43 +6043,56 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 23%;
+
 									&:hover {}
 								}
 							}
 						}
 					}
 				}
+
 				.product_boxes_longer .product-box_longer {
 					max-height: 200px;
 				}
 			}
+
 			#left_bar {
-				position: absolute;
+				position: fixed;
 				width: 200px;
-				left:-200px;
+				left: -200px;
 				height: auto;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.7em;
+				top: 6.7em;
+
+				#sec_nav {
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						input.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.9em;
 						}
@@ -5354,13 +6100,16 @@ figure {
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.55em;
 						line-height: 20px;
+
 						&:hover {
 							line-height: 20px;
 						}
@@ -5370,17 +6119,19 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 414px) {
 	#Wrapper {
 		width: 98%;
-		button#side-bar-toggle-btn {
 
-			left: 89%;
+		button#side-bar-toggle-btn {
+			left: 0.25em;
+			top: 3.5em;
+
 			&:hover {
 				cursor: pointer;
 			}
 		}
+
 		button#menu-toggle-btn {
 			left: 83%;
 			width: 16%;
@@ -5390,28 +6141,40 @@ figure {
 				cursor: pointer;
 			}
 		}
+
 		header {
-			height: 65px;
+			height:70px;
+
 			figure#logo {
-				width: 260px;
+				width: 205px;
 			}
 		}
+
 		nav#main-nav {
 			height: 25px;
+
 			span#signin-box {
-				width: 50.5%;
-				a{ font-size:0.75em;}
+				  width: 38.5%;
+
+				a {
+					font-size: 0.75em;
+				}
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				top: 6.1em;
+
 				li {
 					display: block;
+
 					a {
 						font-size: 1.1em;
+
 						&:hover,
 						&:visited {
 							text-decoration: none;
@@ -5419,126 +6182,143 @@ figure {
 						}
 					}
 				}
+
 				li.selected {
 					a {
 						&::hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
-				width: 10%;
+			button.find2 {
+				width: 100%;
 				font-size: 1em;
 			}
+
 			#searcher2 {
 				label {
-					font-size: 0.65em;
-					width: 28%;
+					font-size: 1em;
+
 				}
+
 				select {
-					width: 14%;
-					font-size: 0.7em;
+					font-size: 0.9em;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.35em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.8em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.7em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
 				height: 430px;
 				margin-bottom: 5%;
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.8em;
 			}
+
 			span.context_title {
 				font-size: 1.2em;
 			}
+
 			#content_section {
 				width: 100%;
+
 				h1 {
 					font-size: 1.3em;
 					clear: both;
 				}
+
 				#pag_search {
 					width: 46%;
+
 					select {
 						width: 40%;
 						font-size: 0.75em;
 					}
+
 					label {
 						font-size: 0.6em;
 						width: 56%;
 					}
 				}
+
 				#pagination {
 					width: 49%;
+
 					a {
 						width: 31%;
 					}
 				}
+
 				#bannerbox {
+					hgroup {
+						width: 97%;
 
-					hgroup{
+						h1 {
+							font-size: 1.6em;
+							height: 35px;
+							line-height: 35px;
+						}
 
-                        width: 97%;
+						h2 {
+							font-size: 0.8em;
+							height: 30px;
+							line-height: 30px;
+						}
+					}
 
-
-                        h1{
-
-                            font-size: 1.6em;
-                            height: 35px;
-                            line-height: 35px;
-
-                        }
-                        h2{
-                            font-size: 0.8em;
-                            height: 30px;
-                            line-height: 30px;
-
-                        }
-                    }
 					#bannerboximg {
 						width: 100%;
-
 					}
+
 					#apDiv1 {
 						margin: 5% auto;
 						width: 100%;
+
 						a {
 							font-size: 0.8em;
 
 							&:hover {
 								font-size: 0.85em;
-
 							}
 						}
 					}
@@ -5547,6 +6327,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.9em;
@@ -5557,64 +6338,74 @@ figure {
 						width: 40%;
 						float: none;
 						margin: 16px;
+
 						img.product_boximg {
 							width: 90%;
 							height: 140px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
 
 							span.price {
-								font-size: 0.65em;
+								font-size: 0.7em;
 								width: 80%;
 							}
 							/*Price Icon*/
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 15%;
-
 							}
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 195px;
+
 					h1 {
 						height: 30px;
 						margin: 0;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 200px;
 						height: 200px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							width: 29%;
 							margin: 2.9% 0;
 						}
+
 						figcaption.product_boxdetails_longer {
 							width: 67%;
 							height: 185px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 30px;
 								text-indent: 8%;
-								background-position: 0% 50%;
-    							background-repeat: no-repeat;
+								background-position: 0 50%;
+								background-repeat: no-repeat;
 							}
+
 							p {
 								float: right;
 								width: 61%;
 								font-size: 0.75em;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 75px;
 								font-size: 0.7em;
@@ -5623,41 +6414,53 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 28%;
+
 									&:hover {}
 								}
 							}
 						}
 					}
 				}
+
 				.product_boxes_longer .product-box_longer {
 					max-height: 200px;
 				}
 			}
+
 			#left_bar {
 				position: absolute;
 				z-index: 100;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.7em;
+
+				#sec_nav {
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						input.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.9em;
 						}
@@ -5665,13 +6468,16 @@ figure {
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.55em;
 						line-height: 20px;
+
 						&:hover {
 							line-height: 20px;
 						}
@@ -5681,48 +6487,62 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 380px) {
 	#Wrapper {
 		width: 98%;
-		button#side-bar-toggle-btn {
 
-			left: 88%;
+		button#side-bar-toggle-btn {
+			left: 0.25em;
+			top: 3.5em;
+
 			&:hover {
 				cursor: pointer;
 			}
 		}
+
 		button#menu-toggle-btn {
-            left: 83%;
-						width: 16%;
-						font-size:0.9em;
+			left: 83%;
+			width: 16%;
+			font-size: 0.9em;
 
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
 			}
 		}
+
 		header {
-			height: 60px;
+			height: 70px;
+
 			figure#logo {
-				width: 240px;
+				width: 180px;
 			}
 		}
+
 		nav#main-nav {
 			height: 25px;
+
 			span#signin-box {
-				width: 41.5%;
+				width: 40.5%;
+				a {
+				    font-size: 0.7em;
+				}
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				top: 5.7em;
+
 				li {
 					display: block;
+
 					a {
 						font-size: 1.1em;
+
 						&:hover,
 						&:visited {
 							text-decoration: none;
@@ -5730,124 +6550,138 @@ figure {
 						}
 					}
 				}
+
 				li.selected {
 					a {
 						&::hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
-				width: 10%;
+			button.find2 {
 				font-size: 1em;
 			}
+
 			#searcher2 {
 				label {
-					font-size: 0.65em;
-					width: 29%;
+					font-size: 0.9em;
+
 				}
+
 				select {
-					width: 14%;
-					font-size: 0.7em;
+					font-size: 0.9em;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.35em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.8em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.7em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
 				height: 430px;
 				margin-bottom: 5%;
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.8em;
 			}
+
 			span.context_title {
 				font-size: 1.2em;
 			}
+
 			#content_section {
 				width: 100%;
+
 				h1 {
 					font-size: 1.3em;
 					clear: both;
 				}
+
 				#pag_search {
 					width: 46%;
+
 					select {
 						width: 42%;
 						font-size: 0.7em;
 					}
+
 					label {
 						font-size: 0.6em;
 						width: 56%;
 					}
 				}
+
 				#pagination {
 					width: 49%;
+
 					a {
 						width: 31%;
 					}
 				}
+
 				#bannerbox {
+					hgroup {
+						width: 99%;
 
-					hgroup{
+						h1 {
+							font-size: 1.5em;
+						}
 
-                        width:99%;
+						h2 {
+							font-size: 0.8em;
+						}
+					}
 
-
-                        h1{
-
-                            font-size: 1.5em;
-
-
-                        }
-                        h2{
-                            font-size: 0.8em;
-
-
-                        }
-                    }
 					#bannerboximg {
 						width: 100%;
-
 					}
+
 					#apDiv1 {
 						margin: 5% auto;
 						width: 100%;
+
 						a {
 							font-size: 0.8em;
 
 							&:hover {
 								font-size: 0.85em;
-
 							}
 						}
 					}
@@ -5856,6 +6690,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.9em;
@@ -5867,14 +6702,16 @@ figure {
 						float: none;
 						margin: 0 auto;
 						display: block;
+
 						img.product_boximg {
 							width: 75%;
 							height: 130px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
 
 							span.price {
 								font-size: 0.7em;
@@ -5884,46 +6721,54 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 15%;
-
 							}
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 195px;
+
 					h1 {
 						height: 30px;
 						margin: 0;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 205px;
 						height: 205px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							width: 35%;
 							margin: 2.9% 0;
 						}
+
 						figcaption.product_boxdetails_longer {
 							width: 60%;
 							height: 200px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 30px;
 								text-indent: 8%;
 							}
+
 							p {
 								float: none;
 								width: 90%;
 								font-size: 0.7em;
 								padding: 5%;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 35px;
 								font-size: 0.7em;
@@ -5933,6 +6778,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 28%;
+
 									&:hover {}
 								}
 							}
@@ -5940,31 +6786,41 @@ figure {
 					}
 				}
 			}
+
 			#left_bar {
-				position: absolute;
+				top: 6em;
 				z-index: 100;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.65em;
+
+				#sec_nav{
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						input.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.9em;
 						}
@@ -5972,13 +6828,16 @@ figure {
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.5em;
 						line-height: 20px;
+
 						&:hover {
 							line-height: 20px;
 						}
@@ -5988,51 +6847,62 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 360px) {
 	#Wrapper {
 		width: 98%;
-		div#side-bar-toggle-btn {
 
-			left: 87%;
+		button#side-bar-toggle-btn {
+			font-size: 0.8em;
+			top: 3.5em;
 
-			font-size:0.8em;
 			&:hover {
 				cursor: pointer;
 			}
 		}
-		div#menu-toggle-btn {
+
+		button#menu-toggle-btn {
 			left: 81%;
-            width: 16%;
+			width: 16%;
+
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
 			}
 		}
+
 		header {
-			height: 65px;
+			height: 70px;
+
 			figure#logo {
-				width: 260px;
+				width: 180px;
 			}
 		}
+
 		nav#main-nav {
 			height: 25px;
+
 			span#signin-box {
-				width: 43.5%;
+				width: 4.5%;
+
 				a {
-					font-size: 0.7em;
+					font-size: 0.65em;
 				}
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				top: 6em;
+
 				li {
 					display: block;
+
 					a {
 						font-size: 1.1em;
+
 						&:hover,
 						&:visited {
 							text-decoration: none;
@@ -6040,124 +6910,137 @@ figure {
 						}
 					}
 				}
+
 				li.selected {
 					a {
 						&::hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
-				width: 10%;
+			button.find2 {
 				font-size: 1em;
 			}
+
 			#searcher2 {
 				label {
-					font-size: 0.55em;
-					width: 29%;
+					font-size: 0.9em;
 				}
+
 				select {
-					width: 14%;
-					font-size: 0.65em;
+					font-size: 0.9em;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.35em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.8em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.7em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
 				height: 430px;
 				margin-bottom: 5%;
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.8em;
 			}
+
 			span.context_title {
 				font-size: 1.2em;
 			}
+
 			#content_section {
 				width: 100%;
+
 				h1 {
 					font-size: 1.3em;
 					clear: both;
 				}
+
 				#pag_search {
 					width: 48%;
+
 					select {
 						width: 40%;
 						font-size: 0.7em;
 					}
+
 					label {
 						font-size: 0.55em;
 						width: 59%;
 					}
 				}
+
 				#pagination {
 					width: 49%;
+
 					a {
 						width: 31%;
 					}
 				}
+
 				#bannerbox {
+					hgroup {
+						width: 99%;
 
-					hgroup{
+						h1 {
+							font-size: 1.35em;
+						}
 
-                        width: 99%;
+						h2 {
+							font-size: 0.75em;
+						}
+					}
 
-
-                        h1{
-
-                            font-size: 1.35em;
-
-
-                        }
-                        h2{
-                            font-size: 0.75em;
-
-
-                        }
-                    }
 					#bannerboximg {
 						width: 100%;
-
 					}
+
 					#apDiv1 {
 						margin: 5% auto;
 						width: 100%;
+
 						a {
 							font-size: 0.8em;
 
 							&:hover {
 								font-size: 0.85em;
-
 							}
 						}
 					}
@@ -6166,6 +7049,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.8em;
@@ -6177,15 +7061,19 @@ figure {
 						float: none;
 						margin: 0 auto;
 						display: block;
+
 						img.product_boximg {
 							width: 75%;
 							height: 130px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 60px;
 							margin: 0;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
+
 							span.price:first-of-type {}
+
 							span.price {
 								font-size: 0.8em;
 								width: 80%;
@@ -6194,46 +7082,56 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 15%;
+
 								&:hover {}
 							}
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 195px;
+
 					h1 {
 						height: 30px;
 						margin: 0;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 220px;
 						height: 220px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							width: 35%;
 							margin: 2.9% 0;
 						}
+
 						figcaption.product_boxdetails_longer {
 							width: 60%;
 							height: 210px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 30px;
 								text-indent: 8%;
 							}
+
 							p {
 								float: none;
 								width: 90%;
 								font-size: 0.7em;
 								padding: 5%;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 35px;
 								font-size: 0.7em;
@@ -6243,6 +7141,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 28%;
+
 									&:hover {}
 								}
 							}
@@ -6250,31 +7149,41 @@ figure {
 					}
 				}
 			}
+
 			#left_bar {
 				position: absolute;
 				z-index: 100;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.65em;
+
+				#sec_nav {
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						input.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.9em;
 						}
@@ -6282,13 +7191,16 @@ figure {
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.5em;
 						line-height: 20px;
+
 						&:hover {
 							line-height: 20px;
 						}
@@ -6298,48 +7210,61 @@ figure {
 		}
 	}
 }
-
 @media only screen and (max-width: 320px) {
 	#Wrapper {
 		width: 98%;
+
 		button#side-bar-toggle-btn {
+			left: 0.25em;
+			font-size: 0.8em;
 
-			left: 85%;
-
-			font-size:0.75em;
 			&:hover {
 				cursor: pointer;
 			}
 		}
+
 		button#menu-toggle-btn {
 			left: 82%;
-			font-size:0.8em;
+			font-size: 0.8em;
+
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
 			}
 		}
+
 		header {
-			height: 61px;
+			height: 70px;
+
 			figure#logo {
-				width: 233px;
+				width: 170px;
 			}
 		}
+
 		nav#main-nav {
 			height: 25px;
+
 			span#signin-box {
-				width: 47.5%;
+				width: 39%;
+				a {
+				    font-size: 0.6em;
+				}
 			}
+
 			ul#inner-nav {
 				display: none;
 			}
+
 			ul#mobile-nav {
 				width: 96%;
 				top: 5.7em;
+
 				li {
 					display: block;
+
 					a {
 						font-size: 1.1em;
+
 						&:hover,
 						&:visited {
 							text-decoration: none;
@@ -6347,127 +7272,140 @@ figure {
 						}
 					}
 				}
+
 				li.selected {
 					a {
 						&::hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
+
 						&:link {
 							background-color: rgb(255, 255, 255);
 						}
+
 						&::visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
 				}
+
 				span#signin-box {
 					display: none;
 				}
 			}
 		}
+
 		#searchbar {
-			input[type="submit"] {
-				width: 11%;
+			button.find2 {
 				font-size: 0.9em;
 			}
+
 			#searcher2 {
 				label {
-					font-size: 0.5em;
-					width: 27%;
+					font-size: 0.9em;
 				}
+
 				select {
-					width: 14%;
-					font-size: 0.6em;
+					font-size: 0.9em;
 				}
 			}
 		}
+
 		#content {
 			h1 {
 				font-size: 1.35em;
 			}
+
 			aside.text_boxa {
 				width: 96.5%;
 				padding: 1%;
 				width: 97.5%;
+
 				h1 {
 					font-size: 0.75em;
 					line-height: 25px;
 				}
+
 				p {
 					font-size: 0.7em;
 				}
 			}
+
 			.myform {
 				width: 94%;
 				margin-left: 0;
 				height: 430px;
 				margin-bottom: 5%;
 			}
+
 			main#context {
 				width: 95%;
 				font-size: 0.7em;
 			}
+
 			span.context_title {
 				font-size: 1.2em;
 			}
+
 			#content_section {
 				width: 100%;
+
 				h1 {
 					font-size: 1.3em;
 					clear: both;
 				}
+
 				#pag_search {
 					width: 48%;
+
 					select {
 						width: 40%;
 						font-size: 0.7em;
 					}
+
 					label {
 						font-size: 0.5em;
 						width: 56%;
 					}
 				}
+
 				#pagination {
 					width: 49%;
+
 					a {
 						width: 31%;
 					}
 				}
+
 				#bannerbox {
+					hgroup {
+						width: 99%;
+						margin-left: 1%;
 
-					hgroup{
+						h1 {
+							font-size: 1.3em;
+							height: auto;
+							line-height: 30px;
+						}
 
-                        width: 99%;
-						margin-left:1%;
+						h2 {
+							font-size: 0.7em;
+						}
+					}
 
-
-                        h1{
-
-                            font-size: 1.3em;
-							height:auto;
-							line-height:30px;
-
-
-                        }
-                        h2{
-                            font-size: 0.7em;
-
-
-                        }
-                    }
 					#bannerboximg {
 						width: 100%;
-
 					}
+
 					#apDiv1 {
 						margin: 5% auto;
 						width: 100%;
+
 						a {
 							font-size: 0.8em;
 
 							&:hover {
 								font-size: 0.85em;
-
 							}
 						}
 					}
@@ -6476,6 +7414,7 @@ figure {
 				.product_boxes,
 				form #results {
 					height: auto;
+
 					h1 {
 						height: 30px;
 						font-size: 0.8em;
@@ -6487,14 +7426,17 @@ figure {
 						float: none;
 						margin: 0 auto;
 						display: block;
+
 						img.product_boximg {
 							width: 75%;
 							height: 130px;
 						}
+
 						figcaption.product_boxdetails {
 							height: 60px;
 							margin: 0;
-							padding: 7% 0 0 0;
+							padding: 7% 0 0;
+
 							span.price {
 								font-size: 0.7em;
 								width: 80%;
@@ -6503,46 +7445,54 @@ figure {
 							img.product_icon {
 								margin: 0 2% 0 0;
 								width: 15%;
-
 							}
 						}
 					}
 				}
+
 				div.product_boxes_longer {
 					display: block;
 					height: 195px;
+
 					h1 {
 						height: 30px;
 						margin: 0;
 						font-size: 1em;
 						line-height: 30px;
 					}
+
 					figure.product-box_longer {
 						max-height: 240px;
 						height: 240px;
 						margin-bottom: 15px;
+
 						img.product_boximg_longer {
 							width: 35%;
 							margin: 2.9% 0;
 						}
+
 						figcaption.product_boxdetails_longer {
 							width: 60%;
 							height: 250px;
 							padding: 1%;
+
 							h1 {
 								height: auto;
 								line-height: 30px;
 								text-indent: 8%;
 							}
+
 							p {
 								float: none;
 								width: 90%;
 								font-size: 0.7em;
 								padding: 5%;
 							}
+
 							span.price_longer:last-of-type {
 								color: $login-color;
 							}
+
 							span.price_longer {
 								line-height: 35px;
 								font-size: 0.7em;
@@ -6552,6 +7502,7 @@ figure {
 								/*Price Icon*/
 								img.product_icon_longer {
 									width: 28%;
+
 									&:hover {}
 								}
 							}
@@ -6559,31 +7510,41 @@ figure {
 					}
 				}
 			}
+
 			#left_bar {
 				position: absolute;
 				z-index: 100;
-				#sec_nav #accordion {
-					ul {
-						li {
-							font-size: 0.65em;
+
+				#sec_nav{
+					#accordion {
+						ul {
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
+
 				}
+
 				#searchbox {
 					width: 98%;
+
 					#searcher {
 						width: 98%;
+
 						h1 {
 							font-size: 1.4em;
-
-							text-indent: 0px;
+							text-indent: 0;
 						}
+
 						select {
 							font-size: 1em;
 						}
+
 						input.find {
 							font-size: 1.2em;
 						}
+
 						label {
 							font-size: 0.9em;
 						}
@@ -6591,13 +7552,16 @@ figure {
 				}
 			}
 		}
+
 		footer {
 			ul.footer_nav {
 				width: 100%;
+
 				li {
 					a {
 						font-size: 0.5em;
 						line-height: 15px;
+
 						&:hover {
 							line-height: 15px;
 						}
