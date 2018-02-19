@@ -1,7 +1,7 @@
 @import "partials/fonts";
 @import "partials/variables";
 @import "partials/mixins";
-/*Eric Meyer’s Reset Reloaded*/
+
 a,
 abbr,
 acronym,
@@ -14,7 +14,7 @@ caption,
 cite,
 code,
 dd,
-del,
+
 dfn,
 div,
 dl,
@@ -72,7 +72,7 @@ var {
 }
 /* remember to define focus styles! */
 html {
-	background-image: url("../images/bg-img.png");
+	background-image: url("images/bg-img.png");
 	background-repeat: repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -93,7 +93,7 @@ ol,
 ul {
 	list-style: none;
 }
-/* tables still need 'cellspacing="0"' in the markup */
+
 table {
 	border-collapse: separate;
 	border-spacing: 0;
@@ -257,7 +257,7 @@ figure {
 		button#menu-toggle-btn {
 			display: none;
 		}
-		/*header*/
+
 		header {
 			height: 85px;
 			width: 100%;
@@ -268,7 +268,7 @@ figure {
 				padding: 0;
 			}
 		}
-		/*Navigation*/
+
 		nav#main-nav {
 			height: 40px;
 			width: 100%;
@@ -424,11 +424,11 @@ figure {
 				}
 
 				select {
-					font-family: $font-list;
+					font-family: arial, sans-serif;
 					width: 16.5%;
 					font-size: 1em;
 					margin: 0;
-					color: $content-color;
+					color: $content-color2;
 					height: 30px;
 				}
 			}
@@ -730,7 +730,7 @@ figure {
 							height: 55px;
 							margin: 0;
 							padding: 6% 0 0;
-							background-image: url("../images/product-info-bg.png");
+							background-image: url("images/product-info-bg.png");
 							background-repeat: no-repeat;
 
 							span.price:first-of-type {
@@ -746,7 +746,7 @@ figure {
 								font-weight: bold;
 								display: inline-block;
 								width: 82%;
-								text-indent: 3%;
+								text-indent: 2%;
 							}
 							/*Price Icon*/
 							img.product_icon {
@@ -808,7 +808,7 @@ figure {
 							float: left;
 
 							h1 {
-								background-image: url("../images/product_headline_bg.png");
+								background-image: url("images/product_headline_bg.png");
 								background-position: -3% 50%;
 								background-repeat: no-repeat;
 								background-color: $color-white;
@@ -1038,6 +1038,10 @@ figure {
 						width: 8%;
 					}
 
+					.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+							left: 88%;
+					}
+
 					.ui-accordion .ui-accordion-content {
 						padding: 0.5em;
 						border-top: 0;
@@ -1050,7 +1054,10 @@ figure {
 						h3 {
 							font-size: 0.8em;
 							text-transform: uppercase;
-							background-color:$color-orange;
+							background-color:$content-color1;
+							padding: 1em 0;
+							color:$login-color;
+							text-indent: 2%;
 						}
 
 						ul {
@@ -1070,7 +1077,6 @@ figure {
 
 								&:hover {
 									font-weight: bold;
-									letter-spacing: 0.2em;
 									cursor: pointer;
 								}
 							}
@@ -1134,7 +1140,7 @@ figure {
 }
 @media only screen and (max-width: 1799px) {
 	#Wrapper {
-		width: 57%;
+		width: 60%;
 	}
 }
 @media only screen and (max-width: 1630px) {
@@ -1150,9 +1156,9 @@ figure {
 @media only screen and (max-width: 1440px) {
 	/*Wrapper*/
 	#Wrapper {
-		margin: 1% auto;
-		width: 72%;
-		padding: 0 1%;
+
+		width: 73%;
+
 
 		div#side-bar-toggle-btn {
 			display: none;
@@ -1181,7 +1187,7 @@ figure {
 				width: 18%;
 
 				a {
-					font-size: 0.90em;
+					font-size: 0.80em;
 
 					&:hover {
 						font-weight: bold;
@@ -1443,7 +1449,7 @@ figure {
 								line-height: 25px;
 								font-size: 0.75em;
 								width: 82%;
-								text-indent: 3%;
+								text-indent: 2%;
 							}
 							/*Price Icon*/
 							img.product_icon {
@@ -1648,7 +1654,6 @@ figure {
 
 								&:hover {
 									font-weight: bold;
-									letter-spacing: 0.2em;
 									cursor: pointer;
 								}
 							}
@@ -1695,8 +1700,8 @@ figure {
 @media only screen and (max-width: 1280px) {
 	/*Wrapper*/
 	#Wrapper {
-		width: 82%;
-		padding: 0 1%;
+		width: 80%;
+
 
 		div#side-bar-toggle-btn {
 			display: none;
@@ -1970,11 +1975,9 @@ figure {
 							}
 
 							span.price {
-								height: 25px;
-								line-height: 25px;
 								font-size: 0.7em;
 								width: 82%;
-								text-indent: 3%;
+								text-indent: 2%;
 							}
 							/*Price Icon*/
 							img.product_icon {
@@ -2164,7 +2167,6 @@ figure {
 
 								&:hover {
 									font-weight: bold;
-									letter-spacing: 0.2em;
 									cursor: pointer;
 								}
 							}
@@ -2222,8 +2224,7 @@ figure {
 	}
 	/*Wrapper*/
 	#Wrapper {
-		width: 90%;
-		padding: 0 1%;
+		width: 85%;
 
 		div#side-bar-toggle-btn {
 			display: none;
@@ -2488,18 +2489,15 @@ figure {
 
 						figcaption.product_boxdetails {
 							height: 60px;
-							padding: 7% 0 0;
 
 							span.price:first-of-type {
 								color: $login-color;
 							}
 
 							span.price {
-								height: 25px;
-								line-height: 25px;
 								font-size: 0.7em;
 								width: 77%;
-								text-indent: 3%;
+								text-indent: 2%;
 							}
 							/*Price Icon*/
 							img.product_icon {
@@ -2684,7 +2682,6 @@ figure {
 
 								&:hover {
 									font-weight: bold;
-									letter-spacing: 0.2em;
 									cursor: pointer;
 								}
 							}
@@ -2724,8 +2721,8 @@ figure {
 }
 @media only screen and (max-width: 980px) {
 	#Wrapper {
-		width: 94%;
-		padding: 0 1%;
+		width: 91%;
+
 
 		div#side-bar-toggle-btn {
 			display: none;
@@ -2993,16 +2990,14 @@ figure {
 							}
 
 							span.price {
-								height: 25px;
-								line-height: 25px;
 								font-size: 0.65em;
-								width: 79%;
+								width: 81%;
 								text-indent: 2%;
 							}
 							/*Price Icon*/
 							img.product_icon {
-								margin: 0 2% 0 0;
-								width: 18%;
+								margin: 0 1% 0 0;
+								width: 16%;
 
 								&:hover {
 									cursor: pointer;
@@ -3083,8 +3078,7 @@ figure {
 				}
 
 				#pagination {
-					width: 41%;
-					margin: 0 0 2%;
+					width: 45%;
 
 					a {
 						width: 32%;
@@ -3171,11 +3165,10 @@ figure {
 							list-style: none;
 
 							li {
-								font-size: 0.8em;
+								font-size: 0.75em;
 
 								&:hover {
 									font-weight: bold;
-									letter-spacing: 0.2em;
 									cursor: pointer;
 								}
 							}
@@ -3213,8 +3206,7 @@ figure {
 }
 @media only screen and (max-width: 800px) {
 	#Wrapper {
-		width: 94%;
-		padding: 0 1%;
+		width: 95%;
 
 		div#side-bar-toggle-btn {
 			display: none;
@@ -3472,22 +3464,19 @@ figure {
 
 						figcaption.product_boxdetails {
 							height: 60px;
-							padding: 7% 0 0;
 
 							span.price:first-of-type {
 								color: $login-color;
 							}
 
 							span.price {
-								height: 25px;
-								line-height: 25px;
 								font-size: 0.65em;
-								width: 76%;
-								text-indent: 3%;
+								width: 80%;
+								text-indent: 2%;
 							}
 							/*Price Icon*/
 							img.product_icon {
-								width: 19%;
+								width: 16%;
 
 								&:hover {
 									cursor: pointer;
@@ -3660,7 +3649,6 @@ figure {
 
 								&:hover {
 									font-weight: bold;
-									letter-spacing: 0.2em;
 									cursor: pointer;
 								}
 							}
@@ -3698,8 +3686,7 @@ figure {
 }
 @media only screen and (max-width: 768px) {
 	#Wrapper {
-		width: 94%;
-		padding: 0 1%;
+		width: 96%;
 
 		div#side-bar-toggle-btn {
 			display: none;
@@ -3954,7 +3941,7 @@ figure {
 
 						figcaption.product_boxdetails {
 							height: 60px;
-							padding: 7% 0 0;
+							padding: 8% 0 0;
 
 							span.price:first-of-type {
 								color: $login-color;
@@ -4143,7 +4130,6 @@ figure {
 
 								&:hover {
 									font-weight: bold;
-									letter-spacing: 0.2em;
 									cursor: pointer;
 								}
 							}
@@ -4205,6 +4191,7 @@ figure {
 				cursor: pointer;
 				border: 2px solid $header-color;
 				color: $color-white;
+				font-weight:bold;
 			}
 		}
 
@@ -4270,7 +4257,7 @@ figure {
 				li {
 					width: 100%;
 					display: block;
-					height: 50px;
+					height: 45px;
 					float: none;
 					border-bottom: 2px solid $color-black;
 
@@ -4278,7 +4265,7 @@ figure {
 						font-size: 1.1em;
 						display: block;
 						text-align: center;
-						line-height: 50px;
+						line-height: 45px;
 						width: 100%;
 						display: block;
 						float: none;
@@ -5729,7 +5716,7 @@ figure {
 		}
 
 		nav#main-nav {
-			height: 25px;
+			height: 30px;
 
 			span#signin-box {
 				width: 38.5%;
@@ -5783,7 +5770,7 @@ figure {
 			height:auto;
 			button.find2 {
 			    width: 100%;
-			    font-size: 0.9em;
+			    font-size: 1.1em;
 			    float: none;
 			    display: block;
 					height: 40px;
@@ -5904,7 +5891,7 @@ figure {
 					width: 46%;
 
 					select {
-						width: 40%;
+						width: 45%;
 						font-size: 0.9em;
 					}
 
@@ -5980,7 +5967,8 @@ figure {
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0;
+							padding: 8.5% 3%;
+    					width: 94%;
 
 							span.price {
 								font-size: 0.7em;
@@ -6151,10 +6139,10 @@ figure {
 		}
 
 		nav#main-nav {
-			height: 25px;
+			height: 31px;
 
 			span#signin-box {
-				  width: 38.5%;
+				width: 40.5%;
 
 				a {
 					font-size: 0.75em;
@@ -6208,7 +6196,7 @@ figure {
 		#searchbar {
 			button.find2 {
 				width: 100%;
-				font-size: 1em;
+				font-size: 1.1em;
 			}
 
 			#searcher2 {
@@ -6268,7 +6256,7 @@ figure {
 				}
 
 				#pag_search {
-					width: 46%;
+					width: 48%;
 
 					select {
 						width: 40%;
@@ -6347,7 +6335,7 @@ figure {
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0;
+							
 
 							span.price {
 								font-size: 0.7em;
@@ -6428,7 +6416,6 @@ figure {
 			}
 
 			#left_bar {
-				position: absolute;
 				z-index: 100;
 
 				#sec_nav {
@@ -6520,7 +6507,7 @@ figure {
 		}
 
 		nav#main-nav {
-			height: 25px;
+			height: 31px;
 
 			span#signin-box {
 				width: 40.5%;
@@ -6575,12 +6562,12 @@ figure {
 
 		#searchbar {
 			button.find2 {
-				font-size: 1em;
+				font-size: 1.1em;
 			}
 
 			#searcher2 {
 				label {
-					font-size: 0.9em;
+					font-size: 1em;
 
 				}
 
@@ -6711,7 +6698,6 @@ figure {
 						figcaption.product_boxdetails {
 							height: 55px;
 							margin: 0;
-							padding: 7% 0 0;
 
 							span.price {
 								font-size: 0.7em;
@@ -6863,10 +6849,12 @@ figure {
 		button#menu-toggle-btn {
 			left: 81%;
 			width: 16%;
+			font-size: 0.8em;
 
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
+				font-size: 0.8em;
 			}
 		}
 
@@ -6879,10 +6867,10 @@ figure {
 		}
 
 		nav#main-nav {
-			height: 25px;
+			height: 31px;
 
 			span#signin-box {
-				width: 4.5%;
+				width: 42.5%;
 
 				a {
 					font-size: 0.65em;
@@ -6935,12 +6923,12 @@ figure {
 
 		#searchbar {
 			button.find2 {
-				font-size: 1em;
+				font-size: 1.1em;
 			}
 
 			#searcher2 {
 				label {
-					font-size: 0.9em;
+					font-size: 1em;
 				}
 
 				select {
@@ -7057,7 +7045,7 @@ figure {
 					}
 					/*Individual product box*/
 					figure.product_box {
-						width: 52%;
+						width: 60%;
 						float: none;
 						margin: 0 auto;
 						display: block;
@@ -7070,9 +7058,10 @@ figure {
 						figcaption.product_boxdetails {
 							height: 60px;
 							margin: 0;
-							padding: 7% 0 0;
 
-							span.price:first-of-type {}
+							span.price:first-of-type {
+								line-height: 25px;
+							}
 
 							span.price {
 								font-size: 0.8em;
@@ -7151,7 +7140,6 @@ figure {
 			}
 
 			#left_bar {
-				position: absolute;
 				z-index: 100;
 
 				#sec_nav {
@@ -7225,11 +7213,12 @@ figure {
 
 		button#menu-toggle-btn {
 			left: 82%;
-			font-size: 0.8em;
+			font-size: 0.75em;
 
 			&:hover {
 				background-color: $color-orange;
 				cursor: pointer;
+				font-size: 0.75em;
 			}
 		}
 
@@ -7242,7 +7231,7 @@ figure {
 		}
 
 		nav#main-nav {
-			height: 25px;
+			height: 31px;
 
 			span#signin-box {
 				width: 39%;
@@ -7297,12 +7286,12 @@ figure {
 
 		#searchbar {
 			button.find2 {
-				font-size: 0.9em;
+				font-size: 1.1em;
 			}
 
 			#searcher2 {
 				label {
-					font-size: 0.9em;
+					font-size: 1em;
 				}
 
 				select {
