@@ -51,6 +51,7 @@ Temporary Items
 Files/
 shoestore-app/dist/
 shoestore-app/githeadfiles/
+shoestore-app/js/
 shoestore-app/js/qtip/
 shoestore-app/js/Respond-master/
 shoestore-app/js/Respond-master/cross-domain/
@@ -69,7 +70,6 @@ node_modules/
 shoestore-app/font/
 shoestore-app/images/
 shoestore-app/images/images/
-shoestore-app/shoestore-app/font/
 shoestore-app/imagemap-qtip.txt
 .htaccess
 shoestore-app/css/custom-theme/
