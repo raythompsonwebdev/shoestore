@@ -391,7 +391,6 @@ figure {
     color: #ffffff;
     background-color: #ea3411;
     margin: 0;
-    padding: 0.8%;
     height: 30px;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
   }
@@ -411,7 +410,7 @@ figure {
     font-family: arial, sans-serif;
     width: 16.5%;
     font-size: 1em;
-    margin: 0;
+    margin: 0 0.25em 0 0;
     color: #333333;
     height: 30px;
   }
@@ -1150,7 +1149,6 @@ figure {
   }
   #Wrapper nav#main-nav {
     height: 40px;
-    margin: 0 0 1%;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 18%;
@@ -1614,7 +1612,6 @@ figure {
   }
   #Wrapper nav#main-nav {
     height: 40px;
-    margin: 0 0 1%;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 22%;
@@ -2056,7 +2053,6 @@ figure {
   }
   #Wrapper nav#main-nav {
     height: 40px;
-    margin: 0 0 1%;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 22%;
@@ -2478,7 +2474,6 @@ figure {
   }
   #Wrapper nav#main-nav {
     height: 40px;
-    margin: 0 0 1%;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 22%;
@@ -2886,7 +2881,6 @@ figure {
   }
   #Wrapper nav#main-nav {
     height: 40px;
-    margin: 0 0 1%;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 23.5%;
@@ -3790,13 +3784,13 @@ figure {
     background-color: #ffffff;
     color: #000000;
   }
-  #Wrapper nav#main-nav ul#mobile-nav li.selected a::hover {
+  #Wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
   #Wrapper nav#main-nav ul#mobile-nav li.selected a:link {
     background-color: white;
   }
-  #Wrapper nav#main-nav ul#mobile-nav li.selected a::visited {
+  #Wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
     background-color: white;
   }
   #Wrapper nav#main-nav ul#mobile-nav span#signin-box {
@@ -4047,7 +4041,7 @@ figure {
     cursor: pointer;
   }
   #Wrapper header {
-    height: 80px;
+    height: 70px;
   }
   #Wrapper header figure#logo {
     width: 261px;
@@ -4056,7 +4050,7 @@ figure {
     height: 25px;
   }
   #Wrapper nav#main-nav span#signin-box {
-    width: 27.5%;
+    width: 29.5%;
   }
   #Wrapper nav#main-nav ul#inner-nav {
     display: none;
@@ -4324,17 +4318,11 @@ figure {
     background-color: #ea3411;
     cursor: pointer;
   }
-  #Wrapper header {
-    height: 80px;
-  }
-  #Wrapper header #Wrapper header figure#logo {
+  #Wrapper header figure#logo {
     width: 260px;
   }
-  #Wrapper nav#main-nav {
-    height: 25px;
-  }
   #Wrapper nav#main-nav span#signin-box {
-    width: 28.5%;
+    width: 30.5%;
   }
   #Wrapper nav#main-nav ul#inner-nav {
     display: none;
@@ -4599,17 +4587,14 @@ figure {
     background-color: #ea3411;
     cursor: pointer;
   }
-  #Wrapper header {
-    height: 80px;
-  }
   #Wrapper header figure#logo {
     width: 255px;
   }
-  #Wrapper nav#main-nav {
-    height: 25px;
-  }
   #Wrapper nav#main-nav span#signin-box {
-    width: 34.5%;
+    width: 37.5%;
+  }
+  #Wrapper nav#main-nav span#signin-box a {
+    font-size: 0.75em;
   }
   #Wrapper nav#main-nav ul#inner-nav {
     display: none;
@@ -4872,9 +4857,6 @@ figure {
   #Wrapper button#menu-toggle-btn:hover {
     background-color: #ea3411;
     cursor: pointer;
-  }
-  #Wrapper header {
-    height: 70px;
   }
   #Wrapper header figure#logo {
     width: 225px;
@@ -5214,20 +5196,14 @@ figure {
     background-color: #ea3411;
     cursor: pointer;
   }
-  #Wrapper header {
-    height: 70px;
-  }
   #Wrapper header figure#logo {
     width: 205px;
-  }
-  #Wrapper nav#main-nav {
-    height: 31px;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 40.5%;
   }
   #Wrapper nav#main-nav span#signin-box a {
-    font-size: 0.75em;
+    font-size: 0.70em;
   }
   #Wrapper nav#main-nav ul#inner-nav {
     display: none;
@@ -5495,13 +5471,10 @@ figure {
     cursor: pointer;
   }
   #Wrapper header {
-    height: 70px;
+    height: 65px;
   }
   #Wrapper header figure#logo {
     width: 180px;
-  }
-  #Wrapper nav#main-nav {
-    height: 31px;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 40.5%;
@@ -5769,14 +5742,8 @@ figure {
     cursor: pointer;
     font-size: 0.8em;
   }
-  #Wrapper header {
-    height: 70px;
-  }
   #Wrapper header figure#logo {
     width: 180px;
-  }
-  #Wrapper nav#main-nav {
-    height: 31px;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 42.5%;
@@ -6046,14 +6013,8 @@ figure {
     cursor: pointer;
     font-size: 0.75em;
   }
-  #Wrapper header {
-    height: 70px;
-  }
   #Wrapper header figure#logo {
     width: 170px;
-  }
-  #Wrapper nav#main-nav {
-    height: 31px;
   }
   #Wrapper nav#main-nav span#signin-box {
     width: 39%;

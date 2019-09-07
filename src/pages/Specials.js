@@ -2,7 +2,7 @@ import React from "react";
 //images
 
 import FindShoesAccord from "../components/FindShoesAccord";
-
+import SearchBar from "../components/SearchBar";
 import kids from "../images/kids-trainer.png";
 import furlined from "../images/fur-lined-hiking-boot.png";
 import basketball from "../images/basket-ball-shoe.png";
@@ -14,42 +14,11 @@ class Specials extends React.Component {
   render() {
     return (
       <main id="content" className="clearfix">
-      
-        <aside id="searchbar">
-        <form id="searcher2" action="" method="get">
-            <label>Specials</label>
-            <select name="gender">
-                <option value="Men">Men</option>
-                <option value="Women">Women</option>
-                <option value="Women">Children</option>
-            </select>
-            <select name="style" >
-                <option value="Athletics">Athletics</option>
-                <option value="Fashion">Fashion</option>
-                <option value="Outdoor">Outdoor</option>
-                <option value="Sandals">Sandals</option>
-                <option value="Work">Work</option>
-            </select>
-            <select name="size">
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-            <select name="color">
-                <option value="Red">Red</option>
-                <option value="Black">Black</option>
-                <option value="Yellow">Yellow</option>
-                <option value="Green">Green</option>
-                <option value="White">White</option>
-            </select>
-            <button name="find" className="find2" type="submit">Go</button>
-        </form>
-    </aside>
-        
-      <aside id="left_bar">
+        <SearchBar labelname="Specials"/>
+
+        <aside id="left_bar">
           <FindShoesAccord />
         </aside>
-
 
         <main id="content_section" role="main">
           <form
@@ -905,10 +874,8 @@ class Specials extends React.Component {
               &nbsp;
               <input type="reset" value="reset" name="reset" />
             </div>
-
           </form>
         </main>
-      
       </main>
     );
   }

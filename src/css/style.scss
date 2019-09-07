@@ -406,10 +406,11 @@ figure {
 			#searcher2 {
 				color: $color-white;
 				background-color: $color-orange;
-				margin: 0;
-				padding: 0.8%;
+				margin: 0 ;
+				
 				height: 30px;
 				font-family: $font-list;
+				
 
 				label {
 					font-size: 1.1em;
@@ -428,7 +429,7 @@ figure {
 					font-family: arial, sans-serif;
 					width: 16.5%;
 					font-size: 1em;
-					margin: 0;
+					margin: 0 0.25em 0 0;
 					color: $content-color2;
 					height: 30px;
 				}
@@ -1237,7 +1238,7 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1%;
+			
 
 			span#signin-box {
 				width: 18%;
@@ -1777,7 +1778,7 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1%;
+			
 
 			span#signin-box {
 				width: 22%;
@@ -2300,7 +2301,7 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1%;
+			
 
 			span#signin-box {
 				width: 22%;
@@ -2798,7 +2799,7 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1%;
+			
 
 			span#signin-box {
 				width: 22%;
@@ -3282,7 +3283,7 @@ figure {
 		/*Navigation*/
 		nav#main-nav {
 			height: 40px;
-			margin: 0 0 1%;
+			
 
 			span#signin-box {
 				width: 23.5%;
@@ -4353,7 +4354,7 @@ figure {
 
 				li.selected {
 					a {
-						&::hover {
+						&:hover {
 							background-color: rgba(255, 255, 255, 0.8);
 						}
 
@@ -4361,7 +4362,7 @@ figure {
 							background-color: rgb(255, 255, 255);
 						}
 
-						&::visited {
+						&:visited {
 							background-color: rgb(255, 255, 255);
 						}
 					}
@@ -4685,7 +4686,7 @@ figure {
 		}
 
 		header {
-			height: 80px;
+			height: 70px;
 
 			figure#logo {
 				width: 261px;
@@ -4696,7 +4697,7 @@ figure {
 			height: 25px;
 
 			span#signin-box {
-				width: 27.5%;
+				width: 29.5%;
 			}
 
 			ul#inner-nav {
@@ -5049,17 +5050,17 @@ figure {
 		}
 
 		header {
-			height: 80px;
-			#Wrapper header figure#logo {
+			
+			figure#logo {
 			    width: 260px;
 			}
 		}
 
 		nav#main-nav {
-			height: 25px;
+			
 
 			span#signin-box {
-				width: 28.5%;
+				width: 30.5%;
 			}
 
 			ul#inner-nav {
@@ -5408,7 +5409,7 @@ figure {
 		}
 
 		header {
-			height: 80px;
+			
 
 			figure#logo {
 				width: 255px;
@@ -5416,10 +5417,13 @@ figure {
 		}
 
 		nav#main-nav {
-			height: 25px;
+			
 
 			span#signin-box {
-				width: 34.5%;
+				width: 37.5%;
+				a {
+					font-size: 0.75em;
+				}
 			}
 
 			ul#inner-nav {
@@ -5764,8 +5768,7 @@ figure {
 		}
 
 		header {
-			height: 70px;
-
+			
 			figure#logo {
 				width: 225px;
 			}
@@ -6187,21 +6190,20 @@ figure {
 		}
 
 		header {
-			height:70px;
-
+			
 			figure#logo {
 				width: 205px;
 			}
 		}
 
 		nav#main-nav {
-			height: 31px;
+			
 
 			span#signin-box {
 				width: 40.5%;
 
 				a {
-					font-size: 0.75em;
+					font-size: 0.70em;
 				}
 			}
 
@@ -6555,7 +6557,7 @@ figure {
 		}
 
 		header {
-			height: 70px;
+			height: 65px;
 
 			figure#logo {
 				width: 180px;
@@ -6563,7 +6565,7 @@ figure {
 		}
 
 		nav#main-nav {
-			height: 31px;
+			
 
 			span#signin-box {
 				width: 40.5%;
@@ -6914,15 +6916,14 @@ figure {
 		}
 
 		header {
-			height: 70px;
-
+			
 			figure#logo {
 				width: 180px;
 			}
 		}
 
 		nav#main-nav {
-			height: 31px;
+			
 
 			span#signin-box {
 				width: 42.5%;
@@ -7276,16 +7277,14 @@ figure {
 		}
 
 		header {
-			height: 70px;
-
+			
 			figure#logo {
 				width: 170px;
 			}
 		}
 
 		nav#main-nav {
-			height: 31px;
-
+			
 			span#signin-box {
 				width: 39%;
 				a {
