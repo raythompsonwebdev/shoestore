@@ -8,12 +8,13 @@ class Contact extends React.Component {
 
         <h1>Contact Us</h1>
 
-        <br/>
+        
 
-        <p class="context">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem explicabo, ab expedita rem temporibus repellendus eum, omnis, distinctio est ipsum vel voluptate perspiciatis, quis earum accusantium unde nisi quas. Voluptatum.</p>
+        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem explicabo, ab expedita rem temporibus repellendus eum, omnis, distinctio est ipsum vel voluptate perspiciatis, quis earum accusantium unde nisi quas. Voluptatum.</p>
+<br/><br/>
+  
 
-
-        <section id="stylized" class="myform">
+        <section id="contact_form" >
 
             <form  id="form" method="" action="">
                 <ul>
@@ -42,7 +43,7 @@ class Contact extends React.Component {
 
         </section>
 
-        <aside class="text_boxa">
+        <aside class="contact_textbox">
             <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
             <p>Morbi vel rutrum ante. Vivamus adipiscing tincidunt purus at adipiscing. Proin orci metus, gravida in cursus et, egestas in leo. Suspendisse potenti. Vivamus congue sapien nec velit adipiscing a tincidunt massa porta.</p>
             <br/>

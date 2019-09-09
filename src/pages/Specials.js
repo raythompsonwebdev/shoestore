@@ -27,6 +27,7 @@ class Specials extends React.Component {
             //encType="application/x-www-form-urlencoded"
           >
             <section id="results">
+              
               <div className="product_boxes">
                 <figure className="product_box">
                   <img

@@ -4,8 +4,8 @@ import React from "react";
 function SearchBar(props) {
     
   return (
-    <aside id="searchbar">
-        <form id="searcher2" action="" method="get">
+    <aside id="search_category">
+        <form id="search_category_form" action="" method="get">
             <label>{props.labelname}</label>
             <select name="gender">
                 <option value="Men">Men</option>
@@ -31,7 +31,7 @@ function SearchBar(props) {
                 <option value="Green">Green</option>
                 <option value="White">White</option>
             </select>
-            <button name="find" className="find2" type="submit">Go</button>
+            <button name="find" className="search_category_btn" type="submit">Go</button>
         </form>
     </aside>
         

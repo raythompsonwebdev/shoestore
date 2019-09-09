@@ -14,7 +14,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 const routing = (
 
-    <div id="Wrapper">
+    <div id="wrapper">
   
     <Header /> 
 

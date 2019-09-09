@@ -37,17 +37,10 @@ function FindShoesAccord() {
         </button>
         <div className="panel">
           <ul>
-            <li>Athletics</li>
+            <li>Skate Shoes</li>
             <li>Boat </li>
             <li>Fashion</li>
             <li>Formal </li>
-            <li>Shoes</li>
-            <li>Lace-Ups</li>
-            <li>Loafers </li>
-            <li>Outdoor</li>
-            <li>Sandals</li>
-            <li>Slippers</li>
-            <li>Work </li>
             <li></li>
           </ul>
         </div>
@@ -55,35 +48,21 @@ function FindShoesAccord() {
         <button onClick={accordion} className="accordion">Women&acute;s Shoes</button>
         <div className="panel">
           <ul>
-            <li>Athletics</li>
+            <li>Boots</li>
             <li>Boat </li>
             <li>Fashion</li>
             <li>Formal </li>
-            <li>Shoes</li>
-            <li>Lace-Ups</li>
-            <li>Loafers </li>
-            <li>Outdoor</li>
-            <li>Sandals</li>
-            <li>Slippers</li>
-            <li>Work </li>
-            <li></li>
+            
           </ul>
         </div>
 
         <button onClick={accordion} className="accordion">Kids&acute;s Shoes</button>
         <div className="panel">
           <ul>
-            <li>Athletics</li>
+            <li>Trainers</li>
             <li>Boat </li>
             <li>Fashion</li>
-            <li>Formal </li>
-            <li>Shoes</li>
-            <li>Lace-Ups</li>
-            <li>Loafers </li>
-            <li>Outdoor</li>
-            <li>Sandals</li>
-            <li>Slippers</li>
-            <li>Work </li>
+            
             <li></li>
           </ul>
         </div>
