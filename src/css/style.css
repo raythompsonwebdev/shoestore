@@ -693,39 +693,44 @@ figure {
     width: 100%;
     height: 55px;
     margin: 0;
-    padding: 6% 0 0;
+    padding: 7% 0 0;
     background-image: url("../images/product-info-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position: relative;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
     color: #0099CC;
-    text-transform: uppercase;
-  }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    height: 25px;
     line-height: 25px;
-    font-size: 0.75em;
+    text-transform: uppercase;
+    font-size: 85%;
+    display: block;
+    text-indent: 0.2em;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    height: auto;
+    line-height: 25px;
     margin: 0;
     font-weight: bold;
-    display: inline-block;
-    width: 82%;
-    text-indent: 2%;
-  }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    float: right;
     display: block;
-    margin: 0 2% 0 0;
-    width: 15%;
+    width: 100%;
+    text-indent: 0.2em;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    display: block;
+    width: 14%;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    position: absolute;
+    left: 85%;
+    top: 40%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
     cursor: pointer;
@@ -1352,29 +1357,24 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 55px;
-    padding: 6% 0 0;
+    padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    color: #0099CC;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 85%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    height: 25px;
-    line-height: 25px;
-    font-size: 0.75em;
-    width: 82%;
-    text-indent: 2%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    font-size: 0.9em;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 14%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 85%;
+    top: 40%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
@@ -1792,27 +1792,24 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 60px;
     padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    color: #0099CC;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 80%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.7em;
-    width: 82%;
-    text-indent: 2%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    font-size: 0.9em;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 15%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 84%;
+    top: 44%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
@@ -2078,7 +2075,6 @@ figure {
   }
   #wrapper #search_category #search_category_form {
     margin: 0;
-    padding: 0.8%;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1em;
@@ -2224,26 +2220,25 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 60px;
+    padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    color: #0099CC;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 80%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.7em;
-    width: 77%;
-    text-indent: 2%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    font-size: 0.85em;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 18%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    width: 15%;
+    left: 84%;
+    top: 45%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
@@ -2635,23 +2630,22 @@ figure {
     padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    color: #0099CC;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 80%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.65em;
-    width: 81%;
-    text-indent: 2%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    font-size: 0.85em;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 1% 0 0;
-    width: 16%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    width: 15%;
+    left: 83%;
+    top: 49%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
@@ -2886,7 +2880,6 @@ figure {
   }
   #wrapper #search_category #search_category_form {
     margin: 0;
-    padding: 0.8%;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 0.9em;
@@ -3027,25 +3020,28 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 60px;
+    padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    color: #0099CC;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 80%;
+    line-height: 30px;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.65em;
-    width: 80%;
-    text-indent: 2%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    font-size: 0.8em;
+    display: block;
+    line-height: 25px;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
     width: 16%;
+    left: 80%;
+    top: 50%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
@@ -3279,8 +3275,9 @@ figure {
     font-weight: bold;
   }
   #wrapper #search_category #search_category_form {
-    margin: 0;
-    padding: 0.8%;
+    margin: 0 auto;
+    padding: 0.5%;
+    width: 75%;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 0.9em;
@@ -3422,29 +3419,24 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 60px;
     padding: 8% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    color: #0099CC;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 85%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    height: 25px;
-    line-height: 14px;
-    font-size: 0.65em;
-    width: 78%;
-    text-indent: 1%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    display: block;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 19%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 80%;
+    top: 50%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon:hover,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon:hover {
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
@@ -3847,23 +3839,26 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
     height: 55px;
-    margin: 0;
     padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    line-height: 25px;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 75%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.7em;
-    width: 80%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    display: block;
+    font-size: 0.85em;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 18%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 80%;
+    top: 36%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
@@ -4118,20 +4113,25 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 55px;
-    margin: 0;
     padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.65em;
-    width: 80%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 75%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 18%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    display: block;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 80%;
+    top: 36%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
@@ -4384,20 +4384,25 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 55px;
-    margin: 0;
     padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.6em;
-    width: 80%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 75%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 18%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    display: block;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 80%;
+    top: 46%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
@@ -4653,24 +4658,26 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 55px;
-    margin: 0;
     padding: 8.5% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.7em;
-    width: 79%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 70%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    line-height: 14px;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    display: block;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
     width: 17%;
+    left: 80%;
+    top: 49%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
@@ -4971,7 +4978,8 @@ figure {
     height: auto;
     width: 38%;
     float: none;
-    margin: 22px;
+    margin: 1em auto;
+    display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -4979,21 +4987,26 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 55px;
-    margin: 0;
-    padding: 8.5% 3%;
-    width: 94%;
+    padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.7em;
-    width: 80%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 80%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    display: block;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
     width: 15%;
+    left: 83%;
+    top: 35%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
@@ -5238,8 +5251,6 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
     width: 40%;
-    float: none;
-    margin: 16px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -5247,19 +5258,25 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 55px;
-    margin: 0;
+    padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.7em;
-    width: 80%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 85%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 15%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    text-indent: 2%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 85%;
+    top: 40%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
@@ -5503,9 +5520,6 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
     width: 52%;
-    float: none;
-    margin: 0 auto;
-    display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -5513,19 +5527,25 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 55px;
-    margin: 0;
+    padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.7em;
-    width: 80%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 85%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 15%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    text-indent: 2%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 85%;
+    top: 40%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
@@ -5765,9 +5785,6 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
     width: 60%;
-    float: none;
-    margin: 0 auto;
-    display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -5775,23 +5792,25 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 60px;
-    margin: 0;
+    padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price:first-of-type {
-    line-height: 25px;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 85%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.8em;
-    width: 80%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    text-indent: 2%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 15%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 85%;
+    top: 40%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
@@ -6046,20 +6065,25 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 60px;
-    margin: 0;
     padding: 7% 0 0;
     /*Price Icon*/
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails span.price {
-    font-size: 0.7em;
-    width: 80%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
+    font-size: 85%;
   }
-  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.product_icon,
-  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.product_icon {
-    margin: 0 2% 0 0;
-    width: 15%;
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    text-indent: 2%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
+    left: 85%;
+    top: 40%;
+  }
+  #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
+  #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
+    cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;

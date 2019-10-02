@@ -1,6 +1,7 @@
 import kids from "./images/kids-trainer.png";
 import furlined from "./images/fur-lined-hiking-boot.png";
 import basketball from "./images/basket-ball-shoe.png";
+import ladies from "./images/fur-lined-ladies-boot.png"
 import cartImg from "./images/shoppingcart.gif";
 
 const newproductData = [
@@ -36,8 +37,8 @@ const newproductData = [
 
   {
     id: 4,
-    name: "Trainers",
-    imgUrl: kids,
+    name: "Ladies",
+    imgUrl: ladies,
     price: "80.00",
     cartUrl: cartImg,
     text:

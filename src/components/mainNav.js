@@ -54,7 +54,7 @@ function MainNav() {
 
         <ul id="mobile-nav">
           <li>
-            <Link to="/index" title="Home Page">
+            <Link to="/" title="Home Page">
               Home
             </Link>
           </li>
