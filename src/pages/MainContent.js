@@ -5,10 +5,9 @@ import banner from "../images/banner-image.png";
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import FindShoes from "../components/FindShoes";
-//import productData from "../data/productData"
 
 class MainContent extends React.Component {
-  
+ 
   render() {
     return (
       <main id="content" className="clearfix">
@@ -34,19 +33,19 @@ class MainContent extends React.Component {
 
             <nav id="apDiv1">
               
-              <a href="index.html" title="Womens's Shoes">
+              <a href="/" title="Womens's Shoes">
                 Women's Shoes
               </a>
-              <a href="index.html" title="Men's Shoes">
+              <a href="/" title="Men's Shoes">
                 Men's Shoes
               </a>
-              <a href="index.html" title="Kids's Shoes">
+              <a href="/" title="Kids's Shoes">
                 Kid's Shoes
               </a>
-              <a href="index.html" title="Bags">
+              <a href="/" title="Bags">
                 Bags
               </a>
-              <a href="index.html" title="Accessories">
+              <a href="/" title="Accessories">
                 Accessories
               </a>
             </nav>

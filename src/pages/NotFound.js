@@ -8,7 +8,7 @@ class NotFound extends React.Component {
         
         <main id="content" role="main">
         
-            <h1>Oops! Error. Click <a href="https://www.dom">here</a>to get to Home page</h1>
+            <h1>Oops! Error. Click <a href="/">here</a>to get to Home page</h1>
         
         
             </main>  

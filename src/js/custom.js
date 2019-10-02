@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 		show_menu();
 
-});
+	});
 	
 
 function show_menu(){

@@ -16,7 +16,6 @@ function SearchBar(props) {
                 <option value="Athletics">Athletics</option>
                 <option value="Fashion">Fashion</option>
                 <option value="Outdoor">Outdoor</option>
-                <option value="Sandals">Sandals</option>
                 <option value="Work">Work</option>
             </select>
             <select name="size">
@@ -27,7 +26,6 @@ function SearchBar(props) {
             <select name="color">
                 <option value="Red">Red</option>
                 <option value="Black">Black</option>
-                <option value="Yellow">Yellow</option>
                 <option value="Green">Green</option>
                 <option value="White">White</option>
             </select>

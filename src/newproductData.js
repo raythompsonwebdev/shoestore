@@ -10,7 +10,8 @@ const newproductData = [
     imgUrl: kids,
     price: "50.00",
     cartUrl: cartImg,
-    text:"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa." 
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
   },
 
   {
@@ -19,7 +20,8 @@ const newproductData = [
     imgUrl: furlined,
     price: "80.00",
     cartUrl: cartImg,
-    text:"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa." 
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
   },
 
   {
@@ -28,51 +30,18 @@ const newproductData = [
     imgUrl: basketball,
     price: "90.00",
     cartUrl: cartImg,
-    text:"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa." 
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
   },
 
   {
     id: 4,
     name: "Trainers",
-    imgUrl: kids ,
-    price: "80.00",
-    cartUrl: cartImg,
-    text:"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa." 
-  },
-  {
-    id: 5,
-    name: "Trainers",
     imgUrl: kids,
-    price: "50.00",
-    cartUrl: cartImg,
-    text:"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa." 
-  },
-
-  {
-    id: 6,
-    name: "Boots",
-    imgUrl: furlined,
     price: "80.00",
     cartUrl: cartImg,
-    text:"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa." 
-  },
-
-  {
-    id: 7,
-    name: "Skate Shoes",
-    imgUrl: basketball,
-    price: "90.00",
-    cartImgUrl: cartImg,
-    text:"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa." 
-  },
-
-  {
-    id: 8,
-    name: "Trainers",
-    imgUrl: kids ,
-    price: "80.00",
-    cartImgUrl: cartImg,
-    text:"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa." 
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
   }
 ];
 

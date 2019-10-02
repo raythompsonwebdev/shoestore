@@ -4,7 +4,9 @@ import {  Link  } from 'react-router-dom'
 function MainNav() {
   
     return (
+      
       <nav id="main-nav" role="navigation">
+        
         <span id="signin-box">
           <Link to="/" title="">
             Sign in
@@ -16,6 +18,7 @@ function MainNav() {
             help
           </Link>
         </span>
+        
         <ul id="inner-nav">
           <li>
             <Link to="/" title="Home Page">

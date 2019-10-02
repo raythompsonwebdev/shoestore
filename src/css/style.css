@@ -391,12 +391,12 @@ figure {
     color: #ffffff;
     background-color: #ea3411;
     margin: 0;
-    height: 30px;
+    padding: 0.8%;
+    height: auto;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1.1em;
-    height: 30px;
     width: 23%;
     line-height: 30px;
     margin: 0;
@@ -696,6 +696,7 @@ figure {
     padding: 6% 0 0;
     background-image: url("../images/product-info-bg.png");
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     /*Price Icon*/
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails span.price:first-of-type,
@@ -1198,19 +1199,13 @@ figure {
   }
   #wrapper #search_category #search_category_form {
     margin: 0;
-    padding: 0.8%;
-    height: 30px;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1.1em;
-    height: 30px;
-    width: 23%;
-    line-height: 30px;
   }
   #wrapper #search_category #search_category_form select {
     width: 16.5%;
     font-size: 1em;
-    height: 30px;
   }
   #wrapper #content {
     /*rightside content section within content div*/
@@ -1652,14 +1647,10 @@ figure {
   }
   #wrapper #search_category #search_category_form {
     margin: 0;
-    padding: 0.8%;
-    height: 30px;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1.05em;
-    height: 30px;
     width: 23%;
-    line-height: 30px;
   }
   #wrapper #search_category #search_category_form select {
     width: 16.5%;
@@ -2088,13 +2079,10 @@ figure {
   #wrapper #search_category #search_category_form {
     margin: 0;
     padding: 0.8%;
-    height: 30px;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1em;
-    height: 30px;
     width: 23%;
-    line-height: 30px;
   }
   #wrapper #search_category #search_category_form select {
     width: 16.5%;
@@ -2500,7 +2488,6 @@ figure {
   }
   #wrapper #search_category #search_category_form {
     margin: 0;
-    padding: 0.8%;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 0.9em;
@@ -2509,7 +2496,6 @@ figure {
   #wrapper #search_category #search_category_form select {
     width: 16.5%;
     font-size: 1em;
-    height: 30px;
   }
   #wrapper #content {
     /*rightside content section within content div*/
@@ -2905,12 +2891,10 @@ figure {
   #wrapper #search_category #search_category_form label {
     font-size: 0.9em;
     width: 22%;
-    text-indent: 1%;
   }
   #wrapper #search_category #search_category_form select {
     width: 16.5%;
     font-size: 0.9em;
-    height: 30px;
   }
   #wrapper #content {
     /*rightside content section within content div*/
@@ -3241,7 +3225,7 @@ figure {
     width: 100%;
   }
   #wrapper header figure#logo {
-    width: 30%;
+    width: 35%;
   }
   #wrapper nav#main-nav {
     height: 40px;
@@ -3678,7 +3662,7 @@ figure {
     width: 100%;
   }
   #wrapper header figure#logo {
-    width: 25%;
+    width: 40%;
   }
   #wrapper nav#main-nav {
     height: 30px;
@@ -3995,7 +3979,7 @@ figure {
     height: 70px;
   }
   #wrapper header figure#logo {
-    width: 25%;
+    width: 40%;
   }
   #wrapper nav#main-nav {
     height: 25px;
@@ -4263,7 +4247,7 @@ figure {
     cursor: pointer;
   }
   #wrapper header figure#logo {
-    width: 25%;
+    width: 45%;
   }
   #wrapper nav#main-nav span#signin-box {
     width: 30.5%;
@@ -4525,7 +4509,7 @@ figure {
     cursor: pointer;
   }
   #wrapper header figure#logo {
-    width: 25%;
+    width: 50%;
   }
   #wrapper nav#main-nav span#signin-box {
     width: 37.5%;
@@ -4789,7 +4773,7 @@ figure {
     cursor: pointer;
   }
   #wrapper header figure#logo {
-    width: 25%;
+    width: 50%;
   }
   #wrapper nav#main-nav {
     height: 30px;
@@ -5120,7 +5104,7 @@ figure {
     cursor: pointer;
   }
   #wrapper header figure#logo {
-    width: 25%;
+    width: 55%;
   }
   #wrapper nav#main-nav span#signin-box {
     width: 40.5%;
@@ -5390,10 +5374,10 @@ figure {
     height: 65px;
   }
   #wrapper header figure#logo {
-    width: 20%;
+    width: 60%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 40.5%;
+    width: 42.5%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.7em;
@@ -5652,10 +5636,10 @@ figure {
     font-size: 0.8em;
   }
   #wrapper header figure#logo {
-    width: 20%;
+    width: 65%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 42.5%;
+    width: 45.5%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.65em;
@@ -5917,10 +5901,10 @@ figure {
     font-size: 0.75em;
   }
   #wrapper header figure#logo {
-    width: 20%;
+    width: 70%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 39%;
+    width: 45.5%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.6em;

@@ -4,8 +4,6 @@ import MainContent from './pages/MainContent'
 import './css/style.css';
 
 
-
-
 class App extends React.Component{
 
   render(){

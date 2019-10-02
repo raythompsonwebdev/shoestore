@@ -4,9 +4,10 @@ import NewProductBoxes from "../components/newProductBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";
 
-//import productData from "../data/productData"
 
 class NewProducts extends React.Component {
+
+    
   render() {
     return (
       <main id="content" className="clearfix">
@@ -26,10 +27,7 @@ class NewProducts extends React.Component {
             <section id="results">
 
               <NewProductBoxes />
-              <NewProductBoxes />
-              <NewProductBoxes />
-              <NewProductBoxes />
-              
+                           
 
             </section>
 
