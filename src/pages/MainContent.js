@@ -20,7 +20,7 @@ class MainContent extends React.Component {
 
           <section id="bannerbox">
             
-            <br />
+            
 
             <hgroup>
               <h1>LORUM IPSUN DOLOR AMET </h1>
@@ -28,7 +28,9 @@ class MainContent extends React.Component {
             </hgroup>
 
             <figure id="bannerboximg">
+
               <img src={banner} alt="bannerimage" />
+              
             </figure>
 
             <nav id="apDiv1">

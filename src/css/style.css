@@ -581,12 +581,14 @@ figure {
     width: 100%;
     margin: 0;
     border: solid 1px #7a7777;
+    position: relative;
+    margin-top: 1em;
   }
   #wrapper #content #content_section #bannerbox hgroup {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     position: absolute;
     z-index: 2;
-    width: 41%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
@@ -619,10 +621,11 @@ figure {
     float: right;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    margin: 17% 0 0 1%;
-    width: 27%;
-    height: 12rem;
-    float: left;
+    position: absolute;
+    width: 25%;
+    height: auto;
+    left: 1em;
+    bottom: 2em;
     display: block;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
@@ -630,7 +633,7 @@ figure {
     display: block;
     height: 35px;
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 0.2em;
     color: #ffffff;
     font-size: 1em;
     line-height: 35px;
@@ -642,9 +645,6 @@ figure {
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
     background-color: #ffffff;
-    height: 35px;
-    width: 100%;
-    margin-bottom: 2%;
     color: #ea3411;
     font-weight: bold;
     text-align: center;
@@ -1315,19 +1315,13 @@ figure {
     width: 60%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    margin: 15% 3% 0 1%;
-    width: 23%;
-    height: 200px;
+    width: 25%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
-    height: 35px;
-    font-size: 1.05em;
     line-height: 35px;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    height: 35px;
-    margin-top: 3%;
-    font-size: 1.2em;
+    font-weight: bold;
   }
   #wrapper #content #content_section #bannerbox #btn_div {
     height: 150px;
@@ -1525,19 +1519,37 @@ figure {
   }
   #wrapper #content #left_bar #sec_nav #accordion {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
   }
   #wrapper #content #left_bar #sec_nav #accordion h3 {
     font-size: 0.8em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul {
-    list-style: none;
-    width: 100%;
+    display: block;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
-    font-weight: bold;
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -1747,7 +1759,7 @@ figure {
     height: 340px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 48%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 2.3rem;
@@ -1759,13 +1771,13 @@ figure {
     width: 59%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    width: 27%;
+    width: 25%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 1em;
+    font-weight: bold;
   }
   #wrapper #content #content_section #bannerbox #btn_div {
     height: 150px;
@@ -1946,19 +1958,37 @@ figure {
   }
   #wrapper #content #left_bar #sec_nav #accordion {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
   }
   #wrapper #content #left_bar #sec_nav #accordion h3 {
     font-size: 0.8em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul {
-    list-style: none;
-    width: 100%;
+    display: block;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
-    font-weight: bold;
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -2173,7 +2203,7 @@ figure {
     height: 340px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 60%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 2.2rem;
@@ -2187,13 +2217,13 @@ figure {
     width: 62%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    width: 27%;
+    width: 25%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
     font-size: 0.95em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 1em;
+    font-weight: bold;
   }
   #wrapper #content #content_section #bannerbox #btn_div {
     height: 150px;
@@ -2370,19 +2400,38 @@ figure {
     width: 8%;
   }
   #wrapper #content #left_bar #sec_nav #accordion {
-    font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    font-size: 0.9em;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
   }
   #wrapper #content #left_bar #sec_nav #accordion h3 {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul {
-    list-style: none;
+    display: block;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.80em;
+    font-size: 0.8em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
-    font-weight: bold;
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -2436,7 +2485,7 @@ figure {
     width: 22%;
   }
   #wrapper nav#main-nav span#signin-box a {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
@@ -2579,7 +2628,7 @@ figure {
     height: 330px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 60%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 2.1rem;
@@ -2599,7 +2648,7 @@ figure {
     font-size: 0.85em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.9em;
+    font-weight: bold;
   }
   #wrapper #content #content_section #bannerbox #btn_div {
     height: 150px;
@@ -2770,18 +2819,37 @@ figure {
   }
   #wrapper #content #left_bar #sec_nav #accordion {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
   }
   #wrapper #content #left_bar #sec_nav #accordion h3 {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul {
-    list-style: none;
+    display: block;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
     font-size: 0.75em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
-    font-weight: bold;
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -2975,7 +3043,7 @@ figure {
     height: 310px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 55%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 1.9em;
@@ -2993,7 +3061,7 @@ figure {
     font-size: 0.75em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.8em;
+    font-weight: bold;
   }
   #wrapper #content #content_section #bannerbox #btn_div {
     height: 150px;
@@ -3031,7 +3099,6 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
     font-size: 0.8em;
-    display: block;
     line-height: 25px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
@@ -3167,18 +3234,37 @@ figure {
   }
   #wrapper #content #left_bar #sec_nav #accordion {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
   }
   #wrapper #content #left_bar #sec_nav #accordion h3 {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul {
-    list-style: none;
+    display: block;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
-    font-weight: bold;
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -3230,7 +3316,7 @@ figure {
     width: 27%;
   }
   #wrapper nav#main-nav span#signin-box a {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
@@ -3277,7 +3363,6 @@ figure {
   #wrapper #search_category #search_category_form {
     margin: 0 auto;
     padding: 0.5%;
-    width: 75%;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 0.9em;
@@ -3374,7 +3459,7 @@ figure {
     height: 310px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 71%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 1.85em;
@@ -3392,7 +3477,7 @@ figure {
     font-size: 0.7em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.75em;
+    font-weight: bold;
   }
   #wrapper #content #content_section #bannerbox #btn_div {
     height: 150px;
@@ -3424,10 +3509,12 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 85%;
+    text-indent: 0.5em;
+    font-size: 75%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
+    text-indent: 0.5em;
     display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
@@ -3561,19 +3648,38 @@ figure {
     width: 8%;
   }
   #wrapper #content #left_bar #sec_nav #accordion {
-    font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    font-size: 0.7em;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 16px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
   }
   #wrapper #content #left_bar #sec_nav #accordion h3 {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul {
-    list-style: none;
+    display: block;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
-    font-weight: bold;
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -3628,14 +3734,14 @@ figure {
   #wrapper button#menu-toggle-btn {
     display: block;
     position: fixed;
-    top: 1em;
+    top: 0.5em;
     left: 83%;
     z-index: 4;
-    width: 100px;
+    width: 16%;
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #ea3411;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 2px solid #000000;
@@ -3790,9 +3896,10 @@ figure {
   #wrapper #content #content_section #bannerbox {
     height: 335px;
     width: 99%;
+    margin-top: 0.5em;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 90%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 2.2rem;
@@ -3804,14 +3911,13 @@ figure {
     width: 68%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    margin: 16% 0 0 1%;
     width: 27%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
     font-size: 0.9em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.95em;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -3919,8 +4025,39 @@ figure {
     height: auto;
     background-color: #ffffff;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 16px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.8em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.8em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
@@ -3971,7 +4108,7 @@ figure {
     cursor: pointer;
   }
   #wrapper header {
-    height: 70px;
+    height: 65px;
   }
   #wrapper header figure#logo {
     width: 40%;
@@ -4069,7 +4206,7 @@ figure {
     height: 335px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 90%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 2.1em;
@@ -4087,7 +4224,7 @@ figure {
     font-size: 0.85em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.9em;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -4198,8 +4335,40 @@ figure {
     height: auto;
     top: 7.2em;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    font-size: 0.75em;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 16px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.75em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.75em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
@@ -4239,7 +4408,7 @@ figure {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 81%;
+    left: 83%;
     top: 0.5em;
   }
   #wrapper button#menu-toggle-btn:hover {
@@ -4275,7 +4444,7 @@ figure {
   #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a::visited {
+  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
     background-color: white;
   }
   #wrapper nav#main-nav ul#mobile-nav span#signin-box {
@@ -4340,7 +4509,7 @@ figure {
     height: 310px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 90%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 2em;
@@ -4358,7 +4527,7 @@ figure {
     font-size: 0.85em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.9em;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -4454,8 +4623,39 @@ figure {
     width: 191px;
     height: auto;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 16px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.75em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.75em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
@@ -4507,7 +4707,7 @@ figure {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 78%;
+    left: 83%;
   }
   #wrapper button#menu-toggle-btn:hover {
     background-color: #ea3411;
@@ -4517,7 +4717,7 @@ figure {
     width: 50%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 37.5%;
+    width: 35.5%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.75em;
@@ -4545,7 +4745,7 @@ figure {
   #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a::visited {
+  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
     background-color: white;
   }
   #wrapper nav#main-nav ul#mobile-nav span#signin-box {
@@ -4614,7 +4814,7 @@ figure {
     height: 310px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 90%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 1.9em;
@@ -4623,7 +4823,7 @@ figure {
     font-size: 0.9em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 68%;
+    width: 76%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
     width: 27%;
@@ -4632,7 +4832,7 @@ figure {
     font-size: 0.8em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.85em;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -4729,8 +4929,39 @@ figure {
     position: fixed;
     height: auto;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 16px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
@@ -4786,7 +5017,7 @@ figure {
     height: 30px;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 38.5%;
+    width: 39%;
   }
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
@@ -4811,7 +5042,7 @@ figure {
   #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a::visited {
+  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
     background-color: white;
   }
   #wrapper nav#main-nav ul#mobile-nav span#signin-box {
@@ -4830,6 +5061,7 @@ figure {
   }
   #wrapper #search_category #search_category_form {
     height: auto;
+    width: 75%;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1em;
@@ -4933,34 +5165,33 @@ figure {
     width: 49%;
   }
   #wrapper #content #content_section #bannerbox {
-    height: auto;
+    height: 300px;
   }
   #wrapper #content #content_section #bannerbox hgroup {
     position: unset;
-    width: 97%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.7em;
+    font-size: 1.9em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.95em;
+    font-size: 1.1em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     margin: 0;
-    width: 100%;
+    width: 64%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    float: none;
-    margin: 5% auto;
-    width: 100%;
+    width: 35%;
+    bottom: unset;
+    top: 6em;
+    left: 0.5em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
-    font-size: 0.9em;
-    margin-bottom: 1%;
+    font-size: 0.8em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 1em;
-    margin-bottom: 1%;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -5063,8 +5294,39 @@ figure {
     height: auto;
     top: 6.7em;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 16px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 10px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
@@ -5117,10 +5379,10 @@ figure {
     cursor: pointer;
   }
   #wrapper header figure#logo {
-    width: 55%;
+    width: 60%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 40.5%;
+    width: 41%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.70em;
@@ -5148,7 +5410,7 @@ figure {
   #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a::visited {
+  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
     background-color: white;
   }
   #wrapper nav#main-nav ul#mobile-nav span#signin-box {
@@ -5212,30 +5474,26 @@ figure {
     width: 31%;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 97%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     height: 35px;
     line-height: 35px;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.8em;
+    font-size: 1em;
     height: 30px;
     line-height: 30px;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 100%;
-  }
-  #wrapper #content #content_section #bannerbox #apDiv1 {
-    margin: 5% auto;
-    width: 100%;
+    width: 64%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
     font-size: 0.8em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.85em;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -5250,7 +5508,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
-    width: 40%;
+    width: 42%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -5263,16 +5521,16 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 85%;
+    font-size: 75%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
-    text-indent: 2%;
+    display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    left: 85%;
-    top: 40%;
+    left: 83%;
+    top: 44%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -5333,8 +5591,39 @@ figure {
   #wrapper #content #left_bar {
     z-index: 100;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 16px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 10px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
@@ -5391,7 +5680,7 @@ figure {
     height: 65px;
   }
   #wrapper header figure#logo {
-    width: 60%;
+    width: 65%;
   }
   #wrapper nav#main-nav span#signin-box {
     width: 42.5%;
@@ -5422,7 +5711,7 @@ figure {
   #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a::visited {
+  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
     background-color: white;
   }
   #wrapper nav#main-nav ul#mobile-nav span#signin-box {
@@ -5430,6 +5719,9 @@ figure {
   }
   #wrapper #search_category button.search_category_btn {
     font-size: 1.1em;
+  }
+  #wrapper #search_category #search_category_form {
+    width: 85%;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1em;
@@ -5484,27 +5776,31 @@ figure {
   #wrapper #content #content_section #pagination a {
     width: 31%;
   }
+  #wrapper #content #content_section #bannerbox {
+    height: 260px;
+  }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 99%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 100%;
+    width: 65%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    margin: 5% auto;
-    width: 100%;
+    top: 5.5em;
+    left: 0.2em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
-    font-size: 0.8em;
+    font-size: 0.7em;
+    height: 30px;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.85em;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -5536,12 +5832,12 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
-    text-indent: 2%;
+    display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    left: 85%;
-    top: 40%;
+    left: 83%;
+    top: 43%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -5600,8 +5896,40 @@ figure {
     top: 6em;
     z-index: 100;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    font-size: 0.7em;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 14px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
@@ -5687,7 +6015,7 @@ figure {
   #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a::visited {
+  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
     background-color: white;
   }
   #wrapper nav#main-nav ul#mobile-nav span#signin-box {
@@ -5749,27 +6077,23 @@ figure {
   #wrapper #content #content_section #pagination a {
     width: 31%;
   }
-  #wrapper #content #content_section #bannerbox hgroup {
-    width: 99%;
-  }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.35em;
+    font-size: 1.55em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 100%;
+    width: 65%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    margin: 5% auto;
-    width: 100%;
+    width: 35%;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
-    font-size: 0.8em;
+    font-size: 0.65em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.85em;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -5801,7 +6125,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
-    text-indent: 2%;
+    display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
@@ -5864,8 +6188,39 @@ figure {
   #wrapper #content #left_bar {
     z-index: 100;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 14px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
@@ -6016,9 +6371,11 @@ figure {
   #wrapper #content #content_section #pagination a {
     width: 31%;
   }
+  #wrapper #content #content_section #bannerbox {
+    height: 230px;
+  }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 99%;
-    margin-left: 1%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 1.3em;
@@ -6026,20 +6383,19 @@ figure {
     line-height: 30px;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 100%;
+    width: 65;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 {
-    margin: 5% auto;
-    width: 100%;
+    top: 3.9em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a {
-    font-size: 0.8em;
+    font-size: 0.6em;
   }
   #wrapper #content #content_section #bannerbox #apDiv1 a:hover {
-    font-size: 0.85em;
+    font-weight: bold;
   }
   #wrapper #content #content_section .product_boxes,
   #wrapper #content #content_section form #results {
@@ -6074,7 +6430,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
-    text-indent: 2%;
+    display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
@@ -6138,8 +6494,39 @@ figure {
     position: absolute;
     z-index: 100;
   }
+  #wrapper #content #left_bar #sec_nav #accordion {
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Style the accordion panel. Note: hidden by default */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+    padding: 14px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+    background-color: #ccc;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .panel {
+    padding: 0 18px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+  }
+  #wrapper #content #left_bar #sec_nav #accordion h3 {
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul {
+    display: block;
+  }
   #wrapper #content #left_bar #sec_nav #accordion ul li {
-    font-size: 0.9em;
+    font-size: 0.7em;
+  }
+  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+    cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
     width: 98%;
