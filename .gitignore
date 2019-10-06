@@ -54,7 +54,7 @@ Files/
 dist/
 githeadfiles/
 src/js/qtip/
-src/js/Respond-master/
+
 src/js/jquery-ui-1.12.1.custom/
 src/serviceWorker.js
 
@@ -65,7 +65,6 @@ src/images/images/
 src/imagemap-qtip.txt
 .htaccess
 src/js/older-browser-scripts/
-dist/
 src/css/custom-theme/
 src/css/custom-theme/images/
 src/css/.sass-cache/

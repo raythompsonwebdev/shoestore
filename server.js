@@ -3,7 +3,7 @@ const path = require('path');
 const serveStatic = require('serve-static')
 const app = express();
 
-app.use("/", serveStatic (path.join(__dirname, 'dist')));
+app.use("/", serveStatic (path.join(__dirname, 'build')));
 
 // Catch all routes and redirect to the index file
 app.get('*', function (req, res) {

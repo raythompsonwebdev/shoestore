@@ -1,3 +1,18 @@
+![Shoe Store](/www-shoestore-home-page-large.jpg)
+
+## Shoe Store
+Shoe Store is a online shoe store where you can purchace various types of footware. Website design used provided by https://www.phpjabbers.com/free-website-templates.php.  
+
+
+## License
+
+MIT License
+
+## Credits
+
+ * qTip2 - Pretty powerful tooltips - v2.2.1,  http://qtip2.com, Copyright (c) 2015 Released under the MIT licenses, http://jquery.org/license
+
+ 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
