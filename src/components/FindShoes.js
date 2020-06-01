@@ -10,20 +10,25 @@ function FindShoes() {
       </h1>
       <br />
       <select name="gender">
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
+        <option value="Male">Mens</option>
+        <option value="Female">Women</option>
+        <option value="Kids">Kids</option>
       </select>
       <select name="foot-size">
-        <option value="1-3">1-3</option>
-        <option value="4-7">4-7</option>
-        <option value="8-11">8-11</option>
-        <option value="11+">11+</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11+</option>
       </select>
-      <select name="type-of-shoe">
-        <option value="Casual">Casual</option>
-        <option value="Dress">Dress</option>
+      <select name="shoe-type">
+        <option value="Trainers">Trainers</option>
+        <option value="Ladies Boots">Ladies Boots</option>
+        <option value="Skate Shoes">Skate Shoes</option>
         <option value="Boots">Boots</option>
-        <option value="Work">Work</option>
       </select>
       <input name="find" className="find" type="submit" value="FIND" />
     </form>

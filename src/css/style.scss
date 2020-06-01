@@ -1,201 +1,9 @@
 //@import "partials/fonts";
 @import "partials/variables";
 @import "partials/mixins";
+@import "partials/base";
+@import "partials/fonts";
 
-a,
-abbr,
-acronym,
-address,
-applet,
-big,
-blockquote,
-body,
-caption,
-cite,
-code,
-dd,
-
-dfn,
-div,
-dl,
-dt,
-em,
-fieldset,
-font,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-html,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-object,
-ol,
-p,
-pre,
-q,
-s,
-samp,
-small,
-span,
-strike,
-strong,
-sub,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-tr,
-tt,
-ul,
-var {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	font-size: 100%;
-	font-family: inherit;
-	vertical-align: baseline;
-}
-/* remember to define focus styles! */
-html {
-	background-image: url("../images/bg-img.png");
-	background-repeat: repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-body {
-	line-height: 1;
-	padding: 0;
-	margin: 0;
-	height: auto;
-}
-
-ol,
-ul {
-	list-style: none;
-}
-
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-	width: 100%;
-}
-
-caption,
-td,
-th {
-	text-align: left;
-	font-weight: normal;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-	content: "";
-}
-
-blockquote,
-q {
-	quotes: "" "";
-}
-
-.group:after,
-.group:before {
-	content: "";
-	display: table;
-}
-
-.group:after {
-	clear: both;
-}
-
-.box-set:after,
-.box-set:before {
-	content: "";
-	display: table;
-}
-
-.box-set:after {
-	clear: both;
-}
-
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-.clearfix {
-	display: inline-block;
-	clear: both;
-}
-
-html[xmlns] .clearfix {
-	display: block;
-}
-
-* html .clearfix {
-	height: 1%;
-}
-
-a {
-	font-family: $font-list;
-	font-size: 100%;
-	text-decoration: none;
-}
-
-h1 {
-	font-family: $font-list;
-	font-size: 1em;
-}
-
-img {
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	border: 0;
-	outline: none;
-}
-
-button,
-form {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-
-hr {
-	display: block;
-	clear: both;
-}
-
-figure {
-	margin: 0;
-	padding: 0;
-}
 //Q-Tip
 .myCustomClass {
 	.qtip-content {
@@ -653,6 +461,7 @@ figure {
 						padding: 0;
 						display: block;
 						float: right;
+						margin-top: 2.5em;
 					}
 
 					nav#apDiv1 {
@@ -1045,7 +854,7 @@ figure {
 					}
 				}
 
-				#sec_nav {
+				#acc_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
@@ -1055,22 +864,13 @@ figure {
 					span {
 						width: 8%;
 					}
-
-					.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
-							left: 88%;
-					}
-
-					.ui-accordion .ui-accordion-content {
-						padding: 0.5em;
-						border-top: 0;
-						overflow: auto;
-					}
-
-					#accordion {
+					
+					div#accContainer {
 						font-family: $font-list;
 						/* Style the buttons that are used to open and close the accordion panel */
 						
-						.accordion {
+						button.accordion {
+							font-family: $font-list;
 							background-color: #eee;
 							color: #444;
 							cursor: pointer;
@@ -1079,6 +879,8 @@ figure {
 							text-align: left;
 							border: none;
 							outline: none;
+							font-weight:bold;
+							text-transform: uppercase;
 							@include transitioner(all 0.2s ease-in-out);
 						}
 
@@ -1109,12 +911,10 @@ figure {
 							transition: transform 0.4s ease;
 							box-sizing: border-box;
 						}
-
-						
-
+					
 						.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
-						font-size: 13px;
+						font-size: 12px;
 						color: #777;
 						float: right;
 						margin-left: 5px;
@@ -1139,6 +939,7 @@ figure {
 							padding: 0;
 							width: 100%;
 							display: block;
+							
 
 							li {
 								line-height: 45px;
@@ -1147,6 +948,7 @@ figure {
 								font-size: 0.8em;
 								width: 100%;
 								text-align: left;
+								font-family: $font-list;
 
 								&:hover {
 									font-weight: bold;
@@ -1704,7 +1506,7 @@ figure {
 					}
 				}
 
-				#sec_nav {
+				#acc_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
@@ -1713,10 +1515,10 @@ figure {
 						width: 8%;
 					}
 
-					#accordion {
+					div#accContainer {
 						font-family: $font-list;
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 18px;
 							
@@ -1725,7 +1527,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -1738,7 +1540,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -2263,7 +2065,7 @@ figure {
 					}
 				}
 
-				#sec_nav {
+				#acc_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
@@ -2272,19 +2074,19 @@ figure {
 						width: 8%;
 					}
 
-					#accordion {
+					div#accContainer {
 						font-family: $font-list;
 						
-						.accordion {
+						button.accordion {
 							
-							padding: 18px;
+							padding: 16px;
 							
 						}
 
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -2297,7 +2099,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -2826,7 +2628,7 @@ figure {
 					}
 				}
 
-				#sec_nav {
+				#acc_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
@@ -2835,19 +2637,19 @@ figure {
 						width: 8%;
 					}
 
-					#accordion {
+					div#accContainer {
 						
 						font-size:0.9em;
-						.accordion {
+						button.accordion {
 							
-							padding: 18px;
+							padding: 14px;
 							
 						}
 
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -2860,7 +2662,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -3360,7 +3162,7 @@ figure {
 					}
 				}
 
-				#sec_nav {
+				#acc_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
@@ -3369,19 +3171,20 @@ figure {
 						width: 8%;
 					}
 
-					#accordion {
+					div#accContainer {
 						font-family: $font-list;
+						font-size: 0.85em;
 						
-						.accordion {
+						button.accordion {
 							
-							padding: 18px;
+							padding: 12px;
 							
 						}
 
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -3394,7 +3197,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -3503,7 +3306,7 @@ figure {
 					margin-right: 0.2em;
 
 					a {
-						padding: 0 0.5em;
+						padding: 0 0.65em;
 						font-size: 0.7em;
 
 						&:hover {
@@ -3885,7 +3688,7 @@ figure {
 					}
 				}
 
-				#sec_nav {
+				#acc_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
@@ -3894,19 +3697,19 @@ figure {
 						width: 8%;
 					}
 
-					#accordion {
+					div#accContainer {
 						font-family: $font-list;
-						
-						.accordion {
+						font-size: 0.8em;
+						button.accordion {
 							
-							padding: 18px;
+							padding: 12px;
 							
 						}
 
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -3919,7 +3722,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -4409,7 +4212,7 @@ figure {
 					}
 				}
 
-				#sec_nav {
+				#acc_nav {
 					margin: auto;
 					height: auto;
 					width: 94%;
@@ -4418,10 +4221,10 @@ figure {
 						width: 8%;
 					}
 
-					#accordion {
+					div#accContainer {
 						font-size:0.7em;
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 16px;
 							
@@ -4430,7 +4233,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -4443,7 +4246,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -4759,6 +4562,7 @@ figure {
 					#bannerboximg {
 						
 						width: 68%;
+						margin-top: 2em;
 					}
 
 					nav#apDiv1 {
@@ -4907,10 +4711,10 @@ figure {
 				height: auto;
 				background-color: $color-white;
 
-				#sec_nav {
-					#accordion {
+				#acc_nav {
+					div#accContainer {
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 16px;
 							
@@ -4919,7 +4723,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -4932,7 +4736,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -5338,12 +5142,12 @@ figure {
 				height: auto;
 				top: 7.2em;
 
-				#sec_nav {
+				#acc_nav {
 
-					#accordion {
+					div#accContainer {
             font-size:0.75em;
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 16px;
 							
@@ -5352,7 +5156,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -5365,7 +5169,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -5748,10 +5552,10 @@ figure {
 				width: 191px;
 				height: auto;
 
-				#sec_nav {
-					#accordion {
+				#acc_nav {
+					div#accContainer {
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 16px;
 							
@@ -5760,7 +5564,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -5773,7 +5577,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -6178,10 +5982,10 @@ figure {
 				position: fixed;
 				height: auto;
 
-				#sec_nav{
-					#accordion {
+				#acc_nav{
+					div#accContainer {
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 16px;
 							
@@ -6190,7 +5994,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -6203,7 +6007,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -6664,10 +6468,10 @@ figure {
 				height: auto;
 				top: 6.7em;
 
-				#sec_nav {
-					#accordion {
+				#acc_nav {
+					div#accContainer {
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 16px;
 							
@@ -6676,7 +6480,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -6689,7 +6493,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 10px;
 						
@@ -7092,10 +6896,10 @@ figure {
 			#left_bar {
 				z-index: 100;
 
-				#sec_nav {
-					#accordion {
+				#acc_nav {
+					div#accContainer {
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 16px;
 							
@@ -7104,7 +6908,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -7117,7 +6921,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 10px;
 						
@@ -7515,12 +7319,12 @@ figure {
 				top: 6em;
 				z-index: 100;
 
-				#sec_nav{
+				#acc_nav{
 
-					#accordion {
+					div#accContainer {
             font-size:0.7em;
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 14px;
 							
@@ -7529,7 +7333,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -7542,7 +7346,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -7933,10 +7737,10 @@ figure {
 			#left_bar {
 				z-index: 100;
 
-				#sec_nav {
-					#accordion {
+				#acc_nav {
+					div#accContainer {
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 14px;
 							
@@ -7945,7 +7749,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -7958,7 +7762,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						
@@ -8356,11 +8160,11 @@ figure {
 				position: absolute;
 				z-index: 100;
 
-				#sec_nav{
-					#accordion {
-						 
+				#acc_nav{
+
+					div#accContainer {						 
 						
-						.accordion {
+						button.accordion {
 							
 							padding: 14px;
 							
@@ -8369,7 +8173,7 @@ figure {
 																		
 						
 						/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-						.active, .accordion:hover {
+						.active, button.accordion:hover {
 							background-color: #ccc;
 						}
 						
@@ -8382,7 +8186,7 @@ figure {
 
 						
 
-						.accordion:after {
+						button.accordion:after {
 						content: '\02795'; /* Unicode character for "plus" sign (+) */
 						font-size: 13px;
 						

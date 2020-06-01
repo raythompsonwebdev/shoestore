@@ -1,6 +1,6 @@
 import React from "react";
 import NewProductBox from "./newProductBox";
-import NewproductData from "../newproductData";
+import NewproductData from "../data/newproductData";
 
 function newProductBoxes() {
 

@@ -199,6 +199,27 @@ figure {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'Old Standard TT';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/OldStandard/old-standard-tt-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Old Standard TT Regular"), local("OldStandardTT-Regular"), url("../font/OldStandard/old-standard-tt-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../font/OldStandard/old-standard-tt-v7-latin-regular.woff2") format("woff2"), url("../font/OldStandard/old-standard-tt-v7-latin-regular.woff") format("woff"), url("../font/OldStandard/old-standard-tt-v7-latin-regular.ttf") format("truetype"), url("../font/OldStandard/old-standard-tt-v7-latin-regular.svg#OldStandardTT") format("svg");
+  /* Legacy iOS */
+}
+
+/* old-standard-tt-700 - latin */
+@font-face {
+  font-family: 'Old Standard TT';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/OldStandard/old-standard-tt-v7-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Old Standard TT Bold"), local("OldStandardTT-Bold"), url("../font/OldStandard/old-standard-tt-v7-latin-700.eot?#iefix") format("embedded-opentype"), url("../font/OldStandard/old-standard-tt-v7-latin-700.woff2") format("woff2"), url("../font/OldStandard/old-standard-tt-v7-latin-700.woff") format("woff"), url("../font/OldStandard/old-standard-tt-v7-latin-700.ttf") format("truetype"), url("../font/OldStandard/old-standard-tt-v7-latin-700.svg#OldStandardTT") format("svg");
+  /* Legacy iOS */
+}
+
 .myCustomClass .qtip-content {
   width: 175px;
   height: 40px;
@@ -620,6 +641,7 @@ figure {
     padding: 0;
     display: block;
     float: right;
+    margin-top: 2.5em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     position: absolute;
@@ -979,31 +1001,24 @@ figure {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #sec_nav {
+  #wrapper #content #left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
     color: #7a7777;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
   }
-  #wrapper #content #left_bar #sec_nav span {
+  #wrapper #content #left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #sec_nav .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
-    left: 88%;
-  }
-  #wrapper #content #left_bar #sec_nav .ui-accordion .ui-accordion-content {
-    padding: 0.5em;
-    border-top: 0;
-    overflow: auto;
-  }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     /* Style the buttons that are used to open and close the accordion panel */
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+    font-family: "Old Standard TT", arial, helvetica, sans-serif;
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -1012,13 +1027,15 @@ figure {
     text-align: left;
     border: none;
     outline: none;
+    font-weight: bold;
+    text-transform: uppercase;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer .accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
     background-color: white;
     display: none;
@@ -1035,19 +1052,19 @@ figure {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    font-size: 12px;
     color: #777;
     float: right;
     margin-left: 5px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.8em;
     text-transform: uppercase;
     background-color: #cbc5c5;
@@ -1055,22 +1072,23 @@ figure {
     color: #0099CC;
     text-indent: 2%;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     line-height: 45px;
     display: block;
     height: 45px;
     font-size: 0.8em;
     width: 100%;
     text-align: left;
+    font-family: "Old Standard TT", arial, helvetica, sans-serif;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     font-weight: bold;
     cursor: pointer;
   }
@@ -1522,47 +1540,47 @@ figure {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #sec_nav {
+  #wrapper #content #left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #sec_nav span {
+  #wrapper #content #left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -1961,47 +1979,47 @@ figure {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #sec_nav {
+  #wrapper #content #left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #sec_nav span {
+  #wrapper #content #left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
-    padding: 18px;
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+    padding: 16px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -2404,47 +2422,47 @@ figure {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #sec_nav {
+  #wrapper #content #left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #sec_nav span {
+  #wrapper #content #left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-size: 0.9em;
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
-    padding: 18px;
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+    padding: 14px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -2822,47 +2840,48 @@ figure {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #sec_nav {
+  #wrapper #content #left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #sec_nav span {
+  #wrapper #content #left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    font-size: 0.85em;
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
-    padding: 18px;
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+    padding: 12px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -2930,7 +2949,7 @@ figure {
     margin-right: 0.2em;
   }
   #wrapper nav#main-nav ul#inner-nav li a {
-    padding: 0 0.5em;
+    padding: 0 0.65em;
     font-size: 0.7em;
   }
   #wrapper nav#main-nav ul#inner-nav li a:hover {
@@ -3237,47 +3256,48 @@ figure {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #sec_nav {
+  #wrapper #content #left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #sec_nav span {
+  #wrapper #content #left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    font-size: 0.8em;
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
-    padding: 18px;
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+    padding: 12px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -3652,47 +3672,47 @@ figure {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #sec_nav {
+  #wrapper #content #left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #sec_nav span {
+  #wrapper #content #left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-size: 0.7em;
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -3922,6 +3942,7 @@ figure {
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
+    margin-top: 2em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     width: 27%;
@@ -4038,38 +4059,38 @@ figure {
     height: auto;
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
@@ -4347,39 +4368,39 @@ figure {
     height: auto;
     top: 7.2em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-size: 0.75em;
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
@@ -4634,38 +4655,38 @@ figure {
     width: 191px;
     height: auto;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
@@ -4939,38 +4960,38 @@ figure {
     position: fixed;
     height: auto;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
@@ -5302,38 +5323,38 @@ figure {
     height: auto;
     top: 6.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 10px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
@@ -5598,38 +5619,38 @@ figure {
   #wrapper #content #left_bar {
     z-index: 100;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 10px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
@@ -5902,39 +5923,39 @@ figure {
     top: 6em;
     z-index: 100;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     font-size: 0.7em;
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
@@ -6193,38 +6214,38 @@ figure {
   #wrapper #content #left_bar {
     z-index: 100;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {
@@ -6498,38 +6519,38 @@ figure {
     position: absolute;
     z-index: 100;
   }
-  #wrapper #content #left_bar #sec_nav #accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer {
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active, #wrapper #content #left_bar #sec_nav #accordion .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .panel {
+  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .accordion:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
   }
-  #wrapper #content #left_bar #sec_nav #accordion .active:after {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #sec_nav #accordion h3 {
+  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #sec_nav #accordion ul li:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper #content #left_bar #searchbox {

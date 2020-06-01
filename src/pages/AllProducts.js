@@ -90,7 +90,7 @@ class AllProducts extends React.Component {
               <input
                 type="submit"
                 value="submit"
-                onclick="alert('Hey, this is just a sample!'); return false;"
+                //onClick="alert('Hey, this is just a sample!'); return false;"
               />
               &nbsp;
               <input type="reset" value="reset" name="reset" />
