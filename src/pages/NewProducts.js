@@ -1,5 +1,4 @@
 import React from "react";
-//images
 import NewProductBoxes from "../components/newProductBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";

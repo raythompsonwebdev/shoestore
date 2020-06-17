@@ -1,11 +1,11 @@
 import React from "react";
-//images
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";
 import $ from 'jquery';
 
 class AllProducts extends React.Component {
+  
 
   componentDidMount(){
 

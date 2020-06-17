@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../images/shoe-store-logo.png";
-//import $ from "jquery";
 
 function Header() {
 

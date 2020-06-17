@@ -2,15 +2,12 @@ import React from "react";
 
 const accordion = () => {
 
-  var acc = document.getElementsByClassName("accordion");  
-  var i;
+  var acc = document.getElementsByClassName("accordion");    
 
-  for ( i = 0; i < acc.length; i++) { 
+  for ( let i = 0; i < acc.length; i++) { 
             
     acc[i].addEventListener("click", function(event) {   
-      
-      console.log(this.classList)
-
+            
       event.preventDefault();
       /* Toggle between adding and removing the "active" class,
       to highlight the button that controls the panel */
@@ -18,13 +15,15 @@ const accordion = () => {
       
       /* Toggle between hiding and showing the active panel */
       var panel = this.nextElementSibling;
+
+      console.log(this.nextElementSibling)
       
       if (panel.style.display !== "block") {
         panel.style.display = "block";
       } else {
         panel.style.display = "none";
       }
-    }, false);
+    });
   }
 };
 
@@ -33,7 +32,7 @@ const FindShoesAccord = () => {
     <nav id="acc_nav">
 
       <div id="accContainer">
-        <button onClick={accordion} className="accordion">
+        <button onMouseEnter={accordion} className="accordion">
           Men
         </button>
         <div className="panel">
@@ -46,7 +45,7 @@ const FindShoesAccord = () => {
           </ul>
         </div>
 
-        <button onClick={accordion} className="accordion">
+        <button onMouseEnter={accordion} className="accordion">
           Women
         </button>
         <div className="panel">
@@ -58,7 +57,7 @@ const FindShoesAccord = () => {
           </ul>
         </div>
 
-        <button onClick={accordion} className="accordion">
+        <button onMouseEnter={accordion} className="accordion">
           Kids
         </button>
         <div className="panel">

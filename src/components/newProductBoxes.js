@@ -1,10 +1,7 @@
 import React from "react";
 import NewProductBox from "./newProductBox";
-//import NewproductData from "../data/newproductData";
 
 function newProductBoxes({newproducts}) {
-
-  console.log(newproducts)
 
     const NewProduct = newproducts.map(item => (
 
