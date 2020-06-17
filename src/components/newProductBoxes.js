@@ -1,6 +1,7 @@
 import React from "react";
 import NewProductBox from "./newProductBox";
 
+
 function newProductBoxes({newproducts}) {
 
     const NewProduct = newproducts.map(item => (
@@ -10,7 +11,7 @@ function newProductBoxes({newproducts}) {
           name={item.name}
           imgUrl={item.imgUrl}
           price={item.price}
-          cartUrl={item.cartUrl}
+          cartImg={item.cartImg}
           text={item.text}
         />
     ))

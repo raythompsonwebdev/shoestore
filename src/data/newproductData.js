@@ -10,7 +10,7 @@ const newproductData = [
     name: "Trainers",
     imgUrl: kids,
     price: "50.00",
-    cartUrl: cartImg,
+    cartImg: cartImg,
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
   },
@@ -20,7 +20,7 @@ const newproductData = [
     name: "Boots",
     imgUrl: furlined,
     price: "80.00",
-    cartUrl: cartImg,
+    cartImg: cartImg,
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
   },
@@ -30,7 +30,7 @@ const newproductData = [
     name: "Skate Shoes",
     imgUrl: basketball,
     price: "90.00",
-    cartUrl: cartImg,
+    cartImg: cartImg,
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
   },
@@ -40,7 +40,7 @@ const newproductData = [
     name: "Ladies",
     imgUrl: ladies,
     price: "80.00",
-    cartUrl: cartImg,
+    cartImg: cartImg,
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
   }

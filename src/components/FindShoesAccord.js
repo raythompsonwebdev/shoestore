@@ -32,7 +32,7 @@ const FindShoesAccord = () => {
     <nav id="acc_nav">
 
       <div id="accContainer">
-        <button onMouseEnter={accordion} className="accordion">
+        <button onClick={accordion} className="accordion">
           Men
         </button>
         <div className="panel">
@@ -45,7 +45,7 @@ const FindShoesAccord = () => {
           </ul>
         </div>
 
-        <button onMouseEnter={accordion} className="accordion">
+        <button onClick={accordion} className="accordion">
           Women
         </button>
         <div className="panel">
@@ -57,7 +57,7 @@ const FindShoesAccord = () => {
           </ul>
         </div>
 
-        <button onMouseEnter={accordion} className="accordion">
+        <button onClick={accordion} className="accordion">
           Kids
         </button>
         <div className="panel">

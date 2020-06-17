@@ -1,7 +1,7 @@
 import React from "react";
-import cartImg from "../images/shoppingcart.gif"
 
-function productBox({imgUrl, name, price}) {
+
+function productBox({imgUrl, name, price, cartImg}) {
 
   return (
     <figure className="product_box">

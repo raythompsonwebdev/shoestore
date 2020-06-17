@@ -1,15 +1,15 @@
 import React from "react";
 import ProductBox from "./productBox";
-import productData from "../data/productData";
 
-function ProductBoxes() {
+function ProductBoxes({productsdata}) {
 
-  const Product = productData.map(item => (
+  const Product = productsdata.map(item => (
       <ProductBox
         key={item.id}
         name={item.name}
         imgUrl={item.imgUrl}
         price={item.price}
+        cartImg={item.cartImg}
       />
   ))
 

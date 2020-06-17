@@ -9,20 +9,17 @@ class SearchBar extends React.Component {
     super(props);
     this.state = {
         value: ' ',
-        labelname : "name"
+        
     };
 
     this.changeHandler = this.changeHandler.bind(this);
     this.submit = this.submit.bind(this);
-  }
-  
+  }  
 
   changeHandler = (e) =>{
-
-    const value = e.target.value;
-    
-    this.setState({ value : [value]});
-
+        
+    this.setState({ value : e.target.value});
+        
   }
 
   submit = event => {
