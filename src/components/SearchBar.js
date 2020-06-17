@@ -1,43 +1,73 @@
 import React from "react";
+import searchbarData from "../data/searchbarData";
 
-function SearchBar(props) {
-      
-  return (
-    <aside id="search_category">
-        <form id="search_category_form" action="" method="get">
-            <label>{props.labelname}</label>
-            <select name="gender">
-                <option value="Men">Men</option>
-                <option value="Women">Women</option>
-                <option value="Women">Kids</option>
-            </select>
-            <select name="style" >
-                <option value="Trainers">Trainers</option>
-                <option value="Ladies Boots">Ladies Boots</option>
-                <option value="Skate Shoes">Skate Shoes</option>
-                <option value="Boots">Boots</option>
-            </select>
-            <select name="size">
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11+</option>
-            </select>
-            <select name="color">
-                <option value="Red">Red</option>
-                <option value="Black">Black</option>
-                <option value="Green">Green</option>
-                <option value="White">White</option>
-            </select>
-            <button name="find" className="search_category_btn" type="submit">Go</button>
-        </form>
-    </aside>
-        
-  );
+let {genders, sizes, colors, styles} = searchbarData
+
+let changeHandler = event => {
+
+    const name = event.target.name;
+    const value = event.target.value;   
+  
+    console.log(name +' -- ' + value)    
+    
+}
+
+const SearchBar = (props) => {             
+          
+        return (
+            <aside id="search_category">
+
+                <form id="search_category_form" action="" method="get">
+
+                    { <label>{props.labelname}</label> }
+
+                    <select name={genders[0].name} value={genders[0].value} onChange={changeHandler} placeHolder = {genders[0].placeholder}>                       
+                        {                            
+                            genders[0].options.map(option => 
+                                <option value={option.value} key={option.id} >
+                                    {option.displayValue}
+                                </option>
+                            )
+                        }  
+                    </select>
+
+                    <select name={styles[0].name} value={styles[0].value} onChange={changeHandler}>
+                    {
+                        styles[0].options.map(option => (
+                            <option value={option.value} key={option.id}>
+                                {option.displayValue}
+                            </option>
+                        ))
+                    }  
+                    </select>
+
+                    <select name={sizes[0].name} value={sizes[0].value} onChange={changeHandler}>
+                        {
+                            sizes[0].options.map(option => (
+                                <option value={option.value} key={option.id}>
+                                    {option.displayValue}
+                                </option>
+                            ))
+                        }                        
+                    </select>
+
+                    <select name={colors[0].name} value={colors[0].value} onChange={changeHandler}>
+                        {
+                            colors[0].options.map(option => (
+                                <option value={option.value} key={option.id}>
+                                    {option.displayValue}
+                                </option>
+                            ))
+                        }
+                    </select>
+                    
+                    
+                    <button name="find" className="search_category_btn" type="submit">Go</button>
+                </form>
+            </aside>
+
+        );
+   
 }
 
 export default SearchBar;

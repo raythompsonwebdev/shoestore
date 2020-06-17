@@ -3,15 +3,15 @@ import React from "react";
 import NewProductBoxes from "../components/newProductBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";
+import NewproductData from "../data/newproductData";
 
 
 class NewProducts extends React.Component {
 
-    
   render() {
     return (
       <main id="content" className="clearfix">
-        
+
         <SearchBar labelname="New Product"/>
 
         <aside id="left_bar">
@@ -24,12 +24,7 @@ class NewProducts extends React.Component {
             method="get"
             //encType="application/x-www-form-urlencoded"
           >
-            <section id="results">
-
-              <NewProductBoxes />
-                           
-
-            </section>
+            <section id="results"><NewProductBoxes newproducts={NewproductData}/></section>
 
             <br />
             <div className="clearfix"></div>

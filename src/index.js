@@ -15,7 +15,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 const routing = (
 
   <div id="wrapper">
-    
+
     <Header />
 
     <Router>
@@ -29,7 +29,7 @@ const routing = (
         <Route exact path="/allproducts" component={AllProducts} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/faqs" component={Faqs} />
-        <Route component={NotFound} />
+        <Route exact path="/notfound"component={NotFound} />
       </Switch>
 
       <Footer />

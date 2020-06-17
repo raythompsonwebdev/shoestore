@@ -2,7 +2,7 @@ import React from "react";
 import ProductBox from "./productBox";
 import productData from "../data/productData";
 
-function ProductBoxes() { 
+function ProductBoxes() {
 
   const Product = productData.map(item => (
       <ProductBox
@@ -10,7 +10,6 @@ function ProductBoxes() {
         name={item.name}
         imgUrl={item.imgUrl}
         price={item.price}
-        
       />
   ))
 

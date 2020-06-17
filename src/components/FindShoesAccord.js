@@ -28,7 +28,7 @@ const accordion = () => {
   }
 };
 
-function FindShoesAccord() {
+const FindShoesAccord = () => {
   return (
     <nav id="acc_nav">
 

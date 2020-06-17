@@ -427,6 +427,18 @@ figure {
     text-transform: uppercase;
     text-indent: 1%;
   }
+  #wrapper #search_category #search_category_form ::-webkit-input-placeholder {
+    color: #000;
+  }
+  #wrapper #search_category #search_category_form :-ms-input-placeholder {
+    color: #000;
+  }
+  #wrapper #search_category #search_category_form ::-ms-input-placeholder {
+    color: #000;
+  }
+  #wrapper #search_category #search_category_form ::placeholder {
+    color: #000;
+  }
   #wrapper #search_category #search_category_form select {
     font-family: arial, sans-serif;
     width: 16.5%;
@@ -1032,7 +1044,8 @@ figure {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer .accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .accordion:hover,
+  #wrapper #content #left_bar #acc_nav div#accContainer .active {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -1555,7 +1568,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 18px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -1994,7 +2008,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -2437,7 +2452,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -2854,7 +2870,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 12px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -3270,7 +3287,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 12px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -3684,7 +3702,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -3804,6 +3823,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul#mobile-nav {
+    display: block;
     width: 96%;
     background: #000000;
     position: fixed;
@@ -4061,7 +4081,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -4370,7 +4391,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -4655,7 +4677,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -4959,7 +4982,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -5322,7 +5346,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -5624,7 +5649,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -5929,7 +5955,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -6219,7 +6246,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
@@ -6521,7 +6549,8 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active, #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content #left_bar #acc_nav div#accContainer .active,
+  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {

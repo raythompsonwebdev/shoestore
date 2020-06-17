@@ -11,6 +11,7 @@ class MainContent extends React.Component {
   render() {
     return (
       <main id="content" className="clearfix">
+        
         <aside id="left_bar">
           <FindShoes />
           <FindShoesAccord />

@@ -1,6 +1,6 @@
 import React from "react";
 
-function FindShoes() {
+const FindShoes = () => {
   return (
     <article id="searchbox">
     <form id="searcher" action="" method="get">

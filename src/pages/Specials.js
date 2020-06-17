@@ -1,9 +1,7 @@
 import React from "react";
-//images
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";
-
 import $ from 'jquery';
 
 
@@ -46,6 +44,7 @@ class Specials extends React.Component {
   render() {
     return (
       <main id="content" className="clearfix">
+        
         <SearchBar labelname="Specials"/>
 
         <aside id="left_bar">

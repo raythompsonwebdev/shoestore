@@ -2,7 +2,7 @@ import kids from "../images/kids-trainer.png";
 import furlined from "../images/fur-lined-hiking-boot.png";
 import basketball from "../images/basket-ball-shoe.png";
 import ladies from "../images/fur-lined-ladies-boot.png"
-import cartImg from "../images/shoppingcart.gif";
+import cartImg from "../images/shoppingcart.png";
 
 const newproductData = [
   {
