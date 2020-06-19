@@ -8,7 +8,7 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        value: ' ',
+        value: ' '
         
     };
 
@@ -17,8 +17,10 @@ class SearchBar extends React.Component {
   }  
 
   changeHandler = (e) =>{
+     
+    this.setState({ value : e.target.value})
         
-    this.setState({ value : e.target.value});
+    
         
   }
 

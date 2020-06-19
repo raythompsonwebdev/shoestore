@@ -1,6 +1,7 @@
 import React from "react";
 //images
-import banner from "../images/banner-image.png";
+//import banner from "../images/banner-image.png";
+import BannerImg from "../components/BannerImg";
 //components
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
@@ -17,7 +18,10 @@ class MainContent extends React.Component {
         </aside>
 
         <main id="content_section" className="group">
-          <section id="bannerbox">
+
+          <BannerImg />
+
+          {/* <section id="bannerbox">
             <hgroup>
               <h1>LORUM IPSUN DOLOR AMET </h1>
               <h2>ipsum vel voluptate perspiciatis, quis</h2>
@@ -56,7 +60,7 @@ class MainContent extends React.Component {
                 </li>
               </ul>
             </nav>
-          </section>
+          </section> */}
 
           <h1>Featured</h1>
 

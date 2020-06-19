@@ -6,6 +6,7 @@
     "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-image-mapper": "0.0.15",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.4.1"
   },
@@ -32,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "image-map-resizer": "^1.0.10",
     "jquery": "^3.5.1"
   }
 }

@@ -4,56 +4,69 @@
 @import "partials/base";
 @import "partials/fonts";
 //Q-Tip
-.myCustomClass {
-  .qtip-content {
-    width: 175px;
-    height: 40px;
-    outline: none;
-    color: #1B7D7F;
-    letter-spacing: 0.01em;
-    font-family: arial, sans-serif;
-    line-height: 1.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    @include transitioner(all ease 0.2s);
-    border: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+// .myCustomClass {
+//   .qtip-content {
+//     width: 175px;
+//     height: 40px;
+//     outline: none;
+//     color: #1B7D7F;
+//     letter-spacing: 0.01em;
+//     font-family: arial, sans-serif;
+//     line-height: 1.5em;
+//     font-weight: bold;
+//     text-transform: uppercase;
+//     @include transitioner(all ease 0.2s);
+//     border: 0;
+//     background-color: rgba(0, 0, 0, 0.7);
+//   }
 
-  .qtip-content span:first-of-type {
-    color: $color-white;
-    display: inline-block;
-    font-size: 1.6em;
-    width: 70%;
-    font-size: 1.35em;
-    letter-spacing: 0.02em;
-  }
+//   .qtip-content span:first-of-type {
+//     color: $color-white;
+//     display: inline-block;
+//     font-size: 1.6em;
+//     width: 70%;
+//     font-size: 1.35em;
+//     letter-spacing: 0.02em;
+//   }
 
-  .qtip-content span:last-of-type {
-    color: $color-orange;
-    display: block;
-    font-size: 1.2em;
-    width: 29%;
-    float: right;
-    margin: 0;
-    text-align: center;
-    line-height: 1.5em;
-    letter-spacing: 0.02em;
-  }
+//   .qtip-content span:last-of-type {
+//     color: $color-orange;
+//     display: block;
+//     font-size: 1.2em;
+//     width: 29%;
+//     float: right;
+//     margin: 0;
+//     text-align: center;
+//     line-height: 1.5em;
+//     letter-spacing: 0.02em;
+//   }
 
-  .qtip-default {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1%;
-  }
+//   .qtip-default {
+//     background-color: rgba(0, 0, 0, 0.7);
+//     padding: 1%;
+//   }
+// }
+
+.tooltip {
+  position: absolute;
+  color: #fff;
+  padding: 10px;
+  background: rgba(0,0,0,0.8);
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1000;
+
 }
+
 @media only screen and (max-width: 1920px) {
   /*Wrapper*/
   #wrapper {
     font-family: $font-list;
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
-    padding: 0 1%;
+    width: 60%;
+    padding: 0 1em;
     display: block;
     background-color: $color-white;
 
@@ -416,23 +429,35 @@
         }
         /*Index page banner box*/
         #bannerbox {
-          height: 365px;
+          height: auto;
           width: 100%;
           margin: 0;
           border: solid 1px $content-color1a;
-          position: relative;
-          margin-top: 1em;
+          
+          display: flex;
+          -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+          -webkit-align-items: flex-start;
+          -ms-flex-align: flex-start;
+          align-items: flex-start;
 
+                    
+            
           hgroup {
-            font-family: $font-list;
-            position: absolute;
-            z-index: 2;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            font-family: $font-list;            
             width: 100%;
-            padding: 1em 0.5em;
+            padding:1em;
+            position: relative;
+            z-index:3;
+            
 
             h1 {
               font-family: $font-list;
-              font-size: 2.35rem;
+              font-size: 2.3rem;
               height: 40px;
               line-height: 40px;
               width: auto;
@@ -454,31 +479,39 @@
               width: auto;
               text-indent: 0.5em;
             }
-          }
+          }         
 
+          
           #bannerboximg {
-            width: 62%;
+            width:60%;
             margin: 0;
             padding: 0;
-            display: block;
-            float: right;
-            margin-top: 2.5em;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            position: relative;
+            top: -60px;
           }
-
+        
+          
+          
           nav#apDiv1 {
-            position: absolute;
-            width: 25%;
+            //position: absolute;
+            width: 35%;
             height: auto;
-            left: 1em;
-            bottom: 2em;
-            display: block;
+            //left: 1em;
+            //bottom: 3em;
+            //display: block;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
 
             ul {
-              width: 100%;
-              height: 100%;
+              width: 80%;
               padding: 0;
-              margin: 0;
               list-style: none;
+
+              margin:1em auto;
 
               li {
                 height: auto;
@@ -488,12 +521,12 @@
                 a {
                   background-color: $color-orange;
                   display: block;
-                  height: 35px;
+                  height: 45px;
                   width: 100%;
                   margin-bottom: 0.2em;
                   color: $color-white;
                   font-size: 1em;
-                  line-height: 35px;
+                  line-height: 45px;
                   text-align: center;
                   @include transitioner(all ease 0.2s);
                   text-transform: uppercase;
@@ -508,7 +541,8 @@
                 }
               }
             }
-          }
+          } 
+                    
 
           #btn_div {
             height: 150px;
@@ -804,6 +838,8 @@
           #searcher {
             background-image: url("../images/form-bg-comp.png");
             background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             width: 90%;
             height: 320px;
             margin: auto;
@@ -824,20 +860,20 @@
 
             select {
               font-family: sans-serif;
-              width: 80%;
-              height: 30px;
+              width: 90%;
+              height: 35px;
               font-size: 1em;
-              margin: 5px auto;
+              margin: 0.5em auto;
               color: $content-color;
               display: block;
             }
 
             input.find {
               font-family: $font-list;
-              width: 50%;
-              height: 35px;
+              width: 60%;
+              height: 40px;
               font-size: 1.1em;
-              line-height: 35px;
+              line-height: 40px;
               margin: auto;
               background-color: $color-orange;
               display: block;
@@ -1013,21 +1049,7 @@
     letter-spacing: 0.1em;
   }
 }
-@media only screen and (max-width: 1799px) {
-  #wrapper {
-    width: 60%;
-  }
-}
-@media only screen and (max-width: 1630px) {
-  #wrapper {
-    width: 63%;
-  }
-}
-@media only screen and (max-width: 1500px) {
-  #wrapper {
-    width: 68%;
-  }
-}
+
 @media only screen and (max-width: 1440px) {
   /*Wrapper*/
   #wrapper {
@@ -1225,35 +1247,32 @@
         }
         /*Index page banner box*/
         #bannerbox {
-          height: 365px;
-          width: 100%;
-          margin: 0 0 1.5em;
-
+                    
           hgroup {
-            width: 40%;
+            
 
             h1 {
-              font-size: 2.35rem;
+              font-size: 2.45rem;
               letter-spacing: -0.08em;
             }
 
             h2 {
-              font-size: 1.3rem;
+              font-size: 1.4rem;
               letter-spacing: -0.08em;
             }
           }
 
           #bannerboximg {
-            width: 60%;
+            width: 62%;
           }
 
           nav#apDiv1 {
-            width: 25%;
-
+            
+            
             ul {
               li {
                 a {
-                  line-height: 35px;
+                  font-size: 1em;
 
                   &:hover {
                     font-weight: bold;
@@ -1767,26 +1786,26 @@
         }
         /*Index page banner box*/
         #bannerbox {
-          height: 390px;
-
+          
           hgroup {
             width: 100%;
-
+            padding: 0.5em;
             h1 {
-              font-size: 2.3rem;
+              font-size: 2.5rem;
             }
 
             h2 {
-              font-size: 1.2rem;
+              font-size: 1.35rem;
             }
           }
 
           #bannerboximg {
-            width: 59%;
+            width: 62%;
+            top: -40px;
           }
 
           nav#apDiv1 {
-            width: 25%;
+            width: 35%;
 
             ul {
               li {
@@ -2297,13 +2316,12 @@
         }
         /*Index page banner box*/
         #bannerbox {
-          height: 340px;
-
+          
           hgroup {
             width: 100%;
 
             h1 {
-              font-size: 2.2rem;
+              font-size: 2.4rem;
               letter-spacing: -0.08em;
             }
 
@@ -2315,10 +2333,11 @@
 
           #bannerboximg {
             width: 62%;
+            top: -45px;
           }
 
           nav#apDiv1 {
-            width: 25%;
+            width: 35%;
 
             ul {
               li {
@@ -2804,33 +2823,35 @@
         }
         /*Index page banner box*/
         #bannerbox {
-          height: 330px;
-
+          
           hgroup {
             width: 100%;
 
             h1 {
-              font-size: 2.1rem;
+              font-size: 2.3rem;
               letter-spacing: -0.08em;
             }
 
             h2 {
-              font-size: 1.05rem;
+              font-size: 1.2rem;
               letter-spacing: -0.08em;
             }
           }
 
           #bannerboximg {
-            width: 58%;
+            width: 61%;
+            top: -35px;
           }
 
           nav#apDiv1 {
-            width: 27%;
+            width: 35%;
 
             ul {
               li {
                 a {
-                  font-size: 0.85em;
+                  font-size: 0.9em;
+                  height:40px;
+                  line-height:40px;
 
                   &:hover {
                     font-weight: bold;
@@ -3300,13 +3321,12 @@
         }
         /*Index page banner box*/
         #bannerbox {
-          height: 310px;
-
+          
           hgroup {
             width: 100%;
 
             h1 {
-              font-size: 1.9em;
+              font-size: 2.1em;
             }
 
             h2 {
@@ -3315,16 +3335,18 @@
           }
 
           #bannerboximg {
-            width: 65%;
+            width: 62%;
+            top:-25px;
           }
 
           nav#apDiv1 {
-            width: 23%;
+            width: 35%;
 
             ul {
               li {
                 a {
-                  font-size: 0.75em;
+                  font-size: 0.85em;
+                  
 
                   &:hover {
                     font-weight: bold;
@@ -3799,26 +3821,27 @@
         }
         /*Index page banner box*/
         #bannerbox {
-          height: 310px;
+          
 
           hgroup {
             width: 100%;
 
             h1 {
-              font-size: 1.85em;
+              font-size: 2em;
             }
 
             h2 {
-              font-size: 0.9em;
+              font-size: 1em;
             }
           }
 
           #bannerboximg {
-            width: 68%;
+            width: 62%;
+            top: -25px;
           }
 
           nav#apDiv1 {
-            width: 25%;
+            width: 35%;
 
             ul {
               li {
@@ -4336,29 +4359,28 @@
         }
 
         #bannerbox {
-          height: 335px;
           width: 99%;
           margin-top: 0.5em;
 
           hgroup {
-            padding: 1em 0;
+            
 
             h1 {
-              font-size: 2.2rem;
+              font-size: 2.4rem;
             }
 
             h2 {
-              font-size: 1.05rem;
+              font-size: 1.3rem;
             }
           }
 
           #bannerboximg {
-            width: 68%;
-            margin-top: 2em;
+            width: 62%;
+            top: -35px;
           }
 
           nav#apDiv1 {
-            width: 27%;
+            width: 35%;
 
             ul {
               li {
@@ -4600,10 +4622,9 @@
     }
 
     header {
-      height: 65px;
-
+      
       figure#logo {
-        width: 40%;
+        width: 50%;
       }
     }
 
@@ -4731,17 +4752,16 @@
         }
 
         #bannerbox {
-          height: 335px;
 
           hgroup {
-            padding: 1em 0;
+            
 
             h1 {
-              font-size: 2.1em;
+              font-size: 2.3em;
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.2em;
             }
           }
 
@@ -4750,7 +4770,7 @@
           }
 
           nav#apDiv1 {
-            width: 27%;
+            width: 30%;
 
             ul {
               li {
@@ -5123,17 +5143,17 @@
         }
 
         #bannerbox {
-          height: 310px;
+          
 
           hgroup {
             width: 100%;
 
             h1 {
-              font-size: 2em;
+              font-size: 2.2em;
             }
 
             h2 {
-              font-size: 0.95em;
+              font-size: 1.2em;
             }
           }
 
@@ -5142,12 +5162,12 @@
           }
 
           nav#apDiv1 {
-            width: 27%;
+            width: 30%;
 
             ul {
               li {
                 a {
-                  font-size: 0.85em;
+                  font-size: 0.8em;
 
                   &:hover {
                     font-weight: bold;
@@ -5517,17 +5537,17 @@
         }
 
         #bannerbox {
-          height: 310px;
+
 
           hgroup {
-            width: 100%;
+            
 
             h1 {
-              font-size: 1.9em;
+              font-size: 2.1em;
             }
 
             h2 {
-              font-size: 0.9em;
+              font-size: 1.2em;
             }
           }
 
@@ -5536,12 +5556,12 @@
           }
 
           nav#apDiv1 {
-            width: 27%;
+            width: 30%;
 
             ul {
               li {
                 a {
-                  font-size: 0.8em;
+                  font-size: 0.75em;
 
                   &:hover {
                     font-weight: bold;
@@ -5955,10 +5975,10 @@
         }
 
         #bannerbox {
-          height: 300px;
+
 
           hgroup {
-            position: unset;
+
             width: 100%;
 
             h1 {
@@ -5971,20 +5991,18 @@
           }
 
           #bannerboximg {
-            margin: 0;
-            width: 58%;
+
+            width: 62%;
+            top: 15px;
           }
 
           nav#apDiv1 {
-            width: 30%;
-            bottom: unset;
-            top: 6em;
-            left: 0.5em;
+            width: 35%;
 
             ul {
               li {
                 a {
-                  font-size: 0.8em;
+                  font-size: 0.7em;
 
                   &:hover {
                     font-weight: bold;
@@ -6355,7 +6373,7 @@
 
         #bannerbox {
           hgroup {
-            width: 100%;
+            order:0;
 
             h1 {
               font-size: 1.7em;
@@ -6373,16 +6391,19 @@
           }
 
           #bannerboximg {
-            width: 58%;
+            width: 100%;
+            order:1;
+            top: 0;
           }
 
           nav#apDiv1 {
-            width: 37%;
+            width: 100%;
+            order:2;
 
             ul {
               li {
                 a {
-                  font-size: 0.8em;
+                  font-size: 0.9em;
 
                   &:hover {
                     font-weight: bold;
@@ -6752,33 +6773,33 @@
         }
 
         #bannerbox {
-          height: 260px;
+
 
           hgroup {
             width: 100%;
 
             h1 {
-              font-size: 1.6em;
+              font-size: 1.5em;
             }
 
             h2 {
-              font-size: 0.9em;
+              font-size: 0.8em;
+              
             }
           }
 
           #bannerboximg {
-            width: 59%;
+            width: 100%;
           }
 
           nav#apDiv1 {
-            top: 5.5em;
-            left: 0.2em;
+  
 
             ul {
               li {
                 a {
-                  font-size: 0.7em;
-                  height: 30px;
+
+                  height: 40px;
 
                   &:hover {
                     font-weight: bold;
@@ -7145,25 +7166,25 @@
         #bannerbox {
           hgroup {
             h1 {
-              font-size: 1.5em;
+              font-size: 1.4em;
             }
 
             h2 {
-              font-size: 0.9em;
+              font-size: 0.85em;
             }
           }
 
           #bannerboximg {
-            width: 60%;
+            width: 100%;
           }
 
           nav#apDiv1 {
-            width: 35%;
+            width: 100%;
 
             ul {
               li {
                 a {
-                  font-size: 0.65em;
+                  font-size: 0.85em;
 
                   &:hover {
                     font-weight: bold;
@@ -7524,31 +7545,31 @@
         }
 
         #bannerbox {
-          height: 260px;
+
 
           hgroup {
             width: 100%;
 
             h1 {
               font-size: 1.3em;
-              height: auto;
-              line-height: 30px;
+
+
             }
 
             h2 {
-              font-size: 0.75em;
+              font-size: 0.8em;
             }
           }
 
           #bannerboximg {
-            width: 65;
+            width: 100%;
           }
 
           nav#apDiv1 {
             ul {
               li {
                 a {
-                  font-size: 0.6em;
+                  font-size: 0.85em;
 
                   &:hover {
                     font-weight: bold;

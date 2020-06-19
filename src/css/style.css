@@ -220,46 +220,16 @@ figure {
   /* Legacy iOS */
 }
 
-.myCustomClass .qtip-content {
-  width: 175px;
-  height: 40px;
-  outline: none;
-  color: #1B7D7F;
-  letter-spacing: 0.01em;
-  font-family: arial, sans-serif;
-  line-height: 1.5em;
-  font-weight: bold;
-  text-transform: uppercase;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
-  border: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.myCustomClass .qtip-content span:first-of-type {
-  color: #ffffff;
-  display: inline-block;
-  font-size: 1.6em;
-  width: 70%;
-  font-size: 1.35em;
-  letter-spacing: 0.02em;
-}
-
-.myCustomClass .qtip-content span:last-of-type {
-  color: #ea3411;
-  display: block;
-  font-size: 1.2em;
-  width: 29%;
-  float: right;
-  margin: 0;
-  text-align: center;
-  line-height: 1.5em;
-  letter-spacing: 0.02em;
-}
-
-.myCustomClass .qtip-default {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1%;
+.tooltip {
+  position: absolute;
+  color: #fff;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1000;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -268,8 +238,8 @@ figure {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
-    padding: 0 1%;
+    width: 60%;
+    padding: 0 1em;
     display: block;
     background-color: #ffffff;
     /*Searchbar*/
@@ -610,23 +580,34 @@ figure {
     line-height: 40px;
   }
   #wrapper #content #content_section #bannerbox {
-    height: 365px;
+    height: auto;
     width: 100%;
     margin: 0;
     border: solid 1px #7a7777;
-    position: relative;
-    margin-top: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
+    -ms-flex-align: flex-start;
+    -webkit-box-align: start;
+            align-items: flex-start;
   }
   #wrapper #content #content_section #bannerbox hgroup {
+    -ms-flex: 0 1 auto;
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    position: absolute;
-    z-index: 2;
     width: 100%;
-    padding: 1em 0.5em;
+    padding: 1em;
+    position: relative;
+    z-index: 3;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    font-size: 2.35rem;
+    font-size: 2.3rem;
     height: 40px;
     line-height: 40px;
     width: auto;
@@ -648,27 +629,27 @@ figure {
     text-indent: 0.5em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 62%;
+    width: 60%;
     margin: 0;
     padding: 0;
-    display: block;
-    float: right;
-    margin-top: 2.5em;
+    -ms-flex: 0 1 auto;
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
+    position: relative;
+    top: -60px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    position: absolute;
-    width: 25%;
+    width: 35%;
     height: auto;
-    left: 1em;
-    bottom: 2em;
-    display: block;
+    -ms-flex: 0 1 auto;
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
-    width: 100%;
-    height: 100%;
+    width: 80%;
     padding: 0;
-    margin: 0;
     list-style: none;
+    margin: 1em auto;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li {
     height: auto;
@@ -678,12 +659,12 @@ figure {
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     background-color: #ea3411;
     display: block;
-    height: 35px;
+    height: 45px;
     width: 100%;
     margin-bottom: 0.2em;
     color: #ffffff;
     font-size: 1em;
-    line-height: 35px;
+    line-height: 45px;
     text-align: center;
     -webkit-transition: all ease 0.2s;
     transition: all ease 0.2s;
@@ -966,6 +947,8 @@ figure {
   #wrapper #content #left_bar #searchbox #searcher {
     background-image: url("../images/form-bg-comp.png");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 90%;
     height: 320px;
     margin: auto;
@@ -985,19 +968,19 @@ figure {
   }
   #wrapper #content #left_bar #searchbox #searcher select {
     font-family: sans-serif;
-    width: 80%;
-    height: 30px;
+    width: 90%;
+    height: 35px;
     font-size: 1em;
-    margin: 5px auto;
+    margin: 0.5em auto;
     color: #999999;
     display: block;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    width: 50%;
-    height: 35px;
+    width: 60%;
+    height: 40px;
     font-size: 1.1em;
-    line-height: 35px;
+    line-height: 40px;
     margin: auto;
     background-color: #ea3411;
     display: block;
@@ -1148,24 +1131,6 @@ figure {
     font-size: 0.6em;
     width: 50%;
     letter-spacing: 0.1em;
-  }
-}
-
-@media only screen and (max-width: 1799px) {
-  #wrapper {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 1630px) {
-  #wrapper {
-    width: 63%;
-  }
-}
-
-@media only screen and (max-width: 1500px) {
-  #wrapper {
-    width: 68%;
   }
 }
 
@@ -1339,30 +1304,19 @@ figure {
   #wrapper #content #content_section h1 {
     font-size: 1.5em;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 365px;
-    width: 100%;
-    margin: 0 0 1.5em;
-  }
-  #wrapper #content #content_section #bannerbox hgroup {
-    width: 40%;
-  }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.35rem;
+    font-size: 2.45rem;
     letter-spacing: -0.08em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     letter-spacing: -0.08em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 60%;
-  }
-  #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 25%;
+    width: 62%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    line-height: 35px;
+    font-size: 1em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -1799,23 +1753,22 @@ figure {
   #wrapper #content #content_section h1 {
     font-size: 1.45em;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 390px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
+    padding: 0.5em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 59%;
+    width: 62%;
+    top: -40px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 25%;
+    width: 35%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.95em;
@@ -2244,14 +2197,11 @@ figure {
   #wrapper #content #content_section h1 {
     font-size: 1.4em;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 340px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     letter-spacing: -0.08em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
@@ -2260,9 +2210,10 @@ figure {
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 62%;
+    top: -45px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 25%;
+    width: 35%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.95em;
@@ -2670,28 +2621,28 @@ figure {
   #wrapper #content #content_section h1 {
     font-size: 1.35em;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 330px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     letter-spacing: -0.08em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     letter-spacing: -0.08em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 58%;
+    width: 61%;
+    top: -35px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 27%;
+    width: 35%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.85em;
+    font-size: 0.9em;
+    height: 40px;
+    line-height: 40px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -3085,26 +3036,24 @@ figure {
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 310px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.9em;
+    font-size: 2.1em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
     font-size: 1em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 65%;
+    width: 62%;
+    top: -25px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 23%;
+    width: 35%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -3503,23 +3452,21 @@ figure {
   #wrapper #content #content_section h1 {
     font-size: 1.25em;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 310px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.85em;
+    font-size: 2em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 68%;
+    width: 62%;
+    top: -25px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 25%;
+    width: 35%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.7em;
@@ -3943,25 +3890,21 @@ figure {
     width: 44%;
   }
   #wrapper #content #content_section #bannerbox {
-    height: 335px;
     width: 99%;
     margin-top: 0.5em;
   }
-  #wrapper #content #content_section #bannerbox hgroup {
-    padding: 1em 0;
-  }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.05rem;
+    font-size: 1.3rem;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 68%;
-    margin-top: 2em;
+    width: 62%;
+    top: -35px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 27%;
+    width: 35%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.9em;
@@ -4157,11 +4100,8 @@ figure {
     background-color: #ea3411;
     cursor: pointer;
   }
-  #wrapper header {
-    height: 65px;
-  }
   #wrapper header figure#logo {
-    width: 40%;
+    width: 50%;
   }
   #wrapper nav#main-nav {
     height: 25px;
@@ -4251,23 +4191,17 @@ figure {
   #wrapper #content #content_section #pagination {
     width: 44%;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 335px;
-  }
-  #wrapper #content #content_section #bannerbox hgroup {
-    padding: 1em 0;
-  }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.1em;
+    font-size: 2.3em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 27%;
+    width: 30%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.85em;
@@ -4553,26 +4487,23 @@ figure {
   #wrapper #content #content_section #pagination {
     width: 44%;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 310px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.95em;
+    font-size: 1.2em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 27%;
+    width: 30%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -4857,26 +4788,20 @@ figure {
     width: 30%;
     font-size: 0.8em;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 310px;
-  }
-  #wrapper #content #content_section #bannerbox hgroup {
-    width: 100%;
-  }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.9em;
+    font-size: 2.1em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 27%;
+    width: 30%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -5209,11 +5134,7 @@ figure {
   #wrapper #content #content_section #pagination {
     width: 49%;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 300px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
-    position: unset;
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
@@ -5223,17 +5144,14 @@ figure {
     font-size: 1em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    margin: 0;
-    width: 58%;
+    width: 62%;
+    top: 15px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 30%;
-    bottom: unset;
-    top: 6em;
-    left: 0.5em;
+    width: 35%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -5519,7 +5437,9 @@ figure {
     width: 31%;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    width: 100%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 1.7em;
@@ -5534,13 +5454,20 @@ figure {
     text-indent: 0.2em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 58%;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    top: 0;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 37%;
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -5827,28 +5754,20 @@ figure {
   #wrapper #content #content_section #pagination a {
     width: 31%;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 260px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 59%;
-  }
-  #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    top: 5.5em;
-    left: 0.2em;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.7em;
-    height: 30px;
+    height: 40px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -6129,19 +6048,19 @@ figure {
     width: 31%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 60%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 35%;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.65em;
+    font-size: 0.85em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -6422,25 +6341,20 @@ figure {
   #wrapper #content #content_section #pagination a {
     width: 31%;
   }
-  #wrapper #content #content_section #bannerbox {
-    height: 260px;
-  }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-size: 1.3em;
-    height: auto;
-    line-height: 30px;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 65;
+    width: 100%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.6em;
+    font-size: 0.85em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
