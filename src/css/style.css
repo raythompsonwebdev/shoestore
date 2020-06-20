@@ -487,33 +487,34 @@ figure {
   }
   #wrapper #content #form ul li,
   #wrapper #content #form ul li:nth-of-type(3) {
-    height: 50px;
+    height: auto;
     display: block;
-    margin: 0;
+    margin: 0 0 1em 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #wrapper #content #form ul li label,
   #wrapper #content #form ul li:nth-of-type(3) label {
     width: 15%;
     float: left;
-    display: block;
     line-height: 40px;
     height: 40px;
     font-size: 1em;
     text-align: center;
+    margin: 0;
   }
   #wrapper #content #form ul li input,
   #wrapper #content #form ul li:nth-of-type(3) input {
     width: 75%;
-    height: 30px;
-    display: inline-block;
+    height: 40px;
   }
   #wrapper #content #form ul li textarea,
   #wrapper #content #form ul li:nth-of-type(3) textarea {
     width: 75%;
     margin: 0;
     padding: 0;
-    display: inline-block;
   }
   #wrapper #content #form ul li input:focus,
   #wrapper #content #form ul li textarea:focus,
@@ -526,7 +527,7 @@ figure {
   #wrapper #content #form ul li:nth-of-type(3) #submit {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     margin: 0;
-    height: 30px;
+    height: 45px;
     width: 20%;
     display: inline-block;
     font-size: 1.2em;
@@ -542,9 +543,6 @@ figure {
     border: 0;
     cursor: pointer;
     font-weight: bold;
-  }
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 265px;
   }
   #wrapper #content main#context {
     width: 60%;
@@ -1034,7 +1032,6 @@ figure {
   #wrapper #content #left_bar #acc_nav div#accContainer .panel {
     padding: 0 18px;
     background-color: white;
-    display: none;
     overflow: hidden;
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
@@ -1048,13 +1045,8 @@ figure {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 12px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
+  #wrapper #content #left_bar #acc_nav div#accContainer button {
+    font-size: 1.5em;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
@@ -1079,7 +1071,7 @@ figure {
     line-height: 45px;
     display: block;
     height: 45px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     width: 100%;
     text-align: left;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
@@ -1252,10 +1244,6 @@ figure {
     height: auto;
     display: block;
   }
-  #wrapper #content #form ul li,
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 50px;
-  }
   #wrapper #content #form ul li label,
   #wrapper #content #form ul li:nth-of-type(3) label {
     width: 15%;
@@ -1265,7 +1253,6 @@ figure {
   #wrapper #content #form ul li input,
   #wrapper #content #form ul li:nth-of-type(3) input {
     width: 75%;
-    height: 30px;
   }
   #wrapper #content #form ul li textarea,
   #wrapper #content #form ul li:nth-of-type(3) textarea {
@@ -1286,9 +1273,6 @@ figure {
   #wrapper #content #form ul li #submit:hover,
   #wrapper #content #form ul li:nth-of-type(3) #submit:hover {
     cursor: pointer;
-  }
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 265px;
   }
   #wrapper #content main#context {
     font-size: 0.85em;
@@ -1476,34 +1460,24 @@ figure {
   }
   #wrapper #content #left_bar {
     float: left;
-    width: 23%;
-    margin: 0 0 5px;
     /*Form*/
   }
   #wrapper #content #left_bar #searchbox {
     width: 94%;
-    height: 330px;
-    margin: auto;
   }
   #wrapper #content #left_bar #searchbox #searcher {
-    width: 90%;
-    height: 320px;
     margin-bottom: 1%;
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
     font-size: 1.45em;
   }
   #wrapper #content #left_bar #searchbox #searcher select {
-    width: 80%;
     font-size: 1em;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find {
-    width: 55%;
     font-size: 1.1em;
-    outline: none;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find:hover {
-    outline: none;
     cursor: pointer;
   }
   #wrapper #content #left_bar #acc_nav {
@@ -1545,7 +1519,7 @@ figure {
     display: block;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
@@ -1701,20 +1675,13 @@ figure {
     height: auto;
     display: block;
   }
-  #wrapper #content #form ul li,
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 50px;
-  }
   #wrapper #content #form ul li label,
   #wrapper #content #form ul li:nth-of-type(3) label {
-    width: 15%;
-    line-height: 40px;
     font-size: 0.9em;
   }
   #wrapper #content #form ul li input,
   #wrapper #content #form ul li:nth-of-type(3) input {
     width: 75%;
-    height: 30px;
   }
   #wrapper #content #form ul li textarea,
   #wrapper #content #form ul li:nth-of-type(3) textarea {
@@ -1925,8 +1892,6 @@ figure {
     height: 330px;
   }
   #wrapper #content #left_bar #searchbox #searcher {
-    width: 90%;
-    height: 320px;
     margin-bottom: 1%;
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
@@ -1939,10 +1904,8 @@ figure {
   #wrapper #content #left_bar #searchbox #searcher input.find {
     width: 55%;
     font-size: 1.1em;
-    outline: none;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find:hover {
-    outline: none;
     cursor: pointer;
   }
   #wrapper #content #left_bar #acc_nav {
@@ -1978,13 +1941,13 @@ figure {
     /* Unicode character for "minus" sign (-) */
   }
   #wrapper #content #left_bar #acc_nav div#accContainer h3 {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer ul {
     display: block;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
@@ -2145,20 +2108,13 @@ figure {
     height: auto;
     display: block;
   }
-  #wrapper #content #form ul li,
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 50px;
-  }
   #wrapper #content #form ul li label,
   #wrapper #content #form ul li:nth-of-type(3) label {
-    width: 15%;
-    line-height: 40px;
     font-size: 0.85em;
   }
   #wrapper #content #form ul li input,
   #wrapper #content #form ul li:nth-of-type(3) input {
     width: 75%;
-    height: 30px;
   }
   #wrapper #content #form ul li textarea,
   #wrapper #content #form ul li:nth-of-type(3) textarea {
@@ -2168,7 +2124,6 @@ figure {
   #wrapper #content #form ul li textarea:focus,
   #wrapper #content #form ul li:nth-of-type(3) input:focus,
   #wrapper #content #form ul li:nth-of-type(3) textarea:focus {
-    background-color: #f9f9f9;
     outline: 0;
   }
   #wrapper #content #form ul li #submit,
@@ -2358,17 +2313,12 @@ figure {
     background-color: #ffffff;
   }
   #wrapper #content #left_bar {
-    width: 23%;
-    margin: 0 0 5px;
     /*Form*/
   }
   #wrapper #content #left_bar #searchbox {
     width: 94%;
-    height: 330px;
   }
   #wrapper #content #left_bar #searchbox #searcher {
-    width: 90%;
-    height: 320px;
     margin-bottom: 1%;
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
@@ -2379,9 +2329,7 @@ figure {
     font-size: 0.9em;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find {
-    width: 55%;
     font-size: 1.1em;
-    outline: none;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find:hover {
     outline: none;
@@ -2569,20 +2517,13 @@ figure {
     height: auto;
     display: block;
   }
-  #wrapper #content #form ul li,
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 50px;
-  }
   #wrapper #content #form ul li label,
   #wrapper #content #form ul li:nth-of-type(3) label {
     width: 20%;
-    line-height: 40px;
-    font-size: 0.85em;
   }
   #wrapper #content #form ul li input,
   #wrapper #content #form ul li:nth-of-type(3) input {
-    width: 75%;
-    height: 30px;
+    width: 80%;
   }
   #wrapper #content #form ul li textarea,
   #wrapper #content #form ul li:nth-of-type(3) textarea {
@@ -2592,7 +2533,6 @@ figure {
   #wrapper #content #form ul li textarea:focus,
   #wrapper #content #form ul li:nth-of-type(3) input:focus,
   #wrapper #content #form ul li:nth-of-type(3) textarea:focus {
-    background-color: #f9f9f9;
     outline: 0;
   }
   #wrapper #content #form ul li #submit,
@@ -2776,16 +2716,12 @@ figure {
   }
   #wrapper #content #left_bar {
     width: 23%;
-    margin: 0 0 5px;
     /*Form*/
   }
   #wrapper #content #left_bar #searchbox {
     width: 94%;
-    height: 330px;
   }
   #wrapper #content #left_bar #searchbox #searcher {
-    width: 90%;
-    height: 320px;
     margin-bottom: 1%;
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
@@ -2796,12 +2732,9 @@ figure {
     font-size: 0.9em;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find {
-    width: 55%;
     font-size: 1.1em;
-    outline: none;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find:hover {
-    outline: none;
     cursor: pointer;
   }
   #wrapper #content #left_bar #acc_nav {
@@ -2986,10 +2919,6 @@ figure {
     height: auto;
     display: block;
   }
-  #wrapper #content #form ul li,
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 50px;
-  }
   #wrapper #content #form ul li label,
   #wrapper #content #form ul li:nth-of-type(3) label {
     font-size: 0.8em;
@@ -2997,7 +2926,6 @@ figure {
   #wrapper #content #form ul li input,
   #wrapper #content #form ul li:nth-of-type(3) input {
     width: 75%;
-    height: 30px;
   }
   #wrapper #content #form ul li textarea,
   #wrapper #content #form ul li:nth-of-type(3) textarea {
@@ -3007,7 +2935,6 @@ figure {
   #wrapper #content #form ul li textarea:focus,
   #wrapper #content #form ul li:nth-of-type(3) input:focus,
   #wrapper #content #form ul li:nth-of-type(3) textarea:focus {
-    background-color: #f9f9f9;
     outline: 0;
   }
   #wrapper #content #form ul li #submit,
@@ -3191,16 +3118,11 @@ figure {
   }
   #wrapper #content #left_bar {
     width: 23%;
-    margin: 0 0 5px;
-    /*Form*/
   }
   #wrapper #content #left_bar #searchbox {
     width: 94%;
-    height: 330px;
   }
   #wrapper #content #left_bar #searchbox #searcher {
-    width: 90%;
-    height: 320px;
     margin-bottom: 1%;
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
@@ -3211,12 +3133,9 @@ figure {
     font-size: 0.9em;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find {
-    width: 55%;
     font-size: 1.1em;
-    outline: none;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find:hover {
-    outline: none;
     cursor: pointer;
   }
   #wrapper #content #left_bar #acc_nav {
@@ -3402,10 +3321,6 @@ figure {
     height: auto;
     display: block;
   }
-  #wrapper #content #form ul li,
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 50px;
-  }
   #wrapper #content #form ul li label,
   #wrapper #content #form ul li:nth-of-type(3) label {
     font-size: 0.8em;
@@ -3413,7 +3328,6 @@ figure {
   #wrapper #content #form ul li input,
   #wrapper #content #form ul li:nth-of-type(3) input {
     width: 75%;
-    height: 30px;
   }
   #wrapper #content #form ul li textarea,
   #wrapper #content #form ul li:nth-of-type(3) textarea {
@@ -3423,7 +3337,6 @@ figure {
   #wrapper #content #form ul li textarea:focus,
   #wrapper #content #form ul li:nth-of-type(3) input:focus,
   #wrapper #content #form ul li:nth-of-type(3) textarea:focus {
-    background-color: #f9f9f9;
     outline: 0;
   }
   #wrapper #content #form ul li #submit,
@@ -3605,16 +3518,12 @@ figure {
   }
   #wrapper #content #left_bar {
     width: 23%;
-    margin: 0 0 5px;
     /*Form*/
   }
   #wrapper #content #left_bar #searchbox {
     width: 94%;
-    height: 330px;
   }
   #wrapper #content #left_bar #searchbox #searcher {
-    width: 90%;
-    height: 320px;
     margin-bottom: 1%;
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
@@ -3625,12 +3534,9 @@ figure {
     font-size: 0.9em;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find {
-    width: 55%;
     font-size: 1.1em;
-    outline: none;
   }
   #wrapper #content #left_bar #searchbox #searcher input.find:hover {
-    outline: none;
     cursor: pointer;
   }
   #wrapper #content #left_bar #acc_nav {
@@ -4974,7 +4880,7 @@ figure {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 83%;
+    left: 79%;
     width: 16%;
     top: 0.5em;
   }
@@ -5072,10 +4978,6 @@ figure {
   #wrapper #content #form ul {
     height: auto;
   }
-  #wrapper #content #form ul li,
-  #wrapper #content #form ul li:nth-of-type(3) {
-    height: 50px;
-  }
   #wrapper #content #form ul li label,
   #wrapper #content #form ul li:nth-of-type(3) label {
     font-size: 0.75em;
@@ -5097,7 +4999,6 @@ figure {
   #wrapper #content #form ul li #submit,
   #wrapper #content #form ul li:nth-of-type(3) #submit {
     font-size: 1.1em;
-    margin-left: 20%;
   }
   #wrapper #content #form ul li #submit:hover,
   #wrapper #content #form ul li:nth-of-type(3) #submit:hover {
@@ -5335,7 +5236,7 @@ figure {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 83%;
+    left: 75%;
     width: 16%;
   }
   #wrapper button#menu-toggle-btn:hover {
@@ -5910,7 +5811,6 @@ figure {
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
-    text-indent: 0;
   }
   #wrapper #content #left_bar #searchbox #searcher select {
     font-size: 1em;
@@ -6201,7 +6101,6 @@ figure {
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
-    text-indent: 0;
   }
   #wrapper #content #left_bar #searchbox #searcher select {
     font-size: 1em;
@@ -6499,7 +6398,6 @@ figure {
   }
   #wrapper #content #left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
-    text-indent: 0;
   }
   #wrapper #content #left_bar #searchbox #searcher select {
     font-size: 1em;

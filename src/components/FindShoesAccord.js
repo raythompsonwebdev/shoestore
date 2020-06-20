@@ -1,40 +1,18 @@
 import React from "react";
-
-const accordion = () => {
-
-  var acc = document.getElementsByClassName("accordion");    
-
-  for ( let i = 0; i < acc.length; i++) { 
-            
-    acc[i].addEventListener("click", function(event) {   
-            
-      event.preventDefault();
-      /* Toggle between adding and removing the "active" class,
-      to highlight the button that controls the panel */
-      this.classList.toggle("active");
-      
-      /* Toggle between hiding and showing the active panel */
-      var panel = this.nextElementSibling;
-
-      console.log(this.nextElementSibling)
-      
-      if (panel.style.display !== "block") {
-        panel.style.display = "block";
-      } else {
-        panel.style.display = "none";
-      }
-    });
-  }
-};
+import { Accordion, Button } from 'react-bootstrap';
 
 const FindShoesAccord = () => {
   return (
-    <nav id="acc_nav">
 
+    <Accordion >
+    <nav id="acc_nav">
       <div id="accContainer">
-        <button onClick={accordion} className="accordion">
+      <Accordion.Toggle as={Button} variant="light" eventKey="0" size="lg" block>
+        {/* <button onClick={accordion} className="accordion"> */}
           Men
-        </button>
+        {/* </button> */}
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey="0">
         <div className="panel">
           <ul>
             <li>Skate Shoes</li>
@@ -44,10 +22,11 @@ const FindShoesAccord = () => {
             <li></li>
           </ul>
         </div>
-
-        <button onClick={accordion} className="accordion">
-          Women
-        </button>
+        </Accordion.Collapse>
+        <Accordion.Toggle as={Button} variant="light" eventKey="1" size="lg" block>
+          Women       
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey="1">
         <div className="panel">
           <ul>
             <li>Skate Shoes</li>
@@ -56,10 +35,11 @@ const FindShoesAccord = () => {
             <li>Trainers</li>
           </ul>
         </div>
-
-        <button onClick={accordion} className="accordion">
+        </Accordion.Collapse>
+        <Accordion.Toggle as={Button} variant="light" eventKey="2" size="lg" block>
           Kids
-        </button>
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey="2">
         <div className="panel">
           <ul>
             <li>Baby Shoes</li>
@@ -68,8 +48,10 @@ const FindShoesAccord = () => {
             <li>Trainers</li>
           </ul>
         </div>
+        </Accordion.Collapse>
       </div>
     </nav>
+    </Accordion>
   );
 }
 
