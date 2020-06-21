@@ -126,7 +126,7 @@
         }
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         display: none;
       }
 
@@ -227,7 +227,7 @@
         color: $color-white;
         background-color: $color-orange;
         margin: 0;
-        padding: 0.8%;
+        padding: 0.5em;
         height: auto;
         font-family: $font-list;
 
@@ -250,7 +250,7 @@
         select {
           font-family: arial, sans-serif;
           width: 16.5%;
-          font-size: 1em;
+          font-size: 0.9em;
           margin: 0 0.25em 0 0;
           color: $content-color2;
           height: 30px;
@@ -583,31 +583,41 @@
 
             figcaption.product_boxdetails {
               width: 100%;
-              height: 55px;
               margin: 0;
               padding: 7% 0 0;
               background-image: url("../images/product-info-bg.png");
               background-repeat: no-repeat;
               background-size: 100% 100%;
               position: relative;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-flex-flow: row wrap;
+              -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
 
               p.product_name {
                 color: $login-color;
-                line-height: 25px;
+                line-height: 30px;
                 text-transform: uppercase;
                 font-size: 85%;
-                display: block;
+                margin: 0;
                 text-indent: 0.2em;
+                -webkit-flex: 1 0 auto;
+                -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
               }
 
               p.product_price {
                 height: auto;
-                line-height: 25px;
+                line-height: 30px;
                 margin: 0;
                 font-weight: bold;
-                display: block;
                 width: 100%;
                 text-indent: 0.2em;
+                -webkit-flex: 1 0 auto;
+                -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
               }
               /*Price Icon*/
               img.cart_icon {
@@ -768,7 +778,7 @@
 
         #pagination {
           height: 30px;
-          width: 33%;
+          width: 35%;
           display: block;
           margin: 0 0 2%;
           float: right;
@@ -945,7 +955,7 @@
             }
 
             button{
-              font-size:1.5em;
+              font-size:1.2em;
             }
 
             .active:after {
@@ -1080,7 +1090,7 @@
         }
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         display: none;
       }
 
@@ -1119,13 +1129,10 @@
     }
     /*Searchbar*/
     #search_category {
-      height: 50px;
       margin: 1% 0;
 
       button.search_category_btn {
-        width: 8%;
-        height: 30px;
-        line-height: 30px;
+
         font-size: 1.1em;
 
         &:hover {
@@ -1142,7 +1149,7 @@
         }
 
         select {
-          width: 16.5%;
+
           font-size: 1em;
         }
       }
@@ -1379,22 +1386,17 @@
         }
 
         #pag_search {
-          width: 45%;
-          margin: 0 0 2%;
+          
           padding: 0;
 
           select {
             width: 60%;
-            height: 30px;
-            margin: 0 1% 0 0;
-            line-height: 30px;
+            
             font-size: 0.85em;
           }
 
           label {
-            width: 39%;
-            height: 30px;
-            line-height: 30px;
+            width: 39%;            
             font-size: 0.8em;
 
             &:hover {
@@ -1405,19 +1407,16 @@
         }
 
         #pagination {
-          height: 30px;
-          width: 33%;
-          display: block;
-          margin: 0 0 2%;
-          float: right;
+          
+          width: 35%;
+          
 
           a {
-            width: 32%;
+            
             font-size: 1em;
-            line-height: 30px;
 
             &:hover {
-              font-weight: bold;
+              
               cursor: pointer;
             }
           }
@@ -1607,7 +1606,7 @@
         }
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         display: none;
       }
 
@@ -1646,13 +1645,10 @@
     }
     /*Searchbar*/
     #search_category {
-      height: 50px;
-      margin: 1% 0;
+
 
       button.search_category_btn {
-        width: 8%;
-        height: 30px;
-        line-height: 30px;
+
         font-size: 1.1em;
 
         &:hover {
@@ -1670,9 +1666,8 @@
         }
 
         select {
-          width: 16.5%;
           font-size: 1em;
-          height: 30px;
+
         }
       }
     }
@@ -1908,13 +1903,10 @@
 
         #pag_search {
           width: 45%;
-          margin: 0 0 2%;
+          
 
           select {
-            width: 50%;
-            height: 30px;
-            margin: 0 1% 0 0;
-            line-height: 30px;
+            width: 50%;         
             font-size: 0.85em;
           }
 
@@ -1929,18 +1921,17 @@
         }
 
         #pagination {
-          width: 37%;
-          display: block;
-          margin: 0 0 2%;
+          width: 40%;
+          
 
           a {
-            width: 32%;
+            
             font-size: 1em;
-            line-height: 30px;
+            
 
             &:hover {
               font-weight: bold;
-              cursor: pointer;
+              
             }
           }
         }
@@ -2137,7 +2128,7 @@
         }
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         display: none;
       }
 
@@ -2176,13 +2167,10 @@
     }
     /*Searchbar*/
     #search_category {
-      height: 50px;
-      margin: 1% 0;
+
 
       button.search_category_btn {
-        width: 8%;
-        height: 30px;
-        line-height: 30px;
+
         font-size: 1.1em;
 
         &:hover {
@@ -2196,13 +2184,13 @@
 
         label {
           font-size: 1em;
-          width: 23%;
+          
         }
 
         select {
-          width: 16.5%;
+
           font-size: 1em;
-          height: 30px;
+
         }
       }
     }
@@ -2439,10 +2427,10 @@
 
         #pag_search {
           width: 45%;
-          margin: 0 0 2%;
+          
 
           select {
-            width: 50%;
+            
             font-size: 0.9em;
           }
 
@@ -2457,15 +2445,15 @@
         }
 
         #pagination {
-          width: 36%;
+          width: 40%;
 
           a {
-            width: 32%;
+            
             font-size: 1em;
-            line-height: 30px;
+            
 
             &:hover {
-              font-weight: bold;
+              
               cursor: pointer;
             }
           }
@@ -2644,7 +2632,7 @@
         }
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         display: none;
       }
 
@@ -2684,11 +2672,10 @@
     }
     /*Searchbar*/
     #search_category {
-      height: 50px;
-      margin: 1% 0;
+
 
       button.search_category_btn {
-        width: 8%;
+
         font-size: 1.1em;
 
         &:hover {
@@ -2701,12 +2688,12 @@
         margin: 0;
 
         label {
-          font-size: 0.9em;
-          width: 23%;
+          font-size: 1em;
+          
         }
 
         select {
-          width: 16.5%;
+
           font-size: 1em;
         }
       }
@@ -2941,7 +2928,7 @@
           width: 45%;
 
           select {
-            width: 50%;
+            
             font-size: 0.9em;
           }
 
@@ -2959,7 +2946,7 @@
           width: 45%;
 
           a {
-            width: 32%;
+            
             font-size: 0.95em;
 
             &:hover {
@@ -3140,7 +3127,7 @@
         }
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         display: none;
       }
 
@@ -3180,8 +3167,7 @@
     }
     /*Searchbar*/
     #search_category {
-      height: 50px;
-      margin: 1% 0;
+
 
       button.search_category_btn {
         width: 9%;
@@ -3197,12 +3183,12 @@
         margin: 0;
 
         label {
-          font-size: 0.9em;
+          font-size: 1em;
           width: 22%;
         }
 
         select {
-          width: 16.5%;
+
           font-size: 0.9em;
         }
       }
@@ -3435,11 +3421,11 @@
 
         #pag_search {
           width: 49%;
-          margin: 0 0 2%;
+          
 
           select {
             width: 50%;
-            font-size: 0.85em;
+            
           }
 
           label {
@@ -3456,7 +3442,7 @@
           width: 43%;
 
           a {
-            width: 32%;
+            
             font-size: 0.9em;
 
             &:hover {
@@ -3623,9 +3609,9 @@
     /*Navigation*/
     nav#main-nav {
       height: 40px;
-
+      
       span#signin-box {
-        width: 27%;
+        width: 30%;
 
         a {
           font-size: 0.75em;
@@ -3636,12 +3622,12 @@
         }
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         display: none;
       }
 
       ul#inner-nav {
-        width: 70%;
+        width: 74%;
         height: 40px;
 
         li {
@@ -3675,11 +3661,10 @@
     }
     /*Searchbar*/
     #search_category {
-      height: 50px;
-      margin: 1% 0;
+
 
       button.search_category_btn {
-        width: 9%;
+
         font-size: 1.1em;
 
         &:hover {
@@ -3690,18 +3675,17 @@
 
       #search_category_form {
         margin: 0 auto;
-        padding: 0.5%;
+        padding: 0.25em;
 
         label {
-          font-size: 0.9em;
-          width: 22%;
-          text-indent: 1%;
+          font-size: 1em;         
+
         }
 
         select {
-          width: 16.5%;
-          font-size: 0.9em;
-          height: 30px;
+
+          font-size: 0.8em;
+
         }
       }
     }
@@ -3931,10 +3915,10 @@
 
         #pag_search {
           width: 49%;
-          margin: 0 0 2%;
+          
 
           select {
-            width: 50%;
+            
             font-size: 0.8em;
           }
 
@@ -3952,7 +3936,7 @@
           width: 50%;
 
           a {
-            width: 32%;
+            
             font-size: 0.9em;
 
             &:hover {
@@ -4163,20 +4147,26 @@
 
     nav#main-nav {
       height: 30px;
-
-      span#signin-box {
-        width: 31.5%;
-
-        a {
-          font-size: 0.8em;
-        }
-      }
-
+      
       ul#inner-nav {
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav.is-expanded{
+        top:0;
+        display: block;
+        width: 96%;
+        background: $color-black;
+        position: fixed;
+        z-index: 4;
+        border: 1px solid $color-black;
+        height: 290px;        
+        padding: 1%;
+      }
+
+      
+      ul.mobile-nav {
+        @include transitioner(all ease 0.2s);
         display: block;
         width: 96%;
         background: $color-black;
@@ -4186,7 +4176,7 @@
         height: 290px;
         top: -290px;
         padding: 1%;
-
+        
         li {
           width: 100%;
           display: block;
@@ -4258,13 +4248,12 @@
 
       #search_category_form {
         label {
-          font-size: 0.8em;
           width: 20%;
         }
 
         select {
-          width: 16.8%;
-          font-size: 0.9em;
+          font-size: 0.8em;
+
         }
       }
     }
@@ -4318,7 +4307,7 @@
           width: 43%;
 
           select {
-            width: 50%;
+            
             font-size: 0.9em;
           }
 
@@ -4390,12 +4379,12 @@
               width: 90%;
             }
 
-            figcaption.product_boxdetails {
-              height: 55px;
+            figcaption.product_boxdetails {    
               padding: 7% 0 0;
 
               p.product_name {
                 font-size: 75%;
+                line-height: 25px;
               }
 
               p.product_price {
@@ -4612,7 +4601,7 @@
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         width: 96%;
 
         li {
@@ -4639,7 +4628,7 @@
               background-color: rgb(255, 255, 255);
             }
 
-            &::visited {
+            &:visited {
               background-color: rgb(255, 255, 255);
             }
           }
@@ -4653,19 +4642,19 @@
 
     #search_category {
       button.search_category_btn {
-        width: 10%;
+        
         font-size: 1em;
       }
 
       #search_category_form {
         label {
-          font-size: 0.75em;
+
           width: 20%;
         }
 
         select {
-          width: 16.8%;
           font-size: 0.8em;
+
         }
       }
     }
@@ -4711,7 +4700,7 @@
           width: 43%;
 
           select {
-            width: 50%;
+            
             font-size: 0.9em;
           }
 
@@ -5002,7 +4991,7 @@
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         width: 96%;
 
         li {
@@ -5043,18 +5032,18 @@
 
     #search_category {
       button.search_category_btn {
-        width: 10%;
+
         font-size: 1em;
       }
 
       #search_category_form {
         label {
-          font-size: 0.7em;
-          width: 20%;
+          font-size: 0.8em;
+
         }
 
         select {
-          width: 16.8%;
+
           font-size: 0.8em;
         }
       }
@@ -5391,7 +5380,7 @@
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         width: 96%;
 
         li {
@@ -5432,13 +5421,13 @@
 
     #search_category {
       button.search_category_btn {
-        width: 10%;
+
         font-size: 1em;
       }
 
       #search_category_form {
         label {
-          font-size: 0.65em;
+          font-size: 0.75em;
           width: 23%;
         }
 
@@ -5490,7 +5479,7 @@
           width: 46%;
 
           select {
-            width: 40%;
+            
             font-size: 0.9em;
           }
 
@@ -5773,7 +5762,7 @@
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         width: 96%;
 
         li {
@@ -6228,7 +6217,7 @@
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         width: 96%;
 
         li {
@@ -6269,7 +6258,7 @@
 
     #search_category {
       button.search_category_btn {
-        width: 100%;
+       
         font-size: 1.1em;
       }
 
@@ -6628,7 +6617,7 @@
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         width: 96%;
 
         li {
@@ -7021,7 +7010,7 @@
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         width: 96%;
 
         li {
@@ -7402,7 +7391,7 @@
         display: none;
       }
 
-      ul#mobile-nav {
+      ul.mobile-nav {
         width: 96%;
 
         li {
@@ -7499,7 +7488,7 @@
           width: 48%;
 
           select {
-            width: 40%;
+            
             font-size: 0.7em;
           }
 

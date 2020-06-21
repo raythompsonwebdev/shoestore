@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "image-map-resizer": "^1.0.10",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "react-select": "^3.1.0"
   }
 }

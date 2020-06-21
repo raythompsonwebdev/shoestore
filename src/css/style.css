@@ -294,7 +294,7 @@ figure {
   #wrapper nav#main-nav span#signin-box a:last-of-type {
     border: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     display: none;
   }
   #wrapper nav#main-nav ul#inner-nav {
@@ -382,7 +382,7 @@ figure {
     color: #ffffff;
     background-color: #ea3411;
     margin: 0;
-    padding: 0.8%;
+    padding: 0.5em;
     height: auto;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
   }
@@ -412,7 +412,7 @@ figure {
   #wrapper #search_category #search_category_form select {
     font-family: arial, sans-serif;
     width: 16.5%;
-    font-size: 1em;
+    font-size: 0.9em;
     margin: 0 0.25em 0 0;
     color: #333333;
     height: 30px;
@@ -717,33 +717,44 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
     width: 100%;
-    height: 55px;
     margin: 0;
     padding: 7% 0 0;
     background-image: url("../images/product-info-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
     /*Price Icon*/
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
     color: #0099CC;
-    line-height: 25px;
+    line-height: 30px;
     text-transform: uppercase;
     font-size: 85%;
-    display: block;
+    margin: 0;
     text-indent: 0.2em;
+    -ms-flex: 1 0 auto;
+    -webkit-box-flex: 1;
+            flex: 1 0 auto;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
     height: auto;
-    line-height: 25px;
+    line-height: 30px;
     margin: 0;
     font-weight: bold;
-    display: block;
     width: 100%;
     text-indent: 0.2em;
+    -ms-flex: 1 0 auto;
+    -webkit-box-flex: 1;
+            flex: 1 0 auto;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
@@ -882,7 +893,7 @@ figure {
   }
   #wrapper #content #content_section #pagination {
     height: 30px;
-    width: 33%;
+    width: 35%;
     display: block;
     margin: 0 0 2%;
     float: right;
@@ -1046,7 +1057,7 @@ figure {
             box-sizing: border-box;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer button {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
@@ -1162,7 +1173,7 @@ figure {
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     display: none;
   }
   #wrapper nav#main-nav ul#inner-nav {
@@ -1190,13 +1201,9 @@ figure {
     background-color: white;
   }
   #wrapper #search_category {
-    height: 50px;
     margin: 1% 0;
   }
   #wrapper #search_category button.search_category_btn {
-    width: 8%;
-    height: 30px;
-    line-height: 30px;
     font-size: 1.1em;
   }
   #wrapper #search_category button.search_category_btn:hover {
@@ -1210,7 +1217,6 @@ figure {
     font-size: 1.1em;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.5%;
     font-size: 1em;
   }
   #wrapper #content {
@@ -1402,21 +1408,14 @@ figure {
     cursor: pointer;
   }
   #wrapper #content #content_section #pag_search {
-    width: 45%;
-    margin: 0 0 2%;
     padding: 0;
   }
   #wrapper #content #content_section #pag_search select {
     width: 60%;
-    height: 30px;
-    margin: 0 1% 0 0;
-    line-height: 30px;
     font-size: 0.85em;
   }
   #wrapper #content #content_section #pag_search label {
     width: 39%;
-    height: 30px;
-    line-height: 30px;
     font-size: 0.8em;
   }
   #wrapper #content #content_section #pag_search label:hover {
@@ -1424,19 +1423,12 @@ figure {
     cursor: pointer;
   }
   #wrapper #content #content_section #pagination {
-    height: 30px;
-    width: 33%;
-    display: block;
-    margin: 0 0 2%;
-    float: right;
+    width: 35%;
   }
   #wrapper #content #content_section #pagination a {
-    width: 32%;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section #pagination a:hover {
-    font-weight: bold;
     cursor: pointer;
   }
   #wrapper #content #content_section #results {
@@ -1588,7 +1580,7 @@ figure {
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     display: none;
   }
   #wrapper nav#main-nav ul#inner-nav {
@@ -1615,14 +1607,7 @@ figure {
   #wrapper nav#main-nav ul#inner-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper #search_category {
-    height: 50px;
-    margin: 1% 0;
-  }
   #wrapper #search_category button.search_category_btn {
-    width: 8%;
-    height: 30px;
-    line-height: 30px;
     font-size: 1.1em;
   }
   #wrapper #search_category button.search_category_btn:hover {
@@ -1637,9 +1622,7 @@ figure {
     width: 23%;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.5%;
     font-size: 1em;
-    height: 30px;
   }
   #wrapper #content {
     /*rightside content section within content div*/
@@ -1836,13 +1819,9 @@ figure {
   }
   #wrapper #content #content_section #pag_search {
     width: 45%;
-    margin: 0 0 2%;
   }
   #wrapper #content #content_section #pag_search select {
     width: 50%;
-    height: 30px;
-    margin: 0 1% 0 0;
-    line-height: 30px;
     font-size: 0.85em;
   }
   #wrapper #content #content_section #pag_search label {
@@ -1853,18 +1832,13 @@ figure {
     cursor: pointer;
   }
   #wrapper #content #content_section #pagination {
-    width: 37%;
-    display: block;
-    margin: 0 0 2%;
+    width: 40%;
   }
   #wrapper #content #content_section #pagination a {
-    width: 32%;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section #pagination a:hover {
     font-weight: bold;
-    cursor: pointer;
   }
   #wrapper #content #content_section #results {
     clear: both;
@@ -2023,7 +1997,7 @@ figure {
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     display: none;
   }
   #wrapper nav#main-nav ul#inner-nav {
@@ -2050,14 +2024,7 @@ figure {
   #wrapper nav#main-nav ul#inner-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper #search_category {
-    height: 50px;
-    margin: 1% 0;
-  }
   #wrapper #search_category button.search_category_btn {
-    width: 8%;
-    height: 30px;
-    line-height: 30px;
     font-size: 1.1em;
   }
   #wrapper #search_category button.search_category_btn:hover {
@@ -2069,12 +2036,9 @@ figure {
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1em;
-    width: 23%;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.5%;
     font-size: 1em;
-    height: 30px;
   }
   #wrapper #content {
     /*rightside content section within content div*/
@@ -2271,10 +2235,8 @@ figure {
   }
   #wrapper #content #content_section #pag_search {
     width: 45%;
-    margin: 0 0 2%;
   }
   #wrapper #content #content_section #pag_search select {
-    width: 50%;
     font-size: 0.9em;
   }
   #wrapper #content #content_section #pag_search label {
@@ -2285,15 +2247,12 @@ figure {
     cursor: pointer;
   }
   #wrapper #content #content_section #pagination {
-    width: 36%;
+    width: 40%;
   }
   #wrapper #content #content_section #pagination a {
-    width: 32%;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section #pagination a:hover {
-    font-weight: bold;
     cursor: pointer;
   }
   #wrapper #content #content_section #results {
@@ -2435,7 +2394,7 @@ figure {
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     display: none;
   }
   #wrapper nav#main-nav ul#inner-nav {
@@ -2463,12 +2422,7 @@ figure {
   #wrapper nav#main-nav ul#inner-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper #search_category {
-    height: 50px;
-    margin: 1% 0;
-  }
   #wrapper #search_category button.search_category_btn {
-    width: 8%;
     font-size: 1.1em;
   }
   #wrapper #search_category button.search_category_btn:hover {
@@ -2479,11 +2433,9 @@ figure {
     margin: 0;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 0.9em;
-    width: 23%;
+    font-size: 1em;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.5%;
     font-size: 1em;
   }
   #wrapper #content {
@@ -2678,7 +2630,6 @@ figure {
     width: 45%;
   }
   #wrapper #content #content_section #pag_search select {
-    width: 50%;
     font-size: 0.9em;
   }
   #wrapper #content #content_section #pag_search label {
@@ -2692,7 +2643,6 @@ figure {
     width: 45%;
   }
   #wrapper #content #content_section #pagination a {
-    width: 32%;
     font-size: 0.95em;
   }
   #wrapper #content #content_section #pagination a:hover {
@@ -2836,7 +2786,7 @@ figure {
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     display: none;
   }
   #wrapper nav#main-nav ul#inner-nav {
@@ -2864,10 +2814,6 @@ figure {
   #wrapper nav#main-nav ul#inner-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper #search_category {
-    height: 50px;
-    margin: 1% 0;
-  }
   #wrapper #search_category button.search_category_btn {
     width: 9%;
     font-size: 1.1em;
@@ -2880,11 +2826,10 @@ figure {
     margin: 0;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 0.9em;
+    font-size: 1em;
     width: 22%;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.5%;
     font-size: 0.9em;
   }
   #wrapper #content {
@@ -3077,11 +3022,9 @@ figure {
   }
   #wrapper #content #content_section #pag_search {
     width: 49%;
-    margin: 0 0 2%;
   }
   #wrapper #content #content_section #pag_search select {
     width: 50%;
-    font-size: 0.85em;
   }
   #wrapper #content #content_section #pag_search label {
     width: 43%;
@@ -3094,7 +3037,6 @@ figure {
     width: 43%;
   }
   #wrapper #content #content_section #pagination a {
-    width: 32%;
     font-size: 0.9em;
   }
   #wrapper #content #content_section #pagination a:hover {
@@ -3229,7 +3171,7 @@ figure {
     height: 40px;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 27%;
+    width: 30%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.75em;
@@ -3237,11 +3179,11 @@ figure {
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     display: none;
   }
   #wrapper nav#main-nav ul#inner-nav {
-    width: 70%;
+    width: 74%;
     height: 40px;
   }
   #wrapper nav#main-nav ul#inner-nav li {
@@ -3264,12 +3206,7 @@ figure {
   #wrapper nav#main-nav ul#inner-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper #search_category {
-    height: 50px;
-    margin: 1% 0;
-  }
   #wrapper #search_category button.search_category_btn {
-    width: 9%;
     font-size: 1.1em;
   }
   #wrapper #search_category button.search_category_btn:hover {
@@ -3278,17 +3215,13 @@ figure {
   }
   #wrapper #search_category #search_category_form {
     margin: 0 auto;
-    padding: 0.5%;
+    padding: 0.25em;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 0.9em;
-    width: 22%;
-    text-indent: 1%;
+    font-size: 1em;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.5%;
-    font-size: 0.9em;
-    height: 30px;
+    font-size: 0.8em;
   }
   #wrapper #content {
     /*rightside content section within content div*/
@@ -3477,10 +3410,8 @@ figure {
   }
   #wrapper #content #content_section #pag_search {
     width: 49%;
-    margin: 0 0 2%;
   }
   #wrapper #content #content_section #pag_search select {
-    width: 50%;
     font-size: 0.8em;
   }
   #wrapper #content #content_section #pag_search label {
@@ -3494,7 +3425,6 @@ figure {
     width: 50%;
   }
   #wrapper #content #content_section #pagination a {
-    width: 32%;
     font-size: 0.9em;
   }
   #wrapper #content #content_section #pagination a:hover {
@@ -3666,16 +3596,23 @@ figure {
   #wrapper nav#main-nav {
     height: 30px;
   }
-  #wrapper nav#main-nav span#signin-box {
-    width: 31.5%;
-  }
-  #wrapper nav#main-nav span#signin-box a {
-    font-size: 0.8em;
-  }
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav.is-expanded {
+    top: 0;
+    display: block;
+    width: 96%;
+    background: #000000;
+    position: fixed;
+    z-index: 4;
+    border: 1px solid #000000;
+    height: 290px;
+    padding: 1%;
+  }
+  #wrapper nav#main-nav ul.mobile-nav {
+    -webkit-transition: all ease 0.2s;
+    transition: all ease 0.2s;
     display: block;
     width: 96%;
     background: #000000;
@@ -3686,14 +3623,14 @@ figure {
     top: -290px;
     padding: 1%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     width: 100%;
     display: block;
     height: 45px;
     float: none;
     border-bottom: 2px solid #000000;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1.1em;
     display: block;
     text-align: center;
@@ -3705,7 +3642,7 @@ figure {
     color: #000000;
     background-color: #ea3411;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover {
     text-decoration: none;
     display: block;
     -moz-border-radius-topleft: none;
@@ -3717,20 +3654,20 @@ figure {
     color: #ffffff;
     border-bottom: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:visited {
     background-color: #ffffff;
     color: #000000;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category button.search_category_btn {
@@ -3738,12 +3675,10 @@ figure {
     font-size: 1em;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 0.8em;
     width: 20%;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.8%;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   #wrapper #content h1 {
     font-size: 1.2em;
@@ -3786,7 +3721,6 @@ figure {
     width: 43%;
   }
   #wrapper #content #content_section #pag_search select {
-    width: 50%;
     font-size: 0.9em;
   }
   #wrapper #content #content_section #pag_search label {
@@ -3843,13 +3777,13 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 55px;
     padding: 7% 0 0;
     /*Price Icon*/
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
     font-size: 75%;
+    line-height: 25px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -4018,41 +3952,38 @@ figure {
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     width: 96%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1.05em;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover, #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover, #wrapper nav#main-nav ul.mobile-nav li a:visited {
     text-decoration: none;
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a::visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category button.search_category_btn {
-    width: 10%;
     font-size: 1em;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 0.75em;
     width: 20%;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.8%;
     font-size: 0.8em;
   }
   #wrapper #content h1 {
@@ -4088,7 +4019,6 @@ figure {
     width: 43%;
   }
   #wrapper #content #content_section #pag_search select {
-    width: 50%;
     font-size: 0.9em;
   }
   #wrapper #content #content_section #pag_search label {
@@ -4313,41 +4243,38 @@ figure {
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     width: 96%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1.05em;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover, #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover, #wrapper nav#main-nav ul.mobile-nav li a:visited {
     text-decoration: none;
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category button.search_category_btn {
-    width: 10%;
     font-size: 1em;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 0.7em;
-    width: 20%;
+    font-size: 0.8em;
   }
   #wrapper #search_category #search_category_form select {
-    width: 16.8%;
     font-size: 0.8em;
   }
   #wrapper #content h1 {
@@ -4610,37 +4537,36 @@ figure {
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     width: 96%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1em;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover, #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover, #wrapper nav#main-nav ul.mobile-nav li a:visited {
     text-decoration: none;
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category button.search_category_btn {
-    width: 10%;
     font-size: 1em;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 0.65em;
+    font-size: 0.75em;
     width: 23%;
   }
   #wrapper #search_category #search_category_form select {
@@ -4680,7 +4606,6 @@ figure {
     width: 46%;
   }
   #wrapper #content #content_section #pag_search select {
-    width: 40%;
     font-size: 0.9em;
   }
   #wrapper #content #content_section #pag_search label {
@@ -4900,29 +4825,29 @@ figure {
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     width: 96%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1.1em;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover, #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover, #wrapper nav#main-nav ul.mobile-nav li a:visited {
     text-decoration: none;
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category {
@@ -5255,33 +5180,32 @@ figure {
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     width: 96%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1.1em;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover, #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover, #wrapper nav#main-nav ul.mobile-nav li a:visited {
     text-decoration: none;
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category button.search_category_btn {
-    width: 100%;
     font-size: 1.1em;
   }
   #wrapper #search_category #search_category_form label {
@@ -5571,29 +5495,29 @@ figure {
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     width: 96%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1.1em;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover, #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover, #wrapper nav#main-nav ul.mobile-nav li a:visited {
     text-decoration: none;
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category button.search_category_btn {
@@ -5866,29 +5790,29 @@ figure {
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     width: 96%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1.1em;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover, #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover, #wrapper nav#main-nav ul.mobile-nav li a:visited {
     text-decoration: none;
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category button.search_category_btn {
@@ -6156,29 +6080,29 @@ figure {
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
   }
-  #wrapper nav#main-nav ul#mobile-nav {
+  #wrapper nav#main-nav ul.mobile-nav {
     width: 96%;
   }
-  #wrapper nav#main-nav ul#mobile-nav li {
+  #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a {
+  #wrapper nav#main-nav ul.mobile-nav li a {
     font-size: 1.1em;
   }
-  #wrapper nav#main-nav ul#mobile-nav li a:hover, #wrapper nav#main-nav ul#mobile-nav li a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li a:hover, #wrapper nav#main-nav ul.mobile-nav li a:visited {
     text-decoration: none;
     display: block;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:hover {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:hover {
     background-color: rgba(255, 255, 255, 0.8);
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:link {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:link {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav li.selected a:visited {
+  #wrapper nav#main-nav ul.mobile-nav li.selected a:visited {
     background-color: white;
   }
-  #wrapper nav#main-nav ul#mobile-nav span#signin-box {
+  #wrapper nav#main-nav ul.mobile-nav span#signin-box {
     display: none;
   }
   #wrapper #search_category button.search_category_btn {
@@ -6227,7 +6151,6 @@ figure {
     width: 48%;
   }
   #wrapper #content #content_section #pag_search select {
-    width: 40%;
     font-size: 0.7em;
   }
   #wrapper #content #content_section #pag_search label {

@@ -9,9 +9,11 @@ import FindShoes from "../components/FindShoes";
 import productData from "../data/productData";
 
 class MainContent extends React.Component {
+  
   render() {
     return (
       <main id="content" className="clearfix">
+
         <aside id="left_bar">
           <FindShoes />
           <FindShoesAccord />

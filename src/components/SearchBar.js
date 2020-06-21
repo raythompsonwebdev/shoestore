@@ -1,4 +1,5 @@
 import React from "react";
+
 import searchbarData from "../data/searchbarData";
 
 let {genders, sizes, colors, styles} = searchbarData
@@ -8,7 +9,7 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        value: ' '
+        value: ' '       
         
     };
 
@@ -16,16 +17,17 @@ class SearchBar extends React.Component {
     this.submit = this.submit.bind(this);
   }  
 
-  changeHandler = (e) =>{
-     
-    this.setState({ value : e.target.value})
+  changeHandler = (e) =>{ 
         
+    this.setState({ value : e.target.value})
     
+    console.log(this.state.value)
         
   }
 
   submit = event => {
-    console.log(`New color : ${this.state.value}`)
+    
+    console.log(`Array : ${this.state.value}`)
     event.preventDefault()
   }
   
