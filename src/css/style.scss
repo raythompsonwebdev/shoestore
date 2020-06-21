@@ -261,8 +261,7 @@
     #content {
       height: auto;
       width: 100%;
-      margin: 0;
-      /*min-height: 1200px;*/
+      margin: 0;      
       font-family: $font-list;
 
       h1 {
@@ -430,17 +429,14 @@
           height: auto;
           width: 100%;
           margin: 0;
-          border: solid 1px $content-color1a;
-          
+          border: solid 1px $content-color1a;          
           display: flex;
           -webkit-flex-flow: row wrap;
           -ms-flex-flow: row wrap;
           flex-flow: row wrap;
           -webkit-align-items: flex-start;
           -ms-flex-align: flex-start;
-          align-items: flex-start;
-
-                    
+          align-items: flex-start;                    
             
           hgroup {
             -webkit-flex: 0 1 auto;
@@ -462,7 +458,8 @@
               font-weight: bold;
               color: $content-color1a;
               letter-spacing: -0.08em;
-              text-indent: 0.25em;
+              text-indent:0;
+              
             }
 
             h2 {
@@ -475,10 +472,10 @@
               line-height: 30px;
               letter-spacing: -0.08em;
               width: auto;
-              text-indent: 0.5em;
+              text-indent:0;
+              
             }
           }         
-
           
           #bannerboximg {
             width:60%;
@@ -832,7 +829,7 @@
         }
       }
       /*leftbar*/
-      #left_bar {
+      .left_bar {
         float: left;
         width: 23%;
         margin: 0 0 5px;
@@ -848,7 +845,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            width: 90%;
+            width: 100%;
             height: 320px;
             margin: auto;
             font-family: $font-list;
@@ -928,6 +925,7 @@
               font-weight: bold;
               text-transform: uppercase;
               @include transitioner(all 0.2s ease-in-out);
+              font-size:1.1em;
             }
             /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
             .accordion:hover,
@@ -936,8 +934,8 @@
             }
             /* Style the accordion panel. Note: hidden by default */
             .panel {
-              padding: 0 18px;
-              background-color: white;
+              padding: 0;
+              background-color: $color-white;
               overflow: hidden;
               -webkit-transform: scaleY(1);
               -o-transform: scaleY(1);
@@ -952,11 +950,7 @@
               -ms-transition: -ms-transform 0.4s ease;
               transition: transform 0.4s ease;
               box-sizing: border-box;
-            }
-
-            button{
-              font-size:1.2em;
-            }
+            }          
 
             .active:after {
               content: "\2796";
@@ -983,10 +977,11 @@
                 line-height: 45px;
                 display: block;
                 height: 45px;
-                font-size: 0.9em;
+                font-size: 1em;
                 width: 100%;
                 text-align: left;
                 font-family: $font-list;
+                text-indent:0.5em;
 
                 &:hover {
                   font-weight: bold;
@@ -1053,7 +1048,7 @@
 }
 
 @media only screen and (max-width: 1440px) {
-  /*Wrapper*/
+  
   #wrapper {
     width: 73%;
 
@@ -1127,7 +1122,7 @@
         }
       }
     }
-    /*Searchbar*/
+    
     #search_category {
       margin: 1% 0;
 
@@ -1154,7 +1149,7 @@
         }
       }
     }
-    /*Content*/
+    
     #content {
       h1 {
         font-size: 1.4em;
@@ -1234,14 +1229,14 @@
       span.context_title {
         font-size: 1.15em;
       }
-      /*rightside content section within content div*/
+      
       #content_section {
         width: 76%;
 
         h1 {
           font-size: 1.5em;
         }
-        /*Index page banner box*/
+        
         #bannerbox {
                     
           hgroup {
@@ -1284,7 +1279,7 @@
             margin-left: 10px;
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: 235px;
@@ -1444,11 +1439,11 @@
           }
         }
       }
-      /*leftbar*/
-      #left_bar {
+      
+      .left_bar {
         float: left;
 
-        /*Form*/
+        
         #searchbox {
           width: 94%;
 
@@ -1494,27 +1489,16 @@
             button.accordion {
               padding: 18px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+           
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.8em;
             }
@@ -1523,7 +1507,7 @@
               display: block;
 
               li {
-                font-size: 0.9em;
+                font-size: 1em;
 
                 &:hover {
                   cursor: pointer;
@@ -1539,7 +1523,7 @@
       clear: both;
       height: 1px;
     }
-    /*Footer*/
+    
     footer {
       clear: both;
       height: 50px;
@@ -1569,8 +1553,9 @@
     }
   }
 }
+
 @media only screen and (max-width: 1280px) {
-  /*Wrapper*/
+  
   #wrapper {
     width: 80%;
 
@@ -1581,10 +1566,10 @@
     div#menu-toggle-btn {
       display: none;
     }
-    /*header*/
+    
     header {
       width: 100%;
-      height: 75px;
+      height: 70px;
 
       figure#logo {
         width: 30%;
@@ -1643,7 +1628,7 @@
         }
       }
     }
-    /*Searchbar*/
+    
     #search_category {
 
 
@@ -1671,7 +1656,7 @@
         }
       }
     }
-    /*Content*/
+    
     #content {
       h1 {
         font-size: 1.35em;
@@ -1756,14 +1741,14 @@
       span.context_title {
         font-size: 1.15em;
       }
-      /*rightside content section within content div*/
+      
       #content_section {
         width: 76%;
 
         h1 {
           font-size: 1.45em;
         }
-        /*Index page banner box*/
+        
         #bannerbox {
           
           hgroup {
@@ -1805,7 +1790,7 @@
             margin-left: 10px;
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: 235px;
@@ -1955,11 +1940,11 @@
           }
         }
       }
-      /*leftbar*/
-      #left_bar {
+      
+      .left_bar {
         width: 23%;
         margin: 0 0 5px;
-        /*Form*/
+        
         #searchbox {
           width: 94%;
           height: 330px;
@@ -2005,26 +1990,15 @@
             button.accordion {
               padding: 16px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
-            }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
+              padding: 0;
+            }            
 
             h3 {
               font-size: 0.9em;
@@ -2050,7 +2024,7 @@
       clear: both;
       height: 1px;
     }
-    /*Footer*/
+    
     footer {
       height: 50px;
 
@@ -2092,7 +2066,7 @@
       margin: 0;
     }
   }
-  /*Wrapper*/
+  
   #wrapper {
     width: 85%;
 
@@ -2103,10 +2077,10 @@
     div#menu-toggle-btn {
       display: none;
     }
-    /*header*/
+    
     header {
       width: 100%;
-      height: 70px;
+      height: 60px;
 
       figure#logo {
         width: 30%;
@@ -2165,7 +2139,7 @@
         }
       }
     }
-    /*Searchbar*/
+    
     #search_category {
 
 
@@ -2194,7 +2168,7 @@
         }
       }
     }
-    /*Content*/
+    
     #content {
       h1 {
         font-size: 1.35em;
@@ -2276,14 +2250,14 @@
       span.context_title {
         font-size: 1.1em;
       }
-      /*rightside content section within content div*/
+      
       #content_section {
         width: 76%;
 
         h1 {
           font-size: 1.4em;
         }
-        /*Index page banner box*/
+        
         #bannerbox {
           
           hgroup {
@@ -2327,7 +2301,7 @@
             margin-left: 10px;
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: 235px;
@@ -2478,11 +2452,11 @@
           }
         }
       }
-      /*leftbar*/
-      #left_bar {
+      
+      .left_bar {
 
 
-        /*Form*/
+        
         #searchbox {
           width: 94%;
 
@@ -2523,32 +2497,20 @@
           }
 
           div#accContainer {
-            font-size: 0.9em;
-
+            
             button.accordion {
               padding: 14px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+           
             h3 {
               font-size: 0.8em;
             }
@@ -2557,7 +2519,7 @@
               display: block;
 
               li {
-                font-size: 0.8em;
+                font-size: 1em;
 
                 &:hover {
                   cursor: pointer;
@@ -2573,7 +2535,7 @@
       clear: both;
       height: 1px;
     }
-    /*Footer*/
+    
     footer {
       height: 50px;
 
@@ -2608,7 +2570,7 @@
     div#menu-toggle-btn {
       display: none;
     }
-    /*header*/
+    
     header {
       width: 100%;
 
@@ -2670,7 +2632,7 @@
         }
       }
     }
-    /*Searchbar*/
+    
     #search_category {
 
 
@@ -2698,7 +2660,7 @@
         }
       }
     }
-    /*Content*/
+    
     #content {
       h1 {
         font-size: 1.3em;
@@ -2779,14 +2741,14 @@
       span.context_title {
         font-size: 1.1em;
       }
-      /*rightside content section within content div*/
+      
       #content_section {
         width: 76%;
 
         h1 {
           font-size: 1.35em;
         }
-        /*Index page banner box*/
+        
         #bannerbox {
           
           hgroup {
@@ -2832,7 +2794,7 @@
             margin-left: 10px;
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: 235px;
@@ -2974,11 +2936,11 @@
           }
         }
       }
-      /*leftbar*/
-      #left_bar {
+      
+      .left_bar {
         width: 23%;
 
-        /*Form*/
+        
         #searchbox {
           width: 94%;
 
@@ -3020,32 +2982,20 @@
 
           div#accContainer {
             font-family: $font-list;
-            font-size: 0.85em;
-
+            
             button.accordion {
               padding: 12px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.75em;
             }
@@ -3054,7 +3004,7 @@
               display: block;
 
               li {
-                font-size: 0.75em;
+                font-size: 1em;
 
                 &:hover {
                   cursor: pointer;
@@ -3070,7 +3020,7 @@
       clear: both;
       height: 1px;
     }
-    /*Footer*/
+    
     footer {
       height: 50px;
 
@@ -3103,7 +3053,7 @@
     div#menu-toggle-btn {
       display: none;
     }
-    /*header*/
+    
     header {
       width: 100%;
 
@@ -3165,7 +3115,7 @@
         }
       }
     }
-    /*Searchbar*/
+    
     #search_category {
 
 
@@ -3193,7 +3143,7 @@
         }
       }
     }
-    /*Content*/
+    
     #content {
       h1 {
         font-size: 1.2em;
@@ -3274,14 +3224,14 @@
       span.context_title {
         font-size: 1em;
       }
-      /*rightside content section within content div*/
+      
       #content_section {
         width: 76%;
 
         h1 {
           font-size: 1.3em;
         }
-        /*Index page banner box*/
+        
         #bannerbox {
           
           hgroup {
@@ -3324,7 +3274,7 @@
             margin-left: 10px;
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: 235px;
@@ -3470,8 +3420,8 @@
           }
         }
       }
-      /*leftbar*/
-      #left_bar {
+      
+      .left_bar {
         width: 23%;
 
         #searchbox {
@@ -3515,31 +3465,19 @@
 
           div#accContainer {
             font-family: $font-list;
-            font-size: 0.8em;
-
+            
             button.accordion {
               padding: 12px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
-            }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
+              padding: 0;
+            }            
 
             h3 {
               font-size: 0.75em;
@@ -3549,7 +3487,7 @@
               display: block;
 
               li {
-                font-size: 0.75em;
+                font-size: 1em;
 
                 &:hover {
                   cursor: pointer;
@@ -3565,7 +3503,7 @@
       clear: both;
       height: 1px;
     }
-    /*Footer*/
+    
     footer {
       height: 50px;
 
@@ -3598,7 +3536,7 @@
     div#menu-toggle-btn {
       display: none;
     }
-    /*header*/
+    
     header {
       width: 100%;
 
@@ -3611,10 +3549,10 @@
       height: 40px;
       
       span#signin-box {
-        width: 30%;
+        width: 26%;
 
         a {
-          font-size: 0.75em;
+          font-size: 0.7em;
 
           &:hover {
             font-weight: bold;
@@ -3659,7 +3597,7 @@
         }
       }
     }
-    /*Searchbar*/
+    
     #search_category {
 
 
@@ -3689,7 +3627,7 @@
         }
       }
     }
-    /*Content*/
+    
     #content {
       h1 {
         font-size: 1.2em;
@@ -3770,14 +3708,14 @@
       span.context_title {
         font-size: 1em;
       }
-      /*rightside content section within content div*/
+      
       #content_section {
         width: 76%;
 
         h1 {
           font-size: 1.25em;
         }
-        /*Index page banner box*/
+        
         #bannerbox {
           
 
@@ -3820,7 +3758,7 @@
             margin-left: 10px;
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: 235px;
@@ -3964,11 +3902,11 @@
           }
         }
       }
-      /*leftbar*/
-      #left_bar {
+      
+      .left_bar {
         width: 23%;
 
-        /*Form*/
+        
         #searchbox {
           width: 94%;
 
@@ -4009,32 +3947,20 @@
           }
 
           div#accContainer {
-            font-size: 0.7em;
-
+            
             button.accordion {
               padding: 16px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.75em;
             }
@@ -4043,7 +3969,7 @@
               display: block;
 
               li {
-                font-size: 0.75em;
+                font-size: 0.9em;
 
                 &:hover {
                   cursor: pointer;
@@ -4059,7 +3985,7 @@
       clear: both;
       height: 1px;
     }
-    /*Footer*/
+    
     footer {
       height: 50px;
 
@@ -4089,18 +4015,18 @@
     button#side-bar-toggle-btn {
       display: block;
       position: fixed;
-      left: 0.25em;
+      left: 91%;
       z-index: 4;
-      top: 4.8em;
-      width: 150px;
-      height: 45px;
+      top: 20em;
+      width: 60px;
+      height: 180px;
       background-color: $color-white;
       @include box-sizing($type: border-box);
       border: 2px solid $color-orange;
       color: $color-orange;
-      line-height: 23px;
+      line-height: 180px;
       text-align: center;
-      font-size: 0.9em;
+      font-size: 1em;
 
       &:hover {
         background-color: $color-orange;
@@ -4137,7 +4063,7 @@
     }
 
     header {
-      height: 80px;
+      
       width: 100%;
 
       figure#logo {
@@ -4147,6 +4073,7 @@
 
     nav#main-nav {
       height: 30px;
+      margin: 0;
       
       ul#inner-nav {
         display: none;
@@ -4328,17 +4255,17 @@
             
 
             h1 {
-              font-size: 2.4rem;
+              font-size: 1.9rem;
             }
 
             h2 {
-              font-size: 1.3rem;
+              font-size: 1.1rem;
             }
           }
 
           #bannerboximg {
             width: 62%;
-            top: -35px;
+            top: 0;
           }
 
           nav#apDiv1 {
@@ -4357,7 +4284,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           display: inline-block;
@@ -4464,12 +4391,23 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         position: fixed;
         top: 8em;
         z-index: 100;
         left: -205px;
-        width: 191px;
+        width: 205px;
+        height: auto;
+        background-color: $color-white;
+        @include transitioner(all ease 0.2s);
+      }
+
+      .left_bar.is-expanded {
+        position: fixed;
+        top: 8em;
+        z-index: 100;
+        left: 0px;
+        width: 205px;
         height: auto;
         background-color: $color-white;
 
@@ -4478,27 +4416,16 @@
             button.accordion {
               padding: 16px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.8em;
             }
@@ -4507,7 +4434,7 @@
               display: block;
 
               li {
-                font-size: 0.8em;
+                font-size: 0.9em;
 
                 &:hover {
                   cursor: pointer;
@@ -4563,11 +4490,11 @@
 }
 @media only screen and (max-width: 640px) {
   #wrapper {
-    width: 98%;
+    
 
     button#side-bar-toggle-btn {
-      left: 0.25em;
-      top: 4.4em;
+      font-size: 0.9em;
+      left: 90%;
 
       &:hover {
         cursor: pointer;
@@ -4719,11 +4646,11 @@
             
 
             h1 {
-              font-size: 2.3em;
+              font-size: 1.9em;
             }
 
             h2 {
-              font-size: 1.2em;
+              font-size: 1.1em;
             }
           }
 
@@ -4747,7 +4674,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: auto;
@@ -4863,39 +4790,28 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         width: 191px;
         height: auto;
         top: 7.2em;
 
         #acc_nav {
           div#accContainer {
-            font-size: 0.75em;
+            
 
             button.accordion {
               padding: 16px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.75em;
             }
@@ -4904,7 +4820,7 @@
               display: block;
 
               li {
-                font-size: 0.75em;
+                font-size: 0.9em;
 
                 &:hover {
                   cursor: pointer;
@@ -4956,10 +4872,10 @@
 }
 @media only screen and (max-width: 600px) {
   #wrapper {
-    width: 98%;
+    
 
     button#side-bar-toggle-btn {
-      left: 0.25em;
+      left: 90%;
 
       &:hover {
         cursor: pointer;
@@ -5111,11 +5027,11 @@
             width: 100%;
 
             h1 {
-              font-size: 2.2em;
+              font-size: 1.8em;
             }
 
             h2 {
-              font-size: 1.2em;
+              font-size: 1em;
             }
           }
 
@@ -5139,7 +5055,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: auto;
@@ -5237,37 +5153,27 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         position: fixed;
         width: 191px;
         height: auto;
 
         #acc_nav {
           div#accContainer {
+
             button.accordion {
               padding: 16px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+           
             h3 {
               font-size: 0.75em;
             }
@@ -5276,7 +5182,7 @@
               display: block;
 
               li {
-                font-size: 0.75em;
+                font-size: 0.9em;
 
                 &:hover {
                   cursor: pointer;
@@ -5342,10 +5248,10 @@
 }
 @media only screen and (max-width: 568px) {
   #wrapper {
-    width: 98%;
+    
 
     button#side-bar-toggle-btn {
-      left: 0.25em;
+      left: 89%;
 
       &:hover {
         cursor: pointer;
@@ -5505,11 +5411,11 @@
             
 
             h1 {
-              font-size: 2.1em;
+              font-size: 1.8em;
             }
 
             h2 {
-              font-size: 1.2em;
+              font-size: 1em;
             }
           }
 
@@ -5533,7 +5439,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: auto;
@@ -5633,36 +5539,26 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         position: fixed;
         height: auto;
 
         #acc_nav {
           div#accContainer {
+
             button.accordion {
               padding: 16px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.7em;
             }
@@ -5671,7 +5567,7 @@
               display: block;
 
               li {
-                font-size: 0.7em;
+                font-size: 0.9em;
 
                 &:hover {
                   cursor: pointer;
@@ -5723,11 +5619,10 @@
 }
 @media only screen and (max-width: 480px) {
   #wrapper {
-    width: 98%;
+    width: 100%;
 
     button#side-bar-toggle-btn {
-      left: 0.25em;
-      top: 3.8em;
+      left: 87%;
 
       &:hover {
         cursor: pointer;
@@ -5735,7 +5630,7 @@
     }
 
     button#menu-toggle-btn {
-      left: 79%;
+      left: 83%;
       width: 16%;
       top: 0.5em;
 
@@ -5755,7 +5650,7 @@
       height: 30px;
 
       span#signin-box {
-        width: 39%;
+        width: 42%;
       }
 
       ul#inner-nav {
@@ -5942,13 +5837,15 @@
           hgroup {
 
             width: 100%;
+            padding: 0.25em;
 
             h1 {
-              font-size: 1.8em;
+              font-size: 1.6em;
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 0.9em;
+              margin:0;
             }
           }
 
@@ -5974,7 +5871,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: auto;
@@ -6079,7 +5976,7 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         position: fixed;
         width: 200px;
         left: -200px;
@@ -6091,27 +5988,16 @@
             button.accordion {
               padding: 16px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 10px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.7em;
             }
@@ -6120,7 +6006,7 @@
               display: block;
 
               li {
-                font-size: 0.7em;
+                font-size: 0.9em;
 
                 &:hover {
                   cursor: pointer;
@@ -6177,11 +6063,10 @@
 }
 @media only screen and (max-width: 414px) {
   #wrapper {
-    width: 98%;
+    
 
     button#side-bar-toggle-btn {
-      left: 0.25em;
-      top: 3.5em;
+      left: 87%;
 
       &:hover {
         cursor: pointer;
@@ -6189,7 +6074,7 @@
     }
 
     button#menu-toggle-btn {
-      left: 75%;
+      left: 80%;
       width: 16%;
 
       &:hover {
@@ -6206,7 +6091,7 @@
 
     nav#main-nav {
       span#signin-box {
-        width: 41%;
+        width: 45%;
 
         a {
           font-size: 0.70em;
@@ -6338,14 +6223,14 @@
             order:0;
 
             h1 {
-              font-size: 1.7em;
+              font-size: 1.5em;
               height: 35px;
               line-height: 35px;
               text-indent: 0.10em;
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 0.9em;
               height: 30px;
               line-height: 30px;
               text-indent: 0.2em;
@@ -6375,7 +6260,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: auto;
@@ -6480,7 +6365,7 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         z-index: 100;
 
         #acc_nav {
@@ -6488,27 +6373,16 @@
             button.accordion {
               padding: 16px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 10px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.7em;
             }
@@ -6517,7 +6391,7 @@
               display: block;
 
               li {
-                font-size: 0.7em;
+                font-size: 0.85em;
 
                 &:hover {
                   cursor: pointer;
@@ -6574,11 +6448,10 @@
 }
 @media only screen and (max-width: 380px) {
   #wrapper {
-    width: 98%;
+    
 
     button#side-bar-toggle-btn {
-      left: 0.25em;
-      top: 3.5em;
+      left: 85%;
 
       &:hover {
         cursor: pointer;
@@ -6741,11 +6614,11 @@
             width: 100%;
 
             h1 {
-              font-size: 1.5em;
+              font-size: 1.4em;
             }
 
             h2 {
-              font-size: 0.8em;
+              font-size: 0.85em;
               
             }
           }
@@ -6771,7 +6644,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: auto;
@@ -6871,7 +6744,7 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         top: 6em;
         z-index: 100;
 
@@ -6882,26 +6755,15 @@
             button.accordion {
               padding: 14px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
-            }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
+              padding: 0;
+            }            
 
             h3 {
               font-size: 0.7em;
@@ -6911,7 +6773,7 @@
               display: block;
 
               li {
-                font-size: 0.7em;
+                font-size: 0.85em;
 
                 &:hover {
                   cursor: pointer;
@@ -6968,11 +6830,11 @@
 }
 @media only screen and (max-width: 360px) {
   #wrapper {
-    width: 98%;
+    
 
     button#side-bar-toggle-btn {
       font-size: 0.8em;
-      top: 3.5em;
+      left: 83%;
 
       &:hover {
         cursor: pointer;
@@ -6999,7 +6861,7 @@
 
     nav#main-nav {
       span#signin-box {
-        width: 45.5%;
+        width: 47%;
 
         a {
           font-size: 0.65em;
@@ -7128,7 +6990,7 @@
         #bannerbox {
           hgroup {
             h1 {
-              font-size: 1.4em;
+              font-size: 1.3em;
             }
 
             h2 {
@@ -7156,7 +7018,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: auto;
@@ -7256,7 +7118,7 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         z-index: 100;
 
         #acc_nav {
@@ -7264,25 +7126,14 @@
             button.accordion {
               padding: 14px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
-            }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
+              padding: 0;
             }
 
             h3 {
@@ -7293,7 +7144,7 @@
               display: block;
 
               li {
-                font-size: 0.7em;
+                font-size: 0.85em;
 
                 &:hover {
                   cursor: pointer;
@@ -7350,11 +7201,10 @@
 }
 @media only screen and (max-width: 320px) {
   #wrapper {
-    width: 98%;
+    
 
     button#side-bar-toggle-btn {
-      left: 0.25em;
-      font-size: 0.8em;
+      left: 83%;
 
       &:hover {
         cursor: pointer;
@@ -7380,7 +7230,7 @@
 
     nav#main-nav {
       span#signin-box {
-        width: 45.5%;
+        width: 47%;
 
         a {
           font-size: 0.6em;
@@ -7513,7 +7363,7 @@
             width: 100%;
 
             h1 {
-              font-size: 1.3em;
+              font-size: 1.2em;
 
 
             }
@@ -7541,7 +7391,7 @@
             }
           }
         }
-        /*product boxes*/
+        
         .product_boxes,
         form #results {
           height: auto;
@@ -7644,7 +7494,7 @@
         }
       }
 
-      #left_bar {
+      .left_bar {
         position: absolute;
         z-index: 100;
 
@@ -7653,27 +7503,16 @@
             button.accordion {
               padding: 14px;
             }
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            
             .active,
             button.accordion:hover {
               background-color: #ccc;
             }
-            /* Style the accordion panel. Note: hidden by default */
+            
             .panel {
-              padding: 0 18px;
+              padding: 0;
             }
-
-            button.accordion:after {
-              content: '\02795';
-              /* Unicode character for "plus" sign (+) */
-              font-size: 13px;
-            }
-
-            .active:after {
-              content: "\2796";
-              /* Unicode character for "minus" sign (-) */
-            }
-
+            
             h3 {
               font-size: 0.7em;
             }
@@ -7682,7 +7521,7 @@
               display: block;
 
               li {
-                font-size: 0.7em;
+                font-size: 0.85em;
 
                 &:hover {
                   cursor: pointer;

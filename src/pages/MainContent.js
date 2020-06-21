@@ -1,20 +1,34 @@
 import React from "react";
-//images
-//import banner from "../images/banner-image.png";
 import BannerImg from "../components/BannerImg";
-//components
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import FindShoes from "../components/FindShoes";
 import productData from "../data/productData";
 
 class MainContent extends React.Component {
-  
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      visibility: false
+    };
+    // change code below this line
+    this.sidebarVisibility = this.sidebarVisibility.bind(this);
+    // change code above this line
+  }
+
+
+  // change code below this line
+  sidebarVisibility(e) {
+    e.preventDefault();      
+      this.setState({ visibility: !this.state.visibility});
+  }
+
   render() {
     return (
       <main id="content" className="clearfix">
-
-        <aside id="left_bar">
+        <button id="side-bar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
+        <aside className={`left_bar ${this.state.visibility ? "is-expanded" : ""}`}>
           <FindShoes />
           <FindShoesAccord />
         </aside>
@@ -22,47 +36,6 @@ class MainContent extends React.Component {
         <main id="content_section" className="group">
 
           <BannerImg />
-
-          {/* <section id="bannerbox">
-            <hgroup>
-              <h1>LORUM IPSUN DOLOR AMET </h1>
-              <h2>ipsum vel voluptate perspiciatis, quis</h2>
-            </hgroup>
-
-            <figure id="bannerboximg">
-              <img src={banner} alt="bannerimage" />
-            </figure>
-
-            <nav id="apDiv1">
-              <ul>
-                <li>
-                  <a href="/" title="Womens's Shoes">
-                    Women's Shoes
-                  </a>
-                </li>
-                <li>
-                  <a href="/" title="Men's Shoes">
-                    Men's Shoes
-                  </a>
-                </li>
-                <li>
-                  <a href="/" title="Kids's Shoes">
-                    Kid's Shoes
-                  </a>
-                </li>
-                <li>
-                  <a href="/" title="Bags">
-                    Bags
-                  </a>
-                </li>
-                <li>
-                  <a href="/" title="Accessories">
-                    Accessories
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </section> */}
 
           <h1>Featured</h1>
 

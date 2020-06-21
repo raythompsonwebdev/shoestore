@@ -421,7 +421,6 @@ figure {
     height: auto;
     width: 100%;
     margin: 0;
-    /*min-height: 1200px;*/
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     /*rightside content section within content div*/
     /*leftbar*/
@@ -612,7 +611,7 @@ figure {
     font-weight: bold;
     color: #7a7777;
     letter-spacing: -0.08em;
-    text-indent: 0.25em;
+    text-indent: 0;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
     font-size: 1.3rem;
@@ -624,7 +623,7 @@ figure {
     line-height: 30px;
     letter-spacing: -0.08em;
     width: auto;
-    text-indent: 0.5em;
+    text-indent: 0;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 60%;
@@ -941,29 +940,29 @@ figure {
     color: #ea3411;
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     float: left;
     width: 23%;
     margin: 0 0 5px;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     /*Form*/
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 94%;
     height: 330px;
     margin: auto;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     background-image: url("../images/form-bg-comp.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 90%;
+    width: 100%;
     height: 320px;
     margin: auto;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.5em;
     background: none;
     color: #ffffff;
@@ -975,7 +974,7 @@ figure {
     letter-spacing: -0.08em;
     padding-top: 0.3em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-family: sans-serif;
     width: 90%;
     height: 35px;
@@ -984,7 +983,7 @@ figure {
     color: #999999;
     display: block;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     width: 60%;
     height: 40px;
@@ -997,7 +996,7 @@ figure {
     border: 0;
     outline: none;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find:hover {
+  #wrapper #content .left_bar #searchbox #searcher input.find:hover {
     color: #ea3411;
     display: block;
     background-color: #ffffff;
@@ -1005,23 +1004,23 @@ figure {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #acc_nav {
+  #wrapper #content .left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
     color: #7a7777;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
   }
-  #wrapper #content #left_bar #acc_nav span {
+  #wrapper #content .left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
+  #wrapper #content .left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     /* Style the buttons that are used to open and close the accordion panel */
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     background-color: #eee;
     color: #444;
@@ -1035,14 +1034,15 @@ figure {
     text-transform: uppercase;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+    font-size: 1.1em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .accordion:hover,
-  #wrapper #content #left_bar #acc_nav div#accContainer .active {
+  #wrapper #content .left_bar #acc_nav div#accContainer .accordion:hover,
+  #wrapper #content .left_bar #acc_nav div#accContainer .active {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
-    background-color: white;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
+    background-color: #ffffff;
     overflow: hidden;
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
@@ -1056,14 +1056,11 @@ figure {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button {
-    font-size: 1.2em;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.8em;
     text-transform: uppercase;
     background-color: #cbc5c5;
@@ -1071,23 +1068,24 @@ figure {
     color: #0099CC;
     text-indent: 2%;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
     line-height: 45px;
     display: block;
     height: 45px;
-    font-size: 0.9em;
+    font-size: 1em;
     width: 100%;
     text-align: left;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    text-indent: 0.5em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     font-weight: bold;
     cursor: pointer;
   }
@@ -1138,14 +1136,10 @@ figure {
 }
 
 @media only screen and (max-width: 1440px) {
-  /*Wrapper*/
   #wrapper {
     width: 73%;
     /*header*/
     /*Navigation*/
-    /*Searchbar*/
-    /*Content*/
-    /*Footer*/
   }
   #wrapper div#side-bar-toggle-btn {
     display: none;
@@ -1219,10 +1213,6 @@ figure {
   #wrapper #search_category #search_category_form select {
     font-size: 1em;
   }
-  #wrapper #content {
-    /*rightside content section within content div*/
-    /*leftbar*/
-  }
   #wrapper #content h1 {
     font-size: 1.4em;
   }
@@ -1288,8 +1278,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 76%;
-    /*Index page banner box*/
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.5em;
@@ -1450,70 +1438,58 @@ figure {
   #wrapper #content #content_section .pag_buttons input[type="reset"]:hover {
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     float: left;
-    /*Form*/
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 94%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     margin-bottom: 1%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.45em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find:hover {
+  #wrapper #content .left_bar #searchbox #searcher input.find:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #acc_nav {
+  #wrapper #content .left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #acc_nav span {
+  #wrapper #content .left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
+  #wrapper #content .left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 18px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.9em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 1em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -1546,14 +1522,9 @@ figure {
 }
 
 @media only screen and (max-width: 1280px) {
-  /*Wrapper*/
   #wrapper {
     width: 80%;
-    /*header*/
     /*Navigation*/
-    /*Searchbar*/
-    /*Content*/
-    /*Footer*/
   }
   #wrapper div#side-bar-toggle-btn {
     display: none;
@@ -1563,7 +1534,7 @@ figure {
   }
   #wrapper header {
     width: 100%;
-    height: 75px;
+    height: 70px;
   }
   #wrapper header figure#logo {
     width: 30%;
@@ -1623,10 +1594,6 @@ figure {
   }
   #wrapper #search_category #search_category_form select {
     font-size: 1em;
-  }
-  #wrapper #content {
-    /*rightside content section within content div*/
-    /*leftbar*/
   }
   #wrapper #content h1 {
     font-size: 1.35em;
@@ -1697,8 +1664,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 76%;
-    /*Index page banner box*/
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.45em;
@@ -1856,74 +1821,62 @@ figure {
   #wrapper #content #content_section .pag_buttons input[type="reset"]:hover {
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     width: 23%;
     margin: 0 0 5px;
-    /*Form*/
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 94%;
     height: 330px;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     margin-bottom: 1%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     width: 80%;
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     width: 55%;
     font-size: 1.1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find:hover {
+  #wrapper #content .left_bar #searchbox #searcher input.find:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #acc_nav {
+  #wrapper #content .left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #acc_nav span {
+  #wrapper #content .left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
+  #wrapper #content .left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.9em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -1963,14 +1916,9 @@ figure {
     font-size: 1em;
     margin: 0;
   }
-  /*Wrapper*/
   #wrapper {
     width: 85%;
-    /*header*/
     /*Navigation*/
-    /*Searchbar*/
-    /*Content*/
-    /*Footer*/
   }
   #wrapper div#side-bar-toggle-btn {
     display: none;
@@ -1980,7 +1928,7 @@ figure {
   }
   #wrapper header {
     width: 100%;
-    height: 70px;
+    height: 60px;
   }
   #wrapper header figure#logo {
     width: 30%;
@@ -2039,10 +1987,6 @@ figure {
   }
   #wrapper #search_category #search_category_form select {
     font-size: 1em;
-  }
-  #wrapper #content {
-    /*rightside content section within content div*/
-    /*leftbar*/
   }
   #wrapper #content h1 {
     font-size: 1.35em;
@@ -2110,8 +2054,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 76%;
-    /*Index page banner box*/
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.4em;
@@ -2271,71 +2213,54 @@ figure {
   #wrapper #content #content_section .pag_buttons input[type="reset"]:hover {
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar {
-    /*Form*/
-  }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 94%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     margin-bottom: 1%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.35em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     width: 80%;
     font-size: 0.9em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find:hover {
+  #wrapper #content .left_bar #searchbox #searcher input.find:hover {
     outline: none;
     cursor: pointer;
   }
-  #wrapper #content #left_bar #acc_nav {
+  #wrapper #content .left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #acc_nav span {
+  #wrapper #content .left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    font-size: 0.9em;
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.8em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 1em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -2364,11 +2289,7 @@ figure {
 @media only screen and (max-width: 980px) {
   #wrapper {
     width: 91%;
-    /*header*/
     /*Navigation*/
-    /*Searchbar*/
-    /*Content*/
-    /*Footer*/
   }
   #wrapper div#side-bar-toggle-btn {
     display: none;
@@ -2438,10 +2359,6 @@ figure {
   #wrapper #search_category #search_category_form select {
     font-size: 1em;
   }
-  #wrapper #content {
-    /*rightside content section within content div*/
-    /*leftbar*/
-  }
   #wrapper #content h1 {
     font-size: 1.3em;
   }
@@ -2507,8 +2424,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 76%;
-    /*Index page banner box*/
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.35em;
@@ -2664,72 +2579,59 @@ figure {
   #wrapper #content #content_section .pag_buttons input[type="reset"]:hover {
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     width: 23%;
-    /*Form*/
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 94%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     margin-bottom: 1%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.3em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     width: 80%;
     font-size: 0.9em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find:hover {
+  #wrapper #content .left_bar #searchbox #searcher input.find:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #acc_nav {
+  #wrapper #content .left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #acc_nav span {
+  #wrapper #content .left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
+  #wrapper #content .left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    font-size: 0.85em;
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 12px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.75em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 1em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -2756,11 +2658,7 @@ figure {
 @media only screen and (max-width: 800px) {
   #wrapper {
     width: 95%;
-    /*header*/
     /*Navigation*/
-    /*Searchbar*/
-    /*Content*/
-    /*Footer*/
   }
   #wrapper div#side-bar-toggle-btn {
     display: none;
@@ -2832,10 +2730,6 @@ figure {
   #wrapper #search_category #search_category_form select {
     font-size: 0.9em;
   }
-  #wrapper #content {
-    /*rightside content section within content div*/
-    /*leftbar*/
-  }
   #wrapper #content h1 {
     font-size: 1.2em;
   }
@@ -2902,8 +2796,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 76%;
-    /*Index page banner box*/
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -3058,71 +2950,59 @@ figure {
   #wrapper #content #content_section .pag_buttons input[type="reset"]:hover {
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     width: 23%;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 94%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     margin-bottom: 1%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.25em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     width: 80%;
     font-size: 0.9em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find:hover {
+  #wrapper #content .left_bar #searchbox #searcher input.find:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #acc_nav {
+  #wrapper #content .left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #acc_nav span {
+  #wrapper #content .left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
+  #wrapper #content .left_bar #acc_nav div#accContainer {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    font-size: 0.8em;
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 12px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.75em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 1em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -3149,11 +3029,7 @@ figure {
 @media only screen and (max-width: 768px) {
   #wrapper {
     width: 96%;
-    /*header*/
     /*Navigation*/
-    /*Searchbar*/
-    /*Content*/
-    /*Footer*/
   }
   #wrapper div#side-bar-toggle-btn {
     display: none;
@@ -3171,10 +3047,10 @@ figure {
     height: 40px;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 30%;
+    width: 26%;
   }
   #wrapper nav#main-nav span#signin-box a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #wrapper nav#main-nav span#signin-box a:hover {
     font-weight: bold;
@@ -3222,10 +3098,6 @@ figure {
   }
   #wrapper #search_category #search_category_form select {
     font-size: 0.8em;
-  }
-  #wrapper #content {
-    /*rightside content section within content div*/
-    /*leftbar*/
   }
   #wrapper #content h1 {
     font-size: 1.2em;
@@ -3292,8 +3164,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 76%;
-    /*Index page banner box*/
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.25em;
@@ -3446,71 +3316,56 @@ figure {
   #wrapper #content #content_section .pag_buttons input[type="reset"]:hover {
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     width: 23%;
-    /*Form*/
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 94%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     margin-bottom: 1%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.15em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     width: 80%;
     font-size: 0.9em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find:hover {
+  #wrapper #content .left_bar #searchbox #searcher input.find:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #acc_nav {
+  #wrapper #content .left_bar #acc_nav {
     margin: auto;
     height: auto;
     width: 94%;
   }
-  #wrapper #content #left_bar #acc_nav span {
+  #wrapper #content .left_bar #acc_nav span {
     width: 8%;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    font-size: 0.7em;
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.75em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.9em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
   #wrapper .spacer {
@@ -3541,19 +3396,19 @@ figure {
   #wrapper button#side-bar-toggle-btn {
     display: block;
     position: fixed;
-    left: 0.25em;
+    left: 91%;
     z-index: 4;
-    top: 4.8em;
-    width: 150px;
-    height: 45px;
+    top: 20em;
+    width: 60px;
+    height: 180px;
     background-color: #ffffff;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 2px solid #ea3411;
     color: #ea3411;
-    line-height: 23px;
+    line-height: 180px;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     background-color: #ea3411;
@@ -3587,7 +3442,6 @@ figure {
     border: none;
   }
   #wrapper header {
-    height: 80px;
     width: 100%;
   }
   #wrapper header figure#logo {
@@ -3595,6 +3449,7 @@ figure {
   }
   #wrapper nav#main-nav {
     height: 30px;
+    margin: 0;
   }
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
@@ -3712,7 +3567,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -3734,14 +3588,14 @@ figure {
     margin-top: 0.5em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.4rem;
+    font-size: 1.9rem;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 62%;
-    top: -35px;
+    top: 0;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     width: 35%;
@@ -3848,67 +3702,65 @@ figure {
   #wrapper #content #content_section .product_boxes_longer .product-box_longer {
     max-height: 200px;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     position: fixed;
     top: 8em;
     z-index: 100;
     left: -205px;
-    width: 191px;
+    width: 205px;
+    height: auto;
+    background-color: #ffffff;
+    -webkit-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+  }
+  #wrapper #content .left_bar.is-expanded {
+    position: fixed;
+    top: 8em;
+    z-index: 100;
+    left: 0px;
+    width: 205px;
     height: auto;
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar.is-expanded #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar.is-expanded #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar.is-expanded #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar.is-expanded #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar.is-expanded #acc_nav div#accContainer h3 {
     font-size: 0.8em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar.is-expanded #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.8em;
+  #wrapper #content .left_bar.is-expanded #acc_nav div#accContainer ul li {
+    font-size: 0.9em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar.is-expanded #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar.is-expanded #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar.is-expanded #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar.is-expanded #searchbox #searcher h1 {
     font-size: 1.4em;
     text-indent: 0;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar.is-expanded #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher .find {
+  #wrapper #content .left_bar.is-expanded #searchbox #searcher .find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar.is-expanded #searchbox #searcher label {
     font-size: 0.85em;
   }
   #wrapper footer ul.footer_nav {
@@ -3923,12 +3775,9 @@ figure {
 }
 
 @media only screen and (max-width: 640px) {
-  #wrapper {
-    width: 98%;
-  }
   #wrapper button#side-bar-toggle-btn {
-    left: 0.25em;
-    top: 4.4em;
+    font-size: 0.9em;
+    left: 90%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
@@ -4010,7 +3859,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -4028,10 +3876,10 @@ figure {
     width: 44%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.3em;
+    font-size: 1.9em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
@@ -4148,64 +3996,50 @@ figure {
   #wrapper #content #content_section .pag_buttons input[type="reset"]:hover {
     background-color: #ffffff;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     width: 191px;
     height: auto;
     top: 7.2em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    font-size: 0.75em;
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.75em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.9em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
     text-indent: 0;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar #searchbox #searcher label {
     font-size: 0.9em;
   }
   #wrapper footer ul.footer_nav {
@@ -4217,11 +4051,8 @@ figure {
 }
 
 @media only screen and (max-width: 600px) {
-  #wrapper {
-    width: 98%;
-  }
   #wrapper button#side-bar-toggle-btn {
-    left: 0.25em;
+    left: 90%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
@@ -4301,7 +4132,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -4324,10 +4154,10 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.2em;
+    font-size: 1.8em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
@@ -4429,63 +4259,50 @@ figure {
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
     width: 23%;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     position: fixed;
     width: 191px;
     height: auto;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.75em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.75em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.9em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
     text-indent: 0;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar #searchbox #searcher label {
     font-size: 0.9em;
   }
   #wrapper #content .pag_buttons {
@@ -4509,11 +4326,8 @@ figure {
 }
 
 @media only screen and (max-width: 568px) {
-  #wrapper {
-    width: 98%;
-  }
   #wrapper button#side-bar-toggle-btn {
-    left: 0.25em;
+    left: 89%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
@@ -4597,7 +4411,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -4620,10 +4433,10 @@ figure {
     font-size: 0.8em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.1em;
+    font-size: 1.8em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
@@ -4727,62 +4540,49 @@ figure {
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer .product_icon_longer {
     width: 23%;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     position: fixed;
     height: auto;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.7em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.9em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
     text-indent: 0;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar #searchbox #searcher label {
     font-size: 0.9em;
   }
   #wrapper footer ul.footer_nav {
@@ -4795,17 +4595,16 @@ figure {
 
 @media only screen and (max-width: 480px) {
   #wrapper {
-    width: 98%;
+    width: 100%;
   }
   #wrapper button#side-bar-toggle-btn {
-    left: 0.25em;
-    top: 3.8em;
+    left: 87%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 79%;
+    left: 83%;
     width: 16%;
     top: 0.5em;
   }
@@ -4820,7 +4619,7 @@ figure {
     height: 30px;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 39%;
+    width: 42%;
   }
   #wrapper nav#main-nav ul#inner-nav {
     display: none;
@@ -4940,7 +4739,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -4962,12 +4760,14 @@ figure {
   }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
+    padding: 0.25em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1em;
+    font-size: 0.9em;
+    margin: 0;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 62%;
@@ -5076,65 +4876,52 @@ figure {
   #wrapper #content #content_section .product_boxes_longer .product-box_longer {
     max-height: 200px;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     position: fixed;
     width: 200px;
     left: -200px;
     height: auto;
     top: 6.7em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 10px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.7em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.9em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
     text-indent: 0;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar #searchbox #searcher label {
     font-size: 0.9em;
   }
   #wrapper footer ul.footer_nav {
@@ -5150,18 +4937,14 @@ figure {
 }
 
 @media only screen and (max-width: 414px) {
-  #wrapper {
-    width: 98%;
-  }
   #wrapper button#side-bar-toggle-btn {
-    left: 0.25em;
-    top: 3.5em;
+    left: 87%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 75%;
+    left: 80%;
     width: 16%;
   }
   #wrapper button#menu-toggle-btn:hover {
@@ -5172,7 +4955,7 @@ figure {
     width: 60%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 41%;
+    width: 45%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.70em;
@@ -5238,7 +5021,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -5267,13 +5049,13 @@ figure {
             order: 0;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.7em;
+    font-size: 1.5em;
     height: 35px;
     line-height: 35px;
     text-indent: 0.10em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1em;
+    font-size: 0.9em;
     height: 30px;
     line-height: 30px;
     text-indent: 0.2em;
@@ -5391,61 +5173,48 @@ figure {
   #wrapper #content #content_section .product_boxes_longer .product-box_longer {
     max-height: 200px;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     z-index: 100;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 10px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.7em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.85em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
     text-indent: 0;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar #searchbox #searcher label {
     font-size: 0.9em;
   }
   #wrapper footer ul.footer_nav {
@@ -5461,12 +5230,8 @@ figure {
 }
 
 @media only screen and (max-width: 380px) {
-  #wrapper {
-    width: 98%;
-  }
   #wrapper button#side-bar-toggle-btn {
-    left: 0.25em;
-    top: 3.5em;
+    left: 85%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
@@ -5556,7 +5321,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -5583,10 +5347,10 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 100%;
@@ -5687,62 +5451,51 @@ figure {
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
     width: 28%;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     top: 6em;
     z-index: 100;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
+  #wrapper #content .left_bar #acc_nav div#accContainer {
     font-size: 0.7em;
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.7em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.85em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar #searchbox #searcher label {
     font-size: 0.9em;
   }
   #wrapper footer ul.footer_nav {
@@ -5758,12 +5511,9 @@ figure {
 }
 
 @media only screen and (max-width: 360px) {
-  #wrapper {
-    width: 98%;
-  }
   #wrapper button#side-bar-toggle-btn {
     font-size: 0.8em;
-    top: 3.5em;
+    left: 83%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
@@ -5782,7 +5532,7 @@ figure {
     width: 65%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 45.5%;
+    width: 47%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.65em;
@@ -5848,7 +5598,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -5872,7 +5621,7 @@ figure {
     width: 31%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
     font-size: 0.85em;
@@ -5979,60 +5728,47 @@ figure {
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
     width: 28%;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     z-index: 100;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.7em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.85em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar #searchbox #searcher label {
     font-size: 0.9em;
   }
   #wrapper footer ul.footer_nav {
@@ -6049,12 +5785,10 @@ figure {
 
 @media only screen and (max-width: 320px) {
   #wrapper {
-    width: 98%;
     /*search bar top*/
   }
   #wrapper button#side-bar-toggle-btn {
-    left: 0.25em;
-    font-size: 0.8em;
+    left: 83%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
@@ -6072,7 +5806,7 @@ figure {
     width: 70%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 45.5%;
+    width: 47%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.6em;
@@ -6141,7 +5875,6 @@ figure {
   }
   #wrapper #content #content_section {
     width: 100%;
-    /*product boxes*/
   }
   #wrapper #content #content_section h1 {
     font-size: 1.3em;
@@ -6167,7 +5900,7 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
     font-size: 0.8em;
@@ -6274,61 +6007,48 @@ figure {
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
     width: 28%;
   }
-  #wrapper #content #left_bar {
+  #wrapper #content .left_bar {
     position: absolute;
     z-index: 100;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer {
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    /* Style the accordion panel. Note: hidden by default */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion {
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active,
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer .active,
+  #wrapper #content .left_bar #acc_nav div#accContainer button.accordion:hover {
     background-color: #ccc;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer .panel {
-    padding: 0 18px;
+  #wrapper #content .left_bar #acc_nav div#accContainer .panel {
+    padding: 0;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer button.accordion:after {
-    content: '\02795';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer .active:after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-  }
-  #wrapper #content #left_bar #acc_nav div#accContainer h3 {
+  #wrapper #content .left_bar #acc_nav div#accContainer h3 {
     font-size: 0.7em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul {
     display: block;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li {
-    font-size: 0.7em;
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li {
+    font-size: 0.85em;
   }
-  #wrapper #content #left_bar #acc_nav div#accContainer ul li:hover {
+  #wrapper #content .left_bar #acc_nav div#accContainer ul li:hover {
     cursor: pointer;
   }
-  #wrapper #content #left_bar #searchbox {
+  #wrapper #content .left_bar #searchbox {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher {
+  #wrapper #content .left_bar #searchbox #searcher {
     width: 98%;
   }
-  #wrapper #content #left_bar #searchbox #searcher h1 {
+  #wrapper #content .left_bar #searchbox #searcher h1 {
     font-size: 1.4em;
   }
-  #wrapper #content #left_bar #searchbox #searcher select {
+  #wrapper #content .left_bar #searchbox #searcher select {
     font-size: 1em;
   }
-  #wrapper #content #left_bar #searchbox #searcher input.find {
+  #wrapper #content .left_bar #searchbox #searcher input.find {
     font-size: 1.2em;
   }
-  #wrapper #content #left_bar #searchbox #searcher label {
+  #wrapper #content .left_bar #searchbox #searcher label {
     font-size: 0.9em;
   }
   #wrapper footer ul.footer_nav {
