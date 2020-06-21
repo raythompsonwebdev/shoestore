@@ -47,7 +47,7 @@ class AllProducts extends React.Component {
       <main id="content" className="clearfix">
         <SearchBar labelname="All Products" />
 
-        <aside id="left_bar">
+        <aside class="left_bar">
           <FindShoesAccord />
         </aside>
 

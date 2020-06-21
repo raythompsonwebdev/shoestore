@@ -47,7 +47,7 @@ class Specials extends React.Component {
       <main id="content" className="clearfix">
         <SearchBar labelname="Specials" />
 
-        <aside id="left_bar">
+        <aside class="left_bar">
           <FindShoesAccord />
         </aside>
 

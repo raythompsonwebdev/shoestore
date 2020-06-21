@@ -10,7 +10,7 @@ class NewProducts extends React.Component {
       <main id="content" className="clearfix">
         <SearchBar labelname="New Product" />
 
-        <aside id="left_bar">
+        <aside class="left_bar">
           <FindShoesAccord />
         </aside>
 

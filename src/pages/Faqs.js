@@ -1,8 +1,8 @@
 import React from "react";
 
 
-class Faqs extends React.Component {
-  render() {
+const Faqs = () =>  {
+    
     return (
        
     <main id="content" className="clearfix" >
@@ -60,7 +60,7 @@ class Faqs extends React.Component {
 
     </main>   
       );
-  }
+  
 }
 
 export default Faqs;
