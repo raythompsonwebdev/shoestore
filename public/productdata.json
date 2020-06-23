@@ -31,6 +31,102 @@
       "price":"80.00",
       "cartImg":"./images/shoppingcart.png",
       "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":5,
+      "name":"Boots",
+      "imgUrl":"./images/fur-lined-hiking-boot.png",
+      "price":"80.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":6,
+      "name":"Trainers",
+      "imgUrl":"./images/kids-trainer.png",
+      "price":"50.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":7,
+      "name":"Ladies",
+      "imgUrl":"./images/fur-lined-ladies-boot.png",
+      "price":"80.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":8,
+      "name":"Boots",
+      "imgUrl":"./images/fur-lined-hiking-boot.png",
+      "price":"80.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":9,
+      "name":"Trainers",
+      "imgUrl":"./images/kids-trainer.png",
+      "price":"50.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":10,
+      "name":"Boots",
+      "imgUrl":"./images/fur-lined-hiking-boot.png",
+      "price":"80.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":11,
+      "name":"Skate Shoes",
+      "imgUrl":"./images/basket-ball-shoe.png",
+      "price":"90.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":12,
+      "name":"Ladies",
+      "imgUrl":"./images/fur-lined-ladies-boot.png",
+      "price":"80.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":13,
+      "name":"Boots",
+      "imgUrl":"./images/fur-lined-hiking-boot.png",
+      "price":"80.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":14,
+      "name":"Trainers",
+      "imgUrl":"./images/kids-trainer.png",
+      "price":"50.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":15,
+      "name":"Ladies",
+      "imgUrl":"./images/fur-lined-ladies-boot.png",
+      "price":"80.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+   },
+   {
+      "id":16,
+      "name":"Boots",
+      "imgUrl":"./images/fur-lined-hiking-boot.png",
+      "price":"80.00",
+      "cartImg":"./images/shoppingcart.png",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
    }
    
    

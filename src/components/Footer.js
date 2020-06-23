@@ -1,26 +1,39 @@
 import React from "react";
+import {  Link  } from 'react-router-dom';
 
 function Footer() {
   return (
     <footer className="Footer-header">
       <ul className="footer_nav">
         <li>
-          <a href="index.html">Home</a>
+          <Link to="/" title="Home Page">
+            Home
+          </Link>
         </li>
         <li>
-          <a href="new_products.html">New Products</a>
+          <Link to="/newproducts" title="">
+            New Products
+          </Link>
         </li>
         <li>
-          <a href="specials.html">Specials</a>
+          <Link to="/specials" title="">
+            Specials
+          </Link>
         </li>
         <li>
-          <a href="all_products.html">All Products</a>
+          <Link to="/allproducts" title="">
+            All Products
+          </Link>
         </li>
         <li>
-          <a href="faqs.html">FAQS</a>
+          <Link to="/faqs" title="">
+            FAQS
+          </Link>
         </li>
         <li>
-          <a href="contact_us.html">Contact</a>
+          <Link to="/contact" title="">
+            Contact
+          </Link>
         </li>
       </ul>
     </footer>

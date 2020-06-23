@@ -9,13 +9,12 @@ class MainNav extends React.Component {
     this.state = {
       visibility: false
     };
-    // change code below this line
+    
     this.toggleVisibility = this.toggleVisibility.bind(this);
-    // change code above this line
+    
   }
 
-
-  // change code below this line
+  
   toggleVisibility(e) {
     e.preventDefault();      
       this.setState({ visibility: !this.state.visibility});

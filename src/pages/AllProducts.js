@@ -51,14 +51,9 @@ class AllProducts extends Component {
             //encType="application/x-www-form-urlencoded"
           >
             <section id="results">
-              <ProductBoxes productdata={this.state.productdata} />
-
-              <ProductBoxes productdata={this.state.productdata} />
-
-              <ProductBoxes productdata={this.state.productdata} />
-
-              <ProductBoxes productdata={this.state.productdata} />
               
+              <ProductBoxes productdata={this.state.productdata} />
+                        
             </section>
             <br />
 

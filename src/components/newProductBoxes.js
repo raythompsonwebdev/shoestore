@@ -3,7 +3,7 @@ import NewProductBox from "../components/newProductBox";
 
 function newProductBoxes(props) {
 
-    const NewProduct = props.productdata.map(item => (
+    const NewProduct = props.productdata.slice(0, 4).map(item => (
 
         <NewProductBox
           key={item.id}
@@ -13,6 +13,7 @@ function newProductBoxes(props) {
           cartImg={item.cartImg}
           text={item.text}
         />
+        
     ))
   
   return (

@@ -15,6 +15,7 @@ class NewProducts extends Component {
   }
 
   componentDidMount(){
+    
     fetch('./productdata.json')
     .then(response => response.json())
     .then(data => {
