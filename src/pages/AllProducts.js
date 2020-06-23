@@ -1,53 +1,46 @@
-import React from "react";
+import React ,{ Component } from "react";
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";
-import productData from "../data/productData";
-import $ from "jquery";
+//import $ from "jquery";
 
-class AllProducts extends React.Component {
+class AllProducts extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      productdata: [],
+      lastIndex : 0
+    };
+   
+  }
+
   componentDidMount() {
-    $("#results").before('<nav id="pagination"></nav>');
 
-    var rowsShown = 4;
-    var rowsTotal = $("#results div").length;
-    var numPages = Math.round(rowsTotal / rowsShown);
+    fetch('./productdata.json')
+    .then(response => response.json())
+    .then(data => {
+      const productData = data.map( shoe => {return shoe;})
+      // data.shoeId = this.state.lastIndex;
+      // this.setState({lastIndex:this.state.lastIndex + 1})
+      this.setState({
+        productdata : productData
+      })
+    })
+    .catch(error => {
 
-    for (let i = 0; i < numPages; i++) {
-      var pageNum = i + 1;
-      $("#pagination").append(
-        '<a href="#" rel="' + i + '">' + pageNum + "</a> "
-      );
-    }
+      console.log(error)
 
-    $("#results div").hide();
-    $("#results div:first").show();
-    $("#results div").slice(0, rowsShown).show();
-
-    $("#pagination a:first").addClass("active");
-
-    $("#pagination a").bind("click", function () {
-      $("#pagination a").removeClass("active");
-      $(this).addClass("active");
-      var currPage = $(this).attr("rel");
-      var startItem = currPage * rowsShown;
-      var endItem = startItem + rowsShown;
-
-      $("#results div")
-        .css("opacity", "0.0")
-        .hide()
-        .slice(startItem, endItem)
-        .css("display", "block")
-        .animate({ opacity: 1 }, 300, function () {});
-    });
+    })
   }
 
   render() {
     return (
       <main id="content" className="clearfix">
+        
         <SearchBar labelname="All Products" />
 
-        <aside class="left_bar">
+        <aside className="left_bar">
           <FindShoesAccord />
         </aside>
 
@@ -58,29 +51,14 @@ class AllProducts extends React.Component {
             //encType="application/x-www-form-urlencoded"
           >
             <section id="results">
-              <ProductBoxes productsdata={productData} />
+              <ProductBoxes productdata={this.state.productdata} />
 
-              <ProductBoxes productsdata={productData} />
+              <ProductBoxes productdata={this.state.productdata} />
 
-              <ProductBoxes productsdata={productData} />
+              <ProductBoxes productdata={this.state.productdata} />
 
-              <ProductBoxes productsdata={productData} />
-
-              <ProductBoxes productsdata={productData} />
-
-              <ProductBoxes productsdata={productData} />
-
-              <ProductBoxes productsdata={productData} />
-
-              <ProductBoxes productsdata={productData} />
-
-              <ProductBoxes productsdata={productData} />
-
-              <ProductBoxes productsdata={productData} />
-
-              <ProductBoxes productsdata={productData} />
-
-              <ProductBoxes productsdata={productData} />
+              <ProductBoxes productdata={this.state.productdata} />
+              
             </section>
             <br />
 

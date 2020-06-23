@@ -1,33 +1,58 @@
-import React from "react";
+import React, { Component } from 'react';
 import BannerImg from "../components/BannerImg";
-//import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import FindShoes from "../components/FindShoes";
-//import productData from "../data/productData";
+import ProductBoxes from "../components/productBoxes";
+import '../css/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class MainContent extends React.Component {
+
+class App extends Component{
 
   constructor(props) {
     super(props);
     this.state = {
-      visibility: false
+      productdata: [],      
+      visibility: false,
+      lastIndex : 0
     };
-    // change code below this line
+    
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
-    // change code above this line
+    
   }
-
-
-  // change code below this line
+  
   sidebarVisibility(e) {
     e.preventDefault();      
       this.setState({ visibility: !this.state.visibility});
   }
 
-  render() {
+  componentDidMount(){
+    fetch('./productdata.json')
+    .then(response => response.json())
+    .then(data => {
+      const productData = data.map( shoe => {return shoe;})
+      // data.shoeId = this.state.lastIndex;
+      // this.setState({lastIndex:this.state.lastIndex + 1})
+      this.setState({
+        productdata : productData
+      })
+    })
+    .catch(error => {
+
+      console.log(error)
+
+    })
+
+    
+  }
+
+  render(){
+
     return (
       <main id="content" className="clearfix">
+
         <button id="side-bar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
+
         <aside className={`left_bar ${this.state.visibility ? "is-expanded" : ""}`}>
           <FindShoes />
           <FindShoesAccord />
@@ -39,13 +64,13 @@ class MainContent extends React.Component {
 
           <h1>Featured</h1>
 
-          <ProductBoxes productsdata={productData} />
+          <ProductBoxes productdata={this.state.productdata} />
+          <ProductBoxes productdata={this.state.productdata} />
 
-          <ProductBoxes productsdata={productData} />
         </main>
       </main>
     );
   }
 }
 
-export default MainContent;
+export default App;

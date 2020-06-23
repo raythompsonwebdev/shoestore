@@ -1,10 +1,9 @@
 import React from "react";
-import NewProductBox from "./newProductBox";
+import NewProductBox from "../components/newProductBox";
 
+function newProductBoxes(props) {
 
-function newProductBoxes({newproducts}) {
-
-    const NewProduct = newproducts.map(item => (
+    const NewProduct = props.productdata.map(item => (
 
         <NewProductBox
           key={item.id}

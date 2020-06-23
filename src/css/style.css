@@ -1036,6 +1036,9 @@ figure {
     transition: all 0.2s ease-in-out;
     font-size: 1.1em;
   }
+  #wrapper #content .left_bar #acc_nav div#accContainer button {
+    font-size: 1.1rem;
+  }
   #wrapper #content .left_bar #acc_nav div#accContainer .accordion:hover,
   #wrapper #content .left_bar #acc_nav div#accContainer .active {
     background-color: #ccc;
@@ -1348,45 +1351,32 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer {
     display: block;
-    height: 180px;
-    width: 100%;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
     width: 18%;
-    margin: 2.9% 1.5%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
     width: 77%;
-    height: 150px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
-    height: auto;
     line-height: 45px;
-    text-indent: 4%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
     width: 74%;
-    line-height: 1.5em;
     font-size: 0.9em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
     color: #0099CC;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-    line-height: 50px;
     font-size: 0.85em;
     width: 24%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -1740,30 +1730,21 @@ figure {
     height: 180px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
     width: 18%;
-    margin: 2.9% 1.5%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
-    width: 77%;
-    height: 150px;
     padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     line-height: 45px;
-    text-indent: 4%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    width: 74%;
-    line-height: 1.5em;
     font-size: 0.9em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
@@ -2132,30 +2113,21 @@ figure {
     height: 180px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
-    width: 18%;
-    margin: 2.9% 1.5%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
     width: 77%;
-    height: 150px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     line-height: 45px;
-    text-indent: 4%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    width: 74%;
-    line-height: 1.5em;
     font-size: 0.9em;
     padding: 0;
   }
@@ -2307,7 +2279,7 @@ figure {
     height: 40px;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 22%;
+    width: 24%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.75em;
@@ -2479,7 +2451,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails {
-    height: 60px;
+    height: auto;
     /*Price Icon*/
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
@@ -2503,27 +2475,21 @@ figure {
     height: 180px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
     font-size: 0.95em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
-    margin: 2.9% 1.5%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
     height: 150px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     line-height: 45px;
-    text-indent: 4%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    width: 74%;
     font-size: 0.8em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
@@ -2676,7 +2642,7 @@ figure {
     height: 40px;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 23.5%;
+    width: 24%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.75em;
@@ -2874,27 +2840,18 @@ figure {
     height: 180px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
     font-size: 0.95em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
-    margin: 2.9% 1.5%;
-  }
-  #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
-    height: 150px;
-    padding: 1%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     line-height: 45px;
-    text-indent: 4%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    width: 74%;
     font-size: 0.8em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
@@ -3094,7 +3051,7 @@ figure {
     padding: 0.25em;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 1em;
+    font-size: 0.85em;
   }
   #wrapper #search_category #search_category_form select {
     font-size: 0.8em;
@@ -3240,27 +3197,21 @@ figure {
     height: 180px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
     font-size: 0.95em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
-    margin: 2.9% 1.5%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
     height: 150px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     line-height: 45px;
-    text-indent: 4%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    width: 74%;
     font-size: 0.8em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
@@ -3420,7 +3371,7 @@ figure {
   #wrapper button#menu-toggle-btn {
     display: block;
     position: fixed;
-    top: 0.5em;
+    top: 0.25em;
     left: 83%;
     z-index: 4;
     width: 16%;
@@ -3457,7 +3408,7 @@ figure {
   #wrapper nav#main-nav ul.mobile-nav.is-expanded {
     top: 0;
     display: block;
-    width: 96%;
+    width: 90%;
     background: #000000;
     position: fixed;
     z-index: 4;
@@ -3469,7 +3420,7 @@ figure {
     -webkit-transition: all ease 0.2s;
     transition: all ease 0.2s;
     display: block;
-    width: 96%;
+    width: 90%;
     background: #000000;
     position: fixed;
     z-index: 4;
@@ -3658,18 +3609,15 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
     max-height: 180px;
     display: block;
     float: left;
-    margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer .product_boximg_longer {
-    margin: 2.9% 1.5%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
     height: 140px;
@@ -3677,8 +3625,6 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     height: auto;
-    line-height: 45px;
-    text-indent: 4%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
     float: right;
@@ -3704,7 +3650,7 @@ figure {
   }
   #wrapper #content .left_bar {
     position: fixed;
-    top: 8em;
+    top: 3em;
     z-index: 100;
     left: -205px;
     width: 205px;
@@ -3715,7 +3661,7 @@ figure {
   }
   #wrapper #content .left_bar.is-expanded {
     position: fixed;
-    top: 8em;
+    top: 3em;
     z-index: 100;
     left: 0px;
     width: 205px;
@@ -3802,7 +3748,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul.mobile-nav {
-    width: 96%;
+    width: 90%;
   }
   #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
@@ -3833,7 +3779,7 @@ figure {
     width: 20%;
   }
   #wrapper #search_category #search_category_form select {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #wrapper #content h1 {
     font-size: 1.25em;
@@ -3937,35 +3883,25 @@ figure {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
-    display: block;
     height: 170px;
-    width: 100%;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
     margin: 0;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer .product_boximg_longer {
-    margin: 2.9% 1.5%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
     height: 130px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
-    height: auto;
-    line-height: 45px;
     text-indent: 6%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    float: right;
-    width: 70%;
     font-size: 0.8em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
@@ -3997,9 +3933,7 @@ figure {
     background-color: #ffffff;
   }
   #wrapper #content .left_bar {
-    width: 191px;
-    height: auto;
-    top: 7.2em;
+    width: 205px;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
@@ -4059,7 +3993,6 @@ figure {
   }
   #wrapper button#menu-toggle-btn {
     left: 83%;
-    top: 0.5em;
   }
   #wrapper button#menu-toggle-btn:hover {
     background-color: #ea3411;
@@ -4075,7 +4008,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul.mobile-nav {
-    width: 96%;
+    width: 90%;
   }
   #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
@@ -4103,10 +4036,10 @@ figure {
     font-size: 1em;
   }
   #wrapper #search_category #search_category_form label {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #wrapper #search_category #search_category_form select {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #wrapper #content h1 {
     font-size: 1.2em;
@@ -4148,7 +4081,7 @@ figure {
     width: 45%;
   }
   #wrapper #content #content_section #pagination {
-    width: 44%;
+    width: 45%;
   }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
@@ -4215,35 +4148,21 @@ figure {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
-    display: block;
     height: 170px;
-    width: 100%;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
-    margin: 0;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer .product_boximg_longer {
-    margin: 2.9% 1.5%;
-  }
-  #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
-    height: 130px;
-    padding: 1%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
-    height: auto;
-    line-height: 45px;
     text-indent: 6%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    float: right;
-    width: 70%;
     font-size: 0.8em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
@@ -4260,9 +4179,7 @@ figure {
     width: 23%;
   }
   #wrapper #content .left_bar {
-    position: fixed;
-    width: 191px;
-    height: auto;
+    width: 205px;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
@@ -4352,7 +4269,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul.mobile-nav {
-    width: 96%;
+    width: 90%;
   }
   #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
@@ -4384,7 +4301,6 @@ figure {
     width: 23%;
   }
   #wrapper #search_category #search_category_form select {
-    width: 15.4%;
     font-size: 0.75em;
   }
   #wrapper #content h1 {
@@ -4426,7 +4342,7 @@ figure {
     width: 45%;
   }
   #wrapper #content #content_section #pagination {
-    width: 47%;
+    width: 50%;
   }
   #wrapper #content #content_section #pagination a {
     width: 30%;
@@ -4495,36 +4411,22 @@ figure {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
-    display: block;
     height: 170px;
-    width: 100%;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
-    margin: 0;
     font-size: 1em;
-    line-height: 30px;
     text-indent: 6%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer .product_boximg_longer {
-    margin: 2.9% 1.5%;
-  }
-  #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
-    height: 130px;
-    padding: 1%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
-    height: auto;
-    line-height: 30px;
     text-indent: 6%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    float: right;
-    width: 70%;
     font-size: 0.8em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
@@ -4541,7 +4443,6 @@ figure {
     width: 23%;
   }
   #wrapper #content .left_bar {
-    position: fixed;
     height: auto;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
@@ -4606,7 +4507,6 @@ figure {
   #wrapper button#menu-toggle-btn {
     left: 83%;
     width: 16%;
-    top: 0.5em;
   }
   #wrapper button#menu-toggle-btn:hover {
     background-color: #ea3411;
@@ -4625,7 +4525,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul.mobile-nav {
-    width: 96%;
+    width: 90%;
   }
   #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
@@ -4651,6 +4551,7 @@ figure {
   }
   #wrapper #search_category {
     height: auto;
+    padding: 1em 0;
   }
   #wrapper #search_category button.search_category_btn {
     width: 100%;
@@ -4756,7 +4657,7 @@ figure {
     width: 50%;
   }
   #wrapper #content #content_section #pagination {
-    width: 49%;
+    width: 60%;
   }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
@@ -4796,9 +4697,9 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
     height: auto;
-    width: 38%;
+    width: 50%;
     float: none;
-    margin: 1em auto;
+    margin: 1.2em auto;
     display: block;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
@@ -4812,15 +4713,17 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 80%;
+    font-size: 85%;
+    line-height: 30px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
     display: block;
+    line-height: 30px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    width: 16%;
+    width: 15%;
     left: 83%;
     top: 35%;
   }
@@ -4829,34 +4732,24 @@ figure {
     cursor: pointer;
   }
   #wrapper #content #content_section div.product_boxes_longer {
-    display: block;
     height: 170px;
-    width: 100%;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
-    margin: 0;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
-    max-height: 180px;
     margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
-    margin: 2.9% 1.5%;
+    height: auto;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
-    height: 130px;
     padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
-    height: auto;
     line-height: 30px;
-    text-indent: 6%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    float: right;
     width: 65%;
     font-size: 0.75em;
   }
@@ -4877,11 +4770,8 @@ figure {
     max-height: 200px;
   }
   #wrapper #content .left_bar {
-    position: fixed;
     width: 200px;
     left: -200px;
-    height: auto;
-    top: 6.7em;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 16px;
@@ -4938,14 +4828,14 @@ figure {
 
 @media only screen and (max-width: 414px) {
   #wrapper button#side-bar-toggle-btn {
-    left: 87%;
+    left: 86%;
   }
   #wrapper button#side-bar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 80%;
-    width: 16%;
+    left: 79%;
+    width: 20%;
   }
   #wrapper button#menu-toggle-btn:hover {
     background-color: #ea3411;
@@ -4964,7 +4854,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul.mobile-nav {
-    width: 96%;
+    width: 90%;
   }
   #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
@@ -5038,7 +4928,7 @@ figure {
     width: 56%;
   }
   #wrapper #content #content_section #pagination {
-    width: 49%;
+    width: 70%;
   }
   #wrapper #content #content_section #pagination a {
     width: 31%;
@@ -5092,7 +4982,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
-    width: 42%;
+    width: 50%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -5105,7 +4995,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 75%;
+    font-size: 80%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -5126,15 +5016,11 @@ figure {
     height: 195px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
-    margin: 0;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
     max-height: 200px;
     height: 200px;
-    margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
     width: 29%;
@@ -5143,7 +5029,6 @@ figure {
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
     width: 67%;
     height: 185px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     height: auto;
@@ -5153,7 +5038,6 @@ figure {
     background-repeat: no-repeat;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    float: right;
     width: 61%;
     font-size: 0.75em;
   }
@@ -5237,8 +5121,8 @@ figure {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 83%;
-    width: 16%;
+    left: 79%;
+    width: 20%;
     font-size: 0.9em;
   }
   #wrapper button#menu-toggle-btn:hover {
@@ -5252,7 +5136,7 @@ figure {
     width: 65%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 42.5%;
+    width: 45%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.7em;
@@ -5261,7 +5145,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul.mobile-nav {
-    width: 96%;
+    width: 90%;
   }
   #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
@@ -5338,7 +5222,7 @@ figure {
     width: 56%;
   }
   #wrapper #content #content_section #pagination {
-    width: 49%;
+    width: 80%;
   }
   #wrapper #content #content_section #pagination a {
     width: 31%;
@@ -5407,24 +5291,18 @@ figure {
     height: 195px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
-    margin: 0;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
     max-height: 205px;
     height: 205px;
-    margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
     width: 35%;
-    margin: 2.9% 0;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
     width: 60%;
     height: 200px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     height: auto;
@@ -5452,7 +5330,6 @@ figure {
     width: 28%;
   }
   #wrapper #content .left_bar {
-    top: 6em;
     z-index: 100;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer {
@@ -5519,8 +5396,8 @@ figure {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 81%;
-    width: 16%;
+    left: 79%;
+    width: 20%;
     font-size: 0.8em;
   }
   #wrapper button#menu-toggle-btn:hover {
@@ -5541,7 +5418,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul.mobile-nav {
-    width: 96%;
+    width: 90%;
   }
   #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
@@ -5615,7 +5492,7 @@ figure {
     width: 59%;
   }
   #wrapper #content #content_section #pagination {
-    width: 49%;
+    width: 80%;
   }
   #wrapper #content #content_section #pagination a {
     width: 31%;
@@ -5684,32 +5561,22 @@ figure {
     height: 195px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
-    margin: 0;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
     max-height: 220px;
     height: 220px;
-    margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
     width: 35%;
-    margin: 2.9% 0;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
-    width: 60%;
     height: 210px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     height: auto;
-    line-height: 30px;
-    text-indent: 8%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    float: none;
     width: 90%;
     font-size: 0.7em;
     padding: 5%;
@@ -5727,9 +5594,6 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
     width: 28%;
-  }
-  #wrapper #content .left_bar {
-    z-index: 100;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
@@ -5794,7 +5658,7 @@ figure {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
-    left: 82%;
+    left: 78%;
     font-size: 0.75em;
   }
   #wrapper button#menu-toggle-btn:hover {
@@ -5815,7 +5679,7 @@ figure {
     display: none;
   }
   #wrapper nav#main-nav ul.mobile-nav {
-    width: 96%;
+    width: 90%;
   }
   #wrapper nav#main-nav ul.mobile-nav li {
     display: block;
@@ -5891,7 +5755,7 @@ figure {
     width: 56%;
   }
   #wrapper #content #content_section #pagination {
-    width: 49%;
+    width: 85%;
   }
   #wrapper #content #content_section #pagination a {
     width: 31%;
@@ -5963,35 +5827,23 @@ figure {
     height: 195px;
   }
   #wrapper #content #content_section div.product_boxes_longer h1 {
-    height: 30px;
-    margin: 0;
     font-size: 1em;
-    line-height: 30px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer {
     max-height: 240px;
     height: 240px;
-    margin-bottom: 15px;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer img.product_boximg_longer {
     width: 35%;
-    margin: 2.9% 0;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer {
-    width: 60%;
     height: 250px;
-    padding: 1%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
-    height: auto;
     line-height: 30px;
-    text-indent: 8%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
-    float: none;
-    width: 90%;
     font-size: 0.7em;
-    padding: 5%;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer:last-of-type {
     color: #0099CC;
@@ -6006,10 +5858,6 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
     width: 28%;
-  }
-  #wrapper #content .left_bar {
-    position: absolute;
-    z-index: 100;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer button.accordion {
     padding: 14px;
