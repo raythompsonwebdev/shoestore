@@ -7,19 +7,21 @@ let {genders, sizes, colors, styles} = searchbarData
 class SearchBar extends React.Component { 
     
   constructor(props) {
+    
     super(props);
+
     this.state = {
         genderVal: ' ',
         styleVal: ' ', 
         sizeVal: ' ',
-        colorVal: ' ',      
+        colorVal: ' '      
         
     };
 
     this.changeHandler = this.changeHandler.bind(this);
     this.submit = this.submit.bind(this);
   }  
-
+  
   changeHandler = (e) =>{ 
 
     const target = e.target
@@ -46,9 +48,8 @@ class SearchBar extends React.Component {
       styleVal: this.state.styleVal, 
       sizeVal: this.state.sizeVal,
       colorVal: this.state.colorVal,
-
     }
-
+        
     console.log(tempVal)
 
   }
@@ -63,10 +64,11 @@ class SearchBar extends React.Component {
                <label>{this.props.labelname}</label> 
 
             <select 
-                name="genderVal"
-                value={this.state.genderVal} 
-                onChange={this.changeHandler} 
-                placeholder={genders[0].placeholder}
+              name="genderVal"
+              value={this.state.genderVal} 
+              onChange={this.changeHandler} 
+              placeholder={genders[0].placeholder}
+              
             >               
                   {                            
                       genders[0].options.map(option => 
@@ -86,6 +88,7 @@ class SearchBar extends React.Component {
                 value={this.state.styleVal} 
                 onChange={this.changeHandler} 
                 placeholder={styles[0].placeholder}
+                
               >
               {
                   styles[0].options.map(option => 

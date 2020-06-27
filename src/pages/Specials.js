@@ -10,11 +10,30 @@ class Specials extends Component {
     super(props);
     this.state = {
       productdata: [],
-      lastIndex : 0
+      lastIndex : 0,
+      orderBy:'id',
+      orderDir:'asc'
+      
     };
-   
+    this.changeOrder = this.changeOrder.bind(this);
+    this.sidebarVisibility = this.sidebarVisibility.bind(this);
   }
 
+  changeOrder(order, dir) {
+    this.setState({
+      orderBy: order,
+      orderDir: dir
+    });
+  }
+
+
+  sidebarVisibility(e) {
+    e.preventDefault();      
+      this.setState({ visibility: !this.state.visibility});
+  }
+
+  
+  
   componentDidMount(){
 
     fetch('./productdata.json')
@@ -34,12 +53,43 @@ class Specials extends Component {
     })    
   }
 
+  
+
   render() {
+
+    let order;
+    let filteredApts = this.state.productdata;
+
+    if (this.state.orderDir === 'asc') {
+      order = 1;
+    } else {
+      order = -1;
+    }
+
+    filteredApts = filteredApts.sort((a, b) => {
+      
+        if (
+          a[this.state.orderBy] < b[this.state.orderBy]
+        ) {
+          return -1 * order;
+        } else {
+          return 1 * order;
+        }
+      })
+
     return (
       <main id="content" className="clearfix">
-        <SearchBar labelname="Specials" />
 
-        <aside className="left_bar">
+        <SearchBar 
+          labelname="Specials"
+          orderBy={this.state.orderBy}
+          orderDir={this.state.orderDir}
+           
+        />
+
+        <button id="sidebar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
+
+        <aside className={`left_bar ${this.state.visibility ? "is-expanded" : ""}`}>
           <FindShoesAccord />
         </aside>
 
@@ -51,8 +101,10 @@ class Specials extends Component {
           >
             <section id="results">
               
-              <ProductBoxes productdata={this.state.productdata} />
-                        
+              <ProductBoxes 
+                productdata={filteredApts}
+                                                
+              />                        
               
             </section>
 
@@ -63,7 +115,9 @@ class Specials extends Component {
               &nbsp;
               <input type="reset" value="reset" name="reset" />
             </div>
+          
           </form>
+
         </main>
       </main>
     );

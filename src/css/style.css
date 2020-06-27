@@ -246,7 +246,7 @@ figure {
     /*Content*/
     /*Footer*/
   }
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     display: none;
   }
   #wrapper button#menu-toggle-btn {
@@ -2135,10 +2135,7 @@ figure {
     color: #0099CC;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-    line-height: 50px;
     font-size: 0.85em;
-    width: 24%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -2497,8 +2494,6 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
     font-size: 0.8em;
-    width: 24%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -2859,8 +2854,6 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
     font-size: 0.8em;
-    width: 24%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -3219,8 +3212,6 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
     font-size: 0.7em;
-    width: 24%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -3344,12 +3335,12 @@ figure {
   #wrapper {
     width: 98%;
   }
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     display: block;
     position: fixed;
     left: 91%;
-    z-index: 4;
-    top: 20em;
+    z-index: 100;
+    top: 7.5em;
     width: 60px;
     height: 180px;
     background-color: #ffffff;
@@ -3361,7 +3352,7 @@ figure {
     text-align: center;
     font-size: 1em;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     background-color: #ea3411;
     cursor: pointer;
     border: 2px solid #ed735c;
@@ -3721,11 +3712,11 @@ figure {
 }
 
 @media only screen and (max-width: 640px) {
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     font-size: 0.9em;
     left: 90%;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
@@ -3908,10 +3899,7 @@ figure {
     color: #0099CC;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-    line-height: 50px;
     font-size: 0.75em;
-    width: 30%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -3985,10 +3973,10 @@ figure {
 }
 
 @media only screen and (max-width: 600px) {
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     left: 90%;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
@@ -4169,10 +4157,8 @@ figure {
     color: #0099CC;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-    line-height: 50px;
+    width: 33%;
     font-size: 0.75em;
-    width: 30%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -4243,10 +4229,10 @@ figure {
 }
 
 @media only screen and (max-width: 568px) {
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     left: 89%;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
@@ -4433,10 +4419,8 @@ figure {
     color: #0099CC;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-    line-height: 50px;
-    font-size: 0.75em;
+    font-size: 0.7em;
     width: 33%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer .product_icon_longer {
@@ -4498,10 +4482,10 @@ figure {
   #wrapper {
     width: 100%;
   }
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     left: 87%;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
@@ -4757,10 +4741,8 @@ figure {
     color: #0099CC;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-    line-height: 50px;
-    font-size: 0.75em;
+    font-size: 0.7em;
     width: 30%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -4827,10 +4809,10 @@ figure {
 }
 
 @media only screen and (max-width: 414px) {
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     left: 86%;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
@@ -5048,7 +5030,6 @@ figure {
     line-height: 75px;
     font-size: 0.7em;
     width: 38%;
-    text-indent: 1%;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -5114,10 +5095,10 @@ figure {
 }
 
 @media only screen and (max-width: 380px) {
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     left: 85%;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
@@ -5388,11 +5369,11 @@ figure {
 }
 
 @media only screen and (max-width: 360px) {
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     font-size: 0.8em;
     left: 83%;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
@@ -5585,11 +5566,8 @@ figure {
     color: #0099CC;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-    line-height: 35px;
     font-size: 0.7em;
     width: 45%;
-    text-indent: 1%;
-    display: inline-block;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {
@@ -5651,10 +5629,10 @@ figure {
   #wrapper {
     /*search bar top*/
   }
-  #wrapper button#side-bar-toggle-btn {
+  #wrapper button#sidebar-toggle-btn {
     left: 83%;
   }
-  #wrapper button#side-bar-toggle-btn:hover {
+  #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
   }
   #wrapper button#menu-toggle-btn {
@@ -5786,7 +5764,7 @@ figure {
   #wrapper #content #content_section .product_boxes h1,
   #wrapper #content #content_section form #results h1 {
     height: 30px;
-    font-size: 0.8em;
+    font-size: 0.7em;
     line-height: 30px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box,
@@ -5849,11 +5827,8 @@ figure {
     color: #0099CC;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer {
-    line-height: 35px;
-    font-size: 0.7em;
+    font-size: 0.6em;
     width: 48%;
-    text-indent: 1%;
-    display: inline-block;
     /*Price Icon*/
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer {

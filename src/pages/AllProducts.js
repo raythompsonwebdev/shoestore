@@ -12,7 +12,14 @@ class AllProducts extends Component {
       productdata: [],
       lastIndex : 0
     };
+
+    this.sidebarVisibility = this.sidebarVisibility.bind(this);
    
+  }
+
+  sidebarVisibility(e) {
+    e.preventDefault();      
+      this.setState({ visibility: !this.state.visibility});
   }
 
   componentDidMount() {
@@ -40,7 +47,9 @@ class AllProducts extends Component {
         
         <SearchBar labelname="All Products" />
 
-        <aside className="left_bar">
+        <button id="sidebar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
+
+        <aside className={`left_bar ${this.state.visibility ? "is-expanded" : ""}`}>
           <FindShoesAccord />
         </aside>
 

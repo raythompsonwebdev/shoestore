@@ -51,7 +51,7 @@ class App extends Component{
     return (
       <main id="content" className="clearfix">
 
-        <button id="side-bar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
+        <button id="sidebar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
 
         <aside className={`left_bar ${this.state.visibility ? "is-expanded" : ""}`}>
           <FindShoes />
