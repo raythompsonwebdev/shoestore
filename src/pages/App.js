@@ -3,8 +3,6 @@ import BannerImg from "../components/BannerImg";
 import FindShoesAccord from "../components/FindShoesAccord";
 import FindShoes from "../components/FindShoes";
 import FrontPageBoxes from "../components/frontPageBoxes";
-import '../css/style.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component{

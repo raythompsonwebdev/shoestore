@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";
-//import $ from "jquery";
 
 class Specials extends Component {
 
@@ -11,7 +10,7 @@ class Specials extends Component {
     this.state = {
       productdata: [],
       lastIndex : 0,
-      orderBy:'id',
+      orderBy:'size',
       orderDir:'asc'
       
     };
@@ -31,8 +30,7 @@ class Specials extends Component {
     e.preventDefault();      
       this.setState({ visibility: !this.state.visibility});
   }
-
-  
+ 
   
   componentDidMount(){
 
@@ -51,13 +49,12 @@ class Specials extends Component {
       console.log(error)
 
     })    
-  }
-
-  
+  }  
 
   render() {
 
     let order;
+
     let filteredApts = this.state.productdata;
 
     if (this.state.orderDir === 'asc') {
@@ -66,16 +63,15 @@ class Specials extends Component {
       order = -1;
     }
 
-    filteredApts = filteredApts.sort((a, b) => {
-      
-        if (
-          a[this.state.orderBy] < b[this.state.orderBy]
-        ) {
-          return -1 * order;
-        } else {
-          return 1 * order;
-        }
-      })
+    filteredApts = filteredApts.sort((a, b) => {      
+      if (
+        a[this.state.orderBy] < b[this.state.orderBy]
+      ) {
+        return -1 * order;
+      } else {
+        return 1 * order;
+      }
+    })
 
     return (
       <main id="content" className="clearfix">
@@ -84,7 +80,7 @@ class Specials extends Component {
           labelname="Specials"
           orderBy={this.state.orderBy}
           orderDir={this.state.orderDir}
-           
+          changeOrder={this.changeOrder}           
         />
 
         <button id="sidebar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
@@ -102,8 +98,7 @@ class Specials extends Component {
             <section id="results">
               
               <ProductBoxes 
-                productdata={filteredApts}
-                                                
+                productdata={filteredApts}                                                
               />                        
               
             </section>

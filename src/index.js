@@ -11,6 +11,8 @@ import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import NotFound from "./pages/NotFound";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import './css/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const routing = (
 

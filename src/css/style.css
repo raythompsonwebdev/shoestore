@@ -238,7 +238,7 @@ figure {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 65%;
     padding: 0 1em;
     display: block;
     background-color: #ffffff;
@@ -577,9 +577,11 @@ figure {
     line-height: 40px;
   }
   #wrapper #content #content_section #bannerbox {
+    position: relative;
     height: auto;
     width: 100%;
     margin: 0;
+    padding: 0.5em;
     border: solid 1px #7a7777;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -593,20 +595,16 @@ figure {
             align-items: flex-start;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-            flex: 0 1 auto;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     width: 100%;
-    padding: 1em;
-    position: relative;
+    position: absolute;
     z-index: 3;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
-    font-size: 2.3rem;
-    height: 40px;
-    line-height: 40px;
+    font-size: 2.5vw;
+    height: 70px;
+    line-height: 75px;
     width: auto;
     font-weight: bold;
     color: #7a7777;
@@ -614,7 +612,7 @@ figure {
     text-indent: 0;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.3rem;
+    font-size: 1.5vw;
     color: #333333;
     font-weight: bold;
     letter-spacing: 0.001em;
@@ -626,25 +624,19 @@ figure {
     text-indent: 0;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 60%;
+    width: 59%;
     margin: 0;
     padding: 0;
-    -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-            flex: 0 1 auto;
     position: relative;
-    top: -60px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 35%;
+    position: relative;
+    width: 41%;
     height: auto;
-    -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-            flex: 0 1 auto;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
-    width: 80%;
-    padding: 0;
+    width: 60%;
+    padding-top: 35%;
     list-style: none;
     margin: 1em auto;
   }
@@ -656,12 +648,12 @@ figure {
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     background-color: #ea3411;
     display: block;
-    height: 45px;
+    height: 35px;
     width: 100%;
     margin-bottom: 0.2em;
     color: #ffffff;
     font-size: 1em;
-    line-height: 45px;
+    line-height: 35px;
     text-align: center;
     -webkit-transition: all ease 0.2s;
     transition: all ease 0.2s;
@@ -734,7 +726,7 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
     color: #0099CC;
-    line-height: 30px;
+    line-height: 25px;
     text-transform: uppercase;
     font-size: 85%;
     margin: 0;
@@ -746,7 +738,7 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
     height: auto;
-    line-height: 30px;
+    line-height: 25px;
     margin: 0;
     font-weight: bold;
     width: 100%;
@@ -758,12 +750,12 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
     display: block;
-    width: 14%;
+    width: 15%;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     position: absolute;
-    left: 85%;
-    top: 40%;
+    left: 80%;
+    top: 20%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -1286,15 +1278,19 @@ figure {
     font-size: 1.5em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.45rem;
-    letter-spacing: -0.08em;
+    font-size: 2.6vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.4rem;
-    letter-spacing: -0.08em;
+    font-size: 1.6vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 62%;
+    width: 64%;
+  }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 {
+    width: 35%;
+  }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    padding-top: 40%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 1em;
@@ -1343,7 +1339,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    top: 40%;
+    top: 20%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -1660,20 +1656,23 @@ figure {
   }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
-    padding: 0.5em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.5rem;
+    font-size: 2.7vw;
+    height: 55px;
+    line-height: 65px;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.35rem;
+    font-size: 1.6vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 62%;
-    top: -40px;
+    width: 65%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     width: 35%;
+  }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    width: 70%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.95em;
@@ -1719,8 +1718,8 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    left: 84%;
-    top: 44%;
+    left: 80%;
+    top: 20%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -2043,22 +2042,22 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.4rem;
-    letter-spacing: -0.08em;
+    font-size: 2.9vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.2rem;
-    letter-spacing: -0.08em;
+    font-size: 1.7vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 62%;
-    top: -45px;
+    width: 65%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     width: 35%;
   }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    width: 80%;
+  }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -2093,7 +2092,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 80%;
+    font-size: 70%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -2101,9 +2100,9 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    width: 15%;
-    left: 84%;
-    top: 45%;
+    width: 18%;
+    left: 80%;
+    top: 25%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -2401,24 +2400,25 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.3rem;
-    letter-spacing: -0.08em;
+    font-size: 3.1vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.2rem;
-    letter-spacing: -0.08em;
+    font-size: 1.8vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 61%;
-    top: -35px;
+    width: 70%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 35%;
+    width: 29%;
+  }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    width: 90%;
+    padding-top: 50%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.9em;
-    height: 40px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -2453,7 +2453,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 80%;
+    font-size: 65%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -2461,8 +2461,8 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    left: 83%;
-    top: 49%;
+    left: 80%;
+    top: 25%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -2765,17 +2765,21 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2.1em;
+    font-size: 3.1vw;
+    height: 50px;
+    line-height: 60px;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1em;
+    font-size: 1.9vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 62%;
-    top: -25px;
+    width: 70%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 35%;
+    width: 29%;
+  }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    padding-top: 42%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.85em;
@@ -2813,8 +2817,8 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 80%;
-    line-height: 30px;
+    font-size: 60%;
+    line-height: 25px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -2823,9 +2827,9 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    width: 16%;
+    width: 18%;
     left: 80%;
-    top: 50%;
+    top: 25%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -3122,20 +3126,23 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 2em;
+    font-size: 3.2vw;
+    height: 40px;
+    line-height: 55px;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1em;
+    font-size: 2vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 62%;
-    top: -25px;
+    width: 70%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 35%;
+    width: 29%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.7em;
+    height: 25px;
+    line-height: 25px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -3171,7 +3178,7 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
     text-indent: 0.5em;
-    font-size: 75%;
+    font-size: 60%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -3180,7 +3187,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    top: 50%;
+    top: 35%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -3340,15 +3347,15 @@ figure {
     position: fixed;
     left: 91%;
     z-index: 100;
-    top: 7.5em;
+    top: 8.5em;
     width: 60px;
-    height: 180px;
+    height: 100px;
     background-color: #ffffff;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 2px solid #ea3411;
     color: #ea3411;
-    line-height: 180px;
+    line-height: 100px;
     text-align: center;
     font-size: 1em;
   }
@@ -3530,17 +3537,21 @@ figure {
     margin-top: 0.5em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.9rem;
+    font-size: 4.4vw;
+    line-height: 50px;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.1rem;
+    font-size: 2.7vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 62%;
+    width: 64%;
     top: 0;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     width: 35%;
+  }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    width: 70%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.9em;
@@ -3578,7 +3589,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 75%;
+    font-size: 70%;
     line-height: 25px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
@@ -3588,7 +3599,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    top: 36%;
+    top: 30%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -3813,16 +3824,19 @@ figure {
     width: 44%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.9em;
+    font-size: 4.4vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1.1em;
+    font-size: 2.6vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     width: 30%;
+  }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    width: 80%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.85em;
@@ -3859,7 +3873,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 75%;
+    font-size: 70%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -4075,10 +4089,10 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.8em;
+    font-size: 4.4vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1em;
+    font-size: 2.6vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
@@ -4121,7 +4135,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 75%;
+    font-size: 60%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -4129,7 +4143,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    top: 46%;
+    top: 30%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -4335,10 +4349,12 @@ figure {
     font-size: 0.8em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.8em;
+    font-size: 4.3vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 1em;
+    font-size: 2.6vw;
+    height: 25px;
+    line-height: 25px;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 68%;
@@ -4346,8 +4362,11 @@ figure {
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     width: 30%;
   }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    width: 90%;
+  }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.75em;
+    font-size: 0.70em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -4381,7 +4400,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 70%;
+    font-size: 60%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -4389,8 +4408,8 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    width: 17%;
-    top: 49%;
+    width: 15%;
+    top: 45%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -4645,21 +4664,19 @@ figure {
   }
   #wrapper #content #content_section #bannerbox hgroup {
     width: 100%;
-    padding: 0.25em;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.6em;
+    font-size: 4.1vw;
+    height: 35px;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.9em;
-    margin: 0;
+    font-size: 2.5vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
-    width: 62%;
-    top: 15px;
+    width: 70%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
-    width: 35%;
+    width: 29%;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
     font-size: 0.7em;
@@ -4702,14 +4719,14 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
-    display: block;
+    font-size: 100%;
     line-height: 30px;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
     width: 15%;
     left: 83%;
-    top: 35%;
+    top: 30%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -4919,18 +4936,19 @@ figure {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+    position: relative;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.5em;
-    height: 35px;
+    font-size: 6vw;
     line-height: 35px;
     text-indent: 0.10em;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.9em;
+    font-size: 3.5vw;
     height: 30px;
     line-height: 30px;
     text-indent: 0.2em;
+    margin-bottom: 0;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 100%;
@@ -4945,8 +4963,14 @@ figure {
         -ms-flex-order: 2;
             order: 2;
   }
+  #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
+    padding-top: 0;
+    width: 80%;
+  }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a {
-    font-size: 0.9em;
+    line-height: 40px;
+    height: 40px;
+    font-size: 1em;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
     font-weight: bold;
@@ -4964,7 +4988,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
-    width: 50%;
+    width: 65%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -4977,7 +5001,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_name {
-    font-size: 80%;
+    font-size: 90%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
@@ -4985,9 +5009,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
-    width: 14%;
-    left: 83%;
-    top: 44%;
+    width: 15%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -5096,7 +5118,7 @@ figure {
 
 @media only screen and (max-width: 380px) {
   #wrapper button#sidebar-toggle-btn {
-    left: 85%;
+    left: 84%;
   }
   #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
@@ -5212,10 +5234,10 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.4em;
+    font-size: 6vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.85em;
+    font-size: 3.5vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 100%;
@@ -5239,7 +5261,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
-    width: 52%;
+    width: 70%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -5256,12 +5278,11 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails p.product_price {
-    display: block;
+    font-size: 100%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon {
     left: 83%;
-    top: 43%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover,
   #wrapper #content #content_section form #results figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
@@ -5371,7 +5392,7 @@ figure {
 @media only screen and (max-width: 360px) {
   #wrapper button#sidebar-toggle-btn {
     font-size: 0.8em;
-    left: 83%;
+    left: 84%;
   }
   #wrapper button#sidebar-toggle-btn:hover {
     cursor: pointer;
@@ -5390,7 +5411,7 @@ figure {
     width: 65%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 47%;
+    width: 50%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.65em;
@@ -5479,10 +5500,10 @@ figure {
     width: 31%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.3em;
+    font-size: 6vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.85em;
+    font-size: 3.5vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 100%;
@@ -5509,7 +5530,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
-    width: 60%;
+    width: 70%;
   }
   #wrapper #content #content_section .product_boxes figure.product_box img.product_boximg,
   #wrapper #content #content_section form #results figure.product_box img.product_boximg {
@@ -5648,7 +5669,7 @@ figure {
     width: 70%;
   }
   #wrapper nav#main-nav span#signin-box {
-    width: 47%;
+    width: 50%;
   }
   #wrapper nav#main-nav span#signin-box a {
     font-size: 0.6em;
@@ -5742,10 +5763,10 @@ figure {
     width: 100%;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
-    font-size: 1.2em;
+    font-size: 6vw;
   }
   #wrapper #content #content_section #bannerbox hgroup h2 {
-    font-size: 0.8em;
+    font-size: 3.5vw;
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 100%;
@@ -5769,7 +5790,7 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box,
   #wrapper #content #content_section form #results figure.product_box {
-    width: 60%;
+    width: 80%;
     float: none;
     margin: 0 auto;
     display: block;

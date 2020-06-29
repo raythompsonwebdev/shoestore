@@ -3,7 +3,7 @@ import ProductBox from "./productBox";
 
 function ProductBoxes(props) {
     
-   const Product = props.productdata.map( item => (
+  const Product = props.productdata.map( item => (
     
       <ProductBox
         key={item.id}
