@@ -1,6 +1,5 @@
 import React from "react";
-import searchbarData from "../data/searchbarData";
-let {genders, sizes, colors, styles} = searchbarData
+import searchbarData2 from "../data/searchbarData2";
 
 class SearchBar extends React.Component { 
     
@@ -9,142 +8,74 @@ class SearchBar extends React.Component {
     super(props);
 
     this.state = {
-        genderVal: ' ',
-        styleVal: ' ', 
-        sizeVal: ' ',
-        colorVal: ' '      
+        value: ' '     
         
     };
 
     this.changeHandler = this.changeHandler.bind(this);
-    this.submit = this.submit.bind(this);
+    
   }  
   
   changeHandler = (e) =>{ 
 
     const target = e.target
     const value = target.value //value
-    const name = target.name //name
+    //const name = target.name //name
         
     this.setState({ 
       
-      [name] : value
+      value : value
     
     })
-    
-    
+  
+    this.props.changesOrders( value, 'asc') 
         
   }
-
-  submit = event => {
-    
-    event.preventDefault()
-
-    let tempVal = {    
-
-      genderVal: this.state.genderVal,
-      styleVal: this.state.styleVal, 
-      sizeVal: this.state.sizeVal,
-      colorVal: this.state.colorVal,
-    }
-
-    if (tempVal.genderVal === 'women'){
-      this.props.changeOrder( 'gender', this.props.orderDir)
-    }
-
-            
-    console.log(tempVal.genderVal)
-
-  }
+  
   
   render(){
 
+    
     return (
-      <aside id="search_category">
+      
 
-          <form id="search_category_form" onSubmit={this.submit}>
+          <form id="search_category_form" >
 
               <label>{this.props.labelname}</label> 
 
               <select 
-                name="genderVal"
-                value={this.state.genderVal} 
-                onChange={this.changeHandler} 
-                placeholder={genders[0].placeholder}               
-                
+                name="value"
+                value={this.state.value} 
+                onChange={this.changeHandler}
+                style={{width:"200px"}}                 
               >               
-                  {                            
-                      genders[0].options.map(option => 
-                          <option 
-                            value={option.value} 
-                            key={option.id}                          
+                  {                       
+                      searchbarData2.map((options, i) => 
+                          <optgroup 
+                            label={options.value} 
+                            key={i}                          
                           >
+                          { options.options.map((option, i) =>
+                            <option
+                              key={i}
+                              value={option.value}
+                            >
                               {option.displayValue}
+                            
+                            </option>
+                              
+                            )
+                          }
 
-                          </option>
+                          </optgroup>
                       )
                   }  
               </select>
-
-              <select 
-                name="styleVal"
-                value={this.state.styleVal} 
-                onChange={this.changeHandler} 
-                placeholder={styles[0].placeholder}
-                
-              >
-              {
-                  styles[0].options.map(option => 
-                      <option 
-                        value={option.value} 
-                        key={option.id}
-                      >
-                          {option.displayValue}
-                      </option>
-                  )
-              }  
-              </select>
-
-              <select 
-                name="sizeVal" 
-                value={this.state.sizeVal} 
-                onChange={this.changeHandler} 
-                placeholder={sizes[0].placeholder}
-              >
-                  {
-                      sizes[0].options.map(option => 
-                          <option 
-                            value={option.value} 
-                            key={option.id}
-                          >
-                              {option.displayValue}
-                          </option>
-                      )
-                  }                        
-              </select>
-
-              <select 
-                name="colorVal"
-                value={this.state.colorVal} 
-                onChange={this.changeHandler} 
-                placeholder={colors[0].placeholder}
-              >
-                  {
-                      colors[0].options.map(option => 
-                          <option 
-                            value={option.value} 
-                            key={option.id}
-                          >
-                              {option.displayValue}
-                          </option>
-                      )
-                  }
-              </select>
-         
+             
               
-              <button name="find" className="search_category_btn" type="submit">Go</button>
+           
           </form>
-      </aside>
+      
 
   );
 

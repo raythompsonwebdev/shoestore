@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";
+import Selector from "../components/Selector";
 
 class Specials extends Component {
 
@@ -10,19 +11,23 @@ class Specials extends Component {
     this.state = {
       productdata: [],
       lastIndex : 0,
-      orderBy:'size',
-      orderDir:'asc'
+      orderDir:'asc',
+      orderByVal : "all"
       
     };
-    this.changeOrder = this.changeOrder.bind(this);
+    
+    this.changesOrders = this.changesOrders.bind(this);
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
   }
+ 
 
-  changeOrder(order, dir) {
+  changesOrders(orderbyval, dir ) {
+
     this.setState({
-      orderBy: order,
+      orderByVal: orderbyval,
       orderDir: dir
     });
+
   }
 
 
@@ -30,6 +35,8 @@ class Specials extends Component {
     e.preventDefault();      
       this.setState({ visibility: !this.state.visibility});
   }
+
+
  
   
   componentDidMount(){
@@ -53,34 +60,29 @@ class Specials extends Component {
 
   render() {
 
-    let order;
-
+    
     let filteredApts = this.state.productdata;
+    let value = this.state.orderByVal;
+            
+    filteredApts = filteredApts.filter((item) => {
 
-    if (this.state.orderDir === 'asc') {
-      order = 1;
-    } else {
-      order = -1;
-    }
+      if(item.color === value || item.style === value || item.size === value || item.gender === value || item.price === value ){
+        
+        
+        return item      
 
-    filteredApts = filteredApts.sort((a, b) => {      
-      if (
-        a[this.state.orderBy] < b[this.state.orderBy]
-      ) {
-        return -1 * order;
-      } else {
-        return 1 * order;
-      }
-    })
+      }else{
 
+        return item[value] 
+      }       
+
+    });
+    
     return (
       <main id="content" className="clearfix">
 
         <SearchBar 
-          labelname="Specials"
-          orderBy={this.state.orderBy}
-          orderDir={this.state.orderDir}
-          changeOrder={this.changeOrder}           
+          labelname="Specials"                    
         />
 
         <button id="sidebar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
@@ -90,6 +92,13 @@ class Specials extends Component {
         </aside>
 
         <main id="content_section" role="main">
+          
+          <Selector
+            orderByVal={this.state.orderByVal}
+            orderDir={this.state.orderDir}
+            changesOrders={this.changesOrders}  
+          />
+
           <form
             action=""
             method="get"

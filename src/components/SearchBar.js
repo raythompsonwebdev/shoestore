@@ -48,11 +48,7 @@ class SearchBar extends React.Component {
       colorVal: this.state.colorVal,
     }
 
-    if (tempVal.genderVal === 'women'){
-      this.props.changeOrder( 'gender', this.props.orderDir)
-    }
-
-            
+               
     console.log(tempVal.genderVal)
 
   }
@@ -68,10 +64,9 @@ class SearchBar extends React.Component {
 
               <select 
                 name="genderVal"
-                value={this.state.genderVal} 
-                onChange={this.changeHandler} 
+                value={this.state.genderVal}                
                 placeholder={genders[0].placeholder}               
-                
+                onChange={this.changeHandler}
               >               
                   {                            
                       genders[0].options.map(option => 

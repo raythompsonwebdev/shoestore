@@ -3,194 +3,210 @@
    {
       "id":1,
       "name":"Trainers",
-      "style":"kids-trainer",
+      "style":"Trainers",
       "color":"black",
-      "size":"4",
-      "gender":"kids",
+      "size":"four",
+      "gender":"boy",
       "imgUrl":"./images/kids-trainer.png",
       "price":"40.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":2,
       "name":"Hiking Boots",
-      "style":"fur-lined-hiking-boot",
+      "style":"Hiking Boots",
       "color":"brown",
-      "size":"6",
+      "size":"six",
       "gender":"women",
       "imgUrl":"./images/fur-lined-hiking-boot.png",
       "price":"80.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":3,
       "name":"Basketball Shoes",
-      "style":"basket-ball-shoe",
+      "style":"Basketball Shoes",
       "color":"brown",
-      "size":"7",
+      "size":"seven",
       "gender":"men",
       "imgUrl":"./images/basket-ball-shoe.png",
       "price":"90.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":4,
       "name":"Ladies Boots",
-      "style":"fur-lined-ladies-boot",
+      "style":"Ladies Boots",
       "color":"brown",
-      "size":"5",
+      "size":"five",
       "gender":"women",
       "imgUrl":"./images/fur-lined-ladies-boot.png",
       "price":"70.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":5,
       "name":"Hiking Boots",
-      "style":"fur-lined-hiking-boot",
+      "style":"Hiking Boots",
       "color":"brown",
-      "size":"6",
+      "size":"six",
       "gender":"women",
       "imgUrl":"./images/fur-lined-hiking-boot.png",
       "price":"80.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":6,
       "name":"Trainers",
-      "style":"kids-trainer",
+      "style":"Trainers",
       "color":"blue",
-      "size":"5",
-      "gender":"kids",
+      "size":"five",
+      "gender":"girl",
       "imgUrl":"./images/kids-trainer.png",
       "price":"40.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":7,
       "name":"Ladies Boots",
-      "style":"fur-lined-ladies-boot",
+      "style":"Ladies Boots",
       "color":"brown",
-      "size":"6",
+      "size":"six",
       "gender":"women",
       "imgUrl":"./images/fur-lined-ladies-boot.png",
       "price":"70.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":8,
       "name":"Hiking Boots",
-      "style":"fur-lined-hiking-boot",
+      "style":"Hiking Boots",
       "color":"brown",
-      "size":"5",
+      "size":"five",
       "gender":"women",
       "imgUrl":"./images/fur-lined-hiking-boot.png",
       "price":"80.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":9,
       "name":"Trainers",
-      "style":"kids-trainer",
+      "style":"Trainers",
       "color":"green",
-      "size":"6",
-      "gender":"kids",
+      "size":"six",
+      "gender":"boy",
       "imgUrl":"./images/kids-trainer.png",
       "price":"40.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":10,
       "name":"Basketball Shoes",
-      "style":"basket-ball-shoe",
+      "style":"Basketball Shoes",
       "color":"brown",
-      "size":"7",
+      "size":"seven",
       "gender":"men",
       "imgUrl":"./images/basket-ball-shoe.png",
       "price":"90.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":11,
       "name":"Basketball Shoes",
-      "style":"basket-ball-shoe",
+      "style":"Basketball Shoes",
       "color":"brown",
-      "size":"8",
+      "size":"eight",
       "gender":"men",
       "imgUrl":"./images/basket-ball-shoe.png",
       "price":"90.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":12,
       "name":"Ladies Boots",
-      "style":"fur-lined-ladies-boot",
+      "style":"Ladies Boots",
       "color":"brown",
-      "size":"8",
+      "size":"eight",
       "gender":"women",
       "imgUrl":"./images/fur-lined-ladies-boot.png",
       "price":"70.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":13,
       "name":"Basketball Shoes",
-      "style":"basket-ball-shoe",
+      "style":"Basketball Shoes",
       "color":"brown",
-      "size":"9",
+      "size":"nine",
       "gender":"men",
       "imgUrl":"./images/basket-ball-shoe.png",
       "price":"90.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":14,
       "name":"Trainers",
-      "style":"kids-trainer",
+      "style":"Trainers",
       "color":"black",
-      "size":"7",
-      "gender":"kids",
+      "size":"seven",
+      "gender":"girl",
       "imgUrl":"./images/kids-trainer.png",
       "price":"40.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":15,
       "name":"Ladies Boots",
-      "style":"fur-lined-ladies-boot",
+      "style":"Ladies Boots",
       "color":"brown",
-      "size":"5",
+      "size":"five",
       "gender":"women",
       "imgUrl":"./images/fur-lined-ladies-boot.png",
       "price":"70.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    },
    {
       "id":16,
       "name":"Hiking Boots",
-      "style":"fur-lined-hiking-boot",
+      "style":"Hiking Boots",
       "color":"brown",
-      "size":"7",
+      "size":"seven",
       "gender":"women",
       "imgUrl":"./images/fur-lined-hiking-boot.png",
       "price":"80.00",
       "cartImg":"./images/shoppingcart.png",
-      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa."
+      "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+      "all": "all"
    }
    
    
