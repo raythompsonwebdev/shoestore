@@ -88,25 +88,16 @@ class Specials extends Component {
             orderDir={this.state.orderDir}
             changesOrders={this.changesOrders}  
           />
-
-          <form
-            action=""
-            method="get"
-            
-          >
-            <section id="results">
+          <br/>        
               
               <ProductBoxes 
                 productdata={filteredApts}                                                
-              />                        
-              
-            </section>
+              />  
 
             <br />
 
           
-          </form>
-
+          
         </main>
       </main>
     );

@@ -3,10 +3,10 @@ import FrontPageBox from "./frontPageBox";
 
 function FrontPageBoxes(props) {
 
-    const NewProduct = props.productdata.slice(0, 8).map(item => (
+    const NewProduct = props.productdata.slice(0, 8).map((item,i) => (
 
         <FrontPageBox
-          key={item.id}
+          key={i}
           name={item.name}
           imgUrl={item.imgUrl}
           price={item.price}

@@ -48,18 +48,9 @@ class NewProducts extends Component {
         </aside>
 
         <main id="content_section">
-          <form
-            action=""
-            method="get"
-            
-          >
-            <section id="results">
+        
               <NewProductBoxes productdata={this.state.productdata} />
-            </section>
-
-            <br />
             
-          </form>
           <br />
           <br />
         </main>

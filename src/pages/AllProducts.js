@@ -86,23 +86,9 @@ class AllProducts extends Component {
             orderByVal={this.state.orderByVal}
             orderDir={this.state.orderDir}
             changesOrders={this.changesOrders}  
-          />
-
-
-          <form
-            action=""
-            method="get"
+          />              
+            <ProductBoxes productdata={filteredApts} />                        
             
-          >
-            <section id="results">
-              
-              <ProductBoxes productdata={filteredApts} />
-                        
-            </section>
-            <br />
-
-            
-          </form>
         </main>
       </main>
     );

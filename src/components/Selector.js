@@ -26,14 +26,15 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <form id="search_category_form">
+
+      <form className="search_products">
         <label>{this.props.labelname}</label>
 
-        <select
+        <select          
           name="value"
           value={this.state.value}
           onChange={this.changeHandler}
-          style={{ width: "200px" }}
+          
         >
           {searchbarData2.map((options, i) => (
             <optgroup label={options.value} key={i}>
