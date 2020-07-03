@@ -410,7 +410,7 @@
       /*rightside content section within content div*/
       #content_section {
         float: right;
-        height: auto;
+        min-height: 980px;
         width: 76%;
         margin: 0 0 20px;
 
@@ -837,7 +837,7 @@
             font-family: $font-list;
 
             h1 {
-              font-size: 1.5em;
+              font-size: 1.9em;
               background: none;
               color: $color-white;
               width: 100%;
@@ -898,24 +898,22 @@
           div#accContainer {
             font-family: $font-list;
             /* Style the buttons that are used to open and close the accordion panel */
-            button.accordion {
-              font-family: $font-list;
-              background-color: #eee;
-              color: #444;
-              cursor: pointer;
-              padding: 18px;
-              width: 100%;
+            
+            button{
+              font-size:1rem;
+              padding: 0;
               text-align: left;
-              border: none;
-              outline: none;
-              font-weight: bold;
+              border-radius: unset;
               text-transform: uppercase;
-              @include transitioner(all 0.2s ease-in-out);
-              font-size:1.1em;
+              cursor: pointer;
+              background-color: #eee;
+              line-height:35px;
+              height:35px;
+              text-indent:0.2em;
             }
 
-            button{
-              font-size:1.1rem;
+            button:focus{
+              box-shadow:none;
             }
             /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
             .accordion:hover,
@@ -964,9 +962,9 @@
               display: block;
 
               li {
-                line-height: 45px;
+                line-height: 35px;
                 display: block;
-                height: 45px;
+                height: 35px;
                 font-size: 1em;
                 width: 100%;
                 text-align: left;
@@ -1222,6 +1220,7 @@
       
       #content_section {
         width: 76%;
+        min-height: 880px;
 
         h1 {
           font-size: 1.5em;
@@ -1437,7 +1436,7 @@
             margin-bottom: 1%;
 
             h1 {
-              font-size: 1.45em;
+              font-size: 1.8em;
             }
 
             select {
@@ -1470,14 +1469,11 @@
           div#accContainer {
             font-family: $font-list;
 
-            button.accordion {
-              padding: 18px;
-            }
-           
-            .active,
-            button.accordion:hover {
-              background-color: #ccc;
-            }
+            button{
+              font-size:0.9rem;
+              
+            }           
+            
             
             .panel {
               padding: 0;
@@ -1491,7 +1487,7 @@
               display: block;
 
               li {
-                font-size: 1em;
+                font-size: 0.9em;
 
                 &:hover {
                   cursor: pointer;
@@ -1728,6 +1724,7 @@
       
       #content_section {
         width: 76%;
+        min-height: 860px;
 
         h1 {
           font-size: 1.45em;
@@ -1938,7 +1935,7 @@
             margin-bottom: 1%;
 
             h1 {
-              font-size: 1.4em;
+              font-size: 1.7em;
             }
 
             select {
@@ -1971,14 +1968,11 @@
           div#accContainer {
             font-family: $font-list;
 
-            button.accordion {
-              padding: 16px;
-            }
+            button{
+              font-size:0.85rem;
+              
+            }           
             
-            .active,
-            button.accordion:hover {
-              background-color: #ccc;
-            }
             
             .panel {
               padding: 0;
@@ -1992,7 +1986,7 @@
               display: block;
 
               li {
-                font-size: 1em;
+                font-size: 0.9em;
 
                 &:hover {
                   cursor: pointer;
@@ -2446,7 +2440,7 @@
             margin-bottom: 1%;
 
             h1 {
-              font-size: 1.35em;
+              font-size: 1.6em;
             }
 
             select {
@@ -2478,15 +2472,12 @@
 
           div#accContainer {
             
-            button.accordion {
-              padding: 14px;
+            button{
+              font-size:0.85rem;
+              
             }
             
-            .active,
-            button.accordion:hover {
-              background-color: #ccc;
-            }
-            
+                        
             .panel {
               padding: 0;
             }
@@ -2499,7 +2490,7 @@
               display: block;
 
               li {
-                font-size: 1em;
+                font-size: 0.85em;
 
                 &:hover {
                   cursor: pointer;
@@ -2963,14 +2954,10 @@
           div#accContainer {
             font-family: $font-list;
             
-            button.accordion {
-              padding: 12px;
+            button{
+              font-size:0.8rem;              
             }
-            
-            .active,
-            button.accordion:hover {
-              background-color: #ccc;
-            }
+                        
             
             .panel {
               padding: 0;
@@ -2984,7 +2971,7 @@
               display: block;
 
               li {
-                font-size: 1em;
+                font-size: 0.85em;
 
                 &:hover {
                   cursor: pointer;
@@ -3469,7 +3456,7 @@
               display: block;
 
               li {
-                font-size: 1em;
+                font-size: 0.85em;
 
                 &:hover {
                   cursor: pointer;

@@ -1,7 +1,6 @@
 [
    
    {
-      "id":1,
       "name":"Trainers",
       "style":"Trainers",
       "color":"black",
@@ -14,7 +13,6 @@
       "all": "all"
    },
    {
-      "id":2,
       "name":"Hiking Boots",
       "style":"Hiking Boots",
       "color":"brown",
@@ -27,7 +25,6 @@
       "all": "all"
    },
    {
-      "id":3,
       "name":"Basketball Shoes",
       "style":"Basketball Shoes",
       "color":"brown",
@@ -40,7 +37,6 @@
       "all": "all"
    },
    {
-      "id":4,
       "name":"Ladies Boots",
       "style":"Ladies Boots",
       "color":"brown",
@@ -53,7 +49,6 @@
       "all": "all"
    },
    {
-      "id":5,
       "name":"Hiking Boots",
       "style":"Hiking Boots",
       "color":"brown",
@@ -66,7 +61,6 @@
       "all": "all"
    },
    {
-      "id":6,
       "name":"Trainers",
       "style":"Trainers",
       "color":"blue",
@@ -79,7 +73,6 @@
       "all": "all"
    },
    {
-      "id":7,
       "name":"Ladies Boots",
       "style":"Ladies Boots",
       "color":"brown",
@@ -92,7 +85,6 @@
       "all": "all"
    },
    {
-      "id":8,
       "name":"Hiking Boots",
       "style":"Hiking Boots",
       "color":"brown",
@@ -105,7 +97,6 @@
       "all": "all"
    },
    {
-      "id":9,
       "name":"Trainers",
       "style":"Trainers",
       "color":"green",
@@ -118,7 +109,6 @@
       "all": "all"
    },
    {
-      "id":10,
       "name":"Basketball Shoes",
       "style":"Basketball Shoes",
       "color":"brown",
@@ -131,7 +121,6 @@
       "all": "all"
    },
    {
-      "id":11,
       "name":"Basketball Shoes",
       "style":"Basketball Shoes",
       "color":"brown",
@@ -144,7 +133,6 @@
       "all": "all"
    },
    {
-      "id":12,
       "name":"Ladies Boots",
       "style":"Ladies Boots",
       "color":"brown",
@@ -157,7 +145,6 @@
       "all": "all"
    },
    {
-      "id":13,
       "name":"Basketball Shoes",
       "style":"Basketball Shoes",
       "color":"brown",
@@ -170,7 +157,6 @@
       "all": "all"
    },
    {
-      "id":14,
       "name":"Trainers",
       "style":"Trainers",
       "color":"black",
@@ -183,7 +169,6 @@
       "all": "all"
    },
    {
-      "id":15,
       "name":"Ladies Boots",
       "style":"Ladies Boots",
       "color":"brown",
@@ -196,7 +181,6 @@
       "all": "all"
    },
    {
-      "id":16,
       "name":"Hiking Boots",
       "style":"Hiking Boots",
       "color":"brown",

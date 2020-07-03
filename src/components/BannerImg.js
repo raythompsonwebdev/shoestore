@@ -1,19 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 import banner from "../images/bannerimage.jpg";
 
-
-class BannerImg extends React.Component {
-
-  render(){
+class BannerImg extends Component {
+  render() {
     return (
       <section id="bannerbox">
-
-      
         <hgroup>
           <h1>LORUM IPSUN DOLOR AMET </h1>
           <h2>ipsum vel voluptate perspiciatis, quis</h2>
         </hgroup>
-                  
+
         <nav id="apDiv1">
           <ul>
             <li>
@@ -43,13 +39,13 @@ class BannerImg extends React.Component {
             </li>
           </ul>
         </nav>
-      
-        <figure id="bannerboximg">                 
-             <img src={banner} alt="pinn" />
+
+        <figure id="bannerboximg">
+          <img src={banner} alt="pinn" />
         </figure>
       </section>
-    )
+    );
   }
-};
+}
 
 export default BannerImg;

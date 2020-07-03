@@ -12,7 +12,7 @@ function NewProductBox(props) {
       <figcaption className="product_boxdetails_longer">
         <h1>Product : {props.name}</h1>
         <p>{props.text}</p>
-        <span className="price_longer">Price :{props.price}</span>
+        <span className="price_longer">Price :£{props.price}</span>
         <span className="price_longer">
           <img
             className="product_icon_longer"

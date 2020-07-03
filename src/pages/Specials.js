@@ -12,32 +12,24 @@ class Specials extends Component {
       productdata: [],
       lastIndex : 0,
       orderDir:'asc',
-      orderByVal : "all"
-      
+      orderByVal : "all"      
     };
     
     this.changesOrders = this.changesOrders.bind(this);
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
-  }
- 
+  } 
 
   changesOrders(orderbyval, dir ) {
-
     this.setState({
       orderByVal: orderbyval,
       orderDir: dir
     });
-
   }
-
 
   sidebarVisibility(e) {
     e.preventDefault();      
       this.setState({ visibility: !this.state.visibility});
   }
-
-
- 
   
   componentDidMount(){
 
@@ -45,8 +37,8 @@ class Specials extends Component {
     .then(response => response.json())
     .then(data => {
       const productData = data.map( shoe => {return shoe;})
-      // data.shoeId = this.state.lastIndex;
-      // this.setState({lastIndex:this.state.lastIndex + 1})
+      data.shoeId = this.state.lastIndex;
+      this.setState({lastIndex:this.state.lastIndex + 1})
       this.setState({
         productdata : productData
       })
@@ -59,15 +51,13 @@ class Specials extends Component {
   }  
 
   render() {
-
     
     let filteredApts = this.state.productdata;
     let value = this.state.orderByVal;
             
     filteredApts = filteredApts.filter((item) => {
 
-      if(item.color === value || item.style === value || item.size === value || item.gender === value || item.price === value ){
-        
+      if(item.color === value || item.style === value || item.size === value || item.gender === value || item.price === value ){       
         
         return item      
 
@@ -102,7 +92,7 @@ class Specials extends Component {
           <form
             action=""
             method="get"
-            //encType="application/x-www-form-urlencoded"
+            
           >
             <section id="results">
               
@@ -114,11 +104,6 @@ class Specials extends Component {
 
             <br />
 
-            <div className="pag_buttons">
-              <input type="submit" value="submit" />
-              &nbsp;
-              <input type="reset" value="reset" name="reset" />
-            </div>
           
           </form>
 

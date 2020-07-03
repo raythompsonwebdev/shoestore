@@ -27,16 +27,12 @@ class NewProducts extends Component {
     .then(response => response.json())
     .then(data => {
       const productData = data.map( shoe => {return shoe;})
-      // data.shoeId = this.state.lastIndex;
-      // this.setState({lastIndex:this.state.lastIndex + 1})
-      this.setState({
-        productdata : productData
-      })
+      data.shoeId = this.state.lastIndex;
+      this.setState({lastIndex:this.state.lastIndex + 1})
+      this.setState({ productdata : productData })
     })
     .catch(error => {
-
       console.log(error)
-
     })    
   }
 
@@ -55,19 +51,14 @@ class NewProducts extends Component {
           <form
             action=""
             method="get"
-            //encType="application/x-www-form-urlencoded"
+            
           >
             <section id="results">
               <NewProductBoxes productdata={this.state.productdata} />
             </section>
 
             <br />
-            {/* <div className="clearfix"></div>
-            <div className="pag_buttons">
-              <input type="submit" value="submit" />
-              &nbsp;
-              <input type="reset" value="reset" name="reset" />
-            </div> */}
+            
           </form>
           <br />
           <br />

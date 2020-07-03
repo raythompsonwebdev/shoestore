@@ -2,7 +2,7 @@ import React ,{ Component } from "react";
 import ProductBoxes from "../components/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar";
-//import $ from "jquery";
+import Selector from "../components/Selector";
 
 class AllProducts extends Component {
 
@@ -10,11 +10,21 @@ class AllProducts extends Component {
     super(props);
     this.state = {
       productdata: [],
-      lastIndex : 0
+      lastIndex : 0,
+      orderDir:'asc',
+      orderByVal : "all"
     };
 
+    this.changesOrders = this.changesOrders.bind(this);
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
    
+  }
+
+  changesOrders(orderbyval, dir ) {
+    this.setState({
+      orderByVal: orderbyval,
+      orderDir: dir
+    });
   }
 
   sidebarVisibility(e) {
@@ -28,8 +38,8 @@ class AllProducts extends Component {
     .then(response => response.json())
     .then(data => {
       const productData = data.map( shoe => {return shoe;})
-      // data.shoeId = this.state.lastIndex;
-      // this.setState({lastIndex:this.state.lastIndex + 1})
+      data.shoeId = this.state.lastIndex;
+      this.setState({lastIndex:this.state.lastIndex + 1})
       this.setState({
         productdata : productData
       })
@@ -42,6 +52,23 @@ class AllProducts extends Component {
   }
 
   render() {
+
+    let filteredApts = this.state.productdata;
+    let value = this.state.orderByVal;
+            
+    filteredApts = filteredApts.filter((item) => {
+
+      if(item.color === value || item.style === value || item.size === value || item.gender === value || item.price === value ){       
+        
+        return item      
+
+      }else{
+
+        return item[value] 
+      }       
+
+    });
+
     return (
       <main id="content" className="clearfix">
         
@@ -54,27 +81,27 @@ class AllProducts extends Component {
         </aside>
 
         <main id="content_section" className="group">
+
+          <Selector
+            orderByVal={this.state.orderByVal}
+            orderDir={this.state.orderDir}
+            changesOrders={this.changesOrders}  
+          />
+
+
           <form
             action=""
             method="get"
-            //encType="application/x-www-form-urlencoded"
+            
           >
             <section id="results">
               
-              <ProductBoxes productdata={this.state.productdata} />
+              <ProductBoxes productdata={filteredApts} />
                         
             </section>
             <br />
 
-            <div className="pag_buttons">
-              <input
-                type="submit"
-                value="submit"
-                //onClick="alert('Hey, this is just a sample!'); return false;"
-              />
-              &nbsp;
-              <input type="reset" value="reset" name="reset" />
-            </div>
+            
           </form>
         </main>
       </main>

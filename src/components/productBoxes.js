@@ -3,10 +3,10 @@ import ProductBox from "./productBox";
 
 function ProductBoxes(props) {
     
-  const Product = props.productdata.map( item => (
+  const Product = props.productdata.map( (item, i) => (
     
       <ProductBox
-        key={item.id}
+        key={i}
         name={item.name}
         imgUrl={item.imgUrl}
         price={item.price}

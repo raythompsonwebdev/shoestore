@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import ContactForm from "../components/ContactForm";
 
-class Contact extends React.Component {
+class Contact extends Component {
   render() {
     return (
       <main id="content" className="clearfix" role="main">
