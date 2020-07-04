@@ -4,21 +4,29 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "eslint-config-airbnb": "^18.2.0",
     "express": "^4.17.1",
+    "fibers": "^3.1.1",
+    "flow-bin": "^0.128.0",
     "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.4.1",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.26.9",
+    "typescript": "^3.9.6"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "node server.js"
+    "serve": "node server.js",
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": "react-app"

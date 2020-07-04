@@ -12,8 +12,8 @@ class SearchBar extends React.Component {
     this.changeHandler = this.changeHandler.bind(this);
   }
 
-  changeHandler = (e) => {
-    const target = e.target;
+  changeHandler = (event) => {
+    const target = event.target;
     const value = target.value; //value
     //const name = target.name //name
 

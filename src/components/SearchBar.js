@@ -12,19 +12,18 @@ class SearchBar extends React.Component {
         genderVal: ' ',
         styleVal: ' ', 
         sizeVal: ' ',
-        colorVal: ' '      
-        
-    };
+        colorVal: ' '  
+    }
 
-    this.changeHandler = this.changeHandler.bind(this);
-    this.submit = this.submit.bind(this);
+    this.changeHandler = this.changeHandler.bind(this)
+    this.submit = this.submit.bind(this)
   }  
   
-  changeHandler = (e) =>{ 
+  changeHandler = (event) => { 
 
-    const target = e.target
-    const value = target.value //value
-    const name = target.name //name
+    const target = event.target
+    const value = target.value 
+    const name = target.name 
         
     this.setState({ 
       

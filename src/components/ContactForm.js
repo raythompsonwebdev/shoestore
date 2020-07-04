@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: " ",
-      comments: " ",
-      email: " ",
+      username: ' ',
+      comments: ' ',
+      email: ' ',
     };
 
     this.submit = this.submit.bind(this);
@@ -15,43 +15,44 @@ class ContactForm extends Component {
     this.handleEmail = this.handleEmail.bind(this);
   }
 
-  handleUserName = (e) => {
+  handleUserName(e) {
     this.setState({
       username: e.target.value,
     });
-  };
+  }
 
-  handleComments = (e) => {
+  handleComments(e) {
     this.setState({
       comments: e.target.value,
     });
-  };
+  }
 
-  handleEmail = (e) => {
+  handleEmail(e) {
     this.setState({
       email: e.target.value,
     });
-  };
+  }
 
-  submit = (e) => {
+  submit(e) {
     console.log(
-      `Details : ${this.state.username}, ${this.state.email}, ${this.state.comments}`
+      `Details : ${this.state.username}, ${this.state.email}, ${this.state.comments}`,
     );
 
     e.preventDefault();
-  };
+  }
 
   render() {
+    const { username, email, comments } = this.state;
     return (
       <form id="form" onSubmit={this.submit}>
         <ul>
           <li>
-            <label htmlFor="username">Name:&#32; </label>
+            <label htmlFor="username">Name:&#32;</label>
             <input
               type="text"
               name="username"
               id="name"
-              value={this.state.username}
+              value={username}
               onChange={this.handleUserName}
             />
           </li>
@@ -61,23 +62,23 @@ class ContactForm extends Component {
               type="email"
               name="email"
               id="email"
-              value={this.state.email}
+              value={email}
               onChange={this.handleEmail}
             />
           </li>
           <li>
             <label htmlFor="message">Message:&#32; </label>
             <textarea
-              value={this.state.comments}
+              value={comments}
               onChange={this.handleComments}
               name="message"
               id="message"
               cols="35"
               rows="15"
-            ></textarea>
+            />
           </li>
           <li>
-            <label htmlFor="submit"></label>
+            <label htmlFor="submit" />
             <input type="submit" value="Send" id="submit" name="submit" />
           </li>
         </ul>

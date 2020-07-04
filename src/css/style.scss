@@ -576,9 +576,9 @@
           figure.product_box {
             padding:0.1em;
             height: auto;
-            -webkit-flex: 1 0 auto;
-            -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
             width: 25%;
             font-family: $font-list;
             margin-bottom: 15px;
@@ -653,7 +653,7 @@
         div.product_boxes_longer {
           display: block;
           height: 180px;
-          width: 100%;
+          width: 100%;        
 
           
           figure.product-box_longer {
@@ -689,6 +689,7 @@
                 height: auto;
                 line-height: 45px;
                 text-indent: 1em;
+                font-size:1em;
                 color: $login-color;
                 font-weight: bold;
               }
@@ -1834,6 +1835,7 @@
 
               h1 {
                 line-height: 45px;
+                font-size:0.9em
                 
               }
 
@@ -2809,7 +2811,8 @@
                            
 
               h1 {
-                line-height: 45px;                
+                line-height: 45px;  
+                font-size:0.85em;              
               }
 
               p {                

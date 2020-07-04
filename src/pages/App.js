@@ -1,68 +1,69 @@
+// @flow
 import React, { Component } from 'react';
-import BannerImg from "../components/BannerImg";
-import FindShoesAccord from "../components/FindShoesAccord";
-import FindShoes from "../components/FindShoes";
-import FrontPageBoxes from "../components/frontPageBoxes";
+import BannerImg from '../components/BannerImg';
+import FindShoesAccord from '../components/FindShoesAccord';
+import FindShoes from '../components/FindShoes';
+import FrontPageBoxes from '../components/frontPageBoxes';
 
-class App extends Component{
-
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productdata: [],      
+      productdata: [],
       visibility: false,
-      lastIndex : 0
+      lastIndex: 0,
     };
-    
+
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
-    
-  }
-  
-  sidebarVisibility(e) {
-    e.preventDefault();      
-      this.setState({ visibility: !this.state.visibility});
   }
 
-  componentDidMount(){
+  componentDidMount() {
     fetch('./productdata.json')
-    .then(response => response.json())
-    .then(data => {
-      const productData = data.map( shoe => {return shoe;})
-      // data.shoeId = this.state.lastIndex;
-      // this.setState({lastIndex:this.state.lastIndex + 1})
-      this.setState({
-        productdata : productData
+      .then((response) => response.json())
+      .then((data) => {
+        const productData = data.map((shoe) => {
+          shoe.prodId = this.state.lastIndex;
+          this.setState({ lastIndex: this.state.lastIndex + 1 });
+          return shoe;
+        });
+        this.setState({
+          productdata: productData,
+        });
       })
-    })
-    .catch(error => {
-
-      console.log(error)
-
-    })
-
-    
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
-  render(){
+  sidebarVisibility(e) {
+    e.preventDefault();
+    this.setState({ visibility: !this.state.visibility });
+  }
 
+  render() {
+    const {
+      visibility,
+      productdata,
+    } = this.state;
     return (
       <main id="content" className="clearfix">
+        <button id="sidebar-toggle-btn" type="button" onClick={this.sidebarVisibility}>
+          SIDE
+        </button>
 
-        <button id="sidebar-toggle-btn" onClick={this.sidebarVisibility}>SIDE</button>
-
-        <aside className={`left_bar ${this.state.visibility ? "is-expanded" : ""}`}>
+        <aside
+          className={`left_bar ${visibility ? 'is-expanded' : ' '}`}
+        >
           <FindShoes />
           <FindShoesAccord />
         </aside>
 
         <main id="content_section" className="group">
-
           <BannerImg />
 
           <h1>Featured</h1>
 
-          <FrontPageBoxes productdata={this.state.productdata} />          
-
+          <FrontPageBoxes productdata={productdata} />
         </main>
       </main>
     );

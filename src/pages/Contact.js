@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import ContactForm from "../components/ContactForm";
+import React, { Component } from 'react';
+import ContactForm from '../components/ContactForm';
 
 class Contact extends Component {
   render() {

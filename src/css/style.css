@@ -714,9 +714,9 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box {
     padding: 0.1em;
     height: auto;
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-            flex: 1 0 auto;
+    -ms-flex: 0 1 auto;
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
     width: 25%;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     margin-bottom: 15px;
@@ -817,6 +817,7 @@ figure {
     height: auto;
     line-height: 45px;
     text-indent: 1em;
+    font-size: 1em;
     color: #0099CC;
     font-weight: bold;
   }
@@ -1707,6 +1708,7 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     line-height: 45px;
+    font-size: 0.9em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
     font-size: 1em;
@@ -2404,6 +2406,7 @@ figure {
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer h1 {
     line-height: 45px;
+    font-size: 0.85em;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer p {
     font-size: 0.9em;

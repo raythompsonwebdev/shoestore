@@ -1,22 +1,31 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function NewProductBox(props) {  
-
+function NewProductBox(props) {
+  const {
+    imgUrl, name, cartImg, price, text,
+  } = props;
   return (
     <figure className="product-box_longer">
       <img
         className="product_boximg_longer"
-        src={props.imgUrl}
-        alt={props.name}
+        src={imgUrl}
+        alt={name}
       />
       <figcaption className="product_boxdetails_longer">
-        <h1>Product : {props.name}</h1>
-        <p>{props.text}</p>
-        <span className="price_longer">Price :£{props.price}</span>
+        <h1>
+          Product :
+          {name}
+        </h1>
+        <p>{text}</p>
+        <span className="price_longer">
+          Price :£
+          {price}
+        </span>
         <span className="price_longer">
           <img
             className="product_icon_longer"
-            src={props.cartImg}
+            src={cartImg}
             alt="shopping-cart"
           />
           Add to Cart
@@ -24,7 +33,14 @@ function NewProductBox(props) {
       </figcaption>
     </figure>
   );
-  
 }
+
+NewProductBox.propTypes = {
+  name: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  cartImg: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default NewProductBox;

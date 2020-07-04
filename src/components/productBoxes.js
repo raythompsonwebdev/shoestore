@@ -1,20 +1,26 @@
-import React from "react";
-import ProductBox from "./productBox";
+import React from 'react';
+import PropTypes from 'prop-types';
+import ProductBox from './productBox';
 
 function ProductBoxes(props) {
-    
-  const Product = props.productdata.map( (item, i) => (
-    
-      <ProductBox
-        key={i}
-        name={item.name}
-        imgUrl={item.imgUrl}
-        price={item.price}
-        cartImg={item.cartImg}
-      />
-  ))
+  const { productdata } = props;
 
-return <div className="product_boxes">{Product}</div>;
+  const Product = productdata.map((item) => (
+
+    <ProductBox
+      key={item.prodId}
+      name={item.name}
+      imgUrl={item.imgUrl}
+      price={item.price}
+      cartImg={item.cartImg}
+    />
+  ));
+
+  return <div className="product_boxes">{Product}</div>;
 }
+
+ProductBoxes.propTypes = {
+  productdata: PropTypes.shape([]).isRequired,
+};
 
 export default ProductBoxes;
