@@ -26,13 +26,9 @@ class SearchBar extends React.Component {
     const name = target.name 
         
     this.setState({ 
-      
-      [name] : value
-    
-    })
-    
-    
-        
+      //computed property
+      [name] : value   
+    })        
   }
 
   submit = event => {

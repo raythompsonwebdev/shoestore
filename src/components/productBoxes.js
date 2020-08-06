@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ProductBox from './productBox';
 
 function ProductBoxes(props) {
+
   const { productdata } = props;
 
   const Product = productdata.map((item) => (
@@ -13,6 +14,7 @@ function ProductBoxes(props) {
       imgUrl={item.imgUrl}
       price={item.price}
       cartImg={item.cartImg}
+      style={item.style}
     />
   ));
 
@@ -20,7 +22,7 @@ function ProductBoxes(props) {
 }
 
 ProductBoxes.propTypes = {
-  productdata: PropTypes.shape([]).isRequired,
+  productdata: PropTypes.array.isRequired,
 };
 
 export default ProductBoxes;

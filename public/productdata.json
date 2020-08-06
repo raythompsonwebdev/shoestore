@@ -1,7 +1,7 @@
 [
    
    {
-      "name":"Trainers",
+      "name":"trainers",
       "style":"Trainers",
       "color":"black",
       "size":"four",
@@ -13,7 +13,7 @@
       "all": "all"
    },
    {
-      "name":"Hiking Boots",
+      "name":"hiking-boots",
       "style":"Hiking Boots",
       "color":"brown",
       "size":"six",
@@ -25,7 +25,7 @@
       "all": "all"
    },
    {
-      "name":"Basketball Shoes",
+      "name":"basketball-shoes",
       "style":"Basketball Shoes",
       "color":"brown",
       "size":"seven",
@@ -37,7 +37,7 @@
       "all": "all"
    },
    {
-      "name":"Ladies Boots",
+      "name":"ladies-boots",
       "style":"Ladies Boots",
       "color":"brown",
       "size":"five",
@@ -49,7 +49,7 @@
       "all": "all"
    },
    {
-      "name":"Hiking Boots",
+      "name":"hiking-boots",
       "style":"Hiking Boots",
       "color":"brown",
       "size":"six",
@@ -61,7 +61,7 @@
       "all": "all"
    },
    {
-      "name":"Trainers",
+      "name":"trainers",
       "style":"Trainers",
       "color":"blue",
       "size":"five",
@@ -73,7 +73,7 @@
       "all": "all"
    },
    {
-      "name":"Ladies Boots",
+      "name":"ladies-boots",
       "style":"Ladies Boots",
       "color":"brown",
       "size":"six",
@@ -85,7 +85,7 @@
       "all": "all"
    },
    {
-      "name":"Hiking Boots",
+      "name":"hiking-boots",
       "style":"Hiking Boots",
       "color":"brown",
       "size":"five",
@@ -97,7 +97,7 @@
       "all": "all"
    },
    {
-      "name":"Trainers",
+      "name":"trainers",
       "style":"Trainers",
       "color":"green",
       "size":"six",
@@ -109,7 +109,7 @@
       "all": "all"
    },
    {
-      "name":"Basketball Shoes",
+      "name":"basketball-shoes",
       "style":"Basketball Shoes",
       "color":"brown",
       "size":"seven",
@@ -121,7 +121,7 @@
       "all": "all"
    },
    {
-      "name":"Basketball Shoes",
+      "name":"basketball-shoes",
       "style":"Basketball Shoes",
       "color":"brown",
       "size":"eight",
@@ -133,7 +133,7 @@
       "all": "all"
    },
    {
-      "name":"Ladies Boots",
+      "name":"ladies-boots",
       "style":"Ladies Boots",
       "color":"brown",
       "size":"eight",
@@ -145,7 +145,7 @@
       "all": "all"
    },
    {
-      "name":"Basketball Shoes",
+      "name":"basketball-shoes",
       "style":"Basketball Shoes",
       "color":"brown",
       "size":"nine",
@@ -157,7 +157,7 @@
       "all": "all"
    },
    {
-      "name":"Trainers",
+      "name":"trainers",
       "style":"Trainers",
       "color":"black",
       "size":"seven",
@@ -169,7 +169,7 @@
       "all": "all"
    },
    {
-      "name":"Ladies Boots",
+      "name":"ladies-boots",
       "style":"Ladies Boots",
       "color":"brown",
       "size":"five",
@@ -181,7 +181,7 @@
       "all": "all"
    },
    {
-      "name":"Hiking Boots",
+      "name":"hiking-boots",
       "style":"Hiking Boots",
       "color":"brown",
       "size":"seven",

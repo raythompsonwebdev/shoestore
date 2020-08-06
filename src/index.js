@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Newproduct from "./pages/NewProducts";
 import Specials from "./pages/Specials";
 import AllProducts from "./pages/AllProducts";
+import ProductPage from "./components/productPage";
 import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import NotFound from "./pages/NotFound";
@@ -29,6 +30,7 @@ const routing = (
         <Route exact path="/newproducts" component={Newproduct} />
         <Route exact path="/specials" component={Specials} />
         <Route exact path="/allproducts" component={AllProducts} />
+        <Route path="/product/:name" component={ProductPage} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/faqs" component={Faqs} />
         <Route exact path="/notfound"component={NotFound} />

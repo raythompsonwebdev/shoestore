@@ -7,7 +7,7 @@ import cartImg from "../images/shoppingcart.png"
 const productData = [
   {
     id: 1,
-    name: "Trainers",
+    name: "trainers",
     imgUrl: kids,
     price: "50.00",
     cartImg:cartImg
@@ -16,7 +16,7 @@ const productData = [
 
   {
     id: 2,
-    name: "Boots",
+    name: "hiking-boots",
     imgUrl: furlined,
     price: "80.00",
     cartImg:cartImg
@@ -25,7 +25,7 @@ const productData = [
 
   {
     id: 3,
-    name: "Skate Shoes",
+    name: "basketball-shoes",
     imgUrl: basketball,
     price: "90.00",
     cartImg:cartImg
@@ -34,7 +34,7 @@ const productData = [
 
   {
     id: 4,
-    name: "Ladies Boots",
+    name: "ladies-boots",
     imgUrl: ladies ,
     price: "80.00",
     cartImg:cartImg

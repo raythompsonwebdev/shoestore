@@ -14,6 +14,7 @@ function newProductBoxes(props) {
       price={item.price}
       cartImg={item.cartImg}
       text={item.text}
+      
     />
 
   ));
@@ -29,7 +30,7 @@ function newProductBoxes(props) {
 }
 
 newProductBoxes.propTypes = {
-  productdata: PropTypes.shape([]).isRequired,
+  productdata: PropTypes.array.isRequired,
 };
 
 export default newProductBoxes;
