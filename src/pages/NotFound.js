@@ -4,7 +4,7 @@ class NotFound extends Component {
   render() {
     return (
 
-      <main id="content" role="main">
+      <main id="content" role="main" style={{"min-height":"400px"}}>
 
         <h1>
           Oops! Error. Click

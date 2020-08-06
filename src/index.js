@@ -33,7 +33,7 @@ const routing = (
         <Route path="/product/:name" component={ProductPage} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/faqs" component={Faqs} />
-        <Route exact path="/notfound"component={NotFound} />
+        <Route component={NotFound} />
       </Switch>
 
       <Footer />

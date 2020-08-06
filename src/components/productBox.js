@@ -23,8 +23,7 @@ function productBox(props) {
         </p>       
             <Link to={`/product/${name}`} >
               <img className="cart_icon" src={cartImg} alt="shoppingcart icon" />
-            </Link>
-       
+            </Link>       
 
       </figcaption>
     </figure>
