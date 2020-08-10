@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import productData from '../data/productData';
-//import UpvotesSection from '../components/UpvotesSection';
+import LikesSection from '../components/LikesSection';
 import { Link } from 'react-router-dom';
 import NotFound from "./NotFound";
 
@@ -14,14 +14,12 @@ const ProductPage = ({ match }) => {
 
     const otherProducts = productData.filter(item => item.name !== name );
 
-    const [productInfo, setProductInfo] = useState({upvotes:0})
+    const [productInfo, setProductInfo] = useState({likes:0})
     
     useEffect(() => {
       const fetchData = async () => {
-          const result = await fetch(`/api/products/${name}`);
+          const result = await fetch(`/api/product/${name}`);
           const body = await result.json();
-
-          console.log(body)
           setProductInfo(body);
       };
 
@@ -37,8 +35,7 @@ const ProductPage = ({ match }) => {
 
       <main id="content" className="clearfix">
         <h1>Product page</h1>
-        <h3>This product has been liked {productInfo.upvotes} times</h3>
-        {/* <UpvotesSection upvotes={articleInfo.upvotes} articleName={name} setArticleInfo={setArticleInfo} /> */}
+        <LikesSection likes={productInfo.likes} productName={name} setProductInfo={setProductInfo} />
         <figure 
           id="productPagebox"           
         >
@@ -74,7 +71,7 @@ const ProductPage = ({ match }) => {
                   £
                   {item.price}
                 </p>       
-                    <Link to={`/product/${name}`} >
+                    <Link to={`/product/${item.name}`} >
                       <img className="other_cart_icon" src={item.cartImg} alt="shoppingcart icon" />
                     </Link> 
               </figcaption>
