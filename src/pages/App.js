@@ -5,6 +5,7 @@ import FindShoesAccord from '../components/FindShoesAccord';
 import FindShoes from '../components/FindShoes';
 import FrontPageBoxes from '../components/frontPageBoxes';
 
+
 class App extends Component {
   constructor(props) {
     super(props);

@@ -1,3 +1,4 @@
+//import 'whatwg-fetch';
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./pages/App";
@@ -7,7 +8,7 @@ import Footer from "./components/Footer";
 import Newproduct from "./pages/NewProducts";
 import Specials from "./pages/Specials";
 import AllProducts from "./pages/AllProducts";
-import ProductPage from "./components/productPage";
+import ProductPage from "./pages/productPage";
 import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import NotFound from "./pages/NotFound";

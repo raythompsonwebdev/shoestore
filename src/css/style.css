@@ -81,6 +81,9 @@ html {
   background-repeat: repeat;
   background-position: center center;
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -220,25 +223,12 @@ figure {
   /* Legacy iOS */
 }
 
-.tooltip {
-  position: absolute;
-  color: #fff;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
-  border-radius: 5px;
-  pointer-events: none;
-  z-index: 1000;
-}
-
 @media only screen and (max-width: 1920px) {
-  /*Wrapper*/
   #wrapper {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
+    width: 70%;
     padding: 0 1em;
     display: block;
     background-color: #ffffff;
@@ -320,6 +310,8 @@ figure {
     line-height: 40px;
     display: block;
     -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
     transition: all ease 0.2s;
     text-transform: uppercase;
     font-size: 1em;
@@ -339,8 +331,10 @@ figure {
     display: block;
     -moz-border-radius-topleft: 3px;
     -moz-border-radius-topright: 3px;
+    -webkit-border-radius: 3px 3px 0 0;
     border-radius: 3px 3px 0 0;
     -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
   }
   #wrapper nav#main-nav ul#inner-nav li.selected a:link,
@@ -370,6 +364,8 @@ figure {
     display: block;
     text-align: center;
     -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
     transition: all ease-in-out 0.2s;
     font-weight: bold;
   }
@@ -386,47 +382,37 @@ figure {
     padding: 0.5em;
     height: auto;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    -webkit-flex-flow: row;
     -ms-flex-flow: row;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row;
+    flex-flow: row;
+    -webkit-align-items: center;
     -ms-flex-align: center;
-    -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    -webkit-box-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   #wrapper #search_category #search_category_form label {
     font-size: 1.5em;
     width: 20%;
     line-height: 35px;
     margin: 0;
+    -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-            flex: 0 1 auto;
+    flex: 0 1 auto;
     text-align: left;
     text-transform: uppercase;
     text-indent: 0.1em;
     font-weight: bold;
-  }
-  #wrapper #search_category #search_category_form ::-webkit-input-placeholder {
-    color: #000;
-  }
-  #wrapper #search_category #search_category_form :-ms-input-placeholder {
-    color: #000;
-  }
-  #wrapper #search_category #search_category_form ::-ms-input-placeholder {
-    color: #000;
   }
   #wrapper #search_category #search_category_form ::placeholder {
     color: #000;
   }
   #wrapper #search_category #search_category_form select {
     font-family: arial, sans-serif;
+    -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-            flex: 0 1 auto;
+    flex: 0 1 auto;
     width: 17.5%;
     font-size: 0.9em;
     margin: 0 0.25em 0 0;
@@ -453,6 +439,144 @@ figure {
     line-height: 40px;
     text-transform: uppercase;
     font-weight: bold;
+  }
+  #wrapper #content #other_products {
+    min-height: 980px;
+    width: 100%;
+    font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-content: flex-start;
+    -ms-flex-content: flex-start;
+    align-content: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+  }
+  #wrapper #content #other_products figure.other_product_box {
+    padding: 0.1em;
+    height: auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 25%;
+    font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    margin-bottom: 15px;
+  }
+  #wrapper #content #other_products figure.other_product_box .other_product_boximg {
+    width: 80%;
+    display: block;
+    margin: 5px auto;
+    height: auto;
+  }
+  #wrapper #content #other_products figure.other_product_box figcaption.other_product_boxdetails {
+    width: 100%;
+    margin: 0;
+    padding: 7% 0 0;
+    background-image: url("../images/product-info-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    /*Price Icon*/
+  }
+  #wrapper #content #other_products figure.other_product_box figcaption.other_product_boxdetails p.other_product_name {
+    color: #0099CC;
+    line-height: 25px;
+    text-transform: uppercase;
+    font-size: 85%;
+    margin: 0;
+    text-indent: 0.2em;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+  #wrapper #content #other_products figure.other_product_box figcaption.other_product_boxdetails p.other_product_price {
+    height: auto;
+    line-height: 25px;
+    margin: 0;
+    font-weight: bold;
+    width: 100%;
+    text-indent: 0.2em;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+  #wrapper #content #other_products figure.other_product_box figcaption.other_product_boxdetails img.other_cart_icon {
+    display: block;
+    width: 15%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 80%;
+    top: 20%;
+  }
+  #wrapper #content #other_products figure.other_product_box figcaption.other_product_boxdetails img.other_cart_icon:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    cursor: pointer;
+  }
+  #wrapper #content figure#productPagebox {
+    padding: 0.1em;
+    height: auto;
+    width: 100%;
+    font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    margin-bottom: 15px;
+    display: flex;
+  }
+  #wrapper #content figure#productPagebox #productPageimg {
+    width: 40%;
+    display: block;
+    height: auto;
+    padding: 7em;
+  }
+  #wrapper #content figure#productPagebox #productPagedetails {
+    width: 60%;
+    margin: 0;
+    padding: 0.5em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    /*Price Icon*/
+  }
+  #wrapper #content figure#productPagebox #productPagedetails #productPagename {
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    text-indent: 0.2em;
+  }
+  #wrapper #content figure#productPagebox #productPagedetails #productPageprice {
+    height: auto;
+    line-height: 40px;
+    margin: 0;
+    font-weight: bold;
+    text-indent: 0.2em;
+  }
+  #wrapper #content figure#productPagebox #productPagedetails img#cartPageicon {
+    display: block;
+    width: 5%;
+  }
+  #wrapper #content figure#productPagebox #productPagedetails img#cartPageicon:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    cursor: pointer;
   }
   #wrapper #content p {
     font-size: 0.95em;
@@ -506,8 +630,6 @@ figure {
     display: block;
     margin: 0 0 1em 0;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   #wrapper #content #form ul li label,
@@ -610,16 +732,13 @@ figure {
     margin: 0;
     padding: 0.5em;
     border: solid 1px #7a7777;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: flex-start;
     -ms-flex-align: flex-start;
-    -webkit-box-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
   #wrapper #content #content_section #bannerbox hgroup {
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
@@ -683,8 +802,13 @@ figure {
     line-height: 35px;
     text-align: center;
     -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
     transition: all ease 0.2s;
     text-transform: uppercase;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
     border-radius: 5px;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul li a:hover {
@@ -703,20 +827,18 @@ figure {
     height: auto;
     width: 100%;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: -webkit-box;
     display: flex;
+    -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
     -webkit-align-content: flex-start;
     -ms-flex-content: flex-start;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
+    align-content: flex-start;
+    -webkit-justify-content: flex-start;
     -ms-flex-pack: flex-start;
-    -webkit-box-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
     /*Individual product box*/
   }
   #wrapper #content #content_section .product_boxes h1 {
@@ -730,9 +852,9 @@ figure {
   #wrapper #content #content_section .product_boxes figure.product_box {
     padding: 0.1em;
     height: auto;
+    -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-            flex: 0 1 auto;
+    flex: 0 1 auto;
     width: 25%;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     margin-bottom: 15px;
@@ -751,13 +873,12 @@ figure {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
+    display: -webkit-flex;
     display: -ms-flexbox;
-    display: -webkit-box;
     display: flex;
+    -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
     /*Price Icon*/
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_name {
@@ -767,9 +888,9 @@ figure {
     font-size: 85%;
     margin: 0;
     text-indent: 0.2em;
+    -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-            flex: 1 0 auto;
+    flex: 1 0 auto;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails p.product_price {
     height: auto;
@@ -778,14 +899,16 @@ figure {
     font-weight: bold;
     width: 100%;
     text-indent: 0.2em;
+    -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-            flex: 1 0 auto;
+    flex: 1 0 auto;
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon {
     display: block;
     width: 15%;
     -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     position: absolute;
     left: 80%;
@@ -793,6 +916,9 @@ figure {
   }
   #wrapper #content #content_section .product_boxes figure.product_box figcaption.product_boxdetails img.cart_icon:hover {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
     cursor: pointer;
   }
@@ -868,10 +994,15 @@ figure {
     margin: 0;
     width: 20%;
     -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
   #wrapper #content #content_section div.product_boxes_longer figure.product-box_longer figcaption.product_boxdetails_longer span.price_longer img.product_icon_longer:hover {
     -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
     cursor: pointer;
   }
@@ -926,6 +1057,8 @@ figure {
     font-size: 1em;
     line-height: 30px;
     -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
   #wrapper #content #content_section #pagination a:hover {
@@ -1052,8 +1185,7 @@ figure {
     text-indent: 0.2em;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer button:focus {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer .accordion:hover,
   #wrapper #content .left_bar #acc_nav div#accContainer .active {
@@ -1064,16 +1196,18 @@ figure {
     background-color: #ffffff;
     overflow: hidden;
     -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
     transform: scaleY(1);
     -webkit-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
     transform-origin: top;
     -webkit-transition: -webkit-transform 0.4s ease-out;
-    -webkit-transition: -webkit-transform 0.4s ease;
-    transition: -webkit-transform 0.4s ease;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
     transition: transform 0.4s ease;
-    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
   }
   #wrapper #content .left_bar #acc_nav div#accContainer .active:after {
     content: "\2796";
@@ -1156,7 +1290,7 @@ figure {
 
 @media only screen and (max-width: 1440px) {
   #wrapper {
-    width: 73%;
+    width: 75%;
     /*header*/
     /*Navigation*/
   }
@@ -1193,7 +1327,7 @@ figure {
     margin-right: 0.2em;
   }
   #wrapper nav#main-nav ul#inner-nav li a {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
   #wrapper nav#main-nav ul#inner-nav li a:hover {
     font-weight: bold;
@@ -1501,7 +1635,7 @@ figure {
 
 @media only screen and (max-width: 1280px) {
   #wrapper {
-    width: 80%;
+    width: 85%;
     /*Navigation*/
   }
   #wrapper div#side-bar-toggle-btn {
@@ -1536,7 +1670,7 @@ figure {
     margin-right: 0.2em;
   }
   #wrapper nav#main-nav ul#inner-nav li a {
-    font-size: 0.95em;
+    font-size: 0.85em;
   }
   #wrapper nav#main-nav ul#inner-nav li a:hover {
     font-weight: bold;
@@ -1863,7 +1997,7 @@ figure {
     margin: 0;
   }
   #wrapper {
-    width: 85%;
+    width: 90%;
     /*Navigation*/
   }
   #wrapper div#side-bar-toggle-btn {
@@ -1898,7 +2032,7 @@ figure {
     margin-right: 0.2em;
   }
   #wrapper nav#main-nav ul#inner-nav li a {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   #wrapper nav#main-nav ul#inner-nav li a:hover {
     font-weight: bold;
@@ -3210,6 +3344,7 @@ figure {
     height: 100px;
     background-color: #ffffff;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 2px solid #ea3411;
     color: #ea3411;
@@ -3236,6 +3371,7 @@ figure {
     text-align: center;
     background-color: #ea3411;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 2px solid #000000;
     color: #000000;
@@ -3274,6 +3410,8 @@ figure {
   }
   #wrapper nav#main-nav ul.mobile-nav {
     -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
     transition: all ease 0.2s;
     display: block;
     width: 95%;
@@ -3309,8 +3447,10 @@ figure {
     display: block;
     -moz-border-radius-topleft: none;
     -moz-border-radius-topright: none;
+    -webkit-border-radius: none;
     border-radius: none;
     -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     background-color: #000000;
     color: #ffffff;
@@ -3505,6 +3645,8 @@ figure {
     height: auto;
     background-color: #ffffff;
     -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
     transition: all ease 0.2s;
   }
   #wrapper #content .left_bar.is-expanded {
@@ -4675,9 +4817,7 @@ figure {
     width: 31%;
   }
   #wrapper #content #content_section #bannerbox hgroup {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
     position: relative;
   }
   #wrapper #content #content_section #bannerbox hgroup h1 {
@@ -4694,16 +4834,12 @@ figure {
   }
   #wrapper #content #content_section #bannerbox #bannerboximg {
     width: 100%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
     top: 0;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 {
     width: 100%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
   #wrapper #content #content_section #bannerbox nav#apDiv1 ul {
     padding-top: 0;
@@ -4720,16 +4856,13 @@ figure {
   #wrapper #content #content_section .product_boxes {
     height: auto;
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-flow: column;
     -ms-flex-flow: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-flow: column;
+    flex-flow: column;
+    -webkit-justify-content: center;
     -ms-flex-pack: center;
-    -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
     /*Individual product box*/
   }
   #wrapper #content #content_section .product_boxes h1 {
@@ -5547,4 +5680,3 @@ figure {
     line-height: 15px;
   }
 }
-/*# sourceMappingURL=style.css.map */

@@ -1,71 +1,17 @@
-//@import "partials/fonts";
+
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/base";
 @import "partials/fonts";
-//Q-Tip
-// .myCustomClass {
-//   .qtip-content {
-//     width: 175px;
-//     height: 40px;
-//     outline: none;
-//     color: #1B7D7F;
-//     letter-spacing: 0.01em;
-//     font-family: arial, sans-serif;
-//     line-height: 1.5em;
-//     font-weight: bold;
-//     text-transform: uppercase;
-//     @include transitioner(all ease 0.2s);
-//     border: 0;
-//     background-color: rgba(0, 0, 0, 0.7);
-//   }
 
-//   .qtip-content span:first-of-type {
-//     color: $color-white;
-//     display: inline-block;
-//     font-size: 1.6em;
-//     width: 70%;
-//     font-size: 1.35em;
-//     letter-spacing: 0.02em;
-//   }
-
-//   .qtip-content span:last-of-type {
-//     color: $color-orange;
-//     display: block;
-//     font-size: 1.2em;
-//     width: 29%;
-//     float: right;
-//     margin: 0;
-//     text-align: center;
-//     line-height: 1.5em;
-//     letter-spacing: 0.02em;
-//   }
-
-//   .qtip-default {
-//     background-color: rgba(0, 0, 0, 0.7);
-//     padding: 1%;
-//   }
-// }
-
-.tooltip {
-  position: absolute;
-  color: #fff;
-  padding: 10px;
-  background: rgba(0,0,0,0.8);
-  transform: translate3d(-50%, -50%, 0);
-  border-radius: 5px;
-  pointer-events: none;
-  z-index: 1000;
-
-}
 
 @media only screen and (max-width: 1920px) {
-  /*Wrapper*/
+  
   #wrapper {
     font-family: $font-list;
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
+    width: 70%;
     padding: 0 1em;
     display: block;
     background-color: $color-white;
@@ -272,6 +218,7 @@
         }
       }
     }
+    
     /*Content*/
     #content {
       height: auto;
@@ -292,6 +239,160 @@
         text-transform: uppercase;
         font-weight: bold;
       }
+
+      #other_products {
+        min-height: 980px;
+        width: 100%;
+        font-family: $font-list;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        -ms-flex-content: flex-start;
+        align-content: flex-start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: flex-start;
+        justify-content: flex-start;
+        
+        figure.other_product_box {
+          padding:0.1em;
+          height: auto;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          width: 25%;
+          font-family: $font-list;
+          margin-bottom: 15px;
+
+          .other_product_boximg {
+            width: 80%;
+            display: block;
+            margin: 5px auto;
+            height: auto;
+          }
+
+          figcaption.other_product_boxdetails {
+            width: 100%;
+            margin: 0;
+            padding: 7% 0 0;
+            background-image: url("../images/product-info-bg.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+
+            p.other_product_name {
+              color: $login-color;
+              line-height: 25px;
+              text-transform: uppercase;
+              font-size: 85%;
+              margin: 0;
+              text-indent: 0.2em;
+              -webkit-flex: 1 0 auto;
+              -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
+            }
+
+            p.other_product_price {
+              height: auto;
+              line-height: 25px;
+              margin: 0;
+              font-weight: bold;
+              width: 100%;
+              text-indent: 0.2em;
+              -webkit-flex: 1 0 auto;
+              -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
+            }
+            /*Price Icon*/
+            img.other_cart_icon {
+              display: block;
+              width: 15%;
+              @include transitioner(all 0.3s ease);
+              position: absolute;
+              left: 80%;
+              top: 20%;
+
+              &:hover {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      figure#productPagebox {
+        padding:0.1em;
+        height: auto;
+        width: 100%;
+        font-family: $font-list;
+        margin-bottom: 15px;
+        display:flex;
+      
+        #productPageimg {
+          width: 40%;
+          display: block;
+          height: auto;
+          padding: 7em;
+        }
+      
+        #productPagedetails {
+          width: 60%;
+          margin: 0;
+          padding:0.5em;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          position: relative;
+      
+          #productPagename {
+            line-height: 40px;
+            text-transform: uppercase;
+            margin: 0;
+            text-indent: 0.2em;
+      
+          }
+      
+          #productPageprice {
+            height: auto;
+            line-height: 40px;
+            margin: 0;
+            font-weight: bold;
+            text-indent: 0.2em;
+      
+          }
+          /*Price Icon*/
+          img#cartPageicon {
+            display: block;
+            width: 5%;
+            //@include transitioner(all 0.3s ease);
+            //position: absolute;
+            //left: 80%;
+            //top: 20%;
+      
+            &:hover {
+              -webkit-transform: rotate(360deg);
+              -moz-transform: rotate(360deg);
+              -o-transform: rotate(360deg);
+              -ms-transform: rotate(360deg);
+              transform: rotate(360deg);
+              cursor: pointer;
+            }
+          }
+        }
+      }      
 
       p {
         font-size: 0.95em;
@@ -422,6 +523,7 @@
         line-height: 25px;
         margin-bottom: 1%;
       }
+      
       /*rightside content section within content div*/
       #content_section {
         float: right;
@@ -1119,7 +1221,7 @@
           margin-right: 0.2em;
 
           a {
-            font-size: 0.95em;
+            font-size: 0.9em;
 
             &:hover {
               font-weight: bold;
@@ -1602,7 +1704,7 @@
           margin-right: 0.2em;
 
           a {
-            font-size: 0.95em;
+            font-size: 0.85em;
 
             &:hover {
               font-weight: bold;
@@ -2100,7 +2202,7 @@
           margin-right: 0.2em;
 
           a {
-            font-size: 0.9em;
+            font-size: 0.8em;
 
             &:hover {
               font-weight: bold;

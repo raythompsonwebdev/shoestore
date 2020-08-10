@@ -28,7 +28,7 @@ function FrontPageBoxes(props) {
 }
 
 FrontPageBoxes.propTypes = {
-  productdata: PropTypes.shape([]).isRequired,
+  productdata: PropTypes.array.isRequired,
 };
 
 export default FrontPageBoxes;
