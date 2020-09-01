@@ -225,6 +225,7 @@
       width: 100%;
       margin: 0;      
       font-family: $font-list;
+      
 
       h1 {
         background-color: $content-color;
@@ -241,7 +242,8 @@
       }
 
       #other_products {
-        min-height: 980px;
+        margin-top:2em;
+        min-height:400px;
         width: 100%;
         font-family: $font-list;
         display: -webkit-flex;
@@ -258,7 +260,7 @@
         justify-content: flex-start;
         
         figure.other_product_box {
-          padding:0.1em;
+          padding:0;
           height: auto;
           -webkit-flex: 0 1 auto;
           -ms-flex: 0 1 auto;
@@ -268,9 +270,9 @@
           margin-bottom: 15px;
 
           .other_product_boximg {
-            width: 80%;
+            width: 65%;
             display: block;
-            margin: 5px auto;
+            margin: 0 auto;
             height: auto;
           }
 
@@ -390,6 +392,36 @@
               transform: rotate(360deg);
               cursor: pointer;
             }
+          }
+
+          #upvotes-section{
+
+            button{              
+              font-family: $font-list;
+              margin: 0;
+              height: 45px;
+              width: 20%;
+              display: block;
+              font-size: 1.2em;
+              line-height: 30px;
+              background-color: $color-orange;
+              color: $color-white;
+              border: 0;
+              float:right;
+    
+              &:hover {
+                background-color: $color-white;
+                color: $color-orange;
+                border: 0;
+                cursor: pointer;
+                font-weight: bold;
+              }
+    
+            }
+            p{
+              line-height:50px;
+            }
+    
           }
         }
       }      

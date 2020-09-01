@@ -2,7 +2,7 @@
   "name": "shoestore",
   "version": "0.1.0",
   "private": true, 
-  "proxy": "http://localhost:8000/",
+  
   "dependencies": {
     "bootstrap": "^4.5.0",
     "eslint-config-airbnb": "^18.2.0",

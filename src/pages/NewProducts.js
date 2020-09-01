@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import NewProductBoxes from '../components/newProductBoxes';
+import NewProductBoxes from '../components/newProduct/newProductBoxes';
 import FindShoesAccord from '../components/FindShoesAccord';
-import SearchBar from '../components/SearchBar';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 class NewProducts extends Component {
   constructor(props) {

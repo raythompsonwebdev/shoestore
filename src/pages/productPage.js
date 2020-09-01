@@ -4,8 +4,6 @@ import LikesSection from '../components/LikesSection';
 import { Link } from 'react-router-dom';
 import NotFound from "./NotFound";
 
-
-
 const ProductPage = ({ match }) => {
         
     const { name } = match.params;
@@ -18,8 +16,8 @@ const ProductPage = ({ match }) => {
     
     useEffect(() => {
       const fetchData = async () => {
-          const result = await fetch(`/api/product/${name}`);
-          const body = await result.json();
+          const result = await fetch(`./${name}`);
+          const body = await result.json();          
           setProductInfo(body);
       };
 
@@ -35,7 +33,6 @@ const ProductPage = ({ match }) => {
 
       <main id="content" className="clearfix">
         <h1>Product page</h1>
-        <LikesSection likes={productInfo.likes} productName={name} setProductInfo={setProductInfo} />
         <figure 
           id="productPagebox"           
         >
@@ -50,9 +47,10 @@ const ProductPage = ({ match }) => {
               {product.price}
             </p>
             <p>{product.text}</p>
-            <img id="cartPageicon" src={product.cartImg} alt="shoppingcart icon" />
-              
+            <img id="cartPageicon" src={product.cartImg} alt="shoppingcart icon" />  
+            <LikesSection likes={productInfo.likes} productName={name} setProductInfo={setProductInfo} />            
           </figcaption>
+          
         </figure>
         
         <h1>Other Products</h1> 

@@ -1,10 +1,10 @@
-//import 'whatwg-fetch';
+import 'whatwg-fetch'; // import fetch to make calls to server
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./pages/App";
-import Header from "./components/Header";
-import MainNav from "./components/mainNav";
-import Footer from "./components/Footer";
+import Header from "./components/Layout/Header";
+import MainNav from "./components/Layout/MainNav";
+import Footer from "./components/Layout/Footer";
 import Newproduct from "./pages/NewProducts";
 import Specials from "./pages/Specials";
 import AllProducts from "./pages/AllProducts";

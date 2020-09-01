@@ -441,7 +441,8 @@ figure {
     font-weight: bold;
   }
   #wrapper #content #other_products {
-    min-height: 980px;
+    margin-top: 2em;
+    min-height: 400px;
     width: 100%;
     font-family: "Old Standard TT", arial, helvetica, sans-serif;
     display: -webkit-flex;
@@ -458,7 +459,7 @@ figure {
     justify-content: flex-start;
   }
   #wrapper #content #other_products figure.other_product_box {
-    padding: 0.1em;
+    padding: 0;
     height: auto;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
@@ -468,9 +469,9 @@ figure {
     margin-bottom: 15px;
   }
   #wrapper #content #other_products figure.other_product_box .other_product_boximg {
-    width: 80%;
+    width: 65%;
     display: block;
-    margin: 5px auto;
+    margin: 0 auto;
     height: auto;
   }
   #wrapper #content #other_products figure.other_product_box figcaption.other_product_boxdetails {
@@ -577,6 +578,29 @@ figure {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
     cursor: pointer;
+  }
+  #wrapper #content figure#productPagebox #productPagedetails #upvotes-section button {
+    font-family: "Old Standard TT", arial, helvetica, sans-serif;
+    margin: 0;
+    height: 45px;
+    width: 20%;
+    display: block;
+    font-size: 1.2em;
+    line-height: 30px;
+    background-color: #ea3411;
+    color: #ffffff;
+    border: 0;
+    float: right;
+  }
+  #wrapper #content figure#productPagebox #productPagedetails #upvotes-section button:hover {
+    background-color: #ffffff;
+    color: #ea3411;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #wrapper #content figure#productPagebox #productPagedetails #upvotes-section p {
+    line-height: 50px;
   }
   #wrapper #content p {
     font-size: 0.95em;

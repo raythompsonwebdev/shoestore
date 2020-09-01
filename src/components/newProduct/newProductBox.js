@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function NewProductBox(props) {
   const {
@@ -23,12 +24,13 @@ function NewProductBox(props) {
           {price}
         </span>
         <span className="price_longer">
+        <Link to={`/product/${name}`} >
           <img
             className="product_icon_longer"
             src={cartImg}
             alt="shopping-cart"
           />
-          Add to Cart
+        </Link>          Add to Cart
         </span>
       </figcaption>
     </figure>

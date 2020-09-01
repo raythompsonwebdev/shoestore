@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ProductBoxes from '../components/productBoxes';
+import ProductBoxes from '../components/Product/productBoxes';
 import FindShoesAccord from '../components/FindShoesAccord';
-import SearchBar from '../components/SearchBar';
-import Selector from '../components/Selector';
+import SearchBar from '../components/SearchBar/SearchBar';
+import SearchSelect from '../components/SearchSelect/SearchSelect';
 
 class Specials extends Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class Specials extends Component {
   }
 
   componentDidMount() {
+    //./productdata.json
     fetch('./productdata.json')
       .then((response) => response.json())
       .then((data) => {
@@ -52,25 +53,30 @@ class Specials extends Component {
     const {
       visibility, orderByVal, orderDir, productdata,
     } = this.state;
+
     let filteredApts = productdata;
     const value = orderByVal;
+    console.log(value);
 
     filteredApts = filteredApts.filter((item) => {
+
       if (
         item.color === value
-        || item.style === value
+        || item.style === value 
         || item.size === value
         || item.gender === value
         || item.price === value
       ) {
         return item;
+        
       }
+      
       return item[value];
     });
 
     return (
       <main id="content" className="clearfix">
-        <SearchBar labelname="Specials" />
+        <SearchBar labelname="Specials" changesOrders={this.changesOrders}/>
 
         <button id="sidebar-toggle-btn" type="button" onClick={this.sidebarVisibility}>
           SIDE
@@ -81,7 +87,7 @@ class Specials extends Component {
         </aside>
 
         <main id="content_section" role="main">
-          <Selector
+          <SearchSelect
             orderByVal={orderByVal}
             orderDir={orderDir}
             changesOrders={this.changesOrders}

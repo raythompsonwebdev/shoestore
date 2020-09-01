@@ -1,7 +1,6 @@
 import React from "react";
-import searchbarData2 from "../data/searchbarData2";
-
-class SearchBar extends React.Component {
+import searchbarData2 from "./searchbarData2";
+class Selector extends React.Component {
   constructor(props) {
     super(props);
 
@@ -33,8 +32,7 @@ class SearchBar extends React.Component {
         <select          
           name="value"
           value={this.state.value}
-          onChange={this.changeHandler}
-          
+          onChange={this.changeHandler}          
         >
           {searchbarData2.map((options, i) => (
             <optgroup label={options.value} key={i}>
@@ -46,9 +44,10 @@ class SearchBar extends React.Component {
             </optgroup>
           ))}
         </select>
+        
       </form>
     );
   }
 }
 
-export default SearchBar;
+export default Selector;

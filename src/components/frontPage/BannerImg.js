@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../images/bannerimage.jpg';
+import banner from '../../images/bannerimage.jpg';
 
 const BannerImg = () => (
   <section id="bannerbox">

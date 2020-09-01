@@ -1,9 +1,9 @@
 // @flow
 import React, { Component } from 'react';
-import BannerImg from '../components/BannerImg';
+import BannerImg from '../components/frontPage/BannerImg';
 import FindShoesAccord from '../components/FindShoesAccord';
-import FindShoes from '../components/FindShoes';
-import FrontPageBoxes from '../components/frontPageBoxes';
+import FindShoes from '../components/frontPage/FindShoes';
+import FrontPageBoxes from '../components/frontPage/frontPageBoxes';
 
 
 class App extends Component {

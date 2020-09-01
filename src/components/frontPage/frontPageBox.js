@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function FrontPageBox(props) {
   const {
@@ -15,7 +16,9 @@ function FrontPageBox(props) {
           {name}
         </p>
         <p className="product_price">{price}</p>
-        <img className="cart_icon" src={cartImg} alt="shoppingcart icon" />
+        <Link to={`/product/${name}`} >
+          <img className="cart_icon" src={cartImg} alt="shoppingcart icon" />
+        </Link>
       </figcaption>
     </figure>
   );

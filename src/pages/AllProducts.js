@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ProductBoxes from '../components/productBoxes';
+import ProductBoxes from '../components/Product/productBoxes';
 import FindShoesAccord from '../components/FindShoesAccord';
-import SearchBar from '../components/SearchBar';
-import Selector from '../components/Selector';
+import SearchBar from '../components/SearchBar/SearchBar';
+import SearchSelect from '../components/SearchSelect/SearchSelect';
 
 class AllProducts extends Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class AllProducts extends Component {
   }
 
   componentDidMount() {
+    //./productdata.json 
     fetch('./productdata.json')
       .then((response) => response.json())
       .then((data) => {
@@ -81,7 +82,7 @@ class AllProducts extends Component {
         </aside>
 
         <main id="content_section" className="group">
-          <Selector
+          <SearchSelect
             orderByVal={orderByVal}
             orderDir={orderDir}
             changesOrders={this.changesOrders}
