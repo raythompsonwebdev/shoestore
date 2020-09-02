@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 
 
 function productBox(props) {
-  
+
+    
   const {
     imgUrl, name, cartImg, price
   } = props;
+
+
   return (
 
     <figure className="product_box" >

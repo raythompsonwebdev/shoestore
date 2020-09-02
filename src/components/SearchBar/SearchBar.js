@@ -27,8 +27,6 @@ class SearchBar extends React.Component {
     const value = target.value;
     const name = target.name;
 
-    console.log(`Target: ${target}, Value: ${value}, Name: ${name}`);
-
     this.setState({
       //computed property
       [name]: value,
@@ -45,9 +43,11 @@ class SearchBar extends React.Component {
       colorVal: this.state.colorVal,
     };
 
-    // this.props.changesOrders(tempVal.genderVal, "asc");
+    alert(
+      `You have entered Gender:${tempVal.genderVal}, Style: ${tempVal.styleVal}, Size: ${tempVal.sizeVal} & Colour :${tempVal.colorVal}. This form is under maintenance and will be ready to use shortly`,
+    );
 
-    console.log(tempVal);
+    
   };
 
   render() {
@@ -68,21 +68,21 @@ class SearchBar extends React.Component {
             name="styleVal"
             styles={styles}
             value={this.state.styleVal}
-            onChange={this.changeHandler}
+            changeHandler={this.changeHandler}
           />
 
           <SelectSize
             name="sizeVal"
             sizes={sizes}
             value={this.state.sizeVal}
-            onChange={this.changeHandler}
+            changeHandler={this.changeHandler}
           />
             
           <SelectColor
             name="colorVal"
             colors={colors}
             value={this.state.colorVal}
-            onChange={this.changeHandler}
+            changeHandler={this.changeHandler}
           />
             
           <button name="find" className="search_category_btn" type="submit">

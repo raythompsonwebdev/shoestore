@@ -1,17 +1,19 @@
-import React, { Component } from 'react';
-import ProductBoxes from '../components/Product/productBoxes';
-import FindShoesAccord from '../components/FindShoesAccord';
-import SearchBar from '../components/SearchBar/SearchBar';
-import SearchSelect from '../components/SearchSelect/SearchSelect';
+import React, { Component } from "react";
+import ProductBoxes from "../components/Product/productBoxes";
+import FindShoesAccord from "../components/FindShoesAccord";
+import SearchBar from "../components/SearchBar/SearchBar";
+import SearchSelect from "../components/SearchSelect/SearchSelect";
 
 class Specials extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      productdata: [],
-      orderDir: 'asc',
-      orderByVal: 'all',
+      productData: [],
+      orderDir: "asc",
+      orderByVal: "all",
       lastIndex: 0,
+      visibility: false,
     };
 
     this.changesOrders = this.changesOrders.bind(this);
@@ -20,7 +22,7 @@ class Specials extends Component {
 
   componentDidMount() {
     //./productdata.json
-    fetch('./productdata.json')
+    fetch("./productdata.json")
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {
@@ -29,7 +31,7 @@ class Specials extends Component {
           return shoe;
         });
         this.setState({
-          productdata: productData,
+          productData: productData,
         });
       })
       .catch((error) => {
@@ -50,39 +52,42 @@ class Specials extends Component {
   }
 
   render() {
-    const {
-      visibility, orderByVal, orderDir, productdata,
-    } = this.state;
+    const { visibility, orderByVal, orderDir, productData } = this.state;
 
-    let filteredApts = productdata;
+    let filteredApts = productData;
     const value = orderByVal;
-    console.log(value);
-
+  
     filteredApts = filteredApts.filter((item) => {
-
       if (
-        item.color === value
-        || item.style === value 
-        || item.size === value
-        || item.gender === value
-        || item.price === value
+        item.color === value ||
+        item.style === value ||
+        item.size === value ||
+        item.gender === value ||
+        item.price === value
       ) {
         return item;
-        
       }
-      
+
       return item[value];
     });
 
     return (
       <main id="content" className="clearfix">
-        <SearchBar labelname="Specials" changesOrders={this.changesOrders}/>
+        <SearchBar
+          labelname="Specials"
+          changesOrders={this.changesOrders}
+          value={value}
+        />
 
-        <button id="sidebar-toggle-btn" type="button" onClick={this.sidebarVisibility}>
+        <button
+          id="sidebar-toggle-btn"
+          type="button"
+          onClick={this.sidebarVisibility}
+        >
           SIDE
         </button>
 
-        <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
+        <aside className={`left_bar ${visibility ? "is-expanded" : " "}`}>
           <FindShoesAccord />
         </aside>
 
@@ -94,7 +99,7 @@ class Specials extends Component {
           />
           <br />
 
-          <ProductBoxes productdata={filteredApts} />
+          <ProductBoxes productData={filteredApts} />
 
           <br />
         </main>

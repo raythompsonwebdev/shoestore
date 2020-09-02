@@ -8,7 +8,7 @@ class AllProducts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productdata: [],
+      productData: [],
       orderDir: 'asc',
       orderByVal: 'all',
       lastIndex: 0,
@@ -29,7 +29,7 @@ class AllProducts extends Component {
           return shoe;
         });
         this.setState({
-          productdata: productData,
+          productData: productData,
         });
       })
       .catch((error) => {
@@ -51,9 +51,9 @@ class AllProducts extends Component {
 
   render() {
     const {
-      visibility, orderByVal, orderDir, productdata,
+      visibility, orderByVal, orderDir, productData,
     } = this.state;
-    let filteredApts = productdata;
+    let filteredApts = productData;
     const value = orderByVal;
 
     filteredApts = filteredApts.filter((item) => {
@@ -87,7 +87,7 @@ class AllProducts extends Component {
             orderDir={orderDir}
             changesOrders={this.changesOrders}
           />
-          <ProductBoxes productdata={filteredApts} />
+          <ProductBoxes productData={filteredApts} />
         </main>
       </main>
     );

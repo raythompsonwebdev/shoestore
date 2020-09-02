@@ -5,19 +5,25 @@ import { Link } from 'react-router-dom';
 import NotFound from "./NotFound";
 
 const ProductPage = ({ match }) => {
+  
         
     const { name } = match.params;
     
     const product = productData.find(item => item.name === name );
 
-    const otherProducts = productData.filter(item => item.name !== name );
+    const [productInfo, setProductInfo] = useState({likes:0});
 
-    const [productInfo, setProductInfo] = useState({likes:0})
+    const otherProducts = productData.filter(item => item.name !== name );
     
     useEffect(() => {
       const fetchData = async () => {
-          const result = await fetch(`./${name}`);
-          const body = await result.json();          
+
+        //http://localhost:8000/api/product/${name}
+        // add "proxy":"http://localhost:8000/" property to package.json to avoid cors issue 
+        // then remove http://localhost:8000
+
+          const result = await fetch(`/api/product/${name}`);
+          const body = await result.text();          
           setProductInfo(body);
       };
 
@@ -25,7 +31,7 @@ const ProductPage = ({ match }) => {
 
     }, [name]);
 
-    // add "proxy":"http://localhost:8000/" property to package.json to avoid cors issue
+    
 
     if(!product) return <NotFound/>
 
@@ -48,6 +54,7 @@ const ProductPage = ({ match }) => {
             </p>
             <p>{product.text}</p>
             <img id="cartPageicon" src={product.cartImg} alt="shoppingcart icon" />  
+            
             <LikesSection likes={productInfo.likes} productName={name} setProductInfo={setProductInfo} />            
           </figcaption>
           

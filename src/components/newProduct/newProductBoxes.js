@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import NewProductBox from './newProductBox';
 
 function newProductBoxes(props) {
-  const { productdata } = props;
+  const { productData } = props;
 
-  const NewProduct = productdata.slice(0, 4).map((item) => (
+  const NewProduct = productData.slice(0, 4).map((item) => (
 
     <NewProductBox
       key={item.prodId}

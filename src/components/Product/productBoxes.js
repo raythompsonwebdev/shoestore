@@ -4,9 +4,11 @@ import ProductBox from './productBox';
 
 function ProductBoxes(props) {
 
-  const { productdata } = props;
+  const { productData } = props;
 
-  const Product = productdata.map((item) => (
+
+  
+  const Product = productData.map((item) => (    
 
     <ProductBox
       key={item.prodId}
@@ -22,7 +24,7 @@ function ProductBoxes(props) {
 }
 
 ProductBoxes.propTypes = {
-  productdata: PropTypes.array.isRequired,
+  productData: PropTypes.array.isRequired,
 };
 
 export default ProductBoxes;

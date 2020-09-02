@@ -34,8 +34,8 @@ class ContactForm extends Component {
   }
 
   submit(e) {
-    console.log(
-      `Details : ${this.state.username}, ${this.state.email}, ${this.state.comments}`,
+    alert(
+      `You have entered Username:${this.state.username}, Email: ${this.state.email} & This comment: ${this.state.comments}. This form is under maintenance and will be ready to use shortly`,
     );
 
     e.preventDefault();

@@ -7,7 +7,7 @@ class NewProducts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productdata: [],
+      productData: [],
       lastIndex: 0,
     };
 
@@ -15,6 +15,7 @@ class NewProducts extends Component {
   }
 
   componentDidMount() {
+    //./productdata.json
     fetch('./productdata.json')
       .then((response) => response.json())
       .then((data) => {
@@ -24,7 +25,7 @@ class NewProducts extends Component {
           return shoe;
         });
         this.setState({
-          productdata: productData,
+          productData: productData,
         });
       })
       .catch((error) => {
@@ -38,7 +39,7 @@ class NewProducts extends Component {
   }
 
   render() {
-    const { visibility, productdata } = this.state;
+    const { visibility, productData } = this.state;
 
     return (
       <main id="content" className="clearfix">
@@ -57,7 +58,7 @@ class NewProducts extends Component {
         </aside>
 
         <main id="content_section">
-          <NewProductBoxes productdata={productdata} />
+          <NewProductBoxes productData={productData} />
 
           <br />
           <br />
