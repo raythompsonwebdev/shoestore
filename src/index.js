@@ -25,7 +25,7 @@ const routing = (
     <Router>
 
       <MainNav />
-      
+
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/newproducts" component={Newproduct} />

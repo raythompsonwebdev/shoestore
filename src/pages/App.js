@@ -7,10 +7,10 @@ import FrontPageBoxes from '../components/frontPage/frontPageBoxes';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      productdata: [],
+      productData: [],
       visibility: false,
       lastIndex: 0,
     };
@@ -28,7 +28,7 @@ class App extends Component {
           return shoe;
         });
         this.setState({
-          productdata: productData,
+          productData: productData,
         });
       })
       .catch((error) => {
@@ -44,7 +44,7 @@ class App extends Component {
   render() {
     const {
       visibility,
-      productdata,
+      productData,
     } = this.state;
     return (
       <main id="content" className="clearfix">
@@ -64,7 +64,7 @@ class App extends Component {
 
           <h1>Featured</h1>
 
-          <FrontPageBoxes productdata={productdata} />
+          <FrontPageBoxes productData={productData} />
         </main>
       </main>
     );

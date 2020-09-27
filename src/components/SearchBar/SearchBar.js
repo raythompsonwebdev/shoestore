@@ -8,8 +8,8 @@ import SelectColor from "./SelectColor";
 let { genders, sizes, colors, styles } = searchbarData;
 
 class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       genderVal: " ",
@@ -47,7 +47,7 @@ class SearchBar extends React.Component {
       `You have entered Gender:${tempVal.genderVal}, Style: ${tempVal.styleVal}, Size: ${tempVal.sizeVal} & Colour :${tempVal.colorVal}. This form is under maintenance and will be ready to use shortly`,
     );
 
-    
+
   };
 
   render() {
@@ -62,7 +62,7 @@ class SearchBar extends React.Component {
             genders={genders}
             value={this.state.genderVal}
             changeHandler={this.changeHandler}
-          />          
+          />
 
           <SelectStyle
             name="styleVal"
@@ -77,14 +77,14 @@ class SearchBar extends React.Component {
             value={this.state.sizeVal}
             changeHandler={this.changeHandler}
           />
-            
+
           <SelectColor
             name="colorVal"
             colors={colors}
             value={this.state.colorVal}
             changeHandler={this.changeHandler}
           />
-            
+
           <button name="find" className="search_category_btn" type="submit">
             Go
           </button>

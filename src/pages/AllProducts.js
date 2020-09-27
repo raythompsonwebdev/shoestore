@@ -5,8 +5,8 @@ import SearchBar from '../components/SearchBar/SearchBar';
 import SearchSelect from '../components/SearchSelect/SearchSelect';
 
 class AllProducts extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       productData: [],
       orderDir: 'asc',
@@ -19,7 +19,7 @@ class AllProducts extends Component {
   }
 
   componentDidMount() {
-    //./productdata.json 
+    //./productdata.json
     fetch('./productdata.json')
       .then((response) => response.json())
       .then((data) => {

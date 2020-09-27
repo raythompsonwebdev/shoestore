@@ -5,8 +5,8 @@ import SearchBar from "../components/SearchBar/SearchBar";
 import SearchSelect from "../components/SearchSelect/SearchSelect";
 
 class Specials extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       productData: [],
@@ -56,7 +56,7 @@ class Specials extends Component {
 
     let filteredApts = productData;
     const value = orderByVal;
-  
+
     filteredApts = filteredApts.filter((item) => {
       if (
         item.color === value ||

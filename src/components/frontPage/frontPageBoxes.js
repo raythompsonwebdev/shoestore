@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import FrontPageBox from './frontPageBox';
 
 function FrontPageBoxes(props) {
-  const { productdata } = props;
+  const { productData } = props;
 
-  const NewProduct = productdata.slice(0, 8).map((item) => (
+  const NewProduct = productData.slice(0, 8).map((item) => (
 
     <FrontPageBox
       key={item.prodId}

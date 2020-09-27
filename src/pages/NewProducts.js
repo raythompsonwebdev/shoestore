@@ -4,8 +4,8 @@ import FindShoesAccord from '../components/FindShoesAccord';
 import SearchBar from '../components/SearchBar/SearchBar';
 
 class NewProducts extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       productData: [],
       lastIndex: 0,

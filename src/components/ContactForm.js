@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class ContactForm extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       username: ' ',
       comments: ' ',
@@ -14,6 +14,13 @@ class ContactForm extends Component {
     this.handleComments = this.handleComments.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
   }
+
+  //use this to replace below 3 functions?
+  // handleChange(e) {
+  //   const itemName = e.target.name;
+  //   const itemValue = e.target.value;
+  //   this.setState({ [itemName]: itemValue });
+  // }
 
   handleUserName(e) {
     this.setState({
