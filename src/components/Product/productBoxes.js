@@ -6,9 +6,7 @@ function ProductBoxes(props) {
 
   const { productData } = props;
 
-
-  
-  const Product = productData.map((item) => (    
+  const Product = productData.slice(0, 16).map((item) => (
 
     <ProductBox
       key={item.prodId}
