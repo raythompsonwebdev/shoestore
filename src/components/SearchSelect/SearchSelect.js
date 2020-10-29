@@ -1,15 +1,19 @@
 import React from "react";
 import searchbarData2 from "./searchbarData2";
 class Selector extends React.Component {
-  constructor() {
-    super();
 
-    this.state = {
-      value: " ",
-    };
-
-    this.changeHandler = this.changeHandler.bind(this);
+  state = {
+    value: " ",
   }
+  // constructor() {
+  //   super();
+
+  //   this.state = {
+  //     value: " ",
+  //   };
+
+  //   //this.changeHandler = this.changeHandler.bind(this);
+  // }
 
   changeHandler = (event) => {
     const target = event.target;
@@ -25,7 +29,6 @@ class Selector extends React.Component {
 
   render() {
     return (
-
       <form className="search_products">
         <label>{this.props.labelname}</label>
 
@@ -44,7 +47,6 @@ class Selector extends React.Component {
             </optgroup>
           ))}
         </select>
-
       </form>
     );
   }

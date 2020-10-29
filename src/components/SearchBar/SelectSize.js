@@ -1,7 +1,6 @@
 import React from "react";
 
-function SelectSize(props) {
-
+const SelectSize = (props) => {
   let { sizes, changeHandler, value, name } = props;
 
   return (
@@ -13,6 +12,6 @@ function SelectSize(props) {
       ))}
     </select>
   );
-}
+};
 
 export default SelectSize;

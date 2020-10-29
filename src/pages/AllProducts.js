@@ -20,8 +20,8 @@ class AllProducts extends Component {
 
   componentDidMount() {
     //./productdata.json
-    //fetch('./productdata.json')
-    fetch("./api/get-data")
+    fetch('./productdata.json')
+    //fetch("./api/get-data")
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {

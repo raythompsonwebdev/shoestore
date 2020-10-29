@@ -1,6 +1,6 @@
 import React from "react";
 
-function SelectGender(props) {
+const SelectGender = (props) => {
   let { genders, changeHandler, value, name } = props;
 
   return (
@@ -12,6 +12,6 @@ function SelectGender(props) {
       ))}
     </select>
   );
-}
+};
 
 export default SelectGender;

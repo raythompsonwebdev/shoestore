@@ -5,25 +5,25 @@ import { Link } from 'react-router-dom';
 import NotFound from "./NotFound";
 
 const ProductPage = ({ match }) => {
-  
-        
+
     const { name } = match.params;
-    
+
     const product = productData.find(item => item.name === name );
 
     const [productInfo, setProductInfo] = useState({likes:0});
 
     const otherProducts = productData.filter(item => item.name !== name );
-    
+
     useEffect(() => {
       const fetchData = async () => {
 
         //http://localhost:8000/api/product/${name}
-        // add "proxy":"http://localhost:8000/" property to package.json to avoid cors issue 
+        // add "proxy":"http://localhost:8000/" property to package.json to avoid cors issue
         // then remove http://localhost:8000
 
-          const result = await fetch(`/api/product/${name}`);
-          const body = await result.text();          
+          const result = await fetch(`./productdata.json/${name}`);
+          //const result = await fetch(`/api/product/${name}`);
+          const body = await result.text();
           setProductInfo(body);
       };
 
@@ -31,7 +31,7 @@ const ProductPage = ({ match }) => {
 
     }, [name]);
 
-    
+
 
     if(!product) return <NotFound/>
 
@@ -39,10 +39,10 @@ const ProductPage = ({ match }) => {
 
       <main id="content" className="clearfix">
         <h1>Product page</h1>
-        <figure 
-          id="productPagebox"           
+        <figure
+          id="productPagebox"
         >
-          <img id="productPageimg" src={product.imgUrl} alt={name} />          
+          <img id="productPageimg" src={product.imgUrl} alt={name} />
           <figcaption id="productPagedetails">
             <p id="productPagename">
               {' '}
@@ -53,16 +53,16 @@ const ProductPage = ({ match }) => {
               {product.price}
             </p>
             <p>{product.text}</p>
-            <img id="cartPageicon" src={product.cartImg} alt="shoppingcart icon" />  
-            
-            <LikesSection likes={productInfo.likes} productName={name} setProductInfo={setProductInfo} />            
-          </figcaption>
-          
-        </figure>
-        
-        <h1>Other Products</h1> 
+            <img id="cartPageicon" src={product.cartImg} alt="shoppingcart icon" />
 
-        <div id="other_products"> 
+            <LikesSection likes={productInfo.likes} productName={name} setProductInfo={setProductInfo} />
+          </figcaption>
+
+        </figure>
+
+        <h1>Other Products</h1>
+
+        <div id="other_products">
 
           {otherProducts.map((item , key) => (
             <figure className="other_product_box" key={key} >
@@ -75,14 +75,14 @@ const ProductPage = ({ match }) => {
                 <p className="other_product_price">
                   £
                   {item.price}
-                </p>       
+                </p>
                     <Link to={`/product/${item.name}`} >
                       <img className="other_cart_icon" src={item.cartImg} alt="shoppingcart icon" />
-                    </Link> 
+                    </Link>
               </figcaption>
-            </figure> 
-          ))} 
-        </div> 
+            </figure>
+          ))}
+        </div>
 
       </main>
 

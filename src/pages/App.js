@@ -19,8 +19,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //fetch('./productdata.json')
-    fetch("./api/get-data")
+    fetch('./productdata.json')
+    //fetch("./api/get-data")
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {

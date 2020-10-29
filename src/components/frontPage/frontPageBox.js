@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function FrontPageBox(props) {
+const FrontPageBox = (props) => {
+
   const {
     imgUrl, name, cartImg, price,
   } = props;

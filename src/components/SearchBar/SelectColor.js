@@ -1,7 +1,6 @@
 import React from "react";
 
-function SelectColor(props) {
-
+const SelectColor = (props) => {
   let { colors, changeHandler, value, name } = props;
 
   return (
@@ -13,6 +12,6 @@ function SelectColor(props) {
       ))}
     </select>
   );
-}
+};
 
 export default SelectColor;
