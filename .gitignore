@@ -54,13 +54,6 @@ shoestore-app/dist/
 shoestore-app/githeadfiles/
 shoestore-app/js/
 shoestore-app/js/qtip/
-shoestore-app/js/Respond-master/*
-shoestore-app/js/Respond-master/cross-domain/
-shoestore-app/js/Respond-master/demo/
-shoestore-app/js/Respond-master/dest/
-shoestore-app/js/Respond-master/src/
-shoestore-app/js/Respond-master/test/
-shoestore-app/js/Respond-master/test/unit/
 shoestore-app/js/html5shiv.min.js
 shoestore-app/js/jquery-3.2.1.js
 shoestore-app/js/jquery-ui-1.12.1.custom/
