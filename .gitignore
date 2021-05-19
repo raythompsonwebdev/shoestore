@@ -57,6 +57,7 @@ shoestore-app/js/qtip/
 shoestore-app/js/html5shiv.min.js
 shoestore-app/js/jquery-3.2.1.js
 shoestore-app/js/jquery-ui-1.12.1.custom/
+shoestore-app/js/jquery-ui-1.12.1.custom/package.json
 shoestore-app/js/modernizr-2.8.0.min.js
 shoestore-app/js/selectivizr-min.js
 shoestore-app/js/selectivizr.js
