@@ -1,0 +1,9 @@
+node_modules
+
+build/
+public/images/
+src/images/
+src/font/
+src/pages/Specials-2.js
+datafiles/
+
