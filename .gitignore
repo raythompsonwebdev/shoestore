@@ -47,8 +47,9 @@ Temporary Items
 .apdisk
 
 .git/
-.sass-cache/
 Files/
+build/
+datafiles/
 shoestore-app/dist/
 shoestore-app/githeadfiles/
 shoestore-app/js/
@@ -66,13 +67,6 @@ shoestore-app/js/jquery-ui-1.12.1.custom/
 shoestore-app/js/modernizr-2.8.0.min.js
 shoestore-app/js/selectivizr-min.js
 shoestore-app/js/selectivizr.js
-<<<<<<< HEAD
-shoestore-app/js/jquery-ui-1.12.1.custom/
-
-nbproject/
-=======
-node_modules/
->>>>>>> 4918270725b42617b2e24a2c42190109f8b78736
 shoestore-app/font/
 shoestore-app/images/
 shoestore-app/images/images/
@@ -88,7 +82,8 @@ shoestore-app/css/style.css.map
 .gitignore
 node_modules/
 .sass-cache/
-
+src/
+public/
 shoestore-app/icons/
-
+=
 error_log
