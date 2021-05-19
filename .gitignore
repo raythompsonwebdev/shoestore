@@ -54,7 +54,7 @@ shoestore-app/dist/
 shoestore-app/githeadfiles/
 shoestore-app/js/
 shoestore-app/js/qtip/
-shoestore-app/js/Respond-master/
+shoestore-app/js/Respond-master/*
 shoestore-app/js/Respond-master/cross-domain/
 shoestore-app/js/Respond-master/demo/
 shoestore-app/js/Respond-master/dest/
