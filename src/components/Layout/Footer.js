@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="Footer-header">
       <ul className="footer_nav">

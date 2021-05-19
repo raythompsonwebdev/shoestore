@@ -1,109 +1,100 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-class MainNav extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      visibility: false,
-    };
+const MainNav = () => {
 
-    this.toggleVisibility = this.toggleVisibility.bind(this);
-  }
+  const [visibility, setVisibility] = useState({ visibility: false });
 
-  toggleVisibility(e) {
+  const toggleVisibility = (e) => {
     e.preventDefault();
-    this.setState({ visibility: !this.state.visibility });
-  }
+    setVisibility(!visibility);
+  };
 
-  render() {
-    const { visibility } = this.state;
-    return (
-      <nav id="main-nav" role="navigation">
+  return (
+    <nav id="main-nav" role="navigation">
+      <span id="signin-box">
+        <Link to="/" title="">
+          Sign in
+        </Link>
+        <Link to="/" title="">
+          my account
+        </Link>
+        <Link to="/" title="">
+          help
+        </Link>
+      </span>
 
-        <span id="signin-box">
-          <Link to="/" title="">
-            Sign in
+      <ul id="inner-nav">
+        <li>
+          <Link to="/" title="Home Page">
+            Home
           </Link>
-          <Link to="/" title="">
-            my account
+        </li>
+        <li>
+          <Link to="/newproducts" title="">
+            New Products
           </Link>
-          <Link to="/" title="">
-            help
+        </li>
+        <li>
+          <Link to="/specials" title="">
+            Specials
           </Link>
-        </span>
+        </li>
+        <li>
+          <Link to="/allproducts" title="">
+            All Products
+          </Link>
+        </li>
+        <li>
+          <Link to="/faqs" title="">
+            FAQS
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" title="">
+            Contact
+          </Link>
+        </li>
+      </ul>
 
-        <ul id="inner-nav">
-          <li>
-            <Link to="/" title="Home Page">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/newproducts" title="">
-              New Products
-            </Link>
-          </li>
-          <li>
-            <Link to="/specials" title="">
-              Specials
-            </Link>
-          </li>
-          <li>
-            <Link to="/allproducts" title="">
-              All Products
-            </Link>
-          </li>
-          <li>
-            <Link to="/faqs" title="">
-              FAQS
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" title="">
-              Contact
-            </Link>
-          </li>
-        </ul>
+      <ul id="" className={`mobile-nav ${ !visibility ? "is-expanded" : " "}`}>
+        <li>
+          <Link to="/" title="Home Page">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/newproducts" title="New Product Page">
+            New Products
+          </Link>
+        </li>
+        <li>
+          <Link to="/specials" title="Specials Page">
+            Specials
+          </Link>
+        </li>
+        <li>
+          <Link to="/allproducts" title="All Products Page">
+            All Products
+          </Link>
+        </li>
+        <li>
+          <Link to="faqs" title="FAQ Page">
+            FAQS
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" title="Contact Page">
+            Contact
+          </Link>
+        </li>
+      </ul>
 
-        <ul id="" className={`mobile-nav ${visibility ? 'is-expanded' : ' '}`}>
-          <li>
-            <Link to="/" title="Home Page">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/newproducts" title="New Product Page">
-              New Products
-            </Link>
-          </li>
-          <li>
-            <Link to="/specials" title="Specials Page">
-              Specials
-            </Link>
-          </li>
-          <li>
-            <Link to="/allproducts" title="All Products Page">
-              All Products
-            </Link>
-          </li>
-          <li>
-            <Link to="faqs" title="FAQ Page">
-              FAQS
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" title="Contact Page">
-              Contact
-            </Link>
-          </li>
-        </ul>
-
-        <button id="menu-toggle-btn" type="button" onClick={this.toggleVisibility}>MENU</button>
-
-      </nav>
-    );
-  }
-}
+      <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>
+        MENU
+      </button>
+    </nav>
+  );
+};
 
 export default MainNav;

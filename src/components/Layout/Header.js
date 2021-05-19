@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../.././images/shoe-store-logo.png';
 
-function Header() {
+const Header = () => {
   return (
     <header>
       <figure id="logo">

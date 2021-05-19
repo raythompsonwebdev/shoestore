@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FrontPageBox from './frontPageBox';
 
-function FrontPageBoxes(props) {
+const FrontPageBoxes = (props) => {
   const { productData } = props;
 
   const NewProduct = productData.slice(0, 8).map((item) => (
@@ -28,7 +28,7 @@ function FrontPageBoxes(props) {
 }
 
 FrontPageBoxes.propTypes = {
-  productdata: PropTypes.array.isRequired,
+  productData: PropTypes.any.isRequired,
 };
 
 export default FrontPageBoxes;
