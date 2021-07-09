@@ -1,37 +1,51 @@
 {
-  "name": "shoestore-jquery",
-  "version": "1.0.0",
-  "description": "",
-  "main": "/showstore-app/index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "shoestore",
+  "version": "0.1.0",
+  "private": true,
+  "proxy":"http://localhost:8000/",
   "dependencies": {
-    "bower": "^1.8.12"
+    "bootstrap": "^4.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "express": "^4.17.1",
+    "fibers": "^3.1.1",
+    "flow-bin": "^0.128.0",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.4.1",
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.26.9",
+    "typescript": "^3.9.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "serve": "node server.js",
+    "flow": "flow"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "grunt": "^1.4.0",
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-htmlmin": "^3.1.0",
-    "grunt-contrib-jshint": "^3.0.0",
-    "grunt-contrib-nodeunit": "^3.0.0",
-    "grunt-contrib-qunit": "^4.0.0",
-    "grunt-contrib-sass": "^2.0.0",
-    "grunt-contrib-uglify": "^5.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-mkdir": "^1.1.0",
-    "grunt-responsive-images": "^1.10.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raythompsonwebdev/ShoeStore-Jquery.git"
-  },
-  "author": "raythompsonwebdev",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/raythompsonwebdev/ShoeStore-Jquery/issues"
-  },
-  "homepage": "https://github.com/raythompsonwebdev/ShoeStore-Jquery#readme"
+    "jquery": "^3.5.1",
+    "whatwg-fetch": "^3.3.1"
+  }
 }

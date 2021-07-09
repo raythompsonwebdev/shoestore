@@ -1,83 +1,9 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+node_modules
 
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-.git/
-Files/
 build/
+public/images/
+src/images/
+src/font/
+src/pages/Specials-2.js
 datafiles/
-shoestore-app/dist/
-shoestore-app/githeadfiles/
-shoestore-app/js/
-shoestore-app/js/qtip/
-shoestore-app/js/html5shiv.min.js
-shoestore-app/js/jquery-3.2.1.js
-shoestore-app/js/jquery-ui-1.12.1.custom/
-shoestore-app/js/jquery-ui-1.12.1.custom/package.json
-shoestore-app/js/modernizr-2.8.0.min.js
-shoestore-app/js/selectivizr-min.js
-shoestore-app/js/selectivizr.js
-shoestore-app/font/
-shoestore-app/images/
-shoestore-app/images/images/
-shoestore-app/imagemap-qtip.txt
-.htaccess
-shoestore-app/js/older-browser-scripts/
-shoestore-app/dist/
-shoestore-app/css/custom-theme/
-shoestore-app/css/custom-theme/images/
-shoestore-app/css/.sass-cache/
-shoestore-app/css/style.scss
-shoestore-app/css/style.css.map
-.gitignore
-node_modules/
-.sass-cache/
-src/
-public/
-shoestore-app/icons/
-=
-error_log
+

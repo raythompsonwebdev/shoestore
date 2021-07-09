@@ -10,25 +10,74 @@ MIT License
 
 ## Credits
 
- * jQuery validation plug-in 1.7
- 
- - http://bassistance.de/jquery-plugins/jquery-plugin-validation/
- -  http://docs.jquery.com/Plugins/Validation
- 
- Copyright (c) 2006 - 2008 Jörn Zaefferer - $Id: jquery.validate.js 6403 2009-06-17 14:27:16Z joern.zaefferer $
- 
- Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php
- http://www.gnu.org/licenses/gpl.html
-
- * jquery-ui-1.12.1.custom -  ! jQuery UI - v1.12.1 - 2017-10-02 http://jqueryui.com
-
  * qTip2 - Pretty powerful tooltips - v2.2.1,  http://qtip2.com, Copyright (c) 2015 Released under the MIT licenses, http://jquery.org/license
 
- * HTML5 Shiv 3.7.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+ 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
- * Modernizr 2.6.2 (Custom Build) | MIT & BSD
+## Available Scripts
 
- * selectivizr v1.0.2 - (c) Keith Clark, freely distributable under the terms of the MIT license.
+In the project directory, you can run:
 
- * Respond.js - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) - Copyright 2011: Scott Jehl, scottjehl.com - Licensed under the MIT license.
+### `npm start`
 
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
