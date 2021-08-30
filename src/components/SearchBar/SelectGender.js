@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const SelectGender = (props) => {
-  let { genders, changeHandler, value, name } = props;
+  const {
+    genders, changeHandler, value, name,
+  } = props;
 
   return (
     <select name={name} value={value} onChange={changeHandler}>

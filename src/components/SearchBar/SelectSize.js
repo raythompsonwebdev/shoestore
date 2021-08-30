@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const SelectSize = (props) => {
-  let { sizes, changeHandler, value, name } = props;
+  const {
+    sizes, changeHandler, value, name,
+  } = props;
 
   return (
     <select name={name} value={value} onChange={changeHandler}>

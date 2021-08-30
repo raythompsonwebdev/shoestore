@@ -14,6 +14,6 @@
 
 /** An empty service worker! */
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   /** An empty fetch handler! */
 });

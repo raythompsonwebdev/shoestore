@@ -5,7 +5,6 @@ import FindShoesAccord from '../components/FindShoesAccord';
 import FindShoes from '../components/frontPage/FindShoes';
 import FrontPageBoxes from '../components/frontPage/frontPageBoxes';
 
-
 class App extends Component {
   constructor() {
     super();
@@ -20,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch('./productdata.json')
-    //fetch("./api/get-data")
+      // fetch("./api/get-data")
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {
@@ -29,7 +28,7 @@ class App extends Component {
           return shoe;
         });
         this.setState({
-          productData: productData,
+          productData,
         });
       })
       .catch((error) => {
@@ -43,19 +42,18 @@ class App extends Component {
   }
 
   render() {
-    const {
-      visibility,
-      productData,
-    } = this.state;
+    const { visibility, productData } = this.state;
     return (
       <main id="content" className="clearfix">
-        <button id="sidebar-toggle-btn" type="button" onClick={this.sidebarVisibility}>
+        <button
+          id="sidebar-toggle-btn"
+          type="button"
+          onClick={this.sidebarVisibility}
+        >
           SIDE
         </button>
 
-        <aside
-          className={`left_bar ${visibility ? 'is-expanded' : ' '}`}
-        >
+        <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
           <FindShoes />
           <FindShoesAccord />
         </aside>

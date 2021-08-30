@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
 
 function SelectStyle(props) {
-
-  let { styles, changeHandler, value, name } = props;
+  const {
+    styles, changeHandler, value, name,
+  } = props;
 
   return (
     <select name={name} value={value} onChange={changeHandler}>

@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const SelectColor = (props) => {
-  let { colors, changeHandler, value, name } = props;
+  const {
+    colors, changeHandler, value, name,
+  } = props;
 
   return (
     <select name={name} value={value} onChange={changeHandler}>

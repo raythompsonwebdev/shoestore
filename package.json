@@ -2,24 +2,24 @@
   "name": "shoestore",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:8000/",
+  "proxy": "http://localhost:8000/",
   "dependencies": {
-    "bootstrap": "^4.5.0",
-    "eslint-config-airbnb": "^18.2.0",
+    "bootstrap": "^5.1.0",
+    "eslint-config-airbnb": "^18.2.1",
     "express": "^4.17.1",
-    "fibers": "^3.1.1",
-    "flow-bin": "^0.128.0",
-    "node-sass": "^4.14.1",
+    "fibers": "^5.0.0",
+    "flow-bin": "^0.158.0",
+    "node-sass": "^6.0.1",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-bootstrap": "^1.0.1",
-    "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.4.1",
-    "react-transition-group": "^4.4.1",
-    "sass": "^1.26.9",
-    "typescript": "^3.9.6"
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.1",
+    "react-scripts": "^4.0.3",
+    "react-transition-group": "^4.4.2",
+    "sass": "^1.38.2",
+    "typescript": "^4.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,11 +27,15 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "node server.js",
-    "flow": "flow"
+    "flow": "flow",
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": ["react-app", "@imaginary-cloud/react"]
   },
+  "prettier": "@imaginary-cloud/prettier-config",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -45,7 +49,8 @@
     ]
   },
   "devDependencies": {
-    "jquery": "^3.5.1",
-    "whatwg-fetch": "^3.3.1"
+    "eslint-plugin-react": "^7.25.0",
+    "jquery": "^3.6.0",
+    "whatwg-fetch": "^3.6.2"
   }
 }

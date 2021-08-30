@@ -19,9 +19,9 @@ class AllProducts extends Component {
   }
 
   componentDidMount() {
-    //./productdata.json
+    // ./productdata.json
     fetch('./productdata.json')
-    //fetch("./api/get-data")
+      // fetch("./api/get-data")
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {
@@ -30,7 +30,7 @@ class AllProducts extends Component {
           return shoe;
         });
         this.setState({
-          productData: productData,
+          productData,
         });
       })
       .catch((error) => {
@@ -74,7 +74,11 @@ class AllProducts extends Component {
       <main id="content" className="clearfix">
         <SearchBar labelname="All Products" />
 
-        <button id="sidebar-toggle-btn" type="button" onClick={this.sidebarVisibility}>
+        <button
+          id="sidebar-toggle-btn"
+          type="button"
+          onClick={this.sidebarVisibility}
+        >
           SIDE
         </button>
 

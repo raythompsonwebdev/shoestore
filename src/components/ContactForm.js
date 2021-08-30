@@ -15,7 +15,7 @@ class ContactForm extends Component {
     this.handleEmail = this.handleEmail.bind(this);
   }
 
-  //use this to replace below 3 functions?
+  // use this to replace below 3 functions?
   // handleChange(e) {
   //   const itemName = e.target.name;
   //   const itemValue = e.target.value;
@@ -41,8 +41,9 @@ class ContactForm extends Component {
   }
 
   submit(e) {
+    const { username, email, comments } = this.state;
     alert(
-      `You have entered Username:${this.state.username}, Email: ${this.state.email} & This comment: ${this.state.comments}. This form is under maintenance and will be ready to use shortly`,
+      `You have entered Username:${username}, Email: ${email} & This comment: ${comments}. This form is under maintenance and will be ready to use shortly`,
     );
 
     e.preventDefault();

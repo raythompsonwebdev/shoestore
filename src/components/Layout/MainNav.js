@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const MainNav = () => {
-
   const [visibility, setVisibility] = useState({ visibility: false });
 
   const toggleVisibility = (e) => {
@@ -57,7 +56,7 @@ const MainNav = () => {
         </li>
       </ul>
 
-      <ul id="" className={`mobile-nav ${ !visibility ? "is-expanded" : " "}`}>
+      <ul id="" className={`mobile-nav ${!visibility ? 'is-expanded' : ' '}`}>
         <li>
           <Link to="/" title="Home Page">
             Home

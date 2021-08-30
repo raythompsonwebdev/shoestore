@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ProductBox from "./productBox";
+import React from 'react';
+import PropTypes from 'prop-types';
+import ProductBox from './productBox';
 
 const ProductBoxes = (props) => {
   const { productData } = props;
@@ -22,7 +22,7 @@ const ProductBoxes = (props) => {
 };
 
 ProductBoxes.propTypes = {
-  productData: PropTypes.array.isRequired,
+  productData: PropTypes.object.isRequired,
 };
 
 export default ProductBoxes;

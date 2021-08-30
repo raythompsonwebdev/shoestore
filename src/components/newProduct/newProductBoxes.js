@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import NewProductBox from "./newProductBox";
+import React from 'react';
+import PropTypes from 'prop-types';
+import NewProductBox from './newProductBox';
 
 const newProductBoxes = (props) => {
   const { productData } = props;

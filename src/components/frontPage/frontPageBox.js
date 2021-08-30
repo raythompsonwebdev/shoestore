@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const FrontPageBox = (props) => {
-
   const {
     imgUrl, name, cartImg, price,
   } = props;
@@ -17,13 +16,13 @@ const FrontPageBox = (props) => {
           {name}
         </p>
         <p className="product_price">{price}</p>
-        <Link to={`/product/${name}`} >
+        <Link to={`/product/${name}`}>
           <img className="cart_icon" src={cartImg} alt="shoppingcart icon" />
         </Link>
       </figcaption>
     </figure>
   );
-}
+};
 
 FrontPageBox.propTypes = {
   name: PropTypes.string.isRequired,

@@ -15,9 +15,9 @@ class NewProducts extends Component {
   }
 
   componentDidMount() {
-    //./productdata.json
+    // ./productdata.json
     fetch('./productdata.json')
-    //fetch("./api/get-data")
+      // fetch("./api/get-data")
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {
@@ -26,7 +26,7 @@ class NewProducts extends Component {
           return shoe;
         });
         this.setState({
-          productData: productData,
+          productData,
         });
       })
       .catch((error) => {

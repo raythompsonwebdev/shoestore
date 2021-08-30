@@ -81,3 +81,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+db.createUser(
+  {
+    user: "mainUser",
+    pwd: "mainUserSuntzu",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+
+mongod --port 27017 -u "mainUser" -p "mainUserSuntzu" --authenticationDatabase "admin"
