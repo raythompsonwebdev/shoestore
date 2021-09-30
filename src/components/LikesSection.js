@@ -29,10 +29,4 @@ const LikesSection = ({ likes, productName, setProductInfo }) => {
   );
 };
 
-LikesSection.defaultProps = {
-  likes: defaultProps.any,
-  productName: defaultProps.any,
-  setProductInfo: defaultProps.any,
-};
-
 export default LikesSection;

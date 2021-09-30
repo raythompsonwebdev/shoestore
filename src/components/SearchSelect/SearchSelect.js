@@ -1,30 +1,23 @@
-import React from "react";
-import searchbarData2 from "./searchbarData2";
+import React from 'react';
+import searchbarData2 from './searchbarData2';
+
 class Selector extends React.Component {
-
-  state = {
-    value: " ",
+  constructor() {
+    super();
+    this.state = {
+      value: ' ',
+    };
   }
-  // constructor() {
-  //   super();
-
-  //   this.state = {
-  //     value: " ",
-  //   };
-
-  //   //this.changeHandler = this.changeHandler.bind(this);
-  // }
 
   changeHandler = (event) => {
-    const target = event.target;
-    const value = target.value; //value
-    //const name = target.name //name
+    const { target } = event;
+    const { value } = target;
 
     this.setState({
-      value: value,
+      value,
     });
 
-    this.props.changesOrders(value, "asc");
+    this.props.changesOrders(value, 'asc');
   };
 
   render() {
@@ -39,8 +32,8 @@ class Selector extends React.Component {
         >
           {searchbarData2.map((options, i) => (
             <optgroup label={options.value} key={i}>
-              {options.options.map((option, i) => (
-                <option key={i} value={option.value}>
+              {options.options.map((option, p) => (
+                <option key={p} value={option.value}>
                   {option.displayValue}
                 </option>
               ))}

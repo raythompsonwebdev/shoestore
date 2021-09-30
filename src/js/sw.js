@@ -13,7 +13,3 @@
 // limitations under the License.
 
 /** An empty service worker! */
-
-self.addEventListener('fetch', (event) => {
-  /** An empty fetch handler! */
-});

@@ -42,7 +42,7 @@ class ContactForm extends Component {
 
   submit(e) {
     const { username, email, comments } = this.state;
-    alert(
+    console.log(
       `You have entered Username:${username}, Email: ${email} & This comment: ${comments}. This form is under maintenance and will be ready to use shortly`,
     );
 
