@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accordion, Button } from 'react-bootstrap';
 
-const FindShoesAccord = () => (
+const FindShoesAccord = () => {
   <Accordion>
     <nav id="acc_nav">
       <div id="accContainer">
@@ -103,7 +103,7 @@ const FindShoesAccord = () => (
         </Accordion.Collapse>
       </div>
     </nav>
-  </Accordion>
-);
+  </Accordion>;
+};
 
 export default FindShoesAccord;

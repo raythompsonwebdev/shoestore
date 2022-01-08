@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ProductBoxes from '../components/Product/productBoxes';
-import FindShoesAccord from '../components/FindShoesAccord';
-import SearchBar from '../components/SearchBar/SearchBar';
-import SearchSelect from '../components/SearchSelect/SearchSelect';
+// import FindShoesAccord from '../components/FindShoesAccord';
+// import SearchBar from '../components/SearchBar/SearchBar';
+// import SearchSelect from '../components/SearchSelect/SearchSelect';
 
 class Specials extends Component {
   constructor() {
@@ -54,6 +54,7 @@ class Specials extends Component {
 
   render() {
     const {
+      // eslint-disable-next-line no-unused-vars
       visibility, orderByVal, orderDir, productData,
     } = this.state;
 
@@ -76,11 +77,11 @@ class Specials extends Component {
 
     return (
       <main id="content" className="clearfix">
-        <SearchBar
+        {/* <SearchBar
           labelname="Specials"
           changesOrders={this.changesOrders}
           value={value}
-        />
+        /> */}
 
         <button
           id="sidebar-toggle-btn"
@@ -91,15 +92,15 @@ class Specials extends Component {
         </button>
 
         <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
-          <FindShoesAccord />
+          {/* <FindShoesAccord /> */}
         </aside>
 
         <main id="content_section" role="main">
-          <SearchSelect
+          {/* <SearchSelect
             orderByVal={orderByVal}
             orderDir={orderDir}
             changesOrders={this.changesOrders}
-          />
+          /> */}
           <br />
 
           <ProductBoxes productData={filteredApts} />

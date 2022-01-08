@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const NewProductBox = (props) => {
+function NewProductBox(props) {
   const {
     imgUrl, name, cartImg, price, text,
   } = props;
@@ -33,7 +33,7 @@ const NewProductBox = (props) => {
       </figcaption>
     </figure>
   );
-};
+}
 
 NewProductBox.propTypes = {
   name: PropTypes.string.isRequired,

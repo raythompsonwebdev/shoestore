@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NewProductBoxes from '../components/newProduct/newProductBoxes';
-import FindShoesAccord from '../components/FindShoesAccord';
-import SearchBar from '../components/SearchBar/SearchBar';
+// import FindShoesAccord from '../components/FindShoesAccord';
+// import SearchBar from '../components/SearchBar/SearchBar';
 
 class NewProducts extends Component {
   constructor() {
@@ -16,8 +16,8 @@ class NewProducts extends Component {
 
   componentDidMount() {
     // ./productdata.json
-    fetch('./productdata.json')
-      // fetch("./api/get-data")
+    //fetch('./productdata.json')
+      fetch("./api/get-data")
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {
@@ -44,7 +44,7 @@ class NewProducts extends Component {
 
     return (
       <main id="content" className="clearfix">
-        <SearchBar labelname="New Product" />
+        {/* <SearchBar labelname="New Product" /> */}
 
         <button
           id="sidebar-toggle-btn"
@@ -55,7 +55,7 @@ class NewProducts extends Component {
         </button>
 
         <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
-          <FindShoesAccord />
+          {/* <FindShoesAccord /> */}
         </aside>
 
         <main id="content_section">

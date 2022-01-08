@@ -1,4 +1,4 @@
-const genders = [
+const searchbarData = [
   {
     name: 'genders',
     options: [
@@ -9,9 +9,6 @@ const genders = [
       { id: 5, value: 'boy', displayValue: 'Boys' },
     ],
   },
-];
-
-const styles = [
   {
     name: 'styles',
     options: [
@@ -22,9 +19,6 @@ const styles = [
       { id: 5, value: 'boots', displayValue: 'Fur Lined Boots' },
     ],
   },
-];
-
-const sizes = [
   {
     name: 'sizes',
     options: [
@@ -37,9 +31,6 @@ const sizes = [
       { id: 7, value: 'nine', displayValue: 'Nine' },
     ],
   },
-];
-
-const colors = [
   {
     name: 'colors',
     options: [
@@ -49,12 +40,8 @@ const colors = [
       { id: 4, value: 'brown', displayValue: 'Brown' },
       { id: 5, value: 'beige', displayValue: 'Beige' },
     ],
-  },
+  }
 ];
 
-export default {
-  genders,
-  sizes,
-  colors,
-  styles,
-};
+
+export default searchbarData;
