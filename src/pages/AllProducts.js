@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProductBoxes from '../components/Product/productBoxes';
 //import FindShoesAccord from '../components/FindShoesAccord';
-//import SearchBar from '../components/SearchBar/SearchBar';
+import SearchBar from '../components/SearchBar/SearchBar';
 //import SearchSelect from '../components/SearchSelect/SearchSelect';
 
 class AllProducts extends Component {
@@ -19,10 +19,10 @@ class AllProducts extends Component {
   }
 
   componentDidMount() {
-    // ./productdata.json
-    fetch('./productdata.json')
-      // fetch("./api/get-data")
-      .then((response) => response.json())
+
+    const fetchProducts = fetch(`/api/data/`);
+
+      fetchProducts.then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {
           shoe.prodId = this.state.lastIndex;
@@ -73,7 +73,7 @@ class AllProducts extends Component {
 
     return (
       <main id="content" className="clearfix">
-        {/* <SearchBar labelname="All Products" /> */}
+        <SearchBar labelname="All Products" />
 
         <button
           id="sidebar-toggle-btn"

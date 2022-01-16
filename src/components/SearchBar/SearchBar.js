@@ -1,79 +1,79 @@
-import React from 'react';
+import React, { useState } from 'react';
 import searchbarData from './searchbarData';
 import SelectGender from './SelectGender';
 import SelectSize from './SelectSize';
 import SelectStyle from './SelectStyle';
 import SelectColor from './SelectColor';
 
-const {
+const [
   genders,
   sizes,
   colors,
   styles,
-} = searchbarData;
+ ] = searchbarData;
 
-class SearchBar extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      genderVal: ' ',
-      styleVal: ' ',
-      sizeVal: ' ',
-      colorVal: ' ',
-    };
-    this.changeHandler = this.changeHandler.bind(this);
-    this.submit = this.submit.bind(this);
-  }
+console.log(genders)
 
-  changeHandler = (event) => {
+function SearchBar () {
+
+  const [genderVal, setGenderVal] = useState(' ');
+  const [styleVal, setStyleVal] = useState(' ');
+  const [sizeVal, setSizeVal] = useState(' ');
+  const [colorVal, setColorVal] = useState(' ');
+  const [change, setChange] = useState({});
+
+
+  const changeHandler = (event) => {
+
+    console.log(change)
     const { target } = event;
     const { value, name } = target;
-    this.setState({
+    setChange({
       [name]: value,
     });
   };
 
-  submit = (event) => {
+  const submit = (event) => {
     event.preventDefault();
     const tempVal = {
-      genderVal: this.state.genderVal,
-      styleVal: this.state.styleVal,
-      sizeVal: this.state.sizeVal,
-      colorVal: this.state.colorVal,
+      genderVal: setGenderVal(event.target.value),
+      styleVal: setStyleVal(event.target.value),
+      sizeVal: setSizeVal(event.target.value),
+      colorVal: setColorVal(event.target.value),
     };
     console.log(
       `You have entered Gender:${tempVal.genderVal}, Style: ${tempVal.styleVal}, Size: ${tempVal.sizeVal} & Colour :${tempVal.colorVal}. This form is under maintenance and will be ready to use shortly`,
     );
   };
 
-  render() {
+
     return (
       <aside id="search_category">
-        <form id="search_category_form" onSubmit={this.submit}>
-          <label>{this.props.labelname}</label>
+        <form id="search_category_form" onSubmit={submit}>
+          <label></label>
           <SelectGender
             name="genderVal"
-            genders={genders}
-            value={this.state.genderVal}
-            changeHandler={this.changeHandler}
+            genders={genders.options}
+            value={genderVal}
+            changeHandler={changeHandler}
           />
           <SelectStyle
             name="styleVal"
             styles={styles}
-            value={this.state.styleVal}
-            changeHandler={this.changeHandler}
+            value={styleVal}
+            changeHandler={changeHandler}
           />
           <SelectSize
             name="sizeVal"
             sizes={sizes}
-            value={this.state.sizeVal}
-            changeHandler={this.changeHandler}
+            value={sizeVal}
+            changeHandler={changeHandler}
           />
           <SelectColor
             name="colorVal"
             colors={colors}
-            value={this.state.colorVal}
-            changeHandler={this.changeHandler}
+            value={colorVal}
+            changeHandler={changeHandler}
           />
           <button name="find" className="search_category_btn" type="submit">
             Go
@@ -81,7 +81,7 @@ class SearchBar extends React.Component {
         </form>
       </aside>
     );
-  }
+
 }
 
 export default SearchBar;
