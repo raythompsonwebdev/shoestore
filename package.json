@@ -60,6 +60,7 @@
   "devDependencies": {
     "eslint-plugin-react": "^7.28.0",
     "mini-css-extract-plugin": "2.4.5",
+    "react-bootstrap": "^2.1.1",
     "react-router-dom": "^6.2.1",
     "whatwg-fetch": "^3.6.2"
   }

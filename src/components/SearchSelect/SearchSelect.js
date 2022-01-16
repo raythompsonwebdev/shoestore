@@ -30,6 +30,7 @@ class Selector extends React.Component {
           value={this.state.value}
           onChange={this.changeHandler}
         >
+
           {searchbarData2.map((options, i) => (
             <optgroup label={options.value} key={i}>
               {options.options.map((option, p) => (

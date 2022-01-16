@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import BannerImg from '../components/frontPage/BannerImg';
-//import FindShoesAccord from '../components/FindShoesAccord';
+import FindShoesAccord from '../components/FindShoesAccord';
 import FindShoes from '../components/frontPage/FindShoes';
 import FrontPageBoxes from '../components/frontPage/frontPageBoxes';
 //import axios from "axios";
@@ -67,7 +67,7 @@ class App extends Component {
 
         <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
           <FindShoes />
-          {/* <FindShoesAccord /> */}
+          <FindShoesAccord />
         </aside>
 
         <main id="content_section" className="group">

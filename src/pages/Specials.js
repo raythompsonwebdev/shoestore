@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ProductBoxes from '../components/Product/productBoxes';
-//import FindShoesAccord from '../components/FindShoesAccord';
+import FindShoesAccord from '../components/FindShoesAccord';
 import SearchBar from '../components/SearchBar/SearchBar';
-//import SearchSelect from '../components/SearchSelect/SearchSelect';
+import SearchSelect from '../components/SearchSelect/SearchSelect';
 
 class Specials extends Component {
   constructor() {
@@ -91,15 +91,15 @@ class Specials extends Component {
         </button>
 
         <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
-          {/* <FindShoesAccord /> */}
+          <FindShoesAccord />
         </aside>
 
         <main id="content_section" role="main">
-          {/* <SearchSelect
+          <SearchSelect
             orderByVal={orderByVal}
             orderDir={orderDir}
             changesOrders={this.changesOrders}
-          /> */}
+          />
           <br />
 
           <ProductBoxes productData={filteredApts} />

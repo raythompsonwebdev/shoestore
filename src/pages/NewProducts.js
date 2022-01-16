@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NewProductBoxes from '../components/newProduct/newProductBoxes';
-//import FindShoesAccord from '../components/FindShoesAccord';
+import FindShoesAccord from '../components/FindShoesAccord';
 import SearchBar from '../components/SearchBar/SearchBar';
 
 class NewProducts extends Component {
@@ -55,7 +55,7 @@ class NewProducts extends Component {
         </button>
 
         <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
-          {/* <FindShoesAccord /> */}
+          <FindShoesAccord />
         </aside>
 
         <main id="content_section">

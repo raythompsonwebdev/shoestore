@@ -12,7 +12,6 @@ const [
   styles,
  ] = searchbarData;
 
-console.log(genders)
 
 function SearchBar () {
 
