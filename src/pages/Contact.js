@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ContactForm from '../components/ContactForm';
 
-class Contact extends Component {
-  render() {
+function Contact() {
+
     return (
       <main id="content" className="clearfix" role="main">
         <h1>Contact Us</h1>
@@ -60,7 +60,7 @@ class Contact extends Component {
         </aside>
       </main>
     );
-  }
+
 }
 
 export default Contact;

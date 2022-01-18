@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const FrontPageBox = (props) => {
+function FrontPageBox(props) {
   const {
     imgUrl, name, cartImg, price,
   } = props;
@@ -22,7 +22,7 @@ const FrontPageBox = (props) => {
       </figcaption>
     </figure>
   );
-};
+}
 
 FrontPageBox.propTypes = {
   name: PropTypes.string.isRequired,

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FrontPageBox from './frontPageBox';
 
-const FrontPageBoxes = (props) => {
+function FrontPageBoxes(props) {
   const { productData } = props;
 
   const NewProduct = productData
@@ -18,7 +18,7 @@ const FrontPageBoxes = (props) => {
     ));
 
   return <div className="product_boxes">{NewProduct}</div>;
-};
+}
 
 FrontPageBoxes.propTypes = {
   productData: PropTypes.any.isRequired,

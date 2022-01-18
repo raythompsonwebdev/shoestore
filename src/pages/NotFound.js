@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class NotFound extends Component {
-  render() {
+function NotFound() {
+
     return (
       <main id="content" role="main" style={{ minHeight: '400px' }}>
         <h1>
@@ -11,7 +11,7 @@ class NotFound extends Component {
         </h1>
       </main>
     );
-  }
+
 }
 
 export default NotFound;

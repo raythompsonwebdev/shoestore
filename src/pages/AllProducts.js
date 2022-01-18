@@ -19,10 +19,10 @@ class AllProducts extends Component {
   }
 
   componentDidMount() {
-    // ./productdata.json
-    fetch('./productdata.json')
-      // fetch("./api/get-data")
-      .then((response) => response.json())
+
+    const fetchProducts = fetch(`/api/data/`);
+
+      fetchProducts.then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {
           shoe.prodId = this.state.lastIndex;
@@ -52,6 +52,7 @@ class AllProducts extends Component {
 
   render() {
     const {
+      // eslint-disable-next-line no-unused-vars
       visibility, orderByVal, orderDir, productData,
     } = this.state;
     let filteredApts = productData;

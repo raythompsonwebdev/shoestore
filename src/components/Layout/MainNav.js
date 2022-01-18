@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const MainNav = () => {
+function MainNav() {
   const [visibility, setVisibility] = useState({ visibility: false });
-
   const toggleVisibility = (e) => {
     e.preventDefault();
     setVisibility(!visibility);
@@ -89,11 +88,9 @@ const MainNav = () => {
         </li>
       </ul>
 
-      <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>
-        MENU
-      </button>
+      <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>MENU</button>
     </nav>
   );
-};
+}
 
 export default MainNav;

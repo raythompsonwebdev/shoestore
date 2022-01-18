@@ -15,10 +15,10 @@ class NewProducts extends Component {
   }
 
   componentDidMount() {
-    // ./productdata.json
-    fetch('./productdata.json')
-      // fetch("./api/get-data")
-      .then((response) => response.json())
+
+    const fetchProducts = fetch(`/api/data/`);
+
+      fetchProducts.then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe) => {
           shoe.prodId = this.state.lastIndex;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ProductBox from './productBox';
 
-const ProductBoxes = (props) => {
+function ProductBoxes(props) {
   const { productData } = props;
 
   const Product = productData
@@ -19,7 +19,7 @@ const ProductBoxes = (props) => {
     ));
 
   return <div className="product_boxes">{Product}</div>;
-};
+}
 
 ProductBoxes.propTypes = {
   productData: PropTypes.object.isRequired,

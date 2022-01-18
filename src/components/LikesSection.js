@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LikesSection = ({ likes, productName, setProductInfo }) => {
+function LikesSection({ likes, productName, setProductInfo }) {
   const likeProduct = async () => {
     const response = await fetch(`/api/product/${productName}/likes`, {
       method: 'post',
@@ -27,6 +27,6 @@ const LikesSection = ({ likes, productName, setProductInfo }) => {
       </p>
     </div>
   );
-};
+}
 
 export default LikesSection;

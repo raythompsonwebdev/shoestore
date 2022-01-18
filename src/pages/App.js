@@ -4,6 +4,7 @@ import BannerImg from '../components/frontPage/BannerImg';
 import FindShoesAccord from '../components/FindShoesAccord';
 import FindShoes from '../components/frontPage/FindShoes';
 import FrontPageBoxes from '../components/frontPage/frontPageBoxes';
+//import axios from "axios";
 
 class App extends Component {
   constructor() {
@@ -17,10 +18,21 @@ class App extends Component {
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
   }
 
+
+
   componentDidMount() {
-    fetch('./productdata.json')
-      // fetch("./api/get-data")
-      .then((response) => response.json())
+
+      const fetchProducts = fetch(`/api/data/`);
+
+      fetchProducts.then((response) => {
+
+        if(!response.ok){
+          throw new Error("no data provided");
+        }
+
+        return response.json()
+
+      })
       .then((data) => {
         const productData = data.map((shoe) => {
           shoe.prodId = this.state.lastIndex;

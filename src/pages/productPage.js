@@ -5,7 +5,7 @@ import LikesSection from '../components/LikesSection';
 
 import NotFound from './NotFound';
 
-const ProductPage = ({ match }) => {
+function ProductPage({ match }) {
   const { name } = match.params;
 
   const product = productData.find((item) => item.name === name);
@@ -92,6 +92,6 @@ const ProductPage = ({ match }) => {
       </div>
     </main>
   );
-};
+}
 
 export default ProductPage;
