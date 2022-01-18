@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 function SelectSize(props) {
-  const {
-    sizes, changeHandler, value, name,
-  } = props;
+  // eslint-disable-next-line react/prop-types
+  const { sizes, changeHandler, value, name } = props;
 
   return (
     <select name={name} value={value} onChange={changeHandler}>
@@ -15,5 +15,10 @@ function SelectSize(props) {
     </select>
   );
 }
+
+SelectSize.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  sizes: PropTypes.object.isRequired,
+};
 
 export default SelectSize;

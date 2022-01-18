@@ -1,19 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function NewProductBox(props) {
-  const {
-    imgUrl, name, cartImg, price, text,
-  } = props;
+  const { imgUrl, name, cartImg, price, text } = props;
   return (
     <figure className="product-box_longer">
       <img className="product_boximg_longer" src={imgUrl} alt={name} />
       <figcaption className="product_boxdetails_longer">
-        <h1>
-          Product :
-          {name}
-        </h1>
+        <h1>Product :{name}</h1>
         <p>{text}</p>
         <span className="price_longer">
           Price :£
@@ -26,8 +21,7 @@ function NewProductBox(props) {
               src={cartImg}
               alt="shopping-cart"
             />
-          </Link>
-          {' '}
+          </Link>{" "}
           Add to Cart
         </span>
       </figcaption>

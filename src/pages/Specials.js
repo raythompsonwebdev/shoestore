@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import ProductBoxes from '../components/Product/productBoxes';
-import FindShoesAccord from '../components/FindShoesAccord';
-import SearchBar from '../components/SearchBar/SearchBar';
-import SearchSelect from '../components/SearchSelect/SearchSelect';
+import React, { Component } from "react";
+import ProductBoxes from "../components/Product/productBoxes";
+import FindShoesAccord from "../components/FindShoesAccord";
+import SearchBar from "../components/SearchBar/SearchBar";
+import SearchSelect from "../components/SearchSelect/SearchSelect";
 
 class Specials extends Component {
   constructor() {
@@ -10,8 +10,8 @@ class Specials extends Component {
 
     this.state = {
       productData: [],
-      orderDir: 'asc',
-      orderByVal: 'all',
+      orderDir: "asc",
+      orderByVal: "all",
       lastIndex: 0,
       visibility: false,
     };
@@ -21,14 +21,17 @@ class Specials extends Component {
   }
 
   componentDidMount() {
-    //const fetchProducts = fetch(`/api/data/`);
+    // const fetchProducts = fetch(`/api/data/`);
     const fetchProducts = fetch(`./productdata.json`);
 
-    fetchProducts.then((response) => response.json())
+    fetchProducts
+      .then((response) => response.json())
       .then((data) => {
+        const { lastIndex } = { ...this.state };
         const productData = data.map((shoe) => {
-          shoe.prodId = this.state.lastIndex;
-          this.setState({ lastIndex: this.state.lastIndex + 1 });
+          // eslint-disable-next-line no-param-reassign
+          shoe.prodId = lastIndex;
+          this.setState({ lastIndex: lastIndex + 1 });
           return shoe;
         });
         this.setState({
@@ -36,6 +39,7 @@ class Specials extends Component {
         });
       })
       .catch((error) => {
+        // eslint-disable-next-line no-console
         console.log(error);
       });
   }
@@ -49,25 +53,24 @@ class Specials extends Component {
 
   sidebarVisibility(e) {
     e.preventDefault();
-    this.setState({ visibility: !this.state.visibility });
+    const { visibility } = { ...this.state };
+    this.setState({ visibility: !visibility });
   }
 
   render() {
-    const {
-      // eslint-disable-next-line no-unused-vars
-      visibility, orderByVal, orderDir, productData,
-    } = this.state;
+    // eslint-disable-next-line prefer-destructuring
+    const { visibility, orderByVal, orderDir, productData } = this.state;
 
     let filteredApts = productData;
     const value = orderByVal;
 
     filteredApts = filteredApts.filter((item) => {
       if (
-        item.color === value
-        || item.style === value
-        || item.size === value
-        || item.gender === value
-        || item.price === value
+        item.color === value ||
+        item.style === value ||
+        item.size === value ||
+        item.gender === value ||
+        item.price === value
       ) {
         return item;
       }
@@ -91,7 +94,7 @@ class Specials extends Component {
           SIDE
         </button>
 
-        <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
+        <aside className={`left_bar ${visibility ? "is-expanded" : " "}`}>
           <FindShoesAccord />
         </aside>
 

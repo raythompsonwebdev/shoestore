@@ -20,8 +20,8 @@ function Contact() {
           <ContactForm />
         </section>
 
-        <aside className="contact_textbox">
-          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+        <aside className="contact_sidebar">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
           <p>
             Morbi vel rutrum ante. Vivamus adipiscing tincidunt purus at
             adipiscing. Proin orci metus, gravida in cursus et, egestas in leo.
@@ -29,7 +29,7 @@ function Contact() {
             tincidunt massa porta.
           </p>
           <br />
-          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
           <p>
             Nulla quis urna nisl. Nulla dolor magna, pretium ac elementum nec,
             tristique eu sem. Sed lectus arcu, ultrices at mattis id, elementum
@@ -37,10 +37,10 @@ function Contact() {
             vel.
           </p>
           <br />
-          <h1>
+          <h2>
             Integer pellentesque lorem quis libero consectetur ac egestas magna
             tincidunt.
-          </h1>
+          </h2>
           <p>
             Vivamus sit amet ipsum a neque elementum imperdiet vitae nec velit.
             Cras id diam sapien. Phasellus malesuada congue est, eget vulputate
@@ -48,7 +48,7 @@ function Contact() {
             vitae purus et leo vulputate ultrices eget vel odio.
           </p>
           <br />
-          <h1>Sed sagittis aliquet risus tempor varius.</h1>
+          <h2>Sed sagittis aliquet risus tempor varius.</h2>
           <p>
             Integer eget dui vel tortor fermentum tincidunt. Nullam vitae odio
             nec lorem porttitor tristique porta id sapien. Mauris ornare leo at

@@ -1,10 +1,10 @@
 // @flow
-import React, { Component } from 'react';
-import BannerImg from '../components/frontPage/BannerImg';
-import FindShoesAccord from '../components/FindShoesAccord';
-import FindShoes from '../components/frontPage/FindShoes';
-import FrontPageBoxes from '../components/frontPage/frontPageBoxes';
-//import axios from "axios";
+import React, { Component } from "react";
+import BannerImg from "../components/frontPage/BannerImg";
+import FindShoesAccord from "../components/FindShoesAccord";
+import FindShoes from "../components/frontPage/FindShoes";
+import FrontPageBoxes from "../components/frontPage/frontPageBoxes";
+// import axios from "axios";
 
 class App extends Component {
   constructor() {
@@ -18,26 +18,23 @@ class App extends Component {
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
   }
 
-
-
   componentDidMount() {
+    // const fetchProducts = fetch(`/api/data/`);
+    const fetchProducts = fetch(`./productdata.json`);
 
-      //const fetchProducts = fetch(`/api/data/`);
-      const fetchProducts = fetch(`./productdata.json`);
-
-      fetchProducts.then((response) => {
-
-        if(!response.ok){
+    fetchProducts
+      .then((response) => {
+        if (!response.ok) {
           throw new Error("no data provided");
         }
-
-        return response.json()
-
+        return response.json();
       })
       .then((data) => {
+        const { lastIndex } = { ...this.state };
         const productData = data.map((shoe) => {
-          shoe.prodId = this.state.lastIndex;
-          this.setState({ lastIndex: this.state.lastIndex + 1 });
+          // eslint-disable-next-line no-param-reassign
+          shoe.prodId = lastIndex;
+          this.setState({ lastIndex: lastIndex + 1 });
           return shoe;
         });
         this.setState({
@@ -45,17 +42,21 @@ class App extends Component {
         });
       })
       .catch((error) => {
+        // eslint-disable-next-line no-console
         console.log(error);
       });
   }
 
   sidebarVisibility(e) {
     e.preventDefault();
-    this.setState({ visibility: !this.state.visibility });
+
+    const { visibility } = { ...this.state };
+
+    this.setState({ visibility: !visibility });
   }
 
   render() {
-    const { visibility, productData } = this.state;
+    const { visibility, productData } = { ...this.state };
     return (
       <main id="content" className="clearfix">
         <button
@@ -66,7 +67,7 @@ class App extends Component {
           SIDE
         </button>
 
-        <aside className={`left_bar ${visibility ? 'is-expanded' : ' '}`}>
+        <aside className={`left_bar ${visibility ? "is-expanded" : " "}`}>
           <FindShoes />
           <FindShoesAccord />
         </aside>

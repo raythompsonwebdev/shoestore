@@ -144,7 +144,7 @@
         display: block;
         height: 45px;
         float: none;
-        border-bottom: 2px solid $color-black;
+        margin-bottom:0.15em;
 
         a {
           font-size: 1.1em;
@@ -157,6 +157,7 @@
           text-align: center;
           color: $color-black;
           background-color: $color-orange;
+          text-decoration:none;
 
           &:hover {
             text-decoration: none;
@@ -206,25 +207,23 @@
   /*Searchbar*/
   #search_category {
     display: block;
-    height: 50px;
+    height: auto;
     width: 100%;
     padding: 0;
     margin: 1% 0;
     clear: both;
 
     button.search_category_btn {
-      width: 12%;
+      width: 100%;
       font-family: $font-list;
       height: 35px;
       line-height: 35px;
-      font-size: 1em;
+      font-size: 1.25em;
       margin: 0;
       background-color: $color-black;
       color: $color-white;
       border: 0;
       padding: 0;
-      float: right;
-      display: block;
       text-align: center;
       @include transitioner(all ease-in-out 0.2s);
       font-weight:bold;
@@ -244,25 +243,24 @@
       padding: 0.5em;
       height: auto;
       font-family: $font-list;
-      -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-      flex-flow: row;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      gap:0.5em;
+      margin-bottom:0.5em;
 
       label {
         font-size: 1em;
-        width: 20%;
+        width: 100%;
         line-height: 35px;
         margin: 0;
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
         flex: 0 1 auto;
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
         text-indent: 0.1em;
         font-weight:bold;
@@ -273,21 +271,22 @@
       }
 
       select{
-        font-family: arial, sans-serif;
+        font-family: $font-list;
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
         flex: 0 1 auto;
-        width: 15.5%;
-        font-size: 0.7em;
-        margin: 0 0.2em 0 0;
+        width: 100%;
+        font-size: 0.85em;
+        margin: 0.25em 0;
         color: $content-color2;
-        height: 35px;
+        line-height: 35px;
+        height:35px;
       }
     }
   }
 
   /*Content*/
-  #content {
+   main#content {
     height: auto;
     width: 100%;
     margin: 0;
@@ -498,18 +497,18 @@
       line-height: 1.6em;
     }
 
-    aside.contact_textbox {
+    aside.contact_sidebar {
       width: 96.5%;
       height: auto;
       display: block;
       font-family: $font-list;
-      float: left;
+      float: none;
       background-color: $color-white-bg;
       padding: 1%;
       border: 2px $content-color1 solid;
       margin-bottom: 5%;
 
-      h1 {
+      h2 {
         font-size: 1em;
         color: $header-color;
         font-weight: bold;
@@ -529,9 +528,9 @@
     }
 
     #contact_form {
-      width: 94%;
-      height: 390px;
-      float: left;
+      width: 98%;
+      height: auto;
+      float: none;
       display: block;
     }
 
@@ -543,6 +542,7 @@
       ul {
         height: auto;
         display: block;
+        padding: 0;
 
         li,
         li:nth-of-type(3) {
@@ -553,12 +553,11 @@
           display:flex;
 
           label {
-            width: 15%;
-            float: left;
+            width: 25%;
             line-height: 40px;
             height: 40px;
             font-size: 1em;
-            text-align: center;
+            text-align: left;
             margin:0;
           }
 
@@ -585,8 +584,8 @@
             font-family: $font-list;
             margin: 0;
             height: 45px;
-            width: 20%;
-            display: inline-block;
+            width: 75%;
+            display: block;
             font-size: 1.2em;
             line-height: 30px;
             background-color: $color-orange;
@@ -606,14 +605,6 @@
       }
     }
 
-    main#context {
-      width: 95%;
-      margin: 0;
-      font-family: $font-list;
-      float: left;
-      padding: 0 0.75em;
-    }
-
     span.context_title {
       font-weight: bold;
       color: $color-orange;
@@ -630,17 +621,16 @@
       form.search_products{
         margin-bottom:1em;
         select{
-          font-family: arial, sans-serif;
-          width: 35%;
+          font-family: $font-list;
+          width: 100%;
           font-size: 0.9em;
-          margin: 0 0.25em 0 0;
+          margin: 0.5em 0;
           color: $content-color2;
           height: 30px;
         }
       }
 
       h1 {
-        font-family: $font-list;
         height: 40px;
         background: none;
         color: $content-color2;
@@ -701,6 +691,7 @@
             height: auto;
             line-height: 30px;
             width: auto;
+            margin:0;
           }
         }
 
@@ -719,7 +710,7 @@
           height:auto;
           padding-top: 30px;
           ul {
-            width: 80%;
+            width: 90%;
             padding:0;
             list-style: none;
             margin: auto;
@@ -735,12 +726,13 @@
                 width: 100%;
                 margin-bottom: 0.2em;
                 color: $color-white;
-                font-size: 0.7em;
+                font-size: 0.65em;
                 line-height: 22px;
                 text-align: center;
                 @include transitioner(all ease 0.2s);
                 text-transform: uppercase;
                 @include bordrady(5px);
+                text-decoration:none;
 
                 &:hover {
                   background-color: $color-white;
@@ -1073,24 +1065,96 @@
       background-color: $color-white;
 
       #acc_nav {
+        margin: auto;
+        height: auto;
+        width: 94%;
+        color: $content-color1a;
+        font-family: $font-list;
+
+        span {
+          width: 8%;
+        }
+
         div#accContainer {
 
+          /* Style the buttons that are used to open and close the accordion panel */
 
+          button{
+            font-size:0.9rem;
+            padding: 0;
+            text-align: left;
+            border-radius: unset;
+            text-transform: uppercase;
+            font-family: $font-list;
+            cursor: pointer;
+            background-color: #eee;
+            line-height:35px;
+            height:35px;
+            text-indent:0.2em;
+
+          }
+
+          button:focus{
+            box-shadow:none;
+          }
+          /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+          .accordion:hover,
+          .active {
+            background-color: #ccc;
+          }
+          /* Style the accordion panel. Note: hidden by default */
           .panel {
             padding: 0;
+            background-color: $color-white;
+            overflow: hidden;
+            -webkit-transform: scaleY(1);
+            -o-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: top;
+            -o-transform-origin: top;
+            -ms-transform-origin: top;
+            transform-origin: top;
+            -webkit-transition: -webkit-transform 0.4s ease-out;
+            -o-transition: -o-transform 0.4s ease;
+            -ms-transition: -ms-transform 0.4s ease;
+            transition: transform 0.4s ease;
+            box-sizing: border-box;
+          }
+
+          .active:after {
+            content: "\2796";
+            /* Unicode character for "minus" sign (-) */
           }
 
           h3 {
             font-size: 0.8em;
+            text-transform: uppercase;
+            background-color: $content-color1;
+            padding: 1em 0;
+            color: $login-color;
+            text-indent: 2%;
           }
 
           ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
             display: block;
+            font-family: $font-list;
 
             li {
-              font-size: 0.9em;
+              line-height: 35px;
+              display: block;
+              height: 35px;
+              font-size: 1em;
+              width: 100%;
+              text-align: left;
+              text-indent:0.5em;
 
               &:hover {
+                font-weight: bold;
                 cursor: pointer;
               }
             }
@@ -1099,26 +1163,64 @@
       }
 
       #searchbox {
-        width: 98%;
+        width: 94%;
+        height: 330px;
+        margin: auto;
 
         #searcher {
-          width: 98%;
+          background-image: url("../images/form-bg-comp.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 100%;
+          height: 320px;
+          margin: auto;
+          font-family: $font-list;
 
           h1 {
-            font-size: 1.4em;
+            font-size: 1.5em;
+            background: none;
+            color: $color-white;
+            width: 100%;
+            text-align: center;
+            line-height: 30px;
+            height: 90px;
             text-indent: 0;
+            letter-spacing: -0.08em;
+            padding-top: 0.3em;
           }
 
           select {
+            font-family: $font-list;
+            width: 90%;
+            height: 35px;
             font-size: 1em;
+            margin: 0.5em auto;
+            color: $content-color;
+            display: block;
           }
 
-          .find {
-            font-size: 1.2em;
-          }
+          input.find {
+            font-family: $font-list;
+            width: 60%;
+            height: 40px;
+            font-size: 1.1em;
+            line-height: 40px;
+            margin: auto;
+            background-color: $color-orange;
+            display: block;
+            color: $color-white;
+            border: 0;
+            outline: none;
 
-          label {
-            font-size: 0.85em;
+            &:hover {
+              color: $color-orange;
+              display: block;
+              background-color: $color-white;
+              border: 0;
+              outline: none;
+              cursor: pointer;
+            }
           }
         }
       }
@@ -1178,3 +1280,625 @@ p.copyr {
 }
 
 
+@media only screen and (min-width: 360px) and (max-width: 479px){
+  #wrapper {
+    width: 100%;
+    padding: 0 0.5em;
+
+    button#sidebar-toggle-btn {
+      left: 80%;
+      top: 40vh;
+      width: 65px;
+      height: 100px;
+      font-size: 1em;
+    }
+
+    button#menu-toggle-btn {
+      top: 0.25em;
+      left: 80%;
+      width: 20%;
+      height: 45px;
+      line-height: 45px;
+      font-size: 0.9em;
+    }
+
+    header {
+      height: 70px;
+      figure#logo {
+        width: 70%;
+
+      }
+    }
+
+    nav#main-nav {
+      height: 30px;
+      padding: 0;
+      span#signin-box {
+        width: 50%;
+        height: 20px;
+
+        a {
+          line-height: 20px;
+          font-size: 0.75em;
+        }
+
+        a:last-of-type {
+          border: none;
+        }
+      }
+
+      ul#inner-nav {
+        display: none;
+      }
+
+      ul.mobile-nav.is-expanded{
+        width: 95%;
+        height: 290px;
+
+      }
+
+
+      ul.mobile-nav {
+        width: 95%;
+        padding: 1%;
+
+        li {
+          width: 100%;
+          height: 45px;
+
+          a {
+            font-size: 1.1em;
+            line-height: 45px;
+
+          }
+        }
+
+        li.selected {
+          a {
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            &:link {
+              background-color: rgb(255, 255, 255);
+            }
+
+            &:visited {
+              background-color: rgb(255, 255, 255);
+            }
+          }
+        }
+
+        span#signin-box {
+          display: none;
+        }
+      }
+
+
+    }
+    /*Searchbar*/
+    #search_category {
+      display: block;
+      height: 50px;
+      width: 100%;
+      padding: 0;
+      margin: 1% 0;
+      clear: both;
+
+      button.search_category_btn {
+        width: 12%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 1em;
+      }
+
+      #search_category_form {
+        margin: 0;
+        padding: 0.5em;
+        label {
+          font-size: 1em;
+          width: 20%;
+          line-height: 35px;
+        }
+
+        ::placeholder {
+          color:#000;
+        }
+
+        select{
+          width: 15.5%;
+          font-size: 0.7em;
+          height: 35px;
+        }
+      }
+    }
+
+    /*Content*/
+     main#content {
+      width: 100%;
+      margin: 0;
+
+      h1 {
+        margin: 1% 0 0;
+        height: 40px;
+        font-size: 1.2em;
+        line-height: 40px;
+      }
+
+      #other_products {
+        margin-top:2em;
+        min-height:400px;
+
+        figure.other_product_box {
+          width: 25%;
+          margin-bottom: 15px;
+
+          .other_product_boximg {
+            width: 65%;
+          }
+
+          figcaption.other_product_boxdetails {
+            position: relative;
+
+            p.other_product_name {
+              line-height: 25px;
+              font-size: 85%;
+
+
+            }
+
+            p.other_product_price {
+
+              line-height: 25px;
+
+            }
+            /*Price Icon*/
+            img.other_cart_icon {
+              width: 15%;
+              left: 80%;
+              top: 20%;
+
+            }
+          }
+        }
+      }
+
+      figure#productPagebox {
+        padding:0.1em;
+        margin-bottom: 15px;
+
+
+        #productPageimg {
+          width: 40%;
+          padding: 7em;
+        }
+
+        #productPagedetails {
+          width: 60%;
+          padding:0.5em;
+
+          #productPagename {
+            line-height: 40px;
+
+          }
+
+          #productPageprice {
+
+            line-height: 40px;
+
+          }
+          /*Price Icon*/
+          img#cartPageicon {
+
+            width: 5%;
+
+          }
+
+          #upvotes-section{
+
+            button{
+              height: 45px;
+              width: 20%;
+              font-size: 1.2em;
+              line-height: 30px;
+
+            }
+            p{
+              line-height:50px;
+            }
+
+          }
+        }
+      }
+
+      p {
+        font-size: 0.95em;
+        line-height: 1.6em;
+      }
+
+      aside.contact_sidebar {
+        width: 96.5%;
+        padding: 1%;
+        margin-bottom: 5%;
+
+        h2 {
+
+          line-height: 20px;
+
+        }
+
+        p {
+
+          font-size: 0.9em;
+          line-height: 1.8em;
+        }
+      }
+
+      #contact_form {
+        width: 94%;
+        height: 390px;
+
+      }
+
+      #form {
+        width: 100%;
+        ul {
+          height: auto;
+
+
+          li,
+          li:nth-of-type(3) {
+
+            margin: 0 0 1em 0;
+
+
+            label {
+              width: 15%;
+              font-size: 1em;
+
+            }
+
+            input {
+              width: 75%;
+
+            }
+
+            textarea {
+              width: 75%;
+
+
+            }
+
+            input:focus,
+            textarea:focus {
+              background-color: $color-white-bg;
+              outline: 0;
+            }
+
+            #submit {
+              height: 45px;
+              width: 20%;
+              font-size: 1.2em;
+
+            }
+          }
+
+        }
+      }
+
+
+      span.context_title {
+        font-size: 1.15em;
+        line-height: 25px;
+        margin-bottom: 1%;
+      }
+
+      /*rightside content section within content div*/
+      #content_section {
+        margin: 0 0 20px;
+        form.search_products{
+          margin-bottom:1em;
+          select{
+            width: 35%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
+        }
+
+        h1 {
+          height: 40px;
+          font-size: 1.5em;
+        }
+        /*Index page banner box*/
+
+
+        #bannerbox {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+
+
+          hgroup {
+            grid-area: 1 / 1 / 3 / 9;
+
+            h1 {
+
+              font-size: 1.4em;
+
+            }
+
+            h2 {
+              font-size: 60%;
+              line-height: 30px;
+            }
+          }
+
+          #bannerboximg {
+            grid-area: 2 / 4 / 6 / 9;
+          }
+
+          nav#apDiv1 {
+            grid-area: 2 / 1 / 6 / 4;
+            padding-top: 30px;
+            ul {
+              width: 80%;
+
+              li {
+                height: auto;
+
+                a {
+                  margin-bottom: 0.2em;
+                  font-size: 0.7em;
+                  line-height: 22px;
+
+                }
+              }
+            }
+          }
+
+          #btn_div {
+            height: 150px;
+          }
+        }
+        /*product boxes*/
+        .product_boxes{
+
+          height: auto;
+
+
+          h1 {
+
+            height: 35px;
+            font-size: 1em;
+            line-height: 35px;
+          }
+          /*Individual product box*/
+          figure.product_box {
+
+            margin: 15px auto;
+
+            .product_boximg {
+              width: 100%;
+              display: block;
+
+            }
+
+            figcaption.product_boxdetails {
+              width: 100%;
+              margin: 0;
+
+
+              p.product_name {
+                line-height: 25px;
+                font-size: 85%;
+              }
+
+              p.product_price {
+                line-height: 25px;
+                text-indent: 0.2em;
+              }
+              /*Price Icon*/
+              img.cart_icon {
+                left: 80%;
+                top: 20%;
+
+              }
+            }
+          }
+        }
+
+        div.product_boxes_longer {
+          display: block;
+
+
+          figure.product-box_longer {
+            margin-bottom: 15px;
+
+            img.product_boximg_longer {
+              width: auto;
+
+            }
+
+            figcaption.product_boxdetails_longer {
+              width: 100%;
+
+
+              h1 {
+                line-height: 45px;
+                text-indent: 1em;
+                font-size:1em;
+              }
+
+              p {
+
+                line-height: 1.5em;
+                font-size: 0.9em;
+
+              }
+
+              span.price_longer:last-of-type {
+                color: $login-color;
+              }
+
+              span.price_longer {
+                font-size: 1em;
+                /*Price Icon*/
+                a{
+                  display:block;
+                  img.product_icon_longer {
+                    float: left;
+
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        #pag_search {
+          width: 45%;
+
+          select {
+            width: 50%;
+            line-height: 30px;
+            font-size: 0.85em;
+          }
+
+          label {
+            width: 39%;
+            height: 30px;
+            line-height: 30px;
+            font-size: 0.8em;
+
+          }
+        }
+
+        #pagination {
+          height: 30px;
+          width: 35%;
+
+          a {
+            width: 32%;
+            font-size: 1em;
+            line-height: 30px;
+
+          }
+        }
+
+        #results {
+          clear: both;
+        }
+
+        .pag_buttons {
+          display: block;
+          margin: 2% 0;
+          clear: both;
+
+          input[type="submit"],
+          input[type="reset"] {
+            width: 20%;
+            height: 30px;
+            font-size: 1.1em;
+
+          }
+        }
+      }
+      /*leftbar*/
+      .left_bar {
+        position: fixed;
+        top: 3em;
+      }
+
+      .left_bar.is-expanded {
+        position: fixed;
+        top: 3em;
+
+        #acc_nav {
+          div#accContainer {
+
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
+    }
+
+    .spacer {
+      clear: both;
+      height: 1px;
+    }
+    /*Footer*/
+    footer {
+      clear: both;
+      height: 50px;
+      width: 100%;
+
+      ul.footer_nav {
+        height: 50px;
+
+        li {
+          width: 16.5%;
+          height: 50px;
+
+          a {
+            line-height: 15px;
+            font-size: 0.55em;
+
+          }
+        }
+      }
+    }
+  }
+
+  p.copyr {
+
+    font-size: 0.6em;
+
+  }
+}

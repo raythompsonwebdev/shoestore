@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import NewProductBox from './newProductBox';
+import React from "react";
+import PropTypes from "prop-types";
+import NewProductBox from "./newProductBox";
 
-const newProductBoxes = (props) => {
+function newProductBoxes(props) {
   const { productData } = props;
 
   const NewProduct = productData
@@ -19,10 +19,10 @@ const newProductBoxes = (props) => {
     ));
 
   return <div className="product_boxes_longer">{NewProduct}</div>;
-};
+}
 
 newProductBoxes.propTypes = {
-  productData: PropTypes.array.isRequired,
+  productData: PropTypes.string.isRequired,
 };
 
 export default newProductBoxes;

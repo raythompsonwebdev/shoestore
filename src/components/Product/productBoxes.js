@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ProductBox from './productBox';
+import React from "react";
+import PropTypes from "prop-types";
+import ProductBox from "./productBox";
 
 function ProductBoxes(props) {
   const { productData } = props;
@@ -22,7 +22,8 @@ function ProductBoxes(props) {
 }
 
 ProductBoxes.propTypes = {
-  productData: PropTypes.object.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  productData: PropTypes.array.isRequired,
 };
 
 export default ProductBoxes;

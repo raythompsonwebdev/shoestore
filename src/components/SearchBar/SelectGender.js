@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 function SelectGender(props) {
-  const {
-    genders, changeHandler, value, name,
-  } = props;
+  // eslint-disable-next-line react/prop-types
+  const { genders, changeHandler, value, name } = props;
 
   return (
     <select name={name} value={value} onChange={changeHandler}>
@@ -15,5 +15,10 @@ function SelectGender(props) {
     </select>
   );
 }
+
+SelectGender.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  genders: PropTypes.object.isRequired,
+};
 
 export default SelectGender;

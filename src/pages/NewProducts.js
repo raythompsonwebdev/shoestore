@@ -45,6 +45,7 @@ class NewProducts extends Component {
 
     return (
       <main id="content" className="clearfix">
+
         <SearchBar labelname="New Product" />
 
         <button

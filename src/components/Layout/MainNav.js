@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function MainNav() {
   const [visibility, setVisibility] = useState({ visibility: false });
+
+  // eslint-disable-next-line func-style
   const toggleVisibility = (e) => {
     e.preventDefault();
     setVisibility(!visibility);
@@ -55,7 +57,7 @@ function MainNav() {
         </li>
       </ul>
 
-      <ul id="" className={`mobile-nav ${!visibility ? 'is-expanded' : ' '}`}>
+      <ul id="" className={`mobile-nav ${!visibility ? "is-expanded" : " "}`}>
         <li>
           <Link to="/" title="Home Page">
             Home
@@ -88,7 +90,9 @@ function MainNav() {
         </li>
       </ul>
 
-      <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>MENU</button>
+      <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>
+        MENU
+      </button>
     </nav>
   );
 }

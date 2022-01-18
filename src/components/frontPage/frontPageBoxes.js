@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import FrontPageBox from './frontPageBox';
+import React from "react";
+import PropTypes from "prop-types";
+import FrontPageBox from "./frontPageBox";
 
 function FrontPageBoxes(props) {
   const { productData } = props;
@@ -21,7 +21,7 @@ function FrontPageBoxes(props) {
 }
 
 FrontPageBoxes.propTypes = {
-  productData: PropTypes.any.isRequired,
+  productData: PropTypes.string.isRequired,
 };
 
 export default FrontPageBoxes;

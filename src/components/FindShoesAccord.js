@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { Accordion } from 'react-bootstrap';
+import React from "react";
+import { Accordion } from "react-bootstrap";
 
-class FindShoesAccord extends Component {
-  render() {
-    return (
-      <Accordion defaultActiveKey={['0']} alwaysOpen>
-        <nav id="acc_nav">
-          <div id="accContainer">
+function FindShoesAccord() {
+  return (
+    <Accordion defaultActiveKey={["0"]} alwaysOpen>
+      <nav id="acc_nav">
+        <div id="accContainer">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Mens Shoes</Accordion.Header>
             <Accordion.Body>
@@ -97,11 +96,10 @@ class FindShoesAccord extends Component {
               </div>
             </Accordion.Body>
           </Accordion.Item>
-          </div>
-        </nav>
-      </Accordion>
-    );
-  }
-};
+        </div>
+      </nav>
+    </Accordion>
+  );
+}
 
 export default FindShoesAccord;
