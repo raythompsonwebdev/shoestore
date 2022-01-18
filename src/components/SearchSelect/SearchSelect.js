@@ -14,7 +14,7 @@ class Selector extends React.Component {
     const { value } = target;
 
     this.setState({
-      value,
+      value: value,
     });
 
     this.props.changesOrders(value, 'asc');
@@ -30,6 +30,7 @@ class Selector extends React.Component {
           value={this.state.value}
           onChange={this.changeHandler}
         >
+
 
           {searchbarData2.map((options, i) => (
             <optgroup label={options.value} key={i}>

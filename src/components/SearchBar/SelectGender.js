@@ -7,7 +7,7 @@ function SelectGender(props) {
 
   return (
     <select name={name} value={value} onChange={changeHandler}>
-      {genders.map((option) => (
+      {genders.options.map((option) => (
         <option value={option.value} key={option.id}>
           {option.displayValue}
         </option>

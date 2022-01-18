@@ -17,7 +17,7 @@ import AllProducts from './pages/AllProducts';
 import Contact from './pages/Contact';
 import Faqs from './pages/Faqs';
 import NotFound from './pages/NotFound';
-import './css/style.css';
+import './css/style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const routing = (

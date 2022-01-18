@@ -15,71 +15,68 @@ const [
 
 function SearchBar () {
 
-  const [genderVal, setGenderVal] = useState(' ');
-  const [styleVal, setStyleVal] = useState(' ');
-  const [sizeVal, setSizeVal] = useState(' ');
-  const [colorVal, setColorVal] = useState(' ');
-  const [change, setChange] = useState({});
-
+  //const [genderVal, setGenderVal] = useState(' ');
+  //const [styleVal, setStyleVal] = useState(' ');
+  // const [sizeVal, setSizeVal] = useState(' ');
+  // const [colorVal, setColorVal] = useState(' ');
+  const [change, setChange] = useState({ genderVal: "", styleVal: "", sizeVal: "", colorVal: "" });
 
   const changeHandler = (event) => {
-
-    console.log(change)
     const { target } = event;
     const { value, name } = target;
-    setChange({
-      [name]: value,
-    });
+    setChange(prevState => ({
+      ...prevState,
+      [name]: value
+  }));
   };
 
   const submit = (event) => {
     event.preventDefault();
     const tempVal = {
-      genderVal: setGenderVal(event.target.value),
-      styleVal: setStyleVal(event.target.value),
-      sizeVal: setSizeVal(event.target.value),
-      colorVal: setColorVal(event.target.value),
+      //genderVal: setGenderVal(event.target.value),
+      //styleVal: setStyleVal(event.target.value),
+      // sizeVal: setSizeVal(event.target.value),
+      // colorVal: setColorVal(event.target.value),
     };
     console.log(
       `You have entered Gender:${tempVal.genderVal}, Style: ${tempVal.styleVal}, Size: ${tempVal.sizeVal} & Colour :${tempVal.colorVal}. This form is under maintenance and will be ready to use shortly`,
     );
   };
 
-
-    return (
-      <aside id="search_category">
-        <form id="search_category_form" onSubmit={submit}>
-          <label></label>
-          <SelectGender
-            name="genderVal"
-            genders={genders.options}
-            value={genderVal}
-            changeHandler={changeHandler}
-          />
-          <SelectStyle
-            name="styleVal"
-            styles={styles}
-            value={styleVal}
-            changeHandler={changeHandler}
-          />
-          <SelectSize
-            name="sizeVal"
-            sizes={sizes}
-            value={sizeVal}
-            changeHandler={changeHandler}
-          />
-          <SelectColor
-            name="colorVal"
-            colors={colors}
-            value={colorVal}
-            changeHandler={changeHandler}
-          />
-          <button name="find" className="search_category_btn" type="submit">
-            Go
-          </button>
-        </form>
-      </aside>
-    );
+  return (
+    <aside id="search_category">
+      <form id="search_category_form" onSubmit={submit}>
+        <label></label>
+        <SelectGender
+          name="genderVal"
+          genders={genders}
+          value={change.genderVal}
+          changeHandler={changeHandler}
+        />
+        <SelectStyle
+          name="styleVal"
+          styles={styles}
+          value={change.styleVal}
+          changeHandler={changeHandler}
+        />
+        <SelectSize
+          name="sizeVal"
+          sizes={sizes}
+          value={change.sizeVal}
+          changeHandler={changeHandler}
+        />
+        <SelectColor
+          name="colorVal"
+          colors={colors}
+          value={change.colorVal}
+          changeHandler={changeHandler}
+        />
+        <button name="find" className="search_category_btn" type="submit">
+          Go
+        </button>
+      </form>
+    </aside>
+  );
 
 }
 
