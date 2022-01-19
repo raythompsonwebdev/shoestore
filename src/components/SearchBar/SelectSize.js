@@ -17,8 +17,7 @@ function SelectSize(props) {
 }
 
 SelectSize.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  sizes: PropTypes.object.isRequired,
+  sizes: PropTypes.string.isRequired,
 };
 
 export default SelectSize;

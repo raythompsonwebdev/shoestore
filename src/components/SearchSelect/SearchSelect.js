@@ -4,17 +4,20 @@ import PropTypes from "prop-types";
 import searchbarData2 from "./searchbarData2";
 
 function Selector(props) {
-  const [setvalue, setValue] = useState({});
+  const { changesOrders } = props;
 
-  // eslint-disable-next-line no-console
-  console.log(props);
+  const [setvalue, setValue] = useState({});
 
   // eslint-disable-next-line func-style
   const changeHandler = (event) => {
     const { target } = event;
-    const { value, name } = target;
-    setValue({ [name]: value });
-    // props.changesOrders(value, "asc");
+    const { value } = target;
+    setValue({ value });
+
+    // eslint-disable-next-line no-console
+    console.log(setvalue);
+
+    changesOrders(setvalue, "asc");
   };
 
   return (
@@ -39,9 +42,7 @@ function Selector(props) {
 }
 
 Selector.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  // eslint-disable-next-line react/no-unused-prop-types
-  props: PropTypes.object.isRequired,
+  changesOrders: PropTypes.func.isRequired,
 };
 
 export default Selector;

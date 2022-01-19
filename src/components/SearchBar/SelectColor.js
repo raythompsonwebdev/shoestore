@@ -17,8 +17,7 @@ function SelectColor(props) {
 }
 
 SelectColor.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  colors: PropTypes.object.isRequired,
+  colors: PropTypes.string.isRequired,
 };
 
 export default SelectColor;

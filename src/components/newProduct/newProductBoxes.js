@@ -22,7 +22,7 @@ function newProductBoxes(props) {
 }
 
 newProductBoxes.propTypes = {
-  productData: PropTypes.string.isRequired,
+  productData: PropTypes.string,
 };
 
 export default newProductBoxes;

@@ -17,8 +17,7 @@ function SelectStyle(props) {
 }
 
 SelectStyle.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  styles: PropTypes.object.isRequired,
+  styles: PropTypes.string.isRequired,
 };
 
 export default SelectStyle;

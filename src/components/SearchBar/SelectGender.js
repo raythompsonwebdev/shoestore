@@ -17,8 +17,7 @@ function SelectGender(props) {
 }
 
 SelectGender.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  genders: PropTypes.object.isRequired,
+  genders: PropTypes.string.isRequired,
 };
 
 export default SelectGender;
