@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from "react";
+// import { uuid } from "uuidv4";
 import BannerImg from "../components/frontPage/BannerImg";
 import FindShoesAccord from "../components/FindShoesAccord";
 import FindShoes from "../components/frontPage/FindShoes";
@@ -30,11 +31,11 @@ class App extends Component {
         return response.json();
       })
       .then((data) => {
-        const { lastIndex } = { ...this.state };
-        const productData = data.map((shoe) => {
+        // const { lastIndex } = { ...this.state };
+        const productData = data.map((shoe, index) => {
+          // this.setState({ lastIndex: index });
           // eslint-disable-next-line no-param-reassign
-          shoe.prodId = lastIndex;
-          this.setState({ lastIndex: lastIndex + 1 });
+          shoe.prodId = index;
           return shoe;
         });
         this.setState({

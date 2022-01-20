@@ -16,8 +16,13 @@ function SelectGender(props) {
   );
 }
 
+SelectGender.defaultProps = {
+  genders: {},
+};
 SelectGender.propTypes = {
-  genders: PropTypes.string.isRequired,
+  genders: PropTypes.shape({
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
 };
 
 export default SelectGender;

@@ -16,8 +16,13 @@ function SelectColor(props) {
   );
 }
 
+SelectColor.defaultProps = {
+  colors: {},
+};
 SelectColor.propTypes = {
-  colors: PropTypes.string.isRequired,
+  colors: PropTypes.shape({
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
 };
 
 export default SelectColor;

@@ -16,8 +16,13 @@ function SelectSize(props) {
   );
 }
 
+SelectSize.defaultProps = {
+  sizes: {},
+};
 SelectSize.propTypes = {
-  sizes: PropTypes.string.isRequired,
+  sizes: PropTypes.shape({
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
 };
 
 export default SelectSize;

@@ -21,8 +21,17 @@ function newProductBoxes(props) {
   return <div className="product_boxes_longer">{NewProduct}</div>;
 }
 
+newProductBoxes.defaultProps = {
+  productData: [],
+};
+
 newProductBoxes.propTypes = {
-  productData: PropTypes.string,
+  productData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      prodId: PropTypes.number,
+    })
+  ),
 };
 
 export default newProductBoxes;

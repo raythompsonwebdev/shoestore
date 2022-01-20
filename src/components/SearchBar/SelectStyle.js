@@ -16,8 +16,13 @@ function SelectStyle(props) {
   );
 }
 
+SelectStyle.defaultProps = {
+  styles: {},
+};
 SelectStyle.propTypes = {
-  styles: PropTypes.string.isRequired,
+  styles: PropTypes.shape({
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
 };
 
 export default SelectStyle;
