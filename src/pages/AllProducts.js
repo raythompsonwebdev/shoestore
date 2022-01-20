@@ -22,16 +22,17 @@ class AllProducts extends Component {
   componentDidMount() {
     // const fetchProducts = fetch(`/api/data/`);
     const fetchProducts = fetch(`./productdata.json`);
-    const { lastIndex } = { ...this.state };
+    // const { lastIndex } = { ...this.state };
     fetchProducts
       .then((response) => response.json())
       .then((data) => {
-        const productData = data.map((shoe) => {
+        const productData = data.map((shoe, index) => {
           // eslint-disable-next-line prettier/prettier
+           // eslint-disable-next-line react/destructuring-assignment
           // eslint-disable-next-line no-param-reassign
-          shoe.prodId = lastIndex;
-          // eslint-disable-next-line react/destructuring-assignment
-          this.setState({ lastIndex: lastIndex + 1 });
+          shoe.prodId = index;
+          this.setState({ lastIndex: index });
+
           return shoe;
         });
         this.setState({

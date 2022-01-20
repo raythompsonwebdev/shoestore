@@ -17,17 +17,19 @@ class NewProducts extends Component {
   componentDidMount() {
     // const fetchProducts = fetch(`/api/data/`);
     const fetchProducts = fetch(`./productdata.json`);
+    const { lastIndex } = { ...this.state };
+    // eslint-disable-next-line no-console
+    console.log(lastIndex);
 
     fetchProducts
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe, index) => {
-          const p = 0;
           // eslint-disable-next-line no-param-reassign
-          shoe.prodId = p + 1;
-
-          // this.setState({ lastIndex: lastIndex + 1 });
+          shoe.prodId = index;
+          this.setState({ lastIndex: index });
           // eslint-disable-next-line no-console
+          // console.log(lastIndex + 1);
 
           return shoe;
         });

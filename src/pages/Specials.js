@@ -27,11 +27,11 @@ class Specials extends Component {
     fetchProducts
       .then((response) => response.json())
       .then((data) => {
-        const { lastIndex } = { ...this.state };
-        const productData = data.map((shoe) => {
+        // const { lastIndex } = { ...this.state };
+        const productData = data.map((shoe, index) => {
           // eslint-disable-next-line no-param-reassign
-          shoe.prodId = lastIndex;
-          this.setState({ lastIndex: lastIndex + 1 });
+          shoe.prodId = index;
+          this.setState({ lastIndex: index });
           return shoe;
         });
         this.setState({
