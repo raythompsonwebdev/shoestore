@@ -112,6 +112,60 @@
 
     ul#inner-nav {
       display: none;
+      width: 75%;
+      padding: 0;
+      height: 40px;
+      margin: 0;
+      li {
+        float: left;
+        width: auto;
+        height: 40px;
+        margin-right: 0.2em;
+        text-align: center;
+        display: block;
+
+        a {
+          padding: 0 1em;
+          text-align: center;
+          height: 40px;
+          color: $color-black;
+          line-height: 40px;
+          display: block;
+          @include transitioner(all ease 0.2s);
+          text-transform: uppercase;
+          font-size: 0.8em;
+
+          &:hover {
+            color: $color-orange;
+            font-weight: bold;
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+
+      li a:hover,
+      li a:visited {
+        background-color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+        display: block;
+        -moz-border-radius-topleft: 3px;
+        -moz-border-radius-topright: 3px;
+        -webkit-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0;
+        -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      li.selected {
+        a:link,
+        a:visited {
+          background-color: rgb(255, 255, 255);
+        }
+      }
     }
 
     ul.mobile-nav.is-expanded{
@@ -1306,18 +1360,13 @@ p.copyr {
 
     nav#main-nav {
       height: 40px;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1%;
+
       span#signin-box {
         width: 22%;
-        display: block;
-        float: right;
-        height: 20px;
+
 
         a {
-          line-height: 20px;
+
           font-size: 0.9em;
         }
 
@@ -1327,32 +1376,20 @@ p.copyr {
       }
 
       ul#inner-nav {
-        width: 75%;
-        height: 40px;
+
         display: inline-block;
-        padding:0;
+
 
         li {
-          float: left;
-          width: auto;
+
           height: 40px;
-          margin-right: 0.2em;
-          text-align: center;
-          display: block;
 
           a {
-            padding: 0 0.5em;
-            text-align: center;
-            height: 40px;
-            color: $color-black;
-            line-height: 40px;
-            display: block;
-            @include transitioner(all ease 0.2s);
-            text-transform: uppercase;
+
             font-size: 0.9em;
 
             &:hover {
-              color: $color-orange;
+
               font-weight: bold;
             }
 
@@ -1362,26 +1399,6 @@ p.copyr {
           }
         }
 
-        li a:hover,
-        li a:visited {
-          background-color: rgba(255, 255, 255, 0.4);
-          text-decoration: none;
-          display: block;
-          -moz-border-radius-topleft: 3px;
-          -moz-border-radius-topright: 3px;
-          -webkit-border-radius: 3px 3px 0 0;
-          border-radius: 3px 3px 0 0;
-          -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
-          -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        li.selected {
-          a:link,
-          a:visited {
-            background-color: rgb(255, 255, 255);
-          }
-        }
       }
 
       ul.mobile-nav {
@@ -1549,31 +1566,18 @@ p.copyr {
 
       aside.contact_sidebar {
         width: 32.50%;
-        height: auto;
         display: block;
-        font-family: $font-list;
         float: right;
-        background-color: $color-white-bg;
-        padding: 1%;
-        border: 2px $content-color1 solid;
-        margin-bottom: 5%;
 
-        h1 {
+        h2 {
           font-size: 1em;
-          color: $header-color;
-          font-weight: bold;
-          background-color: $color-white;
-          height: auto;
-          line-height: 20px;
-          text-indent: 0;
+
         }
 
         p {
-          width: 100%;
-          margin: auto;
-          font-family: $font-list;
+
           font-size: 0.9em;
-          line-height: 1.8em;
+
         }
       }
 
@@ -1581,13 +1585,12 @@ p.copyr {
         width: 63%;
         height: 390px;
         float: left;
-        display: block;
+
       }
 
       #form {
-        width: 100%;
+
         padding: 0;
-        font-family: $font-list;
 
         ul {
           height: auto;
@@ -1595,20 +1598,11 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-            height: auto;
-            display: block;
             margin: 0 0 1em 0;
-            padding: 0;
             display:flex;
 
             label {
-              width: 100%;
-              float: left;
-              line-height: 40px;
-              height: 40px;
               font-size: 1em;
-              text-align: center;
-              margin:0;
             }
 
             input {
@@ -1631,20 +1625,12 @@ p.copyr {
             }
 
             #submit {
-              font-family: $font-list;
-              margin: 0;
-              height: 45px;
-              width: 20%;
-              display: inline-block;
-              font-size: 1.2em;
-              line-height: 30px;
-              background-color: $color-orange;
-              color: $color-white;
+              margin: 0 auto;
+              width: 50%;
+              font-size: 1.4em;
               border: 0;
 
               &:hover {
-                background-color: $color-white;
-                color: $color-orange;
                 border: 0;
                 cursor: pointer;
                 font-weight: bold;
@@ -1801,10 +1787,7 @@ p.copyr {
           figure.product-box_longer {
             max-height: 180px;
             display: block;
-            width: 100%;
             float: left;
-            font-family: $font-list;
-            margin-bottom: 15px;
 
             img.product_boximg_longer {
               width: 18%;
@@ -1817,28 +1800,15 @@ p.copyr {
             figcaption.product_boxdetails_longer {
               width: 79%;
               height: 150px;
-              margin: 0;
-              padding: 1%;
-              display: block;
-              float: left;
 
               h1 {
-                height: auto;
-                line-height: 45px;
                 text-indent: 1em;
                 font-size:0.9em;
-                color: $login-color;
-                font-weight: bold;
               }
 
               p {
                 float: right;
                 width: 74%;
-                height: auto;
-                display: block;
-                line-height: 1.5em;
-                text-indent: 0;
-                margin: 0;
                 font-size: 0.85em;
                 padding: 0 5% 0 0;
               }
@@ -1848,30 +1818,15 @@ p.copyr {
               }
 
               span.price_longer {
-                height: auto;
-                line-height: 50px;
+
                 font-size: 0.85em;
-                margin: 0;
-                font-weight: bold;
-                display: block;
-                width: 24%;
-                text-indent: 1%;
                 /*Price Icon*/
                 img.product_icon_longer {
                   float: left;
                   display: block;
                   margin: 0;
                   width: 20%;
-                  @include transitioner(all 0.3s ease);
 
-                  &:hover {
-                    -webkit-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-                    -ms-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                    cursor: pointer;
-                  }
                 }
               }
             }
@@ -1926,7 +1881,6 @@ p.copyr {
           }
         }
       }
-      /*leftbar*/
       /*leftbar*/
       .left_bar {
         position:unset;
@@ -2217,18 +2171,12 @@ p.copyr {
 
     nav#main-nav {
       height: 40px;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1%;
+
       span#signin-box {
         width: 22%;
-        display: block;
-        float: right;
-        height: 20px;
 
         a {
-          line-height: 20px;
+
           font-size: 0.9em;
         }
 
@@ -2238,32 +2186,20 @@ p.copyr {
       }
 
       ul#inner-nav {
-        width: 75%;
-        height: 40px;
+
         display: inline-block;
-        padding:0;
 
         li {
-          float: left;
-          width: auto;
+
           height: 40px;
-          margin-right: 0.2em;
-          text-align: center;
-          display: block;
+
 
           a {
-            padding: 0 0.5em;
-            text-align: center;
-            height: 40px;
-            color: $color-black;
-            line-height: 40px;
-            display: block;
-            @include transitioner(all ease 0.2s);
-            text-transform: uppercase;
+
             font-size: 0.9em;
 
             &:hover {
-              color: $color-orange;
+
               font-weight: bold;
             }
 
@@ -2273,26 +2209,6 @@ p.copyr {
           }
         }
 
-        li a:hover,
-        li a:visited {
-          background-color: rgba(255, 255, 255, 0.4);
-          text-decoration: none;
-          display: block;
-          -moz-border-radius-topleft: 3px;
-          -moz-border-radius-topright: 3px;
-          -webkit-border-radius: 3px 3px 0 0;
-          border-radius: 3px 3px 0 0;
-          -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
-          -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        li.selected {
-          a:link,
-          a:visited {
-            background-color: rgb(255, 255, 255);
-          }
-        }
       }
 
       ul.mobile-nav {
@@ -2460,31 +2376,16 @@ p.copyr {
 
       aside.contact_sidebar {
         width: 32.50%;
-        height: auto;
-        display: block;
-        font-family: $font-list;
         float: right;
-        background-color: $color-white-bg;
-        padding: 1%;
-        border: 2px $content-color1 solid;
-        margin-bottom: 5%;
 
-        h1 {
-          font-size: 1em;
-          color: $header-color;
-          font-weight: bold;
-          background-color: $color-white;
-          height: auto;
-          line-height: 20px;
-          text-indent: 0;
+        h2 {
+          font-size: 1.05em;
         }
 
         p {
-          width: 100%;
-          margin: auto;
-          font-family: $font-list;
+
           font-size: 0.9em;
-          line-height: 1.8em;
+
         }
       }
 
@@ -2492,13 +2393,13 @@ p.copyr {
         width: 63%;
         height: 390px;
         float: left;
-        display: block;
+
       }
 
       #form {
-        width: 100%;
+
         padding: 0;
-        font-family: $font-list;
+
 
         ul {
           height: auto;
@@ -2506,20 +2407,11 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-            height: auto;
-            display: block;
             margin: 0 0 1em 0;
-            padding: 0;
             display:flex;
 
             label {
-              width: 100%;
-              float: left;
-              line-height: 40px;
-              height: 40px;
               font-size: 1em;
-              text-align: center;
-              margin:0;
             }
 
             input {
@@ -2542,20 +2434,12 @@ p.copyr {
             }
 
             #submit {
-              font-family: $font-list;
-              margin: 0;
-              height: 45px;
-              width: 20%;
-              display: inline-block;
-              font-size: 1.2em;
-              line-height: 30px;
-              background-color: $color-orange;
-              color: $color-white;
+              margin: 0 auto;
+              width: 50%;
+              font-size: 1.4em;
               border: 0;
 
               &:hover {
-                background-color: $color-white;
-                color: $color-orange;
                 border: 0;
                 cursor: pointer;
                 font-weight: bold;
@@ -2586,14 +2470,11 @@ p.copyr {
         float: right;
         min-height: 980px;
         width: 76%;
-        margin: 0 0 20px;
         form.search_products{
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -2712,10 +2593,7 @@ p.copyr {
           figure.product-box_longer {
             max-height: 180px;
             display: block;
-            width: 100%;
             float: left;
-            font-family: $font-list;
-            margin-bottom: 15px;
 
             img.product_boximg_longer {
               width: 18%;
@@ -2728,28 +2606,15 @@ p.copyr {
             figcaption.product_boxdetails_longer {
               width: 79%;
               height: 150px;
-              margin: 0;
-              padding: 1%;
-              display: block;
-              float: left;
 
               h1 {
-                height: auto;
-                line-height: 45px;
                 text-indent: 1em;
                 font-size:0.9em;
-                color: $login-color;
-                font-weight: bold;
               }
 
               p {
                 float: right;
                 width: 74%;
-                height: auto;
-                display: block;
-                line-height: 1.5em;
-                text-indent: 0;
-                margin: 0;
                 font-size: 0.85em;
                 padding: 0 5% 0 0;
               }
@@ -2759,30 +2624,15 @@ p.copyr {
               }
 
               span.price_longer {
-                height: auto;
-                line-height: 50px;
+
                 font-size: 0.85em;
-                margin: 0;
-                font-weight: bold;
-                display: block;
-                width: 24%;
-                text-indent: 1%;
-                /*Price Icon*/
+
                 img.product_icon_longer {
                   float: left;
                   display: block;
                   margin: 0;
                   width: 20%;
-                  @include transitioner(all 0.3s ease);
 
-                  &:hover {
-                    -webkit-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-                    -ms-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                    cursor: pointer;
-                  }
                 }
               }
             }
@@ -3128,15 +2978,10 @@ p.copyr {
 
     nav#main-nav {
       height: 40px;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1%;
+
       span#signin-box {
         width: 22%;
-        display: block;
-        float: right;
-        height: 20px;
+
 
         a {
           line-height: 20px;
@@ -3149,33 +2994,21 @@ p.copyr {
       }
 
       ul#inner-nav {
-        width: 75%;
-        height: 40px;
+
         display: inline-block;
-        padding:0;
 
         li {
-          float: left;
-          width: auto;
+
           height: 40px;
-          margin-right: 0.2em;
-          text-align: center;
-          display: block;
+
 
           a {
-            padding: 0 0.5em;
-            text-align: center;
-            height: 40px;
-            color: $color-black;
-            line-height: 40px;
-            display: block;
-            @include transitioner(all ease 0.2s);
-            text-transform: uppercase;
+
             font-size: 0.9em;
 
             &:hover {
               color: $color-orange;
-              font-weight: bold;
+
             }
 
             &:hover {
@@ -3184,26 +3017,6 @@ p.copyr {
           }
         }
 
-        li a:hover,
-        li a:visited {
-          background-color: rgba(255, 255, 255, 0.4);
-          text-decoration: none;
-          display: block;
-          -moz-border-radius-topleft: 3px;
-          -moz-border-radius-topright: 3px;
-          -webkit-border-radius: 3px 3px 0 0;
-          border-radius: 3px 3px 0 0;
-          -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
-          -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        li.selected {
-          a:link,
-          a:visited {
-            background-color: rgb(255, 255, 255);
-          }
-        }
       }
 
       ul.mobile-nav {
@@ -3371,31 +3184,18 @@ p.copyr {
 
       aside.contact_sidebar {
         width: 32.50%;
-        height: auto;
         display: block;
-        font-family: $font-list;
         float: right;
-        background-color: $color-white-bg;
-        padding: 1%;
-        border: 2px $content-color1 solid;
-        margin-bottom: 5%;
 
-        h1 {
+        h2 {
           font-size: 1em;
-          color: $header-color;
-          font-weight: bold;
-          background-color: $color-white;
-          height: auto;
-          line-height: 20px;
-          text-indent: 0;
+
         }
 
         p {
-          width: 100%;
-          margin: auto;
-          font-family: $font-list;
+
           font-size: 0.9em;
-          line-height: 1.8em;
+
         }
       }
 
@@ -3403,13 +3203,13 @@ p.copyr {
         width: 63%;
         height: 390px;
         float: left;
-        display: block;
+
       }
 
       #form {
-        width: 100%;
+
         padding: 0;
-        font-family: $font-list;
+
 
         ul {
           height: auto;
@@ -3417,20 +3217,11 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-            height: auto;
-            display: block;
             margin: 0 0 1em 0;
-            padding: 0;
             display:flex;
 
             label {
-              width: 100%;
-              float: left;
-              line-height: 40px;
-              height: 40px;
               font-size: 1em;
-              text-align: center;
-              margin:0;
             }
 
             input {
@@ -3453,20 +3244,12 @@ p.copyr {
             }
 
             #submit {
-              font-family: $font-list;
-              margin: 0;
-              height: 45px;
-              width: 20%;
-              display: inline-block;
-              font-size: 1.2em;
-              line-height: 30px;
-              background-color: $color-orange;
-              color: $color-white;
+              margin: 0 auto;
+              width: 50%;
+              font-size:1.4em;
               border: 0;
 
               &:hover {
-                background-color: $color-white;
-                color: $color-orange;
                 border: 0;
                 cursor: pointer;
                 font-weight: bold;
@@ -3497,14 +3280,11 @@ p.copyr {
         float: right;
         min-height: 980px;
         width: 76%;
-        margin: 0 0 20px;
         form.search_products{
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -3623,10 +3403,7 @@ p.copyr {
           figure.product-box_longer {
             max-height: 180px;
             display: block;
-            width: 100%;
             float: left;
-            font-family: $font-list;
-            margin-bottom: 15px;
 
             img.product_boximg_longer {
               width: 18%;
@@ -3639,28 +3416,15 @@ p.copyr {
             figcaption.product_boxdetails_longer {
               width: 79%;
               height: 150px;
-              margin: 0;
-              padding: 1%;
-              display: block;
-              float: left;
 
               h1 {
-                height: auto;
-                line-height: 45px;
                 text-indent: 1em;
                 font-size:0.9em;
-                color: $login-color;
-                font-weight: bold;
               }
 
               p {
                 float: right;
                 width: 74%;
-                height: auto;
-                display: block;
-                line-height: 1.5em;
-                text-indent: 0;
-                margin: 0;
                 font-size: 0.85em;
                 padding: 0 5% 0 0;
               }
@@ -3670,29 +3434,16 @@ p.copyr {
               }
 
               span.price_longer {
-                height: auto;
-                line-height: 50px;
-                font-size: 0.85em;
-                margin: 0;
-                font-weight: bold;
-                display: block;
-                width: 24%;
-                text-indent: 1%;
-                /*Price Icon*/
-                img.product_icon_longer {
-                  float: left;
-                  display: block;
-                  margin: 0;
-                  width: 20%;
-                  @include transitioner(all 0.3s ease);
 
-                  &:hover {
-                    -webkit-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-                    -ms-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                    cursor: pointer;
+                font-size: 0.85em;
+
+                a{
+                  display:block;
+                  img.product_icon_longer {
+                    float: left;
+                    display: block;
+                    margin: 0;
+
                   }
                 }
               }
@@ -4039,18 +3790,10 @@ p.copyr {
 
     nav#main-nav {
       height: 40px;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1%;
       span#signin-box {
         width: 24%;
-        display: block;
-        float: right;
-        height: 20px;
-
         a {
-          line-height: 20px;
+
           font-size: 0.8em;
         }
 
@@ -4060,33 +3803,20 @@ p.copyr {
       }
 
       ul#inner-nav {
-        width: 75%;
         height: 40px;
         display: inline-block;
-        padding:0;
 
         li {
-          float: left;
-          width: auto;
-          height: 40px;
-          margin-right: 0.2em;
-          text-align: center;
+
           display: block;
 
           a {
-            padding: 0 0.5em;
-            text-align: center;
-            height: 40px;
-            color: $color-black;
-            line-height: 40px;
-            display: block;
-            @include transitioner(all ease 0.2s);
-            text-transform: uppercase;
-            font-size: 0.9em;
+
+            font-size: 0.8em;
 
             &:hover {
               color: $color-orange;
-              font-weight: bold;
+
             }
 
             &:hover {
@@ -4095,26 +3825,6 @@ p.copyr {
           }
         }
 
-        li a:hover,
-        li a:visited {
-          background-color: rgba(255, 255, 255, 0.4);
-          text-decoration: none;
-          display: block;
-          -moz-border-radius-topleft: 3px;
-          -moz-border-radius-topright: 3px;
-          -webkit-border-radius: 3px 3px 0 0;
-          border-radius: 3px 3px 0 0;
-          -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
-          -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        li.selected {
-          a:link,
-          a:visited {
-            background-color: rgb(255, 255, 255);
-          }
-        }
       }
 
       ul.mobile-nav {
@@ -4282,31 +3992,18 @@ p.copyr {
 
       aside.contact_sidebar {
         width: 32.50%;
-        height: auto;
         display: block;
-        font-family: $font-list;
         float: right;
-        background-color: $color-white-bg;
-        padding: 1%;
-        border: 2px $content-color1 solid;
-        margin-bottom: 5%;
 
-        h1 {
+        h2 {
           font-size: 1em;
-          color: $header-color;
-          font-weight: bold;
-          background-color: $color-white;
-          height: auto;
-          line-height: 20px;
-          text-indent: 0;
+
         }
 
         p {
-          width: 100%;
-          margin: auto;
-          font-family: $font-list;
+
           font-size: 0.9em;
-          line-height: 1.8em;
+
         }
       }
 
@@ -4314,13 +4011,13 @@ p.copyr {
         width: 63%;
         height: 390px;
         float: left;
-        display: block;
+
       }
 
       #form {
-        width: 100%;
+
         padding: 0;
-        font-family: $font-list;
+
 
         ul {
           height: auto;
@@ -4328,20 +4025,11 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-            height: auto;
-            display: block;
             margin: 0 0 1em 0;
-            padding: 0;
             display:flex;
 
             label {
-              width: 100%;
-              float: left;
-              line-height: 40px;
-              height: 40px;
               font-size: 1em;
-              text-align: center;
-              margin:0;
             }
 
             input {
@@ -4364,20 +4052,12 @@ p.copyr {
             }
 
             #submit {
-              font-family: $font-list;
-              margin: 0;
-              height: 45px;
-              width: 20%;
-              display: inline-block;
-              font-size: 1.2em;
-              line-height: 30px;
-              background-color: $color-orange;
-              color: $color-white;
+              width: 50%;
+              font-size: 1.4em;
               border: 0;
+              margin: 0 auto;
 
               &:hover {
-                background-color: $color-white;
-                color: $color-orange;
                 border: 0;
                 cursor: pointer;
                 font-weight: bold;
@@ -4408,14 +4088,11 @@ p.copyr {
         float: right;
         min-height: 980px;
         width: 76%;
-        margin: 0 0 20px;
         form.search_products{
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -4427,6 +4104,7 @@ p.copyr {
 
 
         #bannerbox {
+          margin: 0;
           display: grid;
           grid-template-columns: repeat(8, 1fr);
           grid-template-rows: repeat(5, 1fr);
@@ -4527,17 +4205,12 @@ p.copyr {
 
         div.product_boxes_longer {
           display: block;
-          height: 180px;
-          width: 100%;
 
 
           figure.product-box_longer {
             max-height: 180px;
             display: block;
-            width: 100%;
             float: left;
-            font-family: $font-list;
-            margin-bottom: 15px;
 
             img.product_boximg_longer {
               width: 18%;
@@ -4550,28 +4223,15 @@ p.copyr {
             figcaption.product_boxdetails_longer {
               width: 79%;
               height: 150px;
-              margin: 0;
-              padding: 1%;
-              display: block;
-              float: left;
 
               h1 {
-                height: auto;
-                line-height: 45px;
                 text-indent: 1em;
                 font-size:0.9em;
-                color: $login-color;
-                font-weight: bold;
               }
 
               p {
                 float: right;
                 width: 74%;
-                height: auto;
-                display: block;
-                line-height: 1.5em;
-                text-indent: 0;
-                margin: 0;
                 font-size: 0.85em;
                 padding: 0 5% 0 0;
               }
@@ -4581,29 +4241,15 @@ p.copyr {
               }
 
               span.price_longer {
-                height: auto;
-                line-height: 50px;
                 font-size: 0.85em;
-                margin: 0;
-                font-weight: bold;
-                display: block;
-                width: 24%;
-                text-indent: 1%;
-                /*Price Icon*/
-                img.product_icon_longer {
-                  float: left;
-                  display: block;
-                  margin: 0;
-                  width: 20%;
-                  @include transitioner(all 0.3s ease);
 
-                  &:hover {
-                    -webkit-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-                    -ms-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                    cursor: pointer;
+                a{
+                  display:block;
+                  img.product_icon_longer {
+                    float: left;
+                    display: block;
+                    margin: 0;
+
                   }
                 }
               }
@@ -4950,15 +4596,10 @@ p.copyr {
 
     nav#main-nav {
       height: 40px;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1%;
+
       span#signin-box {
-        width: 24%;
-        display: block;
-        float: right;
-        height: 20px;
+        width: 23%;
+
 
         a {
           line-height: 20px;
@@ -4971,30 +4612,15 @@ p.copyr {
       }
 
       ul#inner-nav {
-        width: 75%;
-        padding: 0;
-        height: 40px;
-        margin: 0;
         display: inline-block;
 
         li {
-          float: left;
-          width: auto;
           height: 40px;
-          margin-right: 0.2em;
-          text-align: center;
-          display: block;
-
           a {
             padding: 0 1em;
-            text-align: center;
             height: 40px;
-            color: $color-black;
             line-height: 40px;
-            display: block;
-            @include transitioner(all ease 0.2s);
-            text-transform: uppercase;
-            font-size: 0.9em;
+            font-size: 0.8em;
 
             &:hover {
               color: $color-orange;
@@ -5007,26 +4633,7 @@ p.copyr {
           }
         }
 
-        li a:hover,
-        li a:visited {
-          background-color: rgba(255, 255, 255, 0.4);
-          text-decoration: none;
-          display: block;
-          -moz-border-radius-topleft: 3px;
-          -moz-border-radius-topright: 3px;
-          -webkit-border-radius: 3px 3px 0 0;
-          border-radius: 3px 3px 0 0;
-          -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
-          -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-        }
 
-        li.selected {
-          a:link,
-          a:visited {
-            background-color: rgb(255, 255, 255);
-          }
-        }
       }
 
       ul.mobile-nav {
@@ -5195,31 +4802,18 @@ p.copyr {
 
       aside.contact_sidebar {
         width: 32.50%;
-        height: auto;
         display: block;
-        font-family: $font-list;
         float: right;
-        background-color: $color-white-bg;
-        padding: 1%;
-        border: 2px $content-color1 solid;
-        margin-bottom: 5%;
 
-        h1 {
+        h2 {
           font-size: 1em;
-          color: $header-color;
-          font-weight: bold;
-          background-color: $color-white;
-          height: auto;
-          line-height: 20px;
-          text-indent: 0;
+
         }
 
         p {
-          width: 100%;
-          margin: auto;
-          font-family: $font-list;
+
           font-size: 0.9em;
-          line-height: 1.8em;
+
         }
       }
 
@@ -5231,9 +4825,9 @@ p.copyr {
       }
 
       #form {
-        width: 100%;
+
         padding: 0;
-        font-family: $font-list;
+
 
         ul {
           height: auto;
@@ -5241,20 +4835,12 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-            height: auto;
-            display: block;
             margin: 0 0 1em 0;
-            padding: 0;
             display:flex;
 
             label {
-              width: 100%;
-              float: left;
-              line-height: 40px;
-              height: 40px;
+
               font-size: 1em;
-              text-align: center;
-              margin:0;
             }
 
             input {
@@ -5277,20 +4863,12 @@ p.copyr {
             }
 
             #submit {
-              font-family: $font-list;
-              margin: 0;
-              height: 45px;
-              width: 20%;
-              display: inline-block;
-              font-size: 1.2em;
-              line-height: 30px;
-              background-color: $color-orange;
-              color: $color-white;
+              width: 50%;
+              font-size: 1.4em;
               border: 0;
+              margin: 0 auto;
 
               &:hover {
-                background-color: $color-white;
-                color: $color-orange;
                 border: 0;
                 cursor: pointer;
                 font-weight: bold;
@@ -5321,14 +4899,11 @@ p.copyr {
         float: right;
         min-height: 980px;
         width: 76%;
-        margin: 0 0 20px;
         form.search_products{
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -5463,28 +5038,17 @@ p.copyr {
             figcaption.product_boxdetails_longer {
               width: 79%;
               height: 150px;
-              margin: 0;
-              padding: 1%;
-              display: block;
-              float: left;
+
 
               h1 {
-                height: auto;
-                line-height: 45px;
+
                 text-indent: 1em;
                 font-size:0.9em;
-                color: $login-color;
-                font-weight: bold;
               }
 
               p {
                 float: right;
                 width: 74%;
-                height: auto;
-                display: block;
-                line-height: 1.5em;
-                text-indent: 0;
-                margin: 0;
                 font-size: 0.85em;
                 padding: 0 5% 0 0;
               }
@@ -5494,29 +5058,16 @@ p.copyr {
               }
 
               span.price_longer {
-                height: auto;
-                line-height: 50px;
-                font-size: 0.85em;
-                margin: 0;
-                font-weight: bold;
-                display: block;
-                width: 24%;
-                text-indent: 1%;
-                /*Price Icon*/
-                img.product_icon_longer {
-                  float: left;
-                  display: block;
-                  margin: 0;
-                  width: 20%;
-                  @include transitioner(all 0.3s ease);
 
-                  &:hover {
-                    -webkit-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-                    -ms-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                    cursor: pointer;
+                font-size: 0.85em;
+
+                a{
+                  display:block;
+                  img.product_icon_longer {
+                    float: left;
+                    display: block;
+                    margin: 0;
+
                   }
                 }
               }
@@ -5803,18 +5354,12 @@ p.copyr {
 
     nav#main-nav {
       height: 40px;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1%;
+
       span#signin-box {
         width: 22%;
-        display: block;
-        float: right;
-        height: 20px;
 
         a {
-          line-height: 20px;
+
           font-size: 0.75em;
         }
 
@@ -5824,33 +5369,19 @@ p.copyr {
       }
 
       ul#inner-nav {
-        width: 75%;
-        height: 40px;
         display: inline-block;
-        padding:0;
 
         li {
-          float: left;
-          width: auto;
           height: 40px;
           margin-right: 0.2em;
-          text-align: center;
-          display: block;
 
           a {
-            padding: 0 0.5em;
-            text-align: center;
-            height: 40px;
-            color: $color-black;
-            line-height: 40px;
-            display: block;
-            @include transitioner(all ease 0.2s);
-            text-transform: uppercase;
+
             font-size: 0.85em;
 
             &:hover {
               color: $color-orange;
-              font-weight: bold;
+
             }
 
             &:hover {
@@ -5859,26 +5390,6 @@ p.copyr {
           }
         }
 
-        li a:hover,
-        li a:visited {
-          background-color: rgba(255, 255, 255, 0.4);
-          text-decoration: none;
-          display: block;
-          -moz-border-radius-topleft: 3px;
-          -moz-border-radius-topright: 3px;
-          -webkit-border-radius: 3px 3px 0 0;
-          border-radius: 3px 3px 0 0;
-          -webkit-box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.2);
-          -moz-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        li.selected {
-          a:link,
-          a:visited {
-            background-color: rgb(255, 255, 255);
-          }
-        }
       }
 
       ul.mobile-nav {
@@ -6046,31 +5557,18 @@ p.copyr {
 
       aside.contact_sidebar {
         width: 32.50%;
-        height: auto;
         display: block;
-        font-family: $font-list;
         float: right;
-        background-color: $color-white-bg;
-        padding: 1%;
-        border: 2px $content-color1 solid;
-        margin-bottom: 5%;
 
-        h1 {
+        h2 {
           font-size: 1em;
-          color: $header-color;
-          font-weight: bold;
-          background-color: $color-white;
-          height: auto;
-          line-height: 20px;
-          text-indent: 0;
+
         }
 
         p {
-          width: 100%;
-          margin: auto;
-          font-family: $font-list;
+
           font-size: 0.9em;
-          line-height: 1.8em;
+
         }
       }
 
@@ -6082,9 +5580,9 @@ p.copyr {
       }
 
       #form {
-        width: 100%;
+
         padding: 0;
-        font-family: $font-list;
+
 
         ul {
           height: auto;
@@ -6092,20 +5590,11 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-            height: auto;
-            display: block;
             margin: 0 0 1em 0;
-            padding: 0;
             display:flex;
 
             label {
-              width: 100%;
-              float: left;
-              line-height: 40px;
-              height: 40px;
               font-size: 1em;
-              text-align: center;
-              margin:0;
             }
 
             input {
@@ -6128,20 +5617,12 @@ p.copyr {
             }
 
             #submit {
-              font-family: $font-list;
-              margin: 0;
-              height: 45px;
-              width: 20%;
-              display: inline-block;
-              font-size: 1.2em;
-              line-height: 30px;
-              background-color: $color-orange;
-              color: $color-white;
+              width: 50%;
+              font-size: 1.4em;
               border: 0;
+              margin: 0 auto;
 
               &:hover {
-                background-color: $color-white;
-                color: $color-orange;
                 border: 0;
                 cursor: pointer;
                 font-weight: bold;
@@ -6172,14 +5653,11 @@ p.copyr {
         float: right;
         min-height: 980px;
         width: 76%;
-        margin: 0 0 20px;
         form.search_products{
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -6298,10 +5776,7 @@ p.copyr {
           figure.product-box_longer {
             max-height: 180px;
             display: block;
-            width: 100%;
             float: left;
-            font-family: $font-list;
-            margin-bottom: 15px;
 
             img.product_boximg_longer {
               width: 18%;
@@ -6314,28 +5789,16 @@ p.copyr {
             figcaption.product_boxdetails_longer {
               width: 79%;
               height: 150px;
-              margin: 0;
-              padding: 1%;
-              display: block;
-              float: left;
+
 
               h1 {
-                height: auto;
-                line-height: 45px;
                 text-indent: 1em;
                 font-size:0.9em;
-                color: $login-color;
-                font-weight: bold;
               }
 
               p {
                 float: right;
                 width: 74%;
-                height: auto;
-                display: block;
-                line-height: 1.5em;
-                text-indent: 0;
-                margin: 0;
                 font-size: 0.85em;
                 padding: 0 5% 0 0;
               }
@@ -6345,29 +5808,16 @@ p.copyr {
               }
 
               span.price_longer {
-                height: auto;
-                line-height: 50px;
-                font-size: 0.85em;
-                margin: 0;
-                font-weight: bold;
-                display: block;
-                width: 24%;
-                text-indent: 1%;
-                /*Price Icon*/
-                img.product_icon_longer {
-                  float: left;
-                  display: block;
-                  margin: 0;
-                  width: 20%;
-                  @include transitioner(all 0.3s ease);
 
-                  &:hover {
-                    -webkit-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-                    -ms-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                    cursor: pointer;
+                font-size: 0.85em;
+
+                a{
+                  display:block;
+                  img.product_icon_longer {
+                    float: left;
+                    display: block;
+                    margin: 0;
+
                   }
                 }
               }
@@ -6910,12 +6360,11 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-
             margin: 0 0 1em 0;
 
 
             label {
-              width: 100%;
+
               font-size: 1em;
 
             }
@@ -6961,9 +6410,7 @@ p.copyr {
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -7102,22 +6549,13 @@ p.copyr {
               float: left;
 
               h1 {
-                height: auto;
-                line-height: 45px;
                 text-indent: 1em;
                 font-size:0.9em;
-                color: $login-color;
-                font-weight: bold;
               }
 
               p {
                 float: right;
                 width: 74%;
-                height: auto;
-                display: block;
-                line-height: 1.5em;
-                text-indent: 0;
-                margin: 0;
                 font-size: 0.85em;
                 padding: 0 5% 0 0;
               }
@@ -7127,29 +6565,16 @@ p.copyr {
               }
 
               span.price_longer {
-                height: auto;
-                line-height: 50px;
-                font-size: 0.85em;
-                margin: 0;
-                font-weight: bold;
-                display: block;
-                width: 24%;
-                text-indent: 1%;
-                /*Price Icon*/
-                img.product_icon_longer {
-                  float: left;
-                  display: block;
-                  margin: 0;
-                  width: 20%;
-                  @include transitioner(all 0.3s ease);
 
-                  &:hover {
-                    -webkit-transform: rotate(360deg);
-                    -moz-transform: rotate(360deg);
-                    -o-transform: rotate(360deg);
-                    -ms-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                    cursor: pointer;
+                font-size: 0.85em;
+
+                a{
+                  display:block;
+                  img.product_icon_longer {
+                    float: left;
+                    display: block;
+                    margin: 0;
+
                   }
                 }
               }
@@ -7560,7 +6985,6 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-
             margin: 0 0 1em 0;
 
 
@@ -7612,9 +7036,7 @@ p.copyr {
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -7740,7 +7162,6 @@ p.copyr {
 
 
               h1 {
-                line-height: 45px;
                 text-indent: 1em;
                 font-size:1em;
               }
@@ -7758,7 +7179,7 @@ p.copyr {
 
               span.price_longer {
                 font-size: 1em;
-                /*Price Icon*/
+
                 a{
                   display:block;
                   img.product_icon_longer {
@@ -8173,7 +7594,6 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-
             margin: 0 0 1em 0;
 
 
@@ -8224,9 +7644,7 @@ p.copyr {
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -8352,7 +7770,6 @@ p.copyr {
 
 
               h1 {
-                line-height: 45px;
                 text-indent: 1em;
                 font-size:1em;
               }
@@ -8370,7 +7787,7 @@ p.copyr {
 
               span.price_longer {
                 font-size: 1em;
-                /*Price Icon*/
+
                 a{
                   display:block;
                   img.product_icon_longer {
@@ -8785,7 +8202,6 @@ p.copyr {
 
           li,
           li:nth-of-type(3) {
-
             margin: 0 0 1em 0;
 
 
@@ -8837,9 +8253,7 @@ p.copyr {
           margin-bottom:1em;
           select{
             width: 35%;
-            font-size: 0.9em;
             margin: 0 0.25em 0 0;
-            height: 30px;
           }
         }
 
@@ -8965,8 +8379,7 @@ p.copyr {
 
 
               h1 {
-                line-height: 45px;
-                text-indent: 1em;
+                text-indent: 0.5em;
                 font-size:1em;
               }
 
