@@ -11,7 +11,6 @@ function Faqs() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel
           rutrum ante.
         </span>
-        <br />
 
         <p>
           Vivamus adipiscing tincidunt purus at adipiscing. Proin orci metus,
@@ -22,12 +21,11 @@ function Faqs() {
           Sed lectus arcu, ultrices at mattis id, elementum in nisl. Sed
           condimentum adipiscing urna, id venenatis ante placerat vel.
         </p>
-        <br />
+
         <span className="context_title">
           {" "}
           Integer pellentesque lorem quis libero consectetur ac egestas magna
           tincidunt.
-          <br />
         </span>
 
         <p>
@@ -42,12 +40,10 @@ function Faqs() {
           faucibus et feugiat non, viverra ac turpis.
         </p>
 
-        <br />
         <span className="context_title">
           Curabitur pellentesque facilisis volutpat.Vivamus vel lacus orci.
           Mauris semper sapien ut massa scelerisque consequat non eu justo.
         </span>
-        <br />
 
         <p>
           Morbi non massa lectus. Nullam ac leo in dolor pharetra bibendum at
@@ -61,41 +57,9 @@ function Faqs() {
           luctus. Quisque sit amet ligula at arcu bibendum cursus. Vestibulum
           volutpat suscipit iaculis.
         </p>
-
-        <br />
-        <span className="context_title">
-          Nam bibendum est quis metus fermentum faucibus.
-        </span>
-        <br />
-
-        <p>
-          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-          ridiculus mus. Aenean vel nisl metus. Integer sit amet lacus quis
-          purus tempor porta. Fusce mollis purus et ligula imperdiet ut eleifend
-          nunc aliquam. Duis ut ante in enim pulvinar tempor ut ac justo. Nam in
-          erat nulla. Nulla tincidunt nisi vestibulum enim dapibus ut tristique
-          purus vulputate. Nunc et tempus velit. Nullam et augue porta urna
-          rhoncus iaculis vitae et nunc. Nam cursus pharetra magna at
-          vestibulum. Aliquam accumsan, erat a porttitor ultrices, elit elit
-          tristique arcu, et adipiscing mi sem at sapien. Vestibulum fringilla
-          sagittis elit vitae lacinia.
-        </p>
-
-        <br />
-        <span className="context_title">
-          Nunc urna metus, luctus et dictum sed, tincidunt a arcu.
-        </span>
-        <br />
-
-        <p>
-          Donec in sem nisl, a rhoncus leo. Phasellus a ligula non odio euismod
-          ullamcorper vel blandit arcu. Curabitur id magna eget augue dapibus
-          mattis. Vivamus consectetur venenatis aliquet. Donec nec libero
-          placerat mi tincidunt vestibulum sit amet a ipsum.
-        </p>
       </main>
 
-      <aside className="contact_textbox">
+      <aside className="contact_sidebar">
         <br />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi vel

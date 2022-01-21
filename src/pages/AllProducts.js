@@ -27,8 +27,7 @@ class AllProducts extends Component {
       .then((response) => response.json())
       .then((data) => {
         const productData = data.map((shoe, index) => {
-          // eslint-disable-next-line prettier/prettier
-           // eslint-disable-next-line react/destructuring-assignment
+          // eslint-disable-next-line react/destructuring-assignment
           // eslint-disable-next-line no-param-reassign
           shoe.prodId = index;
           this.setState({ lastIndex: index });

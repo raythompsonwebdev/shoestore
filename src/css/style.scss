@@ -1445,7 +1445,7 @@ p.copyr {
     }
 
     /*Content*/
-     main#content {
+    main#content {
       width: 100%;
       margin: 0;
 
@@ -1548,55 +1548,79 @@ p.copyr {
       }
 
       aside.contact_sidebar {
-        width: 96.5%;
+        width: 32.50%;
+        height: auto;
+        display: block;
+        font-family: $font-list;
+        float: right;
+        background-color: $color-white-bg;
         padding: 1%;
+        border: 2px $content-color1 solid;
         margin-bottom: 5%;
 
-        h2 {
-
+        h1 {
+          font-size: 1em;
+          color: $header-color;
+          font-weight: bold;
+          background-color: $color-white;
+          height: auto;
           line-height: 20px;
-
+          text-indent: 0;
         }
 
         p {
-
+          width: 100%;
+          margin: auto;
+          font-family: $font-list;
           font-size: 0.9em;
           line-height: 1.8em;
         }
       }
 
       #contact_form {
-        width: 94%;
-        height: auto;
-
+        width: 63%;
+        height: 390px;
+        float: left;
+        display: block;
       }
 
       #form {
         width: 100%;
+        padding: 0;
+        font-family: $font-list;
+
         ul {
           height: auto;
-
+          display: block;
 
           li,
           li:nth-of-type(3) {
-
+            height: auto;
+            display: block;
             margin: 0 0 1em 0;
-
+            padding: 0;
+            display:flex;
 
             label {
               width: 100%;
+              float: left;
+              line-height: 40px;
+              height: 40px;
               font-size: 1em;
-
+              text-align: center;
+              margin:0;
             }
 
             input {
               width: 75%;
+              height: 40px;
 
             }
 
             textarea {
               width: 75%;
-
+              margin: 0;
+              padding: 0;
 
             }
 
@@ -1607,9 +1631,24 @@ p.copyr {
             }
 
             #submit {
+              font-family: $font-list;
+              margin: 0;
               height: 45px;
+              width: 20%;
+              display: inline-block;
               font-size: 1.2em;
+              line-height: 30px;
+              background-color: $color-orange;
+              color: $color-white;
+              border: 0;
 
+              &:hover {
+                background-color: $color-white;
+                color: $color-orange;
+                border: 0;
+                cursor: pointer;
+                font-weight: bold;
+              }
             }
           }
 
@@ -1621,6 +1660,14 @@ p.copyr {
         font-size: 1.15em;
         line-height: 25px;
         margin-bottom: 1%;
+      }
+
+      main#context {
+        width: 60%;
+        margin: 0;
+        font-family: $font-list;
+        float: left;
+        padding: 0 0.75em;
       }
 
       /*rightside content section within content div*/
@@ -1656,16 +1703,16 @@ p.copyr {
 
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
-            padding-top: 1em;
+            padding-top: 0.5em;
             h1 {
-              font-size: 2.5em;
-              line-height: 50px;
+              font-size: 2.1em;
+              line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1.25em;
+              font-size: 1em;
               line-height: 40px;
               width:95%
             }
@@ -1687,7 +1734,7 @@ p.copyr {
                 a {
                   margin-bottom: 0.2em;
                   font-size: 0.9em;
-                  line-height: 40px;
+                  line-height: 32px;
 
                 }
               }
@@ -2047,6 +2094,65 @@ p.copyr {
                   cursor: pointer;
                 }
               }
+            }
+          }
+        }
+      }
+      .left_bar.is-expanded {
+        position: unset;
+        z-index: 0;
+        left: 0px;
+        height: auto;
+        width:23%;
+        background-color: $color-white;
+
+        #acc_nav {
+          div#accContainer {
+
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
             }
           }
         }
@@ -2250,7 +2356,7 @@ p.copyr {
     }
 
     /*Content*/
-     main#content {
+    main#content {
       width: 100%;
       margin: 0;
 
@@ -2353,55 +2459,79 @@ p.copyr {
       }
 
       aside.contact_sidebar {
-        width: 96.5%;
+        width: 32.50%;
+        height: auto;
+        display: block;
+        font-family: $font-list;
+        float: right;
+        background-color: $color-white-bg;
         padding: 1%;
+        border: 2px $content-color1 solid;
         margin-bottom: 5%;
 
-        h2 {
-
+        h1 {
+          font-size: 1em;
+          color: $header-color;
+          font-weight: bold;
+          background-color: $color-white;
+          height: auto;
           line-height: 20px;
-
+          text-indent: 0;
         }
 
         p {
-
+          width: 100%;
+          margin: auto;
+          font-family: $font-list;
           font-size: 0.9em;
           line-height: 1.8em;
         }
       }
 
       #contact_form {
-        width: 94%;
-        height: auto;
-
+        width: 63%;
+        height: 390px;
+        float: left;
+        display: block;
       }
 
       #form {
         width: 100%;
+        padding: 0;
+        font-family: $font-list;
+
         ul {
           height: auto;
-
+          display: block;
 
           li,
           li:nth-of-type(3) {
-
+            height: auto;
+            display: block;
             margin: 0 0 1em 0;
-
+            padding: 0;
+            display:flex;
 
             label {
               width: 100%;
+              float: left;
+              line-height: 40px;
+              height: 40px;
               font-size: 1em;
-
+              text-align: center;
+              margin:0;
             }
 
             input {
               width: 75%;
+              height: 40px;
 
             }
 
             textarea {
               width: 75%;
-
+              margin: 0;
+              padding: 0;
 
             }
 
@@ -2412,9 +2542,24 @@ p.copyr {
             }
 
             #submit {
+              font-family: $font-list;
+              margin: 0;
               height: 45px;
+              width: 20%;
+              display: inline-block;
               font-size: 1.2em;
+              line-height: 30px;
+              background-color: $color-orange;
+              color: $color-white;
+              border: 0;
 
+              &:hover {
+                background-color: $color-white;
+                color: $color-orange;
+                border: 0;
+                cursor: pointer;
+                font-weight: bold;
+              }
             }
           }
 
@@ -2426,6 +2571,14 @@ p.copyr {
         font-size: 1.15em;
         line-height: 25px;
         margin-bottom: 1%;
+      }
+
+      main#context {
+        width: 60%;
+        margin: 0;
+        font-family: $font-list;
+        float: left;
+        padding: 0 0.75em;
       }
 
       /*rightside content section within content div*/
@@ -2463,14 +2616,14 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.5em;
-              line-height: 50px;
+              font-size: 2.1em;
+              line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1.25em;
+              font-size: 1em;
               line-height: 40px;
               width:95%
             }
@@ -2492,7 +2645,7 @@ p.copyr {
                 a {
                   margin-bottom: 0.2em;
                   font-size: 0.9em;
-                  line-height: 40px;
+                  line-height: 32px;
 
                 }
               }
@@ -2852,6 +3005,65 @@ p.copyr {
                   cursor: pointer;
                 }
               }
+            }
+          }
+        }
+      }
+      .left_bar.is-expanded {
+        position: unset;
+        z-index: 0;
+        left: 0px;
+        height: auto;
+        width:23%;
+        background-color: $color-white;
+
+        #acc_nav {
+          div#accContainer {
+
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
             }
           }
         }
@@ -3055,7 +3267,7 @@ p.copyr {
     }
 
     /*Content*/
-     main#content {
+    main#content {
       width: 100%;
       margin: 0;
 
@@ -3158,55 +3370,79 @@ p.copyr {
       }
 
       aside.contact_sidebar {
-        width: 96.5%;
+        width: 32.50%;
+        height: auto;
+        display: block;
+        font-family: $font-list;
+        float: right;
+        background-color: $color-white-bg;
         padding: 1%;
+        border: 2px $content-color1 solid;
         margin-bottom: 5%;
 
-        h2 {
-
+        h1 {
+          font-size: 1em;
+          color: $header-color;
+          font-weight: bold;
+          background-color: $color-white;
+          height: auto;
           line-height: 20px;
-
+          text-indent: 0;
         }
 
         p {
-
+          width: 100%;
+          margin: auto;
+          font-family: $font-list;
           font-size: 0.9em;
           line-height: 1.8em;
         }
       }
 
       #contact_form {
-        width: 94%;
-        height: auto;
-
+        width: 63%;
+        height: 390px;
+        float: left;
+        display: block;
       }
 
       #form {
         width: 100%;
+        padding: 0;
+        font-family: $font-list;
+
         ul {
           height: auto;
-
+          display: block;
 
           li,
           li:nth-of-type(3) {
-
+            height: auto;
+            display: block;
             margin: 0 0 1em 0;
-
+            padding: 0;
+            display:flex;
 
             label {
               width: 100%;
+              float: left;
+              line-height: 40px;
+              height: 40px;
               font-size: 1em;
-
+              text-align: center;
+              margin:0;
             }
 
             input {
               width: 75%;
+              height: 40px;
 
             }
 
             textarea {
               width: 75%;
-
+              margin: 0;
+              padding: 0;
 
             }
 
@@ -3217,9 +3453,24 @@ p.copyr {
             }
 
             #submit {
+              font-family: $font-list;
+              margin: 0;
               height: 45px;
+              width: 20%;
+              display: inline-block;
               font-size: 1.2em;
+              line-height: 30px;
+              background-color: $color-orange;
+              color: $color-white;
+              border: 0;
 
+              &:hover {
+                background-color: $color-white;
+                color: $color-orange;
+                border: 0;
+                cursor: pointer;
+                font-weight: bold;
+              }
             }
           }
 
@@ -3231,6 +3482,14 @@ p.copyr {
         font-size: 1.15em;
         line-height: 25px;
         margin-bottom: 1%;
+      }
+
+      main#context {
+        width: 60%;
+        margin: 0;
+        font-family: $font-list;
+        float: left;
+        padding: 0 0.75em;
       }
 
       /*rightside content section within content div*/
@@ -3267,16 +3526,15 @@ p.copyr {
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
-
             h1 {
-              font-size: 2.5em;
-              line-height: 50px;
+              font-size: 2.1em;
+              line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1.25em;
+              font-size: 1em;
               line-height: 40px;
               width:95%
             }
@@ -3298,7 +3556,7 @@ p.copyr {
                 a {
                   margin-bottom: 0.2em;
                   font-size: 0.9em;
-                  line-height: 40px;
+                  line-height: 32px;
 
                 }
               }
@@ -3662,6 +3920,65 @@ p.copyr {
           }
         }
       }
+      .left_bar.is-expanded {
+        position: unset;
+        z-index: 0;
+        left: 0px;
+        height: auto;
+        width:23%;
+        background-color: $color-white;
+
+        #acc_nav {
+          div#accContainer {
+
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
     }
 
     .spacer {
@@ -3727,14 +4044,14 @@ p.copyr {
       padding: 0;
       margin: 0 0 1%;
       span#signin-box {
-        width: 22%;
+        width: 24%;
         display: block;
         float: right;
         height: 20px;
 
         a {
           line-height: 20px;
-          font-size: 0.9em;
+          font-size: 0.8em;
         }
 
         a:last-of-type {
@@ -3861,7 +4178,7 @@ p.copyr {
     }
 
     /*Content*/
-     main#content {
+    main#content {
       width: 100%;
       margin: 0;
 
@@ -3964,55 +4281,79 @@ p.copyr {
       }
 
       aside.contact_sidebar {
-        width: 96.5%;
+        width: 32.50%;
+        height: auto;
+        display: block;
+        font-family: $font-list;
+        float: right;
+        background-color: $color-white-bg;
         padding: 1%;
+        border: 2px $content-color1 solid;
         margin-bottom: 5%;
 
-        h2 {
-
+        h1 {
+          font-size: 1em;
+          color: $header-color;
+          font-weight: bold;
+          background-color: $color-white;
+          height: auto;
           line-height: 20px;
-
+          text-indent: 0;
         }
 
         p {
-
+          width: 100%;
+          margin: auto;
+          font-family: $font-list;
           font-size: 0.9em;
           line-height: 1.8em;
         }
       }
 
       #contact_form {
-        width: 94%;
-        height: auto;
-
+        width: 63%;
+        height: 390px;
+        float: left;
+        display: block;
       }
 
       #form {
         width: 100%;
+        padding: 0;
+        font-family: $font-list;
+
         ul {
           height: auto;
-
+          display: block;
 
           li,
           li:nth-of-type(3) {
-
+            height: auto;
+            display: block;
             margin: 0 0 1em 0;
-
+            padding: 0;
+            display:flex;
 
             label {
               width: 100%;
+              float: left;
+              line-height: 40px;
+              height: 40px;
               font-size: 1em;
-
+              text-align: center;
+              margin:0;
             }
 
             input {
               width: 75%;
+              height: 40px;
 
             }
 
             textarea {
               width: 75%;
-
+              margin: 0;
+              padding: 0;
 
             }
 
@@ -4023,9 +4364,24 @@ p.copyr {
             }
 
             #submit {
+              font-family: $font-list;
+              margin: 0;
               height: 45px;
+              width: 20%;
+              display: inline-block;
               font-size: 1.2em;
+              line-height: 30px;
+              background-color: $color-orange;
+              color: $color-white;
+              border: 0;
 
+              &:hover {
+                background-color: $color-white;
+                color: $color-orange;
+                border: 0;
+                cursor: pointer;
+                font-weight: bold;
+              }
             }
           }
 
@@ -4037,6 +4393,14 @@ p.copyr {
         font-size: 1.15em;
         line-height: 25px;
         margin-bottom: 1%;
+      }
+
+      main#context {
+        width: 60%;
+        margin: 0;
+        font-family: $font-list;
+        float: left;
+        padding: 0 0.75em;
       }
 
       /*rightside content section within content div*/
@@ -4074,14 +4438,14 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.5em;
-              line-height: 50px;
+              font-size: 2.1em;
+              line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1.25em;
+              font-size: 1em;
               line-height: 40px;
               width:95%
             }
@@ -4103,7 +4467,7 @@ p.copyr {
                 a {
                   margin-bottom: 0.2em;
                   font-size: 0.9em;
-                  line-height: 40px;
+                  line-height: 32px;
 
                 }
               }
@@ -4467,6 +4831,66 @@ p.copyr {
           }
         }
       }
+
+      .left_bar.is-expanded {
+        position: unset;
+        z-index: 0;
+        left: 0px;
+        height: auto;
+        width:23%;
+        background-color: $color-white;
+
+        #acc_nav {
+          div#accContainer {
+
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
     }
 
     .spacer {
@@ -4531,14 +4955,14 @@ p.copyr {
       padding: 0;
       margin: 0 0 1%;
       span#signin-box {
-        width: 23%;
+        width: 24%;
         display: block;
         float: right;
         height: 20px;
 
         a {
           line-height: 20px;
-          font-size: 0.8em;
+          font-size: 0.75em;
         }
 
         a:last-of-type {
@@ -4666,7 +5090,8 @@ p.copyr {
     }
 
     /*Content*/
-     main#content {
+    /*Content*/
+    main#content {
       width: 100%;
       margin: 0;
 
@@ -4769,55 +5194,79 @@ p.copyr {
       }
 
       aside.contact_sidebar {
-        width: 96.5%;
+        width: 32.50%;
+        height: auto;
+        display: block;
+        font-family: $font-list;
+        float: right;
+        background-color: $color-white-bg;
         padding: 1%;
+        border: 2px $content-color1 solid;
         margin-bottom: 5%;
 
-        h2 {
-
+        h1 {
+          font-size: 1em;
+          color: $header-color;
+          font-weight: bold;
+          background-color: $color-white;
+          height: auto;
           line-height: 20px;
-
+          text-indent: 0;
         }
 
         p {
-
+          width: 100%;
+          margin: auto;
+          font-family: $font-list;
           font-size: 0.9em;
           line-height: 1.8em;
         }
       }
 
       #contact_form {
-        width: 94%;
-        height: auto;
-
+        width: 63%;
+        height: 390px;
+        float: left;
+        display: block;
       }
 
       #form {
         width: 100%;
+        padding: 0;
+        font-family: $font-list;
+
         ul {
           height: auto;
-
+          display: block;
 
           li,
           li:nth-of-type(3) {
-
+            height: auto;
+            display: block;
             margin: 0 0 1em 0;
-
+            padding: 0;
+            display:flex;
 
             label {
               width: 100%;
+              float: left;
+              line-height: 40px;
+              height: 40px;
               font-size: 1em;
-
+              text-align: center;
+              margin:0;
             }
 
             input {
               width: 75%;
+              height: 40px;
 
             }
 
             textarea {
               width: 75%;
-
+              margin: 0;
+              padding: 0;
 
             }
 
@@ -4828,9 +5277,24 @@ p.copyr {
             }
 
             #submit {
+              font-family: $font-list;
+              margin: 0;
               height: 45px;
+              width: 20%;
+              display: inline-block;
               font-size: 1.2em;
+              line-height: 30px;
+              background-color: $color-orange;
+              color: $color-white;
+              border: 0;
 
+              &:hover {
+                background-color: $color-white;
+                color: $color-orange;
+                border: 0;
+                cursor: pointer;
+                font-weight: bold;
+              }
             }
           }
 
@@ -4842,6 +5306,14 @@ p.copyr {
         font-size: 1.15em;
         line-height: 25px;
         margin-bottom: 1%;
+      }
+
+      main#context {
+        width: 60%;
+        margin: 0;
+        font-family: $font-list;
+        float: left;
+        padding: 0 0.75em;
       }
 
       /*rightside content section within content div*/
@@ -4877,16 +5349,16 @@ p.copyr {
 
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
-            padding-top: 1em;
+            padding-top: 0.5em;
             h1 {
-              font-size: 2.3em;
+              font-size: 2.1em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1.1em;
+              font-size: 1em;
               line-height: 40px;
               width:95%
             }
@@ -4908,7 +5380,7 @@ p.copyr {
                 a {
                   margin-bottom: 0.2em;
                   font-size: 0.9em;
-                  line-height: 35px;
+                  line-height: 32px;
 
                 }
               }
@@ -5343,7 +5815,7 @@ p.copyr {
 
         a {
           line-height: 20px;
-          font-size: 0.7em;
+          font-size: 0.75em;
         }
 
         a:last-of-type {
@@ -5573,55 +6045,79 @@ p.copyr {
       }
 
       aside.contact_sidebar {
-        width: 96.5%;
+        width: 32.50%;
+        height: auto;
+        display: block;
+        font-family: $font-list;
+        float: right;
+        background-color: $color-white-bg;
         padding: 1%;
+        border: 2px $content-color1 solid;
         margin-bottom: 5%;
 
-        h2 {
-
+        h1 {
+          font-size: 1em;
+          color: $header-color;
+          font-weight: bold;
+          background-color: $color-white;
+          height: auto;
           line-height: 20px;
-
+          text-indent: 0;
         }
 
         p {
-
+          width: 100%;
+          margin: auto;
+          font-family: $font-list;
           font-size: 0.9em;
           line-height: 1.8em;
         }
       }
 
       #contact_form {
-        width: 94%;
-        height: auto;
-
+        width: 63%;
+        height: 390px;
+        float: left;
+        display: block;
       }
 
       #form {
         width: 100%;
+        padding: 0;
+        font-family: $font-list;
+
         ul {
           height: auto;
-
+          display: block;
 
           li,
           li:nth-of-type(3) {
-
+            height: auto;
+            display: block;
             margin: 0 0 1em 0;
-
+            padding: 0;
+            display:flex;
 
             label {
               width: 100%;
+              float: left;
+              line-height: 40px;
+              height: 40px;
               font-size: 1em;
-
+              text-align: center;
+              margin:0;
             }
 
             input {
               width: 75%;
+              height: 40px;
 
             }
 
             textarea {
               width: 75%;
-
+              margin: 0;
+              padding: 0;
 
             }
 
@@ -5632,9 +6128,24 @@ p.copyr {
             }
 
             #submit {
+              font-family: $font-list;
+              margin: 0;
               height: 45px;
+              width: 20%;
+              display: inline-block;
               font-size: 1.2em;
+              line-height: 30px;
+              background-color: $color-orange;
+              color: $color-white;
+              border: 0;
 
+              &:hover {
+                background-color: $color-white;
+                color: $color-orange;
+                border: 0;
+                cursor: pointer;
+                font-weight: bold;
+              }
             }
           }
 
@@ -5646,6 +6157,14 @@ p.copyr {
         font-size: 1.15em;
         line-height: 25px;
         margin-bottom: 1%;
+      }
+
+      main#context {
+        width: 60%;
+        margin: 0;
+        font-family: $font-list;
+        float: left;
+        padding: 0 0.75em;
       }
 
       /*rightside content section within content div*/

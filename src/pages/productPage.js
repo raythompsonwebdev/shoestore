@@ -8,7 +8,6 @@ import NotFound from "./NotFound";
 
 // eslint-disable-next-line react/prop-types
 function ProductPage({ match }) {
-  // eslint-disable-next-line prefer-destructuring
   // eslint-disable-next-line react/prop-types
   // eslint-disable-next-line prefer-destructuring
   // const { name } = match.params;

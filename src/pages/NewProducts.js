@@ -28,6 +28,7 @@ class NewProducts extends Component {
           // eslint-disable-next-line no-param-reassign
           shoe.prodId = index;
           this.setState({ lastIndex: index });
+
           // eslint-disable-next-line no-console
           // console.log(lastIndex + 1);
 

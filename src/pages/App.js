@@ -33,9 +33,9 @@ class App extends Component {
       .then((data) => {
         // const { lastIndex } = { ...this.state };
         const productData = data.map((shoe, index) => {
-          // this.setState({ lastIndex: index });
           // eslint-disable-next-line no-param-reassign
           shoe.prodId = index;
+          this.setState({ lastIndex: index });
           return shoe;
         });
         this.setState({
