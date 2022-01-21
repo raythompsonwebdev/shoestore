@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import productData from '../data/productData';
-import LikesSection from '../components/LikesSection';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { uuid } from "uuidv4";
+import productData from "../data/productData";
+import LikesSection from "../components/LikesSection";
 
-import NotFound from './NotFound';
+import NotFound from "./NotFound";
 
+// eslint-disable-next-line react/prop-types
 function ProductPage({ match }) {
-  const { name } = match.params;
-
+  // eslint-disable-next-line react/prop-types
+  // eslint-disable-next-line prefer-destructuring
+  // const { name } = match.params;
+  const name = null;
   const product = productData.find((item) => item.name === name);
 
   const [productInfo, setProductInfo] = useState({ likes: 0 });
@@ -15,6 +19,7 @@ function ProductPage({ match }) {
   const otherProducts = productData.filter((item) => item.name !== name);
 
   useEffect(() => {
+    // eslint-disable-next-line func-style
     const fetchData = async () => {
       // http://localhost:8000/api/product/${name}
       // add "proxy":"http://localhost:8000/" property to package.json to avoid cors issue
@@ -37,14 +42,8 @@ function ProductPage({ match }) {
       <figure id="productPagebox">
         <img id="productPageimg" src={product.imgUrl} alt={name} />
         <figcaption id="productPagedetails">
-          <p id="productPagename">
-            {' '}
-            {product.name}
-          </p>
-          <p id="productPageprice">
-            £
-            {product.price}
-          </p>
+          <p id="productPagename"> {product.name}</p>
+          <p id="productPageprice">£{product.price}</p>
           <p>{product.text}</p>
           <img
             id="cartPageicon"
@@ -63,22 +62,16 @@ function ProductPage({ match }) {
       <h1>Other Products</h1>
 
       <div id="other_products">
-        {otherProducts.map((item, key) => (
-          <figure className="other_product_box" key={key}>
+        {otherProducts.map((item) => (
+          <figure className="other_product_box" key={uuid()}>
             <img
               className="other_product_boximg"
               src={item.imgUrl}
               alt={item.name}
             />
             <figcaption className="other_product_boxdetails">
-              <p className="other_product_name">
-                {' '}
-                {item.name}
-              </p>
-              <p className="other_product_price">
-                £
-                {item.price}
-              </p>
+              <p className="other_product_name"> {item.name}</p>
+              <p className="other_product_price">£{item.price}</p>
               <Link to={`/product/${item.name}`}>
                 <img
                   className="other_cart_icon"

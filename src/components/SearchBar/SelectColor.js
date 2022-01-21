@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 function SelectColor(props) {
-  const {
-    colors, changeHandler, value, name,
-  } = props;
+  // eslint-disable-next-line react/prop-types
+  const { colors, changeHandler, value, name } = props;
 
   return (
     <select name={name} value={value} onChange={changeHandler}>
@@ -15,5 +15,14 @@ function SelectColor(props) {
     </select>
   );
 }
+
+SelectColor.defaultProps = {
+  colors: {},
+};
+SelectColor.propTypes = {
+  colors: PropTypes.shape({
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
+};
 
 export default SelectColor;

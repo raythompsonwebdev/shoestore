@@ -1,49 +1,48 @@
-import React from 'react';
-import searchbarData2 from './searchbarData2';
+/* eslint-disable react/forbid-prop-types */
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import searchbarData2 from "./searchbarData2";
 
-class Selector extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      value: ' ',
-    };
-  }
+function Selector(props) {
+  const { changesOrders } = props;
 
-  changeHandler = (event) => {
+  const [setvalue, setValue] = useState({});
+
+  // eslint-disable-next-line func-style
+  const changeHandler = (event) => {
     const { target } = event;
     const { value } = target;
+    setValue({ value });
 
-    this.setState({
-      value,
-    });
+    // eslint-disable-next-line no-console
+    console.log(setvalue);
 
-    this.props.changesOrders(value, 'asc');
+    changesOrders(setvalue, "asc");
   };
 
-  render() {
-    return (
-      <form className="search_products">
-        <label>{this.props.labelname}</label>
+  return (
+    <form className="search_products">
+      {/* <label>{labelname}</label> */}
 
-        <select
-          name="value"
-          value={this.state.value}
-          onChange={this.changeHandler}
-        >
-
-          {searchbarData2.map((options, i) => (
-            <optgroup label={options.value} key={i}>
-              {options.options.map((option, p) => (
-                <option key={p} value={option.value}>
-                  {option.displayValue}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
-      </form>
-    );
-  }
+      <select name="value" value={setvalue} onChange={changeHandler}>
+        {searchbarData2.map((options, i) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <optgroup label={options.value} key={i}>
+            {options.options.map((option, p) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <option key={p} value={option.value}>
+                {option.displayValue}
+              </option>
+            ))}
+          </optgroup>
+        ))}
+      </select>
+    </form>
+  );
 }
+
+Selector.propTypes = {
+  changesOrders: PropTypes.func.isRequired,
+};
 
 export default Selector;

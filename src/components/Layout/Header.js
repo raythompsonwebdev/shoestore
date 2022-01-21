@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from '../../images/shoe-store-logo.png';
+import React from "react";
+import logo from "../../images/shoe-store-logo.png";
 
 function Header() {
   return (

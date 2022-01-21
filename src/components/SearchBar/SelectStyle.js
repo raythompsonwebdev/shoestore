@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 function SelectStyle(props) {
-  const {
-    styles, changeHandler, value, name,
-  } = props;
+  // eslint-disable-next-line react/prop-types
+  const { styles, changeHandler, value, name } = props;
 
   return (
     <select name={name} value={value} onChange={changeHandler}>
@@ -15,5 +15,14 @@ function SelectStyle(props) {
     </select>
   );
 }
+
+SelectStyle.defaultProps = {
+  styles: {},
+};
+SelectStyle.propTypes = {
+  styles: PropTypes.shape({
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
+};
 
 export default SelectStyle;
