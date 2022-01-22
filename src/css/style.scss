@@ -1689,9 +1689,9 @@ p.copyr {
 
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
-            padding-top: 0.5em;
+            padding-top: 1em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.6em;
               line-height: 40px;
               width:96%
 
@@ -1719,8 +1719,8 @@ p.copyr {
 
                 a {
                   margin-bottom: 0.2em;
-                  font-size: 0.9em;
-                  line-height: 32px;
+                  font-size: 1em;
+                  line-height: 40px;
 
                 }
               }
@@ -1921,8 +1921,8 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
-              width: 90%;
+              font-family: $font-list;
+              width: 88%;
               height: 35px;
               font-size: 1em;
               margin: 0.5em auto;
@@ -1976,7 +1976,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -2040,7 +2040,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -2132,7 +2132,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 1em;
 
           }
         }
@@ -2495,16 +2495,16 @@ p.copyr {
 
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
-            padding-top: 0.5em;
+            padding-top: 1em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.7em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.2em;
               line-height: 40px;
               width:95%
             }
@@ -2526,7 +2526,7 @@ p.copyr {
                 a {
                   margin-bottom: 0.2em;
                   font-size: 0.9em;
-                  line-height: 32px;
+                  line-height: 40px;
 
                 }
               }
@@ -2728,7 +2728,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -2783,7 +2783,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -2847,7 +2847,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -2939,7 +2939,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 1em;
 
           }
         }
@@ -3307,7 +3307,7 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.5em;
               line-height: 40px;
               width:96%
 
@@ -3540,7 +3540,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -3595,7 +3595,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -3659,7 +3659,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -3751,7 +3751,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.85em;
 
           }
         }
@@ -4116,14 +4116,14 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.5em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.1em;
               line-height: 40px;
               width:95%
             }
@@ -4346,7 +4346,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -4401,7 +4401,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -4465,7 +4465,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -4558,7 +4558,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.85em;
 
           }
         }
@@ -4926,14 +4926,14 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.4em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.1em;
               line-height: 40px;
               width:95%
             }
@@ -5164,7 +5164,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -5219,7 +5219,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -5283,7 +5283,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -5316,7 +5316,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.8em;
 
           }
         }
@@ -5680,14 +5680,14 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.2em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.05em;
               line-height: 40px;
               width:95%
             }
@@ -5914,7 +5914,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -5964,12 +5964,13 @@ p.copyr {
             /* Style the buttons that are used to open and close the accordion panel */
 
             button{
+              font-family: $font-list;
               font-size:0.85rem;
               padding: 0;
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -6033,7 +6034,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -6066,7 +6067,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.75em;
 
           }
         }
@@ -6431,7 +6432,7 @@ p.copyr {
 
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
-            padding-top: 1em;
+            padding-top: 0.5em;
             h1 {
               font-size: 2.5em;
               line-height: 40px;
@@ -6440,7 +6441,7 @@ p.copyr {
             }
 
             h2 {
-              font-size: 1.2em;
+              font-size: 1.1em;
               line-height: 40px;
               width:95%
             }
@@ -6712,7 +6713,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.7em;
 
           }
         }
@@ -7322,7 +7323,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.65em;
 
           }
         }
@@ -7930,7 +7931,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.6em;
 
           }
         }
@@ -8277,13 +8278,13 @@ p.copyr {
 
             h1 {
 
-              font-size: 1.6em;
+              font-size: 1.5em;
               line-height: 35px;
 
             }
 
             h2 {
-              font-size: 70%;
+              font-size: 0.7em;
               line-height: 30px;
             }
           }
