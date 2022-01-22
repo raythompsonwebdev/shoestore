@@ -16,7 +16,7 @@ class App extends Component {
       lastIndex: 0,
     };
 
-    this.sidebarVisibility = this.sidebarVisibility.bind(this);
+    // this.sidebarVisibility = this.sidebarVisibility.bind(this);
   }
 
   componentDidMount() {
@@ -48,13 +48,13 @@ class App extends Component {
       });
   }
 
-  sidebarVisibility(e) {
+  sidebarVisibility = (e) => {
     e.preventDefault();
 
     const { visibility } = { ...this.state };
 
     this.setState({ visibility: !visibility });
-  }
+  };
 
   render() {
     const { visibility, productData } = { ...this.state };

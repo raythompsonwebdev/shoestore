@@ -306,35 +306,39 @@
       gap:0.5em;
       margin-bottom:0.5em;
 
-      label {
-        font-size: 1em;
-        width: 100%;
-        line-height: 35px;
-        margin: 0;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        text-align: center;
-        text-transform: uppercase;
-        text-indent: 0.1em;
-        font-weight:bold;
-      }
+      fieldset{
 
-      ::placeholder {
-        color:#000;
-      }
+        margin:0;
+        legend#select_search {
+          font-size: 1em;
+          width: 100%;
+          line-height: 35px;
+          margin: 0;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          text-align: left;
+          text-transform: uppercase;
+          text-indent: 0.1em;
+          font-weight:bold;
+        }
 
-      select{
-        font-family: $font-list;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        width: 100%;
-        font-size: 0.85em;
-        margin: 0.25em 0;
-        color: $content-color2;
-        line-height: 35px;
-        height:35px;
+        ::placeholder {
+          color:#000;
+        }
+
+        select{
+          font-family: $font-list;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          width: 100%;
+          font-size: 0.85em;
+          margin: 0.25em 0;
+          color: $content-color2;
+          line-height: 35px;
+          height:35px;
+        }
       }
     }
   }
@@ -1441,22 +1445,24 @@ p.copyr {
         -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
         justify-content: flex-start;
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 1.5em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
-
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -2251,23 +2257,26 @@ p.copyr {
         -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
         justify-content: flex-start;
+        fieldset{
+          margin:0;
+          legend#select_search  {
+            font-size: 1.2em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
+          ::placeholder {
+            color:#000;
+          }
+
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
 
-        ::placeholder {
-          color:#000;
-        }
-
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
-        }
       }
     }
 
@@ -3060,21 +3069,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 1.5em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -3868,21 +3880,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 1.5em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -4677,21 +4692,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 1.5em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -5433,21 +5451,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search{
+            font-size: 1.5em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -6207,21 +6228,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 1.5em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -6835,18 +6859,21 @@ p.copyr {
     #search_category_form {
       padding: 0.5em;
 
-      label {
-        font-size: 1em;
-        line-height: 35px;
-      }
+      fieldset{
+        margin:0;
+        legend#select_search{
+          font-size: 1em;
+          line-height: 35px;
+        }
 
-      ::placeholder {
-        color:#000;
-      }
+        ::placeholder {
+          color:#000;
+        }
 
-      select{
-        font-size: 0.85em;
-        margin: 0.25em 0;
+        select{
+          font-size: 0.85em;
+          margin: 0.25em 0;
+        }
       }
     }
   }
@@ -7444,18 +7471,21 @@ p.copyr {
     #search_category_form {
       padding: 0.5em;
 
-      label {
-        font-size: 1em;
-        line-height: 35px;
-      }
+      fieldset{
+        margin:0;
+        legend#select_search{
+          font-size: 1em;
+          line-height: 35px;
+        }
 
-      ::placeholder {
-        color:#000;
-      }
+        ::placeholder {
+          color:#000;
+        }
 
-      select{
-        font-size: 0.85em;
-        margin: 0.25em 0;
+        select{
+          font-size: 0.85em;
+          margin: 0.25em 0;
+        }
       }
     }
   }
@@ -8052,18 +8082,21 @@ p.copyr {
     #search_category_form {
       padding: 0.5em;
 
-      label {
+      fieldset{
+        margin:0;
+        legend#select_search{
         font-size: 1em;
         line-height: 35px;
-      }
+        }
 
-      ::placeholder {
-        color:#000;
-      }
+        ::placeholder {
+          color:#000;
+        }
 
-      select{
-        font-size: 0.85em;
-        margin: 0.25em 0;
+        select{
+          font-size: 0.85em;
+          margin: 0.25em 0;
+        }
       }
     }
   }

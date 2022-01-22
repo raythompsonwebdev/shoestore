@@ -9,18 +9,11 @@ class ContactForm extends Component {
       email: " ",
     };
 
-    this.submit = this.submit.bind(this);
     this.handleUserName = this.handleUserName.bind(this);
     this.handleComments = this.handleComments.bind(this);
-    this.handleEmail = this.handleEmail.bind(this);
+    this.handleEmails = this.handleEmails.bind(this);
+    // this.submit = this.submit.bind(this);
   }
-
-  // use this to replace below 3 functions?
-  // handleChange(e) {
-  //   const itemName = e.target.name;
-  //   const itemValue = e.target.value;
-  //   this.setState({ [itemName]: itemValue });
-  // }
 
   handleUserName(e) {
     this.setState({
@@ -34,21 +27,25 @@ class ContactForm extends Component {
     });
   }
 
-  handleEmail(e) {
+  handleEmails(e) {
     this.setState({
       email: e.target.value,
     });
   }
 
-  submit(e) {
-    const { username, email, comments } = { ...this.state };
+  submit = (e) => {
+    // const { username, email, comments } = { ...this.state };
+    // eslint-disable-next-line no-console
+
+    // eslint-disable-next-line no-console
+    // console.log(e);
     // eslint-disable-next-line no-console
     console.log(
-      `You have entered Username:${username}, Email: ${email} & This comment: ${comments}. This form is under maintenance and will be ready to use shortly`
+      // eslint-disable-next-line react/destructuring-assignment
+      `You have entered Username:${this.state.username}, Email: ${this.state.email} & This comment: ${this.state.comments}. This form is under maintenance and will be ready to use shortly`
     );
-
     e.preventDefault();
-  }
+  };
 
   render() {
     const { username, email, comments } = { ...this.state };
@@ -64,6 +61,7 @@ class ContactForm extends Component {
                 id="username"
                 value={username}
                 onChange={this.handleUserName}
+                required
               />
             </label>
           </li>
@@ -75,7 +73,8 @@ class ContactForm extends Component {
                 name="email"
                 id="email"
                 value={email}
-                onChange={this.handleEmail}
+                onChange={this.handleEmails}
+                required
               />
             </label>
           </li>
@@ -88,7 +87,7 @@ class ContactForm extends Component {
                 name="message"
                 id="message"
                 cols="35"
-                rows="15"
+                rows="10"
               />
             </label>
           </li>

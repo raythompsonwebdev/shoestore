@@ -3,10 +3,15 @@ import PropTypes from "prop-types";
 
 function SelectGender(props) {
   // eslint-disable-next-line react/prop-types
-  const { genders, changeHandler, value, name } = props;
+  const { aria, genderHandler, genders, name, value } = props;
 
   return (
-    <select name={name} value={value} onChange={changeHandler}>
+    <select
+      name={name}
+      value={value}
+      onChange={genderHandler}
+      aria-labelledby={aria}
+    >
       {genders.options.map((option) => (
         <option value={option.value} key={option.id}>
           {option.displayValue}
