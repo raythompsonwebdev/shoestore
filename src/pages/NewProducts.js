@@ -17,9 +17,9 @@ class NewProducts extends Component {
   componentDidMount() {
     // const fetchProducts = fetch(`/api/data/`);
     const fetchProducts = fetch(`./productdata.json`);
-    const { lastIndex } = { ...this.state };
+    // const { lastIndex } = { ...this.state };
     // eslint-disable-next-line no-console
-    console.log(lastIndex);
+    // console.log(lastIndex);
 
     fetchProducts
       .then((response) => response.json())

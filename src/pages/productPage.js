@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { uuid } from "uuidv4";
+import { Link, useParams } from "react-router-dom";
 import productData from "../data/productData";
 import LikesSection from "../components/LikesSection";
-
 import NotFound from "./NotFound";
 
 // eslint-disable-next-line react/prop-types
-function ProductPage({ match }) {
-  // eslint-disable-next-line react/prop-types
-  // eslint-disable-next-line prefer-destructuring
-  // const { name } = match.params;
-  const name = null;
+function ProductPage() {
+  const { name } = useParams();
+
   const product = productData.find((item) => item.name === name);
 
   const [productInfo, setProductInfo] = useState({ likes: 0 });
@@ -63,7 +59,7 @@ function ProductPage({ match }) {
 
       <div id="other_products">
         {otherProducts.map((item) => (
-          <figure className="other_product_box" key={uuid()}>
+          <figure className="other_product_box" key={item.prodId}>
             <img
               className="other_product_boximg"
               src={item.imgUrl}

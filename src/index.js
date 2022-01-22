@@ -9,7 +9,7 @@ import Footer from "./components/Layout/Footer";
 import Newproduct from "./pages/NewProducts";
 import Specials from "./pages/Specials";
 import AllProducts from "./pages/AllProducts";
-// import ProductPage from './pages/productPage';
+import ProductPage from "./pages/productPage";
 import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
 import NotFound from "./pages/NotFound";
@@ -28,7 +28,11 @@ const routing = (
         <Route exact path="/newproducts" element={<Newproduct />} />
         <Route exact path="/specials" element={<Specials />} />
         <Route exact path="/allproducts" element={<AllProducts />} />
-        {/* <Route path="/product/:name" element={ProductPage} /> */}
+        <Route path="/product/:name" element={<ProductPage />} />
+        {/* <Route
+          path="/product/:name"
+          render={({ match }) => <ProductPage match={match} />}
+        /> */}
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/faqs" element={<Faqs />} />
         <Route element={<NotFound />} />
