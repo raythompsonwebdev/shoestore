@@ -17,11 +17,12 @@ class AllProducts extends Component {
 
     this.changesOrders = this.changesOrders.bind(this);
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
-    // const fetchProducts = fetch(`/api/data/`);
-    const fetchProducts = fetch(`./productdata.json`);
+    const fetchProducts = fetch(`/api/data/`);
+    // const fetchProducts = fetch(`./productdata.json`);
     // const { lastIndex } = { ...this.state };
     fetchProducts
       .then((response) => response.json())
@@ -42,6 +43,13 @@ class AllProducts extends Component {
         // eslint-disable-next-line no-console
         console.log(error);
       });
+  }
+
+  handleChange(selectedSize) {
+    this.setState({
+      orderByVal: selectedSize,
+      orderDir: "asc",
+    });
   }
 
   changesOrders(orderbyval, dir) {
@@ -77,7 +85,13 @@ class AllProducts extends Component {
 
     return (
       <main id="content" className="clearfix">
-        <SearchBar labelname="All Products" />
+        <SearchBar
+          labelname="All Products"
+          orderByVal={orderByVal}
+          orderDir={orderDir}
+          changesOrders={this.changesOrders}
+          handleChange={this.handleChange}
+        />
 
         <button
           id="sidebar-toggle-btn"

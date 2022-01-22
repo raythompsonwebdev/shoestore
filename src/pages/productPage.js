@@ -59,7 +59,7 @@ function ProductPage() {
 
       <div id="other_products">
         {otherProducts.map((item) => (
-          <figure className="other_product_box" key={item.prodId}>
+          <figure className="other_product_box" key={item.id}>
             <img
               className="other_product_boximg"
               src={item.imgUrl}

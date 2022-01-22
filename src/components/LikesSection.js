@@ -23,10 +23,7 @@ function LikesSection(props) {
       >
         Add Like
       </button>
-      <p>
-        This product has
-        {likes} like
-      </p>
+      <p>This product has {likes} likes so far !</p>
     </div>
   );
 }

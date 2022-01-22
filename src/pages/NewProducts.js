@@ -11,12 +11,14 @@ class NewProducts extends Component {
       lastIndex: 0,
     };
 
+    this.changesOrders = this.changesOrders.bind(this);
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
-    // const fetchProducts = fetch(`/api/data/`);
-    const fetchProducts = fetch(`./productdata.json`);
+    const fetchProducts = fetch(`/api/data/`);
+    // const fetchProducts = fetch(`./productdata.json`);
     // const { lastIndex } = { ...this.state };
     // eslint-disable-next-line no-console
     // console.log(lastIndex);
@@ -44,10 +46,24 @@ class NewProducts extends Component {
       });
   }
 
+  handleChange(selectedSize) {
+    this.setState({
+      orderByVal: selectedSize,
+      orderDir: "asc",
+    });
+  }
+
   sidebarVisibility(e) {
     e.preventDefault();
     const { visibility } = { ...this.state };
     this.setState({ visibility: !visibility });
+  }
+
+  changesOrders(orderbyval, dir) {
+    this.setState({
+      orderByVal: orderbyval,
+      orderDir: dir,
+    });
   }
 
   render() {

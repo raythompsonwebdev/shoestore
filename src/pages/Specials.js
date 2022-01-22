@@ -22,8 +22,8 @@ class Specials extends Component {
   }
 
   componentDidMount() {
-    // const fetchProducts = fetch(`/api/data/`);
-    const fetchProducts = fetch(`./productdata.json`);
+    const fetchProducts = fetch(`/api/data/`);
+    // const fetchProducts = fetch(`./productdata.json`);
 
     fetchProducts
       .then((response) => response.json())
