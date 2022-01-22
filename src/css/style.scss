@@ -125,7 +125,7 @@
         display: block;
 
         a {
-          padding: 0 1em;
+          padding: 0 0.5em;
           text-align: center;
           height: 40px;
           color: $color-black;
@@ -1369,7 +1369,7 @@ p.copyr {
 
         a {
 
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
 
         a:last-of-type {
@@ -1446,7 +1446,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search {
-            font-size: 1.5em;
+            font-size: 1.2em;
             width: 20%;
             line-height: 35px;
           }
@@ -2184,7 +2184,7 @@ p.copyr {
 
         a {
 
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
 
         a:last-of-type {
@@ -2998,7 +2998,7 @@ p.copyr {
 
         a {
           line-height: 20px;
-          font-size: 0.85em;
+          font-size: 0.80em;
         }
 
         a:last-of-type {
@@ -3076,7 +3076,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search {
-            font-size: 1.5em;
+            font-size: 1.1em;
             width: 20%;
             line-height: 35px;
           }
@@ -3813,7 +3813,7 @@ p.copyr {
         width: 24%;
         a {
 
-          font-size: 0.8em;
+          font-size: 0.75em;
         }
 
         a:last-of-type {
@@ -3890,7 +3890,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search {
-            font-size: 1.5em;
+            font-size: 1.1em;
             width: 20%;
             line-height: 35px;
           }
@@ -4628,7 +4628,7 @@ p.copyr {
 
         a {
           line-height: 20px;
-          font-size: 0.75em;
+          font-size: 0.7em;
         }
 
         a:last-of-type {
@@ -4642,9 +4642,7 @@ p.copyr {
         li {
           height: 40px;
           a {
-            padding: 0 1em;
-            height: 40px;
-            line-height: 40px;
+
             font-size: 0.8em;
 
             &:hover {
@@ -4705,7 +4703,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search {
-            font-size: 1.5em;
+            font-size: 1.1em;
             width: 20%;
             line-height: 35px;
           }
@@ -5245,7 +5243,7 @@ p.copyr {
             /* Style the buttons that are used to open and close the accordion panel */
 
             button{
-              font-size:0.85rem;
+              font-size:0.8rem;
               padding: 0;
               text-align: left;
               border-radius: unset;
@@ -5387,11 +5385,11 @@ p.copyr {
       height: 40px;
 
       span#signin-box {
-        width: 22%;
+        width: 23%;
 
         a {
 
-          font-size: 0.75em;
+          font-size: 0.7em;
         }
 
         a:last-of-type {
@@ -5408,7 +5406,7 @@ p.copyr {
 
           a {
 
-            font-size: 0.85em;
+            font-size: 0.75em;
 
             &:hover {
               color: $color-orange;
@@ -5467,7 +5465,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search{
-            font-size: 1.5em;
+            font-size: 1em;
             width: 20%;
             line-height: 35px;
           }
@@ -5477,7 +5475,7 @@ p.copyr {
           }
 
           select{
-            width: 17.5%;
+            width: 17%;
             font-size: 0.9em;
             margin: 0 0.25em 0 0;
             height: 30px;
@@ -5999,7 +5997,7 @@ p.copyr {
 
             button{
               font-family: $font-list;
-              font-size:0.85rem;
+              font-size:0.8rem;
               padding: 0;
               text-align: left;
               border-radius: unset;
@@ -6150,7 +6148,7 @@ p.copyr {
 
         a {
           line-height: 20px;
-          font-size: 0.75em;
+          font-size: 0.7em;
         }
 
         a:last-of-type {
@@ -6244,7 +6242,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search {
-            font-size: 1.5em;
+            font-size: 1em;
             width: 20%;
             line-height: 35px;
           }
@@ -6254,7 +6252,7 @@ p.copyr {
           }
 
           select{
-            width: 17.5%;
+            width: 17%;
             font-size: 0.9em;
             margin: 0 0.25em 0 0;
             height: 30px;
@@ -6878,7 +6876,7 @@ p.copyr {
       fieldset{
         margin:0;
         legend#select_search{
-          font-size: 1em;
+          font-size: 0.9em;
           line-height: 35px;
         }
 
@@ -7492,7 +7490,7 @@ p.copyr {
       fieldset{
         margin:0;
         legend#select_search{
-          font-size: 1em;
+          font-size: 0.9em;
           line-height: 35px;
         }
 
@@ -8099,7 +8097,7 @@ p.copyr {
       fieldset{
         margin:0;
         legend#select_search{
-        font-size: 1em;
+        font-size: 0.9em;
         line-height: 35px;
         }
 
