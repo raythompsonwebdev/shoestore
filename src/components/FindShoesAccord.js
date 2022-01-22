@@ -4,7 +4,7 @@ import { Accordion } from "react-bootstrap";
 function FindShoesAccord() {
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
-      <nav id="acc_nav">
+      <nav id="acc_nav" aria-label="secondary">
         <div id="accContainer">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Mens Shoes</Accordion.Header>

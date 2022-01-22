@@ -26,32 +26,40 @@ function MainNav() {
 
       <ul id="inner-nav">
         <li>
-          <Link to="/" title="Home Page">
+          <Link to="/" title="Home Page" aria-label="Home Page">
             Home
           </Link>
         </li>
         <li>
-          <Link to="/newproducts" title="">
+          <Link
+            to="/newproducts"
+            title="new products page"
+            aria-label="new products page"
+          >
             New Products
           </Link>
         </li>
         <li>
-          <Link to="/specials" title="">
+          <Link to="/specials" title="specials page" aria-label="specials page">
             Specials
           </Link>
         </li>
         <li>
-          <Link to="/allproducts" title="">
+          <Link
+            to="/allproducts"
+            title="all products page"
+            aria-label="all products page"
+          >
             All Products
           </Link>
         </li>
         <li>
-          <Link to="/faqs" title="">
+          <Link to="/faqs" title="faqs page" aria-label="faqs page">
             FAQS
           </Link>
         </li>
         <li>
-          <Link to="/contact" title="">
+          <Link to="/contact" title="contact page" aria-label="contact page">
             Contact
           </Link>
         </li>
@@ -59,32 +67,40 @@ function MainNav() {
 
       <ul id="" className={`mobile-nav ${!visibility ? "is-expanded" : " "}`}>
         <li>
-          <Link to="/" title="Home Page">
+          <Link to="/" title="Home Page" aria-label="Home Page">
             Home
           </Link>
         </li>
         <li>
-          <Link to="/newproducts" title="New Product Page">
+          <Link
+            to="/newproducts"
+            title="new products page"
+            aria-label="new products page"
+          >
             New Products
           </Link>
         </li>
         <li>
-          <Link to="/specials" title="Specials Page">
+          <Link to="/specials" title="specials page" aria-label="specials page">
             Specials
           </Link>
         </li>
         <li>
-          <Link to="/allproducts" title="All Products Page">
+          <Link
+            to="/allproducts"
+            title="all products page"
+            aria-label="all products page"
+          >
             All Products
           </Link>
         </li>
         <li>
-          <Link to="faqs" title="FAQ Page">
+          <Link to="/faqs" title="faqs page" aria-label="faqs page">
             FAQS
           </Link>
         </li>
         <li>
-          <Link to="/contact" title="Contact Page">
+          <Link to="/contact" title="contact page" aria-label="contact page">
             Contact
           </Link>
         </li>

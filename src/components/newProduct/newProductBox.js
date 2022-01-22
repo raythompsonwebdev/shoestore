@@ -19,7 +19,7 @@ function NewProductBox(props) {
             <img
               className="product_icon_longer"
               src={cartImg}
-              alt="shopping-cart"
+              alt="shopping-cart icon"
             />
           </Link>{" "}
           Add to Cart

@@ -64,6 +64,7 @@ class App extends Component {
           id="sidebar-toggle-btn"
           type="button"
           onClick={this.sidebarVisibility}
+          aria-label="secondary menu toggle button"
         >
           SIDE
         </button>

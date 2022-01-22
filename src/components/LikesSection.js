@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 function LikesSection({ likes, productName, setProductInfo }) {
   const likeProduct = async () => {
     const response = await fetch(`/api/product/${productName}/likes`, {
-      method: 'post',
+      method: "post",
     });
     const body = await response.json();
     setProductInfo(body);
@@ -21,9 +21,7 @@ function LikesSection({ likes, productName, setProductInfo }) {
       </button>
       <p>
         This product has
-        {likes}
-        {' '}
-        like
+        {likes} like
       </p>
     </div>
   );
