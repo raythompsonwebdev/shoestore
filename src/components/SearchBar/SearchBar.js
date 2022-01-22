@@ -8,7 +8,7 @@ import SelectColor from "./SelectColor";
 
 const [genders, styles, sizes, colors] = searchbarData;
 function SearchBar(props) {
-  const { labelname } = props;
+  const { labelname, handleChange, changesOrders } = props;
 
   const [genderVal, setGenderVal] = useState(" ");
   const [sizeVal, setSizeVal] = useState(" ");
@@ -42,6 +42,9 @@ function SearchBar(props) {
   // eslint-disable-next-line func-style
   const submit = (event) => {
     event.preventDefault();
+
+    handleChange(genderVal);
+    changesOrders(genderVal, "asc");
     // eslint-disable-next-line no-console
     console.log(
       `You have entered \n Gender:${genderVal},\n Style: ${styleVal},\n  Size: ${sizeVal} \n  Colour :${colorVal}. \n This form is under maintenance and will be ready to use shortly`
@@ -93,6 +96,8 @@ function SearchBar(props) {
 
 SearchBar.propTypes = {
   labelname: PropTypes.string.isRequired,
+  changesOrders: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

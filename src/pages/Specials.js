@@ -18,6 +18,7 @@ class Specials extends Component {
 
     this.changesOrders = this.changesOrders.bind(this);
     this.sidebarVisibility = this.sidebarVisibility.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +45,13 @@ class Specials extends Component {
       });
   }
 
+  handleChange(selectedSize) {
+    this.setState({
+      orderByVal: selectedSize,
+      orderDir: "asc",
+    });
+  }
+
   changesOrders(orderbyval, dir) {
     this.setState({
       orderByVal: orderbyval,
@@ -60,7 +68,6 @@ class Specials extends Component {
   render() {
     // eslint-disable-next-line prefer-destructuring
     const { visibility, orderByVal, orderDir, productData } = this.state;
-
     let filteredApts = productData;
     const value = orderByVal;
 
@@ -82,8 +89,10 @@ class Specials extends Component {
       <main id="content" className="clearfix">
         <SearchBar
           labelname="Specials"
+          orderByVal={orderByVal}
+          orderDir={orderDir}
           changesOrders={this.changesOrders}
-          value={value}
+          handleChange={this.handleChange}
         />
 
         <button
@@ -104,6 +113,7 @@ class Specials extends Component {
             orderByVal={orderByVal}
             orderDir={orderDir}
             changesOrders={this.changesOrders}
+            handleChange={this.handleChange}
           />
           <br />
 

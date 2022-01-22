@@ -17,7 +17,7 @@ function FindShoesAccord() {
                 <div className="panel">
                   <ul>
                     {element.items.map((ele) => (
-                      <li>{ele}</li>
+                      <li key={ele}>{ele}</li>
                     ))}
                   </ul>
                 </div>
