@@ -2,6 +2,7 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import accordion from "./accordion.json";
 
+// eslint-disable-next-line func-style
 function FindShoesAccord() {
   // eslint-disable-next-line no-console
   // console.log(accordion);

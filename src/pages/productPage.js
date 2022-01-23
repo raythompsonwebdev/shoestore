@@ -4,27 +4,24 @@ import productData from "../data/productData";
 import LikesSection from "../components/LikesSection";
 import NotFound from "./NotFound";
 
-// eslint-disable-next-line react/prop-types
+// eslint-disable-next-line func-style
 function ProductPage() {
   const { name } = useParams();
-
   const product = productData.find((item) => item.name === name);
-
   const [productInfo, setProductInfo] = useState({ likes: 0 });
-
   const otherProducts = productData.filter((item) => item.name !== name);
 
   useEffect(() => {
     // eslint-disable-next-line func-style
     const fetchData = async () => {
-      // http://localhost:8000/api/product/${name}
       // add "proxy":"http://localhost:8000/" property to package.json to avoid cors issue
-      // then remove http://localhost:8000
 
-      const result = await fetch(`./productdata.json/${name}`);
-      // const result = await fetch(`/api/product/${name}`);
-      const body = await result.text();
-      setProductInfo({ body });
+      // const result = await fetch(`./productdata.json/${name}`);
+      const result = await fetch(`/api/product/${name}`);
+      const body = await result.json();
+      // eslint-disable-next-line no-console
+      console.log(body);
+      setProductInfo(body);
     };
 
     fetchData();

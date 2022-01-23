@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line func-style
 function Footer() {
   return (
     <footer className="Footer-header">

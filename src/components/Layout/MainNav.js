@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line func-style
 function MainNav() {
   const [visibility, setVisibility] = useState({ visibility: false });
 
