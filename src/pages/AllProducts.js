@@ -12,12 +12,12 @@ class AllProducts extends Component {
       orderDir: "asc",
       orderByVal: "all",
       lastIndex: 0,
-      visibility: true,
+      visibility: false,
     };
 
-    this.changesOrders = this.changesOrders.bind(this);
-    this.sidebarVisibility = this.sidebarVisibility.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    // this.changesOrders = this.changesOrders.bind(this);
+    // this.sidebarVisibility = this.sidebarVisibility.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -45,25 +45,25 @@ class AllProducts extends Component {
       });
   }
 
-  handleChange(selectedSize) {
+  handleChange = (selectedSize) => {
     this.setState({
       orderByVal: selectedSize,
       orderDir: "asc",
     });
-  }
+  };
 
-  changesOrders(orderbyval, dir) {
+  sidebarVisibility = (e) => {
+    e.preventDefault();
+    const { visibility } = { ...this.state };
+    this.setState({ visibility: !visibility });
+  };
+
+  changesOrders = (orderbyval, dir) => {
     this.setState({
       orderByVal: orderbyval,
       orderDir: dir,
     });
-  }
-
-  sidebarVisibility(e) {
-    e.preventDefault();
-    const { visibility } = { ...this.state };
-    this.setState({ visibility: !visibility });
-  }
+  };
 
   render() {
     const { visibility, orderByVal, orderDir, productData } = { ...this.state };

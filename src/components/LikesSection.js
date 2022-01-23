@@ -1,9 +1,9 @@
 import React from "react";
 
 function LikesSection(props) {
-  const { productName, setProductInfo, likes } = { ...props };
+  const { likes, productName, setProductInfo } = { ...props };
   async function likeProduct() {
-    // const response = await fetch(`/api/product/${productName}/likes`, {
+    // const response = await fetch(`./productdata.json/${productName}/likes`, {
     //   method: "post",
     // });
     const response = await fetch(`/api/product/${productName}/likes`, {

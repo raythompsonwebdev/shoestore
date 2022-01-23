@@ -11,9 +11,9 @@ class NewProducts extends Component {
       lastIndex: 0,
     };
 
-    this.changesOrders = this.changesOrders.bind(this);
-    this.sidebarVisibility = this.sidebarVisibility.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    // this.changesOrders = this.changesOrders.bind(this);
+    // this.sidebarVisibility = this.sidebarVisibility.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -46,25 +46,27 @@ class NewProducts extends Component {
       });
   }
 
-  handleChange(selectedSize) {
+  // eslint-disable-next-line react/no-unused-class-component-methods
+  handleChange = (selectedSize) => {
     this.setState({
       orderByVal: selectedSize,
       orderDir: "asc",
     });
-  }
+  };
 
-  sidebarVisibility(e) {
+  sidebarVisibility = (e) => {
     e.preventDefault();
     const { visibility } = { ...this.state };
     this.setState({ visibility: !visibility });
-  }
+  };
 
-  changesOrders(orderbyval, dir) {
+  // eslint-disable-next-line react/no-unused-class-component-methods
+  changesOrders = (orderbyval, dir) => {
     this.setState({
       orderByVal: orderbyval,
       orderDir: dir,
     });
-  }
+  };
 
   render() {
     const { visibility, productData } = { ...this.state };

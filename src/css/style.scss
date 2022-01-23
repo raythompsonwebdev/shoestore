@@ -196,7 +196,7 @@
       li {
         width: 100%;
         display: block;
-        height: 45px;
+        height: 44px;
         float: none;
         margin-bottom:0.15em;
 
@@ -4703,7 +4703,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search {
-            font-size: 1.1em;
+            font-size: 0.9em;
             width: 20%;
             line-height: 35px;
           }
@@ -5153,7 +5153,6 @@ p.copyr {
         }
       }
       /*leftbar*/
-      /*leftbar*/
       .left_bar {
         position:unset;
         z-index:0;
@@ -5324,6 +5323,68 @@ p.copyr {
           }
         }
       }
+      .left_bar.is-expanded {
+        position: unset;
+        z-index: 0;
+        left: 0px;
+        height: auto;
+        width:23%;
+        background-color: $color-white;
+
+        #acc_nav {
+          div#accContainer {
+
+            button{
+              font-size: 0.85rem;
+            }
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
     }
 
     .spacer {
@@ -5465,7 +5526,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search{
-            font-size: 1em;
+            font-size: 0.9em;
             width: 20%;
             line-height: 35px;
           }
@@ -6078,6 +6139,69 @@ p.copyr {
           }
         }
       }
+      .left_bar.is-expanded {
+        position: unset;
+        z-index: 0;
+        left: 0px;
+        height: auto;
+        width:23%;
+        background-color: $color-white;
+
+        #acc_nav {
+          div#accContainer {
+
+            button{
+              font-size: 0.8rem;
+            }
+
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
     }
 
     .spacer {
@@ -6173,11 +6297,11 @@ p.copyr {
 
         li {
           width: 100%;
-          height: 45px;
+          height: 44px;
 
           a {
             font-size: 1.1em;
-            line-height: 45px;
+            line-height: 44px;
 
           }
         }
@@ -6242,7 +6366,7 @@ p.copyr {
         fieldset{
           margin:0;
           legend#select_search {
-            font-size: 1em;
+            font-size: 0.9em;
             width: 20%;
             line-height: 35px;
           }
@@ -6682,6 +6806,9 @@ p.copyr {
         #acc_nav {
           div#accContainer {
 
+            button{
+              font-size: 0.85rem;
+            }
 
             .panel {
               padding: 0;
@@ -6828,11 +6955,11 @@ p.copyr {
 
         li {
           width: 100%;
-          height: 45px;
+          height: 44px;
 
           a {
             font-size: 1.1em;
-            line-height: 45px;
+            line-height: 44px;
 
           }
         }
@@ -7296,7 +7423,9 @@ p.copyr {
 
         #acc_nav {
           div#accContainer {
-
+            button{
+              font-size: 0.8rem;
+            }
 
             .panel {
               padding: 0;
@@ -7442,11 +7571,11 @@ p.copyr {
 
         li {
           width: 100%;
-          height: 45px;
+          height: 44px;
 
           a {
             font-size: 1.1em;
-            line-height: 45px;
+            line-height: 44px;
 
           }
         }
@@ -8049,11 +8178,11 @@ p.copyr {
 
         li {
           width: 100%;
-          height: 45px;
+          height: 44px;
 
           a {
             font-size: 1.1em;
-            line-height: 45px;
+            line-height: 44px;
 
           }
         }

@@ -24,7 +24,7 @@ function ProductPage() {
       const result = await fetch(`./productdata.json/${name}`);
       // const result = await fetch(`/api/product/${name}`);
       const body = await result.text();
-      setProductInfo(body);
+      setProductInfo({ body });
     };
 
     fetchData();
