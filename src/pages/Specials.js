@@ -22,7 +22,7 @@ class Specials extends Component {
   }
 
   componentDidMount() {
-    const fetchProducts = fetch(`/api/data/`);
+    const fetchProducts = fetch(`/api/products/`);
     // const fetchProducts = fetch(`./productdata.json`);
 
     fetchProducts

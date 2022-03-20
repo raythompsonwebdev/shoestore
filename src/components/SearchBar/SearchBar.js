@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import searchbarData from "./searchbarData.json";
-import SelectGender from "./SelectGender";
-import SelectSize from "./SelectSize";
-import SelectStyle from "./SelectStyle";
-import SelectColor from "./SelectColor";
+import searchbarData2 from "../../data/searchbarData.json";
+import {
+  SelectGender,
+  SelectColor,
+  SelectStyle,
+  SelectSize,
+} from "./SearchBarData";
 
-const [genders, styles, sizes, colors] = searchbarData;
 function SearchBar(props) {
   const { labelname, handleChange, changesOrders } = props;
 
@@ -14,6 +15,26 @@ function SearchBar(props) {
   const [sizeVal, setSizeVal] = useState(" ");
   const [styleVal, setStyleVal] = useState(" ");
   const [colorVal, setColorVal] = useState(" ");
+
+  const [searchBarData, setSearchBarData] = useState({});
+
+  useEffect(() => {
+    // eslint-disable-next-line func-style
+    const fetchData = async () => {
+      const result = await fetch(`/api/searchbardata`);
+      const body = await result.json();
+
+      // eslint-disable-next-line no-console
+      console.log(body);
+      setSearchBarData(body);
+    };
+
+    fetchData();
+  }, []);
+
+  const [genders, sizes, styles, colors] = searchbarData2;
+  // eslint-disable-next-line no-console
+  console.log(searchBarData, searchbarData2);
 
   // eslint-disable-next-line func-style
   const genderHandler = (event) => {

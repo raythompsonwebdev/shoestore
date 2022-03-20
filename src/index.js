@@ -12,6 +12,8 @@ import AllProducts from "./pages/AllProducts";
 import ProductPage from "./pages/productPage";
 import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import "./css/style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -29,13 +31,15 @@ const routing = (
         <Route exact path="/specials" element={<Specials />} />
         <Route exact path="/allproducts" element={<AllProducts />} />
         <Route path="/product/:name" element={<ProductPage />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/faqs" element={<Faqs />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/signin" element={<Login />} />
+        <Route element={<NotFound />} />
         {/* <Route
           path="/product/:name"
           render={({ match }) => <ProductPage match={match} />}
         /> */}
-        <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/faqs" element={<Faqs />} />
-        <Route element={<NotFound />} />
       </Routes>
 
       <Footer />

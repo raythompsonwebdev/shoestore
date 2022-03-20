@@ -15,23 +15,25 @@ class App extends Component {
       visibility: false,
       lastIndex: 0,
     };
-
-    // this.sidebarVisibility = this.sidebarVisibility.bind(this);
   }
 
   componentDidMount() {
-    // const fetchProducts = fetch(`/api/data/`);
-    const fetchProducts = fetch(`./productdata.json`);
+    const fetchProducts = fetch(`/api/products`);
+    // const fetchProducts = fetch(`./productdata.json`);
 
     fetchProducts
       .then((response) => {
         if (!response.ok) {
           throw new Error("no data provided");
         }
+        // eslint-disable-next-line no-console
+        // console.log(response.json());
         return response.json();
       })
       .then((data) => {
         // const { lastIndex } = { ...this.state };
+        // eslint-disable-next-line no-console
+        console.log(data);
         const productData = data.map((shoe, index) => {
           // eslint-disable-next-line no-param-reassign
           shoe.prodId = index;

@@ -14,10 +14,10 @@ function MainNav() {
   return (
     <nav id="main-nav" role="navigation">
       <span id="signin-box">
-        <Link to="/" title="">
+        <Link to="/login" title="">
           Sign in
         </Link>
-        <Link to="/" title="">
+        <Link to="/user" title="">
           my account
         </Link>
         <Link to="/" title="">

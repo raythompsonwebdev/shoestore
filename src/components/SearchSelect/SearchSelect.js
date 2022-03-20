@@ -1,12 +1,29 @@
 /* eslint-disable react/forbid-prop-types */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import searchbarData2 from "./searchbarData2";
+// import searchbarData2 from "./searchbarData2";
 
 function Selector(props) {
   const { handleChange, changesOrders } = props;
 
-  // const [setvalue, setValue] = useState({});
+  const [searchbarData, setSelectData] = useState({});
+
+  useEffect(() => {
+    // eslint-disable-next-line func-style
+    const fetchData = async () => {
+      const result = await fetch(`/api/selectdata`);
+      const body = await result.json();
+
+      // eslint-disable-next-line no-console
+      console.log(body);
+      setSelectData(body);
+    };
+
+    fetchData();
+  }, []);
+
+  // eslint-disable-next-line no-console
+  console.log(searchbarData);
 
   function onItemChange(evt) {
     handleChange(evt.target.value);
@@ -18,7 +35,7 @@ function Selector(props) {
       {/* <label>{labelname}</label> */}
 
       <select name="value" onChange={onItemChange}>
-        {searchbarData2.map((options, i) => (
+        {searchbarData.map((options, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <optgroup label={options.value} key={i}>
             {options.options.map((option, p) => (

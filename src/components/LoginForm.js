@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 
-class ContactForm extends Component {
+class LoginForm extends Component {
   constructor() {
     super();
     this.state = {
       username: " ",
-      comments: " ",
       email: " ",
     };
 
     this.handleUserName = this.handleUserName.bind(this);
-    this.handleComments = this.handleComments.bind(this);
     this.handleEmails = this.handleEmails.bind(this);
     // this.submit = this.submit.bind(this);
   }
@@ -18,12 +16,6 @@ class ContactForm extends Component {
   handleUserName(e) {
     this.setState({
       username: e.target.value,
-    });
-  }
-
-  handleComments(e) {
-    this.setState({
-      comments: e.target.value,
     });
   }
 
@@ -36,6 +28,10 @@ class ContactForm extends Component {
   submit = (e) => {
     // const { username, email, comments } = { ...this.state };
     // eslint-disable-next-line no-console
+
+    // eslint-disable-next-line no-console
+    // console.log(e);
+    // eslint-disable-next-line no-console
     console.log(
       // eslint-disable-next-line react/destructuring-assignment
       `You have entered Username:${this.state.username}, Email: ${this.state.email} & This comment: ${this.state.comments}. This form is under maintenance and will be ready to use shortly`
@@ -44,7 +40,7 @@ class ContactForm extends Component {
   };
 
   render() {
-    const { username, email, comments } = { ...this.state };
+    const { username, email } = { ...this.state };
     return (
       <form id="form" onSubmit={this.submit}>
         <ul>
@@ -75,19 +71,6 @@ class ContactForm extends Component {
             </label>
           </li>
           <li>
-            <label htmlFor="message">
-              Message:&#32;
-              <textarea
-                value={comments}
-                onChange={this.handleComments}
-                name="message"
-                id="message"
-                cols="35"
-                rows="10"
-              />
-            </label>
-          </li>
-          <li>
             <label htmlFor="submit">
               <input type="submit" value="Send" id="submit" name="submit" />
             </label>
@@ -98,4 +81,4 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
+export default LoginForm;

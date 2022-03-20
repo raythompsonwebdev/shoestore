@@ -1,0 +1,50 @@
+{
+  $jsonSchema: {
+    bsonType: 'object',
+    required: [
+      'name',
+      'style',
+      'color',
+      'size',
+      'gender',
+      'imgUrl',
+      'price',
+      'cartImg',
+      'text',
+      'all',
+      'likes'
+    ],
+    properties: {
+      name: {
+        type: 'string'
+      },
+      style: {
+        type: 'string'
+      },
+      color: {
+        type: 'string'
+      },
+      size: {
+        type: 'string'
+      },
+      gender: {
+        type: 'string'
+      },
+      imgUrl: {
+        type: 'string'
+      },
+      cartImg: {
+        type: 'string'
+      },
+      text: {
+        type: 'string'
+      },
+      all: {
+        type: 'string'
+      },
+      likes: {
+        type: 'number'
+      }
+    }
+  }
+}

@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 
-class ContactForm extends Component {
+class RegisterForm extends Component {
   constructor() {
     super();
     this.state = {
       username: " ",
-      comments: " ",
       email: " ",
+      date: " ",
     };
 
     this.handleUserName = this.handleUserName.bind(this);
-    this.handleComments = this.handleComments.bind(this);
-    this.handleEmails = this.handleEmails.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
+    this.handleDate = this.handleDate.bind(this);
     // this.submit = this.submit.bind(this);
   }
 
@@ -21,30 +21,31 @@ class ContactForm extends Component {
     });
   }
 
-  handleComments(e) {
-    this.setState({
-      comments: e.target.value,
-    });
-  }
-
-  handleEmails(e) {
+  handleEmail(e) {
     this.setState({
       email: e.target.value,
     });
   }
 
+  handleDate(e) {
+    this.setState({
+      date: e.target.value,
+    });
+  }
+
   submit = (e) => {
     // const { username, email, comments } = { ...this.state };
+
     // eslint-disable-next-line no-console
     console.log(
       // eslint-disable-next-line react/destructuring-assignment
-      `You have entered Username:${this.state.username}, Email: ${this.state.email} & This comment: ${this.state.comments}. This form is under maintenance and will be ready to use shortly`
+      `You have entered Username:${this.state.username}, Email: ${this.state.email} & This comment: ${this.state.date}. This form is under maintenance and will be ready to use shortly`
     );
     e.preventDefault();
   };
 
   render() {
-    const { username, email, comments } = { ...this.state };
+    const { username, email, date } = { ...this.state };
     return (
       <form id="form" onSubmit={this.submit}>
         <ul>
@@ -69,21 +70,21 @@ class ContactForm extends Component {
                 name="email"
                 id="email"
                 value={email}
-                onChange={this.handleEmails}
+                onChange={this.handleEmail}
                 required
               />
             </label>
           </li>
           <li>
-            <label htmlFor="message">
-              Message:&#32;
-              <textarea
-                value={comments}
-                onChange={this.handleComments}
-                name="message"
-                id="message"
-                cols="35"
-                rows="10"
+            <label htmlFor="date">
+              Date:&#32;
+              <input
+                type="hidden"
+                name="date"
+                id="date"
+                value={date}
+                onChange={this.handleDate}
+                required
               />
             </label>
           </li>
@@ -98,4 +99,4 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
+export default RegisterForm;
