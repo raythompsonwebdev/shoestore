@@ -14,34 +14,62 @@ class Specials extends Component {
       orderByVal: "all",
       lastIndex: 0,
       visibility: false,
+      searchData: [],
+      selectData: [],
     };
 
-    // this.changesOrders = this.changesOrders.bind(this);
-    // this.sidebarVisibility = this.sidebarVisibility.bind(this);
-    // this.handleChange = this.handleChange.bind(this);
+    this.changesOrders = this.changesOrders.bind(this);
+    this.sidebarVisibility = this.sidebarVisibility.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
-    const fetchProducts = fetch(`/api/products/`);
+    // const fetchProducts = fetch(`/api/products/`);
     // const fetchProducts = fetch(`./productdata.json`);
 
-    fetchProducts
-      .then((response) => response.json())
-      .then((data) => {
-        // const { lastIndex } = { ...this.state };
-        const productData = data.map((shoe, index) => {
+    // get products
+    const getProducts = fetch("/api/products");
+
+    // get search bar options data
+    const getSearchData = fetch("/api/searchbardata");
+
+    // get select bar options data
+    const getSelectData = fetch("/api/selectdata");
+
+    // Use promise all to get data for both apis
+    // promise all accepts array.
+    Promise.all([getProducts, getSearchData, getSelectData])
+      .then((values) =>
+        // convert returned promises to json data by passing promises (which are arrays) into promise.all again and looping over arrays and apply .json() to each element of the array then return an array as json data.
+        Promise.all(values.map((element) => element.json()))
+      )
+      .then(([productdata, searchData, selectData]) => {
+        // deconstruct array of data from both apis responses.
+        // eslint-disable-next-line no-console
+        // console.log(productdata, searchData, selectData);
+        const productData = productdata.map((shoe, index) => {
+          // eslint-disable-next-line react/destructuring-assignment
           // eslint-disable-next-line no-param-reassign
           shoe.prodId = index;
           this.setState({ lastIndex: index });
+
           return shoe;
         });
         this.setState({
           productData,
         });
+        this.setState({
+          searchData,
+        });
+
+        this.setState({
+          selectData,
+        });
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
-        console.log(error);
+        console.error(error);
+        throw new Error("something went wrong");
       });
   }
 
@@ -67,9 +95,19 @@ class Specials extends Component {
 
   render() {
     // eslint-disable-next-line prefer-destructuring
-    const { visibility, orderByVal, orderDir, productData } = this.state;
+    const {
+      productData,
+      orderDir,
+      orderByVal,
+      visibility,
+      searchData,
+      selectData,
+    } = this.state;
     let filteredApts = productData;
     const value = orderByVal;
+
+    // eslint-disable-next-line no-console
+    // console.log(searchData);
 
     filteredApts = filteredApts.filter((item) => {
       if (
@@ -93,6 +131,7 @@ class Specials extends Component {
           orderDir={orderDir}
           changesOrders={this.changesOrders}
           handleChange={this.handleChange}
+          searchData={searchData}
         />
 
         <button
@@ -114,6 +153,7 @@ class Specials extends Component {
             orderDir={orderDir}
             changesOrders={this.changesOrders}
             handleChange={this.handleChange}
+            selectData={selectData}
           />
           <br />
 

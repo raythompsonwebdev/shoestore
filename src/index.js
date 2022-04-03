@@ -1,6 +1,7 @@
 // import "whatwg-fetch"; // import fetch to make calls to server
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./pages/App";
 import Header from "./components/Layout/Header";
@@ -46,5 +47,6 @@ const routing = (
     </Router>
   </div>
 );
-
-ReactDOM.render(routing, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(routing);

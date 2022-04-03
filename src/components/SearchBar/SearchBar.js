@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import searchbarData2 from "../../data/searchbarData.json";
 import {
   SelectGender,
   SelectColor,
@@ -8,33 +7,25 @@ import {
   SelectSize,
 } from "./SearchBarData";
 
-function SearchBar(props) {
-  const { labelname, handleChange, changesOrders } = props;
+import searchbarData2 from "../../data/searchbarData.json";
 
+function SearchBar(props) {
+  const {
+    changesOrders,
+    handleChange,
+    labelname,
+    // orderByVal,
+    // orderDir,
+    searchData,
+  } = props;
+
+  // const [searchBarData, setSearchBarData] = useState([]);
   const [genderVal, setGenderVal] = useState(" ");
   const [sizeVal, setSizeVal] = useState(" ");
   const [styleVal, setStyleVal] = useState(" ");
   const [colorVal, setColorVal] = useState(" ");
 
-  const [searchBarData, setSearchBarData] = useState({});
-
-  useEffect(() => {
-    // eslint-disable-next-line func-style
-    const fetchData = async () => {
-      const result = await fetch(`/api/searchbardata`);
-      const body = await result.json();
-
-      // eslint-disable-next-line no-console
-      console.log(body);
-      setSearchBarData(body);
-    };
-
-    fetchData();
-  }, []);
-
-  const [genders, sizes, styles, colors] = searchbarData2;
-  // eslint-disable-next-line no-console
-  console.log(searchBarData, searchbarData2);
+  // const [genders, styles, sizes, colors] = searchbarData2;
 
   // eslint-disable-next-line func-style
   const genderHandler = (event) => {
@@ -72,6 +63,15 @@ function SearchBar(props) {
     );
   };
 
+  // setSearchBarData(searchData);
+
+  const [gender1, style1, size1, color1] = searchData;
+
+  const [gender, style, size, color] = searchbarData2;
+
+  // eslint-disable-next-line no-console
+  // console.log(gender1, style1, size1, color1);
+
   return (
     <aside id="search_category">
       <form id="search_category_form" onSubmit={submit}>
@@ -79,28 +79,32 @@ function SearchBar(props) {
           <legend id="select_search">{labelname}</legend>
           <SelectGender
             name="genderVal"
-            genders={genders}
+            genders={gender}
+            otherGenders={gender1}
             value={genderVal}
             genderHandler={genderHandler}
             aria-labelledby="select_search"
           />
           <SelectStyle
             name="styleVal"
-            styles={styles}
+            styles={style}
+            otherStyles={style1}
             value={styleVal}
             styleHandler={styleHandler}
             aria-labelledby="select_search"
           />
           <SelectSize
             name="sizeVal"
-            sizes={sizes}
+            sizes={size}
+            otherSizes={size1}
             value={sizeVal}
             sizeHandler={sizeHandler}
             aria-labelledby="select_search"
           />
           <SelectColor
             name="colorVal"
-            colors={colors}
+            colors={color}
+            otherColors={color1}
             value={colorVal}
             colorHandler={colorHandler}
             aria-labelledby="select_search"
@@ -115,10 +119,22 @@ function SearchBar(props) {
   );
 }
 
+SearchBar.defaultProps = {
+  labelname: " ",
+  // orderByVal: " ",
+  // orderDir: " ",
+  searchData: [],
+  handleChange: " ",
+  changesOrders: " ",
+};
+
 SearchBar.propTypes = {
-  labelname: PropTypes.string.isRequired,
-  changesOrders: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  labelname: PropTypes.string,
+  // orderByVal: PropTypes.string,
+  // orderDir: PropTypes.string,
+  searchData: PropTypes.arrayOf(PropTypes.object),
+  changesOrders: PropTypes.func,
+  handleChange: PropTypes.func,
 };
 
 export default SearchBar;

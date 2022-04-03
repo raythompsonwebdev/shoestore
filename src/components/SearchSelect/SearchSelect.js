@@ -1,29 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-// import searchbarData2 from "./searchbarData2";
+// import selectBarData1 from "../../data/selectBarData.json";
 
 function Selector(props) {
-  const { handleChange, changesOrders } = props;
-
-  const [searchbarData, setSelectData] = useState({});
-
-  useEffect(() => {
-    // eslint-disable-next-line func-style
-    const fetchData = async () => {
-      const result = await fetch(`/api/selectdata`);
-      const body = await result.json();
-
-      // eslint-disable-next-line no-console
-      console.log(body);
-      setSelectData(body);
-    };
-
-    fetchData();
-  }, []);
+  const { handleChange, changesOrders, selectData } = props;
 
   // eslint-disable-next-line no-console
-  console.log(searchbarData);
+  // console.log(selectData);
 
   function onItemChange(evt) {
     handleChange(evt.target.value);
@@ -35,7 +19,7 @@ function Selector(props) {
       {/* <label>{labelname}</label> */}
 
       <select name="value" onChange={onItemChange}>
-        {searchbarData.map((options, i) => (
+        {selectData.map((options, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <optgroup label={options.value} key={i}>
             {options.options.map((option, p) => (
@@ -51,9 +35,20 @@ function Selector(props) {
   );
 }
 
+Selector.defaultProps = {
+  // orderByVal: " ",
+  // orderDir: " ",
+  selectData: [],
+  handleChange: " ",
+  changesOrders: " ",
+};
+
 Selector.propTypes = {
-  changesOrders: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  // orderByVal: PropTypes.string,
+  // orderDir: PropTypes.string,
+  selectData: PropTypes.arrayOf(PropTypes.object),
+  changesOrders: PropTypes.func,
+  handleChange: PropTypes.func,
 };
 
 export default Selector;
