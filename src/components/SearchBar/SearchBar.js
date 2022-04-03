@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {
   SelectGender,
   SelectColor,
-  SelectStyle,
+  // SelectStyle,
   SelectSize,
 } from "./SearchBarData";
 
@@ -19,7 +19,6 @@ function SearchBar(props) {
     searchData,
   } = props;
 
-  // const [searchBarData, setSearchBarData] = useState([]);
   const [genderVal, setGenderVal] = useState(" ");
   const [sizeVal, setSizeVal] = useState(" ");
   const [styleVal, setStyleVal] = useState(" ");
@@ -63,14 +62,12 @@ function SearchBar(props) {
     );
   };
 
-  // setSearchBarData(searchData);
-
   const [gender1, style1, size1, color1] = searchData;
 
   const [gender, style, size, color] = searchbarData2;
 
   // eslint-disable-next-line no-console
-  // console.log(gender1, style1, size1, color1);
+  console.log(searchData, gender1, style1, size1, color1);
 
   return (
     <aside id="search_category">
@@ -85,14 +82,26 @@ function SearchBar(props) {
             genderHandler={genderHandler}
             aria-labelledby="select_search"
           />
-          <SelectStyle
+          {/* <SelectStyle
             name="styleVal"
             styles={style}
             otherStyles={style1}
             value={styleVal}
             styleHandler={styleHandler}
             aria-labelledby="select_search"
-          />
+          /> */}
+          <select
+            name="styleVal"
+            value={styleVal}
+            onChange={styleHandler}
+            aria-labelledby="select_search"
+          >
+            {style.options.map((option) => (
+              <option value={option.value} key={option.id}>
+                {option.displayValue}
+              </option>
+            ))}
+          </select>
           <SelectSize
             name="sizeVal"
             sizes={size}
