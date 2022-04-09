@@ -4,8 +4,15 @@ import RegisterForm from "../components/RegisterForm";
 function Register() {
   return (
     <main id="content" className="clearfix" role="main">
-      <h1>Register</h1>
-
+      <h1>Register Here</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
+        explicabo, ab expedita rem temporibus repellendus eum, omnis, distinctio
+        est ipsum vel voluptate perspiciatis, quis earum accusantium unde nisi
+        quas. Voluptatum.
+      </p>
+      <br />
+      <br />
       <section id="register_form">
         <RegisterForm />
       </section>

@@ -1,12 +1,19 @@
 import React from "react";
-import LoginForm from "../components/ContactForm";
+import LoginForm from "../components/LoginForm";
 
 function Login() {
   return (
     <main id="content" className="clearfix" role="main">
-      <h1>Register</h1>
-
-      <section id="login_form">
+      <h1>Sign in Here</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
+        explicabo, ab expedita rem temporibus repellendus eum, omnis, distinctio
+        est ipsum vel voluptate perspiciatis, quis earum accusantium unde nisi
+        quas. Voluptatum.
+      </p>
+      <br />
+      <br />
+      <section id="signin_form">
         <LoginForm />
       </section>
 

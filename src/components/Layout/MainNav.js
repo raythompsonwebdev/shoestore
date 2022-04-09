@@ -17,8 +17,8 @@ function MainNav() {
         <Link to="/login" title="">
           Sign in
         </Link>
-        <Link to="/user" title="">
-          my account
+        <Link to="/register" title="">
+          register
         </Link>
         <Link to="/" title="">
           help

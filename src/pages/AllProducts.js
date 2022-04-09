@@ -1,28 +1,19 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import ProductBoxes from "../components/Product/productBoxes";
 import FindShoesAccord from "../components/FindShoesAccord";
 import SearchBar from "../components/SearchBar/SearchBar";
 import SearchSelect from "../components/SearchSelect/SearchSelect";
 
-class AllProducts extends Component {
-  constructor() {
-    super();
-    this.state = {
-      productData: [],
-      orderDir: "asc",
-      orderByVal: "all",
-      lastIndex: 0,
-      visibility: false,
-      searchData: [],
-      selectData: [],
-    };
+function AllProducts() {
+  const [productData, setProductData] = useState([]);
+  const [orderDir, setOrderByDir] = useState("asc");
+  const [OrderByVal, setOrderByVal] = useState("all");
+  const [lastIndex, setLastIndex] = useState(0);
+  const [visibility, setVisibility] = useState(false);
+  const [searchData, setSearchData] = useState([]);
+  const [selectData, setSelectData] = useState([]);
 
-    this.changesOrders = this.changesOrders.bind(this);
-    this.sidebarVisibility = this.sidebarVisibility.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  componentDidMount() {
+  useEffect(() => {
     // const fetchProducts = fetch(`/api/products/`);
     // const fetchProducts = fetch(`./productdata.json`);
 
@@ -35,126 +26,102 @@ class AllProducts extends Component {
     // get select bar options data
     const getSelectData = fetch("/api/selectdata");
 
-    // Use promise all to get data for both apis
-    // promise all accepts array.
+    // Use promise all to get data for threee apis
     Promise.all([getProducts, getSearchData, getSelectData])
       .then((values) =>
-        // convert returned promises to json data by passing promises (which are arrays) into promise.all again and looping over arrays and apply .json() to each element of the array then return an array as json data.
+        // map over array of arrays of data.
         Promise.all(values.map((element) => element.json()))
       )
-      .then(([productdata, searchData, selectData]) => {
-        // deconstruct array of data from both apis responses.
+      .then(([productdata, searchedData, selectedData]) => {
+        // deconstruct array of data from all threee apis responses.
+
         // eslint-disable-next-line no-console
         // console.log(productdata, searchData, selectData);
-        const productData = productdata.map((shoe, index) => {
+        const productDataResult = productdata.map((shoe, index) => {
           // eslint-disable-next-line react/destructuring-assignment
+          setLastIndex(index);
           // eslint-disable-next-line no-param-reassign
           shoe.prodId = index;
-          this.setState({ lastIndex: index });
-
           return shoe;
         });
-        this.setState({
-          productData,
-        });
-        this.setState({
-          searchData,
-        });
-        this.setState({
-          selectData,
-        });
+        setProductData(productDataResult);
+        setSearchData(searchedData);
+        setSelectData(selectedData);
       })
       .catch((error) => {
         // eslint-disable-next-line no-console
         console.error(error);
         throw new Error("something went wrong");
       });
-  }
+  }, [lastIndex]);
 
-  handleChange = (selectedSize) => {
-    this.setState({
-      orderByVal: selectedSize,
-      orderDir: "asc",
-    });
+  const handleChange = (selectedSize) => {
+    setOrderByVal(selectedSize);
+    setOrderByDir("asc");
   };
 
-  sidebarVisibility = (e) => {
+  const sidebarVisibility = (e) => {
     e.preventDefault();
-    const { visibility } = { ...this.state };
-    this.setState({ visibility: !visibility });
+    setVisibility(!visibility);
   };
 
-  changesOrders = (orderbyval, dir) => {
-    this.setState({
-      orderByVal: orderbyval,
-      orderDir: dir,
-    });
+  const changesOrders = (orderbyval, dir) => {
+    setOrderByVal(orderbyval);
+    setOrderByDir(dir);
   };
 
-  render() {
-    const {
-      productData,
-      orderDir,
-      orderByVal,
-      visibility,
-      searchData,
-      selectData,
-    } = {
-      ...this.state,
-    };
-    let filteredApts = productData;
-    const value = orderByVal;
+  let filteredApts = productData;
+  const value = OrderByVal;
 
-    filteredApts = filteredApts.filter((item) => {
-      if (
-        item.color === value ||
-        item.style === value ||
-        item.size === value ||
-        item.gender === value ||
-        item.price === value
-      ) {
-        return item;
-      }
-      return item[value];
-    });
+  filteredApts = filteredApts.filter((item) => {
+    if (
+      item.color === value ||
+      item.style === value ||
+      item.size === value ||
+      item.gender === value ||
+      item.price === value
+    ) {
+      return item;
+    }
+    return item[value];
+  });
 
-    return (
-      <main id="content" className="clearfix">
-        <SearchBar
-          labelname="All Products"
-          orderByVal={orderByVal}
+  return (
+    <main id="content" className="clearfix">
+      <SearchBar
+        labelname="All Products"
+        orderByVal={OrderByVal}
+        orderDir={orderDir}
+        changesOrders={changesOrders}
+        handleChange={handleChange}
+        searchData={searchData}
+      />
+
+      <button
+        id="sidebar-toggle-btn"
+        type="button"
+        onClick={sidebarVisibility}
+        aria-label="secondary menu toggle button"
+      >
+        SIDE
+      </button>
+
+      <aside className={`left_bar ${visibility ? "is-expanded" : " "}`}>
+        <FindShoesAccord />
+      </aside>
+
+      <main id="content_section" className="group">
+        <SearchSelect
+          orderByVal={OrderByVal}
           orderDir={orderDir}
-          changesOrders={this.changesOrders}
-          handleChange={this.handleChange}
-          searchData={searchData}
+          changesOrders={changesOrders}
+          handleChange={handleChange}
+          selectData={selectData}
         />
-
-        <button
-          id="sidebar-toggle-btn"
-          type="button"
-          onClick={this.sidebarVisibility}
-          aria-label="secondary menu toggle button"
-        >
-          SIDE
-        </button>
-
-        <aside className={`left_bar ${visibility ? "is-expanded" : " "}`}>
-          <FindShoesAccord />
-        </aside>
-
-        <main id="content_section" className="group">
-          <SearchSelect
-            orderByVal={orderByVal}
-            orderDir={orderDir}
-            changesOrders={this.changesOrders}
-            handleChange={this.handleChange}
-            selectData={selectData}
-          />
-          <ProductBoxes productData={filteredApts} />
-        </main>
+        <ProductBoxes productData={filteredApts} />
       </main>
-    );
-  }
+    </main>
+  );
 }
 
 export default AllProducts;

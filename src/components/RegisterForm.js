@@ -1,102 +1,86 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class RegisterForm extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: " ",
-      email: " ",
-      date: " ",
-    };
+function Registration() {
+  const [username, setUserName] = useState(" ");
+  const [email, setEmail] = useState(" ");
+  const [password, setPassword] = useState(" ");
+  // const [date, setDate] = useState(" ");
 
-    this.handleUserName = this.handleUserName.bind(this);
-    this.handleEmail = this.handleEmail.bind(this);
-    this.handleDate = this.handleDate.bind(this);
-    // this.submit = this.submit.bind(this);
-  }
+  const handleUserName = (e) => {
+    setUserName(e.target.value);
+  };
 
-  handleUserName(e) {
-    this.setState({
-      username: e.target.value,
-    });
-  }
+  const handleEmails = (e) => {
+    setEmail(e.target.value);
+  };
 
-  handleEmail(e) {
-    this.setState({
-      email: e.target.value,
-    });
-  }
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
 
-  handleDate(e) {
-    this.setState({
-      date: e.target.value,
-    });
-  }
+  // const handleDate = (e) => {
+  //   setDate(e.target.value);
+  // };
 
-  submit = (e) => {
-    // const { username, email, comments } = { ...this.state };
-
+  const submit = (e) => {
     // eslint-disable-next-line no-console
     console.log(
       // eslint-disable-next-line react/destructuring-assignment
-      `You have entered Username:${this.state.username}, Email: ${this.state.email} & This comment: ${this.state.date}. This form is under maintenance and will be ready to use shortly`
+      `You have entered Username:${username}, Email: ${email} ,  & this password ${password}. This form is under maintenance and will be ready to use shortly`
     );
     e.preventDefault();
   };
 
-  render() {
-    const { username, email, date } = { ...this.state };
-    return (
-      <form id="form" onSubmit={this.submit}>
-        <ul>
-          <li>
-            <label htmlFor="username">
-              Name:&#32;
-              <input
-                type="text"
-                name="username"
-                id="username"
-                value={username}
-                onChange={this.handleUserName}
-                required
-              />
-            </label>
-          </li>
-          <li>
-            <label htmlFor="email">
-              E-mail:&#32;
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={email}
-                onChange={this.handleEmail}
-                required
-              />
-            </label>
-          </li>
-          <li>
-            <label htmlFor="date">
-              Date:&#32;
-              <input
-                type="hidden"
-                name="date"
-                id="date"
-                value={date}
-                onChange={this.handleDate}
-                required
-              />
-            </label>
-          </li>
-          <li>
-            <label htmlFor="submit">
-              <input type="submit" value="Send" id="submit" name="submit" />
-            </label>
-          </li>
-        </ul>
-      </form>
-    );
-  }
+  return (
+    <form id="form" onSubmit={submit}>
+      <ul>
+        <li>
+          <label htmlFor="username">
+            Name:&#32;
+            <input
+              type="text"
+              name="username"
+              id="username"
+              value={username}
+              onChange={handleUserName}
+              required
+            />
+          </label>
+        </li>
+        <li>
+          <label htmlFor="email">
+            E-mail:&#32;
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={email}
+              onChange={handleEmails}
+              required
+            />
+          </label>
+        </li>
+        <li>
+          <label htmlFor="password">
+            Password: &#32;
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={password}
+              onChange={handlePassword}
+              required
+            />
+          </label>
+        </li>
+        <li>
+          <label htmlFor="submit">
+            <input type="submit" value="Send" id="submit" name="submit" />
+          </label>
+        </li>
+      </ul>
+    </form>
+  );
 }
 
-export default RegisterForm;
+export default Registration;
