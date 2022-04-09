@@ -1,81 +1,139 @@
 import React, { useState } from "react";
-import searchbarData from "./searchbarData";
-import SelectGender from "./SelectGender";
-import SelectSize from "./SelectSize";
-import SelectStyle from "./SelectStyle";
-import SelectColor from "./SelectColor";
+import PropTypes from "prop-types";
+import {
+  SelectGender,
+  SelectColor,
+  SelectStyle,
+  SelectSize,
+} from "./SearchBarData";
 
-const [genders, sizes, colors, styles] = searchbarData;
+import searchbarData2 from "../../data/searchbarData.json";
 
 function SearchBar(props) {
-  // const { labelname } = props;
-  // const [genderVal, setGenderVal] = useState(' ');
-  // const [styleVal, setStyleVal] = useState(' ');
-  // const [sizeVal, setSizeVal] = useState(' ');
-  // const [colorVal, setColorVal] = useState(' ');
-  const [change, setChange] = useState({
-    genderVal: "",
-    styleVal: "",
-    sizeVal: "",
-    colorVal: "",
-  });
+  const {
+    // changesOrders,
+    // handleChange,
+    labelname,
+    // orderByVal,
+    // orderDir,
+    searchData,
+  } = props;
+
+  const [genderVal, setGenderVal] = useState(" ");
+  const [sizeVal, setSizeVal] = useState(" ");
+  const [styleVal, setStyleVal] = useState(" ");
+  const [colorVal, setColorVal] = useState(" ");
+
+  // const [genders, styles, sizes, colors] = searchbarData2;
 
   // eslint-disable-next-line func-style
-  const changeHandler = (event) => {
+  const genderHandler = (event) => {
     const { target } = event;
-    const { value, name } = target;
-    setChange({ [name]: value });
+    const { value } = target;
+    setGenderVal(value);
   };
-
+  // eslint-disable-next-line func-style
+  const styleHandler = (event) => {
+    const { target } = event;
+    const { value } = target;
+    setStyleVal(value);
+  };
+  // eslint-disable-next-line func-style
+  const sizeHandler = (event) => {
+    const { target } = event;
+    const { value } = target;
+    setSizeVal(value);
+  };
+  // eslint-disable-next-line func-style
+  const colorHandler = (event) => {
+    const { target } = event;
+    const { value } = target;
+    setColorVal(value);
+  };
   // eslint-disable-next-line func-style
   const submit = (event) => {
     event.preventDefault();
-    const tempVal = {
-      // genderVal: setGenderVal(event.target.value),
-      // styleVal: setStyleVal(event.target.value),
-      // sizeVal: setSizeVal(event.target.value),
-      // colorVal: setColorVal(event.target.value),
-    };
+
+    // handleChange(genderVal);
+    // changesOrders(genderVal, "asc");
     // eslint-disable-next-line no-console
     console.log(
-      `You have entered Gender:${tempVal.genderVal}, Style: ${tempVal.styleVal}, Size: ${tempVal.sizeVal} & Colour :${tempVal.colorVal}. This form is under maintenance and will be ready to use shortly`
+      `You have entered \n Gender:${genderVal},\n Style: ${styleVal},\n  Size: ${sizeVal} \n  Colour :${colorVal}. \n This form is under maintenance and will be ready to use shortly`
     );
   };
+
+  const { gender1, style1, size1, color1 } = searchData;
+
+  const [gender, style, size, color] = searchbarData2;
+
+  // eslint-disable-next-line no-console
+  // console.log(searchData, gender1, style1, size1, color1);
 
   return (
     <aside id="search_category">
       <form id="search_category_form" onSubmit={submit}>
-        {/* <label>{labelname}</label> */}
-        <SelectGender
-          name="genderVal"
-          genders={genders}
-          value={change.genderVal}
-          changeHandler={changeHandler}
-        />
-        <SelectStyle
-          name="styleVal"
-          styles={styles}
-          value={change.styleVal}
-          changeHandler={changeHandler}
-        />
-        <SelectSize
-          name="sizeVal"
-          sizes={sizes}
-          value={change.sizeVal}
-          changeHandler={changeHandler}
-        />
-        <SelectColor
-          name="colorVal"
-          colors={colors}
-          value={change.colorVal}
-          changeHandler={changeHandler}
-        />
-        <button name="find" className="search_category_btn" type="submit">
-          Go
-        </button>
+        <fieldset>
+          <legend id="select_search">{labelname}</legend>
+          <SelectGender
+            name="genderVal"
+            genders={gender}
+            otherGenders={gender1}
+            value={genderVal}
+            genderHandler={genderHandler}
+            aria-labelledby="select_search"
+          />
+
+          <SelectStyle
+            name="styleVal"
+            styles={style}
+            otherStyles={style1}
+            value={styleVal}
+            styleHandler={styleHandler}
+            aria-labelledby="select_search"
+          />
+
+          <SelectSize
+            name="sizeVal"
+            sizes={size}
+            otherSizes={size1}
+            value={sizeVal}
+            sizeHandler={sizeHandler}
+            aria-labelledby="select_search"
+          />
+          <SelectColor
+            name="colorVal"
+            colors={color}
+            otherColors={color1}
+            value={colorVal}
+            colorHandler={colorHandler}
+            aria-labelledby="select_search"
+          />
+
+          <button name="find" className="search_category_btn" type="submit">
+            Go
+          </button>
+        </fieldset>
       </form>
     </aside>
   );
 }
+
+SearchBar.defaultProps = {
+  labelname: " ",
+  // orderByVal: " ",
+  // orderDir: " ",
+  searchData: [],
+  // handleChange: " ",
+  // changesOrders: " ",
+};
+
+SearchBar.propTypes = {
+  labelname: PropTypes.string,
+  // orderByVal: PropTypes.string,
+  // orderDir: PropTypes.string,
+  searchData: PropTypes.arrayOf(PropTypes.object),
+  // changesOrders: PropTypes.func,
+  // handleChange: PropTypes.func,
+};
 
 export default SearchBar;

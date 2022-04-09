@@ -1,5 +1,6 @@
 import React from "react";
 
+// eslint-disable-next-line func-style
 function Faqs() {
   return (
     <main id="content" className="clearfix">

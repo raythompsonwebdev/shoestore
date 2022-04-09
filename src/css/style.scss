@@ -125,7 +125,7 @@
         display: block;
 
         a {
-          padding: 0 1em;
+          padding: 0 0.5em;
           text-align: center;
           height: 40px;
           color: $color-black;
@@ -196,7 +196,7 @@
       li {
         width: 100%;
         display: block;
-        height: 45px;
+        height: 44px;
         float: none;
         margin-bottom:0.15em;
 
@@ -306,35 +306,39 @@
       gap:0.5em;
       margin-bottom:0.5em;
 
-      label {
-        font-size: 1em;
-        width: 100%;
-        line-height: 35px;
-        margin: 0;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        text-align: center;
-        text-transform: uppercase;
-        text-indent: 0.1em;
-        font-weight:bold;
-      }
+      fieldset{
 
-      ::placeholder {
-        color:#000;
-      }
+        margin:0;
+        legend#select_search {
+          font-size: 1em;
+          width: 100%;
+          line-height: 35px;
+          margin: 0;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          text-align: left;
+          text-transform: uppercase;
+          text-indent: 0.1em;
+          font-weight:bold;
+        }
 
-      select{
-        font-family: $font-list;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        width: 100%;
-        font-size: 0.85em;
-        margin: 0.25em 0;
-        color: $content-color2;
-        line-height: 35px;
-        height:35px;
+        ::placeholder {
+          color:#000;
+        }
+
+        select{
+          font-family: $font-list;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          width: 100%;
+          font-size: 0.85em;
+          margin: 0.25em 0;
+          color: $content-color2;
+          line-height: 35px;
+          height:35px;
+        }
       }
     }
   }
@@ -366,18 +370,16 @@
       min-height:400px;
       width: 100%;
       font-family: $font-list;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-align-content: flex-start;
-      -ms-flex-content: flex-start;
-      align-content: flex-start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: flex-start;
-      justify-content: flex-start;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -webkit-align-content: center;
+      -ms-flex-content: center;
+      align-content: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
 
       figure.other_product_box {
         padding:0;
@@ -385,9 +387,9 @@
         -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
         flex: 0 1 auto;
-        width: 25%;
+        width: 75%;
         font-family: $font-list;
-        margin-bottom: 15px;
+        margin: 15px auto;
 
         .other_product_boximg {
           width: 65%;
@@ -415,7 +417,7 @@
             color: $login-color;
             line-height: 25px;
             text-transform: uppercase;
-            font-size: 85%;
+            font-size: 100%;
             margin: 0;
             text-indent: 0.2em;
             -webkit-flex: 1 0 auto;
@@ -468,7 +470,7 @@
         width: 40%;
         display: block;
         height: auto;
-        padding: 7em;
+        padding: 2em;
       }
 
       #productPagedetails {
@@ -520,9 +522,9 @@
             font-family: $font-list;
             margin: 0;
             height: 45px;
-            width: 20%;
+            width: 35%;
             display: block;
-            font-size: 1.2em;
+            font-size: 1em;
             line-height: 30px;
             background-color: $color-orange;
             color: $color-white;
@@ -1367,7 +1369,7 @@ p.copyr {
 
         a {
 
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
 
         a:last-of-type {
@@ -1441,22 +1443,24 @@ p.copyr {
         -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
         justify-content: flex-start;
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 1.2em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
-
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -1476,6 +1480,9 @@ p.copyr {
       #other_products {
         margin-top:2em;
         min-height:400px;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
 
         figure.other_product_box {
           width: 25%;
@@ -1689,9 +1696,9 @@ p.copyr {
 
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
-            padding-top: 0.5em;
+            padding-top: 1em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.6em;
               line-height: 40px;
               width:96%
 
@@ -1719,8 +1726,8 @@ p.copyr {
 
                 a {
                   margin-bottom: 0.2em;
-                  font-size: 0.9em;
-                  line-height: 32px;
+                  font-size: 1em;
+                  line-height: 40px;
 
                 }
               }
@@ -1745,7 +1752,7 @@ p.copyr {
           }
           /*Individual product box*/
           figure.product_box {
-
+            width: 24%;
             margin: 15px auto;
 
             .product_boximg {
@@ -1921,8 +1928,8 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
-              width: 90%;
+              font-family: $font-list;
+              width: 88%;
               height: 35px;
               font-size: 1em;
               margin: 0.5em auto;
@@ -1976,7 +1983,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -2040,7 +2047,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -2132,7 +2139,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 1em;
 
           }
         }
@@ -2177,7 +2184,7 @@ p.copyr {
 
         a {
 
-          font-size: 0.9em;
+          font-size: 0.85em;
         }
 
         a:last-of-type {
@@ -2251,23 +2258,26 @@ p.copyr {
         -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
         justify-content: flex-start;
+        fieldset{
+          margin:0;
+          legend#select_search  {
+            font-size: 1.2em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
+          ::placeholder {
+            color:#000;
+          }
+
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
 
-        ::placeholder {
-          color:#000;
-        }
-
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
-        }
       }
     }
 
@@ -2286,6 +2296,9 @@ p.copyr {
       #other_products {
         margin-top:2em;
         min-height:400px;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
 
         figure.other_product_box {
           width: 25%;
@@ -2495,16 +2508,16 @@ p.copyr {
 
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
-            padding-top: 0.5em;
+            padding-top: 1em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.7em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.2em;
               line-height: 40px;
               width:95%
             }
@@ -2526,7 +2539,7 @@ p.copyr {
                 a {
                   margin-bottom: 0.2em;
                   font-size: 0.9em;
-                  line-height: 32px;
+                  line-height: 40px;
 
                 }
               }
@@ -2551,7 +2564,7 @@ p.copyr {
           }
           /*Individual product box*/
           figure.product_box {
-
+            width: 24%;
             margin: 15px auto;
 
             .product_boximg {
@@ -2728,7 +2741,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -2783,7 +2796,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -2847,7 +2860,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -2939,7 +2952,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 1em;
 
           }
         }
@@ -2985,7 +2998,7 @@ p.copyr {
 
         a {
           line-height: 20px;
-          font-size: 0.85em;
+          font-size: 0.80em;
         }
 
         a:last-of-type {
@@ -3004,7 +3017,7 @@ p.copyr {
 
           a {
 
-            font-size: 0.9em;
+            font-size: 0.8em;
 
             &:hover {
               color: $color-orange;
@@ -3060,21 +3073,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 1.1em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -3094,6 +3110,9 @@ p.copyr {
       #other_products {
         margin-top:2em;
         min-height:400px;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
 
         figure.other_product_box {
           width: 25%;
@@ -3136,7 +3155,7 @@ p.copyr {
 
         #productPageimg {
           width: 40%;
-          padding: 7em;
+          padding: 6em;
         }
 
         #productPagedetails {
@@ -3307,7 +3326,7 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.5em;
               line-height: 40px;
               width:96%
 
@@ -3361,7 +3380,7 @@ p.copyr {
           }
           /*Individual product box*/
           figure.product_box {
-
+            width: 24%;
             margin: 15px auto;
 
             .product_boximg {
@@ -3540,7 +3559,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -3595,7 +3614,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -3659,7 +3678,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -3751,7 +3770,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.85em;
 
           }
         }
@@ -3794,7 +3813,7 @@ p.copyr {
         width: 24%;
         a {
 
-          font-size: 0.8em;
+          font-size: 0.75em;
         }
 
         a:last-of-type {
@@ -3868,21 +3887,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 1.1em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -3902,6 +3924,9 @@ p.copyr {
       #other_products {
         margin-top:2em;
         min-height:400px;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
 
         figure.other_product_box {
           width: 25%;
@@ -3944,7 +3969,7 @@ p.copyr {
 
         #productPageimg {
           width: 40%;
-          padding: 7em;
+          padding: 5em;
         }
 
         #productPagedetails {
@@ -4116,14 +4141,14 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.5em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.1em;
               line-height: 40px;
               width:95%
             }
@@ -4170,7 +4195,7 @@ p.copyr {
           }
           /*Individual product box*/
           figure.product_box {
-
+            width: 24%;
             margin: 15px auto;
 
             .product_boximg {
@@ -4346,7 +4371,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -4401,7 +4426,7 @@ p.copyr {
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -4465,7 +4490,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -4558,7 +4583,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.85em;
 
           }
         }
@@ -4603,7 +4628,7 @@ p.copyr {
 
         a {
           line-height: 20px;
-          font-size: 0.75em;
+          font-size: 0.7em;
         }
 
         a:last-of-type {
@@ -4617,9 +4642,7 @@ p.copyr {
         li {
           height: 40px;
           a {
-            padding: 0 1em;
-            height: 40px;
-            line-height: 40px;
+
             font-size: 0.8em;
 
             &:hover {
@@ -4677,21 +4700,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 0.9em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17.5%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -4712,6 +4738,9 @@ p.copyr {
       #other_products {
         margin-top:2em;
         min-height:400px;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
 
         figure.other_product_box {
           width: 25%;
@@ -4754,7 +4783,7 @@ p.copyr {
 
         #productPageimg {
           width: 40%;
-          padding: 7em;
+          padding: 5em;
         }
 
         #productPagedetails {
@@ -4782,8 +4811,8 @@ p.copyr {
 
             button{
               height: 45px;
-              width: 20%;
-              font-size: 1.2em;
+              width: 25%;
+              font-size: 1.1em;
               line-height: 30px;
 
             }
@@ -4926,14 +4955,14 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.4em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.1em;
               line-height: 40px;
               width:95%
             }
@@ -5124,7 +5153,6 @@ p.copyr {
         }
       }
       /*leftbar*/
-      /*leftbar*/
       .left_bar {
         position:unset;
         z-index:0;
@@ -5164,7 +5192,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -5214,12 +5242,12 @@ p.copyr {
             /* Style the buttons that are used to open and close the accordion panel */
 
             button{
-              font-size:0.85rem;
+              font-size:0.8rem;
               padding: 0;
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -5283,7 +5311,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -5291,6 +5319,68 @@ p.copyr {
                   cursor: pointer;
                 }
               }
+            }
+          }
+        }
+      }
+      .left_bar.is-expanded {
+        position: unset;
+        z-index: 0;
+        left: 0px;
+        height: auto;
+        width:23%;
+        background-color: $color-white;
+
+        #acc_nav {
+          div#accContainer {
+
+            button{
+              font-size: 0.85rem;
+            }
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
             }
           }
         }
@@ -5316,7 +5406,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.8em;
 
           }
         }
@@ -5356,11 +5446,11 @@ p.copyr {
       height: 40px;
 
       span#signin-box {
-        width: 22%;
+        width: 23%;
 
         a {
 
-          font-size: 0.75em;
+          font-size: 0.7em;
         }
 
         a:last-of-type {
@@ -5377,7 +5467,7 @@ p.copyr {
 
           a {
 
-            font-size: 0.85em;
+            font-size: 0.75em;
 
             &:hover {
               color: $color-orange;
@@ -5433,21 +5523,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search{
+            font-size: 0.9em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -5467,9 +5560,12 @@ p.copyr {
       #other_products {
         margin-top:2em;
         min-height:400px;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
 
         figure.other_product_box {
-          width: 25%;
+          width: 32%;
           margin-bottom: 15px;
 
           .other_product_boximg {
@@ -5509,7 +5605,7 @@ p.copyr {
 
         #productPageimg {
           width: 40%;
-          padding: 7em;
+          padding: 4em;
         }
 
         #productPagedetails {
@@ -5536,11 +5632,8 @@ p.copyr {
           #upvotes-section{
 
             button{
-              height: 45px;
-              width: 20%;
-              font-size: 1.2em;
-              line-height: 30px;
-
+              width: 25%;
+              font-size: 1.1em;
             }
             p{
               line-height:50px;
@@ -5680,14 +5773,14 @@ p.copyr {
             grid-area: 1 / 1 / 3 / 9;
             padding-top: 0.5em;
             h1 {
-              font-size: 2.1em;
+              font-size: 2.2em;
               line-height: 40px;
               width:96%
 
             }
 
             h2 {
-              font-size: 1em;
+              font-size: 1.05em;
               line-height: 40px;
               width:95%
             }
@@ -5914,7 +6007,7 @@ p.copyr {
             }
 
             select {
-              font-family: sans-serif;
+              font-family: $font-list;
               width: 90%;
               height: 35px;
               font-size: 1em;
@@ -5964,12 +6057,13 @@ p.copyr {
             /* Style the buttons that are used to open and close the accordion panel */
 
             button{
-              font-size:0.85rem;
+              font-family: $font-list;
+              font-size:0.8rem;
               padding: 0;
               text-align: left;
               border-radius: unset;
               text-transform: uppercase;
-              font-family: arial, sans-serif;
+              font-family: $font-list;
               cursor: pointer;
               background-color: #eee;
               line-height:35px;
@@ -6033,7 +6127,7 @@ p.copyr {
                 font-size: 0.8em;
                 width: 100%;
                 text-align: left;
-                font-family: arial, sans-serif;
+                font-family: $font-list;
                 text-indent:0.5em;
 
                 &:hover {
@@ -6041,6 +6135,69 @@ p.copyr {
                   cursor: pointer;
                 }
               }
+            }
+          }
+        }
+      }
+      .left_bar.is-expanded {
+        position: unset;
+        z-index: 0;
+        left: 0px;
+        height: auto;
+        width:23%;
+        background-color: $color-white;
+
+        #acc_nav {
+          div#accContainer {
+
+            button{
+              font-size: 0.8rem;
+            }
+
+
+            .panel {
+              padding: 0;
+            }
+
+            h3 {
+              font-size: 0.8em;
+            }
+
+            ul {
+              display: block;
+
+              li {
+                font-size: 0.9em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        #searchbox {
+          width: 98%;
+
+          #searcher {
+            width: 98%;
+
+            h1 {
+              font-size: 1.4em;
+              text-indent: 0;
+            }
+
+            select {
+              font-size: 1em;
+            }
+
+            .find {
+              font-size: 1.2em;
+            }
+
+            label {
+              font-size: 0.85em;
             }
           }
         }
@@ -6066,7 +6223,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.75em;
 
           }
         }
@@ -6115,7 +6272,7 @@ p.copyr {
 
         a {
           line-height: 20px;
-          font-size: 0.75em;
+          font-size: 0.7em;
         }
 
         a:last-of-type {
@@ -6140,11 +6297,11 @@ p.copyr {
 
         li {
           width: 100%;
-          height: 45px;
+          height: 44px;
 
           a {
             font-size: 1.1em;
-            line-height: 45px;
+            line-height: 44px;
 
           }
         }
@@ -6206,21 +6363,24 @@ p.copyr {
         -ms-flex-pack: start;
         justify-content: flex-start;
 
-        label {
-          font-size: 1.5em;
-          width: 20%;
-          line-height: 35px;
-        }
+        fieldset{
+          margin:0;
+          legend#select_search {
+            font-size: 0.9em;
+            width: 20%;
+            line-height: 35px;
+          }
 
-        ::placeholder {
-          color:#000;
-        }
+          ::placeholder {
+            color:#000;
+          }
 
-        select{
-          width: 17.5%;
-          font-size: 0.9em;
-          margin: 0 0.25em 0 0;
-          height: 30px;
+          select{
+            width: 17%;
+            font-size: 0.9em;
+            margin: 0 0.25em 0 0;
+            height: 30px;
+          }
         }
       }
     }
@@ -6240,9 +6400,12 @@ p.copyr {
       #other_products {
         margin-top:2em;
         min-height:400px;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
 
         figure.other_product_box {
-          width: 25%;
+          width: 48%;
           margin-bottom: 15px;
 
           .other_product_boximg {
@@ -6254,7 +6417,7 @@ p.copyr {
 
             p.other_product_name {
               line-height: 25px;
-              font-size: 85%;
+              font-size: 100%;
 
 
             }
@@ -6282,7 +6445,7 @@ p.copyr {
 
         #productPageimg {
           width: 40%;
-          padding: 7em;
+          padding: 3em;
         }
 
         #productPagedetails {
@@ -6291,6 +6454,7 @@ p.copyr {
 
           #productPagename {
             line-height: 40px;
+
 
           }
 
@@ -6309,14 +6473,13 @@ p.copyr {
           #upvotes-section{
 
             button{
-              height: 45px;
-              width: 20%;
-              font-size: 1.2em;
-              line-height: 30px;
+              width: 30%;
+              font-size: 1.1em;
 
             }
             p{
               line-height:50px;
+              font-size: 0.85em;
             }
 
           }
@@ -6431,7 +6594,7 @@ p.copyr {
 
           hgroup {
             grid-area: 1 / 1 / 3 / 9;
-            padding-top: 1em;
+            padding-top: 0.5em;
             h1 {
               font-size: 2.5em;
               line-height: 40px;
@@ -6440,7 +6603,7 @@ p.copyr {
             }
 
             h2 {
-              font-size: 1.2em;
+              font-size: 1.1em;
               line-height: 40px;
               width:95%
             }
@@ -6643,6 +6806,9 @@ p.copyr {
         #acc_nav {
           div#accContainer {
 
+            button{
+              font-size: 0.85rem;
+            }
 
             .panel {
               padding: 0;
@@ -6712,7 +6878,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.7em;
 
           }
         }
@@ -6789,11 +6955,11 @@ p.copyr {
 
         li {
           width: 100%;
-          height: 45px;
+          height: 44px;
 
           a {
             font-size: 1.1em;
-            line-height: 45px;
+            line-height: 44px;
 
           }
         }
@@ -6834,18 +7000,21 @@ p.copyr {
     #search_category_form {
       padding: 0.5em;
 
-      label {
-        font-size: 1em;
-        line-height: 35px;
-      }
+      fieldset{
+        margin:0;
+        legend#select_search{
+          font-size: 0.9em;
+          line-height: 35px;
+        }
 
-      ::placeholder {
-        color:#000;
-      }
+        ::placeholder {
+          color:#000;
+        }
 
-      select{
-        font-size: 0.85em;
-        margin: 0.25em 0;
+        select{
+          font-size: 0.85em;
+          margin: 0.25em 0;
+        }
       }
     }
   }
@@ -6864,11 +7033,19 @@ p.copyr {
 
       #other_products {
         margin-top:2em;
-        min-height:400px;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        -ms-flex-content: flex-start;
+        align-content: flex-start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: flex-start;
+        justify-content: flex-start;
 
         figure.other_product_box {
-          width: 25%;
-          margin-bottom: 15px;
+          width: 48%;
 
           .other_product_boximg {
             width: 65%;
@@ -6879,15 +7056,11 @@ p.copyr {
 
             p.other_product_name {
               line-height: 25px;
-              font-size: 85%;
-
-
+              font-size: 100%;
             }
 
             p.other_product_price {
-
               line-height: 25px;
-
             }
             /*Price Icon*/
             img.other_cart_icon {
@@ -6907,7 +7080,7 @@ p.copyr {
 
         #productPageimg {
           width: 40%;
-          padding: 7em;
+          padding: 3em;
         }
 
         #productPagedetails {
@@ -6934,14 +7107,12 @@ p.copyr {
           #upvotes-section{
 
             button{
-              height: 45px;
-              width: 20%;
-              font-size: 1.2em;
-              line-height: 30px;
-
+              width: 30%;
+              font-size: 1.1em;
             }
             p{
               line-height:50px;
+              font-size: 0.80em;
             }
 
           }
@@ -7252,7 +7423,9 @@ p.copyr {
 
         #acc_nav {
           div#accContainer {
-
+            button{
+              font-size: 0.8rem;
+            }
 
             .panel {
               padding: 0;
@@ -7322,7 +7495,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.65em;
 
           }
         }
@@ -7398,11 +7571,11 @@ p.copyr {
 
         li {
           width: 100%;
-          height: 45px;
+          height: 44px;
 
           a {
             font-size: 1.1em;
-            line-height: 45px;
+            line-height: 44px;
 
           }
         }
@@ -7443,18 +7616,21 @@ p.copyr {
     #search_category_form {
       padding: 0.5em;
 
-      label {
-        font-size: 1em;
-        line-height: 35px;
-      }
+      fieldset{
+        margin:0;
+        legend#select_search{
+          font-size: 0.9em;
+          line-height: 35px;
+        }
 
-      ::placeholder {
-        color:#000;
-      }
+        ::placeholder {
+          color:#000;
+        }
 
-      select{
-        font-size: 0.85em;
-        margin: 0.25em 0;
+        select{
+          font-size: 0.85em;
+          margin: 0.25em 0;
+        }
       }
     }
   }
@@ -7473,11 +7649,10 @@ p.copyr {
 
       #other_products {
         margin-top:2em;
-        min-height:400px;
 
         figure.other_product_box {
-          width: 25%;
-          margin-bottom: 15px;
+          width: 75%;
+          margin:auto;
 
           .other_product_boximg {
             width: 65%;
@@ -7488,7 +7663,7 @@ p.copyr {
 
             p.other_product_name {
               line-height: 25px;
-              font-size: 85%;
+              font-size: 100%;
 
 
             }
@@ -7516,7 +7691,7 @@ p.copyr {
 
         #productPageimg {
           width: 40%;
-          padding: 7em;
+          padding: 3em;
         }
 
         #productPagedetails {
@@ -7543,11 +7718,8 @@ p.copyr {
           #upvotes-section{
 
             button{
-              height: 45px;
-              width: 20%;
-              font-size: 1.2em;
-              line-height: 30px;
-
+              width: 35%;
+              font-size: 1em;
             }
             p{
               line-height:50px;
@@ -7930,7 +8102,7 @@ p.copyr {
 
           a {
             line-height: 15px;
-            font-size: 0.55em;
+            font-size: 0.6em;
 
           }
         }
@@ -8006,11 +8178,11 @@ p.copyr {
 
         li {
           width: 100%;
-          height: 45px;
+          height: 44px;
 
           a {
             font-size: 1.1em;
-            line-height: 45px;
+            line-height: 44px;
 
           }
         }
@@ -8051,18 +8223,21 @@ p.copyr {
     #search_category_form {
       padding: 0.5em;
 
-      label {
-        font-size: 1em;
+      fieldset{
+        margin:0;
+        legend#select_search{
+        font-size: 0.9em;
         line-height: 35px;
-      }
+        }
 
-      ::placeholder {
-        color:#000;
-      }
+        ::placeholder {
+          color:#000;
+        }
 
-      select{
-        font-size: 0.85em;
-        margin: 0.25em 0;
+        select{
+          font-size: 0.85em;
+          margin: 0.25em 0;
+        }
       }
     }
   }
@@ -8081,11 +8256,10 @@ p.copyr {
 
       #other_products {
         margin-top:2em;
-        min-height:400px;
 
         figure.other_product_box {
-          width: 25%;
-          margin-bottom: 15px;
+          width: 75%;
+          margin:auto;
 
           .other_product_boximg {
             width: 65%;
@@ -8096,7 +8270,7 @@ p.copyr {
 
             p.other_product_name {
               line-height: 25px;
-              font-size: 85%;
+              font-size: 100%;
 
 
             }
@@ -8124,7 +8298,7 @@ p.copyr {
 
         #productPageimg {
           width: 40%;
-          padding: 7em;
+          padding: 2em;
         }
 
         #productPagedetails {
@@ -8151,10 +8325,8 @@ p.copyr {
           #upvotes-section{
 
             button{
-              height: 45px;
-              width: 20%;
-              font-size: 1.2em;
-              line-height: 30px;
+              width: 35%;
+              font-size: 1em;
 
             }
             p{
@@ -8277,13 +8449,13 @@ p.copyr {
 
             h1 {
 
-              font-size: 1.6em;
+              font-size: 1.5em;
               line-height: 35px;
 
             }
 
             h2 {
-              font-size: 70%;
+              font-size: 0.7em;
               line-height: 30px;
             }
           }

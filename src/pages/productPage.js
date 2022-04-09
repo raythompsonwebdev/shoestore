@@ -1,59 +1,56 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { uuid } from "uuidv4";
+import { Link, useParams } from "react-router-dom";
 import productData from "../data/productData";
 import LikesSection from "../components/LikesSection";
-
 import NotFound from "./NotFound";
 
-// eslint-disable-next-line react/prop-types
-function ProductPage({ match }) {
-  // eslint-disable-next-line react/prop-types
-  // eslint-disable-next-line prefer-destructuring
-  // const { name } = match.params;
-  const name = null;
-  const product = productData.find((item) => item.name === name);
+// eslint-disable-next-line func-style
+function ProductPage() {
+  const { name } = useParams();
+
+  const [singleProduct, setSingleProduct] = useState({});
 
   const [productInfo, setProductInfo] = useState({ likes: 0 });
-
-  const otherProducts = productData.filter((item) => item.name !== name);
 
   useEffect(() => {
     // eslint-disable-next-line func-style
     const fetchData = async () => {
-      // http://localhost:8000/api/product/${name}
       // add "proxy":"http://localhost:8000/" property to package.json to avoid cors issue
-      // then remove http://localhost:8000
 
-      const result = await fetch(`./productdata.json/${name}`);
-      // const result = await fetch(`/api/product/${name}`);
-      const body = await result.text();
+      const result = await fetch(`/api/product/${name}`);
+      const body = await result.json();
+
+      setSingleProduct(body);
       setProductInfo(body);
     };
 
     fetchData();
   }, [name]);
 
-  if (!product) return <NotFound />;
+  // const product = productData.find((item) => item.name === name);
+  const otherProducts = productData.filter((item) => item.name !== name);
 
-  return (
+  const matchingProduct = singleProduct;
+
+  const { cartImg, imgUrl, price, size, style, text } = {
+    ...singleProduct,
+  };
+
+  return matchingProduct ? (
     <main id="content" className="clearfix">
       <h1>Product page</h1>
       <figure id="productPagebox">
-        <img id="productPageimg" src={product.imgUrl} alt={name} />
+        <img id="productPageimg" src={imgUrl} alt={style} />
         <figcaption id="productPagedetails">
-          <p id="productPagename"> {product.name}</p>
-          <p id="productPageprice">£{product.price}</p>
-          <p>{product.text}</p>
-          <img
-            id="cartPageicon"
-            src={product.cartImg}
-            alt="shoppingcart icon"
-          />
+          <p id="productPagename"> {style}</p>
+          <p id="productPageprice">£{price}</p>
+          <p id="productPagegender">{size}</p>
+          <p>{text}</p>
+          <img id="cartPageicon" src={cartImg} alt="shoppingcart icon" />
 
           <LikesSection
             likes={productInfo.likes}
-            productName={name}
+            productName={style}
             setProductInfo={setProductInfo}
           />
         </figcaption>
@@ -63,7 +60,7 @@ function ProductPage({ match }) {
 
       <div id="other_products">
         {otherProducts.map((item) => (
-          <figure className="other_product_box" key={uuid()}>
+          <figure className="other_product_box" key={item.id}>
             <img
               className="other_product_boximg"
               src={item.imgUrl}
@@ -84,6 +81,8 @@ function ProductPage({ match }) {
         ))}
       </div>
     </main>
+  ) : (
+    <NotFound />
   );
 }
 

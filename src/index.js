@@ -1,6 +1,7 @@
 // import "whatwg-fetch"; // import fetch to make calls to server
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./pages/App";
 import Header from "./components/Layout/Header";
@@ -9,9 +10,11 @@ import Footer from "./components/Layout/Footer";
 import Newproduct from "./pages/NewProducts";
 import Specials from "./pages/Specials";
 import AllProducts from "./pages/AllProducts";
-// import ProductPage from './pages/productPage';
+import ProductPage from "./pages/productPage";
 import Contact from "./pages/Contact";
 import Faqs from "./pages/Faqs";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import "./css/style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -28,15 +31,20 @@ const routing = (
         <Route exact path="/newproducts" element={<Newproduct />} />
         <Route exact path="/specials" element={<Specials />} />
         <Route exact path="/allproducts" element={<AllProducts />} />
-        {/* <Route path="/product/:name" element={ProductPage} /> */}
+        <Route path="/product/:name" element={<ProductPage />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/faqs" element={<Faqs />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/signin" element={<Login />} />
         <Route element={<NotFound />} />
+        {/* <Route path="/product/:name" render={({ match }) => <ProductPage match={match} />}
+        /> */}
       </Routes>
 
       <Footer />
     </Router>
   </div>
 );
-
-ReactDOM.render(routing, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(routing);

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../images/shoe-store-logo.png";
 
+// eslint-disable-next-line func-style
 function Header() {
   return (
     <header>

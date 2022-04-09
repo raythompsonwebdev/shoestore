@@ -12,27 +12,27 @@ function BannerImg() {
       <nav id="apDiv1">
         <ul>
           <li>
-            <a href="/" title="Womens's Shoes">
+            <a href="/" title="Womens's Shoes" aria-label="Womens's Shoes">
               Women&apos;s Shoes
             </a>
           </li>
           <li>
-            <a href="/" title="Men's Shoes">
+            <a href="/" title="Men's Shoes" aria-label="Men's Shoes">
               Men&apos;s Shoes
             </a>
           </li>
           <li>
-            <a href="/" title="Kids's Shoes">
+            <a href="/" title="Kids's Shoes" aria-label="Kids's Shoes">
               Kid&apos;s Shoes
             </a>
           </li>
           <li>
-            <a href="/" title="Bags">
+            <a href="/" title="Bags" aria-label="Bags">
               Bags
             </a>
           </li>
           <li>
-            <a href="/" title="Accessories">
+            <a href="/" title="Accessories" aria-label="Accessories">
               Accessories
             </a>
           </li>
