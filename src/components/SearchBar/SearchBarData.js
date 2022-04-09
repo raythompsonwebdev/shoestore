@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 export function SelectColor(props) {
@@ -24,10 +25,8 @@ export function SelectColor(props) {
 
 export function SelectGender(props) {
   // eslint-disable-next-line react/prop-types
-  const { aria, genderHandler, genders, name, value } = { ...props };
+  const { aria, genderHandler, genders, name, value } = props;
 
-  // eslint-disable-next-line no-console
-  // console.log(otherGenders);
   const { options } = genders;
 
   return (
@@ -68,18 +67,8 @@ export function SelectSize(props) {
 
 export function SelectStyle(props) {
   // eslint-disable-next-line react/prop-types
-  const { arialabelledby, name, otherStyles, styleHandler, styles, value } =
-    props;
-  // const { options } = styles;
-  // eslint-disable-next-line no-console
-  // console.log(otherStyles.options);
-
-  const [style, setstyle] = useState([]);
-
-  useEffect(() => setstyle(otherStyles), [otherStyles]);
-
-  // eslint-disable-next-line no-console
-  console.log(style.options);
+  const { arialabelledby, name, styleHandler, styles, value } = props;
+  const { options } = styles;
 
   return (
     <select
@@ -88,7 +77,7 @@ export function SelectStyle(props) {
       onChange={styleHandler}
       aria-labelledby={arialabelledby}
     >
-      {styles.options.map((option) => (
+      {options.map((option) => (
         <option value={option.value} key={option.id}>
           {option.displayValue}
         </option>
@@ -111,13 +100,7 @@ SelectStyle.propTypes = {
     options: PropTypes.arrayOf(PropTypes.object),
   }),
   otherStyles: PropTypes.shape({
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        displayValue: PropTypes.string,
-        id: PropTypes.number,
-        value: PropTypes.string,
-      })
-    ),
+    options: PropTypes.arrayOf(PropTypes.object),
   }),
   styleHandler: PropTypes.func,
 };

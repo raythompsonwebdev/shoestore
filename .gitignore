@@ -1,8 +1,9 @@
 node_modules
-
+files/
 build/
 public/images/
 src/images/
+
 src/font/
 src/pages/Specials-2.js
 src/components/SearchBar/searchbar-components/

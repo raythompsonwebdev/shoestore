@@ -37,9 +37,7 @@ const routing = (
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/signin" element={<Login />} />
         <Route element={<NotFound />} />
-        {/* <Route
-          path="/product/:name"
-          render={({ match }) => <ProductPage match={match} />}
+        {/* <Route path="/product/:name" render={({ match }) => <ProductPage match={match} />}
         /> */}
       </Routes>
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {
   SelectGender,
   SelectColor,
-  // SelectStyle,
+  SelectStyle,
   SelectSize,
 } from "./SearchBarData";
 
@@ -11,8 +11,8 @@ import searchbarData2 from "../../data/searchbarData.json";
 
 function SearchBar(props) {
   const {
-    changesOrders,
-    handleChange,
+    // changesOrders,
+    // handleChange,
     labelname,
     // orderByVal,
     // orderDir,
@@ -54,20 +54,20 @@ function SearchBar(props) {
   const submit = (event) => {
     event.preventDefault();
 
-    handleChange(genderVal);
-    changesOrders(genderVal, "asc");
+    // handleChange(genderVal);
+    // changesOrders(genderVal, "asc");
     // eslint-disable-next-line no-console
     console.log(
       `You have entered \n Gender:${genderVal},\n Style: ${styleVal},\n  Size: ${sizeVal} \n  Colour :${colorVal}. \n This form is under maintenance and will be ready to use shortly`
     );
   };
 
-  const [gender1, style1, size1, color1] = searchData;
+  const { gender1, style1, size1, color1 } = searchData;
 
   const [gender, style, size, color] = searchbarData2;
 
   // eslint-disable-next-line no-console
-  console.log(searchData, gender1, style1, size1, color1);
+  // console.log(searchData, gender1, style1, size1, color1);
 
   return (
     <aside id="search_category">
@@ -82,26 +82,16 @@ function SearchBar(props) {
             genderHandler={genderHandler}
             aria-labelledby="select_search"
           />
-          {/* <SelectStyle
+
+          <SelectStyle
             name="styleVal"
             styles={style}
             otherStyles={style1}
             value={styleVal}
             styleHandler={styleHandler}
             aria-labelledby="select_search"
-          /> */}
-          <select
-            name="styleVal"
-            value={styleVal}
-            onChange={styleHandler}
-            aria-labelledby="select_search"
-          >
-            {style.options.map((option) => (
-              <option value={option.value} key={option.id}>
-                {option.displayValue}
-              </option>
-            ))}
-          </select>
+          />
+
           <SelectSize
             name="sizeVal"
             sizes={size}
@@ -133,8 +123,8 @@ SearchBar.defaultProps = {
   // orderByVal: " ",
   // orderDir: " ",
   searchData: [],
-  handleChange: " ",
-  changesOrders: " ",
+  // handleChange: " ",
+  // changesOrders: " ",
 };
 
 SearchBar.propTypes = {
@@ -142,8 +132,8 @@ SearchBar.propTypes = {
   // orderByVal: PropTypes.string,
   // orderDir: PropTypes.string,
   searchData: PropTypes.arrayOf(PropTypes.object),
-  changesOrders: PropTypes.func,
-  handleChange: PropTypes.func,
+  // changesOrders: PropTypes.func,
+  // handleChange: PropTypes.func,
 };
 
 export default SearchBar;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
-import accordion from "./accordion.json";
+import accordion from "../data/accordion.json";
 
 // eslint-disable-next-line func-style
 function FindShoesAccord() {

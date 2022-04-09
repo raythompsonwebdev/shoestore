@@ -23,7 +23,7 @@ const productData = [
 
   {
     id: 3,
-    name: "basketball-shoes",
+    name: "skate-shoes",
     imgUrl: basketball,
     price: "90.00",
     cartImg,
