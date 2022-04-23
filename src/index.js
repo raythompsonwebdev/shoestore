@@ -1,4 +1,4 @@
-// import "whatwg-fetch"; // import fetch to make calls to server
+import "whatwg-fetch"; // import fetch to make calls to server
 import React from "react";
 // import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
@@ -16,18 +16,20 @@ import Faqs from "./pages/Faqs";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
-import "./css/style.scss";
+import "./static/css/style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "./static/images/shoe-store-logo.png";
+import banner from "./static/images/bannerimage.jpg";
 
 const routing = (
   <div id="wrapper">
-    <Header />
+    <Header logo={logo} />
 
     <Router>
       <MainNav />
 
       <Routes>
-        <Route exact path="/" element={<App />} />
+        <Route exact path="/" element={<App banner={banner} />} />
         <Route exact path="/newproducts" element={<Newproduct />} />
         <Route exact path="/specials" element={<Specials />} />
         <Route exact path="/allproducts" element={<AllProducts />} />

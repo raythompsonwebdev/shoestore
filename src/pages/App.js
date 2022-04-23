@@ -6,7 +6,7 @@ import FindShoes from "../components/frontPage/FindShoes";
 import FrontPageBoxes from "../components/frontPage/frontPageBoxes";
 // import axios from "axios";
 
-function App() {
+function App(props) {
   const [productData, setProductData] = useState([]);
   const [lastIndex, setLastIndex] = useState(0);
   const [visibility, setVisibility] = useState(false);
@@ -45,6 +45,9 @@ function App() {
     setVisibility(!visibility);
   };
 
+  // banner image
+  const { banner } = { ...props };
+
   return (
     <main id="content" className="clearfix">
       <button
@@ -62,7 +65,7 @@ function App() {
       </aside>
 
       <main id="content_section" className="group">
-        <BannerImg />
+        <BannerImg banner={banner} />
 
         <h1>Featured</h1>
 

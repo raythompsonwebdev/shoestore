@@ -1,10 +1,11 @@
 node_modules
 files/
 build/
-public/images/
+public/static/media/
 src/images/
-
-src/font/
+src/static/images/original-images/
+src/static/images/moreshoes/
+src/static/font/
 src/pages/Specials-2.js
 src/components/SearchBar/searchbar-components/
 

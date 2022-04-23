@@ -1,7 +1,7 @@
 import React from "react";
-import banner from "../../images/bannerimage.jpg";
 
-function BannerImg() {
+function BannerImg(props) {
+  const { banner } = { ...props };
   return (
     <section id="bannerbox">
       <hgroup>
@@ -40,7 +40,7 @@ function BannerImg() {
       </nav>
 
       <figure id="bannerboximg">
-        <img src={banner} alt="pinn" />
+        <img src={banner} alt="shoestore-banner" />
       </figure>
     </section>
   );

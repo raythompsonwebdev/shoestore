@@ -1,9 +1,16 @@
 import React from "react";
 
+const myComponentStyle = {
+  backgroundImage: "url('../static/media/form-bg-comp.png')",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundCize: "cover",
+};
+
 function FindShoes() {
   return (
     <article id="searchbox">
-      <form id="searcher" action="" method="get">
+      <form id="searcher" action="" method="get" style={myComponentStyle}>
         <h1>
           FIND
           <br />

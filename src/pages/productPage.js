@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import productData from "../data/productData";
+import productData from "../static/data/productData";
 import LikesSection from "../components/LikesSection";
 import NotFound from "./NotFound";
 

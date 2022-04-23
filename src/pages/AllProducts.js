@@ -14,9 +14,6 @@ function AllProducts() {
   const [selectData, setSelectData] = useState([]);
 
   useEffect(() => {
-    // const fetchProducts = fetch(`/api/products/`);
-    // const fetchProducts = fetch(`./productdata.json`);
-
     // get products
     const getProducts = fetch("/api/products");
 
@@ -33,12 +30,7 @@ function AllProducts() {
         Promise.all(values.map((element) => element.json()))
       )
       .then(([productdata, searchedData, selectedData]) => {
-        // deconstruct array of data from all threee apis responses.
-
-        // eslint-disable-next-line no-console
-        // console.log(productdata, searchData, selectData);
         const productDataResult = productdata.map((shoe, index) => {
-          // eslint-disable-next-line react/destructuring-assignment
           setLastIndex(index);
           // eslint-disable-next-line no-param-reassign
           shoe.prodId = index;

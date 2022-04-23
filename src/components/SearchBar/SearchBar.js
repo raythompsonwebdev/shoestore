@@ -7,7 +7,7 @@ import {
   SelectSize,
 } from "./SearchBarData";
 
-import searchbarData2 from "../../data/searchbarData.json";
+import searchbarData2 from "../../static/data/searchbarData.json";
 
 function SearchBar(props) {
   const {
@@ -62,12 +62,11 @@ function SearchBar(props) {
     );
   };
 
-  const { gender1, style1, size1, color1 } = searchData;
-
-  const [gender, style, size, color] = searchbarData2;
+  const [gender, style, size, color] = [...searchbarData2];
+  const [gender1, style1, size1, color1] = searchData;
 
   // eslint-disable-next-line no-console
-  // console.log(searchData, gender1, style1, size1, color1);
+  // console.log(searchbarData2, searchData);
 
   return (
     <aside id="search_category">

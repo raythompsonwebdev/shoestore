@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FrontPageBox from "./frontPageBox";
-// import { uuid } from "uuidv4";
 
 function FrontPageBoxes(props) {
   const { productData } = props;
