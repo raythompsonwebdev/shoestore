@@ -4,11 +4,8 @@ import PropTypes from "prop-types";
 
 export function SelectColor(props) {
   // eslint-disable-next-line react/prop-types
-  const { aria, colorHandler, colors, otherColors, name, value } = props;
+  const { aria, colorHandler, colors, name, value } = props;
   const { options } = colors;
-
-  // eslint-disable-next-line no-console
-  console.log(otherColors);
 
   return (
     <select
@@ -28,11 +25,10 @@ export function SelectColor(props) {
 
 export function SelectGender(props) {
   // eslint-disable-next-line react/prop-types
-  const { aria, genderHandler, genders, otherGenders, name, value } = props;
+  const { aria, genderHandler, genders, name, value } = props;
 
   const { options } = genders;
-  // eslint-disable-next-line no-console
-  console.log(otherGenders);
+
   return (
     <select
       name={name}
@@ -51,10 +47,8 @@ export function SelectGender(props) {
 
 export function SelectSize(props) {
   // eslint-disable-next-line react/prop-types
-  const { aria, name, sizeHandler, sizes, otherSizes, value } = props;
+  const { aria, name, sizeHandler, sizes, value } = props;
   const { options } = sizes;
-  // eslint-disable-next-line no-console
-  console.log(otherSizes);
   return (
     <select
       name={name}
@@ -73,11 +67,9 @@ export function SelectSize(props) {
 
 export function SelectStyle(props) {
   // eslint-disable-next-line react/prop-types
-  const { arialabelledby, name, styleHandler, styles, otherStyles, value } =
-    props;
+  const { arialabelledby, name, styleHandler, styles, value } = props;
   const { options } = styles;
-  // eslint-disable-next-line no-console
-  console.log(otherStyles);
+
   return (
     <select
       name={name}

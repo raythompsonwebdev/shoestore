@@ -7,8 +7,6 @@ import {
   SelectSize,
 } from "./SearchBarData";
 
-// import searchbarData2 from "../../static/data/searchbarData.json";
-
 function SearchBar(props) {
   const {
     // changesOrders,
@@ -23,8 +21,6 @@ function SearchBar(props) {
   const [sizeVal, setSizeVal] = useState(" ");
   const [styleVal, setStyleVal] = useState(" ");
   const [colorVal, setColorVal] = useState(" ");
-
-  // const [genders, styles, sizes, colors] = searchbarData2;
 
   // eslint-disable-next-line func-style
   const genderHandler = (event) => {
@@ -62,7 +58,6 @@ function SearchBar(props) {
     );
   };
 
-  // const [gender1, style1, size1, color1] = [...searchbarData2];
   const [gender, style, size, color] = searchData;
 
   return (

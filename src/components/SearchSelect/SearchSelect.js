@@ -6,9 +6,6 @@ import PropTypes from "prop-types";
 function Selector(props) {
   const { handleChange, changesOrders, selectData } = props;
 
-  // eslint-disable-next-line no-console
-  // console.log(selectData);
-
   function onItemChange(evt) {
     handleChange(evt.target.value);
     changesOrders(evt.target.value, "asc");

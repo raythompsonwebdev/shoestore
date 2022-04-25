@@ -26,8 +26,6 @@ function NewProducts() {
       .then((values) => Promise.all(values.map((element) => element.json())))
       .then(([productdata, searchedData]) => {
         // deconstruct array of data from both apis responses.
-        // eslint-disable-next-line no-console
-        // console.log(productdata, searchData, selectData);
         const productDataResult = productdata.map((shoe, index) => {
           // eslint-disable-next-line react/destructuring-assignment
           setLastIndex(index);
