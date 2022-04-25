@@ -11,6 +11,11 @@ function MainNav() {
     setVisibility(!visibility);
   };
 
+  const menuToggleFunc = (e) => {
+    e.preventDefault();
+    setVisibility(!visibility);
+  };
+
   return (
     <nav id="main-nav" role="navigation">
       <span id="signin-box">
@@ -68,7 +73,12 @@ function MainNav() {
 
       <ul id="" className={`mobile-nav ${!visibility ? "is-expanded" : " "}`}>
         <li>
-          <Link to="/" title="Home Page" aria-label="Home Page">
+          <Link
+            to="/"
+            title="Home Page"
+            aria-label="Home Page"
+            onMouseUp={menuToggleFunc}
+          >
             Home
           </Link>
         </li>
@@ -77,12 +87,18 @@ function MainNav() {
             to="/newproducts"
             title="new products page"
             aria-label="new products page"
+            onMouseUp={menuToggleFunc}
           >
             New Products
           </Link>
         </li>
         <li>
-          <Link to="/specials" title="specials page" aria-label="specials page">
+          <Link
+            to="/specials"
+            title="specials page"
+            aria-label="specials page"
+            onMouseUp={menuToggleFunc}
+          >
             Specials
           </Link>
         </li>
@@ -91,17 +107,28 @@ function MainNav() {
             to="/allproducts"
             title="all products page"
             aria-label="all products page"
+            onMouseUp={menuToggleFunc}
           >
             All Products
           </Link>
         </li>
         <li>
-          <Link to="/faqs" title="faqs page" aria-label="faqs page">
+          <Link
+            to="/faqs"
+            title="faqs page"
+            aria-label="faqs page"
+            onMouseUp={menuToggleFunc}
+          >
             FAQS
           </Link>
         </li>
         <li>
-          <Link to="/contact" title="contact page" aria-label="contact page">
+          <Link
+            to="/contact"
+            title="contact page"
+            aria-label="contact page"
+            onMouseUp={menuToggleFunc}
+          >
             Contact
           </Link>
         </li>

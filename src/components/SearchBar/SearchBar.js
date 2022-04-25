@@ -7,7 +7,7 @@ import {
   SelectSize,
 } from "./SearchBarData";
 
-import searchbarData2 from "../../static/data/searchbarData.json";
+// import searchbarData2 from "../../static/data/searchbarData.json";
 
 function SearchBar(props) {
   const {
@@ -62,11 +62,8 @@ function SearchBar(props) {
     );
   };
 
-  const [gender, style, size, color] = [...searchbarData2];
-  const [gender1, style1, size1, color1] = searchData;
-
-  // eslint-disable-next-line no-console
-  // console.log(searchbarData2, searchData);
+  // const [gender1, style1, size1, color1] = [...searchbarData2];
+  const [gender, style, size, color] = searchData;
 
   return (
     <aside id="search_category">
@@ -76,7 +73,6 @@ function SearchBar(props) {
           <SelectGender
             name="genderVal"
             genders={gender}
-            otherGenders={gender1}
             value={genderVal}
             genderHandler={genderHandler}
             aria-labelledby="select_search"
@@ -85,7 +81,6 @@ function SearchBar(props) {
           <SelectStyle
             name="styleVal"
             styles={style}
-            otherStyles={style1}
             value={styleVal}
             styleHandler={styleHandler}
             aria-labelledby="select_search"
@@ -94,7 +89,6 @@ function SearchBar(props) {
           <SelectSize
             name="sizeVal"
             sizes={size}
-            otherSizes={size1}
             value={sizeVal}
             sizeHandler={sizeHandler}
             aria-labelledby="select_search"
@@ -102,7 +96,6 @@ function SearchBar(props) {
           <SelectColor
             name="colorVal"
             colors={color}
-            otherColors={color1}
             value={colorVal}
             colorHandler={colorHandler}
             aria-labelledby="select_search"

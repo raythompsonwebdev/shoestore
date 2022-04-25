@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 export function SelectColor(props) {
   // eslint-disable-next-line react/prop-types
   const { aria, colorHandler, colors, otherColors, name, value } = props;
-  const { options } = otherColors;
+  const { options } = colors;
 
   // eslint-disable-next-line no-console
-  console.log(colors);
+  console.log(otherColors);
 
   return (
     <select
@@ -30,9 +30,9 @@ export function SelectGender(props) {
   // eslint-disable-next-line react/prop-types
   const { aria, genderHandler, genders, otherGenders, name, value } = props;
 
-  const { options } = otherGenders;
+  const { options } = genders;
   // eslint-disable-next-line no-console
-  console.log(genders);
+  console.log(otherGenders);
   return (
     <select
       name={name}
@@ -52,9 +52,9 @@ export function SelectGender(props) {
 export function SelectSize(props) {
   // eslint-disable-next-line react/prop-types
   const { aria, name, sizeHandler, sizes, otherSizes, value } = props;
-  const { options } = otherSizes;
+  const { options } = sizes;
   // eslint-disable-next-line no-console
-  console.log(sizes);
+  console.log(otherSizes);
   return (
     <select
       name={name}
@@ -75,9 +75,9 @@ export function SelectStyle(props) {
   // eslint-disable-next-line react/prop-types
   const { arialabelledby, name, styleHandler, styles, otherStyles, value } =
     props;
-  const { options } = otherStyles;
+  const { options } = styles;
   // eslint-disable-next-line no-console
-  console.log(styles);
+  console.log(otherStyles);
   return (
     <select
       name={name}
@@ -99,7 +99,7 @@ SelectColor.defaultProps = {
   value: "",
   name: "",
   colors: {
-    id: " ",
+    _id: " ",
     name: " ",
     options: [],
   },
@@ -115,12 +115,12 @@ SelectColor.propTypes = {
   value: PropTypes.string,
   aria: PropTypes.string,
   colors: PropTypes.shape({
-    id: PropTypes.string,
+    _id: PropTypes.string,
     name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
   otherColors: PropTypes.shape({
-    _id: PropTypes.string,
+    id: PropTypes.string,
     name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
@@ -129,7 +129,7 @@ SelectColor.propTypes = {
 
 SelectGender.defaultProps = {
   genders: {
-    id: " ",
+    _id: " ",
     name: " ",
     options: [],
   },
@@ -141,12 +141,12 @@ SelectGender.defaultProps = {
 };
 SelectGender.propTypes = {
   genders: PropTypes.shape({
-    id: PropTypes.string,
+    _id: PropTypes.string,
     name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
   otherGenders: PropTypes.shape({
-    _id: PropTypes.string,
+    id: PropTypes.string,
     name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
@@ -156,7 +156,7 @@ SelectSize.defaultProps = {
   value: "",
   name: "",
   sizes: {
-    id: " ",
+    _id: " ",
     name: " ",
     options: [],
   },
@@ -172,6 +172,8 @@ SelectSize.propTypes = {
   value: PropTypes.string,
   aria: PropTypes.string,
   sizes: PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
   otherSizes: PropTypes.shape({
@@ -186,7 +188,7 @@ SelectStyle.defaultProps = {
   value: "",
   name: "",
   styles: {
-    id: " ",
+    _id: " ",
     name: " ",
     options: [],
   },
@@ -201,12 +203,12 @@ SelectStyle.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   styles: PropTypes.shape({
-    id: PropTypes.string,
+    _id: PropTypes.string,
     name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
   otherStyles: PropTypes.shape({
-    _id: PropTypes.string,
+    id: PropTypes.string,
     name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
