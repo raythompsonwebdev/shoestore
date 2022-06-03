@@ -58,58 +58,42 @@ function MainNav() {
 
       <ul id="inner-nav">
         <li>
-          {!isAuthenticated && (
-            <Link to="/" title="Home Page" aria-label="Home Page">
-              Home
-            </Link>
-          )}
+          <Link to="/" title="Home Page" aria-label="Home Page">
+            Home
+          </Link>
         </li>
         <li>
-          {!isAuthenticated && (
-            <Link
-              to="/newproducts"
-              title="new products page"
-              aria-label="new products page"
-            >
-              New Products
-            </Link>
-          )}
+          <Link
+            to="/newproducts"
+            title="new products page"
+            aria-label="new products page"
+          >
+            New Products
+          </Link>
         </li>
         <li>
-          {!isAuthenticated && (
-            <Link
-              to="/specials"
-              title="specials page"
-              aria-label="specials page"
-            >
-              Specials
-            </Link>
-          )}
+          <Link to="/specials" title="specials page" aria-label="specials page">
+            Specials
+          </Link>
         </li>
         <li>
-          {!isAuthenticated && (
-            <Link
-              to="/allproducts"
-              title="all products page"
-              aria-label="all products page"
-            >
-              All Products
-            </Link>
-          )}
+          <Link
+            to="/allproducts"
+            title="all products page"
+            aria-label="all products page"
+          >
+            All Products
+          </Link>
         </li>
         <li>
-          {!isAuthenticated && (
-            <Link to="/faqs" title="faqs page" aria-label="faqs page">
-              FAQS
-            </Link>
-          )}
+          <Link to="/faqs" title="faqs page" aria-label="faqs page">
+            FAQS
+          </Link>
         </li>
         <li>
-          {!isAuthenticated && (
-            <Link to="/contact" title="contact page" aria-label="contact page">
-              Contact
-            </Link>
-          )}
+          <Link to="/contact" title="contact page" aria-label="contact page">
+            Contact
+          </Link>
         </li>
       </ul>
 

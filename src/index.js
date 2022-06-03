@@ -1,9 +1,9 @@
 import "whatwg-fetch"; // import fetch to make calls to server
 import React from "react";
-// import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
+import * as serviceWorker from "./serviceWorker";
 import Home from "./views/Home";
 import Header from "./components/Layout/Header";
 import MainNav from "./components/Layout/MainNav";
@@ -74,3 +74,8 @@ root.render(
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Auth0Provider {...providerConfig}>{routing}</Auth0Provider>
 );
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

@@ -14,6 +14,11 @@ function Profile() {
         <span className="context_title">
           <h2>{user.name}</h2>
           <h3>{JSON.stringify(user, null, 2)}</h3>
+          <img
+            src={user.picture}
+            alt="Profile"
+            className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
+          />
         </span>
       </main>
 
