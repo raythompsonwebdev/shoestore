@@ -43,7 +43,6 @@
     "prefer-rest-params": "warn",
     "arrow-parens": ["error", "always"],
     "arrow-body-style": ["error", "as-needed"],
-
     "no-eval": "error",
     "no-implied-eval": "error",
     "eqeqeq": "error",

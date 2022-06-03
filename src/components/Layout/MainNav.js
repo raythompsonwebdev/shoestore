@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // eslint-disable-next-line func-style
 function MainNav() {
   const [visibility, setVisibility] = useState({ visibility: false });
+  // const [isOpen, setIsOpen] = useState(false);
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  // const toggle = () => setIsOpen(!isOpen);
+
+  const logoutWithRedirect = () =>
+    logout({
+      returnTo: window.location.origin,
+    });
 
   // eslint-disable-next-line func-style
   const toggleVisibility = (e) => {
@@ -19,55 +28,88 @@ function MainNav() {
   return (
     <nav id="main-nav" role="navigation">
       <span id="signin-box">
-        <Link to="/login" title="">
-          Sign in
-        </Link>
-        <Link to="/register" title="">
-          register
-        </Link>
-        <Link to="/" title="">
-          help
-        </Link>
+        {!isAuthenticated && (
+          <Link
+            to="/"
+            title=""
+            onClick={() =>
+              loginWithRedirect({ returnTo: window.location.origin })
+            }
+          >
+            Log in
+          </Link>
+        )}
+        {!isAuthenticated && (
+          <Link to="/register" title="">
+            register
+          </Link>
+        )}
+        {isAuthenticated && (
+          <Link to="/profile" title="">
+            account
+          </Link>
+        )}
+        {isAuthenticated && (
+          <Link to="/logout" title="" onClick={() => logoutWithRedirect()}>
+            logout
+          </Link>
+        )}
       </span>
 
       <ul id="inner-nav">
         <li>
-          <Link to="/" title="Home Page" aria-label="Home Page">
-            Home
-          </Link>
+          {!isAuthenticated && (
+            <Link to="/" title="Home Page" aria-label="Home Page">
+              Home
+            </Link>
+          )}
         </li>
         <li>
-          <Link
-            to="/newproducts"
-            title="new products page"
-            aria-label="new products page"
-          >
-            New Products
-          </Link>
+          {!isAuthenticated && (
+            <Link
+              to="/newproducts"
+              title="new products page"
+              aria-label="new products page"
+            >
+              New Products
+            </Link>
+          )}
         </li>
         <li>
-          <Link to="/specials" title="specials page" aria-label="specials page">
-            Specials
-          </Link>
+          {!isAuthenticated && (
+            <Link
+              to="/specials"
+              title="specials page"
+              aria-label="specials page"
+            >
+              Specials
+            </Link>
+          )}
         </li>
         <li>
-          <Link
-            to="/allproducts"
-            title="all products page"
-            aria-label="all products page"
-          >
-            All Products
-          </Link>
+          {!isAuthenticated && (
+            <Link
+              to="/allproducts"
+              title="all products page"
+              aria-label="all products page"
+            >
+              All Products
+            </Link>
+          )}
         </li>
         <li>
-          <Link to="/faqs" title="faqs page" aria-label="faqs page">
-            FAQS
-          </Link>
+          {!isAuthenticated && (
+            <Link to="/faqs" title="faqs page" aria-label="faqs page">
+              FAQS
+            </Link>
+          )}
         </li>
         <li>
-          <Link to="/contact" title="contact page" aria-label="contact page">
-            Contact
-          </Link>
+          {!isAuthenticated && (
+            <Link to="/contact" title="contact page" aria-label="contact page">
+              Contact
+            </Link>
+          )}
         </li>
       </ul>
 

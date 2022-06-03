@@ -3,33 +3,53 @@ import React from "react";
 // import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./pages/App";
+import { Auth0Provider } from "@auth0/auth0-react";
+import Home from "./views/Home";
 import Header from "./components/Layout/Header";
 import MainNav from "./components/Layout/MainNav";
 import Footer from "./components/Layout/Footer";
-import Newproduct from "./pages/NewProducts";
-import Specials from "./pages/Specials";
-import AllProducts from "./pages/AllProducts";
-import ProductPage from "./pages/productPage";
-import Contact from "./pages/Contact";
-import Faqs from "./pages/Faqs";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-import NotFound from "./pages/NotFound";
+import Newproduct from "./views/NewProducts";
+import Specials from "./views/Specials";
+import AllProducts from "./views/AllProducts";
+import ProductPage from "./views/productPage";
+import Contact from "./views/Contact";
+import Faqs from "./views/Faqs";
+import Register from "./views/Register";
+import Login from "./views/Login";
+import Profile from "./views/Profile";
+import NotFound from "./views/NotFound";
 import "./static/css/style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./static/images/shoe-store-logo.png";
 import banner from "./static/images/bannerimage.jpg";
+import getConfig from "./config";
+import history from "./utils/history";
+
+const onRedirectCallback = (appState) => {
+  history.push(
+    appState && appState.returnTo ? appState.returnTo : window.location.pathname
+  );
+};
+
+// Please see https://auth0.github.io/auth0-react/interfaces/Auth0ProviderOptions.html
+// for a full list of the available properties on the provider
+const config = getConfig();
+
+const providerConfig = {
+  domain: config.domain,
+  clientId: config.clientId,
+  ...(config.audience ? { audience: config.audience } : null),
+  redirectUri: window.location.origin,
+  onRedirectCallback,
+};
 
 const routing = (
   <div id="wrapper">
     <Header logo={logo} />
-
-    <Router>
+    <Router history={history}>
       <MainNav />
-
       <Routes>
-        <Route exact path="/" element={<App banner={banner} />} />
+        <Route exact path="/" element={<Home banner={banner} />} />
         <Route exact path="/newproducts" element={<Newproduct />} />
         <Route exact path="/specials" element={<Specials />} />
         <Route exact path="/allproducts" element={<AllProducts />} />
@@ -38,15 +58,19 @@ const routing = (
         <Route exact path="/faqs" element={<Faqs />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/profile" element={<Profile />} />
         <Route element={<NotFound />} />
         {/* <Route path="/product/:name" render={({ match }) => <ProductPage match={match} />}
-        /> */}
+            /> */}
       </Routes>
-
       <Footer />
     </Router>
   </div>
 );
+
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(routing);
+root.render(
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Auth0Provider {...providerConfig}>{routing}</Auth0Provider>
+);

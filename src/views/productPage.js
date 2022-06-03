@@ -15,8 +15,6 @@ function ProductPage() {
   useEffect(() => {
     // eslint-disable-next-line func-style
     const fetchData = async () => {
-      // add "proxy":"http://localhost:8000/" property to package.json to avoid cors issue
-
       const result = await fetch(`/api/product/${name}`);
       const body = await result.json();
 
@@ -32,7 +30,7 @@ function ProductPage() {
 
   const matchingProduct = singleProduct;
 
-  const { cartImg, imgUrl, price, size, style, text } = {
+  const { imgUrl, price, size, style, text } = {
     ...singleProduct,
   };
 
@@ -46,7 +44,6 @@ function ProductPage() {
           <p id="productPageprice">£{price}</p>
           <p id="productPagegender">{size}</p>
           <p>{text}</p>
-          <img id="cartPageicon" src={cartImg} alt="shoppingcart icon" />
 
           <LikesSection
             likes={productInfo.likes}

@@ -6,7 +6,7 @@ import FindShoes from "../components/frontPage/FindShoes";
 import FrontPageBoxes from "../components/frontPage/frontPageBoxes";
 // import axios from "axios";
 
-function App(props) {
+function Home(props) {
   const [productData, setProductData] = useState([]);
   const [lastIndex, setLastIndex] = useState(0);
   const [visibility, setVisibility] = useState(false);
@@ -35,6 +35,7 @@ function App(props) {
       .catch((error) => {
         // eslint-disable-next-line no-console
         console.log(error);
+        throw new Error(error);
       });
   }, [lastIndex]);
 
@@ -75,4 +76,4 @@ function App(props) {
   );
 }
 
-export default App;
+export default Home;
