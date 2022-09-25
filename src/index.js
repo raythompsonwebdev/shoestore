@@ -41,6 +41,8 @@ const providerConfig = {
   ...(config.audience ? { audience: config.audience } : null),
   redirectUri: window.location.origin,
   onRedirectCallback,
+  // audience:"shoestoreapp",
+  // scope:"openid profile email"
 };
 
 const routing = (
