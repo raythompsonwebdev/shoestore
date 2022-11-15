@@ -35,34 +35,40 @@ function MainNav() {
             onClick={() =>
               loginWithRedirect({ returnTo: window.location.origin })
             }
+            className="signin-box-link"
           >
             Log in
           </Link>
         )}
         {!isAuthenticated && (
-          <Link to="/register" title="">
+          <Link to="/register" title="" className="signin-box-link">
             register
           </Link>
         )}
         {isAuthenticated && (
-          <Link to="/profile" title="">
+          <Link to="/profile" title="" className="signin-box-link">
             account
           </Link>
         )}
         {isAuthenticated && (
-          <Link to="/logout" title="" onClick={() => logoutWithRedirect()}>
+          <Link
+            to="/logout"
+            title=""
+            onClick={() => logoutWithRedirect()}
+            className="signin-box-link"
+          >
             logout
           </Link>
         )}
       </span>
 
       <ul id="inner-nav">
-        <li>
+        <li className="inner-nav-item">
           <Link to="/" title="Home Page" aria-label="Home Page">
             Home
           </Link>
         </li>
-        <li>
+        <li className="inner-nav-item">
           <Link
             to="/newproducts"
             title="new products page"
@@ -71,12 +77,12 @@ function MainNav() {
             New Products
           </Link>
         </li>
-        <li>
+        <li className="inner-nav-item">
           <Link to="/specials" title="specials page" aria-label="specials page">
             Specials
           </Link>
         </li>
-        <li>
+        <li className="inner-nav-item">
           <Link
             to="/allproducts"
             title="all products page"
@@ -85,12 +91,12 @@ function MainNav() {
             All Products
           </Link>
         </li>
-        <li>
+        <li className="inner-nav-item">
           <Link to="/faqs" title="faqs page" aria-label="faqs page">
             FAQS
           </Link>
         </li>
-        <li>
+        <li className="inner-nav-item">
           <Link to="/contact" title="contact page" aria-label="contact page">
             Contact
           </Link>
@@ -98,62 +104,68 @@ function MainNav() {
       </ul>
 
       <ul id="" className={`mobile-nav ${!visibility ? "is-expanded" : " "}`}>
-        <li>
+        <li className="mobile-nav-item">
           <Link
             to="/"
             title="Home Page"
             aria-label="Home Page"
             onMouseUp={menuToggleFunc}
+            className="mobile-nav-link"
           >
             Home
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
             to="/newproducts"
             title="new products page"
             aria-label="new products page"
             onMouseUp={menuToggleFunc}
+            className="mobile-nav-link"
           >
             New Products
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
             to="/specials"
             title="specials page"
             aria-label="specials page"
             onMouseUp={menuToggleFunc}
+            className="mobile-nav-link"
           >
             Specials
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
             to="/allproducts"
             title="all products page"
             aria-label="all products page"
             onMouseUp={menuToggleFunc}
+            className="mobile-nav-link"
           >
             All Products
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
             to="/faqs"
             title="faqs page"
             aria-label="faqs page"
             onMouseUp={menuToggleFunc}
+            className="mobile-nav-link"
           >
             FAQS
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
             to="/contact"
             title="contact page"
             aria-label="contact page"
             onMouseUp={menuToggleFunc}
+            className="mobile-nav-link"
           >
             Contact
           </Link>

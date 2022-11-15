@@ -4,7 +4,7 @@ import React from "react";
 function Header(props) {
   const { logo } = { ...props };
   return (
-    <header>
+    <header id="site-header">
       <figure id="logo">
         <img src={logo} alt="shoe-store-logo" />
       </figure>

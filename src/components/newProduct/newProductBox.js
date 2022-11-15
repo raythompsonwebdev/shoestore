@@ -11,19 +11,18 @@ function NewProductBox(props) {
     backgroundSize: "cover",
   };
   return (
-    <figure className="product-box_longer">
-      <img className="product_boximg_longer" src={imgUrl} alt={name} />
-      <figcaption className="product_boxdetails_longer">
-        <h1 style={myComponentStyle}>Product :{name}</h1>
-        <p>{text}</p>
-        <span className="price_longer">
-          Price :£
-          {price}
-        </span>
-        <span className="price_longer">
+    <figure className="larger-product-box">
+      <img className="larger-product-box-image" src={imgUrl} alt={name} />
+      <figcaption className="larger-product-box-caption">
+        <h1 style={myComponentStyle} className="larger-product-box-title">
+          Product :{name}
+        </h1>
+        <p className="larger-product-box-text">{text}</p>
+        <span className="larger-product-box-price">Price :£ {price}</span>
+        <span className="larger-product-box-price">
           <Link to={`/product/${name}`}>
             <img
-              className="product_icon_longer"
+              className="larger-product-box-icon"
               src={cartImg}
               alt="shopping-cart icon"
             />

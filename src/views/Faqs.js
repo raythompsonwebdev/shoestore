@@ -3,12 +3,12 @@ import React from "react";
 // eslint-disable-next-line func-style
 function Faqs() {
   return (
-    <main id="content" className="clearfix">
-      <h1>FAQ</h1>
+    <main id="main-content" className="clearfix">
+      <h1 className="main-content-title">FAQ</h1>
       <br />
 
-      <main id="context" className="group">
-        <span className="context_title">
+      <main id="main-inner-content" className="group">
+        <span className="main-inner-content-title">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel
           rutrum ante.
         </span>
@@ -60,29 +60,27 @@ function Faqs() {
         </p>
       </main>
 
-      <aside className="contact_sidebar">
-        <br />
-        <p>
+      <aside className="contact-sidebar">
+        <p className="contact-sidebar-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi vel
           rutrum ante
         </p>
-        <br />
-        <p>
+
+        <p className="contact-sidebar-text">
           Vivamus adipiscing tincidunt purus at adipiscing Proin orci metus,
           gravida in cursus et, egestas Suspendisse potenti
         </p>
-        <br />
-        <p>
+
+        <p className="contact-sidebar-text">
           Vivamus congue sapien nec velit adipiscing a tincidunt Lorem ipsum
           dolor sit amet, consectetur adipiscing elit Nulla quis urna nisl
         </p>
-        <br />
-        <p>
+
+        <p className="contact-sidebar-text">
           Nulla dolor magna, pretium ac elementum nec, tristique Sed lectus
           arcu, ultrices at mattis id, elementum in nisl Sed condimentum
           adipiscing urna, id venenatis ante
         </p>
-        <br />
       </aside>
     </main>
   );

@@ -32,7 +32,7 @@ function Registration() {
   };
 
   return (
-    <form id="form" onSubmit={submit}>
+    <form id="register-form" onSubmit={submit}>
       <ul>
         <li>
           <label htmlFor="username">

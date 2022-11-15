@@ -24,7 +24,7 @@ function LoginForm() {
   };
 
   return (
-    <form id="form" onSubmit={submit}>
+    <form id="login-form" onSubmit={submit}>
       <ul>
         <li>
           <label htmlFor="username">

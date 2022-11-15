@@ -64,7 +64,7 @@ function NewProducts() {
   };
 
   return (
-    <main id="content" className="clearfix">
+    <main id="main-content" className="clearfix">
       <SearchBar
         labelname="New Products"
         orderByVal={OrderByVal}
@@ -83,16 +83,18 @@ function NewProducts() {
         SIDE
       </button>
 
-      <aside className={`left_bar ${visibility ? "is-expanded" : " "}`}>
+      <aside
+        className={`left-side-content ${visibility ? "is-expanded" : " "}`}
+      >
         <FindShoesAccord />
       </aside>
 
-      <main id="content_section">
+      <section id="right-content-section">
         <NewProductBoxes productData={productData} />
 
         <br />
         <br />
-      </main>
+      </section>
     </main>
   );
 }

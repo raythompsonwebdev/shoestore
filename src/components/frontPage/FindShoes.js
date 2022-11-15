@@ -9,14 +9,14 @@ const myComponentStyle = {
 
 function FindShoes() {
   return (
-    <article id="searchbox">
-      <form id="searcher" action="" method="get" style={myComponentStyle}>
-        <h1>
-          FIND
-          <br />
-          YOUR SHOES
-        </h1>
-        <br />
+    <article id="front-page-form-container">
+      <h1> FIND YOUR SHOES </h1>
+      <form
+        id="front-page-form"
+        action=""
+        method="get"
+        style={myComponentStyle}
+      >
         <select name="gender">
           <option value="Male">Mens</option>
           <option value="Female">Women</option>
@@ -38,7 +38,7 @@ function FindShoes() {
           <option value="Skate Shoes">Skate Shoes</option>
           <option value="Boots">Boots</option>
         </select>
-        <input name="find" className="find" type="submit" value="FIND" />
+        <input name="find-shoes" className="find" type="submit" value="FIND" />
       </form>
     </article>
   );

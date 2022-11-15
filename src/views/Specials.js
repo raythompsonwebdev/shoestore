@@ -88,7 +88,7 @@ function Specials() {
   });
 
   return (
-    <main id="content" className="clearfix">
+    <main id="main-content" className="clearfix">
       <SearchBar
         labelname="Specials"
         orderByVal={OrderByVal}
@@ -107,11 +107,13 @@ function Specials() {
         SIDE
       </button>
 
-      <aside className={`left_bar ${visibility ? "is-expanded" : " "}`}>
+      <aside
+        className={`left-side-content ${visibility ? "is-expanded" : " "}`}
+      >
         <FindShoesAccord />
       </aside>
 
-      <main id="content_section" role="main">
+      <section id="right-content-section" role="main">
         <SearchSelect
           orderByVal={OrderByVal}
           orderDir={OrderDir}
@@ -124,7 +126,7 @@ function Specials() {
         <ProductBoxes productData={filteredApts} />
 
         <br />
-      </main>
+      </section>
     </main>
   );
 }

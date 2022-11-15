@@ -27,9 +27,9 @@ function ContactForm() {
   };
 
   return (
-    <form id="form" onSubmit={submit}>
-      <ul>
-        <li>
+    <form id="contact-form" onSubmit={submit}>
+      <ul id="contact-form-fields">
+        <li className="contact-form-item">
           <label htmlFor="username">
             Name:&#32;
             <input
@@ -42,7 +42,7 @@ function ContactForm() {
             />
           </label>
         </li>
-        <li>
+        <li className="contact-form-item">
           <label htmlFor="email">
             E-mail:&#32;
             <input
@@ -55,7 +55,7 @@ function ContactForm() {
             />
           </label>
         </li>
-        <li>
+        <li className="contact-form-item">
           <label htmlFor="message">
             Message:&#32;
             <textarea
@@ -68,7 +68,7 @@ function ContactForm() {
             />
           </label>
         </li>
-        <li>
+        <li className="contact-form-item">
           <label htmlFor="submit">
             <input type="submit" value="Send" id="submit" name="submit" />
           </label>

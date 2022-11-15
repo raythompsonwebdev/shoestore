@@ -35,13 +35,13 @@ function ProductPage() {
   };
 
   return matchingProduct ? (
-    <main id="content" className="clearfix">
-      <h1>Product page</h1>
-      <figure id="productPagebox">
-        <img id="productPageimg" src={imgUrl} alt={style} />
-        <figcaption id="productPagedetails">
-          <p id="productPagename"> {style}</p>
-          <p id="productPageprice">£{price}</p>
+    <main id="main-content" className="clearfix">
+      <h1 className="main-content-title">Product page</h1>
+      <figure id="product-page-box">
+        <img id="product-page-img" src={imgUrl} alt={style} />
+        <figcaption id="product-page-caption">
+          <p id="product-page-title"> {style}</p>
+          <p id="product -page-price">£{price}</p>
           <p id="productPagegender">{size}</p>
           <p>{text}</p>
 
@@ -53,24 +53,24 @@ function ProductPage() {
         </figcaption>
       </figure>
 
-      <h1>Other Products</h1>
+      <h1 className="main-content-title">Other Products</h1>
 
-      <div id="other_products">
+      <div className="other-products">
         {otherProducts.map((item) => (
-          <figure className="other_product_box" key={item.id}>
+          <figure className="other-products-box" key={item.id}>
             <img
-              className="other_product_boximg"
+              className="other-product-box-img"
               src={item.imgUrl}
               alt={item.name}
             />
-            <figcaption className="other_product_boxdetails">
-              <p className="other_product_name"> {item.name}</p>
-              <p className="other_product_price">£{item.price}</p>
+            <figcaption className="other-product-box-caption">
+              <p className="other-product-box-title"> {item.name}</p>
+              <p className="other-product-box-price">£{item.price}</p>
               <Link to={`/product/${item.name}`}>
                 <img
-                  className="other_cart_icon"
+                  className="other-product-cart-icon "
                   src={item.cartImg}
-                  alt="shoppingcart icon"
+                  alt="shopping cart icon"
                 />
               </Link>
             </figcaption>

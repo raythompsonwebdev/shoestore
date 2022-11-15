@@ -17,7 +17,7 @@ function FrontPageBoxes(props) {
       />
     ));
 
-  return <div className="product_boxes">{NewProduct}</div>;
+  return <div className="product-boxes">{NewProduct}</div>;
 }
 
 FrontPageBoxes.defaultProps = {

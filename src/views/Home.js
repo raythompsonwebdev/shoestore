@@ -50,7 +50,7 @@ function Home(props) {
   const { banner } = { ...props };
 
   return (
-    <main id="content" className="clearfix">
+    <main id="main-content" className="clearfix">
       <button
         id="sidebar-toggle-btn"
         type="button"
@@ -60,18 +60,20 @@ function Home(props) {
         SIDE
       </button>
 
-      <aside className={`left_bar ${visibility ? "is-expanded" : " "}`}>
+      <aside
+        className={`left-side-content ${visibility ? "is-expanded" : " "}`}
+      >
         <FindShoes />
         <FindShoesAccord />
       </aside>
 
-      <main id="content_section" className="group">
+      <section id="right-content-section" className="group">
         <BannerImg banner={banner} />
 
-        <h1>Featured</h1>
+        <h1 id="right-content-section-header">Featured</h1>
 
         <FrontPageBoxes productData={productData} />
-      </main>
+      </section>
     </main>
   );
 }

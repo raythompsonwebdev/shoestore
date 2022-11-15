@@ -11,8 +11,8 @@ function Profile() {
   }
   return (
     isAuthenticated && (
-      <main id="content" className="clearfix">
-        <h1>Profile</h1>
+      <main id="main-content" className="clearfix">
+        <h1 className="main-content-title">Profile</h1>
         <br />
 
         <main id="context" className="group">
