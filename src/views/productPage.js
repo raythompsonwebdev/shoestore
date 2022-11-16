@@ -68,7 +68,7 @@ function ProductPage() {
               <p className="other-product-box-price">£{item.price}</p>
               <Link to={`/product/${item.name}`}>
                 <img
-                  className="other-product-cart-icon "
+                  className="other-product-cart-icon"
                   src={item.cartImg}
                   alt="shopping cart icon"
                 />

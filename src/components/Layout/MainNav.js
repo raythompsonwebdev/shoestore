@@ -64,7 +64,12 @@ function MainNav() {
 
       <ul id="inner-nav">
         <li className="inner-nav-item">
-          <Link to="/" title="Home Page" aria-label="Home Page">
+          <Link
+            to="/"
+            title="Home Page"
+            className="inner-nav-link"
+            aria-label="Home Page"
+          >
             Home
           </Link>
         </li>
@@ -72,13 +77,19 @@ function MainNav() {
           <Link
             to="/newproducts"
             title="new products page"
+            className="inner-nav-link"
             aria-label="new products page"
           >
             New Products
           </Link>
         </li>
         <li className="inner-nav-item">
-          <Link to="/specials" title="specials page" aria-label="specials page">
+          <Link
+            to="/specials"
+            title="specials page"
+            className="inner-nav-link"
+            aria-label="specials page"
+          >
             Specials
           </Link>
         </li>
@@ -86,18 +97,29 @@ function MainNav() {
           <Link
             to="/allproducts"
             title="all products page"
+            className="inner-nav-link"
             aria-label="all products page"
           >
             All Products
           </Link>
         </li>
         <li className="inner-nav-item">
-          <Link to="/faqs" title="faqs page" aria-label="faqs page">
+          <Link
+            to="/faqs"
+            title="faqs page"
+            className="inner-nav-link"
+            aria-label="faqs page"
+          >
             FAQS
           </Link>
         </li>
         <li className="inner-nav-item">
-          <Link to="/contact" title="contact page" aria-label="contact page">
+          <Link
+            to="/contact"
+            title="contact page"
+            className="inner-nav-link"
+            aria-label="contact page"
+          >
             Contact
           </Link>
         </li>

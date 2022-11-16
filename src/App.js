@@ -18,7 +18,7 @@ import Register from "./views/Register";
 import Login from "./views/Login";
 import Profile from "./views/Profile";
 import NotFound from "./views/NotFound";
-import "./static/css/style.scss";
+import "./static/sass/style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./static/images/shoe-store-logo.png";
 import banner from "./static/images/bannerimage.jpg";

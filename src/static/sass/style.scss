@@ -1,5 +1,4 @@
 @import "partials/variables";
-@import "partials/mixins";
 @import "partials/base";
 @import "partials/fonts";
 
@@ -385,7 +384,7 @@
             top: 20%;
           }
 
-          .other_cart_icon:hover {
+          .other-product-cart-icon:hover {
             transform: rotate(360deg);
             cursor: pointer;
           }
@@ -436,11 +435,6 @@
         #cart-page-icon {
           display: block;
           width: 5%;
-
-          //@include transitioner(all 0.3s ease);
-          //position: absolute;
-          //left: 80%;
-          //top: 20%;
         }
 
         #cart-page-icon:hover {
@@ -755,16 +749,7 @@
         align-items: flex-start;
         justify-content: center;
 
-        h1 {
-          font-family: $font-list;
-          height: 35px;
-          margin: 0;
-          text-align: left;
-          font-size: 1em;
-          line-height: 35px;
-        }
-
-        /* Individual product box */
+        /* product box */
         .product-box {
           padding: 0.1em;
           height: auto;
@@ -773,6 +758,7 @@
           font-family: $font-list;
           margin: 15px auto;
 
+          /* product box image */
           .product-box-img {
             width: 100%;
             display: block;
@@ -780,6 +766,7 @@
             height: auto;
           }
 
+          /* product box caption */
           .product-box-caption {
             width: 100%;
             margin: 0;
@@ -811,10 +798,14 @@
               flex: 1 0 auto;
             }
 
+            .product-box-icon-link {
+              width: 15%;
+              position: relative;
+            }
+
             /* Price Icon */
             .product-box-icon {
               display: block;
-              width: 15%;
               transition: all 0.3s ease;
               position: absolute;
               left: 80%;
@@ -845,7 +836,7 @@
           font-family: $font-list;
           margin-bottom: 15px;
 
-          .larger-product-box-img {
+          .larger-product-box-image {
             width: auto;
             display: block;
             margin: 1em auto;
@@ -891,7 +882,7 @@
               width: 100%;
               text-indent: 1%;
 
-              /* Price Icon */
+
               .larger-product-box-link {
                 display: block;
                 .larger-product-box-icon {
@@ -922,7 +913,7 @@
         margin: 0 0 2%;
         padding: 0;
 
-        select {
+        .pag-search-select {
           font-family: $font-list;
           width: 50%;
           display: inline-block;
@@ -933,7 +924,7 @@
           font-size: 0.85em;
         }
 
-        label {
+        .pag-search-label {
           float: left;
           width: 39%;
           display: block;
@@ -945,7 +936,7 @@
           text-transform: uppercase;
         }
 
-        label:hover {
+        .pag-search-label:hover {
           background-color: $color-white;
           color: $color-orange;
           border: 0;
@@ -961,7 +952,7 @@
         margin: 0 0 2%;
         float: right;
 
-        a {
+        .pagination-link {
           color: $color-white;
           background-color: $color-orange;
           text-align: center;
@@ -973,7 +964,7 @@
           transition: all 0.2s ease-in-out;
         }
 
-        a:hover {
+        .pagination-link:hover {
           font-weight: bold;
           cursor: pointer;
         }
@@ -1046,7 +1037,7 @@
 
         #accordian-container {
 
-          /* Style the buttons that are used to open and close the accordion panel */
+
 
           button {
             font-size: 0.9rem;
@@ -1066,13 +1057,13 @@
             box-shadow: none;
           }
 
-          /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+          /* Add a background  */
           .accordion:hover,
           .active {
             background-color: #cccccc;
           }
 
-          /* Style the accordion panel. Note: hidden by default */
+          /* Style the accordion panel. */
           .panel {
             padding: 0;
             background-color: $color-white;
@@ -1375,7 +1366,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -1406,7 +1397,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -1542,7 +1533,6 @@
         }
 
         /* Index page banner box */
-
         #front-page-banner {
           display: grid;
           grid-template-columns: repeat(8, 1fr);
@@ -1592,18 +1582,10 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
           flex-flow: row wrap;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             width: 24%;
             margin: 15px auto;
@@ -1627,7 +1609,12 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+              .product-box-icon-link {
+                width: 15%;
+                position: relative;
+              }
+
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -1646,7 +1633,7 @@
             display: block;
             float: left;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: 18%;
               float: left;
               display: block;
@@ -1673,7 +1660,7 @@
               .larger-product-box-price {
                 font-size: 0.85em;
 
-                /* Price Icon */
+
                 .larger-product-box-icon {
                   float: left;
                   display: block;
@@ -1692,13 +1679,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -1710,7 +1697,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -1819,7 +1806,7 @@
 
           #accordian-container {
 
-            /* Style the buttons that are used to open and close the accordion panel */
+
 
             button {
               font-size: 0.85rem;
@@ -1839,13 +1826,13 @@
               box-shadow: none;
             }
 
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
             .accordion:hover,
             .active {
               background-color: #cccccc;
             }
 
-            /* Style the accordion panel. Note: hidden by default */
+
             .panel {
               padding: 0;
               background-color: $color-white;
@@ -1859,7 +1846,7 @@
             .active::after {
               content: "\2796";
 
-              /* Unicode character for "minus" sign (-) */
+
             }
 
             h3 {
@@ -2042,7 +2029,7 @@
       }
     }
 
-    /* Searchbar */
+
     #search-category {
       display: block;
       height: 50px;
@@ -2090,7 +2077,7 @@
       }
     }
 
-    /* Content */
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -2127,7 +2114,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -2158,7 +2145,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -2285,7 +2272,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           display: grid;
@@ -2336,18 +2323,10 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
           flex-flow: row wrap;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             width: 24%;
             margin: 15px auto;
@@ -2370,8 +2349,12 @@
                 line-height: 25px;
                 text-indent: 0.2em;
               }
+              .product-box-icon-link {
+                width: 15%;
+                position: relative;
+              }
 
-              /* Price Icon */
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -2390,7 +2373,7 @@
             display: block;
             float: left;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: 18%;
               float: left;
               display: block;
@@ -2435,13 +2418,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -2453,7 +2436,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -2478,7 +2461,7 @@
         }
       }
 
-      /* leftbar */
+
       .left-side-content {
         position: unset;
         z-index: 0;
@@ -2489,7 +2472,7 @@
         margin: 0 0 5px;
         font-family: $font-list;
 
-        /* Form */
+
         #front-page-form-container {
           width: 94%;
           height: 330px;
@@ -2562,7 +2545,7 @@
 
           #accordian-container {
 
-            /* Style the buttons that are used to open and close the accordion panel */
+
 
             button {
               font-size: 0.85rem;
@@ -2582,13 +2565,13 @@
               box-shadow: none;
             }
 
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
             .accordion:hover,
             .active {
               background-color: #cccccc;
             }
 
-            /* Style the accordion panel. Note: hidden by default */
+
             .panel {
               padding: 0;
               background-color: $color-white;
@@ -2602,7 +2585,7 @@
             .active::after {
               content: "\2796";
 
-              /* Unicode character for "minus" sign (-) */
+
             }
 
             h3 {
@@ -2786,9 +2769,9 @@
       }
     }
 
-    /* Searchbar */
 
-    /* Searchbar */
+
+
     #search-category {
       display: block;
       height: 50px;
@@ -2837,7 +2820,7 @@
       }
     }
 
-    /* Content */
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -2874,7 +2857,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -2905,7 +2888,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -3033,7 +3016,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           display: grid;
@@ -3084,18 +3067,10 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
           flex-flow: row wrap;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             width: 24%;
             margin: 15px auto;
@@ -3119,7 +3094,12 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+              .product-box-icon-link {
+                width: 15%;
+                position: relative;
+              }
+
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -3138,7 +3118,7 @@
             display: block;
             float: left;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: 18%;
               float: left;
               display: block;
@@ -3185,13 +3165,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -3203,7 +3183,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -3228,9 +3208,9 @@
         }
       }
 
-      /* leftbar */
 
-      /* leftbar */
+
+
       .left-side-content {
         position: unset;
         z-index: 0;
@@ -3241,7 +3221,7 @@
         margin: 0 0 5px;
         font-family: $font-list;
 
-        /* Form */
+
         #front-page-form-container {
           width: 94%;
           height: 330px;
@@ -3314,7 +3294,7 @@
 
           #accordian-container {
 
-            /* Style the buttons that are used to open and close the accordion panel */
+
 
             button {
               font-size: 0.85rem;
@@ -3334,13 +3314,13 @@
               box-shadow: none;
             }
 
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
             .accordion:hover,
             .active {
               background-color: #cccccc;
             }
 
-            /* Style the accordion panel. Note: hidden by default */
+
             .panel {
               padding: 0;
               background-color: $color-white;
@@ -3354,7 +3334,7 @@
             .active::after {
               content: "\2796";
 
-              /* Unicode character for "minus" sign (-) */
+
             }
 
             h3 {
@@ -3536,9 +3516,9 @@
       }
     }
 
-    /* Searchbar */
 
-    /* Searchbar */
+
+
     #search-category {
       display: block;
       height: 50px;
@@ -3587,7 +3567,7 @@
       }
     }
 
-    /* Content */
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -3624,7 +3604,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -3655,7 +3635,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -3783,7 +3763,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           margin: 0;
@@ -3835,18 +3815,10 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
           flex-flow: row wrap;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             width: 24%;
             margin: 15px auto;
@@ -3870,7 +3842,12 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+              .product-box-icon-link {
+                width: 15%;
+                position: relative;
+              }
+
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -3887,7 +3864,7 @@
             display: block;
             float: left;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: 18%;
               float: left;
               display: block;
@@ -3934,13 +3911,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -3952,7 +3929,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -3977,9 +3954,9 @@
         }
       }
 
-      /* leftbar */
 
-      /* leftbar */
+
+
       .left-side-content {
         position: unset;
         z-index: 0;
@@ -3990,7 +3967,7 @@
         margin: 0 0 5px;
         font-family: $font-list;
 
-        /* Form */
+
         #front-page-form-container {
           width: 94%;
           height: 330px;
@@ -4064,7 +4041,7 @@
 
           #accordian-container {
 
-            /* Style the buttons that are used to open and close the accordion panel */
+
 
             button {
               font-size: 0.85rem;
@@ -4084,13 +4061,13 @@
               box-shadow: none;
             }
 
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
             .accordion:hover,
             .active {
               background-color: #cccccc;
             }
 
-            /* Style the accordion panel. Note: hidden by default */
+
             .panel {
               padding: 0;
               background-color: $color-white;
@@ -4104,7 +4081,7 @@
             .active::after {
               content: "\2796";
 
-              /* Unicode character for "minus" sign (-) */
+
             }
 
             h3 {
@@ -4287,9 +4264,9 @@
       }
     }
 
-    /* Searchbar */
 
-    /* Searchbar */
+
+
     #search-category {
       display: block;
       height: 50px;
@@ -4338,9 +4315,9 @@
       }
     }
 
-    /* Content */
 
-    /* Content */
+
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -4377,7 +4354,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -4408,7 +4385,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -4537,7 +4514,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           display: grid;
@@ -4588,18 +4565,10 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
           flex-flow: row wrap;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             margin: 15px auto;
 
@@ -4622,7 +4591,7 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -4644,7 +4613,7 @@
             font-family: $font-list;
             margin-bottom: 15px;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: 18%;
               float: left;
               display: block;
@@ -4691,13 +4660,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -4709,7 +4678,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -4734,7 +4703,7 @@
         }
       }
 
-      /* leftbar */
+
       .left-side-content {
         position: unset;
         z-index: 0;
@@ -4745,7 +4714,7 @@
         margin: 0 0 5px;
         font-family: $font-list;
 
-        /* Form */
+
         #front-page-form-container {
           width: 94%;
           height: 330px;
@@ -4818,7 +4787,7 @@
 
           #accordian-container {
 
-            /* Style the buttons that are used to open and close the accordion panel */
+
 
             button {
               font-size: 0.8rem;
@@ -4838,13 +4807,13 @@
               box-shadow: none;
             }
 
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
             .accordion:hover,
             .active {
               background-color: #cccccc;
             }
 
-            /* Style the accordion panel. Note: hidden by default */
+
             .panel {
               padding: 0;
               background-color: $color-white;
@@ -4858,7 +4827,7 @@
             .active::after {
               content: "\2796";
 
-              /* Unicode character for "minus" sign (-) */
+
             }
 
             h3 {
@@ -5045,9 +5014,9 @@
       }
     }
 
-    /* Searchbar */
 
-    /* Searchbar */
+
+
     #search-category {
       display: block;
       height: 50px;
@@ -5096,7 +5065,7 @@
       }
     }
 
-    /* Content */
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -5133,7 +5102,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -5164,7 +5133,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -5291,7 +5260,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           display: grid;
@@ -5342,18 +5311,10 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
           flex-flow: row wrap;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             margin: 15px auto;
 
@@ -5376,7 +5337,7 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -5395,7 +5356,7 @@
             display: block;
             float: left;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: 18%;
               float: left;
               display: block;
@@ -5442,13 +5403,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -5460,7 +5421,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -5485,9 +5446,9 @@
         }
       }
 
-      /* leftbar */
 
-      /* leftbar */
+
+
       .left-side-content {
         position: unset;
         z-index: 0;
@@ -5498,7 +5459,7 @@
         margin: 0 0 5px;
         font-family: $font-list;
 
-        /* Form */
+
         #front-page-form-container {
           width: 94%;
           height: 330px;
@@ -5571,7 +5532,7 @@
 
           #accordian-container {
 
-            /* Style the buttons that are used to open and close the accordion panel */
+
 
             button {
               font-size: 0.8rem;
@@ -5591,13 +5552,13 @@
               box-shadow: none;
             }
 
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
             .accordion:hover,
             .active {
               background-color: #cccccc;
             }
 
-            /* Style the accordion panel. Note: hidden by default */
+
             .panel {
               padding: 0;
               background-color: $color-white;
@@ -5611,7 +5572,7 @@
             .active::after {
               content: "\2796";
 
-              /* Unicode character for "minus" sign (-) */
+
             }
 
             h3 {
@@ -5745,7 +5706,7 @@
   }
 }
 
-//tablet
+
 @media only screen and (min-width: 600px) and (max-width: 735px) {
   #wrapper {
     width: 96%;
@@ -5816,7 +5777,7 @@
       }
     }
 
-    /* Searchbar */
+
     #search-category {
       display: block;
       height: 50px;
@@ -5865,7 +5826,7 @@
       }
     }
 
-    /* Content */
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -5902,7 +5863,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -5933,7 +5894,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -6036,7 +5997,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           display: grid;
@@ -6086,18 +6047,10 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
           flex-flow: row wrap;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             margin: 15px auto;
 
@@ -6120,7 +6073,7 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -6142,7 +6095,7 @@
             font-family: $font-list;
             margin-bottom: 15px;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: 18%;
               float: left;
               display: block;
@@ -6193,13 +6146,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -6211,7 +6164,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -6236,7 +6189,7 @@
         }
       }
 
-      /* leftbar */
+
       .left-side-content {
         position: fixed;
         top: 3em;
@@ -6407,7 +6360,7 @@
       }
     }
 
-    /* Searchbar */
+
     #search-category {
       display: block;
 
@@ -6437,7 +6390,7 @@
       }
     }
 
-    /* Content */
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -6476,7 +6429,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -6507,7 +6460,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -6611,7 +6564,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           display: grid;
@@ -6661,18 +6614,10 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           flex-flow: row wrap;
           height: auto;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             margin: 15px auto;
 
@@ -6695,7 +6640,7 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -6710,7 +6655,7 @@
           .larger-product-box {
             margin-bottom: 15px;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: auto;
             }
 
@@ -6748,13 +6693,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -6766,7 +6711,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -6791,7 +6736,7 @@
         }
       }
 
-      /* leftbar */
+
       .left-side-content {
         position: fixed;
         top: 3em;
@@ -6888,7 +6833,7 @@
   }
 }
 
-//mobile
+
 @media only screen and (min-width: 414px) and (max-width: 479px) {
   #wrapper {
     width: 100%;
@@ -6961,9 +6906,9 @@
       }
     }
 
-    /* Searchbar */
 
-    /* Searchbar */
+
+
     #search-category {
       display: block;
 
@@ -6993,7 +6938,7 @@
       }
     }
 
-    /* Content */
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -7028,7 +6973,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -7059,7 +7004,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -7162,7 +7107,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           display: grid;
@@ -7211,17 +7156,9 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             margin: 15px auto;
 
@@ -7244,7 +7181,7 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -7259,7 +7196,7 @@
           .larger-product-box {
             margin-bottom: 15px;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: auto;
             }
 
@@ -7297,13 +7234,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -7315,7 +7252,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -7340,7 +7277,7 @@
         }
       }
 
-      /* leftbar */
+
       .left-side-content {
         position: fixed;
         top: 3em;
@@ -7506,9 +7443,9 @@
       }
     }
 
-    /* Searchbar */
 
-    /* Searchbar */
+
+
     #search-category {
       display: block;
 
@@ -7538,7 +7475,7 @@
       }
     }
 
-    /* Content */
+
     #main-content {
       width: 100%;
       margin: 0;
@@ -7573,7 +7510,7 @@
               line-height: 25px;
             }
 
-            /* Price Icon */
+
             .other-product-cart-icon {
               width: 15%;
               left: 80%;
@@ -7604,7 +7541,7 @@
             line-height: 40px;
           }
 
-          /* Price Icon */
+
           #cart-page-icon {
             width: 5%;
           }
@@ -7708,7 +7645,7 @@
           font-size: 1.5em;
         }
 
-        /* Index page banner box */
+
 
         #front-page-banner {
           display: grid;
@@ -7757,17 +7694,9 @@
           }
         }
 
-        /* product boxes */
         .product-boxes {
           height: auto;
 
-          h1 {
-            height: 35px;
-            font-size: 1em;
-            line-height: 35px;
-          }
-
-          /* Individual product box */
           .product-box {
             margin: 15px auto;
 
@@ -7790,7 +7719,7 @@
                 text-indent: 0.2em;
               }
 
-              /* Price Icon */
+
               .product-box-icon {
                 left: 80%;
                 top: 20%;
@@ -7805,7 +7734,7 @@
           .larger-product-box {
             margin-bottom: 15px;
 
-            .larger-product-box-img {
+            .larger-product-box-image {
               width: auto;
             }
 
@@ -7843,13 +7772,13 @@
         #pag-search {
           width: 45%;
 
-          select {
+          .pag-search-select {
             width: 50%;
             line-height: 30px;
             font-size: 0.85em;
           }
 
-          label {
+          .pag-search-label {
             width: 39%;
             height: 30px;
             line-height: 30px;
@@ -7861,7 +7790,7 @@
           height: 30px;
           width: 35%;
 
-          a {
+          .pagination-link {
             width: 32%;
             font-size: 1em;
             line-height: 30px;
@@ -7886,7 +7815,7 @@
         }
       }
 
-      /* leftbar */
+
       .left-side-content {
         position: fixed;
         top: 3em;

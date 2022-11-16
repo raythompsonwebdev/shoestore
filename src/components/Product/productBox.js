@@ -12,7 +12,7 @@ const productBox = (props) => {
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {name}</p>
         <p className="product-box-price ">£{price}</p>
-        <Link to={`/product/${name}`}>
+        <Link to={`/product/${name}`} className="product-box-icon-link">
           <img
             className="product-box-icon"
             src={cartImg}
