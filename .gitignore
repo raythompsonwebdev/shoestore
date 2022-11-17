@@ -9,5 +9,5 @@ src/static/font/
 src/pages/Specials-2.js
 src/components/SearchBar/searchbar-components/
 src/auth_config.json
-src/static/sass/style-copy.scss
+
 .env
