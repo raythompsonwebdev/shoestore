@@ -4,7 +4,7 @@ import ContactForm from "../components/ContactForm";
 function Contact() {
   return (
     <main id="main-content" className="clearfix" role="main">
-      <h1 className="main-content-title">Contact Us</h1>
+      <h1 id="main-content-title">Contact Us</h1>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem

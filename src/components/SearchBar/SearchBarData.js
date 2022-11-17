@@ -13,6 +13,7 @@ export function SelectColor(props) {
       value={value}
       onChange={colorHandler}
       aria-labelledby={aria}
+      className="search-category-input"
     >
       {options.map((option) => (
         <option value={option.value} key={option.id}>
@@ -35,6 +36,7 @@ export function SelectGender(props) {
       value={value}
       onChange={genderHandler}
       aria-labelledby={aria}
+      className="search-category-input"
     >
       {options.map((option) => (
         <option value={option.value} key={option.id}>
@@ -55,6 +57,7 @@ export function SelectSize(props) {
       value={value}
       onChange={sizeHandler}
       aria-labelledby={aria}
+      className="search-category-input"
     >
       {options.map((option) => (
         <option value={option.value} key={option.id}>
@@ -76,6 +79,7 @@ export function SelectStyle(props) {
       value={value}
       onChange={styleHandler}
       aria-labelledby={arialabelledby}
+      className="search-category-input"
     >
       {options.map((option) => (
         <option value={option.value} key={option.id}>

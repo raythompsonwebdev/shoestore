@@ -219,10 +219,10 @@
   height: auto;
   width: 100%;
   padding: 0;
-  margin: 1% 0;
-  clear: both;
+  margin: 0.5em 0;
 }
-.search-category-btn {
+#search-category-form > fieldset .search-category-btn {
+  flex: 1 0 auto;
   width: 100%;
   font-family: $font-list;
   height: 35px;
@@ -237,7 +237,7 @@
   transition: all ease-in-out 0.2s;
   font-weight: bold;
 }
-.search-category-btn:hover {
+#search-category-form > fieldset .search-category-btn :hover {
   background-color: $color-white;
   color: $color-black;
   cursor: pointer;
@@ -250,20 +250,22 @@
   padding: 0.5em;
   height: auto;
   font-family: $font-list;
-  flex-flow: column;
-  justify-content: center;
-  gap: 0.5em;
   margin-bottom: 0.5em;
 }
 #search-category-form > fieldset {
   margin: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.25em;
 }
 #search-category-form > fieldset #search-category-label {
   font-size: 1em;
   width: 100%;
   line-height: 35px;
   margin: 0;
-  flex: 0 1 auto;
+  flex: 1 0 auto;
   text-align: left;
   text-transform: uppercase;
   text-indent: 0.1em;
@@ -277,7 +279,7 @@
 }
 #search-category-form > fieldset .search-category-input {
   font-family: $font-list;
-  flex: 0 1 auto;
+  flex: 1 0 auto;
   width: 100%;
   font-size: 0.85em;
   margin: 0.25em 0;
@@ -721,7 +723,7 @@ p {
 }
 /* product box image */
 .product-box .product-box-img {
-  width: 100%;
+  width: auto;
   display: block;
   margin: 0 auto;
   height: auto;
@@ -744,6 +746,7 @@ p {
   text-transform: uppercase;
   font-size: 85%;
   margin: 0;
+  width: 100%;
   text-indent: 0.2em;
   flex: 1 0 auto;
 }
@@ -755,19 +758,18 @@ p {
   font-size: 85%;
   width: 100%;
   text-indent: 0.2em;
-  flex: 1 0 auto;
+  flex: 0 1 auto;
 }
 .product-box-icon-link {
-  width: auto;
+  width: 100%;
   position: relative;
+  flex: 0 1 auto;
 }
 /* Price Icon */
 .product-box-icon {
   display: block;
+  margin: auto;
   transition: all 0.3s ease;
-  position: absolute;
-  left: 80%;
-  top: 20%;
 }
 .product-box-icon:hover {
   transform: rotate(360deg);
@@ -1174,7 +1176,7 @@ p {
   }
 
   #site-header {
-    height: 70px;
+    height: 85px;
     margin-bottom: 0.5em;
   }
 
@@ -1237,37 +1239,42 @@ p {
     margin: 1% 0;
     clear: both;
   }
-  .search-category-btn {
-    width: 8%;
+  #search-category-form > fieldset .search-category-btn {
+    flex: 1 0 auto;
+    width: 14%;
     font-size: 1.4em;
-    float: right;
-    display: block;
   }
 
   #search-category-form {
-    flex-flow: row;
-    align-items: center;
-    justify-content: flex-start;
+    flex: 1 0 auto;
+    margin: 0;
   }
   #search-category-form > fieldset {
     margin: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.25em;
   }
   #search-category-form > fieldset #search-category-label {
-    font-size: 1.2em;
-    width: 20%;
+    font-size: 1.15em;
+    width: 16%;
     line-height: 35px;
+    flex: 1 0 auto;
   }
 
   #search-category-form > fieldset .search-category-input {
-    width: 17.5%;
+    flex: 1 0 auto;
+    width: 17%;
     font-size: 0.9em;
-    margin: 0 0.25em 0 0;
-    height: 30px;
+    height: 35px;
   }
 
   #main-content {
     width: 100%;
     margin: 0;
+    min-height: 800px;
   }
 
   #main-content-title {
@@ -1360,9 +1367,9 @@ p {
   }
 
   #contact-form-section {
-    width: 98%;
+    width: 60%;
     height: auto;
-    float: none;
+    float: left;
     display: block;
   }
 
@@ -1409,7 +1416,7 @@ p {
   }
 
   #main-inner-content {
-    width: 100%;
+    width: 65%;
     margin: 0;
     font-family: $font-list;
     float: left;
@@ -1501,7 +1508,7 @@ p {
     margin: 15px auto;
   }
   .product-box .product-box-img {
-    width: 100%;
+    width: auto;
     display: block;
   }
   .product-box .product-box-caption {
@@ -1509,21 +1516,22 @@ p {
     margin: 0;
   }
   .product-box-title {
+    width: 100%;
     line-height: 30px;
     font-size: 1.1em;
   }
   .product-box-price {
+    width: 75%;
     line-height: 30px;
     text-indent: 0.2em;
     font-size: 1.1em;
   }
   .product-box-icon-link {
-    width: auto;
-    position: relative;
+    width: 25%;
   }
   .product-box-icon {
-    left: 80%;
-    top: 20%;
+    width: auto;
+    margin: auto;
   }
 
   #right-content-section .larger-product-boxes {
@@ -1532,7 +1540,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0;
+    margin: 0 0 1em 0;
     height: auto;
     display: block;
     display: flex;
@@ -1751,7 +1759,7 @@ p {
   }
 
   #site-header {
-    height: 70px;
+    height: 85px;
     margin-bottom: 0.5em;
   }
 
@@ -1808,19 +1816,17 @@ p {
     width: 100%;
     padding: 0;
     margin: 1% 0;
-    clear: both;
   }
-  .search-category-btn {
+  #search-category-form > fieldset .search-category-btn {
     width: 8%;
     font-size: 1.4em;
-    float: right;
-    display: block;
   }
 
   #search-category-form {
     flex-flow: row;
     align-items: center;
     justify-content: flex-start;
+    gap: 0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -2071,7 +2077,7 @@ p {
     margin: 15px auto;
   }
   .product-box .product-box-img {
-    width: 100%;
+    width: auto;
     display: block;
   }
   .product-box .product-box-caption {
@@ -2079,20 +2085,21 @@ p {
     margin: 0;
   }
   .product-box-title {
+    width: 100%;
     line-height: 25px;
     font-size: 85%;
   }
   .product-box-price {
     line-height: 25px;
     text-indent: 0.2em;
+    width: 75%;
   }
   .product-box-icon-link {
-    width: auto;
-    position: relative;
+    width: 25%;
   }
   .product-box-icon {
-    left: 80%;
-    top: 20%;
+    width: auto;
+    margin: auto;
   }
 
   #right-content-section .larger-product-boxes {
@@ -2367,14 +2374,11 @@ p {
     height: auto;
     width: 100%;
     padding: 0;
-    margin: 1% 0;
-    clear: both;
+    margin: 0;
   }
-  .search-category-btn {
+  #search-category-form > fieldset .search-category-btn {
     width: 8%;
     font-size: 1.4em;
-    float: right;
-    display: block;
   }
 
   #search-category-form {
@@ -2632,7 +2636,7 @@ p {
     margin: 15px auto;
   }
   .product-box .product-box-img {
-    width: 100%;
+    width: auto;
     display: block;
   }
   .product-box .product-box-caption {
@@ -2929,13 +2933,10 @@ p {
     width: 100%;
     padding: 0;
     margin: 1% 0;
-    clear: both;
   }
-  .search-category-btn {
+  #search-category-form > fieldset .search-category-btn {
     width: 8%;
     font-size: 1.4em;
-    float: right;
-    display: block;
   }
 
   #search-category-form {
@@ -3193,7 +3194,7 @@ p {
     margin: 15px auto;
   }
   .product-box .product-box-img {
-    width: 100%;
+    width: auto;
     display: block;
   }
   .product-box .product-box-caption {
@@ -3504,13 +3505,10 @@ p {
     width: 100%;
     padding: 0;
     margin: 1% 0;
-    clear: both;
   }
-  .search-category-btn {
+  #search-category-form > fieldset .search-category-btn {
     width: 8%;
     font-size: 1.4em;
-    float: right;
-    display: block;
   }
 
   #search-category-form {
@@ -3753,7 +3751,7 @@ p {
     margin: 15px auto;
   }
   .product-box .product-box-img {
-    width: 100%;
+    width: auto;
     display: block;
   }
   .product-box .product-box-caption {
@@ -4052,14 +4050,10 @@ p {
     height: 50px;
     width: 100%;
     padding: 0;
-    margin: 1% 0;
-    clear: both;
   }
-  .search-category-btn {
+  #search-category-form > fieldset .search-category-btn {
     width: 8%;
     font-size: 1.4em;
-    float: right;
-    display: block;
   }
 
   #search-category-form {
@@ -4302,7 +4296,7 @@ p {
     margin: 15px auto;
   }
   .product-box .product-box-img {
-    width: 100%;
+    width: auto;
     display: block;
   }
   .product-box .product-box-caption {
@@ -4600,14 +4594,11 @@ p {
     height: 50px;
     width: 100%;
     padding: 0;
-    margin: 1% 0;
-    clear: both;
+    margin: 0;
   }
-  .search-category-btn {
+  #search-category-form > fieldset .search-category-btn {
     width: 8%;
     font-size: 1.4em;
-    float: right;
-    display: block;
   }
 
   #search-category-form {
@@ -4850,7 +4841,7 @@ p {
     margin: 15px auto;
   }
   .product-box .product-box-img {
-    width: 100%;
+    width: auto;
     display: block;
   }
   .product-box .product-box-caption {

@@ -36,7 +36,7 @@ function ProductPage() {
 
   return matchingProduct ? (
     <main id="main-content" className="clearfix">
-      <h1 className="main-content-title">Product page</h1>
+      <h1 id="main-content-title">Product page</h1>
       <figure id="product-page-box">
         <img id="product-page-img" src={imgUrl} alt={style} />
         <figcaption id="product-page-caption">

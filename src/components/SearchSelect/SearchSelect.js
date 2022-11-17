@@ -12,10 +12,14 @@ function Selector(props) {
   }
 
   return (
-    <form className="search_products">
+    <form className="search-products">
       {/* <label>{labelname}</label> */}
 
-      <select name="value" onChange={onItemChange}>
+      <select
+        name="value"
+        onChange={onItemChange}
+        className="search-products-select"
+      >
         {selectData.map((options, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <optgroup label={options.value} key={i}>

@@ -4,7 +4,7 @@ import React from "react";
 function Faqs() {
   return (
     <main id="main-content" className="clearfix">
-      <h1 className="main-content-title">FAQ</h1>
+      <h1 id="main-content-title">FAQ</h1>
       <br />
 
       <main id="main-inner-content" className="group">
