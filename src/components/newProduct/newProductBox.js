@@ -15,12 +15,12 @@ function NewProductBox(props) {
       <img className="larger-product-box-image" src={imgUrl} alt={name} />
       <figcaption className="larger-product-box-caption">
         <h1 style={myComponentStyle} className="larger-product-box-title">
-          Product :{name}
+          {name}
         </h1>
         <p className="larger-product-box-text">{text}</p>
         <span className="larger-product-box-price">Price :£ {price}</span>
-        <span className="larger-product-box-price">
-          <Link to={`/product/${name}`}>
+        <span className="larger-product-box-add-to-cart">
+          <Link to={`/product/${name}`} className="larger-product-box-link">
             <img
               className="larger-product-box-icon"
               src={cartImg}

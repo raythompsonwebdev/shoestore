@@ -62,7 +62,7 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
     "watch:css": "postcss src/static/sass/style.css -o src/static/css/style.css -w",
-    "build:css": "postcss src/static/sass/style.scss -o src/static/css/style.css",
+    "build:css": "postcss src/static/sass/style-copy.scss -o src/static/css/style.css",
     "stylelint:scss": "npx stylelint \"src/static/sass/style.scss\""
   },
   "eslintConfig": {

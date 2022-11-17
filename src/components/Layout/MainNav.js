@@ -27,41 +27,6 @@ function MainNav() {
 
   return (
     <nav id="main-nav" role="navigation">
-      <span id="signin-box">
-        {!isAuthenticated && (
-          <Link
-            to="/"
-            title=""
-            onClick={() =>
-              loginWithRedirect({ returnTo: window.location.origin })
-            }
-            className="signin-box-link"
-          >
-            Log in
-          </Link>
-        )}
-        {!isAuthenticated && (
-          <Link to="/register" title="" className="signin-box-link">
-            register
-          </Link>
-        )}
-        {isAuthenticated && (
-          <Link to="/profile" title="" className="signin-box-link">
-            account
-          </Link>
-        )}
-        {isAuthenticated && (
-          <Link
-            to="/logout"
-            title=""
-            onClick={() => logoutWithRedirect()}
-            className="signin-box-link"
-          >
-            logout
-          </Link>
-        )}
-      </span>
-
       <ul id="inner-nav">
         <li className="inner-nav-item">
           <Link
@@ -193,6 +158,41 @@ function MainNav() {
           </Link>
         </li>
       </ul>
+
+      <span id="signin-box">
+        {!isAuthenticated && (
+          <Link
+            to="/"
+            title=""
+            onClick={() =>
+              loginWithRedirect({ returnTo: window.location.origin })
+            }
+            className="signin-box-link"
+          >
+            Log in
+          </Link>
+        )}
+        {!isAuthenticated && (
+          <Link to="/register" title="" className="signin-box-link">
+            register
+          </Link>
+        )}
+        {isAuthenticated && (
+          <Link to="/profile" title="" className="signin-box-link">
+            account
+          </Link>
+        )}
+        {isAuthenticated && (
+          <Link
+            to="/logout"
+            title=""
+            onClick={() => logoutWithRedirect()}
+            className="signin-box-link"
+          >
+            logout
+          </Link>
+        )}
+      </span>
 
       <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>
         MENU
