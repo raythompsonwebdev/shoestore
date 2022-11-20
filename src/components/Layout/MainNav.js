@@ -169,7 +169,7 @@ function MainNav() {
             }
             className="signin-box-link"
           >
-            Log in
+            Login
           </Link>
         )}
         {!isAuthenticated && (
