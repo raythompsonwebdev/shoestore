@@ -2,6 +2,18 @@
 @import "partials/base";
 @import "partials/fonts";
 
+body {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  background-image: url("../images/bg-img.png");
+  background-repeat: repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 #wrapper {
   font-family: $font-list;
   width: 100%;
@@ -17,7 +29,6 @@
   left: 68%;
   top: 0.5vh;
   height: 45px;
-  font-size: 1em;
   width: 15%;
   background-color: $color-white;
   border: 2px solid $color-orange;
@@ -78,7 +89,7 @@
   width: 100%;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-bottom: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -89,7 +100,7 @@
   display: none;
   height: auto;
 }
-#signin-box > .signin-box-link {
+.signin-box-link {
   display: block;
   height: 100%;
   line-height: 40px;
@@ -136,24 +147,24 @@
   font-size: 0.8em;
 }
 .inner-nav-link:focus {
-  background-color: rgb(255 255 255 / 40%);
+  background-color: $color-white;
   text-decoration: none;
   display: block;
   border-radius: 3px 3px 0 0;
-  box-shadow: 0 -2px 2px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 -2px 2px 0 $color-black;
 }
 .inner-nav-link:hover {
-  background-color: rgb(255 255 255 / 40%);
+  background-color: $color-white;
   text-decoration: none;
   display: block;
   border-radius: 3px 3px 0 0;
-  box-shadow: 0 -2px 2px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 -2px 2px 0 $color-black;
 }
 #inner-nav > .selected {
   a:link,
   a:visited,
   a:hover {
-    background-color: rgb(255 255 255);
+    background-color: $color-white;
   }
 }
 
@@ -181,7 +192,6 @@
   top: -290px;
   padding: 0;
   left: 0;
-  z-index: 100;
 }
 .mobile-nav .mobile-nav-item {
   width: 100%;
@@ -276,9 +286,7 @@
 #search-category-form > fieldset ::placeholder {
   color: $color-black;
 }
-::placeholder {
-  color: $color-black;
-}
+
 #search-category-form > fieldset .search-category-input {
   font-family: $font-list;
   flex: 1 0 auto;
@@ -293,8 +301,8 @@
 /* main content */
 #main-content {
   height: auto;
-  width: 100%;
-  margin: 0;
+  width: 99%;
+  margin: 0.5em;
   font-family: $font-list;
 }
 
@@ -367,6 +375,7 @@
   text-indent: 0.2em;
   flex: 1 0 auto;
 }
+
 /* Price Icon */
 .other-product-box-caption > .other-product-cart-icon {
   display: block;
@@ -417,6 +426,7 @@
   font-weight: bold;
   text-indent: 0.2em;
 }
+
 /* Price Icon */
 #cart-page-icon {
   display: block;
@@ -490,30 +500,34 @@ p {
 }
 
 /* contact form container */
+#register-form-section,
 #contact-form-section {
   width: 98%;
   height: auto;
   float: none;
   display: block;
 }
-
 /* contact form */
+#register-form,
 #contact-form {
   width: 100%;
   padding: 0;
   font-family: $font-list;
 }
+#register-form-fields,
 #contact-form-fields {
   height: auto;
   display: block;
   padding: 0;
 }
+#register-form-fields .register-form-item,
 #contact-form-fields .contact-form-item {
   height: auto;
   display: block;
   margin: 0 0 0.5em;
   padding: 0;
 }
+.register-form-item > label,
 .contact-form-item > label {
   width: 100%;
   line-height: 40px;
@@ -524,6 +538,7 @@ p {
   display: flex;
   justify-content: space-between;
 }
+#reg-password,
 #username,
 #email {
   width: 75%;
@@ -534,6 +549,7 @@ p {
   margin: 0;
   padding: 0;
 }
+#reg-password:focus,
 #username:focus,
 #emai:focus,
 #message:focus {
@@ -552,7 +568,7 @@ p {
   color: $color-white;
   border: 0;
 }
-.contact-form-item > #submit:hover {
+#submit:hover {
   background-color: $color-white;
   color: $color-orange;
   border: 0;
@@ -584,6 +600,7 @@ p {
   width: 100%;
   margin: 0 0 20px;
 }
+
 /* Search product select */
 .search-products {
   margin-bottom: 1em;
@@ -607,6 +624,7 @@ p {
   line-height: 40px;
   text-align: center;
 }
+
 /* front page banner */
 #front-page-banner {
   position: relative;
@@ -716,6 +734,7 @@ p {
   align-items: flex-start;
   justify-content: center;
 }
+
 /* product box */
 .product-boxes .product-box {
   padding: 0.1em;
@@ -725,6 +744,7 @@ p {
   font-family: $font-list;
   margin: 15px auto;
 }
+
 /* product box image */
 .product-box .product-box-img {
   width: auto;
@@ -732,6 +752,7 @@ p {
   margin: 0 auto;
   height: auto;
 }
+
 /* product box caption */
 .product-box .product-box-caption {
   width: 100%;
@@ -769,6 +790,7 @@ p {
   width: auto;
   flex: 0 1 auto;
 }
+
 /* Price Icon */
 .product-box-icon {
   display: block;
@@ -794,7 +816,7 @@ p {
   flex-flow: column;
   width: 100%;
   font-family: $font-list;
-  margin-bottom: 15px;
+  margin: 0 0 1em;
 }
 .larger-product-box-image {
   width: auto;
@@ -812,8 +834,7 @@ p {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 60px repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-gap: 0;
 }
 .larger-product-box-title {
   grid-area: 1 / 1 / 2 / 8;
@@ -940,25 +961,6 @@ p {
   margin: 2% 0;
   clear: both;
 }
-.pag-buttons input[type="submit"],
-.pag-buttons input[type="reset"] {
-  font-family: $font-list;
-  display: inline-block;
-  width: 20%;
-  height: 30px;
-  line-height: 30px;
-  background-color: $color-orange;
-  color: $color-white;
-  border: 0;
-  font-size: 1.1em;
-  text-align: center;
-  padding: 0;
-}
-.pag-buttons input[type="submit"]:hover,
-.pag-buttons input[type="reset"]:hover {
-  color: $color-orange;
-  background-color: $color-white;
-}
 
 /* left side bar */
 .left-side-content {
@@ -1008,16 +1010,18 @@ p {
 #accordian-header button:focus {
   box-shadow: none;
 }
+
 /* Add a background to accordion panel  */
 .accordion:hover,
 .active {
   background-color: $color-white;
 }
+
+/* Unicode character for "minus" sign (-) */
 .active::after {
   content: "\2796";
-
-  /* Unicode character for "minus" sign (-) */
 }
+
 /* Style the accordion panel. */
 .panel {
   padding: 0;
@@ -1059,7 +1063,7 @@ p {
   justify-content: space-around;
   align-items: center;
 }
-#front-page-form-container h1 {
+#front-page-form-header {
   font-size: 1.2em;
   background: none;
   color: $color-white;
@@ -1173,13 +1177,14 @@ p {
 
   #main-nav {
     height: 40px;
+    margin-bottom: 0.5em;
   }
 
   #signin-box {
     width: 10%;
     display: flex;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     font-size: 0.85em;
   }
   .signin-box-link:hover {
@@ -1260,7 +1265,7 @@ p {
 
   #main-content {
     width: 100%;
-    margin: 0;
+    margin: 0.25em;
     min-height: 800px;
   }
 
@@ -1352,28 +1357,32 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 60%;
     height: auto;
     float: left;
     display: block;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
     display: block;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -1384,6 +1393,7 @@ p {
     margin: 0;
     padding: 0;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -1529,7 +1539,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -1610,13 +1620,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: unset;
@@ -1664,7 +1667,6 @@ p {
   }
   .active::after {
     content: "\2796";
-    /* Unicode character for "minus" sign (-) */
   }
 
   #front-page-form-container {
@@ -1673,7 +1675,7 @@ p {
   #front-page-form {
     width: 80%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.2em;
   }
   #front-page-form select {
@@ -1740,13 +1742,14 @@ p {
 
   #main-nav {
     height: 40px;
+    margin-bottom: 0.5em;
   }
 
   #signin-box {
     width: 10%;
     display: flex;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     font-size: 0.85em;
   }
   .signin-box-link:hover {
@@ -1826,8 +1829,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
     min-height: 800px;
   }
 
@@ -1919,28 +1922,32 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 60%;
     height: auto;
     float: left;
     display: block;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
     display: block;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -1951,6 +1958,7 @@ p {
     margin: 0;
     padding: 0;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -2096,7 +2104,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -2177,13 +2185,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: unset;
@@ -2231,7 +2232,6 @@ p {
   }
   .active::after {
     content: "\2796";
-    /* Unicode character for "minus" sign (-) */
   }
 
   #front-page-form-container {
@@ -2240,7 +2240,7 @@ p {
   #front-page-form {
     width: 80%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.3em;
   }
   #front-page-form select {
@@ -2307,13 +2307,14 @@ p {
 
   #main-nav {
     height: 40px;
+    margin-bottom: 0.5em;
   }
 
   #signin-box {
     width: 10%;
     display: flex;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     font-size: 0.85em;
   }
   .signin-box-link:hover {
@@ -2393,8 +2394,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
     min-height: 800px;
   }
 
@@ -2486,28 +2487,32 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 60%;
     height: auto;
     float: left;
     display: block;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
     display: block;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -2518,6 +2523,7 @@ p {
     margin: 0;
     padding: 0;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -2663,7 +2669,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -2746,13 +2752,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: unset;
@@ -2792,8 +2791,6 @@ p {
 
   .active::after {
     content: "\2796";
-
-    /* Unicode character for "minus" sign (-) */
   }
 
   .panel {
@@ -2812,7 +2809,7 @@ p {
   #front-page-form {
     width: 80%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.3em;
   }
   #front-page-form select {
@@ -2879,13 +2876,14 @@ p {
 
   #main-nav {
     height: 40px;
+    margin-bottom: 0.5em;
   }
 
   #signin-box {
     width: 10%;
     display: flex;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     font-size: 0.8em;
   }
   .signin-box-link:hover {
@@ -2965,8 +2963,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
     min-height: 800px;
   }
 
@@ -3058,28 +3056,32 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 60%;
     height: auto;
     float: left;
     display: block;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
     display: block;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -3090,6 +3092,7 @@ p {
     margin: 0;
     padding: 0;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -3235,7 +3238,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -3318,13 +3321,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: unset;
@@ -3364,8 +3360,6 @@ p {
 
   .active::after {
     content: "\2796";
-
-    /* Unicode character for "minus" sign (-) */
   }
 
   .panel {
@@ -3384,7 +3378,7 @@ p {
   #front-page-form {
     width: 80%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.1em;
   }
   #front-page-form select {
@@ -3451,13 +3445,14 @@ p {
 
   #main-nav {
     height: 40px;
+    margin-bottom: 0.5em;
   }
 
   #signin-box {
     width: 10%;
     display: flex;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     font-size: 0.8em;
   }
   .signin-box-link:hover {
@@ -3537,8 +3532,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
     min-height: 800px;
   }
 
@@ -3630,28 +3625,32 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 60%;
     height: auto;
     float: left;
     display: block;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
     display: block;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -3662,6 +3661,7 @@ p {
     margin: 0;
     padding: 0;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -3807,7 +3807,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -3890,13 +3890,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: unset;
@@ -3936,8 +3929,6 @@ p {
 
   .active::after {
     content: "\2796";
-
-    /* Unicode character for "minus" sign (-) */
   }
 
   .panel {
@@ -3956,7 +3947,7 @@ p {
   #front-page-form {
     width: 80%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1em;
     font-weight: bold;
   }
@@ -4027,6 +4018,7 @@ p {
   #main-nav {
     height: 10px;
     padding: 0;
+    margin-bottom: 0;
   }
 
   #signin-box {
@@ -4034,7 +4026,7 @@ p {
     height: 20px;
     display: none;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     line-height: 20px;
     font-size: 0.7em;
   }
@@ -4119,8 +4111,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
   }
 
   #main-content-title {
@@ -4211,7 +4203,7 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 80%;
     height: auto;
@@ -4219,21 +4211,25 @@ p {
     display: block;
     margin: auto;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -4241,6 +4237,7 @@ p {
   #message {
     width: 75%;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -4374,7 +4371,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -4456,13 +4453,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: fixed;
@@ -4506,8 +4496,6 @@ p {
   }
   .active::after {
     content: "\2796";
-
-    /* Unicode character for "minus" sign (-) */
   }
 
   #front-page-form-container {
@@ -4516,7 +4504,7 @@ p {
   #front-page-form {
     width: 98%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.3em;
     text-indent: 0;
   }
@@ -4590,7 +4578,7 @@ p {
   #main-nav {
     height: 10px;
     padding: 0;
-    margin: 0;
+    margin-bottom: 0;
   }
 
   #signin-box {
@@ -4598,7 +4586,7 @@ p {
     height: 20px;
     display: none;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     line-height: 20px;
     font-size: 0.7em;
   }
@@ -4684,8 +4672,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
   }
 
   #main-content-title {
@@ -4776,7 +4764,7 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 80%;
     height: auto;
@@ -4784,21 +4772,25 @@ p {
     display: block;
     margin: auto;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -4806,6 +4798,7 @@ p {
   #message {
     width: 75%;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -4940,7 +4933,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -5024,13 +5017,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: fixed;
@@ -5074,8 +5060,6 @@ p {
   }
   .active::after {
     content: "\2796";
-
-    /* Unicode character for "minus" sign (-) */
   }
 
   #front-page-form-container {
@@ -5084,7 +5068,7 @@ p {
   #front-page-form {
     width: 98%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.3em;
     text-indent: 0;
   }
@@ -5158,7 +5142,7 @@ p {
   #main-nav {
     height: 10px;
     padding: 0;
-    margin: 0;
+    margin-bottom: 0;
   }
 
   #signin-box {
@@ -5166,7 +5150,7 @@ p {
     height: 20px;
     display: none;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     line-height: 20px;
     font-size: 0.7em;
   }
@@ -5251,8 +5235,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
   }
 
   #main-content-title {
@@ -5343,7 +5327,7 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 80%;
     height: auto;
@@ -5351,21 +5335,25 @@ p {
     display: block;
     margin: auto;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -5373,6 +5361,7 @@ p {
   #message {
     width: 75%;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -5507,7 +5496,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -5593,13 +5582,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: fixed;
@@ -5643,8 +5625,6 @@ p {
   }
   .active::after {
     content: "\2796";
-
-    /* Unicode character for "minus" sign (-) */
   }
 
   #front-page-form-container {
@@ -5653,7 +5633,7 @@ p {
   #front-page-form {
     width: 98%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.3em;
     text-indent: 0;
   }
@@ -5728,7 +5708,7 @@ p {
   #main-nav {
     height: 10px;
     padding: 0;
-    margin: 0;
+    margin-bottom: 0;
   }
 
   #signin-box {
@@ -5736,7 +5716,7 @@ p {
     height: 20px;
     display: none;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     line-height: 20px;
     font-size: 0.7em;
   }
@@ -5822,8 +5802,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
   }
 
   #main-content-title {
@@ -5914,7 +5894,7 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 80%;
     height: auto;
@@ -5922,21 +5902,25 @@ p {
     display: block;
     margin: auto;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -5944,6 +5928,7 @@ p {
   #message {
     width: 75%;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -6079,7 +6064,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -6165,13 +6150,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: fixed;
@@ -6215,8 +6193,6 @@ p {
   }
   .active::after {
     content: "\2796";
-
-    /* Unicode character for "minus" sign (-) */
   }
 
   #front-page-form-container {
@@ -6225,7 +6201,7 @@ p {
   #front-page-form {
     width: 98%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.3em;
     text-indent: 0;
   }
@@ -6300,7 +6276,7 @@ p {
   #main-nav {
     height: 10px;
     padding: 0;
-    margin: 0;
+    margin-bottom: 0;
   }
 
   #signin-box {
@@ -6308,7 +6284,7 @@ p {
     height: 20px;
     display: none;
   }
-  #signin-box > .signin-box-link {
+  .signin-box-link {
     line-height: 20px;
     font-size: 0.7em;
   }
@@ -6394,8 +6370,8 @@ p {
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0.5em;
   }
 
   #main-content-title {
@@ -6486,7 +6462,7 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
-
+  #register-form-section,
   #contact-form-section {
     width: 80%;
     height: auto;
@@ -6494,21 +6470,25 @@ p {
     display: block;
     margin: auto;
   }
-
+  #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+  #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+  #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
+  #reg-password,
   #username,
   #email {
     width: 75%;
@@ -6516,6 +6496,7 @@ p {
   #message {
     width: 75%;
   }
+  #reg-password:focus,
   #username:focus,
   #emai:focus,
   #message:focus {
@@ -6651,7 +6632,7 @@ p {
     width: 100%;
   }
   .larger-product-box {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     height: auto;
     display: block;
     display: flex;
@@ -6737,13 +6718,6 @@ p {
     margin: 2% 0;
     clear: both;
   }
-  .pag-buttons input[type="submit"],
-  .pag-buttons input[type="reset"] {
-    width: 20%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 1.1em;
-  }
 
   .left-side-content {
     position: fixed;
@@ -6787,8 +6761,6 @@ p {
   }
   .active::after {
     content: "\2796";
-
-    /* Unicode character for "minus" sign (-) */
   }
 
   #front-page-form-container {
@@ -6797,7 +6769,7 @@ p {
   #front-page-form {
     width: 98%;
   }
-  #front-page-form-container h1 {
+  #front-page-form-header {
     font-size: 1.3em;
     text-indent: 0;
   }

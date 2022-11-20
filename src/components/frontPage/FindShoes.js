@@ -10,7 +10,7 @@ const myComponentStyle = {
 function FindShoes() {
   return (
     <article id="front-page-form-container" style={myComponentStyle}>
-      <h1> FIND YOUR SHOES </h1>
+      <h1 id="front-page-form-header"> FIND YOUR SHOES </h1>
       <form id="front-page-form" action="" method="get">
         <select name="gender">
           <option value="Male">Mens</option>

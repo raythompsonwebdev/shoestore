@@ -1,29 +1,37 @@
 @font-face {
-  font-family: 'Old Standard TT';
+  font-family: "Old Standard TT";
   font-style: normal;
   font-weight: 400;
-  font-display:swap;
-  src: url('../../font/OldStandard/old-standard-tt-v7-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Old Standard TT Regular'), local('OldStandardTT-Regular'),
-       url('../../font/OldStandard/old-standard-tt-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../font/OldStandard/old-standard-tt-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../../font/OldStandard/old-standard-tt-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../../font/OldStandard/old-standard-tt-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../../font/OldStandard/old-standard-tt-v7-latin-regular.svg#OldStandardTT') format('svg'); /* Legacy iOS */
+  font-display: swap;
+  src: url("../../font/OldStandard/old-standard-tt-v7-latin-regular.eot");
+  src: local("Old Standard TT Regular"), local("OldStandardTT-Regular"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-regular.woff2")
+      format("woff2"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-regular.woff")
+      format("woff"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-regular.ttf")
+      format("truetype"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-regular.svg#OldStandardTT")
+      format("svg");
 }
 
-/* old-standard-tt-700 - latin */
 @font-face {
-  font-family: 'Old Standard TT';
+  font-family: "Old Standard TT";
   font-style: normal;
   font-weight: 700;
-  font-display:swap;
-  src: url('../../font/OldStandard/old-standard-tt-v7-latin-700.eot'); /* IE9 Compat Modes */
-  src: local('Old Standard TT Bold'), local('OldStandardTT-Bold'),
-       url('../../font/OldStandard/old-standard-tt-v7-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../font/OldStandard/old-standard-tt-v7-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../../font/OldStandard/old-standard-tt-v7-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../../font/OldStandard/old-standard-tt-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../../font/OldStandard/old-standard-tt-v7-latin-700.svg#OldStandardTT') format('svg'); /* Legacy iOS */
+  font-display: swap;
+  src: url("../../font/OldStandard/old-standard-tt-v7-latin-700.eot");
+  src: local("Old Standard TT Bold"), local("OldStandardTT-Bold"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-700.woff2")
+      format("woff2"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-700.woff")
+      format("woff"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-700.ttf")
+      format("truetype"),
+    url("../../font/OldStandard/old-standard-tt-v7-latin-700.svg#OldStandardTT")
+      format("svg");
 }
-

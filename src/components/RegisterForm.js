@@ -33,8 +33,8 @@ function Registration() {
 
   return (
     <form id="register-form" onSubmit={submit}>
-      <ul>
-        <li>
+      <ul id="register-form-fields">
+        <li className="register-form-item">
           <label htmlFor="username">
             Name:&#32;
             <input
@@ -47,7 +47,7 @@ function Registration() {
             />
           </label>
         </li>
-        <li>
+        <li className="register-form-item">
           <label htmlFor="email">
             E-mail:&#32;
             <input
@@ -60,20 +60,20 @@ function Registration() {
             />
           </label>
         </li>
-        <li>
-          <label htmlFor="password">
+        <li className="register-form-item">
+          <label htmlFor="reg-password">
             Password: &#32;
             <input
               type="password"
               name="password"
-              id="password"
+              id="reg-password"
               value={password}
               onChange={handlePassword}
               required
             />
           </label>
         </li>
-        <li>
+        <li className="register-form-item">
           <label htmlFor="submit">
             <input type="submit" value="Send" id="submit" name="submit" />
           </label>

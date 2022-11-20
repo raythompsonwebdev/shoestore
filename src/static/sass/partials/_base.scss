@@ -1,3 +1,11 @@
+* html .clearfix {
+  height: 1%;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
 a,
 abbr,
 acronym,
@@ -66,24 +74,6 @@ var {
   vertical-align: baseline;
 }
 
-html {
-  background-image: url("../../images/bg-img.png");
-  background-repeat: repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-body {
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-  height: auto;
-}
-
 ol,
 ul {
   list-style: none;
@@ -100,60 +90,6 @@ td,
 th {
   text-align: left;
   font-weight: normal;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: "";
-}
-
-blockquote,
-q {
-  quotes: "" "";
-}
-
-.group:after,
-.group:before {
-  content: "";
-  display: table;
-}
-
-.group:after {
-  clear: both;
-}
-
-.box-set:after,
-.box-set:before {
-  content: "";
-  display: table;
-}
-
-.box-set:after {
-  clear: both;
-}
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.clearfix {
-  display: inline-block;
-  clear: both;
-}
-
-html[xmlns] .clearfix {
-  display: block;
-}
-
-* html .clearfix {
-  height: 1%;
 }
 
 a {
