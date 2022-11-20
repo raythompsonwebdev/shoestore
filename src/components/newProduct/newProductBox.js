@@ -6,7 +6,7 @@ function NewProductBox(props) {
   const { imgUrl, name, cartImg, price, text } = props;
   const myComponentStyle = {
     backgroundImage: "url('../static/media/product_headline_bg.png')",
-    backgroundPosition: "-3% 50%",
+    backgroundPosition: "0% 50%",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   };

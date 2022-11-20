@@ -63,8 +63,7 @@ function ContactForm() {
               onChange={handleComments}
               name="message"
               id="message"
-              cols="35"
-              rows="10"
+              rows="5"
             />
           </label>
         </li>
