@@ -6,19 +6,20 @@ import PropTypes from "prop-types";
 function Selector(props) {
   const { handleChange, changesOrders, selectData } = props;
 
-  // eslint-disable-next-line no-console
-  // console.log(selectData);
-
   function onItemChange(evt) {
     handleChange(evt.target.value);
     changesOrders(evt.target.value, "asc");
   }
 
   return (
-    <form className="search_products">
+    <form className="search-products">
       {/* <label>{labelname}</label> */}
 
-      <select name="value" onChange={onItemChange}>
+      <select
+        name="value"
+        onChange={onItemChange}
+        className="search-products-select"
+      >
         {selectData.map((options, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <optgroup label={options.value} key={i}>

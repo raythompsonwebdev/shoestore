@@ -18,7 +18,7 @@ function ProductBoxes(props) {
       />
     ));
 
-  return <div className="product_boxes">{Product}</div>;
+  return <div className="product-boxes">{Product}</div>;
 }
 
 ProductBoxes.propTypes = {

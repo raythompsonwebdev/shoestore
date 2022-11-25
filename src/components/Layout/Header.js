@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../../images/shoe-store-logo.png";
 
 // eslint-disable-next-line func-style
-function Header() {
+function Header(props) {
+  const { logo } = { ...props };
   return (
-    <header>
+    <header id="site-header">
       <figure id="logo">
         <img src={logo} alt="shoe-store-logo" />
       </figure>

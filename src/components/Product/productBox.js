@@ -7,13 +7,17 @@ const productBox = (props) => {
   const { imgUrl, name, cartImg, price } = props;
 
   return (
-    <figure className="product_box">
-      <img className="product_boximg" src={imgUrl} alt={name} />
-      <figcaption className="product_boxdetails">
-        <p className="product_name"> {name}</p>
-        <p className="product_price">£{price}</p>
-        <Link to={`/product/${name}`}>
-          <img className="cart_icon" src={cartImg} alt="shoppingcart icon" />
+    <figure className="product-box">
+      <img className="product-box-img" src={imgUrl} alt={name} />
+      <figcaption className="product-box-caption">
+        <p className="product-box-title"> {name}</p>
+        <p className="product-box-price ">£{price}</p>
+        <Link to={`/product/${name}`} className="product-box-icon-link">
+          <img
+            className="product-box-icon"
+            src={cartImg}
+            alt="shoppingcart icon"
+          />
         </Link>
       </figcaption>
     </figure>

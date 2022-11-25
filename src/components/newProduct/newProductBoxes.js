@@ -18,7 +18,7 @@ function newProductBoxes(props) {
       />
     ));
 
-  return <div className="product_boxes_longer">{NewProduct}</div>;
+  return <div className="larger-product-boxes">{NewProduct}</div>;
 }
 
 newProductBoxes.defaultProps = {

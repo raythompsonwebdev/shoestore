@@ -7,8 +7,6 @@ import {
   SelectSize,
 } from "./SearchBarData";
 
-import searchbarData2 from "../../data/searchbarData.json";
-
 function SearchBar(props) {
   const {
     // changesOrders,
@@ -23,8 +21,6 @@ function SearchBar(props) {
   const [sizeVal, setSizeVal] = useState(" ");
   const [styleVal, setStyleVal] = useState(" ");
   const [colorVal, setColorVal] = useState(" ");
-
-  // const [genders, styles, sizes, colors] = searchbarData2;
 
   // eslint-disable-next-line func-style
   const genderHandler = (event) => {
@@ -62,54 +58,49 @@ function SearchBar(props) {
     );
   };
 
-  const { gender1, style1, size1, color1 } = searchData;
-
-  const [gender, style, size, color] = searchbarData2;
-
-  // eslint-disable-next-line no-console
-  // console.log(searchData, gender1, style1, size1, color1);
+  const [gender, style, size, color] = searchData;
 
   return (
-    <aside id="search_category">
-      <form id="search_category_form" onSubmit={submit}>
+    <aside id="search-category">
+      <form id="search-category-form" onSubmit={submit}>
         <fieldset>
-          <legend id="select_search">{labelname}</legend>
+          <legend id="search-category-label">{labelname}</legend>
           <SelectGender
             name="genderVal"
+            className="search-category-input"
             genders={gender}
-            otherGenders={gender1}
             value={genderVal}
             genderHandler={genderHandler}
-            aria-labelledby="select_search"
+            aria-labelledby="search-category-label"
           />
 
           <SelectStyle
             name="styleVal"
+            className="search-category-input"
             styles={style}
-            otherStyles={style1}
             value={styleVal}
             styleHandler={styleHandler}
-            aria-labelledby="select_search"
+            aria-labelledby="search-category-label"
           />
 
           <SelectSize
             name="sizeVal"
+            className="search-category-input"
             sizes={size}
-            otherSizes={size1}
             value={sizeVal}
             sizeHandler={sizeHandler}
-            aria-labelledby="select_search"
+            aria-labelledby="search-category-label"
           />
           <SelectColor
             name="colorVal"
+            className="search-category-input"
             colors={color}
-            otherColors={color1}
             value={colorVal}
             colorHandler={colorHandler}
-            aria-labelledby="select_search"
+            aria-labelledby="search-category-label"
           />
 
-          <button name="find" className="search_category_btn" type="submit">
+          <button name="find" className="search-category-btn" type="submit">
             Go
           </button>
         </fieldset>

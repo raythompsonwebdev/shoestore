@@ -4,20 +4,25 @@ import { Link } from "react-router-dom";
 
 function NewProductBox(props) {
   const { imgUrl, name, cartImg, price, text } = props;
+  const myComponentStyle = {
+    backgroundImage: "url('../static/media/product_headline_bg.png')",
+    backgroundPosition: "0% 50%",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  };
   return (
-    <figure className="product-box_longer">
-      <img className="product_boximg_longer" src={imgUrl} alt={name} />
-      <figcaption className="product_boxdetails_longer">
-        <h1>Product :{name}</h1>
-        <p>{text}</p>
-        <span className="price_longer">
-          Price :£
-          {price}
-        </span>
-        <span className="price_longer">
-          <Link to={`/product/${name}`}>
+    <figure className="larger-product-box">
+      <img className="larger-product-box-image" src={imgUrl} alt={name} />
+      <figcaption className="larger-product-box-caption">
+        <h1 style={myComponentStyle} className="larger-product-box-title">
+          {name}
+        </h1>
+        <p className="larger-product-box-text">{text}</p>
+        <span className="larger-product-box-price">Price :£ {price}</span>
+        <span className="larger-product-box-add-to-cart">
+          <Link to={`/product/${name}`} className="larger-product-box-link">
             <img
-              className="product_icon_longer"
+              className="larger-product-box-icon"
               src={cartImg}
               alt="shopping-cart icon"
             />

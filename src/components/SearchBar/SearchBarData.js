@@ -13,6 +13,7 @@ export function SelectColor(props) {
       value={value}
       onChange={colorHandler}
       aria-labelledby={aria}
+      className="search-category-input"
     >
       {options.map((option) => (
         <option value={option.value} key={option.id}>
@@ -35,6 +36,7 @@ export function SelectGender(props) {
       value={value}
       onChange={genderHandler}
       aria-labelledby={aria}
+      className="search-category-input"
     >
       {options.map((option) => (
         <option value={option.value} key={option.id}>
@@ -55,6 +57,7 @@ export function SelectSize(props) {
       value={value}
       onChange={sizeHandler}
       aria-labelledby={aria}
+      className="search-category-input"
     >
       {options.map((option) => (
         <option value={option.value} key={option.id}>
@@ -76,6 +79,7 @@ export function SelectStyle(props) {
       value={value}
       onChange={styleHandler}
       aria-labelledby={arialabelledby}
+      className="search-category-input"
     >
       {options.map((option) => (
         <option value={option.value} key={option.id}>
@@ -86,53 +90,54 @@ export function SelectStyle(props) {
   );
 }
 
-SelectStyle.defaultProps = {
-  value: "",
-  name: "",
-  styles: {},
-  otherStyles: {},
-  styleHandler: " ",
-};
-SelectStyle.propTypes = {
-  name: PropTypes.string,
-  value: PropTypes.string,
-  styles: PropTypes.shape({
-    options: PropTypes.arrayOf(PropTypes.object),
-  }),
-  otherStyles: PropTypes.shape({
-    options: PropTypes.arrayOf(PropTypes.object),
-  }),
-  styleHandler: PropTypes.func,
-};
-
-SelectSize.defaultProps = {
+SelectColor.defaultProps = {
   aria: "",
   value: "",
   name: "",
-  sizes: {},
-  sizeHandler: " ",
+  colors: {
+    _id: " ",
+    name: " ",
+    options: [],
+  },
+  otherColors: {
+    id: " ",
+    name: " ",
+    options: [],
+  },
+  colorHandler: " ",
 };
-SelectSize.propTypes = {
+SelectColor.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   aria: PropTypes.string,
-  sizes: PropTypes.shape({
+  colors: PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
-  sizeHandler: PropTypes.func,
+  otherColors: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
+  colorHandler: PropTypes.func,
 };
 
 SelectGender.defaultProps = {
   genders: {
+    _id: " ",
     name: " ",
+    options: [],
   },
   otherGenders: {
     id: " ",
     name: " ",
+    options: [],
   },
 };
 SelectGender.propTypes = {
   genders: PropTypes.shape({
+    _id: PropTypes.string,
     name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
@@ -142,20 +147,66 @@ SelectGender.propTypes = {
     options: PropTypes.arrayOf(PropTypes.object),
   }),
 };
-
-SelectColor.defaultProps = {
+SelectSize.defaultProps = {
   aria: "",
   value: "",
   name: "",
-  colors: {},
-  colorHandler: " ",
+  sizes: {
+    _id: " ",
+    name: " ",
+    options: [],
+  },
+  otherSizes: {
+    id: " ",
+    name: " ",
+    options: [],
+  },
+  sizeHandler: " ",
 };
-SelectColor.propTypes = {
+SelectSize.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   aria: PropTypes.string,
-  colors: PropTypes.shape({
+  sizes: PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string,
     options: PropTypes.arrayOf(PropTypes.object),
   }),
-  colorHandler: PropTypes.func,
+  otherSizes: PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
+  sizeHandler: PropTypes.func,
+};
+
+SelectStyle.defaultProps = {
+  value: "",
+  name: "",
+  styles: {
+    _id: " ",
+    name: " ",
+    options: [],
+  },
+  otherStyles: {
+    id: " ",
+    name: " ",
+    options: [],
+  },
+  styleHandler: " ",
+};
+SelectStyle.propTypes = {
+  name: PropTypes.string,
+  value: PropTypes.string,
+  styles: PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
+  otherStyles: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.object),
+  }),
+  styleHandler: PropTypes.func,
 };

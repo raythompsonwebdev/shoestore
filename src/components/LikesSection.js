@@ -25,10 +25,13 @@ function LikesSection(props) {
         onClick={() => {
           likeProduct();
         }}
+        className="upvotes-section-btn"
       >
         Add Like
       </button>
-      <p>This product has {likes} likes so far !</p>
+      <p className="upvotes-section-text">
+        This product has {likes} likes so far !
+      </p>
     </div>
   );
 }

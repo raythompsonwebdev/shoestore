@@ -1,6 +1,6 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
-import accordion from "../data/accordion.json";
+import accordion from "../static/data/accordion.json";
 
 // eslint-disable-next-line func-style
 function FindShoesAccord() {
@@ -9,8 +9,8 @@ function FindShoesAccord() {
 
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
-      <nav id="acc_nav" aria-label="secondary">
-        <div id="accContainer">
+      <nav id="accordian-nav" aria-label="secondary">
+        <div id="accordian-nav-container">
           {accordion.map((element) => (
             <Accordion.Item eventKey={element.id} key={element.id}>
               <Accordion.Header>{element.title}</Accordion.Header>

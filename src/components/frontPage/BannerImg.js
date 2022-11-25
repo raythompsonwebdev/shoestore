@@ -1,46 +1,71 @@
 import React from "react";
-import banner from "../../images/bannerimage.jpg";
 
-function BannerImg() {
+function BannerImg(props) {
+  const { banner } = { ...props };
   return (
-    <section id="bannerbox">
+    <section id="front-page-banner">
       <hgroup>
         <h1>LORUM IPSUN DOLOR AMET </h1>
         <h2>ipsum vel voluptate perspiciatis, quis</h2>
       </hgroup>
 
-      <nav id="apDiv1">
-        <ul>
-          <li>
-            <a href="/" title="Womens's Shoes" aria-label="Womens's Shoes">
+      <nav id="front-page-banner-nav">
+        <ul id="banner-nav-items">
+          <li className="banner-nav-item">
+            <a
+              href="/"
+              title="Womens's Shoes"
+              className="banner-nav-link"
+              aria-label="Womens's Shoes"
+            >
               Women&apos;s Shoes
             </a>
           </li>
-          <li>
-            <a href="/" title="Men's Shoes" aria-label="Men's Shoes">
+          <li className="banner-nav-item">
+            <a
+              href="/"
+              title="Men's Shoes"
+              className="banner-nav-link"
+              aria-label="Men's Shoes"
+            >
               Men&apos;s Shoes
             </a>
           </li>
-          <li>
-            <a href="/" title="Kids's Shoes" aria-label="Kids's Shoes">
+          <li className="banner-nav-item">
+            <a
+              href="/"
+              title="Kids's Shoes"
+              className="banner-nav-link"
+              aria-label="Kids's Shoes"
+            >
               Kid&apos;s Shoes
             </a>
           </li>
-          <li>
-            <a href="/" title="Bags" aria-label="Bags">
+          <li className="banner-nav-item">
+            <a
+              href="/"
+              title="Bags"
+              className="banner-nav-link"
+              aria-label="Bags"
+            >
               Bags
             </a>
           </li>
-          <li>
-            <a href="/" title="Accessories" aria-label="Accessories">
+          <li className="banner-nav-item">
+            <a
+              href="/"
+              title="Accessories"
+              className="banner-nav-link"
+              aria-label="Accessories"
+            >
               Accessories
             </a>
           </li>
         </ul>
       </nav>
 
-      <figure id="bannerboximg">
-        <img src={banner} alt="pinn" />
+      <figure id="front-page-banner-img">
+        <img src={banner} alt="shoestore-banner" />
       </figure>
     </section>
   );
