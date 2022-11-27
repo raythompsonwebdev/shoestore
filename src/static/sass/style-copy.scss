@@ -35,7 +35,7 @@ body {
   color: $color-orange;
   line-height: 45px;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
   z-index: 4;
 }
 
@@ -60,7 +60,7 @@ body {
   background-color: $color-orange;
   border: 2px solid $color-black;
   color: $color-black;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 #menu-toggle-btn:hover {
@@ -301,8 +301,8 @@ body {
 /* main content */
 #main-content {
   height: auto;
-  width: 99%;
-  margin: 0.5em;
+  width: 100%;
+  margin: 0;
   font-family: $font-list;
 }
 
@@ -655,7 +655,7 @@ p {
   color: $content-color1a;
   letter-spacing: -0.08em;
   text-indent: 0;
-  margin: auto;
+  margin: 0;
   display: block;
 }
 #front-page-banner > hgroup h2 {
@@ -667,7 +667,7 @@ p {
   height: auto;
   line-height: 30px;
   width: 100%;
-  margin: auto;
+  margin: 0;
   display: block;
 }
 #front-page-banner-img {
@@ -1153,7 +1153,7 @@ p {
 
 @media only screen and (min-width: 1921px) {
   #wrapper {
-    width: 70%;
+    width: 1024px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1457,16 +1457,16 @@ p {
   }
   #front-page-banner > hgroup {
     grid-area: 1 / 1 / 3 / 9;
-    padding-top: 1em;
+    padding-top: 0.5em;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 3.5em;
+    font-size: 1.25em;
     height: 90px;
     line-height: 110px;
-    width: 96%;
+    width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.7em;
+    font-size: 0.65em;
     line-height: 65px;
     height: 65px;
     width: 95%;
@@ -1718,7 +1718,7 @@ p {
 
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
   #wrapper {
-    width: 70%;
+    width: 1024px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -2025,13 +2025,13 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 3.5em;
+    font-size: 3.3em;
     height: 90px;
     line-height: 110px;
-    width: 96%;
+    width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     line-height: 65px;
     height: 65px;
     width: 95%;
@@ -2045,7 +2045,7 @@ p {
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 90px;
+    padding-top: 70px;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -2283,7 +2283,7 @@ p {
 
 @media only screen and (min-width: 1290px) and (max-width: 1440px) {
   #wrapper {
-    width: 75%;
+    width: 1024px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -2590,10 +2590,10 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 3.2em;
+    font-size: 3.3em;
     height: 80px;
     line-height: 100px;
-    width: 96%;
+    width: 100%;
   }
   #front-page-banner > hgroup h2 {
     font-size: 1.4em;
@@ -2623,7 +2623,7 @@ p {
   }
   .banner-nav-link {
     margin-bottom: 0.2em;
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 45px;
   }
 
@@ -2647,7 +2647,7 @@ p {
   .product-box-title {
     width: 100%;
     line-height: 30px;
-    font-size: 1em;
+    font-size: 1.1em;
   }
   .product-box-price {
     width: 79%;
@@ -2852,7 +2852,7 @@ p {
 
 @media only screen and (min-width: 1025px) and (max-width: 1289px) {
   #wrapper {
-    width: 85%;
+    width: 1024px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -3159,10 +3159,10 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 2.9em;
+    font-size: 3.3em;
     height: 70px;
     line-height: 90px;
-    width: 96%;
+    width: 100%;
   }
   #front-page-banner > hgroup h2 {
     font-size: 1.2em;
@@ -3179,7 +3179,7 @@ p {
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 50px;
+    padding-top: 70px;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -3192,7 +3192,7 @@ p {
   }
   .banner-nav-link {
     margin-bottom: 0.2em;
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 40px;
   }
 
@@ -3216,13 +3216,13 @@ p {
   .product-box-title {
     width: 100%;
     line-height: 30px;
-    font-size: 0.85em;
+    font-size: 1.1em;
   }
   .product-box-price {
     width: 78%;
     line-height: 30px;
     text-indent: 0.2em;
-    font-size: 0.95em;
+    font-size: 1em;
   }
   .product-box-icon-link {
     width: auto;
@@ -3379,7 +3379,7 @@ p {
     width: 80%;
   }
   #front-page-form-header {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
   #front-page-form select {
     font-size: 0.9em;
@@ -3421,7 +3421,7 @@ p {
 
 @media only screen and (min-width: 861px) and (max-width: 1024px) {
   #wrapper {
-    width: 96%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -3728,15 +3728,15 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 2.8em;
-    height: 60px;
+    font-size: 3em;
+    height: 70px;
     line-height: 90px;
-    width: 96%;
+    width: 100%;
   }
   #front-page-banner > hgroup h2 {
     font-size: 1.2em;
-    line-height: 60px;
-    height: 60px;
+    line-height: 50px;
+    height: 50px;
     width: 95%;
   }
   #front-page-banner-img {
@@ -3761,7 +3761,7 @@ p {
   }
   .banner-nav-link {
     margin-bottom: 0.2em;
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 40px;
   }
 
@@ -3948,7 +3948,7 @@ p {
     width: 80%;
   }
   #front-page-form-header {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
   }
   #front-page-form select {
@@ -3996,14 +3996,15 @@ p {
   }
 
   #sidebar-toggle-btn {
-    left: 80%;
-    top: 6.5vh;
+    left: 68%;
+    top: 0.5vh;
     height: 45px;
     font-size: 1em;
+    width: 15%;
   }
 
   #menu-toggle-btn {
-    left: 80%;
+    left: 83%;
   }
 
   #site-header {
@@ -4111,8 +4112,8 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100;
+    margin: 0;
   }
 
   #main-content-title {
@@ -4296,13 +4297,13 @@ p {
     padding-top: 0.5em;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 2.6em;
+    font-size: 2.4em;
     height: 50px;
     line-height: 70px;
-    width: 96%;
+    width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     line-height: 65px;
     height: 65px;
     width: 95%;
@@ -4312,7 +4313,7 @@ p {
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 65px;
+    padding-top: 45px;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -4351,7 +4352,7 @@ p {
     font-size: 0.9em;
   }
   .product-box-price {
-    width: 77%;
+    width: 76%;
     line-height: 30px;
     text-indent: 0.2em;
     font-size: 1em;
@@ -4672,8 +4673,8 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100;
+    margin: 0;
   }
 
   #main-content-title {
@@ -4858,13 +4859,13 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 2.4em;
+    font-size: 2.3em;
     height: 50px;
     line-height: 70px;
     width: 96%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 50px;
     height: 50px;
     width: 95%;
@@ -4874,7 +4875,7 @@ p {
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 40px;
+    padding-top: 35px;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -4886,7 +4887,7 @@ p {
     height: auto;
   }
   .banner-nav-link {
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 35px;
   }
 
@@ -5235,8 +5236,8 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100%;
+    margin: 0;
   }
 
   #main-content-title {
@@ -5421,13 +5422,12 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 2em;
+    font-size: 1.9em;
     height: 45px;
     line-height: 50px;
-    width: 96%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 35px;
     height: 35px;
     width: 95%;
@@ -5437,7 +5437,7 @@ p {
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 40px;
+    padding-top: 30px;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -5449,7 +5449,7 @@ p {
     height: auto;
   }
   .banner-nav-link {
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 30px;
   }
 
@@ -5802,8 +5802,8 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100;
+    margin: 0;
   }
 
   #main-content-title {
@@ -5989,15 +5989,15 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 1.7em;
-    height: 35px;
+    font-size: 1.8em;
+    height: 40px;
     line-height: 45px;
     width: 96%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 0.85em;
-    line-height: 25px;
-    height: 25px;
+    font-size: 0.8em;
+    line-height: 30px;
+    height: 30px;
     width: 95%;
   }
   #front-page-banner-img {
@@ -6254,14 +6254,14 @@ p {
     left: 68%;
     top: 0.5vh;
     height: 45px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     width: 15%;
   }
 
   #menu-toggle-btn {
     left: 84%;
     width: 15%;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   #site-header {
@@ -6370,8 +6370,8 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100%;
+    margin: 0;
   }
 
   #main-content-title {
@@ -6557,13 +6557,13 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 1.5em;
+    font-size: 1.55em;
     height: 35px;
     line-height: 40px;
     width: 96%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 0.8em;
+    font-size: 0.7em;
     line-height: 25px;
     height: 25px;
     width: 95%;
@@ -6585,7 +6585,7 @@ p {
     height: auto;
   }
   .banner-nav-link {
-    font-size: 0.75em;
+    font-size: 0.7em;
     line-height: 25px;
   }
 
