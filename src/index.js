@@ -2,8 +2,8 @@ import "whatwg-fetch"; // import fetch to make calls to server
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Auth0Provider } from "@auth0/auth0-react";
-import * as serviceWorker from "./serviceWorker";
+// import { Auth0Provider } from "@auth0/auth0-react";
+// import * as serviceWorker from "./serviceWorker";
 import Home from "./views/Home";
 import Header from "./components/Layout/Header";
 import MainNav from "./components/Layout/MainNav";
@@ -22,28 +22,13 @@ import "./static/sass/style-copy.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./static/images/shoe-store-logo.png";
 import banner from "./static/images/bannerimage.jpg";
-import getConfig from "./config";
 import history from "./utils/history";
 
-const onRedirectCallback = (appState) => {
-  history.push(
-    appState && appState.returnTo ? appState.returnTo : window.location.pathname
-  );
-};
-
-// Please see https://auth0.github.io/auth0-react/interfaces/Auth0ProviderOptions.html
-// for a full list of the available properties on the provider
-const config = getConfig();
-
-const providerConfig = {
-  domain: config.domain,
-  clientId: config.clientId,
-  ...(config.audience ? { audience: config.audience } : null),
-  redirectUri: window.location.origin,
-  onRedirectCallback,
-  // audience:"shoestoreapp",
-  // scope:"openid profile email"
-};
+// const onRedirectCallback = (appState) => {
+//   history.push(
+//     appState && appState.returnTo ? appState.returnTo : window.location.pathname
+//   );
+// };
 
 const routing = (
   <div id="wrapper">
@@ -72,12 +57,9 @@ const routing = (
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Auth0Provider {...providerConfig}>{routing}</Auth0Provider>
-);
+root.render({ routing });
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// serviceWorker.unregister();

@@ -10,12 +10,12 @@ class Pager {
       const { rows } = document.getElementById(tableName);
       // i starts from 1 to skip table header row
       for (let i = 1; i < rows.length; i + 1) {
-        if (i < from || i > to){
+        if (i < from || i > to) {
           rows[i].style.display = "none";
-        }else{
+        } else {
           rows[i].style.display = "";
         }
-      };
+      }
 
       this.showPage = (pageNumber) => {
         if (!this.inited) {
@@ -36,8 +36,7 @@ class Pager {
       };
 
       this.prev = () => {
-        if (this.currentPage > 1)
-          this.showPage(this.currentPage - 1);
+        if (this.currentPage > 1) this.showPage(this.currentPage - 1);
       };
 
       this.next = () => {
@@ -61,12 +60,12 @@ class Pager {
         const element = document.getElementById(positionId);
 
         let pagerHtml = `<span onclick="${pagerName}.prev();" class="pg-normal"> &#171 Prev </span> | `;
-        for (let page = 1; page <= this.pages; page++){
+        for (let page = 1; page <= this.pages; page++) {
           pagerHtml += `<span id="pg${page}" class="pg-normal" onclick="${pagerName}.showPage(${page});">${page}</span> | `;
-        pagerHtml += `<span onclick="${pagerName}.next();" class="pg-normal"> Next &#187;</span>`;
+          pagerHtml += `<span onclick="${pagerName}.next();" class="pg-normal"> Next &#187;</span>`;
         }
         element.innerHTML = pagerHtml;
       };
-    }
+    };
+  }
 }
-

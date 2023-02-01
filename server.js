@@ -1,18 +1,8 @@
 const express = require("express");
-const morgan = require("morgan");
-const helmet = require("helmet");
 const path = require("path");
 const serveStatic = require("serve-static");
 
 const app = express();
-
-app.use(morgan("dev"));
-
-app.use(
-  helmet({
-    contentSecurityPolicy: false,
-  })
-);
 
 app.use("/", serveStatic(path.join(__dirname, "build")));
 

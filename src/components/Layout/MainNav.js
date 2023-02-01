@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+//import { useAuth0 } from "@auth0/auth0-react";
 
 // eslint-disable-next-line func-style
 function MainNav() {
   const [visibility, setVisibility] = useState({ visibility: false });
   // const [isOpen, setIsOpen] = useState(false);
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  // const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   // const toggle = () => setIsOpen(!isOpen);
 
-  const logoutWithRedirect = () =>
-    logout({
-      returnTo: window.location.origin,
-    });
+  // const logoutWithRedirect = () =>
+  //   logout({
+  //     returnTo: window.location.origin,
+  //   });
 
   // eslint-disable-next-line func-style
   const toggleVisibility = (e) => {
@@ -159,7 +159,7 @@ function MainNav() {
         </li>
       </ul>
 
-      <span id="signin-box">
+      {/* <span id="signin-box">
         {!isAuthenticated && (
           <Link
             to="/"
@@ -192,7 +192,7 @@ function MainNav() {
             logout
           </Link>
         )}
-      </span>
+      </span> */}
 
       <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>
         MENU
