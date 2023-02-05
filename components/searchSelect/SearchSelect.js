@@ -1,19 +1,21 @@
 //import PropTypes from "prop-types";
 
 export default function SearchSelect(props) {
-  const { selectBarData } = props;
-  // function onItemChange(evt) {
-  //   handleChange(evt.target.value);
-  //   changesOrders(evt.target.value, "asc");
-  // }
+  const { selectBarData, changesOrders, handleChange, orderByVal, orderDir } =
+    props;
+
+  function onItemChange(evt) {
+    handleChange(evt.target.value);
+    changesOrders(evt.target.value, orderDir);
+  }
 
   return (
     <form className="search-products">
-      {/* <label>{labelname}</label> */}
+      <label>Search Products </label>
 
       <select
         name="value"
-        //onChange={onItemChange}
+        onChange={onItemChange}
         className="search-products-select"
       >
         {selectBarData.map((options, i) => (

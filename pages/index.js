@@ -6,8 +6,8 @@ import AccordianMenu from "../components/accordianMenu";
 import FindShoes from "../components/homepage/FindShoes";
 //import Image from "next/image";
 //import Link from "next/link";
-import productData from "../pages/api/Productdata";
-import accordian from "./api/Accordiondata.js";
+import productData from "./api/json-data/Productdata";
+import accordian from "./api/json-data/Accordiondata.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {

@@ -3,60 +3,23 @@ import SpecialsProductBoxes from "../../components/specials/specialsProductBoxes
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";
 import SearchSelect from "../../components/searchSelect/SearchSelect";
-import productData from "../api/Productdata";
+// import productData from "../api/json-data/Productdata";
 import Head from "next/head";
 import Layout from "../../components/Layout";
-import accordian from "../api/Accordiondata.js";
-import searchBarData from "../api/SearchbarData.js";
+import accordian from "../api/json-data/Accordiondata.js";
+import searchBarData from "../api/json-data/SearchbarData.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import selectBarData from "../api/SearchbarData.js";
+import selectBarData from "../api/json-data/SelectbarData.js";
+import { handler } from "../api";
 
-function Specials() {
-  // const [productData, setProductData] = useState([]);
+export default function Specials(props) {
+  const { results, searchresults, selectresults } = { ...props };
+
   const [OrderDir, setOrderByDir] = useState("asc");
   const [OrderByVal, setOrderByVal] = useState("all");
-  // const [lastIndex, setLastIndex] = useState(0);
   const [visibility, setVisibility] = useState(false);
-  // const [searchData, setSearchData] = useState([]);
-  // const [selectData, setSelectData] = useState([]);
-
-  // useEffect(() => {
-  //   // get products
-  //   const getProducts = fetch("/api/products");
-
-  //   // get search bar options data
-  //   const getSearchData = fetch("/api/searchbardata");
-
-  //   // get select bar options data
-  //   const getSelectData = fetch("/api/selectdata");
-
-  //   // Use promise all to get data for both apis
-
-  //   Promise.all([getProducts, getSearchData, getSelectData])
-  //     .then((values) => Promise.all(values.map((element) => element.json())))
-  //     .then(([productdata, searchedData, selectedData]) => {
-  //       // deconstruct array of data from both apis responses.
-  //       // eslint-disable-next-line no-console
-  //       // console.log(productdata, searchData, selectData);
-  //       const productDataResult = productdata.map((shoe, index) => {
-  //         // eslint-disable-next-line react/destructuring-assignment
-  //         setLastIndex(index);
-  //         // eslint-disable-next-line no-param-reassign
-  //         shoe.prodId = index;
-
-  //         return shoe;
-  //       });
-
-  //       setProductData(productDataResult);
-  //       setSearchData(searchedData);
-  //       setSelectData(selectedData);
-  //     })
-  //     .catch((error) => {
-  //       // eslint-disable-next-line no-console
-  //       console.error(error);
-  //       throw new Error("something went wrong");
-  //     });
-  // }, [lastIndex]);
+  const [searchData] = useState(searchresults);
+  const [selectData] = useState(selectresults);
 
   const handleChange = (selectedSize) => {
     setOrderByVal(selectedSize);
@@ -73,7 +36,7 @@ function Specials() {
     setOrderByDir(dir);
   };
 
-  let filteredApts = productData;
+  let filteredApts = results;
   const value = OrderByVal;
 
   filteredApts = filteredApts.filter((item) => {
@@ -134,7 +97,6 @@ function Specials() {
             <br />
 
             <SpecialsProductBoxes productData={filteredApts} />
-            {/* <SpecialsProductBoxes productData={productData} /> */}
 
             <br />
           </section>
@@ -144,4 +106,19 @@ function Specials() {
   );
 }
 
-export default Specials;
+export async function getStaticProps() {
+  const results = await handler("http://localhost:8000/api/products");
+  const searchresults = await handler(
+    "http://localhost:8000/api/searchbardata"
+  );
+  const selectresults = await handler("http://localhost:8000/api/selectdata");
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: {
+      results,
+      searchresults,
+      selectresults,
+    },
+  };
+}

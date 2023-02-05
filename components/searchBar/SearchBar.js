@@ -1,4 +1,5 @@
 //import PropTypes from "prop-types";
+import React, { useState } from "react";
 import {
   SelectGender,
   SelectColor,
@@ -8,53 +9,63 @@ import {
 
 export default function SearchBar(props) {
   const {
-    // changesOrders,
-    // handleChange,
+    changesOrders,
+    handleChange,
     labelname,
-    // orderByVal,
-    // orderDir,
+    orderByVal,
+    orderDir,
     searchData,
   } = props;
 
-  // const [genderVal, setGenderVal] = useState(" ");
-  // const [sizeVal, setSizeVal] = useState(" ");
-  // const [styleVal, setStyleVal] = useState(" ");
-  // const [colorVal, setColorVal] = useState(" ");
+  const [genderVal, setGenderVal] = useState(" ");
+  const [sizeVal, setSizeVal] = useState(" ");
+  const [styleVal, setStyleVal] = useState(" ");
+  const [colorVal, setColorVal] = useState(" ");
 
   // eslint-disable-next-line func-style
   const genderHandler = (event) => {
     const { target } = event;
-    //const { value } = target;
-    //setGenderVal(value);
+    const { value } = target;
+    setGenderVal(value);
   };
   // eslint-disable-next-line func-style
   const styleHandler = (event) => {
     const { target } = event;
-    //const { value } = target;
-    //setStyleVal(value);
+    const { value } = target;
+    setStyleVal(value);
   };
   // eslint-disable-next-line func-style
   const sizeHandler = (event) => {
     const { target } = event;
-    //const { value } = target;
-    //setSizeVal(value);
+    const { value } = target;
+    setSizeVal(value);
   };
   // eslint-disable-next-line func-style
   const colorHandler = (event) => {
     const { target } = event;
-    //const { value } = target;
-    //setColorVal(value);
+    const { value } = target;
+    setColorVal(value);
   };
+
+  // function onItemChange(evt) {
+  //   handleChange(evt.target.value);
+  //   changesOrders(evt.target.value, orderDir);
+  // }
+
   // eslint-disable-next-line func-style
   const submit = (event) => {
     event.preventDefault();
 
-    // handleChange(genderVal);
-    // changesOrders(genderVal, "asc");
-    // eslint-disable-next-line no-console
+    const formData = new FormData(event.target);
+    const values = [...formData.values()];
+    const [genderval, styleval, sizeval, colorval] = [...values];
+
+    handleChange(genderval);
+    changesOrders(genderval, orderDir);
+    // // eslint-disable-next-line no-console
     console.log(
-      // `You have entered \n Gender:${genderVal},\n Style: ${styleVal},\n  Size: ${sizeVal} \n  Colour :${colorVal}. \n This form is under maintenance and will be ready to use shortly`
-      "test"
+      event,
+      `\n You have entered \n Gender:${genderval},\n Style: ${styleval},\n  Size: ${sizeval} \n  Colour :${colorval}. \n This form is under maintenance and will be ready to use shortly`
     );
   };
 
@@ -69,7 +80,7 @@ export default function SearchBar(props) {
             name="genderVal"
             className="search-category-input"
             genders={gender}
-            value={gender}
+            value={genderVal}
             genderHandler={genderHandler}
             aria-labelledby="search-category-label"
           />
@@ -78,7 +89,7 @@ export default function SearchBar(props) {
             name="styleVal"
             className="search-category-input"
             styles={style}
-            //value={styleVal}
+            value={styleVal}
             styleHandler={styleHandler}
             aria-labelledby="search-category-label"
           />
@@ -87,7 +98,7 @@ export default function SearchBar(props) {
             name="sizeVal"
             className="search-category-input"
             sizes={size}
-            //value={sizeVal}
+            value={sizeVal}
             sizeHandler={sizeHandler}
             aria-labelledby="search-category-label"
           />
@@ -95,7 +106,7 @@ export default function SearchBar(props) {
             name="colorVal"
             className="search-category-input"
             colors={color}
-            //value={colorVal}
+            value={colorVal}
             colorHandler={colorHandler}
             aria-labelledby="search-category-label"
           />
