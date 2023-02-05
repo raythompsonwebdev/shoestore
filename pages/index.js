@@ -1,11 +1,14 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
-import BannerImg from "../components/HomePage/BannerImg";
-import FrontPageBoxes from "../components/HomePage/FrontpageBoxes";
-import FindShoes from "../components/HomePage/FindShoes";
+import BannerImg from "../components/homepage/bannerImg";
+import HomePageBoxes from "../components/homepage/homepageBoxes";
+import AccordianMenu from "../components/accordianMenu";
+import FindShoes from "../components/homepage/FindShoes";
 //import Image from "next/image";
 //import Link from "next/link";
 import productData from "../pages/api/Productdata";
+import accordian from "./api/Accordiondata.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
   const visibility = false;
@@ -38,7 +41,7 @@ export default function Home() {
             className={`left-side-content ${visibility ? "is-expanded" : " "}`}
           >
             <FindShoes />
-            {/* <FindShoesAccord /> */}
+            <AccordianMenu accordian={accordian} />
           </aside>
 
           <section id="right-content-section" className="group">
@@ -46,7 +49,7 @@ export default function Home() {
             <BannerImg />
 
             <h1 id="right-content-section-header">Featured</h1>
-            <FrontPageBoxes productData={productData} />
+            <HomePageBoxes productData={productData} />
           </section>
         </main>
       </>

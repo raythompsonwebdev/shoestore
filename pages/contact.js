@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
-// import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/contactForm";
 
 export default function Contact() {
   return (
@@ -23,7 +23,9 @@ export default function Contact() {
           <br />
           <br />
 
-          <section id="contact-form-section">{/* <ContactForm /> */}</section>
+          <section id="contact-form-section">
+            <ContactForm />
+          </section>
 
           <aside className="contact-sidebar">
             <h2 className="contact-sidebar-header">
