@@ -5,12 +5,12 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import products from "../api/Productdata";
+import products from "../api/json-data/Productdata";
 
 // eslint-disable-next-line func-style
-export default function singleSpecialsProduct() {
+export default function singleSpecialsProduct(props) {
   // const { name } = useParams();
-
+  console.log(props);
   // const [singleProduct, setSingleProduct] = useState({});
 
   // const [productInfo, setProductInfo] = useState({ likes: 0 });
@@ -55,7 +55,7 @@ export default function singleSpecialsProduct() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Product page</h1>
+          <h1 id="main-content-title">Specials Product page</h1>
           <figure id="product-page-box">
             <Image
               id="product-page-img"
@@ -65,9 +65,9 @@ export default function singleSpecialsProduct() {
               height={140}
             />
             <figcaption id="product-page-caption">
-              <p id="product-page-title"> {style}</p>
+              <p className="product-page-title"> {style}</p>
               <p id="product -page-price">£{price}</p>
-              <p id="productPagegender">{size}</p>
+              <p className="product-page-title">{size}</p>
               <p>{text}</p>
 
               {/* <LikesSection

@@ -17,16 +17,14 @@ export default function productBox(props) {
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {name}</p>
         <p className="product-box-price ">£{price}</p>
-        <Link href={`/allproducts/${name}`}>
-          <a className="product-box-icon-link">
-            <Image
-              className="product-box-icon"
-              src={cartImg}
-              alt="shoppingcart icon"
-              width={34}
-              height={48}
-            />
-          </a>
+        <Link href={`/allproducts/${name}`} className="product-box-icon-link">
+          <Image
+            className="product-box-icon"
+            src={cartImg}
+            alt="shoppingcart icon"
+            width={34}
+            height={48}
+          />
         </Link>
       </figcaption>
     </figure>

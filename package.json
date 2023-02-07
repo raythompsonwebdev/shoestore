@@ -20,15 +20,15 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "swr": "^2.0.3"
   },
   "devDependencies": {
     "bootstrap": "^5.2.3",
-    "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
     "react-bootstrap": "^2.7.0",
     "sass": "^1.58.0"
   }

@@ -20,7 +20,7 @@ export default function SearchSelect(props) {
       >
         {selectBarData.map((options) => (
           // eslint-disable-next-line react/no-array-index-key
-          <optgroup label={options.value} key={options._id}>
+          <optgroup label={options.value} key={options.id}>
             {options.options.map((option) => (
               // eslint-disable-next-line react/no-array-index-key
               <option key={option.id} value={option.value}>

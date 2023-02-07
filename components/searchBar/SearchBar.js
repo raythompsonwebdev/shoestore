@@ -110,10 +110,10 @@ export default function SearchBar(props) {
               pathname: "/search",
               query: resultArray,
             }}
+            className="search-category-btn"
+            type="submit"
           >
-            <button name="find" className="search-category-btn" type="submit">
-              Go
-            </button>
+            <button name="find">Go</button>
           </Link>
         </fieldset>
       </form>

@@ -54,7 +54,7 @@ export default function singleNewProduct() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Product page</h1>
+          <h1 id="main-content-title">New Product Page</h1>
           <figure id="product-page-box">
             <Image
               id="product-page-img"
@@ -64,9 +64,9 @@ export default function singleNewProduct() {
               height={140}
             />
             <figcaption id="product-page-caption">
-              <p id="product-page-title"> {style}</p>
+              <p className="product-page-title"> {style}</p>
               <p id="product -page-price">£{price}</p>
-              <p id="productPagegender">{size}</p>
+              <p className="product-page-title">{size}</p>
               <p>{text}</p>
 
               {/* <LikesSection
