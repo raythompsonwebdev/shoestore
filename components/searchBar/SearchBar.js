@@ -1,5 +1,7 @@
 //import PropTypes from "prop-types";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   SelectGender,
   SelectColor,
@@ -16,6 +18,8 @@ export default function SearchBar(props) {
     orderDir,
     searchData,
   } = props;
+
+  const router = useRouter();
 
   const [genderVal, setGenderVal] = useState(" ");
   const [sizeVal, setSizeVal] = useState(" ");
@@ -47,25 +51,16 @@ export default function SearchBar(props) {
     setColorVal(value);
   };
 
-  // function onItemChange(evt) {
-  //   handleChange(evt.target.value);
-  //   changesOrders(evt.target.value, orderDir);
-  // }
+  const resultArray = [genderVal, styleVal, sizeVal, colorVal];
 
   // eslint-disable-next-line func-style
   const submit = (event) => {
     event.preventDefault();
 
-    const formData = new FormData(event.target);
-    const values = [...formData.values()];
-    const [genderval, styleval, sizeval, colorval] = [...values];
-
-    handleChange(genderval);
-    changesOrders(genderval, orderDir);
+    // router.push("/search");
     // // eslint-disable-next-line no-console
     console.log(
-      event,
-      `\n You have entered \n Gender:${genderval},\n Style: ${styleval},\n  Size: ${sizeval} \n  Colour :${colorval}. \n This form is under maintenance and will be ready to use shortly`
+      `\n You have entered \n Gender:${resultArray[0]},\n Style: ${resultArray[1]},\n  Size: ${resultArray[2]} \n  Colour :${resultArray[3]}. \n This form is under maintenance and will be ready to use shortly`
     );
   };
 
@@ -110,10 +105,16 @@ export default function SearchBar(props) {
             colorHandler={colorHandler}
             aria-labelledby="search-category-label"
           />
-
-          <button name="find" className="search-category-btn" type="submit">
-            Go
-          </button>
+          <Link
+            href={{
+              pathname: "/search",
+              query: resultArray,
+            }}
+          >
+            <button name="find" className="search-category-btn" type="submit">
+              Go
+            </button>
+          </Link>
         </fieldset>
       </form>
     </aside>

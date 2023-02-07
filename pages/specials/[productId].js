@@ -41,8 +41,6 @@ export default function singleSpecialsProduct() {
   const { productId } = router.query;
   const product = products.find((product) => product.name === productId);
 
-  console.log(product, productId);
-
   const { imgUrl, price, size, style, text } = {
     ...product,
   };

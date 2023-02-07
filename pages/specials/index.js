@@ -7,9 +7,9 @@ import SearchSelect from "../../components/searchSelect/SearchSelect";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import accordian from "../api/json-data/Accordiondata.js";
-import searchBarData from "../api/json-data/SearchbarData.js";
+// import searchBarData from "../api/json-data/SearchbarData.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import selectBarData from "../api/json-data/SelectbarData.js";
+// import selectBarData from "../api/json-data/SelectbarData.js";
 import { handler } from "../api";
 
 export default function Specials(props) {
@@ -21,8 +21,8 @@ export default function Specials(props) {
   const [searchData] = useState(searchresults);
   const [selectData] = useState(selectresults);
 
-  const handleChange = (selectedSize) => {
-    setOrderByVal(selectedSize);
+  const handleChange = (selected) => {
+    setOrderByVal(selected);
     setOrderByDir("asc");
   };
 
@@ -68,7 +68,7 @@ export default function Specials(props) {
             orderDir={OrderDir}
             changesOrders={changesOrders}
             handleChange={handleChange}
-            searchData={searchBarData}
+            searchData={searchData}
           />
 
           <button
@@ -92,7 +92,7 @@ export default function Specials(props) {
               orderDir={OrderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={selectBarData}
+              selectBarData={selectData}
             />
             <br />
 

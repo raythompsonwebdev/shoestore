@@ -18,12 +18,12 @@ export default function SearchSelect(props) {
         onChange={onItemChange}
         className="search-products-select"
       >
-        {selectBarData.map((options, i) => (
+        {selectBarData.map((options) => (
           // eslint-disable-next-line react/no-array-index-key
-          <optgroup label={options.value} key={i}>
-            {options.options.map((option, p) => (
+          <optgroup label={options.value} key={options._id}>
+            {options.options.map((option) => (
               // eslint-disable-next-line react/no-array-index-key
-              <option key={p} value={option.value}>
+              <option key={option.id} value={option.value}>
                 {option.displayValue}
               </option>
             ))}
