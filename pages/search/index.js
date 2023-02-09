@@ -53,8 +53,8 @@ export default function singleSearchProduct() {
                 id="product-page-img"
                 src={shoes.imgUrl}
                 alt={"test"}
-                width={174}
-                height={140}
+                width={175}
+                height={150}
               />
               <figcaption id="product-page-caption">
                 <p className="product-page-title"> {shoes.name}</p>

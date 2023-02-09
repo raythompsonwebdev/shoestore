@@ -60,8 +60,8 @@ export default function singleNewProduct() {
               id="product-page-img"
               src={imgUrl}
               alt={style}
-              width={174}
-              height={140}
+              width={175}
+              height={150}
             />
             <figcaption id="product-page-caption">
               <p className="product-page-title"> {style}</p>

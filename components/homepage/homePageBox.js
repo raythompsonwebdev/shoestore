@@ -11,8 +11,8 @@ function FrontPageBox(props) {
         className="product-box-img"
         src={imgUrl}
         alt={name}
-        width={174}
-        height={140}
+        width={175}
+        height={150}
       />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {name}</p>
