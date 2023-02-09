@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     name: "genders",
     options: [
       { id: 1, value: " ", displayValue: "-- Select Gender --" },
@@ -10,16 +11,22 @@ export default [
     ],
   },
   {
+    id: 2,
     name: "styles",
     options: [
-      { id: 1, value: " ", displayValue: "-- Select style -- " },
+      { id: 1, value: " ", displayValue: "-- Select Style -- " },
       { id: 2, value: "trainers", displayValue: "Trainers" },
-      { id: 3, value: "ladiesboots", displayValue: "Ladies Boots" },
-      { id: 4, value: "skateshoes", displayValue: "Skate Shoes" },
-      { id: 5, value: "boots", displayValue: "Fur Lined Boots" },
+      { id: 3, value: "boots", displayValue: "Boots" },
+      { id: 4, value: "skate", displayValue: "Skate" },
+      { id: 5, value: "basketball", displayValue: "BasketBall" },
+      { id: 6, value: "running", displayValue: "Running" },
+      { id: 7, value: "loafers", displayValue: "Loafers" },
+      { id: 8, value: "laced", displayValue: "Laced" },
+      { id: 9, value: "stilletto", displayValue: "Stilletto" },
     ],
   },
   {
+    id: 3,
     name: "sizes",
     options: [
       { id: 1, value: " ", displayValue: "-- Select Size -- " },
@@ -32,6 +39,7 @@ export default [
     ],
   },
   {
+    id: 4,
     name: "colors",
     options: [
       { id: 1, value: " ", displayValue: " -- Select Color -- " },
@@ -39,6 +47,9 @@ export default [
       { id: 3, value: "black", displayValue: "Black" },
       { id: 4, value: "brown", displayValue: "Brown" },
       { id: 5, value: "beige", displayValue: "Beige" },
+      { id: 6, value: "blue", displayValue: "Blue" },
+      { id: 7, value: "red", displayValue: "Red" },
+      { id: 8, value: "pink", displayValue: "Pink" },
     ],
   },
 ];

@@ -3,23 +3,26 @@ import SpecialsProductBoxes from "../../components/specials/specialsProductBoxes
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";
 import SearchSelect from "../../components/searchSelect/SearchSelect";
-// import productData from "../api/json-data/Productdata";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import accordian from "../api/json-data/Accordiondata.js";
-// import searchBarData from "../api/json-data/SearchbarData.js";
+import searchBarData from "../api/json-data/SearchbarData.js";
+import productData from "../api/json-data/Productdata-copy";
+import selectBarData from "../api/json-data/SelectbarData.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import selectBarData from "../api/json-data/SelectbarData.js";
-import { handler } from "../api";
+// import { handler } from "../api";
 
 export default function Specials(props) {
-  const { results, searchresults, selectresults } = { ...props };
+  // const { result, searchresults, selectresults } = { ...props };
+  //const { searchresults, selectresults } = { ...props };
 
   const [OrderDir, setOrderByDir] = useState("asc");
   const [OrderByVal, setOrderByVal] = useState("all");
   const [visibility, setVisibility] = useState(false);
-  const [searchData] = useState(searchresults);
-  const [selectData] = useState(selectresults);
+  // const [searchData] = useState(searchresults);
+  // const [selectData] = useState(selectresults);
+  const [searchData] = useState(searchBarData);
+  const [selectData] = useState(selectBarData);
 
   const handleChange = (selected) => {
     setOrderByVal(selected);
@@ -36,7 +39,8 @@ export default function Specials(props) {
     setOrderByDir(dir);
   };
 
-  let filteredApts = results;
+  let filteredApts = productData;
+  // let filteredApts = results;
   const value = OrderByVal;
 
   filteredApts = filteredApts.filter((item) => {
@@ -106,19 +110,19 @@ export default function Specials(props) {
   );
 }
 
-export async function getStaticProps() {
-  const results = await handler("http://localhost:8000/api/products");
-  const searchresults = await handler(
-    "http://localhost:8000/api/searchbardata"
-  );
-  const selectresults = await handler("http://localhost:8000/api/selectdata");
-  // The value of the `props` key will be
-  //  passed to the `Home` component
-  return {
-    props: {
-      results,
-      searchresults,
-      selectresults,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   // const results = await handler("http://localhost:8000/api/products");
+//   const searchresults = await handler(
+//     "http://localhost:8000/api/searchbardata"
+//   );
+//   const selectresults = await handler("http://localhost:8000/api/selectdata");
+//   // The value of the `props` key will be
+//   //  passed to the `Home` component
+//   return {
+//     props: {
+//       //results,
+//       searchresults,
+//       selectresults,
+//     },
+//   };
+// }

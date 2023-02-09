@@ -5,7 +5,7 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import products from "../api/json-data/Productdata";
+import products from "../api/json-data/Productdata-copy";
 
 // eslint-disable-next-line func-style
 export default function singleSpecialsProduct(props) {

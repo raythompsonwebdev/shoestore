@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NewProductBoxes from "../../components/newProduct/newProductBoxes";
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";
-import productData from "../api/json-data/Productdata";
+import productData from "../api/json-data/Productdata-copy";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import accordian from "../api/json-data/Accordiondata.js";

@@ -9,4 +9,6 @@ public/static/media/
 public/static/data/
 components/SearchBar/searchbar-components/
 .env
+.next/*
+
 

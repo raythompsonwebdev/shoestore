@@ -5,7 +5,7 @@ import AllProductBoxes from "../../components/allproducts/allProductBoxes";
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";
 import SearchSelect from "../../components/searchSelect/SearchSelect";
-import productData from "../api/json-data/Productdata";
+import productData from "../api/json-data/Productdata-copy";
 import accordian from "../api/json-data/Accordiondata.js";
 import searchBarData from "../api/json-data/SearchbarData.js";
 import selectBarData from "../api/json-data/SelectbarData.js";
