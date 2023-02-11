@@ -5,22 +5,13 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import products from "../api/json-data/Productdata-copy";
+import products from "../api/json-data/Productdata";
 
 // eslint-disable-next-line func-style
-export default function singleSearchProduct() {
-  //const [productInfo, setProductInfo] = useState({ likes: 0 });
-
-  // const product = productData.find((item) => item.name === name);
-  // const otherProducts = productData.filter((item) => item.name !== name);
-
-  // const matchingProduct = singleProduct;
-
+export default function singleSearchProduct(props) {
   const router = useRouter();
 
   const testValues = Object.values(router.query);
-
-  //console.log(testValues);
 
   const [gender1, color1, style1, size1] = testValues;
 
@@ -29,8 +20,6 @@ export default function singleSearchProduct() {
   const product = products.filter(
     (product) => product.size === size1 && product.color === color1
   );
-
-  //console.log(product);
 
   // const { name , imgUrl, price, size, style, text } = {
   //   ...product,

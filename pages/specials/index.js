@@ -5,24 +5,22 @@ import SearchBar from "../../components/searchBar/SearchBar";
 import SearchSelect from "../../components/searchSelect/SearchSelect";
 import Head from "next/head";
 import Layout from "../../components/Layout";
-import accordian from "../api/json-data/Accordiondata.js";
-import searchBarData from "../api/json-data/SearchbarData.js";
-import productData from "../api/json-data/Productdata-copy";
-import selectBarData from "../api/json-data/SelectbarData.js";
+//import accordian from "../api/json-data/Accordiondata.js";
+// import searchBarData from "../api/json-data/SearchbarData.js";
+// import productData from "../api/json-data/Productdata";
+//import selectBarData from "../api/json-data/SelectbarData.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { handler } from "../api";
+import { handler } from "../api";
 
 export default function Specials(props) {
-  // const { result, searchresults, selectresults } = { ...props };
-  //const { searchresults, selectresults } = { ...props };
-
+  const [accordianData] = useState(props.accordian);
+  const [productData] = useState(props.productData);
+  const [searchBarData] = useState(props.searchresults);
+  const [selectBarData] = useState(props.selectresults);
   const [OrderDir, setOrderByDir] = useState("asc");
   const [OrderByVal, setOrderByVal] = useState("all");
   const [visibility, setVisibility] = useState(false);
-  // const [searchData] = useState(searchresults);
-  // const [selectData] = useState(selectresults);
-  const [searchData] = useState(searchBarData);
-  const [selectData] = useState(selectBarData);
+  // const [lastIndex, setLastIndex] = useState(0);
 
   const handleChange = (selected) => {
     setOrderByVal(selected);
@@ -40,7 +38,7 @@ export default function Specials(props) {
   };
 
   let filteredApts = productData;
-  // let filteredApts = results;
+
   const value = OrderByVal;
 
   filteredApts = filteredApts.filter((item) => {
@@ -72,7 +70,7 @@ export default function Specials(props) {
             orderDir={OrderDir}
             changesOrders={changesOrders}
             handleChange={handleChange}
-            searchData={searchData}
+            searchData={searchBarData}
           />
 
           <button
@@ -87,7 +85,7 @@ export default function Specials(props) {
           <aside
             className={`left-side-content ${visibility ? "is-expanded" : " "}`}
           >
-            <AccordianMenu accordian={accordian} />
+            <AccordianMenu accordianData={accordianData} />
           </aside>
 
           <section id="right-content-section" role="main">
@@ -96,7 +94,7 @@ export default function Specials(props) {
               orderDir={OrderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={selectData}
+              selectBarData={selectBarData}
             />
             <br />
 
@@ -110,19 +108,21 @@ export default function Specials(props) {
   );
 }
 
-// export async function getStaticProps() {
-//   // const results = await handler("http://localhost:8000/api/products");
-//   const searchresults = await handler(
-//     "http://localhost:8000/api/searchbardata"
-//   );
-//   const selectresults = await handler("http://localhost:8000/api/selectdata");
-//   // The value of the `props` key will be
-//   //  passed to the `Home` component
-//   return {
-//     props: {
-//       //results,
-//       searchresults,
-//       selectresults,
-//     },
-//   };
-// }
+export async function getServerSideProps() {
+  const productData = await handler("http://localhost:8000/api/products");
+  const searchresults = await handler(
+    "http://localhost:8000/api/searchbardata"
+  );
+  const selectresults = await handler("http://localhost:8000/api/selectdata");
+  const accordian = await handler("http://localhost:8000/api/accordiondata");
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: {
+      productData,
+      searchresults,
+      selectresults,
+      accordian,
+    },
+  };
+}

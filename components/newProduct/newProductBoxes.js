@@ -2,10 +2,10 @@
 import NewProductBox from "./newProductBox";
 
 export default function newProductBoxes(props) {
-  const { productData } = props;
+  const { productData } = { ...props };
 
   const NewProduct = productData
-    .slice(0, 4)
+    .slice(0, 6)
     .map((item) => (
       <NewProductBox
         key={item.prodId}

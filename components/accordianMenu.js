@@ -5,13 +5,13 @@ export default function AccordianMenu(props) {
   // eslint-disable-next-line no-console
   //console.log(props);
 
-  const { accordian } = { ...props };
+  const { accordianData } = { ...props };
 
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
       <nav id="accordian-nav" aria-label="secondary">
         <div id="accordian-nav-container">
-          {accordian.map((element) => (
+          {accordianData.map((element) => (
             <Accordion.Item eventKey={element.id} key={element.id}>
               <Accordion.Header>{element.title}</Accordion.Header>
               <Accordion.Body>

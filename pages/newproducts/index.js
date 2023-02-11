@@ -1,30 +1,23 @@
 import React, { useState } from "react";
+import Head from "next/head";
+import Layout from "../../components/Layout";
 import NewProductBoxes from "../../components/newProduct/newProductBoxes";
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";
-import productData from "../api/json-data/Productdata-copy";
-import Head from "next/head";
-import Layout from "../../components/Layout";
-import accordian from "../api/json-data/Accordiondata.js";
-import searchBarData from "../api/json-data/SearchbarData.js";
+// import productData from "../api/json-data/Productdata";
+// import accordian from "../api/json-data/Accordiondata.js";
+//import searchBarData from "../api/json-data/SearchbarData.js";
+import { handler } from "../api";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function NewProducts() {
-  // const [productData, setProductData] = useState([]);
+export default function NewProducts(props) {
+  const [productData] = useState(props.productData);
+  const [accordianData] = useState(props.accordian);
+  const [searchbarData] = useState(props.searchresults);
   const [orderDir, setOrderByDir] = useState("asc");
   const [OrderByVal, setOrderByVal] = useState("all");
-  // const [lastIndex, setLastIndex] = useState(0);
   const [visibility, setVisibility] = useState(false);
-  // const [searchData, setSearchData] = useState([]);
-  // const [selectData, setSelectData] = useState([]);
-
-  //   // const fetchProducts = fetch(`/api/products/`);
-
-  //   // get products
-  //   const getProducts = fetch("/api/products");
-
-  //   // get search bar options data
-  //   const getSearchData = fetch("/api/searchbardata");
+  // const [lastIndex, setLastIndex] = useState(0);
 
   // eslint-disable-next-line react/no-unused-class-component-methods
   const handleChange = (selectedSize) => {
@@ -34,7 +27,6 @@ export default function NewProducts() {
 
   const sidebarVisibility = (e) => {
     e.preventDefault();
-
     setVisibility(!visibility);
   };
 
@@ -59,7 +51,7 @@ export default function NewProducts() {
             orderDir={orderDir}
             changesOrders={changesOrders}
             handleChange={handleChange}
-            searchData={searchBarData}
+            searchData={searchbarData}
           />
 
           <button
@@ -74,7 +66,7 @@ export default function NewProducts() {
           <aside
             className={`left-side-content ${visibility ? "is-expanded" : " "}`}
           >
-            <AccordianMenu accordian={accordian} />
+            <AccordianMenu accordianData={accordianData} />
           </aside>
 
           <section id="right-content-section">
@@ -87,4 +79,22 @@ export default function NewProducts() {
       </>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  const productData = await handler("http://localhost:8000/api/products");
+  const accordian = await handler("http://localhost:8000/api/accordiondata");
+  const searchresults = await handler(
+    "http://localhost:8000/api/searchbardata"
+  );
+
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: {
+      productData,
+      accordian,
+      searchresults,
+    },
+  };
 }

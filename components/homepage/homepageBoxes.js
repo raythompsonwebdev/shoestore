@@ -2,7 +2,7 @@
 import HomePageBox from "./homePageBox";
 
 export default function HomePageBoxes(props) {
-  const { productData } = props;
+  const { productData } = { ...props };
 
   const NewProduct = productData
     .slice(0, 8)

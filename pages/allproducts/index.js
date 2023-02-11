@@ -5,33 +5,22 @@ import AllProductBoxes from "../../components/allproducts/allProductBoxes";
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";
 import SearchSelect from "../../components/searchSelect/SearchSelect";
-import productData from "../api/json-data/Productdata-copy";
-import accordian from "../api/json-data/Accordiondata.js";
-import searchBarData from "../api/json-data/SearchbarData.js";
-import selectBarData from "../api/json-data/SelectbarData.js";
-
+// import productData from "../api/json-data/Productdata";
+// import accordian from "../api/json-data/Accordiondata.js";
+//import searchBarData from "../api/json-data/SearchbarData.js";
+//import selectBarData from "../api/json-data/SelectbarData.js";
+import { handler } from "../api";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function allproducts() {
-  //const [productData, setProductData] = useState([]);
+export default function allproducts(props) {
+  const [accordianData] = useState(props.accordianData);
+  const [productData] = useState(props.productData);
+  const [searchbarData] = useState(props.searchresults);
+  const [selectbarData] = useState(props.selectresults);
   const [orderDir, setOrderByDir] = useState("asc");
   const [OrderByVal, setOrderByVal] = useState("all");
-  // const [lastIndex, setLastIndex] = useState(0);
   const [visibility, setVisibility] = useState(false);
-  //const [searchData, setSearchData] = useState([]);
-  //const [selectData, setSelectData] = useState([]);
-
-  // get search bar options data
-  //   const getSearchData = fetch("/api/searchbardata");
-
-  // useEffect(() => {
-  //   // get products
-  //   const getProducts = fetch("../api/Productdata");
-
-  //   // get select bar options data
-  //   const getSelectData = fetch("/api/selectdata");
-
-  // }, [lastIndex]);
+  // const [lastIndex, setLastIndex] = useState(0);
 
   const handleChange = (selectedSize) => {
     setOrderByVal(selectedSize);
@@ -79,7 +68,7 @@ export default function allproducts() {
             orderDir={orderDir}
             changesOrders={changesOrders}
             handleChange={handleChange}
-            searchData={searchBarData}
+            searchData={searchbarData}
           />
 
           <button
@@ -94,7 +83,7 @@ export default function allproducts() {
           <aside
             className={`left-side-content ${visibility ? "is-expanded" : " "}`}
           >
-            <AccordianMenu accordian={accordian} />
+            <AccordianMenu accordianData={accordianData} />
           </aside>
 
           <main id="right-content-section" className="group">
@@ -103,13 +92,32 @@ export default function allproducts() {
               orderDir={orderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={selectBarData}
+              selectBarData={selectbarData}
             />
             <AllProductBoxes productData={filteredApts} />
-            {/* <AllProductBoxes productData={productData} /> */}
           </main>
         </main>
       </>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  const productData = await handler("http://localhost:8000/api/products");
+  const accordianData = await handler(
+    "http://localhost:8000/api/accordiondata"
+  );
+  const searchresults = await handler(
+    "http://localhost:8000/api/searchbardata"
+  );
+  const selectresults = await handler("http://localhost:8000/api/selectdata");
+
+  return {
+    props: {
+      productData,
+      accordianData,
+      searchresults,
+      selectresults,
+    },
+  };
 }

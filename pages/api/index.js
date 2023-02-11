@@ -19,7 +19,7 @@ export async function searchAll(url) {
     .then(([productdata, searchedData, selectedData]) => {
       // deconstruct array of data from both apis responses.
       // eslint-disable-next-line no-console
-      return [productdata, searchedData, selectedData];
+      console.log(productdata, searchedData, selectedData);
     })
     .catch((error) => {
       // eslint-disable-next-line no-console
@@ -28,4 +28,16 @@ export async function searchAll(url) {
     });
 
   return results;
+}
+
+export async function likeProduct(url) {
+  const response = await fetch(url, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  });
+  const body = await response.json();
+  return body;
 }

@@ -1269,7 +1269,6 @@ p {
 
   #main-content {
     width: 100%;
-    margin: 0.25em;
     min-height: 800px;
   }
 
@@ -1417,7 +1416,7 @@ p {
   }
 
   #main-inner-content {
-    width: 65%;
+    width: 62%;
     margin: 0;
     font-family: $font-list;
     float: left;
@@ -1833,8 +1832,7 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100%;
     min-height: 800px;
   }
 
@@ -1982,7 +1980,7 @@ p {
   }
 
   #main-inner-content {
-    width: 65%;
+    width: 62%;
     margin: 0;
     font-family: $font-list;
     float: left;
@@ -2398,8 +2396,7 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100%;
     min-height: 800px;
   }
 
@@ -2967,8 +2964,7 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100%;
     min-height: 800px;
   }
 
@@ -3536,8 +3532,7 @@ p {
   }
 
   #main-content {
-    width: 99%;
-    margin: 0.5em;
+    width: 100%;
     min-height: 800px;
   }
 
@@ -4116,8 +4111,9 @@ p {
   }
 
   #main-content {
-    width: 100;
+    width: 100%;
     margin: 0;
+    height: auto;
   }
 
   #main-content-title {
@@ -4677,8 +4673,9 @@ p {
   }
 
   #main-content {
-    width: 100;
+    width: 100%;
     margin: 0;
+    height: auto;
   }
 
   #main-content-title {
@@ -5242,6 +5239,7 @@ p {
   #main-content {
     width: 100%;
     margin: 0;
+    height: auto;
   }
 
   #main-content-title {
@@ -5806,8 +5804,9 @@ p {
   }
 
   #main-content {
-    width: 100;
+    width: 100%;
     margin: 0;
+    height: auto;
   }
 
   #main-content-title {
@@ -6376,6 +6375,7 @@ p {
   #main-content {
     width: 100%;
     margin: 0;
+    height: auto;
   }
 
   #main-content-title {

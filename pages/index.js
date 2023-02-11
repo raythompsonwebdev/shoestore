@@ -1,15 +1,19 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import BannerImg from "../components/homepage/bannerImg";
 import HomePageBoxes from "../components/homepage/homepageBoxes";
 import AccordianMenu from "../components/accordianMenu";
 import FindShoes from "../components/homepage/FindShoes";
-import productData from "./api/json-data/Productdata-copy";
-import accordian from "./api/json-data/Accordiondata.js";
+// import productData from "./api/json-data/Productdata";
+// import accordian from "./api/json-data/Accordiondata.js";
+import { handler } from "./api";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function Home() {
-  const visibility = false;
+export default function Home(props) {
+  const [accordianData] = useState(props.accordian);
+  const [productData] = useState(props.productData);
+  const [visibility, setVisibility] = useState(false);
 
   const sidebarVisibility = (e) => {
     e.preventDefault();
@@ -39,7 +43,7 @@ export default function Home() {
             className={`left-side-content ${visibility ? "is-expanded" : " "}`}
           >
             <FindShoes />
-            <AccordianMenu accordian={accordian} />
+            <AccordianMenu accordianData={accordianData} />
           </aside>
 
           <section id="right-content-section" className="group">
@@ -53,4 +57,18 @@ export default function Home() {
       </>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  const productData = await handler("http://localhost:8000/api/products");
+  const accordian = await handler("http://localhost:8000/api/accordiondata");
+
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: {
+      productData,
+      accordian,
+    },
+  };
 }

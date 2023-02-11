@@ -1,28 +1,19 @@
+import { likeProduct } from "../pages/api";
+
 export default function LikesSection(props) {
-  //const { likes, productName, setProductInfo } = { ...props };
-  // eslint-disable-next-line func-style
-  // const likeProduct = async () => {
-  //   // const response = await fetch(`./productdata.json/${productName}/likes`, {
-  //   //   method: "post",
-  //   // });
-  //   // const response = await fetch(`/api/product/${productName}/likes`, {
-  //   //   method: "post",
-  //   //   headers: {
-  //   //     "Content-Type": "application/json",
-  //   //     // 'Content-Type': 'application/x-www-form-urlencoded',
-  //   //   },
-  //   // });
-  //   // const body = await response.json();
-  //   // setProductInfo(body);
-  // };
+  const { likes, productName, setProductInfo } = { ...props };
+
+  const likeProduct = () => {
+    setProductInfo(likes);
+  };
 
   return (
     <div id="upvotes-section">
       <button
         type="submit"
-        // onClick={() => {
-        //   likeProduct();
-        // }}
+        onClick={() => {
+          likeProduct();
+        }}
         className="upvotes-section-btn"
       >
         Add Like
@@ -32,4 +23,16 @@ export default function LikesSection(props) {
       </p>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const likes = await likeProduct(
+    "http://localhost:8000/api/product/${productName}/likes"
+  );
+
+  return {
+    props: {
+      likes,
+    },
+  };
 }

@@ -1,42 +1,16 @@
-// import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // import LikesSection from "../components/LikesSection";
 // import NotFound from "./NotFound";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import products from "../api/json-data/Productdata-copy";
+// import products from "../api/json-data/Productdata";
+import { handler } from "../api";
 
 // eslint-disable-next-line func-style
 export default function singleSpecialsProduct(props) {
-  // const { name } = useParams();
-  console.log(props);
-  // const [singleProduct, setSingleProduct] = useState({});
-
-  // const [productInfo, setProductInfo] = useState({ likes: 0 });
-
-  // useEffect(() => {
-  //   // eslint-disable-next-line func-style
-  //   const fetchData = async () => {
-  //     const result = await fetch(`/api/product/${name}`);
-  //     const body = await result.json();
-
-  //     setSingleProduct(body);
-  //     setProductInfo(body);
-  //   };
-
-  //   fetchData();
-  // }, [name]);
-
-  // const product = productData.find((item) => item.name === name);
-  // const otherProducts = productData.filter((item) => item.name !== name);
-
-  // const matchingProduct = singleProduct;
-
-  // const { imgUrl, price, size, style, text } = {
-  //   ...singleProduct,
-  // };
-
+  const [products] = useState(props.productData);
   const router = useRouter();
   const { productId } = router.query;
   const product = products.find((product) => product.name === productId);
@@ -45,7 +19,11 @@ export default function singleSpecialsProduct(props) {
     ...product,
   };
 
-  // return matchingProduct ? (
+  // const [productInfo, setProductInfo] = useState({ likes: 0 });
+
+  // const product = productData.find((item) => item.name === name);
+  // const otherProducts = productData.filter((item) => item.name !== name);
+
   return (
     <Layout>
       <>
@@ -106,7 +84,15 @@ export default function singleSpecialsProduct(props) {
       </>
     </Layout>
   );
-  // ) : (
-  //   <NotFound />
-  // );
+}
+
+export async function getServerSideProps({ params }) {
+  const productData = await handler("http://localhost:8000/api/products");
+
+  return {
+    props: {
+      productData,
+      params,
+    },
+  };
 }

@@ -5,10 +5,10 @@ export default function SpecialsProductBoxes(props) {
   const { productData } = props;
 
   const Product = productData
-    .slice(0, 16)
+    .slice(0, 20)
     .map((item) => (
       <ProductBox
-        key={item._id}
+        key={item.prodId}
         name={item.name}
         imgUrl={item.imgUrl}
         price={item.price}
