@@ -12,7 +12,7 @@ export default function AccordianMenu(props) {
       <nav id="accordian-nav" aria-label="secondary">
         <div id="accordian-nav-container">
           {accordianData.map((element) => (
-            <Accordion.Item eventKey={element.id} key={element.id}>
+            <Accordion.Item eventKey={element._id} key={element._id}>
               <Accordion.Header>{element.title}</Accordion.Header>
               <Accordion.Body>
                 <div className="panel">

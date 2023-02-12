@@ -5,10 +5,6 @@ import SearchBar from "../../components/searchBar/SearchBar";
 import SearchSelect from "../../components/searchSelect/SearchSelect";
 import Head from "next/head";
 import Layout from "../../components/Layout";
-//import accordian from "../api/json-data/Accordiondata.js";
-// import searchBarData from "../api/json-data/SearchbarData.js";
-// import productData from "../api/json-data/Productdata";
-//import selectBarData from "../api/json-data/SelectbarData.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { handler } from "../api";
 

@@ -1,41 +1,34 @@
-// import React, { useEffect, useState } from "react";
-// import LikesSection from "../components/LikesSection";
+import { useState } from "react";
+import LikesSection from "../../components/LikesSection";
 // import NotFound from "./NotFound";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import products from "../api/json-data/Productdata";
+import { handler } from "../api";
 
-// eslint-disable-next-line func-style
-export default function singleSearchProduct(props) {
+export default function searchProduct(props) {
+  const [products] = useState(props.productData);
+  const [productInfo, setProductInfo] = useState({ likes: 0 });
+
   const router = useRouter();
-
   const testValues = Object.values(router.query);
-
   const [gender1, color1, style1, size1] = testValues;
 
   console.log(gender1, color1, style1, size1);
 
-  const product = products.filter(
-    (product) => product.size === size1 && product.color === color1
-  );
+  const product = products.filter((product) => product.size === size1);
 
-  // const { name , imgUrl, price, size, style, text } = {
-  //   ...product,
-  // };
-
-  // return matchingProduct ? (
-  return (
+  return product ? (
     <Layout>
       <>
         <Head>
-          <title>Single Search Product</title>
+          <title>Search Product</title>
           <meta name="description" content="Search Product - All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Search Products page</h1>
+          <h1 id="main-content-title">Search Product page</h1>
           {product.map((shoes) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <Image
@@ -53,11 +46,31 @@ export default function singleSearchProduct(props) {
                 <p className="product-page-title">{shoes.color}</p>
                 <p>{""}</p>
 
-                {/* <LikesSection
-            likes={productInfo.likes}
-            productName={style}
-            setProductInfo={setProductInfo}
-          /> */}
+                <LikesSection
+                  likes={productInfo.likes}
+                  // productName={style}
+                  setProductInfo={setProductInfo}
+                />
+              </figcaption>
+            </figure>
+          ))}
+        </main>
+      </>
+    </Layout>
+  ) : (
+    <Layout>
+      <>
+        <Head>
+          <title>Single Search Product</title>
+          <meta name="description" content="Search Product - All" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main id="main-content" className="clearfix">
+          <h1 id="main-content-title">Search Products page</h1>
+          {product.map((shoes) => (
+            <figure id="product-page-box" key={shoes.prodId}>
+              <figcaption id="product-page-caption">
+                <p className="product-page-title">No Products Found</p>
               </figcaption>
             </figure>
           ))}
@@ -65,7 +78,14 @@ export default function singleSearchProduct(props) {
       </>
     </Layout>
   );
-  // ) : (
-  //   <NotFound />
-  // );
+}
+
+export async function getServerSideProps() {
+  const productData = await handler("http://localhost:8000/api/products");
+
+  return {
+    props: {
+      productData,
+    },
+  };
 }

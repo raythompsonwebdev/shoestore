@@ -30,14 +30,12 @@ export async function searchAll(url) {
   return results;
 }
 
-export async function likeProduct(url) {
-  const response = await fetch(url, {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  });
-  const body = await response.json();
+export async function likeProduct(req, res) {
+  if (req.method !== "POST") {
+    res.status(405).send({ message: "Only POST requests allowed" });
+    return;
+  }
+  // not needed in NextJS v12+
+  const body = JSON.parse(req.body);
   return body;
 }

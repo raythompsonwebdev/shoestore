@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import LikesSection from "../../components/LikesSection";
 // import NotFound from "./NotFound";
 import Head from "next/head";
@@ -7,30 +7,30 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { handler } from "../api";
 
-export default function singleSpecialsProduct(props) {
+export default function singleProduct(props) {
   const [products] = useState(props.productData);
   const [productInfo, setProductInfo] = useState({ likes: 0 });
+
   const router = useRouter();
   const { productId } = router.query;
   const product = products.find((product) => product.name === productId);
-
   const { imgUrl, price, size, style, text } = {
     ...product,
   };
 
-  // const product = productData.find((item) => item.name === name);
   // const otherProducts = productData.filter((item) => item.name !== name);
+  // const matchingProduct = singleProduct;
 
   return product ? (
     <Layout>
       <>
         <Head>
-          <title>Single Specials Product</title>
-          <meta name="description" content="Single Product - All" />
+          <title>Single Product</title>
+          <meta name="description" content="Single Product - Special" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Specials Product page</h1>
+          <h1 id="main-content-title">Single Product page</h1>
           <figure id="product-page-box">
             <Image
               id="product-page-img"
@@ -101,13 +101,12 @@ export default function singleSpecialsProduct(props) {
   );
 }
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps() {
   const productData = await handler("http://localhost:8000/api/products");
 
   return {
     props: {
       productData,
-      params,
     },
   };
 }

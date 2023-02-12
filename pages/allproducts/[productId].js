@@ -1,54 +1,46 @@
-// import React, { useEffect, useState } from "react";
-// import LikesSection from "../components/LikesSection";
+import { useState } from "react";
+import LikesSection from "../../components/LikesSection";
 // import NotFound from "./NotFound";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import products from "../api/json-data/Productdata";
+// import products from "../api/json-data/Productdata";
+import { handler } from "../api";
 
-// eslint-disable-next-line func-style
-export default function singleAllProduct() {
-  // const { name } = useParams();
-
-  // const [singleProduct, setSingleProduct] = useState({});
-
-  // const [productInfo, setProductInfo] = useState({ likes: 0 });
-
-  // useEffect(() => {
-  //   // eslint-disable-next-line func-style
-  //   const fetchData = async () => {
-  //     const result = await fetch(`/api/product/${name}`);
-  //     const body = await result.json();
-
-  //     setSingleProduct(body);
-  //     setProductInfo(body);
-  //   };
-
-  //   fetchData();
-  // }, [name]);
-
-  // const product = productData.find((item) => item.name === name);
-  // const otherProducts = productData.filter((item) => item.name !== name);
-
-  // const matchingProduct = singleProduct;
-
-  // const { imgUrl, price, size, style, text } = {
-  //   ...singleProduct,
-  // };
+export default function singleAllProduct(props) {
+  const [products] = useState(props.productData);
+  const [productInfo, setProductInfo] = useState({ likes: 0 });
 
   const router = useRouter();
   const { productId } = router.query;
   const product = products.find((product) => product.name === productId);
-
-  console.log(product, productId);
-
   const { imgUrl, price, size, style, text } = {
     ...product,
   };
 
-  // return matchingProduct ? (
-  return (
+  // const likeProduct = async () => {
+  //   try {
+  //     const response = await fetch(`/api/likeProduct`, {
+  //       method: "post",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         // 'Content-Type': 'application/x-www-form-urlencoded',
+  //       },
+  //       mode: "no-cors",
+  //       body: JSON.stringify({ likes: 0 }),
+  //     });
+  //     const body = await response.json();
+  //     setProductInfo(body);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+  // const otherProducts = productData.filter((item) => item.name !== name);
+  // const matchingProduct = singleProduct;
+
+  return product ? (
     <Layout>
       <>
         <Head>
@@ -72,11 +64,11 @@ export default function singleAllProduct() {
               <p className="product-page-title">{size}</p>
               <p>{text}</p>
 
-              {/* <LikesSection
-            likes={productInfo.likes}
-            productName={style}
-            setProductInfo={setProductInfo}
-          /> */}
+              <LikesSection
+                likes={productInfo.likes}
+                productName={style}
+                setProductInfo={setProductInfo}
+              />
             </figcaption>
           </figure>
 
@@ -107,8 +99,33 @@ export default function singleAllProduct() {
         </main>
       </>
     </Layout>
+  ) : (
+    <Layout>
+      <>
+        <Head>
+          <title>Single New Product</title>
+          <meta name="description" content="Single Product - All" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main id="main-content" className="clearfix">
+          <h1 id="main-content-title">New Product Page</h1>
+          <figure id="product-page-box">
+            <figcaption id="product-page-caption">
+              <p className="product-page-title">product not found</p>
+            </figcaption>
+          </figure>
+        </main>
+      </>
+    </Layout>
   );
-  // ) : (
-  //   <NotFound />
-  // );
+}
+
+export async function getServerSideProps() {
+  const productData = await handler("http://localhost:8000/api/products");
+
+  return {
+    props: {
+      productData,
+    },
+  };
 }

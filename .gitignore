@@ -7,6 +7,7 @@ public/static/images/moreshoes/
 public/font/
 public/static/media/
 public/static/data/
+pages/api/json-data/db-data/
 components/SearchBar/searchbar-components/
 .env
 .next/*
