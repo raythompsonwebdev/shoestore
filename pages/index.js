@@ -17,7 +17,7 @@ export default function Home(props) {
 
   const sidebarVisibility = (e) => {
     e.preventDefault();
-    console.log(e);
+    setVisibility(!visibility);
   };
 
   return (

@@ -98,7 +98,7 @@ export default function allproducts(props) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const productData = await handler("http://localhost:8000/api/products");
   const accordianData = await handler(
     "http://localhost:8000/api/accordiondata"

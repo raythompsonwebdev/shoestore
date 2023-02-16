@@ -13,13 +13,11 @@ export default function singleProduct(props) {
 
   const router = useRouter();
   const { productId } = router.query;
+
   const product = products.find((product) => product.name === productId);
   const { imgUrl, price, size, style, text } = {
     ...product,
   };
-
-  // const otherProducts = productData.filter((item) => item.name !== name);
-  // const matchingProduct = singleProduct;
 
   return product ? (
     <Layout>
@@ -101,12 +99,28 @@ export default function singleProduct(props) {
   );
 }
 
-export async function getServerSideProps() {
-  const productData = await handler("http://localhost:8000/api/products");
+export async function getStaticProps({ params }) {
+  const { productId } = { ...params };
+  const productData = await handler(
+    `http://localhost:8000/api/product/${productId}`
+  );
 
   return {
     props: {
       productData,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const response = await handler(`http://localhost:8000/api/products`);
+  // console.log(response);
+  const thePaths = response.map((item) => {
+    return { params: { productId: item.name } };
+  });
+
+  return {
+    paths: thePaths,
+    fallback: false,
   };
 }

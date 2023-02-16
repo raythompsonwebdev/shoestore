@@ -52,31 +52,6 @@ export default function singleSpecialsProduct(props) {
               />
             </figcaption>
           </figure>
-
-          <h1 id="main-content-title">Other Products</h1>
-
-          {/* <div className="other-products">
-        {otherProducts.map((item) => (
-          <figure className="other-products-box" key={item.id}>
-            <img
-              className="other-product-box-img"
-              src={item.imgUrl}
-              alt={item.name}
-            />
-            <figcaption className="other-product-box-caption">
-              <p className="other-product-box-title"> {item.name}</p>
-              <p className="other-product-box-price">£{item.price}</p>
-              <Link to={`/product/${item.name}`}>
-                <img
-                  className="other-product-cart-icon"
-                  src={item.cartImg}
-                  alt="shopping cart icon"
-                />
-              </Link>
-            </figcaption>
-          </figure>
-        ))}
-      </div> */}
         </main>
       </>
     </Layout>
@@ -101,13 +76,29 @@ export default function singleSpecialsProduct(props) {
   );
 }
 
-export async function getServerSideProps({ params }) {
-  const productData = await handler("http://localhost:8000/api/products");
+export async function getStaticProps({ params }) {
+  const { productId } = { ...params };
+  const productData = await handler(
+    `http://localhost:8000/api/product/${productId}`
+  );
 
   return {
     props: {
       productData,
       params,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const response = await handler(`http://localhost:8000/api/products`);
+  // console.log(response);
+  const thePaths = response.map((item) => {
+    return { params: { productId: item.name } };
+  });
+
+  return {
+    paths: thePaths,
+    fallback: false,
   };
 }

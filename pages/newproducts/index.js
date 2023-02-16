@@ -78,7 +78,7 @@ export default function NewProducts(props) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const productData = await handler("http://localhost:8000/api/products");
   const accordian = await handler("http://localhost:8000/api/accordiondata");
   const searchresults = await handler(
@@ -93,5 +93,7 @@ export async function getServerSideProps() {
       accordian,
       searchresults,
     },
+    //unstable_revalidate: 10,
+    revalidate: 10,
   };
 }
