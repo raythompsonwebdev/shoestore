@@ -7,29 +7,29 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { handler } from "../api";
 
-export default function singleNewProduct(props) {
-  const [productInfo, setProductInfo] = useState({ likes: 0 });
+export default function singleProduct(props) {
   const [product] = useState(props.productData);
 
-  const router = useRouter();
-  const { productId } = router.query;
+  const [productInfo, setProductInfo] = useState({ likes: 0 });
 
-  const { imgUrl, name, likes, price, size, style, text } = {
+  const router = useRouter();
+
+  const { prodname } = router.query;
+
+  const { name, imgUrl, price, size, style, text, _id } = {
     ...product,
   };
-
-  // const otherProducts = products.filter((item) => item.name !== name);
 
   return product ? (
     <Layout>
       <>
         <Head>
-          <title>Single New Product</title>
-          <meta name="description" content="Single Product - All" />
+          <title>Single Product</title>
+          <meta name="description" content="Single Product" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">New Product Page</h1>
+          <h1 id="main-content-title">Product Page</h1>
           <figure id="product-page-box">
             <Image
               id="product-page-img"
@@ -46,11 +46,37 @@ export default function singleNewProduct(props) {
 
               <LikesSection
                 likes={productInfo.likes}
-                productName={productId}
+                productName={prodname}
                 setProductInfo={setProductInfo}
+                prodid={_id}
               />
             </figcaption>
           </figure>
+
+          <h1 id="main-content-title">Other Products</h1>
+
+          {/* <div className="other-products">
+        {otherProducts.map((item) => (
+          <figure className="other-products-box" key={item.id}>
+            <img
+              className="other-product-box-img"
+              src={item.imgUrl}
+              alt={item.name}
+            />
+            <figcaption className="other-product-box-caption">
+              <p className="other-product-box-title"> {item.name}</p>
+              <p className="other-product-box-price">£{item.price}</p>
+              <Link to={`/product/${item.name}`}>
+                <img
+                  className="other-product-cart-icon"
+                  src={item.cartImg}
+                  alt="shopping cart icon"
+                />
+              </Link>
+            </figcaption>
+          </figure>
+        ))}
+      </div> */}
         </main>
       </>
     </Layout>
@@ -75,29 +101,33 @@ export default function singleNewProduct(props) {
   );
 }
 
-export async function getStaticProps({ params }) {
-  const { productId } = { ...params };
-  const productData = await handler(
-    `http://localhost:8000/api/product/${productId}`
-  );
-
-  return {
-    props: {
-      productData,
-    },
-    //unstable_revalidate: 1,
-    revalidate: 10,
-  };
-}
 export async function getStaticPaths() {
   const response = await handler(`http://localhost:8000/api/products`);
-  // console.log(response);
+
   const thePaths = response.map((item) => {
-    return { params: { productId: item.name } };
+    return {
+      params: {
+        prodname: item.name.toString(),
+      },
+    };
   });
 
   return {
     paths: thePaths,
     fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { prodname } = { ...params };
+  const productData = await handler(
+    `http://localhost:8000/api/product/${prodname}`
+  );
+
+  return {
+    props: {
+      productData,
+      params,
+    },
   };
 }

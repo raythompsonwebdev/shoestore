@@ -12,7 +12,9 @@ export default function searchProduct(props) {
   const [productInfo, setProductInfo] = useState({ likes: 0 });
 
   const router = useRouter();
+
   const testValues = Object.values(router.query);
+
   const [gender1, color1, style1, size1] = testValues;
 
   console.log(gender1, color1, style1, size1);
@@ -23,12 +25,12 @@ export default function searchProduct(props) {
     <Layout>
       <>
         <Head>
-          <title>Search Product</title>
+          <title>Products</title>
           <meta name="description" content="Search Product - All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Search Product page</h1>
+          <h1 id="main-content-title">Search Products page</h1>
           {product.map((shoes) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <Image

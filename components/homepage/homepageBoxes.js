@@ -8,11 +8,12 @@ export default function HomePageBoxes(props) {
     .slice(0, 8)
     .map((item) => (
       <HomePageBox
-        key={item.prodId}
+        key={item._id}
         name={item.name}
         imgUrl={item.imgUrl}
         price={item.price}
         cartImg={item.cartImg}
+        style={item.style}
       />
     ));
 

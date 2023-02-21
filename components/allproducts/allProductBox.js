@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function productBox(props) {
-  const { imgUrl, name, cartImg, price } = props;
+  const { imgUrl, name, cartImg, price, style } = props;
 
   return (
     <figure className="product-box">
@@ -15,9 +15,9 @@ export default function productBox(props) {
         height={150}
       />
       <figcaption className="product-box-caption">
-        <p className="product-box-title"> {name}</p>
+        <p className="product-box-title"> {style}</p>
         <p className="product-box-price ">£{price}</p>
-        <Link href={`/allproducts/${name}`} className="product-box-icon-link">
+        <Link href={`/product/${name}`} className="product-box-icon-link">
           <Image
             className="product-box-icon"
             src={cartImg}

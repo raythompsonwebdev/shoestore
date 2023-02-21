@@ -8,7 +8,7 @@ export default function newProductBoxes(props) {
     .slice(0, 6)
     .map((item) => (
       <NewProductBox
-        key={item.prodId}
+        key={item._id}
         name={item.name}
         imgUrl={item.imgUrl}
         price={item.price}

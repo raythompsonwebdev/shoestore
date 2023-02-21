@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import AllProductBoxes from "../../components/allproducts/allProductBoxes";

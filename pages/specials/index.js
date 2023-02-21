@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SpecialsProductBoxes from "../../components/specials/specialsProductBoxes";
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";

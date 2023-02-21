@@ -26,10 +26,7 @@ export default function NewProductBox(props) {
         <p className="larger-product-box-text">{text}</p>
         <span className="larger-product-box-price">Price :£ {price}</span>
         <span className="larger-product-box-add-to-cart">
-          <Link
-            href={`/newproducts/${name}`}
-            className="larger-product-box-link"
-          >
+          <Link href={`/product/${name}`} className="larger-product-box-link">
             <Image
               className="larger-product-box-icon"
               src={cartImg}
