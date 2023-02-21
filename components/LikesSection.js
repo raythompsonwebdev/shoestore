@@ -1,11 +1,9 @@
-// import { useEffect } from "react";
+//import { useEffect } from "react";
 
 export default function LikesSection(props) {
   const { likes, productName, setProductInfo } = { ...props };
 
   const likeProduct = async () => {
-    // We don't want the page to refresh
-
     try {
       const response = await fetch(
         `http://localhost:8000/api/product/${productName}/likes`,
@@ -15,17 +13,22 @@ export default function LikesSection(props) {
           headers: {
             "Content-Type": "application/json",
           },
-          //mode: "no-cors",
           body: JSON.stringify({ likes: likes }),
         }
       );
-      // const result = await response.json();
-      console.log(response);
-      //setProductInfo(result);
+      const result = await response.json();
+
+      console.log(result.likes);
+      //return result;
+      setProductInfo({ likes: result.likes });
     } catch (err) {
       console.error("not working : " + err);
     }
   };
+
+  // useEffect(() => {
+  //   likeProduct();
+  // }, []);
 
   return (
     <div id="upvotes-section">

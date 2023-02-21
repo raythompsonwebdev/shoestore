@@ -15,11 +15,17 @@ export default function searchProduct(props) {
 
   const testValues = Object.values(router.query);
 
-  const [gender1, color1, style1, size1] = testValues;
+  const [size1, color1, gender1, style1] = testValues;
 
-  console.log(gender1, color1, style1, size1);
+  console.log(size1, color1, gender1, style1);
 
-  const product = products.filter((product) => product.size === size1);
+  const product = products.filter(
+    (product) =>
+      product.size === size1 &&
+      product.color === color1 &&
+      product.gender === gender1 &&
+      product.style === style1
+  );
 
   return product ? (
     <Layout>

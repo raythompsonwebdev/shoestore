@@ -16,7 +16,7 @@ export default function singleProduct(props) {
 
   const { prodname } = router.query;
 
-  const { name, imgUrl, price, size, style, text, _id } = {
+  const { _id, color, imgUrl, name, price, size, style, text } = {
     ...product,
   };
 
@@ -40,8 +40,9 @@ export default function singleProduct(props) {
             />
             <figcaption id="product-page-caption">
               <p className="product-page-title"> {name}</p>
-              <p id="product -page-price">£{price}</p>
-              <p className="product-page-title">{size}</p>
+              <p id="product-page-price">£{price}</p>
+              <p className="product-page-title">Size : {size}</p>
+              <p className="product-page-title">Color : {color}</p>
               <p>{text}</p>
 
               <LikesSection
@@ -53,7 +54,7 @@ export default function singleProduct(props) {
             </figcaption>
           </figure>
 
-          <h1 id="main-content-title">Other Products</h1>
+          {/* <h1 id="main-content-title">Other Products</h1> */}
 
           {/* <div className="other-products">
         {otherProducts.map((item) => (
