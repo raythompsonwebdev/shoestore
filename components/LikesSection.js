@@ -18,7 +18,7 @@ export default function LikesSection(props) {
       );
       const result = await response.json();
 
-      console.log(result.likes);
+      //console.log(result.likes);
       //return result;
       setProductInfo({ likes: result.likes });
     } catch (err) {

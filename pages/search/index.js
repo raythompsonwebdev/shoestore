@@ -17,7 +17,7 @@ export default function searchProduct(props) {
 
   const [size1, color1, gender1, style1] = testValues;
 
-  console.log(size1, color1, gender1, style1);
+  // console.log(size1, color1, gender1, style1);
 
   const product = products.filter(
     (product) =>
@@ -56,7 +56,7 @@ export default function searchProduct(props) {
 
                 <LikesSection
                   likes={productInfo.likes}
-                  // productName={style}
+                  productName={shoes.name}
                   setProductInfo={setProductInfo}
                 />
               </figcaption>

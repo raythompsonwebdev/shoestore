@@ -27,9 +27,9 @@
   },
   "devDependencies": {
     "bootstrap": "^5.2.3",
-    "eslint": "8.33.0",
+    "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
-    "react-bootstrap": "^2.7.0",
-    "sass": "^1.58.0"
+    "react-bootstrap": "^2.7.2",
+    "sass": "^1.58.3"
   }
 }
