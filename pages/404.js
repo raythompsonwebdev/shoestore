@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Layout from "../components/Layout";
 
 export default function NotFound() {
@@ -14,9 +15,9 @@ export default function NotFound() {
           <h1 className="main-content-title">Oops! Error.</h1>
           <p>
             Click
-            <a href="/" aria-label="go to home page link">
+            <Link href="/" aria-label="go to home page link">
               here
-            </a>
+            </Link>
             to get to Home page
           </p>
         </main>

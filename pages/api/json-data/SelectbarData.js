@@ -1,4 +1,4 @@
-export default [
+const SelectbarData = [
   {
     id: 1,
     name: "all",
@@ -62,3 +62,5 @@ export default [
     ],
   },
 ];
+
+export default SelectbarData;

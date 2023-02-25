@@ -1,4 +1,4 @@
-export default [
+const Accordiandata = [
   {
     id: 0,
     title: "Men's Shoes",
@@ -51,3 +51,5 @@ export default [
     items: ["Bags", "Scarfs", "Belts", "Hats", "More..."],
   },
 ];
+
+export default Accordiandata;

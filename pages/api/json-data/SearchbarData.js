@@ -1,4 +1,4 @@
-export default [
+const SearchbarData = [
   {
     id: 1,
     name: "genders",
@@ -53,3 +53,5 @@ export default [
     ],
   },
 ];
+
+export default SearchbarData;

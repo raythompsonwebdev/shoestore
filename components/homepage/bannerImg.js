@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function BannerImg(props) {
   // const { banner } = { ...props };
@@ -12,54 +13,54 @@ function BannerImg(props) {
       <nav id="front-page-banner-nav">
         <ul id="banner-nav-items">
           <li className="banner-nav-item">
-            <a
+            <Link
               href="/"
               title="Womens's Shoes"
               className="banner-nav-link"
               aria-label="Womens's Shoes"
             >
               Women&apos;s Shoes
-            </a>
+            </Link>
           </li>
           <li className="banner-nav-item">
-            <a
+            <Link
               href="/"
               title="Men's Shoes"
               className="banner-nav-link"
               aria-label="Men's Shoes"
             >
               Men&apos;s Shoes
-            </a>
+            </Link>
           </li>
           <li className="banner-nav-item">
-            <a
+            <Link
               href="/"
               title="Kids's Shoes"
               className="banner-nav-link"
               aria-label="Kids's Shoes"
             >
               Kid&apos;s Shoes
-            </a>
+            </Link>
           </li>
           <li className="banner-nav-item">
-            <a
+            <Link
               href="/"
               title="Bags"
               className="banner-nav-link"
               aria-label="Bags"
             >
               Bags
-            </a>
+            </Link>
           </li>
           <li className="banner-nav-item">
-            <a
+            <Link
               href="/"
               title="Accessories"
               className="banner-nav-link"
               aria-label="Accessories"
             >
               Accessories
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

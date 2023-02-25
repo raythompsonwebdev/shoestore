@@ -8,7 +8,7 @@ import SearchSelect from "../../components/searchSelect/SearchSelect";
 import { handler } from "../api";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function allproducts(props) {
+export default function Allproducts(props) {
   const [accordianData] = useState(props.accordianData);
   const [productData] = useState(props.productData);
   const [searchbarData] = useState(props.searchresults);

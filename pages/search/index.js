@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { handler } from "../api";
 
-export default function searchProduct(props) {
+export default function SearchProduct(props) {
   const [products] = useState(props.productData);
   const [productInfo, setProductInfo] = useState({ likes: 0 });
 
