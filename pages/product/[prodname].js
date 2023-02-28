@@ -53,31 +53,6 @@ export default function SingleProduct(props) {
               />
             </figcaption>
           </figure>
-
-          {/* <h1 id="main-content-title">Other Products</h1> */}
-
-          {/* <div className="other-products">
-        {otherProducts.map((item) => (
-          <figure className="other-products-box" key={item.id}>
-            <img
-              className="other-product-box-img"
-              src={item.imgUrl}
-              alt={item.name}
-            />
-            <figcaption className="other-product-box-caption">
-              <p className="other-product-box-title"> {item.name}</p>
-              <p className="other-product-box-price">£{item.price}</p>
-              <Link to={`/product/${item.name}`}>
-                <img
-                  className="other-product-cart-icon"
-                  src={item.cartImg}
-                  alt="shopping cart icon"
-                />
-              </Link>
-            </figcaption>
-          </figure>
-        ))}
-      </div> */}
         </main>
       </>
     </Layout>

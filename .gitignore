@@ -11,5 +11,10 @@ pages/api/json-data/db-data/
 components/SearchBar/searchbar-components/
 .env
 .next/*
+api-server.js
+auth_config.json
+.env.local
+pages/api/shows.js
+pages/api/likeproduct.js
 
 

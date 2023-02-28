@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 function Header() {
   return (
@@ -16,6 +18,20 @@ function Header() {
   );
 }
 function MainNav() {
+  const { user, error, isLoading } = useUser();
+
+  const [visibility, setVisibility] = useState({ visibility: false });
+
+  const toggleVisibility = (e) => {
+    e.preventDefault();
+    setVisibility(!visibility);
+  };
+
+  const menuToggleFunc = (e) => {
+    e.preventDefault();
+    setVisibility(!visibility);
+  };
+
   return (
     <nav id="main-nav" role="navigation">
       <ul id="inner-nav">
@@ -80,6 +96,105 @@ function MainNav() {
           </Link>
         </li>
       </ul>
+      <ul id="" className={`mobile-nav ${!visibility ? "is-expanded" : " "}`}>
+        <li>
+          <Link
+            href="/"
+            title="Home Page"
+            aria-label="Home Page"
+            onMouseUp={menuToggleFunc}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/newproducts"
+            title="new products page"
+            aria-label="new products page"
+            onMouseUp={menuToggleFunc}
+          >
+            New Products
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/specials"
+            title="specials page"
+            aria-label="specials page"
+            onMouseUp={menuToggleFunc}
+          >
+            Specials
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/allproducts"
+            title="all products page"
+            aria-label="all products page"
+            onMouseUp={menuToggleFunc}
+          >
+            All Products
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/faqs"
+            title="faqs page"
+            aria-label="faqs page"
+            onMouseUp={menuToggleFunc}
+          >
+            FAQS
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/contact"
+            title="contact page"
+            aria-label="contact page"
+            onMouseUp={menuToggleFunc}
+          >
+            Contact
+          </Link>
+        </li>
+      </ul>
+      <span id="signin-box">
+        {isLoading ? <>Loading...</> : false}
+        {user ? (
+          <>
+            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
+            <a href="/api/auth/logout" className="signin-box-link" title="">
+              Logout
+            </a>
+            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
+            <a href="/profile" className="signin-box-link" title="">
+              Profile
+            </a>
+            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
+            <a href="/help" className="signin-box-link" title="">
+              help
+            </a>
+          </>
+        ) : (
+          <>
+            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
+            <a href="/api/auth/login" className="signin-box-link" title="">
+              sign In
+            </a>
+            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
+            <a href="/api/auth/login" className="signin-box-link" title="">
+              account
+            </a>
+            <a href="/help" className="signin-box-link" title="">
+              help
+            </a>
+          </>
+        )}
+      </span>
+
+      <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>
+        MENU
+      </button>
     </nav>
   );
 }
