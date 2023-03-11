@@ -1,0 +1,131 @@
+* html .clearfix {
+  height: 1%;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+caption,
+td,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+a {
+  font-family: $font-list;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: $font-list;
+  font-size: 1em;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  outline: none;
+}
+
+button,
+form {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+
+hr {
+  display: block;
+  clear: both;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
