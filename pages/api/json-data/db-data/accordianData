@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "63e7d08784b8d67ee5ec3ec4"
+  },
+  "id": 0,
+  "title": "Men's Shoes",
+  "items": [
+    "Skate",
+    "Boat",
+    "Formal & Tuxedo",
+    "Loafers & Slip-ons",
+    "Outdoor",
+    "Sandals",
+    "Slippers",
+    "Work & Safety",
+    "Dress"
+  ]
+},{
+  "_id": {
+    "$oid": "63e7d08784b8d67ee5ec3ec5"
+  },
+  "id": 1,
+  "title": "Women's Shoes",
+  "items": [
+    "Skate",
+    "Stillettos",
+    "Fashion Sneakers",
+    "Formal & Tuxedo",
+    "Loafers & Slip-ons",
+    "Outdoor",
+    "Sandals",
+    "Slippers",
+    "Work & Safety",
+    "More..."
+  ]
+},{
+  "_id": {
+    "$oid": "63e7d08784b8d67ee5ec3ec6"
+  },
+  "id": 2,
+  "title": "Kids's Shoes",
+  "items": [
+    "Skate Shoes",
+    "Basketball",
+    "Fashion Sneakers",
+    "Formal & Tuxedo",
+    "Loafers & Slip-ons",
+    "Outdoor",
+    "Sandals",
+    "Slippers",
+    "Work & Safety"
+  ]
+},{
+  "_id": {
+    "$oid": "63e7d08784b8d67ee5ec3ec7"
+  },
+  "id": 3,
+  "title": "Acessories",
+  "items": [
+    "Bags",
+    "Scarfs",
+    "Belts",
+    "Hats",
+    "More..."
+  ]
+}]
