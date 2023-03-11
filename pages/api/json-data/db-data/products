@@ -1,0 +1,359 @@
+[
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3ea6"
+    },
+    "prodId": 1,
+    "name": "trainers",
+    "style": "trainers",
+    "color": "white",
+    "size": "five",
+    "gender": "boy",
+    "imgUrl": "/images/shoe-images/trainers-white-blk-175.png",
+    "price": "40.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3ea7"
+    },
+    "prodId": 2,
+    "name": "fur-lined boots",
+    "style": "boots",
+    "color": "brown",
+    "size": "eight",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/ladies-fur-lined-boots-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3ea8"
+    },
+    "prodId": 3,
+    "name": "skate-shoe",
+    "style": "skate-shoe",
+    "color": "beige",
+    "size": "seven",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/skate-shoes-beige-175.png",
+    "price": "90.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3ea9"
+    },
+    "prodId": 4,
+    "name": "high-heels",
+    "style": "high-heels",
+    "color": "beige",
+    "size": "seven",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/ladies-high-heels-175.png",
+    "price": "70.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eaa"
+    },
+    "prodId": 5,
+    "name": "laced-shoe",
+    "style": "laced-shoe",
+    "color": "brown",
+    "size": "five",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/ladies-laced-shoes-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eab"
+    },
+    "prodId": 6,
+    "name": "stilletos",
+    "style": "stilletos",
+    "color": "red",
+    "size": "six",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/ladies-shoes-red-stilleto-175.png",
+    "price": "40.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eac"
+    },
+    "prodId": 7,
+    "name": "ballet-shoe",
+    "style": "ballet-shoe",
+    "color": "red",
+    "size": "six",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/red-slipper-shoes-175.png",
+    "price": "70.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3ead"
+    },
+    "prodId": 8,
+    "name": "hiking-boots",
+    "style": "boots",
+    "color": "brown",
+    "size": "seven",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/ladies-hiking-boots-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eae"
+    },
+    "prodId": 9,
+    "name": "mens-boots",
+    "style": "boots",
+    "color": "brown",
+    "size": "six",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/men-boots-175.png",
+    "price": "40.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eaf"
+    },
+    "prodId": 10,
+    "name": "dress-shoe",
+    "style": "dress-shoe",
+    "color": "brown",
+    "size": "six",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/mens-dress-shoes-175.png",
+    "price": "90.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb0"
+    },
+    "prodId": 11,
+    "name": "laced-shoe",
+    "style": "laced-shoe",
+    "color": "beige",
+    "size": "eight",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/mens-laced-shoes-175.png",
+    "price": "90.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb1"
+    },
+    "prodId": 12,
+    "name": "skate-shoe",
+    "style": "skate-shoe",
+    "color": "blue",
+    "size": "seven",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/skate-shoes-blue-175.png",
+    "price": "70.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb2"
+    },
+    "prodId": 13,
+    "name": "basketballshoe",
+    "style": "trainers",
+    "color": "white",
+    "size": "nine",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/mens-trainers-black-175.png",
+    "price": "90.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb3"
+    },
+    "prodId": 14,
+    "name": "basketballshoe",
+    "style": "trainers",
+    "color": "grey",
+    "size": "eight",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/trainers-grey-175.png",
+    "price": "40.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb4"
+    },
+    "prodId": 15,
+    "name": "trainers",
+    "style": "trainers",
+    "color": "red",
+    "size": "seven",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/trainers-red-175.png",
+    "price": "70.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb5"
+    },
+    "prodId": 16,
+    "name": "running shoe",
+    "style": "trainers",
+    "color": "pink",
+    "size": "six",
+    "gender": "girl",
+    "imgUrl": "/images/shoe-images/trainers-pink-blue-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb6"
+    },
+    "prodId": 17,
+    "name": "running shoe",
+    "style": "trainers",
+    "color": "blue",
+    "size": "six",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/trainers-light-blue-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb7"
+    },
+    "prodId": 18,
+    "name": "running shoe",
+    "style": "trainers",
+    "color": "black",
+    "size": "seven",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/trainers-running-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb8"
+    },
+    "prodId": 19,
+    "name": "mens-loafers",
+    "style": "loafers",
+    "color": "blue",
+    "size": "seven",
+    "gender": "men",
+    "imgUrl": "/images/shoe-images/mens-loafers-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eb9"
+    },
+    "prodId": 20,
+    "name": "running shoe",
+    "style": "trainers",
+    "color": "white",
+    "size": "seven",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/trainers-white-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  },
+  {
+    "_id": {
+      "$oid": "63e7ceb484b8d67ee5ec3eba"
+    },
+    "prodId": 21,
+    "name": "running shoe",
+    "style": "trainers",
+    "color": "grey",
+    "size": "seven",
+    "gender": "women",
+    "imgUrl": "/images/shoe-images/trainers-grey-white-175.png",
+    "price": "80.00",
+    "cartImg": "/images/shoppingcart.png",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elitReiciendis nobis eius error, animi iusto est voluptates,ipsa autem asperiores culpa.",
+    "all": "all",
+    "likes": 0
+  }
+]
