@@ -1,27 +1,33 @@
+import { useState } from "react";
+
 export default function ContactForm() {
-  // const handleUserName = (e) => {
-  //   setUserName(e.target.value);
-  // };
+  const [username, setUserName] = useState(" ");
+  const [email, setEmail] = useState(" ");
+  const [comments, setComments] = useState(" ");
 
-  // const handleEmails = (e) => {
-  //   setEmail(e.target.value);
-  // };
+  const handleUserName = (e) => {
+    setUserName(e.target.value);
+  };
 
-  // const handleComments = (e) => {
-  //   setComments(e.target.value);
-  // };
+  const handleEmails = (e) => {
+    setEmail(e.target.value);
+  };
 
-  // const submit = (e) => {
-  //   // eslint-disable-next-line no-console
-  //   console.log(
-  //     // eslint-disable-next-line react/destructuring-assignment
-  //     `You have entered Username:${username}, Email: ${email} & This comment: ${comments}. This form is under maintenance and will be ready to use shortly`
-  //   );
-  //   e.preventDefault();
-  // };
+  const handleComments = (e) => {
+    setComments(e.target.value);
+  };
+
+  const submit = (e) => {
+    // eslint-disable-next-line no-console
+    console.log(
+      // eslint-disable-next-line react/destructuring-assignment
+      `You have entered Username:${username}, Email: ${email} & This comment: ${comments}. This form is under maintenance and will be ready to use shortly`
+    );
+    e.preventDefault();
+  };
 
   return (
-    <form id="contact-form">
+    <form id="contact-form" onSubmit={submit}>
       <ul id="contact-form-fields">
         <li className="contact-form-item">
           <label htmlFor="username">
@@ -30,8 +36,8 @@ export default function ContactForm() {
               type="text"
               name="username"
               id="username"
-              // value={username}
-              // onChange={handleUserName}
+              value={username}
+              onChange={handleUserName}
               required
             />
           </label>
@@ -43,8 +49,8 @@ export default function ContactForm() {
               type="email"
               name="email"
               id="email"
-              //value={email}
-              //onChange={handleEmails}
+              value={email}
+              onChange={handleEmails}
               required
             />
           </label>
@@ -53,8 +59,8 @@ export default function ContactForm() {
           <label htmlFor="message">
             Message:&#32;
             <textarea
-              //value={comments}
-              //onChange={handleComments}
+              value={comments}
+              onChange={handleComments}
               name="message"
               id="message"
               rows="5"

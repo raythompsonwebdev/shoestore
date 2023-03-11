@@ -5,8 +5,6 @@ import BannerImg from "../components/homepage/bannerImg";
 import HomePageBoxes from "../components/homepage/homepageBoxes";
 import AccordianMenu from "../components/accordianMenu";
 import FindShoes from "../components/homepage/FindShoes";
-// import productData from "./api/json-data/Productdata";
-// import accordian from "./api/json-data/Accordiondata.js";
 import { handler } from "./api";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -47,7 +45,6 @@ export default function Home(props) {
           </aside>
 
           <section id="right-content-section" className="group">
-            {/* <BannerImg banner={banner} /> */}
             <BannerImg />
 
             <h1 id="right-content-section-header">Featured</h1>

@@ -6,6 +6,16 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   poweredByHeader: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "s.gravatar.com",
+        port: "",
+        pathname: "/avatar/**",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
