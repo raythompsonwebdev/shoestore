@@ -36,12 +36,6 @@ The page will reload when you make changes. You may also see any lint errors in 
 
 Runs next build to build the application for production usage
 
-It correctly bundles Next.js in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-
-Your app is ready to be deployed!
-
 `npm run start`
 
 Runs next start to start a Next.js production server
