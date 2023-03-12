@@ -16,35 +16,37 @@ Open package.json and add the following scripts:
 
 ```
 "scripts": {
-"dev": "next dev",
-"build": "next build",
-"start": "next start",
-"lint": "next lint"
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
 }
 
 ```
 
-### `npm run dev`
+`npm run dev`
 
-Runs next dev to start Next.js in development mode\
+Runs next dev to start Next.js in development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload when you make changes. You may also see any lint errors in the console.
 
-### `npm run build`
+`npm run build`
 
 Runs next build to build the application for production usage
+
 It correctly bundles Next.js in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.
+
 Your app is ready to be deployed!
 
-### `npm run start`
+`npm run start`
 
 Runs next start to start a Next.js production server
 
-### `npm run lint`
+`npm run lint`
 
 Runs next lint to set up Next.js' built-in ESLint configuration
 
@@ -52,4 +54,4 @@ Runs next lint to set up Next.js' built-in ESLint configuration
 
 You can learn more in the [Next.js documentation](https://nextjs.org/docs/getting-started).
 
-To learn React, check out the [Next.js documentation](https://nextjs.org/).
+To learn Next.js, check out the [Next.js documentation](https://nextjs.org/).
