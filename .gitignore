@@ -16,5 +16,6 @@ auth_config.json
 .env.local
 pages/api/shows.js
 pages/api/likeproduct.js
+components/Basket.js
 
 

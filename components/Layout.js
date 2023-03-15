@@ -14,6 +14,23 @@ function Header() {
           alt="shoe-store-logo"
         />
       </figure>
+
+      {/* <div>
+        <a href="#/">
+          <h1>Small Shopping Cart</h1>
+        </a>
+      </div>
+      <div>
+        <a href="#/cart">
+          Cart{' '}
+          {props.countCartItems ? (
+            <button className="badge">{props.countCartItems}</button>
+          ) : (
+            ''
+          )}
+        </a>{' '}
+        <a href="#/signin"> SignIn</a>
+      </div> */}
     </header>
   );
 }
@@ -171,8 +188,8 @@ function MainNav() {
               Profile
             </a>
             {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/help" className="signin-box-link" title="">
-              help
+            <a href="/cart" className="signin-box-link" title="">
+              Cart
             </a>
           </>
         ) : (

@@ -8,6 +8,8 @@ import { useRouter } from "next/router";
 import { handler } from "../api";
 
 export default function SingleProduct(props) {
+  // const { product, onAdd } = props;
+
   const [product] = useState(props.productData);
 
   const [productInfo, setProductInfo] = useState({ likes: 0 });
@@ -51,6 +53,8 @@ export default function SingleProduct(props) {
                 setProductInfo={setProductInfo}
                 prodid={_id}
               />
+
+              {/* <button onClick={() => onAdd(product)}>Add To Cart</button> */}
             </figcaption>
           </figure>
         </main>

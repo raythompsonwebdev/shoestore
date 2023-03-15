@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function NewProductBox(props) {
   const { imgUrl, name, cartImg, price, text } = props;
   const myComponentStyle = {
-    backgroundImage: "url('../static/media/product_headline_bg.png')",
+    backgroundImage: "url('/images/product_headline_bg.png')",
     backgroundPosition: "0% 50%",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
