@@ -2,6 +2,7 @@
   "name": "shoestore",
   "version": "0.2.0",
   "proxy": "http://localhost:8000",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,16 +19,20 @@
   ],
   "dependencies": {
     "@auth0/nextjs-auth0": "^2.2.1",
+    "mongodb": "^5.2.0",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "swr": "^2.0.3"
   },
   "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
     "bootstrap": "^5.2.3",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "react-bootstrap": "^2.7.2",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "typescript": "^5.0.4"
   }
 }
