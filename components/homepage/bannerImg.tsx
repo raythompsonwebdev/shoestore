@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function BannerImg(props) {
-  // const { banner } = { ...props };
+function BannerImg() {
   return (
     <section id="front-page-banner">
       <hgroup>
@@ -66,7 +65,6 @@ function BannerImg(props) {
       </nav>
 
       <figure id="front-page-banner-img">
-        {/* <img src={banner} alt="shoestore-banner" /> */}
         <Image
           src="/images/bannerimage.jpg"
           width={500}

@@ -2,7 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function productBox(props) {
+export default function SpecialsproductBox(props: {
+  imgUrl: any;
+  name: any;
+  cartImg: any;
+  price: any;
+  style: any;
+}) {
   const { imgUrl, name, cartImg, price, style } = props;
 
   return (

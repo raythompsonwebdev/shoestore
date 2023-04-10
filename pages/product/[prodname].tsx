@@ -1,16 +1,52 @@
 import { useState } from "react";
+import clientPromise from "../../lib/mongodb";
+import { InferGetServerSidePropsType } from "next";
 import LikesSection from "../../components/LikesSection";
-// import NotFound from "./NotFound";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { handler } from "../api";
+// import { handler } from "../api";
 
-export default function SingleProduct(props) {
-  // const { product, onAdd } = props;
+export const getServerSideProps = async (context: any) => {
+  try {
+    //await clientPromise
+    // `await clientPromise` will use the default database passed in the MONGODB_URI
+    // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
+    //
+    const productName = context.query.prodname;
+    console.log(productName);
 
-  const [product] = useState(props.productData);
+    const client = await clientPromise;
+    const db = client.db("shoestore");
+    //
+    // Then you can execute queries against your database like so:
+    // db.find({}) or any of the MongoDB Node Driver commands
+
+    const results = await db
+      .collection("products")
+      .findOne({ name: productName });
+
+    const product = JSON.parse(JSON.stringify(results));
+
+    return {
+      props: {
+        product,
+      },
+    };
+  } catch (e) {
+    console.error(e);
+    return {
+      props: { isConnected: false },
+    };
+  }
+};
+
+export default function SingleProduct({
+  product,
+  isConnected,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const [singleProduct] = useState(product);
 
   const [productInfo, setProductInfo] = useState({ likes: 0 });
 
@@ -18,11 +54,11 @@ export default function SingleProduct(props) {
 
   const { prodname } = router.query;
 
-  const { _id, color, imgUrl, name, price, size, style, text } = {
-    ...product,
+  const { _id, color, imgUrl, name, price, size, style, text }: any = {
+    ...singleProduct,
   };
 
-  return product ? (
+  return singleProduct ? (
     <Layout>
       <>
         <Head>
@@ -81,33 +117,19 @@ export default function SingleProduct(props) {
   );
 }
 
-export async function getStaticPaths() {
-  const response = await handler(`http://localhost:8000/api/products`);
+// export async function getStaticPaths() {
+//   const response = await handler(`http://localhost:8000/api/products`);
 
-  const thePaths = response.map((item) => {
-    return {
-      params: {
-        prodname: item.name.toString(),
-      },
-    };
-  });
+//   const thePaths = response.map((item: { name: { toString: () => any; }; }) => {
+//     return {
+//       params: {
+//         prodname: item.name.toString(),
+//       },
+//     };
+//   });
 
-  return {
-    paths: thePaths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const { prodname } = { ...params };
-  const productData = await handler(
-    `http://localhost:8000/api/product/${prodname}`
-  );
-
-  return {
-    props: {
-      productData,
-      params,
-    },
-  };
-}
+//   return {
+//     paths: thePaths,
+//     fallback: false,
+//   };
+// }

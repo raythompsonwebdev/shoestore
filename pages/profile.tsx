@@ -29,7 +29,7 @@ export default function Profile() {
             <main id="main-inner-content" className="group">
               <span className="context_title">
                 <Image
-                  src={user.picture}
+                  src={`${user.picture}`}
                   alt="Profile"
                   width="50"
                   height="50"

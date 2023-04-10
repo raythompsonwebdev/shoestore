@@ -1,23 +1,23 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 export default function ContactForm() {
   const [username, setUserName] = useState(" ");
   const [email, setEmail] = useState(" ");
   const [comments, setComments] = useState(" ");
 
-  const handleUserName = (e) => {
+  const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
     setUserName(e.target.value);
   };
 
-  const handleEmails = (e) => {
+  const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
     setEmail(e.target.value);
   };
 
-  const handleComments = (e) => {
+  const handleComments = (e: { target: { value: SetStateAction<string> } }) => {
     setComments(e.target.value);
   };
 
-  const submit = (e) => {
+  const submit = (e: { preventDefault: () => void }) => {
     // eslint-disable-next-line no-console
     console.log(
       // eslint-disable-next-line react/destructuring-assignment
@@ -63,7 +63,7 @@ export default function ContactForm() {
               onChange={handleComments}
               name="message"
               id="message"
-              rows="5"
+              rows={5}
             />
           </label>
         </li>
