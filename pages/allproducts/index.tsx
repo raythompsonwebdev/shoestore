@@ -51,14 +51,13 @@ export default function Allproducts({
   selectresults,
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [accordianData] = useState(accordian);
-  const [productData] = useState(product);
-  const [searchbarData] = useState(searchresults);
-  const [selectbarData] = useState(selectresults);
-  const [orderDir, setOrderByDir] = useState("asc");
-  const [OrderByVal, setOrderByVal] = useState("all");
-  const [visibility, setVisibility] = useState(false);
-  // const [lastIndex, setLastIndex] = useState(0);
+  const [accordianData] = useState<Array<any>>(accordian);
+  const [productData] = useState<Array<any>>(product);
+  const [searchbarData] = useState<Array<any>>(searchresults);
+  const [selectbarData] = useState<Array<any>>(selectresults);
+  const [orderDir, setOrderByDir] = useState<string>("asc");
+  const [OrderByVal, setOrderByVal] = useState<string>("all");
+  const [visibility, setVisibility] = useState<boolean>(false);
 
   const handleChange = (selectedSize: SetStateAction<string>) => {
     setOrderByVal(selectedSize);

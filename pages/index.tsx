@@ -50,9 +50,9 @@ export default function Home({
   accordian,
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [accordianData] = useState(accordian);
-  const [productData] = useState(product);
-  const [visibility, setVisibility] = useState(false);
+  const [accordianData] = useState<Array<any>>(accordian);
+  const [productData] = useState<Array<any>>(product);
+  const [visibility, setVisibility] = useState<boolean>(false);
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
     e.preventDefault();

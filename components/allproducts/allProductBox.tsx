@@ -1,13 +1,13 @@
-// import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
+import { Key } from "react";
 
 export default function productBox(props: {
-  imgUrl: any;
-  name: any;
-  cartImg: any;
-  price: any;
-  style: any;
+  imgUrl: Key | null | undefined;
+  name: string;
+  cartImg: string;
+  price: string;
+  style: string;
 }) {
   const { imgUrl, name, cartImg, price, style } = props;
 
@@ -15,7 +15,7 @@ export default function productBox(props: {
     <figure className="product-box">
       <Image
         className="product-box-img"
-        src={imgUrl}
+        src={`${imgUrl}`}
         alt={name}
         width={175}
         height={150}

@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import { Key } from "react";
 import NewProductBox from "./newProductBox";
 
 export default function newProductBoxes(props: { productData: any }) {
@@ -8,12 +8,12 @@ export default function newProductBoxes(props: { productData: any }) {
     .slice(0, 6)
     .map(
       (item: {
-        _id: any;
-        name: any;
-        imgUrl: any;
-        price: any;
-        cartImg: any;
-        text: any;
+        _id: Key | null | undefined;
+        name: string;
+        imgUrl: string;
+        price: string;
+        cartImg: string;
+        text: string;
       }) => (
         <NewProductBox
           key={item._id}
@@ -28,16 +28,3 @@ export default function newProductBoxes(props: { productData: any }) {
 
   return <div className="larger-product-boxes">{NewProduct}</div>;
 }
-
-// newProductBoxes.defaultProps = {
-//   productData: [],
-// };
-
-// newProductBoxes.propTypes = {
-//   productData: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       name: PropTypes.string,
-//       prodId: PropTypes.number,
-//     })
-//   ),
-// };

@@ -1,13 +1,12 @@
-//import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function NewProductBox(props: {
-  imgUrl: any;
-  name: any;
-  cartImg: any;
-  price: any;
-  text: any;
+  imgUrl: string;
+  name: string;
+  cartImg: string;
+  price: string;
+  text: string;
 }) {
   const { imgUrl, name, cartImg, price, text } = props;
   const myComponentStyle = {
@@ -47,11 +46,3 @@ export default function NewProductBox(props: {
     </figure>
   );
 }
-
-// NewProductBox.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   imgUrl: PropTypes.string.isRequired,
-//   price: PropTypes.string.isRequired,
-//   cartImg: PropTypes.string.isRequired,
-//   text: PropTypes.string.isRequired,
-// };

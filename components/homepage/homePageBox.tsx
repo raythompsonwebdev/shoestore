@@ -1,14 +1,13 @@
-// import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
 
-function FrontPageBox(props: {
-  imgUrl: any;
-  name: any;
-  cartImg: any;
-  price: any;
-  style: any;
-}) {
+const FrontPageBox = (props: {
+  imgUrl: string;
+  name: string;
+  cartImg: string;
+  price: string;
+  style: string;
+}) => {
   const { imgUrl, name, cartImg, price, style } = props;
 
   return (
@@ -35,13 +34,6 @@ function FrontPageBox(props: {
       </figcaption>
     </figure>
   );
-}
-
-// FrontPageBox.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   imgUrl: PropTypes.string.isRequired,
-//   price: PropTypes.string.isRequired,
-//   cartImg: PropTypes.string.isRequired,
-// };
+};
 
 export default FrontPageBox;

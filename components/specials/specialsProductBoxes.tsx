@@ -10,11 +10,11 @@ export default function SpecialsProductBoxes(props: { productData: any }) {
     .map(
       (item: {
         _id: Key | null | undefined;
-        name: any;
-        imgUrl: any;
-        price: any;
-        cartImg: any;
-        style: any;
+        name: string;
+        imgUrl: string;
+        price: string;
+        cartImg: string;
+        style: string;
       }) => (
         <ProductBox
           key={item._id}
@@ -29,8 +29,3 @@ export default function SpecialsProductBoxes(props: { productData: any }) {
 
   return <div className="product-boxes">{Product}</div>;
 }
-
-// ProductBoxes.propTypes = {
-//   // eslint-disable-next-line react/forbid-prop-types
-//   productData: PropTypes.array.isRequired,
-// };

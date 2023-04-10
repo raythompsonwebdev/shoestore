@@ -1,5 +1,3 @@
-//import { useEffect } from "react";
-
 /**
  * @param {any} props
  */

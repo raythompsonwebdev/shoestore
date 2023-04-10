@@ -1,18 +1,16 @@
-//import PropTypes from "prop-types";
-
 import { Key } from "react";
 
 export default function SearchSelect(props: {
   selectBarData: any;
   changesOrders: any;
   handleChange: any;
-  orderByVal: any;
-  orderDir: any;
+  orderByVal: string;
+  orderDir: string;
 }) {
   const { selectBarData, changesOrders, handleChange, orderByVal, orderDir } =
     props;
 
-  function onItemChange(evt: { target: { value: any } }) {
+  function onItemChange(evt: { target: { value: string } }) {
     handleChange(evt.target.value);
     changesOrders(evt.target.value, orderDir);
   }
@@ -47,19 +45,3 @@ export default function SearchSelect(props: {
     </form>
   );
 }
-
-// Selector.defaultProps = {
-//   // orderByVal: " ",
-//   // orderDir: " ",
-//   selectData: [],
-//   handleChange: " ",
-//   changesOrders: " ",
-// };
-
-// Selector.propTypes = {
-//   // orderByVal: PropTypes.string,
-//   // orderDir: PropTypes.string,
-//   selectData: PropTypes.arrayOf(PropTypes.object),
-//   changesOrders: PropTypes.func,
-//   handleChange: PropTypes.func,
-// };
