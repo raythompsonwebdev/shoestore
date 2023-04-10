@@ -4,7 +4,7 @@
  * @param {any} props
  */
 export default function LikesSection(props: any) {
-  const { likes, setProductInfo }: any = { ...props };
+  const { likes, productName, setProductInfo }: any = { ...props };
 
   const likeProduct = async () => {
     try {
@@ -13,11 +13,13 @@ export default function LikesSection(props: any) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ likes: likes }),
+        body: JSON.stringify({ likes: likes, product: productName }),
       });
-      //const result = await response.json();
+      const result = await response.json();
 
-      //setProductInfo({ likes: result.likes });
+      console.log(result);
+
+      setProductInfo({ likes: result.likes });
     } catch (err) {
       console.error("not working : " + err);
     }
