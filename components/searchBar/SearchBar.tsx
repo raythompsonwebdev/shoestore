@@ -9,7 +9,14 @@ import {
   SelectSize,
 } from "./SearchBarData";
 
-export default function SearchBar(props) {
+export default function SearchBar(props: {
+  changesOrders: any;
+  handleChange: any;
+  labelname: any;
+  orderByVal: any;
+  orderDir: any;
+  searchData: any;
+}) {
   const {
     changesOrders,
     handleChange,
@@ -27,25 +34,25 @@ export default function SearchBar(props) {
   const [colorVal, setColorVal] = useState(" ");
 
   // eslint-disable-next-line func-style
-  const genderHandler = (event) => {
+  const genderHandler = (event: { target: any }) => {
     const { target } = event;
     const { value } = target;
     setGenderVal(value);
   };
   // eslint-disable-next-line func-style
-  const styleHandler = (event) => {
+  const styleHandler = (event: { target: any }) => {
     const { target } = event;
     const { value } = target;
     setStyleVal(value);
   };
   // eslint-disable-next-line func-style
-  const sizeHandler = (event) => {
+  const sizeHandler = (event: { target: any }) => {
     const { target } = event;
     const { value } = target;
     setSizeVal(value);
   };
   // eslint-disable-next-line func-style
-  const colorHandler = (event) => {
+  const colorHandler = (event: { target: any }) => {
     const { target } = event;
     const { value } = target;
     setColorVal(value);
@@ -54,7 +61,7 @@ export default function SearchBar(props) {
   const resultArray = [genderVal, styleVal, sizeVal, colorVal];
 
   // eslint-disable-next-line func-style
-  const submit = (event) => {
+  const submit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
 
     // router.push("/search");

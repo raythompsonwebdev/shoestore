@@ -1,45 +1,41 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-// import clientPromise from "../../lib/mongodb";
+import clientPromise from "../../lib/mongodb";
 
-export async function likeproduct(req: NextApiRequest, res: NextApiResponse) {
-  console.log(req, res);
-  const body = req.body;
-  // const productName = req.params.name;
-  console.log(body);
+export default async function likeproduct(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { likes, product } = req.body;
 
-  // `http://localhost:8000/api/product/${productName}/likes`,
   if (req.method !== "POST") {
     res.status(405).send({ message: "Only POST requests allowed" });
     return;
   }
 
-  // try {
-  //   const client = await clientPromise;
-  //   const db = client.db("shoestore");
-  //   //
-  //   // Then you can execute queries against your database like so:
-  //   // db.find({}) or any of the MongoDB Node Driver commands
+  try {
+    const client = await clientPromise;
+    const db = client.db("shoestore");
 
-  //   const productsInfo = await db
-  //     .collection("products")
-  //     .findOne({ name: body });
+    const productsInfo = await db
+      .collection("products")
+      .findOne({ name: product });
 
-  //   await db.collection("products").updateOne(
-  //     { name: body },
-  //     {
-  //       $set: {
-  //         likes: body + 1,
-  //       },
-  //     }
-  //   );
+    // The optional chaining operator (?.)-fixes object is possible null error for productsInfo variable. The non-null assertion operator (!.) or the nullish coalescing operator (??) & if (typeof myName === 'string').
+    await db.collection("products").updateOne(
+      { name: product },
+      {
+        $set: {
+          likes: productsInfo?.likes + 1,
+        },
+      }
+    );
 
-  //   const updatedProductInfo = await db
-  //     .collection("products")
-  //     .findOne({ name: body });
-  //   res.status(200).json(updatedProductInfo);
-  // } catch (err) {
-  //   console.log(err);
-  // }
+    const updatedProductInfo = await db
+      .collection("products")
+      .findOne({ name: product });
 
-  res.status(200).send(body);
+    res.status(200).json(updatedProductInfo);
+  } catch (err) {
+    console.log(err);
+  }
 }

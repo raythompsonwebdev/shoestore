@@ -3,10 +3,7 @@ files/
 build/
 public/images/
 public/images/original-images/
-public/static/images/moreshoes/
 public/font/
-public/static/media/
-public/static/data/
 pages/api/json-data/db-data/
 components/SearchBar/searchbar-components/
 .env
@@ -14,9 +11,9 @@ components/SearchBar/searchbar-components/
 api-server.js
 auth_config.json
 .env.local
-pages/api/shows.js
-pages/api/likeproduct.js
-components/Basket.js
+pages/api/shows.tsx
+pages/api/index.ts
+components/Basket.tsx
 next-env.d.ts
 
 
