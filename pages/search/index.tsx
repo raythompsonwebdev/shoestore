@@ -6,9 +6,9 @@ import { InferGetServerSidePropsType } from "next";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-// import { handler } from "../api";
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context: any) => {
+  console.log(context.query.resultArray);
   try {
     //await clientPromise
     // `await clientPromise` will use the default database passed in the MONGODB_URI
@@ -51,22 +51,24 @@ export default function SearchProduct({
 
   const router = useRouter();
 
+  // returns array with form values at position 0 within an array
   const testValues = Object.values(router.query);
 
-  const [size1, color1, gender1, style1] = testValues;
+  // get array with values out of array
+  const testValuesArr = testValues[0];
+
+  // deconstruct array
+  const [size1, color1, gender1, style1]: any = testValuesArr;
 
   const product = products.filter(
-    (product: {
-      size: string | string[] | undefined;
-      color: string | string[] | undefined;
-      gender: string | string[] | undefined;
-      style: string | string[] | undefined;
-    }) =>
+    (product: any) =>
       product.size === size1 &&
       product.color === color1 &&
       product.gender === gender1 &&
       product.style === style1
   );
+
+  console.log(product);
 
   return product ? (
     <Layout>

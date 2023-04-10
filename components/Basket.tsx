@@ -1,8 +1,15 @@
-import React from 'react';
+import React from "react";
 
-export default function Basket(props) {
+export default function Basket(props: {
+  cartItems: any;
+  onAdd: any;
+  onRemove: any;
+}) {
   const { cartItems, onAdd, onRemove } = props;
-  const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
+  const itemsPrice = cartItems.reduce(
+    (a: number, c: { qty: number; price: number }) => a + c.qty * c.price,
+    0
+  );
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
@@ -11,23 +18,52 @@ export default function Basket(props) {
       <h2>Cart Items</h2>
       <div>
         {cartItems.length === 0 && <div>Cart is empty</div>}
-        {cartItems.map((item) => (
-          <div key={item.id} className="row">
-            <div className="col-2">{item.name}</div>
-            <div className="col-2">
-              <button onClick={() => onRemove(item)} className="remove">
-                -
-              </button>{' '}
-              <button onClick={() => onAdd(item)} className="add">
-                +
-              </button>
-            </div>
+        {cartItems.map(
+          (item: {
+            id: React.Key | null | undefined;
+            name:
+              | string
+              | number
+              | boolean
+              | React.ReactElement<
+                  any,
+                  string | React.JSXElementConstructor<any>
+                >
+              | React.ReactFragment
+              | React.ReactPortal
+              | null
+              | undefined;
+            qty:
+              | string
+              | number
+              | boolean
+              | React.ReactElement<
+                  any,
+                  string | React.JSXElementConstructor<any>
+                >
+              | React.ReactFragment
+              | React.ReactPortal
+              | null
+              | undefined;
+            price: number;
+          }) => (
+            <div key={item.id} className="row">
+              <div className="col-2">{item.name}</div>
+              <div className="col-2">
+                <button onClick={() => onRemove(item)} className="remove">
+                  -
+                </button>{" "}
+                <button onClick={() => onAdd(item)} className="add">
+                  +
+                </button>
+              </div>
 
-            <div className="col-2 text-right">
-              {item.qty} x ${item.price.toFixed(2)}
+              <div className="col-2 text-right">
+                {item.qty} x ${item.price.toFixed(2)}
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
 
         {cartItems.length !== 0 && (
           <>
@@ -57,7 +93,7 @@ export default function Basket(props) {
             </div>
             <hr />
             <div className="row">
-              <button onClick={() => alert('Implement Checkout!')}>
+              <button onClick={() => alert("Implement Checkout!")}>
                 Checkout
               </button>
             </div>
