@@ -6,18 +6,14 @@ import Layout from "../../components/Layout";
 import NewProductBoxes from "../../components/newProduct/newProductBoxes";
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";
-import { handler } from "../api";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const getServerSideProps = async () => {
   try {
     //await clientPromise
-    // `await clientPromise` will use the default database passed in the MONGODB_URI
-    // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
-    //
     const client = await clientPromise;
     const db = client.db("shoestore");
-    //
+
     // Then you can execute queries against your database like so:
     // db.find({}) or any of the MongoDB Node Driver commands
 

@@ -72,6 +72,7 @@ export default function SearchBar(props: {
   };
 
   const [gender, style, size, color] = searchData;
+  const aria = "search-category-label";
 
   return (
     <aside id="search-category">
@@ -80,42 +81,38 @@ export default function SearchBar(props: {
           <legend id="search-category-label">{labelname}</legend>
           <SelectGender
             name="genderVal"
-            className="search-category-input"
             genders={gender}
             value={genderVal}
             genderHandler={genderHandler}
-            aria-labelledby="search-category-label"
+            aria={aria}
           />
 
           <SelectStyle
             name="styleVal"
-            className="search-category-input"
             styles={style}
             value={styleVal}
             styleHandler={styleHandler}
-            aria-labelledby="search-category-label"
+            arialabelledby={aria}
           />
 
           <SelectSize
             name="sizeVal"
-            className="search-category-input"
             sizes={size}
             value={sizeVal}
             sizeHandler={sizeHandler}
-            aria-labelledby="search-category-label"
+            aria={aria}
           />
           <SelectColor
             name="colorVal"
-            className="search-category-input"
             colors={color}
             value={colorVal}
             colorHandler={colorHandler}
-            aria-labelledby="search-category-label"
+            aria={aria}
           />
           <Link
             href={{
               pathname: "/search",
-              query: resultArray,
+              query: { resultArray },
             }}
             className="search-category-btn"
             type="submit"
