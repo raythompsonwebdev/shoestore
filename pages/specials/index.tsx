@@ -8,19 +8,13 @@ import SearchSelect from "../../components/searchSelect/SearchSelect";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { handler } from "../api";
 
 export const getServerSideProps = async (context: any) => {
   try {
     //await clientPromise
-    // `await clientPromise` will use the default database passed in the MONGODB_URI
-    // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
-    //
+
     const client = await clientPromise;
     const db = client.db("shoestore");
-    //
-    // Then you can execute queries against your database like so:
-    // db.find({}) or any of the MongoDB Node Driver commands
 
     const results = await db.collection("products").find({}).toArray();
     const resultstwo = await db.collection("accordianData").find({}).toArray();
@@ -58,14 +52,13 @@ export default function Specials({
   selectresults,
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [accordianData] = useState(accordian);
-  const [productData] = useState(product);
-  const [searchBarData] = useState(searchresults);
-  const [selectBarData] = useState(selectresults);
-  const [OrderDir, setOrderByDir] = useState("asc");
-  const [OrderByVal, setOrderByVal] = useState("all");
-  const [visibility, setVisibility] = useState(false);
-  // const [lastIndex, setLastIndex] = useState(0);
+  const [accordianData] = useState<Array<any>>(accordian);
+  const [productData] = useState<Array<any>>(product);
+  const [searchBarData] = useState<Array<any>>(searchresults);
+  const [selectBarData] = useState<Array<any>>(selectresults);
+  const [OrderDir, setOrderByDir] = useState<string>("asc");
+  const [OrderByVal, setOrderByVal] = useState<string>("all");
+  const [visibility, setVisibility] = useState<boolean>(false);
 
   const handleChange = (selected: SetStateAction<string>) => {
     setOrderByVal(selected);

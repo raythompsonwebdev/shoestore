@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Link from "next/link";
 import {
@@ -10,36 +9,35 @@ import {
 
 export default function SearchBar(props: {
   labelname: string;
-  searchData: any;
+  searchData: Array<any>;
 }) {
   const { labelname, searchData } = props;
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const [genderVal, setGenderVal] = useState(" ");
-  const [sizeVal, setSizeVal] = useState(" ");
-  const [styleVal, setStyleVal] = useState(" ");
-  const [colorVal, setColorVal] = useState(" ");
+  const [genderVal, setGenderVal] = useState<string>(" ");
+  const [sizeVal, setSizeVal] = useState<string>(" ");
+  const [styleVal, setStyleVal] = useState<string>(" ");
+  const [colorVal, setColorVal] = useState<string>(" ");
 
-  // eslint-disable-next-line func-style
   const genderHandler = (event: { target: any }) => {
     const { target } = event;
     const { value } = target;
     setGenderVal(value);
   };
-  // eslint-disable-next-line func-style
+
   const styleHandler = (event: { target: any }) => {
     const { target } = event;
     const { value } = target;
     setStyleVal(value);
   };
-  // eslint-disable-next-line func-style
+
   const sizeHandler = (event: { target: any }) => {
     const { target } = event;
     const { value } = target;
     setSizeVal(value);
   };
-  // eslint-disable-next-line func-style
+
   const colorHandler = (event: { target: any }) => {
     const { target } = event;
     const { value } = target;
@@ -48,7 +46,6 @@ export default function SearchBar(props: {
 
   const resultArray = [genderVal, styleVal, sizeVal, colorVal];
 
-  // eslint-disable-next-line func-style
   const submit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
 

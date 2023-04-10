@@ -38,7 +38,6 @@ export default function SingleProduct({
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [singleProduct] = useState(product);
-
   const [productInfo, setProductInfo] = useState({ likes: 0 });
 
   const router = useRouter();

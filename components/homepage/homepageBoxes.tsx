@@ -1,8 +1,7 @@
-// import PropTypes from "prop-types";
 import { Key } from "react";
 import HomePageBox from "./homePageBox";
 
-export default function HomePageBoxes(props: { productData: any }) {
+export default function HomePageBoxes(props: { productData: Array<any> }) {
   const { productData } = { ...props };
 
   const NewProduct = productData
@@ -10,11 +9,11 @@ export default function HomePageBoxes(props: { productData: any }) {
     .map(
       (item: {
         _id: Key | null | undefined;
-        name: any;
-        imgUrl: any;
-        price: any;
-        cartImg: any;
-        style: any;
+        name: string;
+        imgUrl: string;
+        price: string;
+        cartImg: string;
+        style: string;
       }) => (
         <HomePageBox
           key={item._id}
@@ -28,19 +27,4 @@ export default function HomePageBoxes(props: { productData: any }) {
     );
 
   return <div className="product-boxes">{NewProduct}</div>;
-
-  //return <div className="product-boxes">test</div>;
 }
-
-// FrontPageBoxes.defaultProps = {
-//   productData: [],
-// };
-
-// FrontPageBoxes.propTypes = {
-//   productData: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       name: PropTypes.string,
-//       prodId: PropTypes.number,
-//     })
-//   ),
-// };

@@ -46,10 +46,10 @@ export default function NewProducts({
   searchresults,
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [productData] = useState(product);
-  const [accordianData] = useState(accordian);
-  const [searchbarData] = useState(searchresults);
-  const [visibility, setVisibility] = useState(false);
+  const [productData] = useState<Array<any>>(product);
+  const [accordianData] = useState<Array<any>>(accordian);
+  const [searchbarData] = useState<Array<any>>(searchresults);
+  const [visibility, setVisibility] = useState<boolean>(false);
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
     e.preventDefault();

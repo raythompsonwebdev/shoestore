@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import { Key } from "react";
 import ProductBox from "./allProductBox";
 
 export default function ProductBoxes(props: { productData: any }) {
@@ -8,12 +8,12 @@ export default function ProductBoxes(props: { productData: any }) {
     .slice(0, 16)
     .map(
       (item: {
-        _id: any;
-        name: any;
-        imgUrl: any;
-        price: any;
-        cartImg: any;
-        style: any;
+        _id: Key | null | undefined;
+        name: string;
+        imgUrl: string;
+        price: string;
+        cartImg: string;
+        style: string;
       }) => (
         <ProductBox
           key={item._id}
@@ -28,8 +28,3 @@ export default function ProductBoxes(props: { productData: any }) {
 
   return <div className="product-boxes">{Product}</div>;
 }
-
-// ProductBoxes.propTypes = {
-//   // eslint-disable-next-line react/forbid-prop-types
-//   productData: PropTypes.array.isRequired,
-// };
