@@ -121,14 +121,7 @@ export default function Specials({
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <SearchBar
-            labelname="Specials"
-            orderByVal={OrderByVal}
-            orderDir={OrderDir}
-            changesOrders={changesOrders}
-            handleChange={handleChange}
-            searchData={searchBarData}
-          />
+          <SearchBar labelname="Specials" searchData={searchBarData} />
 
           <button
             id="sidebar-toggle-btn"

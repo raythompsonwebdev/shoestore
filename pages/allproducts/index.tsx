@@ -7,20 +7,13 @@ import AllProductBoxes from "../../components/allproducts/allProductBoxes";
 import AccordianMenu from "../../components/accordianMenu";
 import SearchBar from "../../components/searchBar/SearchBar";
 import SearchSelect from "../../components/searchSelect/SearchSelect";
-//import { handler } from "../api";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const getServerSideProps = async () => {
   try {
     //await clientPromise
-    // `await clientPromise` will use the default database passed in the MONGODB_URI
-    // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
-    //
     const client = await clientPromise;
     const db = client.db("shoestore");
-    //
-    // Then you can execute queries against your database like so:
-    // db.find({}) or any of the MongoDB Node Driver commands
 
     const results = await db.collection("products").find({}).toArray();
     const resultstwo = await db.collection("accordianData").find({}).toArray();
@@ -119,14 +112,7 @@ export default function Allproducts({
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <SearchBar
-            labelname="All Products"
-            orderByVal={OrderByVal}
-            orderDir={orderDir}
-            changesOrders={changesOrders}
-            handleChange={handleChange}
-            searchData={searchbarData}
-          />
+          <SearchBar labelname="All Products" searchData={searchbarData} />
 
           <button
             id="sidebar-toggle-btn"

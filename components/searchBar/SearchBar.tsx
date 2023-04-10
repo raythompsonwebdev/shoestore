@@ -1,4 +1,3 @@
-//import PropTypes from "prop-types";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Link from "next/link";
@@ -10,21 +9,10 @@ import {
 } from "./SearchBarData";
 
 export default function SearchBar(props: {
-  changesOrders: any;
-  handleChange: any;
-  labelname: any;
-  orderByVal: any;
-  orderDir: any;
+  labelname: string;
   searchData: any;
 }) {
-  const {
-    changesOrders,
-    handleChange,
-    labelname,
-    orderByVal,
-    orderDir,
-    searchData,
-  } = props;
+  const { labelname, searchData } = props;
 
   const router = useRouter();
 
@@ -124,21 +112,3 @@ export default function SearchBar(props: {
     </aside>
   );
 }
-
-// SearchBar.defaultProps = {
-//   labelname: " ",
-//   // orderByVal: " ",
-//   // orderDir: " ",
-//   searchData: [],
-//   // handleChange: " ",
-//   // changesOrders: " ",
-// };
-
-// SearchBar.propTypes = {
-//   labelname: PropTypes.string,
-//   // orderByVal: PropTypes.string,
-//   // orderDir: PropTypes.string,
-//   searchData: PropTypes.arrayOf(PropTypes.object),
-//   // changesOrders: PropTypes.func,
-//   // handleChange: PropTypes.func,
-// };
