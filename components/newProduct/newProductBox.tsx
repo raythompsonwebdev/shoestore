@@ -2,7 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function NewProductBox(props) {
+export default function NewProductBox(props: {
+  imgUrl: any;
+  name: any;
+  cartImg: any;
+  price: any;
+  text: any;
+}) {
   const { imgUrl, name, cartImg, price, text } = props;
   const myComponentStyle = {
     backgroundImage: "url('/images/product_headline_bg.png')",

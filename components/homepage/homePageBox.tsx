@@ -2,7 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function SpecialsproductBox(props) {
+function FrontPageBox(props: {
+  imgUrl: any;
+  name: any;
+  cartImg: any;
+  price: any;
+  style: any;
+}) {
   const { imgUrl, name, cartImg, price, style } = props;
 
   return (
@@ -16,10 +22,10 @@ export default function SpecialsproductBox(props) {
       />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>
-        <p className="product-box-price ">£{price}</p>
+        <p className="product-box-price">{price}</p>
         <Link href={`/product/${name}`} className="product-box-icon-link">
           <Image
-            className="product-box-icon"
+            className="product-box-price-icon"
             src={cartImg}
             alt="shoppingcart icon"
             width={34}
@@ -31,9 +37,11 @@ export default function SpecialsproductBox(props) {
   );
 }
 
-// productBox.propTypes = {
+// FrontPageBox.propTypes = {
 //   name: PropTypes.string.isRequired,
 //   imgUrl: PropTypes.string.isRequired,
 //   price: PropTypes.string.isRequired,
 //   cartImg: PropTypes.string.isRequired,
 // };
+
+export default FrontPageBox;

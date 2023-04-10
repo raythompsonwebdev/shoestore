@@ -7,8 +7,6 @@ import BannerImg from "../components/homepage/bannerImg";
 import HomePageBoxes from "../components/homepage/homepageBoxes";
 import AccordianMenu from "../components/accordianMenu";
 import FindShoes from "../components/homepage/FindShoes";
-
-// import { handler } from "./api";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const getServerSideProps = async () => {

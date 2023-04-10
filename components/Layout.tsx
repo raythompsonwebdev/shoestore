@@ -37,14 +37,14 @@ function Header() {
 function MainNav() {
   const { user, error, isLoading } = useUser();
 
-  const [visibility, setVisibility] = useState({ visibility: false });
+  const [visibility, setVisibility] = useState<boolean>(false);
 
-  const toggleVisibility = (e) => {
+  const toggleVisibility = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setVisibility(!visibility);
   };
 
-  const menuToggleFunc = (e) => {
+  const menuToggleFunc = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setVisibility(!visibility);
   };
@@ -284,7 +284,7 @@ function Footer() {
   );
 }
 
-export default function Layout({ children }) {
+export default function Layout({ children }: any) {
   return (
     <div id="wrapper">
       <Header />

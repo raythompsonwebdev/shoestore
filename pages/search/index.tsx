@@ -1,13 +1,52 @@
 import { useState } from "react";
 import LikesSection from "../../components/LikesSection";
 import Head from "next/head";
+import clientPromise from "../../lib/mongodb";
+import { InferGetServerSidePropsType } from "next";
 import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { handler } from "../api";
+// import { handler } from "../api";
 
-export default function SearchProduct(props) {
-  const [products] = useState(props.productData);
+export const getServerSideProps = async () => {
+  try {
+    //await clientPromise
+    // `await clientPromise` will use the default database passed in the MONGODB_URI
+    // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
+    //
+    const client = await clientPromise;
+    const db = client.db("shoestore");
+    //
+    // Then you can execute queries against your database like so:
+    // db.find({}) or any of the MongoDB Node Driver commands
+
+    const results = await db.collection("products").find({}).toArray();
+
+    if (results.length > 0) {
+      console.log(`${results.length} customers found`);
+      // Here you could build your html or put the results in some other data structure you want to work with
+    } else {
+      console.log(`No customers found`);
+    }
+
+    const productsearch = JSON.parse(JSON.stringify(results));
+
+    return {
+      props: { productsearch },
+    };
+  } catch (e) {
+    console.error(e);
+    return {
+      props: { isConnected: false },
+    };
+  }
+};
+
+export default function SearchProduct({
+  productsearch,
+  isConnected,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const [products] = useState(productsearch);
   const [productInfo, setProductInfo] = useState({ likes: 0 });
 
   const router = useRouter();
@@ -16,10 +55,13 @@ export default function SearchProduct(props) {
 
   const [size1, color1, gender1, style1] = testValues;
 
-  // console.log(size1, color1, gender1, style1);
-
   const product = products.filter(
-    (product) =>
+    (product: {
+      size: string | string[] | undefined;
+      color: string | string[] | undefined;
+      gender: string | string[] | undefined;
+      style: string | string[] | undefined;
+    }) =>
       product.size === size1 &&
       product.color === color1 &&
       product.gender === gender1 &&
@@ -36,7 +78,7 @@ export default function SearchProduct(props) {
         </Head>
         <main id="main-content" className="clearfix">
           <h1 id="main-content-title">Search Products page</h1>
-          {product.map((shoes) => (
+          {product.map((shoes: any) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <Image
                 id="product-page-img"
@@ -74,7 +116,7 @@ export default function SearchProduct(props) {
         </Head>
         <main id="main-content" className="clearfix">
           <h1 id="main-content-title">Search Products page</h1>
-          {product.map((shoes) => (
+          {product.map((shoes: any) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <figcaption id="product-page-caption">
                 <p className="product-page-title">No Products Found</p>
@@ -85,14 +127,4 @@ export default function SearchProduct(props) {
       </>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const productData = await handler("http://localhost:8000/api/products");
-
-  return {
-    props: {
-      productData,
-    },
-  };
 }
