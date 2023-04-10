@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
 import clientPromise from "../../lib/mongodb";
 import { InferGetServerSidePropsType } from "next";
@@ -13,9 +13,6 @@ export const getServerSideProps = async () => {
     //await clientPromise
     const client = await clientPromise;
     const db = client.db("shoestore");
-
-    // Then you can execute queries against your database like so:
-    // db.find({}) or any of the MongoDB Node Driver commands
 
     const results = await db.collection("products").find({}).toArray();
     const resultstwo = await db.collection("accordianData").find({}).toArray();
@@ -52,29 +49,11 @@ export default function NewProducts({
   const [productData] = useState(product);
   const [accordianData] = useState(accordian);
   const [searchbarData] = useState(searchresults);
-  const [orderDir, setOrderByDir] = useState("asc");
-  const [OrderByVal, setOrderByVal] = useState("all");
   const [visibility, setVisibility] = useState(false);
-  // const [lastIndex, setLastIndex] = useState(0);
-
-  // eslint-disable-next-line react/no-unused-class-component-methods
-  const handleChange = (selectedSize: SetStateAction<string>) => {
-    setOrderByVal(selectedSize);
-    setOrderByDir("asc");
-  };
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setVisibility(!visibility);
-  };
-
-  //eslint-disable-next-line react/no-unused-class-component-methods
-  const changesOrders = (
-    orderbyval: SetStateAction<string>,
-    dir: SetStateAction<string>
-  ) => {
-    setOrderByVal(orderbyval);
-    setOrderByDir(dir);
   };
 
   return (
@@ -86,14 +65,7 @@ export default function NewProducts({
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <SearchBar
-            labelname="New Products"
-            orderByVal={OrderByVal}
-            orderDir={orderDir}
-            changesOrders={changesOrders}
-            handleChange={handleChange}
-            searchData={searchbarData}
-          />
+          <SearchBar labelname="New Products" searchData={searchbarData} />
 
           <button
             id="sidebar-toggle-btn"

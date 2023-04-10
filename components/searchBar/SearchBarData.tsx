@@ -2,21 +2,21 @@
 
 import {
   Key,
-  ReactElement,
-  JSXElementConstructor,
-  ReactFragment,
-  ReactPortal,
+  // ReactElement,
+  // JSXElementConstructor,
+  // ReactFragment,
+  // ReactPortal,
 } from "react";
 
 export function SelectColor(props: {
-  aria: any;
+  aria: string;
   colorHandler: any;
-  colors: any;
-  name: any;
-  value: any;
+  colors: string;
+  name: string;
+  value: string;
 }) {
   const { aria, colorHandler, colors, name, value } = props;
-  const { options } = colors;
+  const { options }: any = colors;
 
   return (
     <select
@@ -28,17 +28,9 @@ export function SelectColor(props: {
     >
       {options.map(
         (option: {
-          value: string | number | readonly string[] | undefined;
+          value: string | readonly string[] | undefined;
           id: Key | null | undefined;
-          displayValue:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | ReactFragment
-            | ReactPortal
-            | null
-            | undefined;
+          displayValue: string | null | undefined;
         }) => (
           <option value={option.value} key={option.id}>
             {option.displayValue}
@@ -50,14 +42,14 @@ export function SelectColor(props: {
 }
 
 export function SelectGender(props: {
-  aria: any;
+  aria: string;
   genderHandler: any;
-  genders: any;
-  name: any;
-  value: any;
+  genders: string;
+  name: string;
+  value: string;
 }) {
   const { aria, genderHandler, genders, name, value } = props;
-  const { options } = genders;
+  const { options }: any = genders;
 
   return (
     <select
@@ -69,17 +61,9 @@ export function SelectGender(props: {
     >
       {options.map(
         (option: {
-          value: string | number | readonly string[] | undefined;
+          value: string | readonly string[] | undefined;
           id: Key | null | undefined;
-          displayValue:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | ReactFragment
-            | ReactPortal
-            | null
-            | undefined;
+          displayValue: string | null | undefined;
         }) => (
           <option value={option.value} key={option.id}>
             {option.displayValue}
@@ -91,14 +75,14 @@ export function SelectGender(props: {
 }
 
 export function SelectSize(props: {
-  aria: any;
-  name: any;
+  aria: string;
+  name: string;
   sizeHandler: any;
-  sizes: any;
-  value: any;
+  sizes: string;
+  value: string;
 }) {
   const { aria, name, sizeHandler, sizes, value } = props;
-  const { options } = sizes;
+  const { options }: any = sizes;
   return (
     <select
       name={name}
@@ -109,17 +93,9 @@ export function SelectSize(props: {
     >
       {options.map(
         (option: {
-          value: string | number | readonly string[] | undefined;
+          value: string | readonly string[] | undefined;
           id: Key | null | undefined;
-          displayValue:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | ReactFragment
-            | ReactPortal
-            | null
-            | undefined;
+          displayValue: string | null | undefined;
         }) => (
           <option value={option.value} key={option.id}>
             {option.displayValue}
@@ -131,14 +107,14 @@ export function SelectSize(props: {
 }
 
 export function SelectStyle(props: {
-  arialabelledby: any;
-  name: any;
+  arialabelledby: string;
+  name: string;
   styleHandler: any;
-  styles: any;
-  value: any;
+  styles: string;
+  value: string;
 }) {
   const { arialabelledby, name, styleHandler, styles, value } = props;
-  const { options } = styles;
+  const { options }: any = styles;
 
   return (
     <select
@@ -150,17 +126,9 @@ export function SelectStyle(props: {
     >
       {options.map(
         (option: {
-          value: string | number | readonly string[] | undefined;
+          value: string | readonly string[] | undefined;
           id: Key | null | undefined;
-          displayValue:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | ReactFragment
-            | ReactPortal
-            | null
-            | undefined;
+          displayValue: string | null | undefined;
         }) => (
           <option value={option.value} key={option.id}>
             {option.displayValue}
