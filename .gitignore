@@ -1,15 +1,8 @@
 node_modules
 files/
 build/
-public/images/
-public/images/original-images/
 public/font/
-pages/api/json-data/db-data/
-components/SearchBar/searchbar-components/
-.env
 .next/*
-api-server.js
-auth_config.json
 .env.local
 pages/api/shows.tsx
 pages/api/index.ts
