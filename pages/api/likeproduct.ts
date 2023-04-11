@@ -1,11 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import clientPromise from "../../lib/mongodb";
+import sanitize from "mongo-sanitize";
 
 export default async function likeproduct(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { likes, product } = req.body;
+  //const { likes, product } = req.body;
+
+  const product = sanitize(req.body.product);
 
   if (req.method !== "POST") {
     res.status(405).send({ message: "Only POST requests allowed" });

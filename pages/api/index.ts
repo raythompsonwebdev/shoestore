@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import sanitize from "mongo-sanitize";
 
 export default async function productHandler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const body = req.body;
-
-  console.log(body);
+  const body = sanitize(req.body);
 
   res.status(200).send(body);
 }

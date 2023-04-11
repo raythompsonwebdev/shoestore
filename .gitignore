@@ -15,5 +15,6 @@ pages/api/shows.tsx
 pages/api/index.ts
 components/Basket.tsx
 next-env.d.ts
+build/
 
 
