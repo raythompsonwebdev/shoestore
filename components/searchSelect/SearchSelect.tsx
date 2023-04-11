@@ -1,7 +1,7 @@
 import { Key } from "react";
 
 export default function SearchSelect(props: {
-  selectBarData: any;
+  selectBarData: Array<any>;
   changesOrders: any;
   handleChange: any;
   orderByVal: string;
