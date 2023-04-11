@@ -180,7 +180,7 @@ function MainNav() {
         {user ? (
           <>
             {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/api/auth/logout" className="signin-box-link" title="">
+            <a href="/logout" className="signin-box-link" title="">
               Logout
             </a>
             {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
@@ -195,11 +195,11 @@ function MainNav() {
         ) : (
           <>
             {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/api/auth/login" className="signin-box-link" title="">
+            <a href="/login" className="signin-box-link" title="">
               sign In
             </a>
             {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/api/auth/login" className="signin-box-link" title="">
+            <a href="/profile" className="signin-box-link" title="">
               account
             </a>
             <a href="/help" className="signin-box-link" title="">
