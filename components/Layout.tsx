@@ -113,9 +113,10 @@ function MainNav() {
           </Link>
         </li>
       </ul>
-      <ul id="" className={`mobile-nav ${!visibility ? "is-expanded" : " "}`}>
-        <li>
+      <ul id="" className={`mobile-nav ${visibility ? "is-expanded" : " "}`}>
+        <li className="mobile-nav-item">
           <Link
+            className="mobile-nav-link"
             href="/"
             title="Home Page"
             aria-label="Home Page"
@@ -124,8 +125,9 @@ function MainNav() {
             Home
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
+            className="mobile-nav-link"
             href="/newproducts"
             title="new products page"
             aria-label="new products page"
@@ -134,8 +136,9 @@ function MainNav() {
             New Products
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
+            className="mobile-nav-link"
             href="/specials"
             title="specials page"
             aria-label="specials page"
@@ -144,8 +147,9 @@ function MainNav() {
             Specials
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
+            className="mobile-nav-link"
             href="/allproducts"
             title="all products page"
             aria-label="all products page"
@@ -154,8 +158,9 @@ function MainNav() {
             All Products
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
+            className="mobile-nav-link"
             href="/faqs"
             title="faqs page"
             aria-label="faqs page"
@@ -164,8 +169,9 @@ function MainNav() {
             FAQS
           </Link>
         </li>
-        <li>
+        <li className="mobile-nav-item">
           <Link
+            className="mobile-nav-link"
             href="/contact"
             title="contact page"
             aria-label="contact page"
