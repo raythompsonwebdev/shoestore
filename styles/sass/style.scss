@@ -659,7 +659,7 @@ p {
 }
 #front-page-banner > hgroup h1 {
   font-family: $font-list;
-  font-size: 1.4em;
+  font-size: 1.48em;
   height: auto;
   line-height: 30px;
   width: 100%;
@@ -671,7 +671,7 @@ p {
   display: block;
 }
 #front-page-banner > hgroup h2 {
-  font-size: 60%;
+  font-size: 0.7em;
   color: $content-color2;
   font-weight: bold;
   letter-spacing: 0.001em;
@@ -685,7 +685,7 @@ p {
 #front-page-banner-img {
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding-top: 5%;
   position: relative;
   grid-area: 2 / 4 / 6 / 9;
 }
@@ -695,7 +695,7 @@ p {
   position: relative;
   width: 100%;
   height: auto;
-  padding-top: 30px;
+  padding-top: 20%;
 }
 #front-page-banner-nav #banner-nav-items {
   width: 100%;
@@ -721,8 +721,8 @@ p {
   width: 100%;
   margin-bottom: 0.2em;
   color: $color-white;
-  font-size: 0.65em;
-  line-height: 22px;
+  font-size: 0.7em;
+  line-height: 25px;
   text-align: center;
   transition: all ease 0.2s;
   text-transform: uppercase;
@@ -762,6 +762,8 @@ p {
   display: block;
   margin: 0 auto;
   height: auto;
+  width: 174px;
+  height: 150px;
 }
 
 /* product box caption */
@@ -781,9 +783,9 @@ p {
 }
 .product-box-title {
   color: $login-color;
-  line-height: 25px;
+  line-height: 30px;
   text-transform: uppercase;
-  font-size: 85%;
+  font-size: 0.9em;
   margin: 0;
   width: 100%;
   text-indent: 0.2em;
@@ -791,12 +793,12 @@ p {
 }
 .product-box-price {
   height: auto;
-  line-height: 25px;
+  line-height: 30px;
   margin: 0;
   font-weight: bold;
-  font-size: 85%;
+  font-size: 1em;
   width: 75%;
-  text-indent: 0.2em;
+  text-indent: 0.25em;
   flex: 0 1 auto;
 }
 .product-box-icon-link {
@@ -1477,7 +1479,7 @@ p {
     padding-top: 0.5em;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 1.25em;
+    font-size: 1.45em;
     height: 90px;
     line-height: 110px;
     width: 100%;
@@ -2604,8 +2606,8 @@ p {
   }
   #front-page-banner > hgroup h1 {
     font-size: 3.3em;
-    height: 80px;
-    line-height: 100px;
+    height: 90px;
+    line-height: 110px;
     width: 100%;
   }
   #front-page-banner > hgroup h2 {
@@ -3171,12 +3173,12 @@ p {
   }
   #front-page-banner > hgroup h1 {
     font-size: 3.3em;
-    height: 70px;
-    line-height: 90px;
+    height: 90px;
+    line-height: 110px;
     width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     line-height: 50px;
     height: 50px;
     width: 95%;
@@ -3444,7 +3446,7 @@ p {
   }
 
   #site-header {
-    height: 50px;
+    height: 60px;
     margin-bottom: 0.5em;
   }
 
@@ -3737,13 +3739,13 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 3em;
-    height: 70px;
-    line-height: 90px;
+    font-size: 3.2em;
+    height: 90px;
+    line-height: 110px;
     width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 50px;
     height: 50px;
     width: 95%;
@@ -3757,7 +3759,7 @@ p {
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 50px;
+    padding-top: 70px;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -4306,23 +4308,24 @@ p {
     padding-top: 0.5em;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 2.4em;
-    height: 50px;
-    line-height: 70px;
+    font-size: 3em;
+    height: 70px;
+    line-height: 90px;
     width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.1em;
-    line-height: 65px;
-    height: 65px;
+    font-size: 1.4em;
+    line-height: 60px;
+    height: 60px;
     width: 95%;
   }
   #front-page-banner-img {
     grid-area: 2 / 4 / 6 / 9;
+    padding-top: 10%;
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 45px;
+    padding-top: 70px;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -4335,7 +4338,7 @@ p {
   }
   .banner-nav-link {
     font-size: 1em;
-    line-height: 40px;
+    line-height: 50px;
   }
 
   #right-content-section > .product-boxes {
@@ -4866,23 +4869,24 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 2.3em;
+    font-size: 2.4em;
     height: 50px;
     line-height: 70px;
     width: 96%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1em;
+    font-size: 1.15em;
     line-height: 50px;
     height: 50px;
     width: 95%;
   }
   #front-page-banner-img {
     grid-area: 2 / 4 / 6 / 9;
+    padding-top: 10%;
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 35px;
+    padding-top: 15%;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -4895,7 +4899,7 @@ p {
   }
   .banner-nav-link {
     font-size: 0.85em;
-    line-height: 35px;
+    line-height: 40px;
   }
 
   #right-content-section > .product-boxes {
@@ -5427,12 +5431,12 @@ p {
     padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 1.9em;
+    font-size: 2.1em;
     height: 45px;
     line-height: 50px;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 0.9em;
+    font-size: 1.05em;
     line-height: 35px;
     height: 35px;
     width: 95%;
@@ -5998,17 +6002,18 @@ p {
     width: 96%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 30px;
     height: 30px;
     width: 95%;
   }
   #front-page-banner-img {
     grid-area: 2 / 4 / 6 / 9;
+    padding-top: 5%;
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 20px;
+    padding-top: 15%;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -6563,17 +6568,18 @@ p {
     width: 96%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 0.7em;
+    font-size: 0.75em;
     line-height: 25px;
     height: 25px;
     width: 95%;
   }
   #front-page-banner-img {
     grid-area: 2 / 4 / 6 / 9;
+    padding-top: 5%;
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 20px;
+    padding-top: 20%;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
