@@ -15,10 +15,10 @@ export default function Faqs() {
           <br />
 
           <main id="main-inner-content" className="group">
-            <span className="main-inner-content-title">
+            <h2 className="main-inner-content-title">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel
               rutrum ante.
-            </span>
+            </h2>
 
             <p>
               Vivamus adipiscing tincidunt purus at adipiscing. Proin orci
@@ -31,11 +31,11 @@ export default function Faqs() {
               ante placerat vel.
             </p>
 
-            <span className="context_title">
+            <h3 className="context-title">
               {" "}
               Integer pellentesque lorem quis libero consectetur ac egestas
               magna tincidunt.
-            </span>
+            </h3>
 
             <p>
               Vivamus sit amet ipsum a neque elementum imperdiet vitae nec
@@ -50,10 +50,10 @@ export default function Faqs() {
               turpis.
             </p>
 
-            <span className="context_title">
+            <h3 className="context-title">
               Curabitur pellentesque facilisis volutpat.Vivamus vel lacus orci.
               Mauris semper sapien ut massa scelerisque consequat non eu justo.
-            </span>
+            </h3>
 
             <p>
               Morbi non massa lectus. Nullam ac leo in dolor pharetra bibendum
