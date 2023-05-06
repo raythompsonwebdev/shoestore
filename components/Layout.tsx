@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { signIn, signOut, useSession } from "next-auth/react";
+import type { ReactNode } from "react";
 
 function Header() {
   return (
@@ -35,7 +36,8 @@ function Header() {
   );
 }
 function MainNav() {
-  const { user, error, isLoading } = useUser();
+  const { data: session, status } = useSession();
+  const loading = status === "loading";
 
   const [visibility, setVisibility] = useState<boolean>(false);
 
@@ -182,35 +184,60 @@ function MainNav() {
         </li>
       </ul>
       <span id="signin-box">
-        {isLoading ? <>Loading...</> : false}
-        {user ? (
+        {loading ? <>Loading...</> : false}
+
+        {!session && (
           <>
-            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/api/auth/logout" className="signin-box-link" title="">
-              Logout
-            </a>
-            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/profile" className="signin-box-link" title="">
-              Profile
-            </a>
-            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/cart" className="signin-box-link" title="">
+            <Link
+              href={`/api/auth/signin`}
+              className="signin-box-link"
+              title=""
+              onClick={(e) => {
+                e.preventDefault();
+                signIn();
+              }}
+            >
+              Login
+            </Link>
+            <Link href="/cart" className="signin-box-link" title="">
               Cart
-            </a>
+            </Link>
           </>
-        ) : (
+        )}
+        {session?.user && (
           <>
-            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/api/auth/login" className="signin-box-link" title="">
-              sign In
-            </a>
-            {/*eslint-disable-next-line @next/next/no-html-link-for-pages*/}
-            <a href="/profile" className="signin-box-link" title="">
+            <Link
+              href={`/api/auth/signout`}
+              className="signin-box-link"
+              title=""
+              onClick={(e) => {
+                e.preventDefault();
+                signOut();
+              }}
+            >
+              Log Out
+            </Link>
+            <Link href="/profile" className="signin-box-link" title="">
               account
-            </a>
-            <a href="/help" className="signin-box-link" title="">
-              help
-            </a>
+            </Link>
+            <Link href="/cart" className="signin-box-link" title="">
+              cart
+            </Link>
+            <Link href="/server" className="signin-box-link">
+              Server
+            </Link>
+            <Link href="/protected" className="signin-box-link">
+              Protected
+            </Link>
+            <Link href="/api-example" className="signin-box-link">
+              API
+            </Link>
+            <Link href="/admin" className="signin-box-link">
+              Admin
+            </Link>
+            <Link href="/me" className="signin-box-link">
+              Me
+            </Link>
           </>
         )}
       </span>
@@ -290,7 +317,7 @@ function Footer() {
   );
 }
 
-export default function Layout({ children }: any) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div id="wrapper">
       <Header />
