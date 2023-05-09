@@ -30,7 +30,6 @@ function Header() {
             ''
           )}
         </a>{' '}
-        <a href="#/signin"> SignIn</a>
       </div> */}
     </header>
   );
@@ -199,6 +198,9 @@ function MainNav() {
             >
               Login
             </Link>
+            <Link href="/profile" className="signin-box-link" title="">
+              Account
+            </Link>
             <Link href="/cart" className="signin-box-link" title="">
               Cart
             </Link>
@@ -226,17 +228,8 @@ function MainNav() {
             <Link href="/server" className="signin-box-link">
               Server
             </Link>
-            <Link href="/protected" className="signin-box-link">
-              Protected
-            </Link>
             <Link href="/api-example" className="signin-box-link">
               API
-            </Link>
-            <Link href="/admin" className="signin-box-link">
-              Admin
-            </Link>
-            <Link href="/me" className="signin-box-link">
-              Me
             </Link>
           </>
         )}
