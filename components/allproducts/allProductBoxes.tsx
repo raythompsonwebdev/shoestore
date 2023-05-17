@@ -1,7 +1,7 @@
 import { Key } from "react";
 import ProductBox from "./allProductBox";
 
-export default function ProductBoxes(props: { productData: any }) {
+export default function ProductBoxes(props: { productData: Array<any> }) {
   const { productData } = props;
 
   const Product = productData

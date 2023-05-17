@@ -11,9 +11,8 @@ export default async function handler(
   const session = await getServerSession(req, res, authOptions);
 
   if (session) {
-    console.log(session);
     return res.send({
-      content: session,
+      content: session.user,
     });
   }
 

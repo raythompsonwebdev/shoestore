@@ -6,9 +6,9 @@ import Head from "next/head";
 import Image from "next/image";
 
 export default function Profile() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
-  const [content, setContent] = useState([]);
+  const [content, setContent] = useState<any>({});
   // Fetch content from protected route
 
   useEffect(() => {
@@ -22,16 +22,10 @@ export default function Profile() {
     fetchData();
   }, [session]);
 
-  const info = Object.values(content);
-  // get user details, token and expiry time
-  const [user, expires, token] = info;
-
-  const newUser = Object.values(user);
-  // get user details
-  const [name, email, picture] = newUser;
+  const { name, email, image } = content;
 
   // If no session exists, display access denied message
-  if (!session) {
+  if (status === "unauthenticated") {
     return (
       <Layout>
         <>
@@ -57,31 +51,32 @@ export default function Profile() {
         <main id="main-content" className="clearfix">
           <h1 id="main-content-title">Profile</h1>
           <br />
-          <main id="main-inner-content" className="group">
-            <span className="context_title">
+          <figure id="profile-image">
+            {image ? (
               <Image
-                src={picture as string}
+                src={image}
+                className="user-image"
                 alt="Profile"
                 width={200}
                 height={200}
               />
-            </span>
-          </main>
-
-          <aside className="contact-sidebar">
-            <br />
-
-            <br />
-            <p>{name as string}</p>
-            <br />
-            <p>{email as string}</p>
-            <br />
-            <br />
-          </aside>
+            ) : (
+              <Image
+                src={"/images/placeholder.jpg"}
+                alt="Profile"
+                width={200}
+                height={200}
+              />
+            )}
+            {/* <Image src={image} alt="Profile" width={200} height={200} /> */}
+            <figcaption id="profile-image-text">
+              <p>Username : {name as string}</p>
+              <br />
+              <p>Email :{email as string}</p>
+            </figcaption>
+          </figure>
         </main>
       </>
     </Layout>
   );
 }
-
-//export const getServerSideProps = withPageAuthRequired();

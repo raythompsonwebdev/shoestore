@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 
 export const getServerSideProps = async (context: any) => {
   try {
-    //await clientPromise
     const client = await clientPromise;
     const db = client.db("shoestore");
     const results = await db.collection("products").find({}).toArray();
@@ -43,15 +42,13 @@ export default function SearchProduct({
 
   const router = useRouter();
 
-  // returns array with form values at position 0 within an array
-  const testValues = Object.values(router.query);
+  // deconstruct query object
+  const { resultArray } = router.query;
 
-  // get array with values out of array
-  const testValuesArr = testValues[0];
+  // deconstruct search result array with product details
+  const [gender1, style1, size1, color1]: any = resultArray;
 
-  // deconstruct array
-  const [size1, color1, gender1, style1]: any = testValuesArr;
-
+  // filter product from the products array
   const product = products.filter(
     (product: any) =>
       product.size === size1 &&

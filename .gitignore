@@ -27,4 +27,18 @@ public/font/
 components/Basket.tsx
 next-env.d.ts
 
+pages/api-example.tsx
+pages/protected.tsx
+pages/server.tsx
+pages/register.tsx
+pages/500.tsx
+pages/api/examples/*.ts
+
+lib/cookies.ts
+lib/hashPassword.ts
+lib/validate.ts
+
+pages/api/prodroute.ts
+pages/api/registerUser.ts
+
 
