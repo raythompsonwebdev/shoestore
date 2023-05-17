@@ -1,14 +1,15 @@
 import { Key } from "react";
 
-export default function SearchSelect(props: {
+interface SearchSelector {
   selectBarData: Array<any>;
   changesOrders: any;
   handleChange: any;
-  orderByVal: string;
+  // orderByVal: string;
   orderDir: string;
-}) {
-  const { selectBarData, changesOrders, handleChange, orderByVal, orderDir } =
-    props;
+}
+
+export default function SearchSelect(props: SearchSelector) {
+  const { selectBarData, changesOrders, handleChange, orderDir } = props;
 
   function onItemChange(evt: { target: { value: string } }) {
     handleChange(evt.target.value);
@@ -28,7 +29,7 @@ export default function SearchSelect(props: {
           (options: {
             value: string | undefined;
             id: Key | null | undefined;
-            options: any[];
+            options: Array<any>;
           }) => (
             // eslint-disable-next-line react/no-array-index-key
             <optgroup label={options.value} key={options.id}>

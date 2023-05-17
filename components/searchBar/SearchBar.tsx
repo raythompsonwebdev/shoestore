@@ -7,10 +7,12 @@ import {
   SelectSize,
 } from "./SearchBarData";
 
-export default function SearchBar(props: {
+interface SearchBaror {
   labelname: string;
   searchData: Array<any>;
-}) {
+}
+
+export default function SearchBar(props: SearchBaror) {
   const { labelname, searchData } = props;
 
   // const router = useRouter();
@@ -49,7 +51,6 @@ export default function SearchBar(props: {
   const submit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
 
-    // router.push("/search");
     // // eslint-disable-next-line no-console
     console.log(
       `\n You have entered \n Gender:${resultArray[0]},\n Style: ${resultArray[1]},\n  Size: ${resultArray[2]} \n  Colour :${resultArray[3]}. \n This form is under maintenance and will be ready to use shortly`
@@ -57,6 +58,7 @@ export default function SearchBar(props: {
   };
 
   const [gender, style, size, color] = searchData;
+
   const aria = "search-category-label";
 
   return (
@@ -103,6 +105,10 @@ export default function SearchBar(props: {
             type="submit"
           >
             <button name="find">Go</button>
+
+            {/* <button onClick={() => router.push('/about')}>
+      Click here to read more
+    </button> */}
           </Link>
         </fieldset>
       </form>

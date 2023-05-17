@@ -133,7 +133,7 @@ export default function Specials({
 
           <section id="right-content-section" role="main">
             <SearchSelect
-              orderByVal={OrderByVal}
+              // orderByVal={OrderByVal}
               orderDir={OrderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}

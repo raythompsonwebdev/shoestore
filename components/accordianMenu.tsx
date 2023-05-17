@@ -1,8 +1,8 @@
 import { Accordion } from "react-bootstrap";
 
 // eslint-disable-next-line func-style
-export default function AccordianMenu(props: { accordianData: any }) {
-  const { accordianData }: any = { ...props };
+export default function AccordianMenu(props: { accordianData: Array<any> }) {
+  const { accordianData } = { ...props };
 
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
