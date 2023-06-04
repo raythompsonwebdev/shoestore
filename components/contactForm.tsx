@@ -48,7 +48,7 @@ export default function ContactForm() {
             <input
               type="email"
               name="email"
-              id="email"
+              id="useremail"
               value={email}
               onChange={handleEmails}
               required
@@ -63,7 +63,7 @@ export default function ContactForm() {
               onChange={handleComments}
               name="message"
               id="message"
-              rows={5}
+              rows={10}
             />
           </label>
         </li>

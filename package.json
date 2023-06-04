@@ -26,11 +26,13 @@
     "jsonwebtoken": "^9.0.0",
     "mongo-sanitize": "^1.1.0",
     "mongodb": "^5.4.0",
+    "mongoose": "^7.2.2",
     "next": "13.4.1",
     "next-auth": "^4.22.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "swr": "^2.1.5"
+    "swr": "^2.1.5",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -38,6 +40,7 @@
     "@types/mongo-sanitize": "^1.0.1",
     "@types/node": "^20.1.0",
     "@types/react": "^18.2.6",
+    "@types/validator": "^13.7.17",
     "bootstrap": "^5.2.3",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",

@@ -67,8 +67,8 @@ function BannerImg() {
       <figure id="front-page-banner-img">
         <Image
           src="/images/bannerimage.jpg"
-          width={500}
-          height={346}
+          width="500"
+          height="346"
           alt="shoestore-banner"
         />
       </figure>

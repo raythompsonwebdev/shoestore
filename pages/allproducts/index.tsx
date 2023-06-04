@@ -9,7 +9,8 @@ import SearchBar from "../../components/searchBar/SearchBar";
 import SearchSelect from "../../components/searchSelect/SearchSelect";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context: any) => {
+  console.log(context.req.cookies);
   try {
     //await clientPromise
     const client = await clientPromise;

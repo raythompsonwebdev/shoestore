@@ -20,6 +20,8 @@ export const getServerSideProps = async () => {
 
     if (results.length > 0) {
       console.log(`${results.length} customers found`);
+      console.log(`${resultstwo.length} accordian data found`);
+      console.log(`${resultsfour.length} searchbar data found`);
       // Here you could build your html or put the results in some other data structure you want to work with
     } else {
       console.log(`No customers found`);
