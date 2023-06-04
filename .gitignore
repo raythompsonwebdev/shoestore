@@ -30,15 +30,15 @@ next-env.d.ts
 pages/api-example.tsx
 pages/protected.tsx
 pages/server.tsx
-pages/register.tsx
 pages/500.tsx
 pages/api/examples/*.ts
+pages/admin.tsx
 
 lib/cookies.ts
-lib/hashPassword.ts
 lib/validate.ts
 
 pages/api/prodroute.ts
-pages/api/registerUser.ts
+pages/api/auth/loginuser.ts
+pages/api/index.ts
 
 

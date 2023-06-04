@@ -4,7 +4,7 @@ interface SearchSelector {
   selectBarData: Array<any>;
   changesOrders: any;
   handleChange: any;
-  // orderByVal: string;
+  orderByVal: string;
   orderDir: string;
 }
 

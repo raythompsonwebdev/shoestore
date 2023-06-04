@@ -21,8 +21,8 @@ export default function NewProductBox(props: {
         className="larger-product-box-image"
         src={imgUrl}
         alt={name}
-        width={175}
-        height={150}
+        width="175"
+        height="150"
       />
       <figcaption className="larger-product-box-caption">
         <h1 style={myComponentStyle} className="larger-product-box-title">
@@ -36,8 +36,8 @@ export default function NewProductBox(props: {
               className="larger-product-box-icon"
               src={cartImg}
               alt="shopping-cart icon"
-              width={34}
-              height={48}
+              width="34"
+              height="48"
             />
           </Link>{" "}
           Add to Cart

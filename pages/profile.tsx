@@ -57,15 +57,15 @@ export default function Profile() {
                 src={image}
                 className="user-image"
                 alt="Profile"
-                width={200}
-                height={200}
+                width="200"
+                height="200"
               />
             ) : (
               <Image
                 src={"/images/placeholder.jpg"}
                 alt="Profile"
-                width={200}
-                height={200}
+                width="200"
+                height="200"
               />
             )}
             {/* <Image src={image} alt="Profile" width={200} height={200} /> */}

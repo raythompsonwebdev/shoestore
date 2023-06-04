@@ -7,7 +7,7 @@ import Layout from "../../components/Layout";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-export const getServerSideProps = async (context: any) => {
+export const getServerSideProps = async () => {
   try {
     const client = await clientPromise;
     const db = client.db("shoestore");

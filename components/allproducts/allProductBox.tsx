@@ -17,8 +17,8 @@ export default function productBox(props: {
         className="product-box-img"
         src={`${imgUrl}`}
         alt={name}
-        width={175}
-        height={150}
+        width="175"
+        height="150"
       />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>
@@ -28,18 +28,11 @@ export default function productBox(props: {
             className="product-box-icon"
             src={cartImg}
             alt="shoppingcart icon"
-            width={34}
-            height={48}
+            width="34"
+            height="48"
           />
         </Link>
       </figcaption>
     </figure>
   );
 }
-
-// productBox.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   imgUrl: PropTypes.string.isRequired,
-//   price: PropTypes.string.isRequired,
-//   cartImg: PropTypes.string.isRequired,
-// };
