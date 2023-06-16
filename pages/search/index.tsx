@@ -63,7 +63,7 @@ export default function SearchProduct({
     <Layout>
       <>
         <Head>
-          <title>Products</title>
+          <title>Single Search Product</title>
           <meta name="description" content="Search Product - All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

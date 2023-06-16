@@ -59,7 +59,7 @@ export default function LoginForm() {
           </label>
         </li>
         <li className="contact-form-item">
-          <label htmlFor="message">
+          <label htmlFor="password">
             Password:&#32;
             <input
               type="password"

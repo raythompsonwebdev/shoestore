@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-export default function Header() {
+export default function Header({ props }: any) {
+  console.log(props);
   return (
     <header id="site-header">
       <figure id="logo">
@@ -12,21 +13,21 @@ export default function Header() {
         />
       </figure>
 
-      {/* <div>
+      <div>
         <a href="#/">
           <h1>Small Shopping Cart</h1>
         </a>
       </div>
       <div>
-        <a href="#/cart">
-          Cart{' '}
+        {/* <a href="#/cart">
+          Cart{" "}
           {props.countCartItems ? (
             <button className="badge">{props.countCartItems}</button>
           ) : (
-            ''
+            ""
           )}
-        </a>{' '}
-      </div> */}
+        </a>{" "} */}
+      </div>
     </header>
   );
 }
