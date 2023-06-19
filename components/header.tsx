@@ -18,15 +18,15 @@ export default function Header() {
         </a>
       </div>
       <div>
-        <a href="#/cart">
-          Cart{' '}
+        {/* <a href="#/cart">
+          Cart{" "}
           {props.countCartItems ? (
             <button className="badge">{props.countCartItems}</button>
           ) : (
-            ''
+            ""
           )}
-        </a>{' '}
-      </div> */}
+        </a>{" "} */}
+      </div>
     </header>
   );
 }

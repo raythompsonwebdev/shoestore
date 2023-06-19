@@ -1,9 +1,9 @@
 import { SetStateAction, useState } from "react";
 
 export default function ContactForm() {
-  const [username, setUserName] = useState(" ");
-  const [email, setEmail] = useState(" ");
-  const [comments, setComments] = useState(" ");
+  const [username, setUserName] = useState<string>(" ");
+  const [email, setEmail] = useState<string>(" ");
+  const [comments, setComments] = useState<string>(" ");
 
   const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
     setUserName(e.target.value);

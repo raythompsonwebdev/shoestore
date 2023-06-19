@@ -114,7 +114,7 @@ body {
 /* signin box */
 #signin-box {
   width: auto;
-  display: none;
+  display: flex;
   height: auto;
 }
 .signin-box-link {
@@ -320,6 +320,9 @@ body {
   width: 100%;
   margin: 0;
   font-family: $font-list;
+  p {
+    padding: 0.5em;
+  }
 }
 
 /* main content header */
@@ -585,6 +588,7 @@ p {
 #useremail {
   width: 98%;
   height: 40px;
+  font-size: 1.1em;
 }
 #message {
   width: 98%;
@@ -1422,7 +1426,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 1em;
     line-height: 1.6em;
   }
 
@@ -1992,7 +1996,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 1em;
     line-height: 1.6em;
   }
 
@@ -3138,7 +3142,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 1.6em;
   }
 
@@ -3714,7 +3718,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 1.6em;
   }
 
@@ -4298,7 +4302,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 1.6em;
   }
 
@@ -4870,7 +4874,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 1.6em;
   }
 
@@ -5443,7 +5447,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 0.9em;
     line-height: 1.6em;
   }
 
@@ -6018,7 +6022,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 0.85em;
     line-height: 1.6em;
   }
 
@@ -6595,7 +6599,7 @@ p {
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 0.85em;
     line-height: 1.6em;
   }
 
