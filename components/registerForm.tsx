@@ -62,10 +62,10 @@ export default function RegisterForm() {
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // eslint-disable-next-line no-console
-    console.log(
-      // eslint-disable-next-line react/destructuring-assignment
-      `You have entered Username:${username}, Email: ${useremail} & Password: ${password}. This form is under maintenance and will be ready to use shortly`
-    );
+    // console.log(
+    //   // eslint-disable-next-line react/destructuring-assignment
+    //   `You have entered Username:${username}, Email: ${useremail} & Password: ${password}. This form is under maintenance and will be ready to use shortly`
+    // );
 
     try {
       const response = await fetch("/api/registerUser", {
