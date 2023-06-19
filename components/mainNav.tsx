@@ -193,9 +193,9 @@ export default function MainNav() {
             <Link href="/cart" className="signin-box-link" title="">
               Cart
             </Link>
-            {/* <Link href="/server" className="signin-box-link">
+            <Link href="/server" className="signin-box-link">
               Server
-            </Link> */}
+            </Link>
             <Link href="/api-example" className="signin-box-link">
               API
             </Link>
