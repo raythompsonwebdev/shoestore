@@ -45,30 +45,29 @@ export default function SearchProduct({
   // deconstruct query object
   const { resultArray } = router.query;
 
-  // deconstruct search result array with product details
-  const [gender1, style1, size1, color1]: any = resultArray;
+  // deconstruct search result array with product details - in correct order
+  const [size1, color1, gender1, style1]: any = resultArray;
 
   // filter product from the products array
   const product = products.filter(
-    (product: any) =>
-      product.size === size1 &&
-      product.color === color1 &&
-      product.gender === gender1 &&
-      product.style === style1
+    (item: {size: string, color:string, gender:string,style:string}) =>
+    item.size === size1 &&
+    item.color === color1 &&
+    item.gender === gender1 &&
+    item.style === style1
   );
 
   console.log(product);
-
-  return product ? (
-    <Layout>
+if(product){
+  return ( <Layout>
       <>
         <Head>
-          <title>Single Search Product</title>
+          <title>Single Product</title>
           <meta name="description" content="Search Product - All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Search Products page</h1>
+          <h1 id="main-content-title">Single Product Search</h1>
           {product.map((shoes: any) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <Image
@@ -96,9 +95,9 @@ export default function SearchProduct({
           ))}
         </main>
       </>
-    </Layout>
-  ) : (
-    <Layout>
+    </Layout>)
+}else{
+    return (<Layout>
       <>
         <Head>
           <title>Single Search Product</title>
@@ -116,6 +115,7 @@ export default function SearchProduct({
           ))}
         </main>
       </>
-    </Layout>
-  );
+    </Layout>)
+     }
+
 }

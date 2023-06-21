@@ -19,11 +19,7 @@ export default function LoginForm() {
   };
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
-    // eslint-disable-next-line no-console
-    // console.log(
-    //   // eslint-disable-next-line react/destructuring-assignment
-    //   `You have entered Username:${email}, This comment: ${password}. This form is under maintenance and will be ready to use shortly`
-    // );
+
     e.preventDefault();
 
     try {

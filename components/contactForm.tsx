@@ -18,11 +18,6 @@ export default function ContactForm() {
   };
 
   const submit = (e: { preventDefault: () => void }) => {
-    // eslint-disable-next-line no-console
-    console.log(
-      // eslint-disable-next-line react/destructuring-assignment
-      `You have entered Username:${username}, Email: ${email} & This comment: ${comments}. This form is under maintenance and will be ready to use shortly`
-    );
     e.preventDefault();
   };
 

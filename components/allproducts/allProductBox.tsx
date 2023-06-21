@@ -17,8 +17,9 @@ export default function productBox(props: {
         className="product-box-img"
         src={`${imgUrl}`}
         alt={name}
-        width="175"
-        height="150"
+        width={175}
+        height={150}
+        priority={true}
       />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>

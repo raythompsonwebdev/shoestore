@@ -9,7 +9,5 @@ export const loginUser = async ({ email, password }: LoginUserParams) => {
     callbackUrl: "/",
   });
 
-  console.log(result);
-
   return result;
 };

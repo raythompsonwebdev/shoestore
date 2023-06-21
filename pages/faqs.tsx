@@ -14,7 +14,7 @@ export default function Faqs() {
           <h1 id="main-content-title">FAQ</h1>
           <br />
 
-          <main id="main-inner-content" className="group">
+          <section id="main-inner-content" className="group">
             <h2 className="main-inner-content-title">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel
               rutrum ante.
@@ -67,7 +67,7 @@ export default function Faqs() {
               In id urna a ligula lobortis luctus. Quisque sit amet ligula at
               arcu bibendum cursus. Vestibulum volutpat suscipit iaculis.
             </p>
-          </main>
+          </section>
 
           <aside className="contact-sidebar">
             <p className="contact-sidebar-text">

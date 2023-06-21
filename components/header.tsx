@@ -9,6 +9,7 @@ export default function Header() {
           width={341}
           height={71}
           alt="shoe-store-logo"
+          priority={true} // above the fold image
         />
       </figure>
 

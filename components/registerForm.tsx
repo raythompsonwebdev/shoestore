@@ -1,5 +1,5 @@
 import { SetStateAction, useState } from "react";
-//import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 export default function RegisterForm() {
   const [username, setUserName] = useState<string>(" ");
@@ -7,7 +7,7 @@ export default function RegisterForm() {
   const [password, setPassword] = useState<string>(" ");
   const [error, setError] = useState<string>(" ");
 
-  // const router = useRouter();
+  const router = useRouter();
 
   const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
     const { value } = e.target;
@@ -61,11 +61,7 @@ export default function RegisterForm() {
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // eslint-disable-next-line no-console
-    // console.log(
-    //   // eslint-disable-next-line react/destructuring-assignment
-    //   `You have entered Username:${username}, Email: ${useremail} & Password: ${password}. This form is under maintenance and will be ready to use shortly`
-    // );
+
     try {
       const response = await fetch("/api/registerUser", {
         method: "POST",
@@ -75,13 +71,19 @@ export default function RegisterForm() {
         body: JSON.stringify({ name: username, email: useremail, password }),
       });
 
+      if(response.ok){
+        console.log(response.status);
+      }
+
       const result = await response.json();
 
-      console.log(result);
+      if(result){
+        router.push("/");
+      }
 
-      //router.push("/");
+
     } catch (err) {
-      console.error("not working : " + err);
+      console.error('Something went wrong',err );
     }
   };
 

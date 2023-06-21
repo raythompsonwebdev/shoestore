@@ -6,7 +6,6 @@ export default async function likeproduct(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  //const { likes, product } = req.body;
 
   const product = sanitize(req.body.product);
 

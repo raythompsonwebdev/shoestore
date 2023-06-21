@@ -21,14 +21,13 @@ next-env.d.ts
 
 files/
 build/
-public/font/
 .next/*
 .env.local
 components/Basket.tsx
+public/js/*js
 next-env.d.ts
 
 pages/api-example.tsx
-pages/protected.tsx
 pages/server.tsx
 pages/500.tsx
 pages/api/examples/*.ts

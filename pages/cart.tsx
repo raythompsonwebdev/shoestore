@@ -1,51 +1,90 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
-// import { useState } from 'react';
-// import Basket from './components/Basket';
+import clientPromise from "../lib/mongodb";
+import { InferGetServerSidePropsType } from "next";
+import { useState , useEffect} from "react";
+import { useSession} from "next-auth/react";
+//import Basket from '../components/Basket';
 // import Image from "next/image";
 
 const myComponentStyle = {
-  width: "600px",
-  height: "600px",
+  width: "1004px",
+  height: "1200px",
   backgroundColor: "red",
   display: "block",
-  margin: "50px",
+  margin: "10px",
 };
 
-// const { products } = data;
-// const [cartItems, setCartItems] = useState([]);
-// const onAdd = (product) => {
-//   const exist = cartItems.find((x) => x.id === product.id);
-//   if (exist) {
-//     setCartItems(
-//       cartItems.map((x) =>
-//         x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-//       )
-//     );
-//   } else {
-//     setCartItems([...cartItems, { ...product, qty: 1 }]);
-//   }
-// };
-// const onRemove = (product) => {
-//   const exist = cartItems.find((x) => x.id === product.id);
-//   if (exist.qty === 1) {
-//     setCartItems(cartItems.filter((x) => x.id !== product.id));
-//   } else {
-//     setCartItems(
-//       cartItems.map((x) =>
-//         x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-//       )
-//     );
-//   }
-// };
+export const getServerSideProps = async (context: any) => {
 
-export default function Cart() {
-  // const { user, error, isLoading } = useUser();
+   try {
+     //await clientPromise
+     const client = await clientPromise;
+     const db = client.db("shoestore");
+     const results = await db.collection("products").find({}).toArray();
+     const products = JSON.parse(JSON.stringify(results));
 
-  // if (isLoading) return <div>Loading...</div>;
-  // if (error) return <div>{error.message}</div>;
+     return {
+       props: {
+         products,
+       },
+     };
+   } catch (e) {
+     console.error(e);
+     return {
+       props: { isConnected: false },
+     };
+   }
+ };
 
-  // if (user) {
+export default function Cart(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
+
+  //const { products } = props;
+
+  const [cartItems, setCartItems] = useState<Array<any>>([]);
+
+ // const [productItems, setProductItems] = useState<Array<any>>([]);
+
+  const { data: session, status } = useSession();
+
+  // used to stop infinte loops
+  // useEffect(()=>{
+	// 	setCartItems(products);
+	// }, [products])
+
+  const onAdd = (product:{id: string} ) => {
+
+    const exist = cartItems.find((x) => x.id === product.id);
+
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+
+    } else {
+
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
+    }
+  };
+
+  const onRemove = (product:{id: string}) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
+
+
+  if (status === "authenticated") {
+
   return (
     <Layout>
       <>
@@ -55,34 +94,38 @@ export default function Cart() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Cart - not logged in</h1>
-          <section style={myComponentStyle}></section>
+          <h1 id="main-content-title">Cart - Logged In</h1>
+          <p>{session.user?.name}</p>
+          <p>{session.user?.email}</p>
+          <section style={myComponentStyle}>
           {/* <Basket
               cartItems={cartItems}
               onAdd={onAdd}
               onRemove={onRemove}
             ></Basket> */}
-        </main>
+
+          </section>
+          </main>
       </>
     </Layout>
   );
-  // } else {
-  //   return (
-  //     <Layout>
-  //       <>
-  //         <Head>
-  //           <title>Cart</title>
-  //           <meta name="description" content="Contact us page" />
-  //           <link rel="icon" href="/favicon.ico" />
-  //         </Head>
-  //         <main id="content" className="clearfix">
-  //           <h1>Cart - not logged in</h1>
-  //           <section style={myComponentStyle}></section>
-  //         </main>
-  //       </>
-  //     </Layout>
-  //   );
-  // }
+  } else {
+    return (
+      <Layout>
+        <>
+          <Head>
+            <title>Cart</title>
+            <meta name="description" content="Contact us page" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <main id="main-content" className="clearfix">
+          <h1 id="main-content-title">Cart - Not Logged In</h1>
+          <section style={myComponentStyle}></section>
+          </main>
+        </>
+      </Layout>
+    );
+  }
 }
 
-// export const getServerSideProps = withPageAuthRequired();
+

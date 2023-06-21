@@ -1,6 +1,5 @@
 // This is an example of how to read a JSON Web Token from an API route
 import type { NextApiRequest, NextApiResponse } from "next";
-// import clientPromise from "../../lib/mongodb";
 import { connectToMongoDB } from "../../lib/dbConnect";
 import User from "../../models/users";
 import { IUser } from "../../types/index";
