@@ -155,7 +155,7 @@ export default function MainNav() {
 
         {!session && (
           <>
-            <Link
+            {/* <Link
               href={`/api/auth/signin`}
               className="signin-box-link"
               title=""
@@ -165,7 +165,7 @@ export default function MainNav() {
               }}
             >
               Login
-            </Link>
+            </Link> */}
             <Link href="/profile" className="signin-box-link" title="">
               Account
             </Link>

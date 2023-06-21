@@ -42,9 +42,6 @@ export default function Cart(props: InferGetServerSidePropsType<typeof getServer
   //const { products } = props;
 
   const [cartItems, setCartItems] = useState<Array<any>>([]);
-
- // const [productItems, setProductItems] = useState<Array<any>>([]);
-
   const { data: session, status } = useSession();
 
   // used to stop infinte loops
