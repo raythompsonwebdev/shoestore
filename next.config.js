@@ -21,9 +21,9 @@ const nextConfig = {
     ],
   },
   experimental: {
-    images: {
-        allowFutureImage: true
-    }
+    //warn Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+    // next/font not working due to SWC compiler disabled. Opted in. may cause errors?
+    forceSwcTransforms: true,
   },
 };
 

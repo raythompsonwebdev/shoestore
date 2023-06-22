@@ -14,7 +14,7 @@ export default function Contact() {
         <main id="main-content" className="clearfix">
           <h1 id="main-content-title">Contact Us</h1>
 
-          <p>
+          <p className="main-content-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
             explicabo, ab expedita rem temporibus repellendus eum, omnis,
             distinctio est ipsum vel voluptate perspiciatis, quis earum

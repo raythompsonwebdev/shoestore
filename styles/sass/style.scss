@@ -1,6 +1,6 @@
 @import "partials/variables";
 @import "partials/base";
-@import "partials/fonts";
+// @import "partials/fonts";
 
 body {
   line-height: 1;
@@ -114,7 +114,7 @@ body {
 /* signin box */
 #signin-box {
   width: auto;
-  display: flex;
+  display: none;
   height: auto;
 }
 .signin-box-link {
@@ -275,7 +275,7 @@ body {
   color: $color-white;
   background-color: $color-orange;
   margin: 0;
-  padding: 0.5em;
+  padding: 0.25em;
   height: auto;
   font-family: $font-list;
   margin-bottom: 0.5em;
@@ -288,17 +288,24 @@ body {
   align-items: flex-start;
   gap: 0.25em;
 }
-#search-category-form > fieldset #search-category-label {
-  font-size: 1em;
+
+#search-category-form > fieldset .search-category-label {
+  font-size: 1.1em;
   width: 100%;
   line-height: 35px;
   margin: 0;
   flex: 1 0 auto;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   text-indent: 0.1em;
   font-weight: bold;
 }
+
+#search-category-form > fieldset .search-category-label-new{
+  font-size: 100%;
+}
+
+
 #search-category-form > fieldset ::placeholder {
   color: $color-black;
 }
@@ -317,12 +324,16 @@ body {
 /* main content */
 #main-content {
   height: auto;
-  width: 100%;
-  margin: 0;
+  width: 99%;
+  margin: 0 0.5%;
   font-family: $font-list;
-  p {
-    padding: 0.5em;
-  }
+
+}
+.main-content-text{
+  padding: 0;
+  line-height:1.7em;
+  margin-bottom:0.5em;
+  font-size: 0.9em;
 }
 
 /* main content header */
@@ -544,7 +555,7 @@ p {
 /* contact form container */
 #register-form-section,
 #contact-form-section {
-  width: 86%;
+  width: 90%;
   height: auto;
   float: none;
   display: block;
@@ -624,11 +635,11 @@ p {
 
 /* main inner content */
 #main-inner-content {
-  width: 93%;
-  margin: 0;
+  width: 98%;
+  margin: 0 auto;
   font-family: $font-list;
   float: none;
-  padding: 0 0.75em;
+  padding: 0;
 }
 
 /* inner content title */
@@ -653,6 +664,8 @@ p {
 #profile-image {
   width: 98%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: auto;
 }
 
@@ -661,8 +674,8 @@ p {
 }
 
 #profile-image-text {
-  width: 73%;
-  margin-left: 2%;
+  width: 100%;
+  margin-left: 0;
   font-family: $font-list;
   background-color: $color-white-bg;
   border: 2px $content-color1 solid;
@@ -815,6 +828,7 @@ p {
   flex-flow: column;
   align-items: flex-start;
   justify-content: center;
+  gap:0;
 }
 
 /* product box */
@@ -905,7 +919,7 @@ p {
   margin: 0 0 1em;
 }
 .larger-product-box-image {
-  width: 50%;
+  width: 174px;;
   flex: 1 0 auto;
   display: block;
   margin: 1em auto;
@@ -927,7 +941,7 @@ p {
   background-color: $color-white;
   height: auto;
   line-height: 45px;
-  text-indent: 1em;
+  text-indent: 1.2em;
   font-size: 1em;
   color: $login-color;
   font-weight: bold;
@@ -939,14 +953,14 @@ p {
   height: auto;
   line-height: 1.5em;
   margin: 0;
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 0 0.5em;
 }
 .larger-product-box-price {
   grid-area: 2 / 1 / 3 / 3;
   height: auto;
   line-height: 45px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin: 0;
   font-weight: bold;
   display: block;
@@ -1270,6 +1284,7 @@ p {
 
   #signin-box {
     width: 21%;
+    display: flex;
   }
   .signin-box-link {
     font-size: 0.85em;
@@ -1326,6 +1341,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -1335,22 +1351,29 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
+
+  #search-category-form > fieldset .search-category-label-new{
+    font-size: 100%;
+    line-height: 35px;
+  }
+  #search-category-form > fieldset .search-category-label {
     font-size: 1.15em;
     width: 16%;
     line-height: 35px;
     flex: 1 0 auto;
+    text-align: left;
   }
 
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 17%;
-    font-size: 0.9em;
-    height: 35px;
+    font-size: 1em;
+
   }
 
   #main-content {
-    width: 100%;
+    width: 98%;
+    margin: 0 1%;
     min-height: 800px;
   }
 
@@ -1431,7 +1454,8 @@ p {
 
   .contact-sidebar {
     width: 32.5%;
-    display: inline-block;
+    display: block;
+    float:right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -1503,6 +1527,8 @@ p {
   #profile-image {
     width: 90%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -1512,6 +1538,8 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:auto;
+
   }
 
   #right-content-section {
@@ -1550,16 +1578,16 @@ p {
   }
   #front-page-banner > hgroup {
     grid-area: 1 / 1 / 3 / 9;
-    padding-top: 0.5em;
+    padding-top: 0;
   }
   #front-page-banner > hgroup h1 {
-    font-size: 1.45em;
-    height: 90px;
-    line-height: 110px;
+    font-size: 3.3em;
+    height: 75px;
+    line-height: 90px;
     width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 0.65em;
+    font-size: 1.5em;
     line-height: 65px;
     height: 65px;
     width: 95%;
@@ -1573,7 +1601,7 @@ p {
   }
   #front-page-banner-nav {
     grid-area: 2 / 1 / 6 / 4;
-    padding-top: 90px;
+    padding-top: 70px;
   }
   #front-page-banner-nav #banner-nav-items {
     width: 90%;
@@ -1594,6 +1622,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -1639,25 +1668,25 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
-    width: 20%;
+    width: auto;
     flex: 1 0 auto;
-    margin: 1em;
+    margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 73%;
+    width: 60%;
     flex: 1 0 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
-    font-size: 1.1em;
+    font-size: 1.05em;
     text-indent: 1em;
   }
   .larger-product-box-add-to-cart {
@@ -1768,7 +1797,7 @@ p {
     width: 80%;
   }
   #front-page-form-header {
-    font-size: 1.2em;
+    font-size: 1.35em;
   }
   #front-page-form select {
     font-size: 1em;
@@ -1839,6 +1868,7 @@ p {
 
   #signin-box {
     width: 21%;
+    display: flex;
   }
   .signin-box-link {
     font-size: 0.85em;
@@ -1895,6 +1925,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -1904,22 +1935,29 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
-    font-size: 1.1em;
+
+  #search-category-form > fieldset .search-category-label-new{
+    font-size: 100%;
+  }
+
+  #search-category-form > fieldset .search-category-label {
+    font-size: 1.15em;
     width: 16%;
     line-height: 35px;
     flex: 1 0 auto;
+    text-align: left;
   }
 
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 17%;
-    font-size: 0.9em;
-    height: 35px;
+    font-size: 1em;
+
   }
 
   #main-content {
-    width: 100%;
+    width: 98%;
+    margin: 0 1%;
     min-height: 800px;
   }
 
@@ -2000,7 +2038,8 @@ p {
 
   .contact-sidebar {
     width: 32.5%;
-    display: inline-block;
+    display: block;
+    float:right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -2073,6 +2112,8 @@ p {
   #profile-image {
     width: 90%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -2082,6 +2123,7 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:0 0 0 2%;
   }
 
   #right-content-section {
@@ -2124,12 +2166,12 @@ p {
   }
   #front-page-banner > hgroup h1 {
     font-size: 3.3em;
-    height: 90px;
-    line-height: 110px;
+    height: 75px;
+    line-height: 90px;
     width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
     line-height: 65px;
     height: 65px;
     width: 95%;
@@ -2164,6 +2206,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -2209,25 +2252,25 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
-    width: 20%;
+    width: auto;
     flex: 1 0 auto;
-    margin: 1em;
+    margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 73%;
+    width: 60%;
     flex: 1 0 auto;
   }
   .larger-product-box-title {
-    text-indent: 1.5em;
-    font-size: 1em;
+    text-indent: 1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
     font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
-    font-size: 1em;
+    font-size: 1.05em;
     text-indent: 1em;
   }
   .larger-product-box-add-to-cart {
@@ -2338,7 +2381,7 @@ p {
     width: 80%;
   }
   #front-page-form-header {
-    font-size: 1.3em;
+    font-size: 1.35em;
   }
   #front-page-form select {
     font-size: 1em;
@@ -2409,6 +2452,7 @@ p {
 
   #signin-box {
     width: 21%;
+    display: flex;
   }
   .signin-box-link {
     font-size: 0.85em;
@@ -2465,6 +2509,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -2474,22 +2519,27 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
-    font-size: 1em;
-    width: 20%;
+  #search-category-form > fieldset .search-category-label-new{
+    font-size: 100%;
+  }
+  #search-category-form > fieldset .search-category-label {
+    font-size: 1.15em;
+    width: 16%;
     line-height: 35px;
     flex: 1 0 auto;
+    text-align: left;
   }
 
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
-    width: 15%;
-    font-size: 0.9em;
-    height: 35px;
+    width: 17%;
+    font-size: 1em;
+
   }
 
   #main-content {
-    width: 100%;
+    width: 98%;
+    margin: 0 1%;
     min-height: 800px;
   }
 
@@ -2570,7 +2620,8 @@ p {
 
   .contact-sidebar {
     width: 32.5%;
-    display: inline-block;
+    display: block;
+    float:right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -2643,6 +2694,8 @@ p {
   #profile-image {
     width: 90%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -2652,6 +2705,7 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:0 0 0 2%;
   }
 
   #right-content-section {
@@ -2694,14 +2748,14 @@ p {
   }
   #front-page-banner > hgroup h1 {
     font-size: 3.3em;
-    height: 90px;
-    line-height: 110px;
+    height: 75px;
+    line-height: 90px;
     width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.4em;
-    line-height: 60px;
-    height: 60px;
+    font-size: 1.5em;
+    line-height: 65px;
+    height: 65px;
     width: 95%;
   }
   #front-page-banner-img {
@@ -2734,6 +2788,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -2779,25 +2834,25 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
-    width: 20%;
+    width: auto;
     flex: 1 0 auto;
-    margin: 0.5em;
+    margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 70%;
+    width: 60%;
     flex: 1 0 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
     font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
-    font-size: 1em;
+    font-size: 1.15em;
     text-indent: 0.5em;
   }
   .larger-product-box-add-to-cart {
@@ -2912,7 +2967,7 @@ p {
     width: 80%;
   }
   #front-page-form-header {
-    font-size: 1.3em;
+    font-size: 1.35em;
   }
   #front-page-form select {
     font-size: 1em;
@@ -2983,6 +3038,7 @@ p {
 
   #signin-box {
     width: 21%;
+    display: flex;
   }
   .signin-box-link {
     font-size: 0.8em;
@@ -3007,7 +3063,7 @@ p {
     flex: 1 0 auto;
   }
   .inner-nav-link {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
 
   .mobile-nav.is-expanded {
@@ -3039,6 +3095,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -3048,22 +3105,27 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
-    font-size: 1em;
-    width: 18%;
+  #search-category-form > fieldset .search-category-label-new{
+    font-size: 100%;
+  }
+  #search-category-form > fieldset .search-category-label {
+    font-size: 1.15em;
+    width: 16%;
     line-height: 35px;
     flex: 1 0 auto;
+    text-align: left;
   }
 
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
-    width: 15%;
-    font-size: 0.85em;
-    height: 35px;
+    width: 17%;
+    font-size: 1em;
+
   }
 
   #main-content {
-    width: 100%;
+    width: 98%;
+    margin: 0 1%;
     min-height: 800px;
   }
 
@@ -3144,7 +3206,8 @@ p {
 
   .contact-sidebar {
     width: 32.5%;
-    display: inline-block;
+    display: block;
+    float:right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -3217,6 +3280,8 @@ p {
   #profile-image {
     width: 92%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -3226,6 +3291,7 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:0 0 0 2%;
   }
 
   #right-content-section {
@@ -3268,14 +3334,14 @@ p {
   }
   #front-page-banner > hgroup h1 {
     font-size: 3.3em;
-    height: 90px;
-    line-height: 110px;
+    height: 75px;
+    line-height: 90px;
     width: 100%;
   }
   #front-page-banner > hgroup h2 {
-    font-size: 1.4em;
-    line-height: 50px;
-    height: 50px;
+    font-size: 1.5em;
+    line-height: 65px;
+    height: 65px;
     width: 95%;
   }
   #front-page-banner-img {
@@ -3301,13 +3367,14 @@ p {
   .banner-nav-link {
     margin-bottom: 0.2em;
     font-size: 1.2em;
-    line-height: 40px;
+    line-height: 45px;
   }
 
   #right-content-section > .product-boxes {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -3353,25 +3420,25 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
-    width: 20%;
+    width: auto;
     flex: 1 0 auto;
-    margin: 0.5em;
+    margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 70%;
+    width: 60%;
     flex: 1 0 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
     font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
-    font-size: 1em;
+    font-size: 1.15em;
     text-indent: 0.5em;
   }
   .larger-product-box-add-to-cart {
@@ -3486,10 +3553,10 @@ p {
     width: 80%;
   }
   #front-page-form-header {
-    font-size: 1.3em;
+    font-size: 1.35em;
   }
   #front-page-form select {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .find-shoes {
     font-size: 1.1em;
@@ -3558,6 +3625,7 @@ p {
 
   #signin-box {
     width: 21%;
+    display: flex;
   }
   .signin-box-link {
     font-size: 0.8em;
@@ -3614,6 +3682,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -3623,22 +3692,29 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
-    font-size: 1em;
-    width: 18%;
+
+  #search-category-form > fieldset .search-category-label {
+    font-size: 1.15em;
+    width: 16%;
     line-height: 35px;
     flex: 1 0 auto;
+    text-align: left;
+  }
+
+  #search-category-form > fieldset .search-category-label-new{
+    font-size: 95%;
   }
 
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
-    width: 15%;
-    font-size: 0.85em;
-    height: 35px;
+    width: 16%;
+    font-size: 1em;
+
   }
 
   #main-content {
-    width: 100%;
+    width: 98%;
+    margin: 0 1%;
     min-height: 800px;
   }
 
@@ -3719,7 +3795,8 @@ p {
 
   .contact-sidebar {
     width: 32.5%;
-    display: inline-block;
+    display: block;
+    float:right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -3792,6 +3869,8 @@ p {
   #profile-image {
     width: 92%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -3801,6 +3880,7 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:0 0 0 2%;
   }
 
   #right-content-section {
@@ -3883,6 +3963,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -3928,25 +4009,25 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
-    width: 20%;
+    width: auto;
     flex: 1 0 auto;
-    margin: 0.5em;
+    margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 70%;
+    width: 60%;
     flex: 1 0 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
-    font-size: 1em;
+    font-size: 1.15em;
     text-indent: 0.5em;
   }
   .larger-product-box-add-to-cart {
@@ -4061,11 +4142,11 @@ p {
     width: 80%;
   }
   #front-page-form-header {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
   }
   #front-page-form select {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .find-shoes {
     font-size: 1.1em;
@@ -4198,6 +4279,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -4207,23 +4289,29 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
+
+  #search-category-form > fieldset .search-category-label {
     font-size: 1em;
     width: 18%;
     line-height: 35px;
     flex: 1 0 auto;
+    text-align: left;
+  }
+
+  #search-category-form > fieldset .search-category-label-new{
+    line-height: 25px;
   }
 
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 15%;
-    font-size: 0.8em;
-    height: 35px;
+    font-size: 1em;
+
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0 0.5%;
     height: auto;
   }
 
@@ -4316,7 +4404,7 @@ p {
   }
   #register-form-section,
   #contact-form-section {
-    width: 80%;
+    width: 91%;
     float: none;
     margin: 1em auto;
   }
@@ -4359,9 +4447,10 @@ p {
   }
 
   #main-inner-content {
-    width: 93%;
+    width: 98%;
+    margin: 0 auto;
     float: none;
-    padding: 0 0.75em;
+    padding: 0;
   }
 
   .main-inner-content-title {
@@ -4372,6 +4461,8 @@ p {
   #profile-image {
     width: 94%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -4380,7 +4471,8 @@ p {
   }
 
   #profile-image-text {
-    width: 73%;
+    width: 100%;
+    margin-left: 0;
   }
 
   #right-content-section {
@@ -4458,6 +4550,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -4504,25 +4597,25 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
-    width: 20%;
+    width: auto;
     flex: 1 0 auto;
-    margin: 0.5em;
+    margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 70%;
+    width: 61%;
     flex: 1 0 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
-    font-size: 1em;
+    font-size: 1.15em;
     text-indent: 1em;
   }
   .larger-product-box-add-to-cart {
@@ -4710,6 +4803,7 @@ p {
     width: auto;
     height: 20px;
     display: none;
+
   }
   .signin-box-link {
     line-height: 20px;
@@ -4769,6 +4863,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -4778,23 +4873,28 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
+  #search-category-form > fieldset .search-category-label-new{
+    line-height: 25px;
+  }
+  #search-category-form > fieldset .search-category-label {
     font-size: 1em;
     width: 18%;
     line-height: 25px;
     flex: 1 0 auto;
+    text-align: left;
   }
+
 
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 15%;
-    font-size: 0.75em;
-    height: 35px;
+    font-size: 1em;
+
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0 0.5%;
     height: auto;
   }
 
@@ -4887,7 +4987,7 @@ p {
   }
   #register-form-section,
   #contact-form-section {
-    width: 80%;
+    width: 91%;
     margin: 1em auto;
     float: none;
   }
@@ -4930,9 +5030,10 @@ p {
   }
 
   #main-inner-content {
-    width: 93%;
+    width: 98%;
+    margin: 0 auto;
     float: none;
-    padding: 0 0.75em;
+    padding: 0;
   }
 
   .main-inner-content-title {
@@ -4943,6 +5044,8 @@ p {
   #profile-image {
     width: 94%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -4952,6 +5055,7 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:auto;
   }
 
   #right-content-section {
@@ -5029,6 +5133,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -5075,33 +5180,33 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
-    width: 20%;
+    width: auto;
     flex: 1 0 auto;
-    margin: 0.5em;
+    margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 62%;
+    width: 48%;
     flex: 1 0 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
     grid-area: 2/3/4/8;
-    font-size: 0.85em;
+    font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
     grid-area: 2/1/3/3;
-    font-size: 0.85em;
+    font-size: 1em;
     text-indent: 1em;
   }
   .larger-product-box-add-to-cart {
     grid-area: 3/1/4/4;
     line-height: 50px;
-    font-size: 0.8em;
+    font-size: 0.85em;
     text-indent: 0.25em;
   }
   .larger-product-box-link {
@@ -5333,7 +5438,7 @@ p {
   }
   #search-category-form > fieldset .search-category-btn {
     flex: 1 0 auto;
-    width: 14%;
+    width: 100%;
     font-size: 1.3em;
     line-height: 25px;
   }
@@ -5341,32 +5446,39 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
     display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: flex-start;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
-    font-size: 0.9em;
-    width: 18%;
-    line-height: 25px;
-    flex: 1 0 auto;
+  #search-category-form > fieldset .search-category-label-new{
+    line-height: 35px;
+    font-size: 1.1em;
   }
+  #search-category-form > fieldset .search-category-label {
+    font-size: 1.1em;
+    width: 100%;
+    line-height: 35px;
+    flex: 1 0 auto;
+    text-align: center;
+  }
+
 
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
-    width: 15%;
-    font-size: 0.75em;
-    height: 35px;
+    width: 100%;
+    font-size: 1em;
+
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0 0.5%;
     height: auto;
   }
 
@@ -5459,7 +5571,7 @@ p {
   }
   #register-form-section,
   #contact-form-section {
-    width: 80%;
+    width: 91%;
     margin: 1em auto;
     float: none;
   }
@@ -5502,9 +5614,10 @@ p {
   }
 
   #main-inner-content {
-    width: 93%;
+    width: 98%;
+    margin: 0 auto;
     float: none;
-    padding: 0 0.75em;
+    padding: 0;
   }
 
   .main-inner-content-title {
@@ -5515,6 +5628,8 @@ p {
   #profile-image {
     width: 96%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -5524,6 +5639,7 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:auto;
   }
 
   #right-content-section {
@@ -5599,6 +5715,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -5645,7 +5762,7 @@ p {
     flex-flow: column;
   }
   .larger-product-box-image {
-    width: 40%;
+    width: 175px;
     flex: 0 1 auto;
     margin: 0.5em auto;
     height: auto;
@@ -5656,16 +5773,16 @@ p {
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
     grid-area: 2/3/4/8;
-    font-size: 0.9em;
+    font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
     grid-area: 2/1/3/3;
-    font-size: 0.9em;
+    font-size: 1em;
     text-indent: 1em;
     line-height: 40px;
   }
@@ -5914,6 +6031,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -5923,24 +6041,30 @@ p {
     align-items: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
-    font-size: 1em;
+  #search-category-form > fieldset .search-category-label-new{
+    font-size: 100%;
+    line-height: 35px;
+  }
+  #search-category-form > fieldset .search-category-label {
+    font-size: 1.1em;
     width: 100%;
-    line-height: 20px;
+    line-height: 35px;
     flex: 1 0 auto;
     text-align: center;
   }
 
+
+
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 100%;
-    font-size: 0.8em;
-    height: 35px;
+    font-size: 0.9em;
+
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0 0.5%;
     height: auto;
   }
 
@@ -6033,7 +6157,7 @@ p {
   }
   #register-form-section,
   #contact-form-section {
-    width: 80%;
+    width: 91%;
     margin: 1em auto;
     float: none;
   }
@@ -6076,9 +6200,10 @@ p {
   }
 
   #main-inner-content {
-    width: 93%;
+    width: 98%;
+    margin: 0 auto;
     float: none;
-    padding: 0 0.75em;
+    padding: 0;
   }
 
   .main-inner-content-title {
@@ -6089,6 +6214,8 @@ p {
   #profile-image {
     width: 96%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -6098,6 +6225,7 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:auto;
   }
 
   #right-content-section {
@@ -6176,6 +6304,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -6222,7 +6351,7 @@ p {
     flex-flow: column;
   }
   .larger-product-box-image {
-    width: 45%;
+    width: 175px;;
     flex: 0 1 auto;
     margin: 0.5em auto;
     height: auto;
@@ -6233,16 +6362,16 @@ p {
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .larger-product-box-text {
     grid-area: 2/3/4/8;
-    font-size: 0.85em;
+    font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
     grid-area: 2/1/3/3;
-    font-size: 0.85em;
+    font-size: 1em;
     text-indent: 1em;
     line-height: 40px;
   }
@@ -6491,6 +6620,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
+    padding:0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -6500,24 +6630,29 @@ p {
     align-items: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset #search-category-label {
-    font-size: 1em;
+  #search-category-form > fieldset .search-category-label-new{
+    font-size: 100%;
+    line-height: 35px;
+  }
+  #search-category-form > fieldset .search-category-label {
+    font-size: 1.1em;
     width: 100%;
-    line-height: 20px;
+    line-height: 35px;
     flex: 1 0 auto;
     text-align: center;
   }
 
+
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 100%;
-    font-size: 0.75em;
-    height: 35px;
+    font-size: 0.9em;
+
   }
 
   #main-content {
-    width: 100%;
-    margin: 0;
+    width: 99%;
+    margin: 0 0.5%;
     height: auto;
   }
 
@@ -6610,7 +6745,7 @@ p {
   }
   #register-form-section,
   #contact-form-section {
-    width: 80%;
+    width: 91%;
     margin: 1em auto;
     float: none;
   }
@@ -6653,9 +6788,10 @@ p {
   }
 
   #main-inner-content {
-    width: 93;
+    width: 98%;
+    margin: 0 auto;
     float: none;
-    padding: 0 0.75em;
+    padding: 0;
   }
 
   .main-inner-content-title {
@@ -6666,6 +6802,8 @@ p {
   #profile-image {
     width: 98%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -6675,6 +6813,7 @@ p {
 
   #profile-image-text {
     width: 73%;
+    margin:auto;
   }
 
   #right-content-section {
@@ -6753,6 +6892,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap:0.5em;
   }
 
   .product-boxes .product-box {
@@ -6799,7 +6939,7 @@ p {
     flex-flow: column;
   }
   .larger-product-box-image {
-    width: 50%;
+    width: 174px;
     flex: 0 1 auto;
     margin: 0.5em auto;
     height: auto;
@@ -6810,23 +6950,23 @@ p {
   }
   .larger-product-box-title {
     text-indent: 1em;
-    font-size: 1em;
+    font-size: 1.1em;
   }
   .larger-product-box-text {
     grid-area: 2/3/4/8;
-    font-size: 0.8em;
+    font-size: 1em;
     padding: 0;
   }
   .larger-product-box-price {
     grid-area: 2/1/3/3;
-    font-size: 0.8em;
+    font-size: 1em;
     text-indent: 1em;
     line-height: 40px;
   }
   .larger-product-box-add-to-cart {
     grid-area: 3/1/4/3;
     line-height: 20px;
-    font-size: 0.8em;
+    font-size: 0.85em;
     text-indent: 0.2em;
   }
   .larger-product-box-link {

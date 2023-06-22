@@ -139,8 +139,6 @@ export default function Specials({
               handleChange={handleChange}
               selectBarData={selectBarData}
             />
-            <br />
-
             <SpecialsProductBoxes productData={filteredApts} />
 
             <br />

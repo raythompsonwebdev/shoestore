@@ -52,9 +52,9 @@ export default function SearchBar(props: SearchBaror) {
     event.preventDefault();
 
     // // eslint-disable-next-line no-console
-    console.log(
-      `\n You have entered \n Gender:${resultArray[0]},\n Style: ${resultArray[1]},\n  Size: ${resultArray[2]} \n  Colour :${resultArray[3]}. \n This form is under maintenance and will be ready to use shortly`
-    );
+    // console.log(
+    //   `\n You have entered \n Gender:${resultArray[0]},\n Style: ${resultArray[1]},\n  Size: ${resultArray[2]} \n  Colour :${resultArray[3]}. \n This form is under maintenance and will be ready to use shortly`
+    // );
   };
 
   const [gender, style, size, color] = searchData;
@@ -65,7 +65,8 @@ export default function SearchBar(props: SearchBaror) {
     <aside id="search-category">
       <form id="search-category-form" onSubmit={submit}>
         <fieldset>
-          <legend id="search-category-label">{labelname}</legend>
+        <legend className={`search-category-label ${labelname === "New Products" ? "search-category-label-new " : ""}`}>{labelname}</legend>
+          {/* <legend id="search-category-label">{labelname}</legend> */}
           <SelectGender
             name="genderVal"
             genders={gender}

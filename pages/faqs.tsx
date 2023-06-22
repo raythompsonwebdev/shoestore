@@ -20,7 +20,7 @@ export default function Faqs() {
               rutrum ante.
             </h2>
 
-            <p>
+            <p className="main-content-text">
               Vivamus adipiscing tincidunt purus at adipiscing. Proin orci
               metus, gravida in cursus et, egestas in leo. Suspendisse potenti.
               Vivamus congue sapien nec velit adipiscing a tincidunt massa
@@ -37,7 +37,7 @@ export default function Faqs() {
               magna tincidunt.
             </h3>
 
-            <p>
+            <p className="main-content-text">
               Vivamus sit amet ipsum a neque elementum imperdiet vitae nec
               velit. Cras id diam sapien. Phasellus malesuada congue est, eget
               vulputate est dignissim vitae. Ut faucibus dapibus sollicitudin.
@@ -55,7 +55,7 @@ export default function Faqs() {
               Mauris semper sapien ut massa scelerisque consequat non eu justo.
             </h3>
 
-            <p>
+            <p className="main-content-text">
               Morbi non massa lectus. Nullam ac leo in dolor pharetra bibendum
               at sit amet felis. Nam justo lacus, rhoncus vel viverra quis,
               dictum eu tortor. Curabitur nunc neque, adipiscing ac suscipit at,
