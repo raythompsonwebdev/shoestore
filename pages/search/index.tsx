@@ -56,10 +56,29 @@ export default function SearchProduct({
     item.gender === gender1 &&
     item.style === style1
   );
-
   console.log(product);
-if(product){
-  return ( <Layout>
+
+  return (
+    (product.length === 0 ? (
+      <Layout>
+      <>
+        <Head>
+          <title>Single Search Product</title>
+          <meta name="description" content="Search Product - All" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main id="main-content" className="clearfix">
+          <h1 id="main-content-title">Search Products page</h1>
+            <figure id="product-page-box">
+              <figcaption id="product-page-caption">
+                <p className="product-page-title">Sorry! No Products Found</p>
+              </figcaption>
+            </figure>
+        </main>
+      </>
+      </Layout>
+    ): (
+      <Layout>
       <>
         <Head>
           <title>Single Product</title>
@@ -95,27 +114,9 @@ if(product){
           ))}
         </main>
       </>
-    </Layout>)
-}else{
-    return (<Layout>
-      <>
-        <Head>
-          <title>Single Search Product</title>
-          <meta name="description" content="Search Product - All" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Search Products page</h1>
-          {product.map((shoes: any) => (
-            <figure id="product-page-box" key={shoes.prodId}>
-              <figcaption id="product-page-caption">
-                <p className="product-page-title">No Products Found</p>
-              </figcaption>
-            </figure>
-          ))}
-        </main>
-      </>
-    </Layout>)
-     }
-
+      </Layout>
+      ))
+  );
 }
+
+

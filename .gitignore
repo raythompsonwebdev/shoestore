@@ -26,12 +26,14 @@ build/
 components/Basket.tsx
 public/js/*js
 next-env.d.ts
+.vscode
 
 pages/api-example.tsx
 pages/server.tsx
 pages/500.tsx
 pages/api/examples/*.ts
 pages/admin.tsx
+pages/protected.tsx
 
 lib/cookies.ts
 lib/validate.ts
