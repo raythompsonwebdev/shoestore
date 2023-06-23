@@ -1,9 +1,9 @@
 const myComponentStyle = {
   backgroundImage: "url('/images/form-bg-comp.png')",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  backgroundCize: "cover",
-};
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  backgroundCize: 'cover',
+}
 
 export default function FindShoes() {
   return (
@@ -37,5 +37,5 @@ export default function FindShoes() {
         />
       </form>
     </article>
-  );
+  )
 }

@@ -2,31 +2,31 @@
  * @param {any} props
  */
 export default function LikesSection(props: any) {
-  const { likes, productName, setProductInfo }: any = { ...props };
+  const { likes, productName, setProductInfo }: any = { ...props }
 
   const likeProduct = async () => {
     try {
-      const response = await fetch("/api/likeproduct", {
-        method: "POST",
+      const response = await fetch('/api/likeproduct', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ likes: likes, product: productName }),
-      });
-      const result = await response.json();
+      })
+      const result = await response.json()
 
-      setProductInfo({ likes: result.likes });
+      setProductInfo({ likes: result.likes })
     } catch (err) {
-      console.error("not working : " + err);
+      console.error('not working : ' + err)
     }
-  };
+  }
 
   return (
     <div id="upvotes-section">
       <button
         type="submit"
         onClick={() => {
-          likeProduct();
+          likeProduct()
         }}
         className="upvotes-section-btn"
       >
@@ -36,5 +36,5 @@ export default function LikesSection(props: any) {
         This product has {likes} likes so far !
       </p>
     </div>
-  );
+  )
 }

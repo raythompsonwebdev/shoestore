@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Layout from "../components/Layout";
-import ContactForm from "../components/contactForm";
+import Head from 'next/head'
+import Layout from '../components/Layout'
+import ContactForm from '../components/contactForm'
 
 export default function Contact() {
   return (
@@ -29,7 +29,7 @@ export default function Contact() {
 
           <aside className="contact-sidebar">
             <h2 className="contact-sidebar-header">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
             </h2>
             <p className="contact-sidebar-text">
               Morbi vel rutrum ante. Vivamus adipiscing tincidunt purus at
@@ -38,7 +38,7 @@ export default function Contact() {
               adipiscing a tincidunt massa porta.
             </p>
             <h2 className="contact-sidebar-header">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
             </h2>
             <p className="contact-sidebar-text">
               Nulla quis urna nisl. Nulla dolor magna, pretium ac elementum nec,
@@ -70,5 +70,5 @@ export default function Contact() {
         </main>
       </>
     </Layout>
-  );
+  )
 }

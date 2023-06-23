@@ -1,12 +1,12 @@
-import { JWT } from "next-auth/jwt";
+import { JWT } from 'next-auth/jwt'
 
 // Read more at: https://next-auth.js.org/getting-started/typescript#module-augmentation
 
-declare module "next-auth/jwt" {
+declare module 'next-auth/jwt' {
   interface JWT {
     /** The user's role. */
-    userRole?: "admin";
+    userRole?: 'admin'
     /** OpenID ID Token */
-    idToken?: string;
+    idToken?: string
   }
 }

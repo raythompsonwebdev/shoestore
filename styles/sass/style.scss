@@ -1,5 +1,5 @@
-@import "partials/variables";
-@import "partials/base";
+@import 'partials/variables';
+@import 'partials/base';
 // @import "partials/fonts";
 
 body {
@@ -7,7 +7,7 @@ body {
   padding: 0;
   margin: 0;
   height: auto;
-  background-image: url("/images/bg-img.png");
+  background-image: url('/images/bg-img.png');
   background-repeat: repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -261,7 +261,7 @@ body {
   text-align: center;
   transition: all ease-in-out 0.2s;
   font-weight: bold;
-  button[name*="find"] {
+  button[name*='find'] {
     height: 100%;
   }
 }
@@ -301,10 +301,9 @@ body {
   font-weight: bold;
 }
 
-#search-category-form > fieldset .search-category-label-new{
+#search-category-form > fieldset .search-category-label-new {
   font-size: 100%;
 }
-
 
 #search-category-form > fieldset ::placeholder {
   color: $color-black;
@@ -327,12 +326,11 @@ body {
   width: 99%;
   margin: 0 0.5%;
   font-family: $font-list;
-
 }
-.main-content-text{
+.main-content-text {
   padding: 0;
-  line-height:1.7em;
-  margin-bottom:0.5em;
+  line-height: 1.7em;
+  margin-bottom: 0.5em;
   font-size: 0.9em;
 }
 
@@ -380,7 +378,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 7% 0 0;
-  background-image: url("/images/product-info-bg.png");
+  background-image: url('/images/product-info-bg.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
@@ -828,7 +826,7 @@ p {
   flex-flow: column;
   align-items: flex-start;
   justify-content: center;
-  gap:0;
+  gap: 0;
 }
 
 /* product box */
@@ -856,7 +854,7 @@ p {
   margin: 0;
 
   padding: 7% 0 0;
-  background-image: url("/images/product-info-bg.png");
+  background-image: url('/images/product-info-bg.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
@@ -919,7 +917,7 @@ p {
   margin: 0 0 1em;
 }
 .larger-product-box-image {
-  width: 174px;;
+  width: 174px;
   flex: 1 0 auto;
   display: block;
   margin: 1em auto;
@@ -1120,7 +1118,7 @@ p {
 
 /* Unicode character for "minus" sign (-) */
 .active::after {
-  content: "\2796";
+  content: '\2796';
 }
 
 /* Style the accordion panel. */
@@ -1341,7 +1339,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.5em;
+    padding: 0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -1352,7 +1350,7 @@ p {
     gap: 0.25em;
   }
 
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     font-size: 100%;
     line-height: 35px;
   }
@@ -1368,7 +1366,6 @@ p {
     flex: 1 0 auto;
     width: 17%;
     font-size: 1em;
-
   }
 
   #main-content {
@@ -1455,7 +1452,7 @@ p {
   .contact-sidebar {
     width: 32.5%;
     display: block;
-    float:right;
+    float: right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -1538,8 +1535,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:auto;
-
+    margin: auto;
   }
 
   #right-content-section {
@@ -1622,7 +1618,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -1787,7 +1783,7 @@ p {
     line-height: 35px;
   }
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   #front-page-form-container {
@@ -1925,7 +1921,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.5em;
+    padding: 0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -1936,7 +1932,7 @@ p {
     gap: 0.25em;
   }
 
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     font-size: 100%;
   }
 
@@ -1952,7 +1948,6 @@ p {
     flex: 1 0 auto;
     width: 17%;
     font-size: 1em;
-
   }
 
   #main-content {
@@ -2039,7 +2034,7 @@ p {
   .contact-sidebar {
     width: 32.5%;
     display: block;
-    float:right;
+    float: right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -2123,7 +2118,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:0 0 0 2%;
+    margin: 0 0 0 2%;
   }
 
   #right-content-section {
@@ -2206,7 +2201,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -2371,7 +2366,7 @@ p {
     line-height: 35px;
   }
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   #front-page-form-container {
@@ -2509,7 +2504,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.5em;
+    padding: 0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -2519,7 +2514,7 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     font-size: 100%;
   }
   #search-category-form > fieldset .search-category-label {
@@ -2534,7 +2529,6 @@ p {
     flex: 1 0 auto;
     width: 17%;
     font-size: 1em;
-
   }
 
   #main-content {
@@ -2621,7 +2615,7 @@ p {
   .contact-sidebar {
     width: 32.5%;
     display: block;
-    float:right;
+    float: right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -2705,7 +2699,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:0 0 0 2%;
+    margin: 0 0 0 2%;
   }
 
   #right-content-section {
@@ -2788,7 +2782,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -2947,7 +2941,7 @@ p {
   }
 
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   .panel {
@@ -3095,7 +3089,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.5em;
+    padding: 0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -3105,7 +3099,7 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     font-size: 100%;
   }
   #search-category-form > fieldset .search-category-label {
@@ -3120,7 +3114,6 @@ p {
     flex: 1 0 auto;
     width: 17%;
     font-size: 1em;
-
   }
 
   #main-content {
@@ -3207,7 +3200,7 @@ p {
   .contact-sidebar {
     width: 32.5%;
     display: block;
-    float:right;
+    float: right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -3291,7 +3284,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:0 0 0 2%;
+    margin: 0 0 0 2%;
   }
 
   #right-content-section {
@@ -3374,7 +3367,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -3533,7 +3526,7 @@ p {
   }
 
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   .panel {
@@ -3682,7 +3675,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.5em;
+    padding: 0.5em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -3701,7 +3694,7 @@ p {
     text-align: left;
   }
 
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     font-size: 95%;
   }
 
@@ -3709,7 +3702,6 @@ p {
     flex: 1 0 auto;
     width: 16%;
     font-size: 1em;
-
   }
 
   #main-content {
@@ -3796,7 +3788,7 @@ p {
   .contact-sidebar {
     width: 32.5%;
     display: block;
-    float:right;
+    float: right;
   }
   .contact-sidebar .contact-sidebar-header {
     font-size: 1em;
@@ -3880,7 +3872,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:0 0 0 2%;
+    margin: 0 0 0 2%;
   }
 
   #right-content-section {
@@ -3963,7 +3955,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -4122,7 +4114,7 @@ p {
   }
 
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   .panel {
@@ -4279,7 +4271,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.25em;
+    padding: 0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -4298,7 +4290,7 @@ p {
     text-align: left;
   }
 
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     line-height: 25px;
   }
 
@@ -4306,7 +4298,6 @@ p {
     flex: 1 0 auto;
     width: 15%;
     font-size: 1em;
-
   }
 
   #main-content {
@@ -4550,7 +4541,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -4713,7 +4704,7 @@ p {
     box-sizing: border-box;
   }
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   #front-page-form-container {
@@ -4803,7 +4794,6 @@ p {
     width: auto;
     height: 20px;
     display: none;
-
   }
   .signin-box-link {
     line-height: 20px;
@@ -4863,7 +4853,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.25em;
+    padding: 0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -4873,7 +4863,7 @@ p {
     justify-content: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     line-height: 25px;
   }
   #search-category-form > fieldset .search-category-label {
@@ -4884,12 +4874,10 @@ p {
     text-align: left;
   }
 
-
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 15%;
     font-size: 1em;
-
   }
 
   #main-content {
@@ -5055,7 +5043,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:auto;
+    margin: auto;
   }
 
   #right-content-section {
@@ -5133,7 +5121,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -5298,7 +5286,7 @@ p {
     box-sizing: border-box;
   }
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   #front-page-form-container {
@@ -5446,7 +5434,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.25em;
+    padding: 0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -5456,7 +5444,7 @@ p {
     align-items: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     line-height: 35px;
     font-size: 1.1em;
   }
@@ -5468,12 +5456,10 @@ p {
     text-align: center;
   }
 
-
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 100%;
     font-size: 1em;
-
   }
 
   #main-content {
@@ -5639,7 +5625,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:auto;
+    margin: auto;
   }
 
   #right-content-section {
@@ -5715,7 +5701,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -5882,7 +5868,7 @@ p {
     box-sizing: border-box;
   }
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   #front-page-form-container {
@@ -6031,7 +6017,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.25em;
+    padding: 0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -6041,7 +6027,7 @@ p {
     align-items: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     font-size: 100%;
     line-height: 35px;
   }
@@ -6053,13 +6039,10 @@ p {
     text-align: center;
   }
 
-
-
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 100%;
     font-size: 0.9em;
-
   }
 
   #main-content {
@@ -6225,7 +6208,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:auto;
+    margin: auto;
   }
 
   #right-content-section {
@@ -6304,7 +6287,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -6351,7 +6334,7 @@ p {
     flex-flow: column;
   }
   .larger-product-box-image {
-    width: 175px;;
+    width: 175px;
     flex: 0 1 auto;
     margin: 0.5em auto;
     height: auto;
@@ -6471,7 +6454,7 @@ p {
     box-sizing: border-box;
   }
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   #front-page-form-container {
@@ -6620,7 +6603,7 @@ p {
   #search-category-form {
     flex: 1 0 auto;
     margin: 0;
-    padding:0.25em;
+    padding: 0.25em;
   }
   #search-category-form > fieldset {
     margin: 0;
@@ -6630,7 +6613,7 @@ p {
     align-items: flex-start;
     gap: 0.25em;
   }
-  #search-category-form > fieldset .search-category-label-new{
+  #search-category-form > fieldset .search-category-label-new {
     font-size: 100%;
     line-height: 35px;
   }
@@ -6642,12 +6625,10 @@ p {
     text-align: center;
   }
 
-
   #search-category-form > fieldset .search-category-input {
     flex: 1 0 auto;
     width: 100%;
     font-size: 0.9em;
-
   }
 
   #main-content {
@@ -6813,7 +6794,7 @@ p {
 
   #profile-image-text {
     width: 73%;
-    margin:auto;
+    margin: auto;
   }
 
   #right-content-section {
@@ -6892,7 +6873,7 @@ p {
     height: auto;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap:0.5em;
+    gap: 0.5em;
   }
 
   .product-boxes .product-box {
@@ -7059,7 +7040,7 @@ p {
     box-sizing: border-box;
   }
   .active::after {
-    content: "\2796";
+    content: '\2796';
   }
 
   #front-page-form-container {

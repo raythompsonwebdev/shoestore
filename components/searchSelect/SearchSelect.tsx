@@ -1,19 +1,19 @@
-import { Key } from "react";
+import { Key } from 'react'
 
 interface SearchSelector {
-  selectBarData: Array<any>;
-  changesOrders: any;
-  handleChange: any;
-  orderByVal: string;
-  orderDir: string;
+  selectBarData: Array<any>
+  changesOrders: any
+  handleChange: any
+  orderByVal: string
+  orderDir: string
 }
 
 export default function SearchSelect(props: SearchSelector) {
-  const { selectBarData, changesOrders, handleChange, orderDir } = props;
+  const { selectBarData, changesOrders, handleChange, orderDir } = props
 
   function onItemChange(evt: { target: { value: string } }) {
-    handleChange(evt.target.value);
-    changesOrders(evt.target.value, orderDir);
+    handleChange(evt.target.value)
+    changesOrders(evt.target.value, orderDir)
   }
 
   return (
@@ -27,9 +27,9 @@ export default function SearchSelect(props: SearchSelector) {
       >
         {selectBarData.map(
           (options: {
-            value: string | undefined;
-            id: Key | null | undefined;
-            options: Array<any>;
+            value: string | undefined
+            id: Key | null | undefined
+            options: Array<any>
           }) => (
             // eslint-disable-next-line react/no-array-index-key
             <optgroup label={options.value} key={options.id}>
@@ -44,5 +44,5 @@ export default function SearchSelect(props: SearchSelector) {
         )}
       </select>
     </form>
-  );
+  )
 }

@@ -1,14 +1,14 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function SpecialsproductBox(props: {
-  imgUrl: string;
-  name: string;
-  cartImg: string;
-  price: string;
-  style: string;
+  imgUrl: string
+  name: string
+  cartImg: string
+  price: string
+  style: string
 }) {
-  const { imgUrl, name, cartImg, price, style } = props;
+  const { imgUrl, name, cartImg, price, style } = props
 
   return (
     <figure className="product-box">
@@ -33,5 +33,5 @@ export default function SpecialsproductBox(props: {
         </Link>
       </figcaption>
     </figure>
-  );
+  )
 }

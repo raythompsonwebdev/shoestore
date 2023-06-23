@@ -1,10 +1,10 @@
 export interface IUser {
-  _id?: string;
-  email: string;
-  name: string;
+  _id?: string
+  email: string
+  name: string
 }
 
 export interface LoginUserParams {
-  email: string;
-  password: string;
+  email: string
+  password: string
 }

@@ -1,71 +1,77 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState } from 'react'
+import Link from 'next/link'
 import {
   SelectGender,
   SelectColor,
   SelectStyle,
   SelectSize,
-} from "./SearchBarData";
+} from './SearchBarData'
 
 interface SearchBaror {
-  labelname: string;
-  searchData: Array<any>;
+  labelname: string
+  searchData: Array<any>
 }
 
 export default function SearchBar(props: SearchBaror) {
-  const { labelname, searchData } = props;
+  const { labelname, searchData } = props
 
   // const router = useRouter();
 
-  const [genderVal, setGenderVal] = useState<string>(" ");
-  const [sizeVal, setSizeVal] = useState<string>(" ");
-  const [styleVal, setStyleVal] = useState<string>(" ");
-  const [colorVal, setColorVal] = useState<string>(" ");
+  const [genderVal, setGenderVal] = useState<string>(' ')
+  const [sizeVal, setSizeVal] = useState<string>(' ')
+  const [styleVal, setStyleVal] = useState<string>(' ')
+  const [colorVal, setColorVal] = useState<string>(' ')
 
   const genderHandler = (event: { target: any }) => {
-    const { target } = event;
-    const { value } = target;
-    setGenderVal(value);
-  };
+    const { target } = event
+    const { value } = target
+    setGenderVal(value)
+  }
 
   const styleHandler = (event: { target: any }) => {
-    const { target } = event;
-    const { value } = target;
-    setStyleVal(value);
-  };
+    const { target } = event
+    const { value } = target
+    setStyleVal(value)
+  }
 
   const sizeHandler = (event: { target: any }) => {
-    const { target } = event;
-    const { value } = target;
-    setSizeVal(value);
-  };
+    const { target } = event
+    const { value } = target
+    setSizeVal(value)
+  }
 
   const colorHandler = (event: { target: any }) => {
-    const { target } = event;
-    const { value } = target;
-    setColorVal(value);
-  };
+    const { target } = event
+    const { value } = target
+    setColorVal(value)
+  }
 
-  const resultArray = [genderVal, styleVal, sizeVal, colorVal];
+  const resultArray = [genderVal, styleVal, sizeVal, colorVal]
 
   const submit = (event: { preventDefault: () => void }) => {
-    event.preventDefault();
+    event.preventDefault()
 
     // // eslint-disable-next-line no-console
     // console.log(
     //   `\n You have entered \n Gender:${resultArray[0]},\n Style: ${resultArray[1]},\n  Size: ${resultArray[2]} \n  Colour :${resultArray[3]}. \n This form is under maintenance and will be ready to use shortly`
     // );
-  };
+  }
 
-  const [gender, style, size, color] = searchData;
+  const [gender, style, size, color] = searchData
 
-  const aria = "search-category-label";
+  const aria = 'search-category-label'
 
   return (
     <aside id="search-category">
       <form id="search-category-form" onSubmit={submit}>
         <fieldset>
-        <legend className={`search-category-label ${labelname === "New Products" ? "search-category-label-new " : ""}`}>{labelname}</legend>
+          <legend
+            className={`search-category-label ${
+              labelname === 'New Products' ? 'search-category-label-new ' : ''
+            }`}
+          >
+            {labelname}
+          </legend>
           {/* <legend id="search-category-label">{labelname}</legend> */}
           <SelectGender
             name="genderVal"
@@ -99,7 +105,7 @@ export default function SearchBar(props: SearchBaror) {
           />
           <Link
             href={{
-              pathname: "/search",
+              pathname: '/search',
               query: { resultArray },
             }}
             className="search-category-btn"
@@ -114,5 +120,5 @@ export default function SearchBar(props: SearchBaror) {
         </fieldset>
       </form>
     </aside>
-  );
+  )
 }

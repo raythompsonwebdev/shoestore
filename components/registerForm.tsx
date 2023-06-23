@@ -1,16 +1,16 @@
-import { SetStateAction, useState } from "react";
-import { useRouter } from "next/router";
+import { SetStateAction, useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function RegisterForm() {
-  const [username, setUserName] = useState<string>(" ");
-  const [useremail, setEmail] = useState<string>(" ");
-  const [password, setPassword] = useState<string>(" ");
-  const [error, setError] = useState<string>(" ");
+  const [username, setUserName] = useState<string>(' ')
+  const [useremail, setEmail] = useState<string>(' ')
+  const [password, setPassword] = useState<string>(' ')
+  const [error, setError] = useState<string>(' ')
 
-  const router = useRouter();
+  const router = useRouter()
 
   const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
-    const { value } = e.target;
+    const { value } = e.target
     // const { srcElement }: any = e;
     // // check if input matches pattern
     // if (
@@ -28,11 +28,11 @@ export default function RegisterForm() {
     //   setError(" ");
     //   // srcElement.classList.add("dirty");
     // }
-    setUserName(value);
-  };
+    setUserName(value)
+  }
 
   const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
-    const { value } = e.target;
+    const { value } = e.target
     // const { srcElement }: any = e;
 
     // // regex to detect valid email
@@ -51,46 +51,44 @@ export default function RegisterForm() {
     //   setError(" ");
     //   // srcElement.classList.add("dirty");
     // }
-    setEmail(value);
-  };
+    setEmail(value)
+  }
 
   const handlePassword = (e: { target: { value: SetStateAction<string> } }) => {
-    const { value } = e.target;
-    setPassword(value);
-  };
+    const { value } = e.target
+    setPassword(value)
+  }
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      const response = await fetch("/api/registerUser", {
-        method: "POST",
+      const response = await fetch('/api/registerUser', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ name: username, email: useremail, password }),
-      });
+      })
 
-      if(response.ok){
-        console.log(response.status);
+      if (response.ok) {
+        console.log(response.status)
       }
 
-      const result = await response.json();
+      const result = await response.json()
 
-      if(result){
-        router.push("/");
+      if (result) {
+        router.push('/')
       }
-
-
     } catch (err) {
-      console.error('Something went wrong',err );
+      console.error('Something went wrong', err)
     }
-  };
+  }
 
   return (
     <form id="contact-form" onSubmit={submit}>
       <span id="form-error" className="hide-error">
-        {error ? error : ""}
+        {error ? error : ''}
       </span>
       <ul id="contact-form-fields">
         <li className="contact-form-item">
@@ -143,5 +141,5 @@ export default function RegisterForm() {
         </li>
       </ul>
     </form>
-  );
+  )
 }

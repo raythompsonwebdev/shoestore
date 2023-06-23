@@ -1,19 +1,19 @@
-import { Key } from "react";
-import NewProductBox from "./newProductBox";
+import { Key } from 'react'
+import NewProductBox from './newProductBox'
 
 export default function newProductBoxes(props: { productData: Array<any> }) {
-  const { productData } = { ...props };
+  const { productData } = { ...props }
 
   const NewProduct = productData
     .slice(0, 6)
     .map(
       (item: {
-        _id: Key | null | undefined;
-        name: string;
-        imgUrl: string;
-        price: string;
-        cartImg: string;
-        text: string;
+        _id: Key | null | undefined
+        name: string
+        imgUrl: string
+        price: string
+        cartImg: string
+        text: string
       }) => (
         <NewProductBox
           key={item._id}
@@ -24,7 +24,7 @@ export default function newProductBoxes(props: { productData: Array<any> }) {
           text={item.text}
         />
       )
-    );
+    )
 
-  return <div className="larger-product-boxes">{NewProduct}</div>;
+  return <div className="larger-product-boxes">{NewProduct}</div>
 }

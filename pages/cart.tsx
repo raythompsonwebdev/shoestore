@@ -79,7 +79,6 @@ export default function Cart(props: InferGetServerSidePropsType<typeof getServer
     }
   };
 
-
   if (status === "authenticated") {
 
   return (

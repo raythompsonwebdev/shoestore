@@ -1,25 +1,25 @@
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useState } from 'react'
 
 export default function ContactForm() {
-  const [username, setUserName] = useState<string>(" ");
-  const [email, setEmail] = useState<string>(" ");
-  const [comments, setComments] = useState<string>(" ");
+  const [username, setUserName] = useState<string>(' ')
+  const [email, setEmail] = useState<string>(' ')
+  const [comments, setComments] = useState<string>(' ')
 
   const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
-    setUserName(e.target.value);
-  };
+    setUserName(e.target.value)
+  }
 
   const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
-    setEmail(e.target.value);
-  };
+    setEmail(e.target.value)
+  }
 
   const handleComments = (e: { target: { value: SetStateAction<string> } }) => {
-    setComments(e.target.value);
-  };
+    setComments(e.target.value)
+  }
 
   const submit = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   return (
     <form id="contact-form" onSubmit={submit}>
@@ -69,5 +69,5 @@ export default function ContactForm() {
         </li>
       </ul>
     </form>
-  );
+  )
 }

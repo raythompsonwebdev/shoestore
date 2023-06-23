@@ -1,22 +1,22 @@
-import { useState } from "react";
-import { signIn, signOut, useSession } from "next-auth/react";
-import Link from "next/link";
+import { useState } from 'react'
+import { signIn, signOut, useSession } from 'next-auth/react'
+import Link from 'next/link'
 
 export default function MainNav() {
-  const { data: session, status } = useSession();
-  const loading = status === "loading";
+  const { data: session, status } = useSession()
+  const loading = status === 'loading'
 
-  const [visibility, setVisibility] = useState<boolean>(false);
+  const [visibility, setVisibility] = useState<boolean>(false)
 
   const toggleVisibility = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    setVisibility(!visibility);
-  };
+    e.preventDefault()
+    setVisibility(!visibility)
+  }
 
   const menuToggleFunc = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    setVisibility(!visibility);
-  };
+    e.preventDefault()
+    setVisibility(!visibility)
+  }
 
   return (
     <nav id="main-nav" role="navigation">
@@ -82,7 +82,7 @@ export default function MainNav() {
           </Link>
         </li>
       </ul>
-      <ul id="" className={`mobile-nav ${visibility ? "is-expanded" : " "}`}>
+      <ul id="" className={`mobile-nav ${visibility ? 'is-expanded' : ' '}`}>
         <li className="mobile-nav-item">
           <Link
             className="mobile-nav-link"
@@ -160,8 +160,8 @@ export default function MainNav() {
               className="signin-box-link"
               title=""
               onClick={(e) => {
-                e.preventDefault();
-                signIn();
+                e.preventDefault()
+                signIn()
               }}
             >
               Login
@@ -181,8 +181,8 @@ export default function MainNav() {
               className="signin-box-link"
               title=""
               onClick={(e) => {
-                e.preventDefault();
-                signOut();
+                e.preventDefault()
+                signOut()
               }}
             >
               Log Out
@@ -201,5 +201,5 @@ export default function MainNav() {
         MENU
       </button>
     </nav>
-  );
+  )
 }

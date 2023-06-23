@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
 function BannerImg() {
   return (
@@ -73,7 +73,7 @@ function BannerImg() {
         />
       </figure>
     </section>
-  );
+  )
 }
 
-export default BannerImg;
+export default BannerImg

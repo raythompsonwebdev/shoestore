@@ -1,22 +1,22 @@
 // import PropTypes from "prop-types";
-import { Key } from "react";
-import ProductBox from "./specialsProductBox";
+import { Key } from 'react'
+import ProductBox from './specialsProductBox'
 
 export default function SpecialsProductBoxes(props: {
-  productData: Array<any>;
+  productData: Array<any>
 }) {
-  const { productData } = props;
+  const { productData } = props
 
   const Product = productData
     .slice(0, 20)
     .map(
       (item: {
-        _id: Key | null | undefined;
-        name: string;
-        imgUrl: string;
-        price: string;
-        cartImg: string;
-        style: string;
+        _id: Key | null | undefined
+        name: string
+        imgUrl: string
+        price: string
+        cartImg: string
+        style: string
       }) => (
         <ProductBox
           key={item._id}
@@ -27,7 +27,7 @@ export default function SpecialsProductBoxes(props: {
           style={item.style}
         />
       )
-    );
+    )
 
-  return <div className="product-boxes">{Product}</div>;
+  return <div className="product-boxes">{Product}</div>
 }

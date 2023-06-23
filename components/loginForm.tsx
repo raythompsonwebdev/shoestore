@@ -1,42 +1,41 @@
-import { SetStateAction, useState } from "react";
-import { useRouter } from "next/router";
-import { loginUser } from "../helpers";
-import Link from "next/link";
+import { SetStateAction, useState } from 'react'
+import { useRouter } from 'next/router'
+import { loginUser } from '../helpers'
+import Link from 'next/link'
 
 export default function LoginForm() {
-  const [email, setEmail] = useState<string>(" ");
-  const [password, setPassword] = useState<string>(" ");
-  const router = useRouter();
+  const [email, setEmail] = useState<string>(' ')
+  const [password, setPassword] = useState<string>(' ')
+  const router = useRouter()
 
   const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
-    const { value } = e.target;
-    setEmail(value);
-  };
+    const { value } = e.target
+    setEmail(value)
+  }
 
   const handlePassword = (e: { target: { value: SetStateAction<string> } }) => {
-    const { value } = e.target;
-    setPassword(value);
-  };
+    const { value } = e.target
+    setPassword(value)
+  }
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
-
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      const loginRes = await loginUser({ email, password });
+      const loginRes = await loginUser({ email, password })
 
       if (loginRes && !loginRes.ok) {
-        console.log(loginRes.error || "");
+        console.log(loginRes.error || '')
       } else {
-        router.push("/profile");
+        router.push('/profile')
       }
     } catch (error) {
       if (error) {
-        const errorMsg = error;
-        console.log(errorMsg);
+        const errorMsg = error
+        console.log(errorMsg)
       }
     }
-  };
+  }
 
   return (
     <form id="contact-form" onSubmit={submit}>
@@ -73,12 +72,12 @@ export default function LoginForm() {
           </label>
         </li>
       </ul>
-      <p style={{ display: "block", lineHeight: "50px" }}>
-        Not Registered?{" "}
-        <Link href={`/register`} title="" style={{ display: "inline" }}>
+      <p style={{ display: 'block', lineHeight: '50px' }}>
+        Not Registered?{' '}
+        <Link href={`/register`} title="" style={{ display: 'inline' }}>
           Register Here
         </Link>
       </p>
     </form>
-  );
+  )
 }

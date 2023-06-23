@@ -1,5 +1,5 @@
-import Head from "next/head";
-import Layout from "../components/Layout";
+import Head from 'next/head'
+import Layout from '../components/Layout'
 
 export default function Faqs() {
   return (
@@ -32,7 +32,7 @@ export default function Faqs() {
             </p>
 
             <h3 className="context-title">
-              {" "}
+              {' '}
               Integer pellentesque lorem quis libero consectetur ac egestas
               magna tincidunt.
             </h3>
@@ -94,5 +94,5 @@ export default function Faqs() {
         </main>
       </>
     </Layout>
-  );
+  )
 }

@@ -1,52 +1,52 @@
-import { useState } from "react";
-import clientPromise from "../../lib/mongodb";
-import { InferGetServerSidePropsType } from "next";
-import LikesSection from "../../components/LikesSection";
-import Head from "next/head";
-import Layout from "../../components/Layout";
-import Image from "next/image";
-import { useRouter } from "next/router";
+import { useState } from 'react'
+import clientPromise from '../../lib/mongodb'
+import { InferGetServerSidePropsType } from 'next'
+import LikesSection from '../../components/LikesSection'
+import Head from 'next/head'
+import Layout from '../../components/Layout'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 export const getServerSideProps = async (context: any) => {
   try {
     //await clientPromise
-    const productName = context.query.prodname;
-    const client = await clientPromise;
+    const productName = context.query.prodname
+    const client = await clientPromise
 
-    const db = client.db("shoestore");
+    const db = client.db('shoestore')
     const results = await db
-      .collection("products")
-      .findOne({ name: productName });
+      .collection('products')
+      .findOne({ name: productName })
 
-    const product = JSON.parse(JSON.stringify(results));
+    const product = JSON.parse(JSON.stringify(results))
 
     return {
       props: {
         product,
       },
-    };
+    }
   } catch (e) {
-    console.error(e);
+    console.error(e)
     return {
       props: { isConnected: false },
-    };
+    }
   }
-};
+}
 
 export default function SingleProduct({
   product,
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [singleProduct] = useState(product);
-  const [productInfo, setProductInfo] = useState({ likes: 0 });
+  const [singleProduct] = useState(product)
+  const [productInfo, setProductInfo] = useState({ likes: 0 })
 
-  const router = useRouter();
+  const router = useRouter()
 
-  const { prodname } = router.query;
+  const { prodname } = router.query
 
   const { _id, color, imgUrl, name, price, size, style, text }: any = {
     ...singleProduct,
-  };
+  }
 
   return singleProduct ? (
     <Layout>
@@ -104,5 +104,5 @@ export default function SingleProduct({
         </main>
       </>
     </Layout>
-  );
+  )
 }

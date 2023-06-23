@@ -1,31 +1,31 @@
-import { useState, useEffect } from "react";
-import { useSession } from "next-auth/react";
-import Layout from "../components/Layout";
-import AccessDenied from "../components/access-denied";
-import Head from "next/head";
-import Image from "next/image";
+import { useState, useEffect } from 'react'
+import { useSession } from 'next-auth/react'
+import Layout from '../components/Layout'
+import AccessDenied from '../components/access-denied'
+import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Profile() {
-  const { data: session, status } = useSession();
+  const { data: session, status } = useSession()
 
-  const [content, setContent] = useState<any>({});
+  const [content, setContent] = useState<any>({})
   // Fetch content from protected route
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("/api/examples/protected");
-      const json = await res.json();
+      const res = await fetch('/api/examples/protected')
+      const json = await res.json()
       if (json.content) {
-        setContent(json.content);
+        setContent(json.content)
       }
-    };
-    fetchData();
-  }, [session]);
+    }
+    fetchData()
+  }, [session])
 
-  const { name, email, image } = content;
+  const { name, email, image } = content
 
   // If no session exists, display access denied message
-  if (status === "unauthenticated") {
+  if (status === 'unauthenticated') {
     return (
       <Layout>
         <>
@@ -37,7 +37,7 @@ export default function Profile() {
           <AccessDenied />
         </>
       </Layout>
-    );
+    )
   }
 
   return (
@@ -62,7 +62,7 @@ export default function Profile() {
               />
             ) : (
               <Image
-                src={"/images/placeholder.jpg"}
+                src={'/images/placeholder.jpg'}
                 alt="Profile"
                 width="200"
                 height="200"
@@ -74,7 +74,10 @@ export default function Profile() {
               <br />
               <p>Email :{email as string}</p>
               <h1>API Example</h1>
-              <p>The examples below show responses from the example API endpoints.</p>
+              <p>
+                The examples below show responses from the example API
+                endpoints.
+              </p>
               <p>
                 <em>You must be signed in to see responses.</em>
               </p>
@@ -89,5 +92,5 @@ export default function Profile() {
         </main>
       </>
     </Layout>
-  );
+  )
 }

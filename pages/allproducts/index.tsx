@@ -1,32 +1,29 @@
-import { SetStateAction, useState } from "react";
-import Head from "next/head";
-import clientPromise from "../../lib/mongodb";
-import { InferGetServerSidePropsType } from "next";
-import Layout from "../../components/Layout";
-import AllProductBoxes from "../../components/allproducts/allProductBoxes";
-import AccordianMenu from "../../components/accordianMenu";
-import SearchBar from "../../components/searchBar/SearchBar";
-import SearchSelect from "../../components/searchSelect/SearchSelect";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { SetStateAction, useState } from 'react'
+import Head from 'next/head'
+import clientPromise from '../../lib/mongodb'
+import { InferGetServerSidePropsType } from 'next'
+import Layout from '../../components/Layout'
+import AllProductBoxes from '../../components/allproducts/allProductBoxes'
+import AccordianMenu from '../../components/accordianMenu'
+import SearchBar from '../../components/searchBar/SearchBar'
+import SearchSelect from '../../components/searchSelect/SearchSelect'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const getServerSideProps = async (context: any) => {
   try {
     //await clientPromise
-    const client = await clientPromise;
-    const db = client.db("shoestore");
+    const client = await clientPromise
+    const db = client.db('shoestore')
 
-    const results = await db.collection("products").find({}).toArray();
-    const resultstwo = await db.collection("accordianData").find({}).toArray();
-    const resultsthree = await db
-      .collection("selectBarData")
-      .find({})
-      .toArray();
-    const resultsfour = await db.collection("searchBarData").find({}).toArray();
+    const results = await db.collection('products').find({}).toArray()
+    const resultstwo = await db.collection('accordianData').find({}).toArray()
+    const resultsthree = await db.collection('selectBarData').find({}).toArray()
+    const resultsfour = await db.collection('searchBarData').find({}).toArray()
 
-    const product = JSON.parse(JSON.stringify(results));
-    const accordian = JSON.parse(JSON.stringify(resultstwo));
-    const searchresults = JSON.parse(JSON.stringify(resultsfour));
-    const selectresults = JSON.parse(JSON.stringify(resultsthree));
+    const product = JSON.parse(JSON.stringify(results))
+    const accordian = JSON.parse(JSON.stringify(resultstwo))
+    const searchresults = JSON.parse(JSON.stringify(resultsfour))
+    const selectresults = JSON.parse(JSON.stringify(resultsthree))
 
     return {
       props: {
@@ -35,14 +32,14 @@ export const getServerSideProps = async (context: any) => {
         selectresults,
         accordian,
       },
-    };
+    }
   } catch (e) {
-    console.error(e);
+    console.error(e)
     return {
       props: { isConnected: false },
-    };
+    }
   }
-};
+}
 
 export default function Allproducts({
   accordian,
@@ -51,43 +48,43 @@ export default function Allproducts({
   selectresults,
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [accordianData] = useState<Array<any>>(accordian);
-  const [productData] = useState<Array<any>>(product);
-  const [searchbarData] = useState<Array<any>>(searchresults);
-  const [selectbarData] = useState<Array<any>>(selectresults);
-  const [orderDir, setOrderByDir] = useState<string>("asc");
-  const [OrderByVal, setOrderByVal] = useState<string>("all");
-  const [visibility, setVisibility] = useState<boolean>(false);
+  const [accordianData] = useState<Array<any>>(accordian)
+  const [productData] = useState<Array<any>>(product)
+  const [searchbarData] = useState<Array<any>>(searchresults)
+  const [selectbarData] = useState<Array<any>>(selectresults)
+  const [orderDir, setOrderByDir] = useState<string>('asc')
+  const [OrderByVal, setOrderByVal] = useState<string>('all')
+  const [visibility, setVisibility] = useState<boolean>(false)
 
   const handleChange = (selectedSize: SetStateAction<string>) => {
-    setOrderByVal(selectedSize);
-    setOrderByDir("asc");
-  };
+    setOrderByVal(selectedSize)
+    setOrderByDir('asc')
+  }
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    setVisibility(!visibility);
-  };
+    e.preventDefault()
+    setVisibility(!visibility)
+  }
 
   const changesOrders = (
     orderbyval: SetStateAction<string>,
     dir: SetStateAction<string>
   ) => {
-    setOrderByVal(orderbyval);
-    setOrderByDir(dir);
-  };
+    setOrderByVal(orderbyval)
+    setOrderByDir(dir)
+  }
 
-  let filteredApts = productData;
-  const value = OrderByVal;
+  let filteredApts = productData
+  const value = OrderByVal
 
   filteredApts = filteredApts.filter(
     (item: {
-      [x: string]: any;
-      color: string;
-      style: string;
-      size: string;
-      gender: string;
-      price: string;
+      [x: string]: any
+      color: string
+      style: string
+      size: string
+      gender: string
+      price: string
     }) => {
       if (
         item.color === value ||
@@ -96,11 +93,11 @@ export default function Allproducts({
         item.gender === value ||
         item.price === value
       ) {
-        return item;
+        return item
       }
-      return item[value];
+      return item[value]
     }
-  );
+  )
 
   return (
     <Layout>
@@ -123,7 +120,7 @@ export default function Allproducts({
           </button>
 
           <aside
-            className={`left-side-content ${visibility ? "is-expanded" : " "}`}
+            className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
             <AccordianMenu accordianData={accordianData} />
           </aside>
@@ -141,5 +138,5 @@ export default function Allproducts({
         </main>
       </>
     </Layout>
-  );
+  )
 }

@@ -1,20 +1,20 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function NewProductBox(props: {
-  imgUrl: string;
-  name: string;
-  cartImg: string;
-  price: string;
-  text: string;
+  imgUrl: string
+  name: string
+  cartImg: string
+  price: string
+  text: string
 }) {
-  const { imgUrl, name, cartImg, price, text } = props;
+  const { imgUrl, name, cartImg, price, text } = props
   const myComponentStyle = {
     backgroundImage: "url('/images/product_headline_bg.png')",
-    backgroundPosition: "0% 50%",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-  };
+    backgroundPosition: '0% 50%',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  }
   return (
     <figure className="larger-product-box">
       <Image
@@ -39,10 +39,10 @@ export default function NewProductBox(props: {
               width="34"
               height="48"
             />
-          </Link>{" "}
+          </Link>{' '}
           Add to Cart
         </span>
       </figcaption>
     </figure>
-  );
+  )
 }
