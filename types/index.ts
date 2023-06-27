@@ -1,7 +1,10 @@
 export interface IUser {
-  _id?: string
-  email: string
-  name: string
+  id?: string
+  email?: string
+  name?: string | null | undefined
+  accessToken?: String
+  emailVerified?:String
+
 }
 
 export interface LoginUserParams {

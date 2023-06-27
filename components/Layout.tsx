@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
-import Header from './header'
-import MainNav from './mainNav'
-import Footer from './footer'
+import Header from './(layouts)/header'
+import MainNav from './(layouts)/mainNav'
+import Footer from './(layouts)/footer'
 import { Old_Standard_TT } from 'next/font/google'
 
 const roboto = Old_Standard_TT({

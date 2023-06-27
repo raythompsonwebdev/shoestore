@@ -1,11 +1,8 @@
 import { useState } from 'react'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import SignInBox from './signInBox'
 import Link from 'next/link'
 
 export default function MainNav() {
-  const { data: session, status } = useSession()
-  const loading = status === 'loading'
-
   const [visibility, setVisibility] = useState<boolean>(false)
 
   const toggleVisibility = (e: { preventDefault: () => void }) => {
@@ -150,52 +147,8 @@ export default function MainNav() {
           </Link>
         </li>
       </ul>
-      <span id="signin-box">
-        {loading ? <>Loading...</> : false}
 
-        {!session && (
-          <>
-            <Link
-              href={`/api/auth/signin`}
-              className="signin-box-link"
-              title=""
-              onClick={(e) => {
-                e.preventDefault()
-                signIn()
-              }}
-            >
-              Login
-            </Link>
-            <Link href="/profile" className="signin-box-link" title="">
-              Account
-            </Link>
-            <Link href="/cart" className="signin-box-link" title="">
-              Cart
-            </Link>
-          </>
-        )}
-        {session?.user && (
-          <>
-            <Link
-              href={`/api/auth/signout`}
-              className="signin-box-link"
-              title=""
-              onClick={(e) => {
-                e.preventDefault()
-                signOut()
-              }}
-            >
-              Log Out
-            </Link>
-            <Link href="/profile" className="signin-box-link" title="">
-              Account
-            </Link>
-            <Link href="/cart" className="signin-box-link" title="">
-              Cart
-            </Link>
-          </>
-        )}
-      </span>
+      <SignInBox />
 
       <button id="menu-toggle-btn" type="button" onClick={toggleVisibility}>
         MENU

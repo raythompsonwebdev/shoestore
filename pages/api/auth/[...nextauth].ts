@@ -3,9 +3,11 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 import clientPromise from '../../../lib/mongodb'
 import { connectToMongoDB } from '../../../lib/dbConnect'
-import User from '../../../models/users'
+import FindUser from '../../../models/users'
 import { IUser } from '../../../types'
 import { comparePassword } from '../../../lib/hashPassword'
+
+//import { signJwtAccessToken } from "../../../lib/jwt";
 
 export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers/oauth
@@ -27,8 +29,7 @@ export const authOptions: NextAuthOptions = {
         await connectToMongoDB().catch((err) => {
           throw new Error(err)
         })
-
-        // // Add logic here to look up the user from the credentials supplied
+        // Add logic here to look up the user from the credentials supplied
         // const res = await fetch("http://localhost:3000/login", {
         //   method: "POST",
         //   headers: {
@@ -40,10 +41,12 @@ export const authOptions: NextAuthOptions = {
         //     useremail: credentials?.email,
         //   }),
         // });
-        // const user = await res.json();
+        // const user1 = await res.json();
+
+        // console.log(user1)
 
         // confirm if user email already exists.
-        const user = await User.findOne({
+        const user = await FindUser.findOne({
           email: credentials?.email,
         }).select('+password')
 
@@ -60,6 +63,10 @@ export const authOptions: NextAuthOptions = {
         if (!isPasswordCorrect) {
           throw new Error('Invalid credentials')
         }
+
+        // const accessToken = signJwtAccessToken(user);
+
+
 
         if (user) {
           // Any object returned will be saved in `user` property of the JWT
@@ -79,22 +86,23 @@ export const authOptions: NextAuthOptions = {
   },
   session: {
     strategy: 'jwt',
+    maxAge: 30 * 24 * 60 * 60
   },
   callbacks: {
-    async jwt({ token, account, user }) {
+    jwt: ({token, account, user})=> {
       if (account) {
-        token.accessToken = account.access_token
+        token.accessToken = account.access_token;
       }
-      return { ...token, ...user }
+      return { ...token, ...user };
     },
-    async session({ session, token }) {
-      const user = token.user as IUser
+    session: async ({session, token}) => {
+      const pill = token.user as IUser;
       return {
-        user,
+        pill,
         ...session,
         accessToken: token.accessToken,
-      }
-    },
+      };
+    }
   },
   pages: {
     signIn: '/login',

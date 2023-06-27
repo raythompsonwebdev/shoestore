@@ -1,18 +1,18 @@
 import Head from 'next/head'
-import Layout from '../components/Layout'
-import LoginForm from '../components/loginForm'
+import Layout from '../../components/Layout'
+import RegisterForm from '../../components/(forms)/registerForm'
 
-export default function Login() {
+export default function Register() {
   return (
     <Layout>
       <>
         <Head>
-          <title>Login</title>
+          <title>Register</title>
           <meta name="description" content="Contact us page" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Login</h1>
+          <h1 id="main-content-title">Register</h1>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
@@ -24,7 +24,7 @@ export default function Login() {
           <br />
 
           <section id="contact-form-section">
-            <LoginForm />
+            <RegisterForm />
           </section>
 
           <aside className="contact-sidebar">

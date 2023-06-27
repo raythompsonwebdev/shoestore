@@ -844,15 +844,13 @@ p {
   display: block;
   margin: 0 auto;
   height: auto;
-  width: auto;
-  height: auto;
+  width: 100%;
 }
 
 /* product box caption */
 .product-box .product-box-caption {
   width: 100%;
   margin: 0;
-
   padding: 7% 0 0;
   background-image: url('/images/product-info-bg.png');
   background-repeat: no-repeat;
@@ -918,7 +916,7 @@ p {
 }
 .larger-product-box-image {
   width: 174px;
-  flex: 1 0 auto;
+  flex: 0 1 auto;
   display: block;
   margin: 1em auto;
   height: auto;
@@ -937,7 +935,7 @@ p {
 .larger-product-box-title {
   grid-area: 1 / 1 / 2 / 8;
   background-color: $color-white;
-  height: auto;
+  height: 45px;
   line-height: 45px;
   text-indent: 1.2em;
   font-size: 1em;
@@ -1664,14 +1662,14 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
+    flex: 0 1 auto;
     width: auto;
-    flex: 1 0 auto;
     margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 60%;
-    flex: 1 0 auto;
+    width: 78%;
+    flex: 0 1 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
@@ -2247,14 +2245,14 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
+    flex: 0 1 auto;
     width: auto;
-    flex: 1 0 auto;
     margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 60%;
-    flex: 1 0 auto;
+    width: 78%;
+    flex: 0 1 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
@@ -2828,14 +2826,14 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
+    flex: 0 1 auto;
     width: auto;
-    flex: 1 0 auto;
     margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 60%;
-    flex: 1 0 auto;
+    width: 78%;
+    flex: 0 1 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
@@ -3413,14 +3411,14 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
+    flex: 0 1 auto;
     width: auto;
-    flex: 1 0 auto;
     margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 60%;
-    flex: 1 0 auto;
+    width: 78%;
+    flex: 0 1 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
@@ -4001,14 +3999,14 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
+    flex: 0 1 auto;
     width: auto;
-    flex: 1 0 auto;
     margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 60%;
-    flex: 1 0 auto;
+    width: 78%;
+    flex: 0 1 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;
@@ -4588,8 +4586,8 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
+    flex: 0 1 auto;
     width: auto;
-    flex: 1 0 auto;
     margin: 0;
     height: auto;
   }
@@ -5168,14 +5166,14 @@ p {
     flex-flow: row;
   }
   .larger-product-box-image {
+    flex: 0 1 auto;
     width: auto;
-    flex: 1 0 auto;
     margin: 0;
     height: auto;
   }
   .larger-product-box-caption {
-    width: 48%;
-    flex: 1 0 auto;
+    width: 71%;
+    flex: 0 1 auto;
   }
   .larger-product-box-title {
     text-indent: 1em;

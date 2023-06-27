@@ -1,6 +1,6 @@
 import { SetStateAction, useState } from 'react'
 import { useRouter } from 'next/router'
-import { loginUser } from '../helpers'
+import { loginUser } from '../../helpers'
 import Link from 'next/link'
 
 export default function LoginForm() {
@@ -27,7 +27,7 @@ export default function LoginForm() {
       if (loginRes && !loginRes.ok) {
         console.log(loginRes.error || '')
       } else {
-        router.push('/profile')
+        router.push('/(protected)/profile')
       }
     } catch (error) {
       if (error) {

@@ -50,8 +50,6 @@ export default function Home({
   accordian,
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [accordianData] = useState<Array<any>>(accordian)
-  const [productData] = useState<Array<any>>(product)
   const [visibility, setVisibility] = useState<boolean>(false)
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
@@ -82,14 +80,14 @@ export default function Home({
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
             <FindShoes />
-            <AccordianMenu accordianData={accordianData} />
+            <AccordianMenu accordianData={accordian} />
           </aside>
 
           <section id="right-content-section" className="group">
             <BannerImg />
 
             <h1 id="right-content-section-header">Featured</h1>
-            <HomePageBoxes productData={productData} />
+            <HomePageBoxes productData={product} />
           </section>
         </main>
       </>

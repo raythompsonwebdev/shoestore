@@ -2,17 +2,17 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 
-export default function Custom404() {
+export default function Custom500() {
   return (
     <Layout>
       <>
         <Head>
-          <title>Not Found</title>
+          <title>500 Error</title>
           <meta name="description" content="Error page" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">404 Error Page</h1>
+          <h1 id="main-content-title">500 Error Page</h1>
 
           <section id="main-inner-content" className="group">
             <h2 className="main-inner-content-title">Oops! Error.</h2>

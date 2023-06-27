@@ -1,20 +1,20 @@
 import Head from 'next/head'
-import Layout from '../components/Layout'
-import ContactForm from '../components/contactForm'
+import Layout from '../../components/Layout'
+import LoginForm from '../../components/(forms)/loginForm'
 
-export default function Contact() {
+export default function Login() {
   return (
     <Layout>
       <>
         <Head>
-          <title>Contact Us</title>
+          <title>Login</title>
           <meta name="description" content="Contact us page" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Contact Us</h1>
+          <h1 id="main-content-title">Login</h1>
 
-          <p className="main-content-text">
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
             explicabo, ab expedita rem temporibus repellendus eum, omnis,
             distinctio est ipsum vel voluptate perspiciatis, quis earum
@@ -24,7 +24,7 @@ export default function Contact() {
           <br />
 
           <section id="contact-form-section">
-            <ContactForm />
+            <LoginForm />
           </section>
 
           <aside className="contact-sidebar">

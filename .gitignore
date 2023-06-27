@@ -28,18 +28,13 @@ public/js/*js
 next-env.d.ts
 .vscode
 
-pages/api-example.tsx
-pages/server.tsx
-pages/500.tsx
-pages/api/examples/*.ts
-pages/admin.tsx
-pages/protected.tsx
+pages/(protected)/admin.tsx
+pages/(protected)/session.tsx
 
 lib/cookies.ts
 lib/validate.ts
+lib/jwt.ts
 
-pages/api/prodroute.ts
-pages/api/auth/loginuser.ts
 pages/api/index.ts
 
 

@@ -50,11 +50,6 @@ export default function SearchBar(props: SearchBaror) {
 
   const submit = (event: { preventDefault: () => void }) => {
     event.preventDefault()
-
-    // // eslint-disable-next-line no-console
-    // console.log(
-    //   `\n You have entered \n Gender:${resultArray[0]},\n Style: ${resultArray[1]},\n  Size: ${resultArray[2]} \n  Colour :${resultArray[3]}. \n This form is under maintenance and will be ready to use shortly`
-    // );
   }
 
   const [gender, style, size, color] = searchData

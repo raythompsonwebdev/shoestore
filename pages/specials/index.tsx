@@ -12,7 +12,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 export const getServerSideProps = async (context: any) => {
   try {
     //await clientPromise
-
     const client = await clientPromise
     const db = client.db('shoestore')
 

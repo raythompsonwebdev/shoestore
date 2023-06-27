@@ -1,30 +1,29 @@
 import Head from 'next/head'
-import Layout from '../components/Layout'
-import RegisterForm from '../components/registerForm'
+import Layout from '../../components/Layout'
+import ContactForm from '../../components/(forms)/contactForm'
 
-export default function Register() {
+export default function Contact() {
   return (
     <Layout>
       <>
         <Head>
-          <title>Register</title>
+          <title>Contact Us</title>
           <meta name="description" content="Contact us page" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Register</h1>
+          <h1 id="main-content-title">Contact Us</h1>
 
-          <p>
+          <p className="main-content-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
             explicabo, ab expedita rem temporibus repellendus eum, omnis,
             distinctio est ipsum vel voluptate perspiciatis, quis earum
             accusantium unde nisi quas. Voluptatum.
           </p>
           <br />
-          <br />
 
           <section id="contact-form-section">
-            <RegisterForm />
+            <ContactForm />
           </section>
 
           <aside className="contact-sidebar">

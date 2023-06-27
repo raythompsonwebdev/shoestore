@@ -31,26 +31,24 @@ export default function RegisterForm() {
     setUserName(value)
   }
 
-  const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
+  const handleEmails = (e: { target: { value: SetStateAction<any> } }) => {
     const { value } = e.target
-    // const { srcElement }: any = e;
+    // regex to detect valid email
+    const emailRegExp =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-    // // regex to detect valid email
-    // const emailRegExp =
-    //   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-    // // check if input matches pattern
-    // if (!emailRegExp.test(srcElement.value)) {
-    //   //error.classList.add("show-error");
-    //   //error.classList.remove("hide-error");
-    //   setError("Please provide a valid e-mail address!");
-    //   //srcElement.classList.add("dirty");
-    // } else {
-    //   // error.classList.add("hide-error");
-    //   // error.classList.remove("show-error");
-    //   setError(" ");
-    //   // srcElement.classList.add("dirty");
-    // }
+    // check if input matches pattern
+    if (!emailRegExp.test(value)) {
+      //error.classList.add("show-error");
+      //error.classList.remove("hide-error");
+      setError('Please provide a valid e-mail address!')
+      //srcElement.classList.add("dirty");
+    } else {
+      // error.classList.add("hide-error");
+      // error.classList.remove("show-error");
+      setError(' ')
+      // srcElement.classList.add("dirty");
+    }
     setEmail(value)
   }
 
