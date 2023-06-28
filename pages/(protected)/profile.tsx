@@ -4,12 +4,18 @@ import Layout from '../../components/Layout'
 import AccessDenied from '../../components/access-denied'
 import Head from 'next/head'
 import Image from 'next/image'
+import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
+
+export const getServerSideProps = async (context:any) => {
+
+
+}
+
 
 export default function Profile() {
   const { data: session, status } = useSession()
 
   const [content, setContent] = useState<any>({})
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,7 +28,6 @@ export default function Profile() {
     fetchData()
   }, [session])
 
-  console.log(content)
 
   // If no session exists, display access denied message
   if (status === 'unauthenticated') {

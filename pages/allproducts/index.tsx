@@ -1,7 +1,8 @@
 import { SetStateAction, useState } from 'react'
 import Head from 'next/head'
-import clientPromise from '../../lib/mongodb'
-import { InferGetServerSidePropsType } from 'next'
+// import clientPromise from '../../lib/mongodb'
+// import { InferGetServerSidePropsType } from 'next'
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import Layout from '../../components/Layout'
 import AllProductBoxes from '../../components/allproducts/allProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
@@ -9,45 +10,49 @@ import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export const getServerSideProps = async (context: any) => {
-  try {
-    //await clientPromise
-    const client = await clientPromise
-    const db = client.db('shoestore')
+// export const getServerSideProps = async (context: any) => {
+//   try {
+//     //await clientPromise
+//     const client = await clientPromise
+//     const db = client.db('shoestore')
 
-    const results = await db.collection('products').find({}).toArray()
-    const resultstwo = await db.collection('accordianData').find({}).toArray()
-    const resultsthree = await db.collection('selectBarData').find({}).toArray()
-    const resultsfour = await db.collection('searchBarData').find({}).toArray()
+//     const results = await db.collection('products').find({}).toArray()
+//     const resultstwo = await db.collection('accordianData').find({}).toArray()
+//     const resultsthree = await db.collection('selectBarData').find({}).toArray()
+//     const resultsfour = await db.collection('searchBarData').find({}).toArray()
 
-    const product = JSON.parse(JSON.stringify(results))
-    const accordian = JSON.parse(JSON.stringify(resultstwo))
-    const searchresults = JSON.parse(JSON.stringify(resultsfour))
-    const selectresults = JSON.parse(JSON.stringify(resultsthree))
+//     const product = JSON.parse(JSON.stringify(results))
+//     const accordian = JSON.parse(JSON.stringify(resultstwo))
+//     const searchresults = JSON.parse(JSON.stringify(resultsfour))
+//     const selectresults = JSON.parse(JSON.stringify(resultsthree))
 
-    return {
-      props: {
-        product,
-        searchresults,
-        selectresults,
-        accordian,
-      },
-    }
-  } catch (e) {
-    console.error(e)
-    return {
-      props: { isConnected: false },
-    }
-  }
+//     return {
+//       props: {
+//         product,
+//         searchresults,
+//         selectresults,
+//         accordian,
+//       },
+//     }
+//   } catch (e) {
+//     console.error(e)
+//     return {
+//       props: { isConnected: false },
+//     }
+//   }
+// }
+
+type AllData = {
+  product: [];
+  accordian: [];
+  searchresults :[];
+  selectresults: [];
 }
 
-export default function Allproducts({
-  accordian,
-  product,
-  searchresults,
-  selectresults,
-  isConnected,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Allproducts(props: InferGetStaticPropsType<typeof getStaticProps>) {
+
+  const {product, accordian,searchresults,selectresults } = props.allData;
+
   const [accordianData] = useState<Array<any>>(accordian)
   const [productData] = useState<Array<any>>(product)
   const [searchbarData] = useState<Array<any>>(searchresults)
@@ -139,4 +144,20 @@ export default function Allproducts({
       </>
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps<{
+  allData: AllData
+}> = async () => {
+  // Call an external API endpoint to get posts
+  const res = await fetch('http:localhost:3000/api/alldata')
+  const allData = await res.json()
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props:  {
+      allData,
+      revalidate: 10,
+    }
+  }
 }

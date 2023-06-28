@@ -7,11 +7,14 @@ import Layout from '../../components/Layout'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context:any) => {
+
+   const [val1,val2,val3,val4] = context.query.resultArray
+
   try {
     const client = await clientPromise
     const db = client.db('shoestore')
-    const results = await db.collection('products').find({}).toArray()
+    const results = await db.collection('products').find({$or:[{ "size":  `${val1}`} ,{ "color": `${val2}` },{ "gender": `${val3}` },{ "style": `${val4}` }]} ).toArray()
 
     if (results.length > 0) {
       console.log(`${results.length} customers found`)
@@ -37,28 +40,11 @@ export default function SearchProduct({
   productsearch,
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+
   const [products] = useState(productsearch)
   const [productInfo, setProductInfo] = useState({ likes: 0 })
 
-  const router = useRouter()
-
-  // deconstruct query object
-  const { resultArray } = router.query
-
-  // deconstruct search result array with product details - in correct order
-  const [size1, color1, gender1, style1]: any = resultArray
-
-  // filter product from the products array
-  const product = products.filter(
-    (item: { size: string; color: string; gender: string; style: string }) =>
-      item.size === size1 &&
-      item.color === color1 &&
-      item.gender === gender1 &&
-      item.style === style1
-  )
-  console.log(product)
-
-  return product.length === 0 ? (
+  return products.length === 0 ? (
     <Layout>
       <>
         <Head>
@@ -86,7 +72,7 @@ export default function SearchProduct({
         </Head>
         <main id="main-content" className="clearfix">
           <h1 id="main-content-title">Single Product Search</h1>
-          {product.map((shoes: any) => (
+          {products.map((shoes: any) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <Image
                 id="product-page-img"

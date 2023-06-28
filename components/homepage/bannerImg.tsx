@@ -70,6 +70,7 @@ function BannerImg() {
           width="500"
           height="346"
           alt="shoestore-banner"
+          priority={true}
         />
       </figure>
     </section>
