@@ -7,7 +7,8 @@ import FindUser from '../../../models/users'
 import { IUser } from '../../../types'
 import { comparePassword } from '../../../lib/hashPassword'
 
-//import { signJwtAccessToken } from "../../../lib/jwt";
+import {signJwtAccessToken} from "../../../lib/jwt"
+
 
 export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers/oauth
@@ -60,22 +61,36 @@ export const authOptions: NextAuthOptions = {
           user.password
         )
 
-        if (!isPasswordCorrect) {
-          throw new Error('Invalid credentials')
+        if (isPasswordCorrect) {
+
+          const accessToken = signJwtAccessToken(
+            {
+              user: {
+                name: user.name,
+                email: user.email,
+              },
+            }
+          );
+
+          user.accessToken = accessToken;
+
+        } else {
+          throw new Error("Password is not valid");
         }
 
-        // const accessToken = signJwtAccessToken(user);
-
-
+        // if (!isPasswordCorrect) {
+        //   throw new Error('Invalid credentials')
+        // }
 
         if (user) {
-          // Any object returned will be saved in `user` property of the JWT
+
           return user
+
         } else {
-          // If you return null then an error will be displayed advising the user to check their details.
+
           return null
 
-          // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
+
         }
       },
     }),
@@ -86,21 +101,23 @@ export const authOptions: NextAuthOptions = {
   },
   session: {
     strategy: 'jwt',
-    maxAge: 30 * 24 * 60 * 60
   },
+  jwt: {
+    // The maximum age of the NextAuth.js issued JWT in seconds.
+    // Defaults to `session.maxAge`.
+    maxAge: 60 * 60 * 24 * 14,
+
+
+  },
+
   callbacks: {
-    jwt: ({token, account, user})=> {
-      if (account) {
-        token.accessToken = account.access_token;
-      }
-      return { ...token, ...user };
+    jwt: ({token, user})=> {
+      return {...token, ...user};
     },
     session: async ({session, token}) => {
-      const pill = token.user as IUser;
+      session.user = token;
       return {
-        pill,
         ...session,
-        accessToken: token.accessToken,
       };
     }
   },

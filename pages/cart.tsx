@@ -49,6 +49,8 @@ export default function Cart(
   const [cartItems, setCartItems] = useState<Array<any>>([])
   const { data: session, status } = useSession()
 
+  console.log(session);
+
   // used to stop infinte loops
   // useEffect(()=>{
   // 	setCartItems(products);

@@ -23,7 +23,7 @@ export default function signInBox() {
             Login
           </Link>
           <Link
-            href="/(protected)/profile"
+            href="/profile"
             className="signin-box-link"
             title=""
           >
@@ -48,7 +48,7 @@ export default function signInBox() {
             Log Out
           </Link>
           <Link
-            href="/(protected)/profile"
+            href="/profile"
             className="signin-box-link"
             title=""
           >

@@ -1,13 +1,12 @@
 export interface IUser {
-  id?: string
-  email?: string
-  name?: string | null | undefined
-  accessToken?: String
-  emailVerified?:String
-
+  id?: string;
+  email?: string;
+  role?: string;
+  name?: string | null | undefined;
+  accessToken?: String;
 }
 
 export interface LoginUserParams {
-  email: string
-  password: string
+  email: string;
+  password: string;
 }

@@ -1,7 +1,5 @@
 import { SetStateAction, useState } from 'react'
 import Head from 'next/head'
-// import clientPromise from '../../lib/mongodb'
-// import { InferGetServerSidePropsType } from 'next'
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import Layout from '../../components/Layout'
 import AllProductBoxes from '../../components/allproducts/allProductBoxes'
@@ -9,38 +7,6 @@ import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-// export const getServerSideProps = async (context: any) => {
-//   try {
-//     //await clientPromise
-//     const client = await clientPromise
-//     const db = client.db('shoestore')
-
-//     const results = await db.collection('products').find({}).toArray()
-//     const resultstwo = await db.collection('accordianData').find({}).toArray()
-//     const resultsthree = await db.collection('selectBarData').find({}).toArray()
-//     const resultsfour = await db.collection('searchBarData').find({}).toArray()
-
-//     const product = JSON.parse(JSON.stringify(results))
-//     const accordian = JSON.parse(JSON.stringify(resultstwo))
-//     const searchresults = JSON.parse(JSON.stringify(resultsfour))
-//     const selectresults = JSON.parse(JSON.stringify(resultsthree))
-
-//     return {
-//       props: {
-//         product,
-//         searchresults,
-//         selectresults,
-//         accordian,
-//       },
-//     }
-//   } catch (e) {
-//     console.error(e)
-//     return {
-//       props: { isConnected: false },
-//     }
-//   }
-// }
 
 type AllData = {
   product: [];
