@@ -62,7 +62,7 @@ export default function SearchBar(props: SearchBaror) {
         <fieldset>
           <legend
             className={`search-category-label ${
-              labelname === 'New Products' ? 'search-category-label-new ' : ''
+              labelname === 'New Products' || labelname === 'All Products' ? 'search-category-label-new ' : ''
             }`}
           >
             {labelname}

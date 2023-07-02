@@ -1,4 +1,4 @@
-# Shoestore web app - Next.js
+# Shoestore web app - Next.js - Pages Router
 
 ![shoestore](/)
 
