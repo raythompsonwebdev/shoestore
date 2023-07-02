@@ -1,9 +1,9 @@
 export interface IUser {
   id?: string;
-  email?: string;
-  role?: string;
   name?: string | null | undefined;
+  email?: string;
   accessToken?: String;
+  role?: string;
 }
 
 export interface LoginUserParams {

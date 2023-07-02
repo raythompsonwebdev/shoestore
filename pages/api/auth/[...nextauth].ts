@@ -4,7 +4,6 @@ import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 import clientPromise from '../../../lib/mongodb'
 import { connectToMongoDB } from '../../../lib/dbConnect'
 import FindUser from '../../../models/users'
-import { IUser } from '../../../types'
 import { comparePassword } from '../../../lib/hashPassword'
 
 import {signJwtAccessToken} from "../../../lib/jwt"
@@ -16,7 +15,9 @@ export const authOptions: NextAuthOptions = {
     CredentialsProvider({
       // The name to display on the sign in form (e.g. "Sign in with...")
       id: 'credentials',
-      name: 'Credentials',
+      name: 'credentials',
+
+      // email:'credentials',
       // `credentials` is used to generate a form on the sign in page.
       // You can specify which fields should be submitted, by adding keys to the `credentials` object.
       // e.g. domain, username, password, 2FA token, etc.
@@ -30,21 +31,6 @@ export const authOptions: NextAuthOptions = {
         await connectToMongoDB().catch((err) => {
           throw new Error(err)
         })
-        // Add logic here to look up the user from the credentials supplied
-        // const res = await fetch("http://localhost:3000/login", {
-        //   method: "POST",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify({
-        //     username: credentials?.name,
-        //     password: credentials?.password,
-        //     useremail: credentials?.email,
-        //   }),
-        // });
-        // const user1 = await res.json();
-
-        // console.log(user1)
 
         // confirm if user email already exists.
         const user = await FindUser.findOne({
@@ -82,14 +68,14 @@ export const authOptions: NextAuthOptions = {
         //   throw new Error('Invalid credentials')
         // }
 
-        if (user) {
+        // check if user password and email sumitted match user email and passowrd saved in database.
+        if (user.email === credentials?.email && isPasswordCorrect) {
 
           return user
 
         } else {
 
           return null
-
 
         }
       },
@@ -111,7 +97,7 @@ export const authOptions: NextAuthOptions = {
   },
 
   callbacks: {
-    jwt: ({token, user})=> {
+    jwt: async ({token, user})=> {
       return {...token, ...user};
     },
     session: async ({session, token}) => {

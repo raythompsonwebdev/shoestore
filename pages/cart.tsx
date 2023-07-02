@@ -94,8 +94,8 @@ export default function Cart(
           </Head>
           <main id="main-content" className="clearfix">
             <h1 id="main-content-title">Cart - Logged In</h1>
-            <p>{session.user?.name}</p>
-            <p>{session.user?.email}</p>
+            <p>{session.user?.name ? session.user?.name : "name not available"}</p>
+            <p>{session.user?.email ? session.user?.email  : "email not available"}</p>
             <section style={myComponentStyle}>
               {/* <Basket
               cartItems={cartItems}

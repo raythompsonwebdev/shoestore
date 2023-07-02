@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import type { InferGetStaticPropsType, GetStaticProps, GetStaticPaths } from 'next'
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import LikesSection from '../../components/LikesSection'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import sanitize from "mongo-sanitize";
-import clientPromise from '../../lib/mongodb'
+
 
 type SingleProduct = {
   style: string;
@@ -21,7 +20,7 @@ type SingleProduct = {
 export default function SingleProduct(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const {singleProduct} = props;
-  const [product]:any = [singleProduct][0];
+  const [product] :any = [singleProduct][0];
 
   const [productInfo, setProductInfo] = useState({ likes: 0 })
 
@@ -97,20 +96,15 @@ export const getStaticProps: GetStaticProps<{
 
   const {params} = context
 
-  console.log(params);
   // Call an external API endpoint to get posts
-  // const res = await fetch('http:localhost:3000/api/singleproduct')
+  // const res = await fetch('http:localhost:3000/api/singleproduct') // get single product from database
   const res = await fetch('http:localhost:3000/api/homepagedata')
   const products = await res.json();
 
   const{product, accordian} = products
 
-  const singleProduct = product.filter((prod:any)=> prod.name === params.prodname)
-
-
-  // console.log("~~~~~~~~~~~~")
-  // console.log(singleProduct)
-  // console.log("~~~~~~~~~~~~")
+  //
+  const singleProduct = product.filter((prod: { name: string })=> prod.name === params.prodname)
 
     return {
       props:  {
@@ -118,13 +112,6 @@ export const getStaticProps: GetStaticProps<{
         revalidate: 10,
       }
     }
-
-
-
-  //const singleProduct = product;
-  //const singleProduct = await res.json()
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
 
 }
 
@@ -137,11 +124,9 @@ export async function getStaticPaths() {
   const{product, accordian} = products
 
   // Get the paths we want to pre-render based on posts
-  const paths = product.map((prod:any) => ({
+  const paths = product.map((prod: { name: string }) => ({
     params: { prodname: prod.name.toString() },
   }))
-
-  //console.log(paths);
 
  return { paths, fallback: false }
 }

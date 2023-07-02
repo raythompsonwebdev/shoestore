@@ -5,7 +5,6 @@ import clientPromise from '../../lib/mongodb'
 import { InferGetServerSidePropsType } from 'next'
 import Layout from '../../components/Layout'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
 export const getServerSideProps = async (context:any) => {
 
@@ -38,7 +37,6 @@ export const getServerSideProps = async (context:any) => {
 
 export default function SearchProduct({
   productsearch,
-  isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 
   const [products] = useState(productsearch)
@@ -72,7 +70,15 @@ export default function SearchProduct({
         </Head>
         <main id="main-content" className="clearfix">
           <h1 id="main-content-title">Single Product Search</h1>
-          {products.map((shoes: any) => (
+          {products.map((shoes: {
+            prodId:string,
+            imgUrl:string,
+            name:string,
+            price:string,
+            gender:string,
+            size:string,
+            color:string
+          }) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <Image
                 id="product-page-img"
