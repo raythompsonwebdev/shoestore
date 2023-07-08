@@ -6,15 +6,25 @@ import {
   // ReactPortal,
 } from 'react'
 
+
+interface OptionsProp {
+  _id:string
+  id:number
+  name:string
+  options:[]
+}
+
+
 export function SelectColor(props: {
   aria: string
   colorHandler: any
-  colors: string
+  colors: OptionsProp
   name: string
   value: string
 }) {
   const { aria, colorHandler, colors, name, value } = props
-  const { options }: any = colors
+
+  const { options }= colors
 
   return (
     <select
@@ -42,12 +52,12 @@ export function SelectColor(props: {
 export function SelectGender(props: {
   aria: string
   genderHandler: any
-  genders: string
+  genders: OptionsProp
   name: string
   value: string
 }) {
   const { aria, genderHandler, genders, name, value } = props
-  const { options }: any = genders
+  const { options } = genders
 
   return (
     <select
@@ -76,11 +86,12 @@ export function SelectSize(props: {
   aria: string
   name: string
   sizeHandler: any
-  sizes: string
+  sizes: OptionsProp
   value: string
 }) {
   const { aria, name, sizeHandler, sizes, value } = props
-  const { options }: any = sizes
+  const { options } = sizes
+
   return (
     <select
       name={name}
@@ -105,21 +116,21 @@ export function SelectSize(props: {
 }
 
 export function SelectStyle(props: {
-  arialabelledby: string
+  aria: string
   name: string
   styleHandler: any
-  styles: string
+  styles: OptionsProp
   value: string
 }) {
-  const { arialabelledby, name, styleHandler, styles, value } = props
-  const { options }: any = styles
+  const { aria, name, styleHandler, styles, value } = props
+  const { options } = styles
 
   return (
     <select
       name={name}
       value={value}
       onChange={styleHandler}
-      aria-labelledby={arialabelledby}
+      aria-labelledby={aria}
       className="search-category-input"
     >
       {options.map(

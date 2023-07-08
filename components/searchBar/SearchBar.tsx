@@ -7,52 +7,59 @@ import {
   SelectSize,
 } from './SearchBarData'
 
-interface SearchBaror {
+
+type SearchBarProps =  {
   labelname: string
-  searchData: Array<any>
+  searchData: []
 }
 
-export default function SearchBar(props: SearchBaror) {
-  const { labelname, searchData } = props
+type SearchDataProps = {
+  _id:string
+  id:number
+  name:string
+  options: []
+}
 
-  // const router = useRouter();
+export default function SearchBar(props: SearchBarProps) {
+
+  const { labelname, searchData } = props
 
   const [genderVal, setGenderVal] = useState<string>(' ')
   const [sizeVal, setSizeVal] = useState<string>(' ')
   const [styleVal, setStyleVal] = useState<string>(' ')
   const [colorVal, setColorVal] = useState<string>(' ')
 
-  const genderHandler = (event: { target: any }) => {
+  const genderHandler = (event: { target: {value :string} }) => {
     const { target } = event
     const { value } = target
     setGenderVal(value)
   }
 
-  const styleHandler = (event: { target: any }) => {
+  const styleHandler = (event: { target: {value :string} }) => {
     const { target } = event
     const { value } = target
     setStyleVal(value)
   }
 
-  const sizeHandler = (event: { target: any }) => {
+  const sizeHandler = (event: { target: {value :string} }) => {
     const { target } = event
     const { value } = target
     setSizeVal(value)
   }
 
-  const colorHandler = (event: { target: any }) => {
+  const colorHandler = (event: { target: {value :string} }) => {
     const { target } = event
     const { value } = target
     setColorVal(value)
   }
 
-  const resultArray = [genderVal, styleVal, sizeVal, colorVal]
+  const resultArray : string[] = [genderVal, styleVal, sizeVal, colorVal]
 
   const submit = (event: { preventDefault: () => void }) => {
     event.preventDefault()
   }
 
-  const [gender, style, size, color] = searchData
+  const [gender, style, size, color] :SearchDataProps[] = searchData
 
   const aria = 'search-category-label'
 
@@ -67,7 +74,6 @@ export default function SearchBar(props: SearchBaror) {
           >
             {labelname}
           </legend>
-          {/* <legend id="search-category-label">{labelname}</legend> */}
           <SelectGender
             name="genderVal"
             genders={gender}
@@ -81,7 +87,7 @@ export default function SearchBar(props: SearchBaror) {
             styles={style}
             value={styleVal}
             styleHandler={styleHandler}
-            arialabelledby={aria}
+            aria={aria}
           />
 
           <SelectSize

@@ -9,7 +9,6 @@ import Image from 'next/image'
 export default function Profile() {
 
   const { data: session, status } = useSession()
-console.log(session)
   // If no session exists, display access denied message
   if (status === 'unauthenticated') {
     return (

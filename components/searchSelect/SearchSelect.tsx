@@ -1,7 +1,7 @@
 import { Key } from 'react'
 
 interface SearchSelector {
-  selectBarData: Array<any>
+  selectBarData: []
   changesOrders: any
   handleChange: any
   orderByVal: string
@@ -11,7 +11,7 @@ interface SearchSelector {
 export default function SearchSelect(props: SearchSelector) {
   const { selectBarData, changesOrders, handleChange, orderDir } = props
 
-  function onItemChange(evt: { target: { value: string } }) {
+  function onItemChange(evt: { target: { value: string | undefined } }) {
     handleChange(evt.target.value)
     changesOrders(evt.target.value, orderDir)
   }
@@ -29,11 +29,11 @@ export default function SearchSelect(props: SearchSelector) {
           (options: {
             value: string | undefined
             id: Key | null | undefined
-            options: Array<any>
+            options: []
           }) => (
             // eslint-disable-next-line react/no-array-index-key
             <optgroup label={options.value} key={options.id}>
-              {options.options.map((option) => (
+              {options.options.map((option :{id:Key | number, value:string | undefined, displayValue:string | undefined}) => (
                 // eslint-disable-next-line react/no-array-index-key
                 <option key={option.id} value={option.value}>
                   {option.displayValue}

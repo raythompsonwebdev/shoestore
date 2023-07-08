@@ -15,14 +15,23 @@ type AllData = {
   selectresults: [];
 }
 
+type FiliterProp = {
+    [x: string]: string | number
+    color: string
+    style: string
+    size: string
+    gender: string
+    price: string
+}
+
 export default function Allproducts(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
-  const {product, accordian,searchresults,selectresults } = props.allData;
+  const {product, accordian,searchresults,selectresults } :AllData = props.allData;
 
-  const [accordianData] = useState<Array<any>>(accordian)
-  const [productData] = useState<Array<any>>(product)
-  const [searchbarData] = useState<Array<any>>(searchresults)
-  const [selectbarData] = useState<Array<any>>(selectresults)
+  const [accordianData] = useState(accordian)
+  const [productData] = useState<Array<FiliterProp>>(product)
+  const [searchbarData] = useState(searchresults)
+  const [selectbarData] = useState(selectresults)
   const [orderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
@@ -49,14 +58,7 @@ export default function Allproducts(props: InferGetStaticPropsType<typeof getSta
   const value = OrderByVal
 
   filteredApts = filteredApts.filter(
-    (item: {
-      [x: string]: any
-      color: string
-      style: string
-      size: string
-      gender: string
-      price: string
-    }) => {
+    (item) => {
       if (
         item.color === value ||
         item.style === value ||

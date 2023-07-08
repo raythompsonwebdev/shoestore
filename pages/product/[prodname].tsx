@@ -7,7 +7,9 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 
-type SingleProduct = {
+type SingleProduct = []
+
+type Product = {
   style: string;
   price: string;
   size :string;
@@ -20,7 +22,8 @@ type SingleProduct = {
 export default function SingleProduct(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const {singleProduct} = props;
-  const [product] :any = [singleProduct][0];
+
+  const [product] : Array<Product> = [singleProduct][0];
 
   const [productInfo, setProductInfo] = useState({ likes: 0 })
 

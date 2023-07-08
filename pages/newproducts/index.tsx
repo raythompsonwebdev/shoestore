@@ -15,11 +15,11 @@ type NewData = {
 
 export default function NewProducts(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
-  const {product, accordian,searchresults} = props.newData;
+  const {product, accordian,searchresults} : NewData = props.newData;
 
-  const [productData] = useState<Array<any>>(product)
-  const [accordianData] = useState<Array<string>>(accordian)
-  const [searchbarData] = useState<Array<string>>(searchresults)
+  // const [productData] = useState(product)
+  // const [accordianData] = useState<Array<string>>(accordian)
+  // const [searchbarData] = useState<Array<string>>(searchresults)
   const [visibility, setVisibility] = useState<boolean>(false)
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
@@ -36,7 +36,7 @@ export default function NewProducts(props: InferGetStaticPropsType<typeof getSta
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <SearchBar labelname="New Products" searchData={searchbarData} />
+          <SearchBar labelname="New Products" searchData={searchresults} />
 
           <button
             id="sidebar-toggle-btn"
@@ -50,11 +50,11 @@ export default function NewProducts(props: InferGetStaticPropsType<typeof getSta
           <aside
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
-            <AccordianMenu accordianData={accordianData} />
+            <AccordianMenu accordianData={accordian} />
           </aside>
 
           <section id="right-content-section">
-            <NewProductBoxes productData={productData} />
+            <NewProductBoxes productData={product} />
 
             <br />
             <br />
