@@ -127,7 +127,7 @@ export const getStaticProps = async (context:{params:{prodname:string}}) => {
 
   // }
 
-  const res = await fetch('http:localhost:3000/api/singleproduct')
+  const res = await fetch('/api/singleproduct')
   const result = await res.json()
 
   const { product } = {...result} as SingleProduct
