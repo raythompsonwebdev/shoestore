@@ -146,7 +146,7 @@ export const getStaticProps = async (context:{params:{prodname:string}}) => {
 export async function getStaticPaths() {
 
   // Call an external API endpoint to get posts
-  const res = await fetch('http:localhost:3000/api/singleproduct')
+  const res = await fetch('/api/singleproduct')
   const products = await res.json()
 
   const{product} = products

@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps<{
   products: HomePageProds
 }> = async () => {
   // Call an external API endpoint to get posts
-  const res = await fetch('http:localhost:3000/api/homepagedata')
+  const res = await fetch('/api/homepagedata')
   const products = await res.json()
   // By returning { props: { products } }, the Product component
   // will receive `products` as a prop at build time

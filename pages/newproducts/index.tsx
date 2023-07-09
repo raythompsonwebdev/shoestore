@@ -72,7 +72,7 @@ export const getStaticProps: GetStaticProps<{
   newData: NewProductsData
 }> = async () => {
   // Call an external API endpoint to get posts
-  const res = await fetch('http:localhost:3000/api/newproductsdata')
+  const res = await fetch('/api/newproductsdata')
   const newData = await res.json()
 
   return {
