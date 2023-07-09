@@ -33,7 +33,7 @@ pages/(protected)/session.tsx
 
 lib/cookies.ts
 lib/validate.ts
-lib/jwt.ts
+
 
 pages/api/index.ts
 pages/api/singleproduct.ts
