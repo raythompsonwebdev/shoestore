@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-//import sanitize from "mongo-sanitize";
 import clientPromise from '../../lib/mongodb'
 
 export default async function productHandler(

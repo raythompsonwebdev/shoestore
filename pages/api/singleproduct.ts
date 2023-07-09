@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-// import sanitize from "mongo-sanitize";
 import clientPromise from '../../lib/mongodb'
 
 export default async function singleproductHandler(
@@ -11,12 +10,7 @@ export default async function singleproductHandler(
     return
   }
 
-  // not getting anything ????
-  console.log(req.query)
-
   try {
-
-    // const productName = queryParam;
 
     //await clientPromise
     const client = await clientPromise;
