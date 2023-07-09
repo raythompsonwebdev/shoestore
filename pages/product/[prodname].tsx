@@ -99,6 +99,8 @@ export const getStaticProps: GetStaticProps<{
 
   const {params} = context
 
+  console.log(params)
+
   // Call an external API endpoint to get posts
   // const res = await fetch('http:localhost:3000/api/singleproduct') // get single product from database
   const res = await fetch('http:localhost:3000/api/homepagedata')
