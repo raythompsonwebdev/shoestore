@@ -7,12 +7,10 @@ type LikesType ={
   setProductInfo: ( likes: {likes:number}) => void;
 }
 
-
-
 export default function LikesSection(props:LikesType ) {
-  console.log(props)
 
   const { likes, productName, setProductInfo } = { ...props }
+
 
   const likeProduct = async () => {
     try {
@@ -26,6 +24,8 @@ export default function LikesSection(props:LikesType ) {
       const result = await response.json()
 
       setProductInfo({ likes: result.likes })
+
+      return result;
     } catch (err) {
       console.error('not working : ' + err)
     }
@@ -42,6 +42,7 @@ export default function LikesSection(props:LikesType ) {
       >
         Add Like
       </button>
+
       <p className="upvotes-section-text">
         This product has {likes} likes so far !
       </p>

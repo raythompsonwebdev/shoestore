@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import type { InferGetStaticPropsType } from 'next'
-import sanitize from "mongo-sanitize";
-import clientPromise from '../../lib/mongodb'
 import LikesSection from '../../components/LikesSection'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
@@ -9,7 +7,9 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 
-type SingleProduct = []
+type SingleProduct = {
+  product:[]
+}
 
 type Product = {
   _id?:string;
@@ -26,16 +26,18 @@ type Product = {
 export default function SingleProduct(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const {singleProduct} = props;
+  const [productItem] = singleProduct;
 
-  const [productInfo, setProductInfo] = useState({ likes: 0 })
+  const { _id, color, imgUrl, likes, name, price, size, style, text } = productItem as Product
+
+  const [productInfo, setProductInfo] = useState({ likes: likes })
 
   const router = useRouter()
 
   const { prodname } = router.query
 
-  const { _id, color, imgUrl, name, price, size, style, text } = {...singleProduct} as Product
+  return name === prodname ? (
 
-  return singleProduct.name === prodname ? (
     <Layout>
       <>
         <Head>
@@ -98,31 +100,45 @@ export const getStaticProps = async (context:{params:{prodname:string}}) => {
 
  const {params} = context
 
- const productName = sanitize(params?.prodname);
+ const productName = params?.prodname;
 
   // Call an external API endpoint to get posts
-  try {
+  // try {
 
-    const client = await clientPromise;
+  //   const client = await clientPromise;
 
-    const db = client.db("shoestore");
+  //   const db = client.db("shoestore");
 
-    const results = await db
-      .collection("products")
-      .findOne({ name: productName });
+  //   const results = await db
+  //     .collection("products")
+  //     .findOne({ name: productName });
 
-    const singleProduct = JSON.parse(JSON.stringify(results));
+  //   const singleProduct = JSON.parse(JSON.stringify(results));
 
-    return {
-      props:  {
-        singleProduct,
-        revalidate: 10,
-      }
+  //   return {
+  //     props:  {
+  //       singleProduct,
+  //       revalidate: 10,
+  //     }
+  //   }
+
+  // } catch (e) {
+  //   console.error(e)
+
+  // }
+
+  const res = await fetch('http:localhost:3000/api/singleproduct')
+  const result = await res.json()
+
+  const { product } = {...result} as SingleProduct
+
+  const singleProduct = product.filter((prod:{name:string})=> prod.name === productName)
+
+  return {
+    props:  {
+      singleProduct,
+      revalidate: 10,
     }
-
-  } catch (e) {
-    console.error(e)
-
   }
 
 }
