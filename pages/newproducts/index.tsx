@@ -7,34 +7,23 @@ import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-type NewData = {
+type NewProductsData = {
   product: [];
   accordian: [];
   searchresults :[];
 }
 
-type FiliterProp = {
-  [x: string]: string | number
-  color: string
-  style: string
-  size: string
-  gender: string
-  price: string
-}
-
 export default function NewProducts(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
-  const {product, accordian,searchresults} : NewData = props.newData;
+  const {product, accordian,searchresults} : NewProductsData = props.newData;
 
-  const [productData, setProductData] = useState<Array<FiliterProp>>([])
+  const [productData, setProductData] = useState<[]>([])
   const [visibility, setVisibility] = useState<boolean>(false)
 
   useEffect(() => {
     // Update products state
     setProductData(product)
   },[product]);
-
-
 
   const sidebarVisibility = (e: { preventDefault: () => void }) :void => {
     e.preventDefault()
@@ -80,14 +69,12 @@ export default function NewProducts(props: InferGetStaticPropsType<typeof getSta
 }
 
 export const getStaticProps: GetStaticProps<{
-  newData: NewData
+  newData: NewProductsData
 }> = async () => {
   // Call an external API endpoint to get posts
-  // const res = await handler("http:localhost:3000/api/newproductsdata");
   const res = await fetch('http:localhost:3000/api/newproductsdata')
   const newData = await res.json()
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+
   return {
     props:  {
       newData,

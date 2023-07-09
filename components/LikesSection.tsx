@@ -1,7 +1,18 @@
+//import { SetStateAction } from 'react'
 
-export default function LikesSection(props: any) {
+type LikesType ={
+  likes:number;
+  prodid?:string | undefined;
+  productName:string | string[] | undefined;
+  setProductInfo: ( likes: {likes:number}) => void;
+}
 
-  const { likes, productName, setProductInfo }: any = { ...props }
+
+
+export default function LikesSection(props:LikesType ) {
+  console.log(props)
+
+  const { likes, productName, setProductInfo } = { ...props }
 
   const likeProduct = async () => {
     try {

@@ -33,7 +33,7 @@ export interface FilteredData {
   _id: string;
 }
 
-export interface NewData {
+export interface NewProductsData {
   product: [];
   accordian: [];
   searchresults :[];
@@ -52,6 +52,6 @@ export interface Product{
     qty?: string;
     size: string;
     style:string;
-    text?:string;
+    text?:string | undefined | null ;
     _id: string;
 }

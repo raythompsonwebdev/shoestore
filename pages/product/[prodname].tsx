@@ -1,5 +1,4 @@
 import { useState } from 'react'
-//import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import type { InferGetStaticPropsType } from 'next'
 import sanitize from "mongo-sanitize";
 import clientPromise from '../../lib/mongodb'

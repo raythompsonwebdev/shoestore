@@ -1,7 +1,8 @@
 import { Key } from 'react'
 import NewProductBox from './newProductBox'
 
-export default function newProductBoxes(props: { productData: Array<any> }) {
+
+export default function newProductBoxes(props: { productData:[] }) {
   const { productData } = { ...props }
 
   const NewProduct = productData
@@ -9,18 +10,18 @@ export default function newProductBoxes(props: { productData: Array<any> }) {
     .map(
       (item: {
         _id: Key | null | undefined
-        name: string
-        imgUrl: string
-        price: string
         cartImg: string
+        imgUrl: string
+        name: string
+        price: string
         text: string
       }) => (
         <NewProductBox
           key={item._id}
-          name={item.name}
-          imgUrl={item.imgUrl}
-          price={item.price}
           cartImg={item.cartImg}
+          imgUrl={item.imgUrl}
+          name={item.name}
+          price={item.price}
           text={item.text}
         />
       )

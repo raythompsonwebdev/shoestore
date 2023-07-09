@@ -1,7 +1,8 @@
 import { Key } from 'react'
 import ProductBox from './allProductBox'
+import {Product} from "../../types/index"
 
-export default function ProductBoxes(props: { productData: Array<any> }) {
+export default function ProductBoxes(props: { productData: Product[] }) {
   const { productData } = props
 
   const Product = productData

@@ -8,6 +8,8 @@ import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import {FilteredData} from "../../types/index"
+
 type AllData = {
   product: [];
   accordian: [];
@@ -15,20 +17,11 @@ type AllData = {
   selectresults: [];
 }
 
-type FiliterProp = {
-    [x: string]: string | number
-    color: string
-    style: string
-    size: string
-    gender: string
-    price: string
-}
-
 export default function Allproducts(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const {product, accordian,searchresults,selectresults } :AllData = props.allData;
 
-  const [productData, setProductData] = useState<Array<FiliterProp>>([])
+  const [productData, setProductData] = useState<Array<FilteredData>>([])
   const [orderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)

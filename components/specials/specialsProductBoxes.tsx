@@ -1,4 +1,3 @@
-// import PropTypes from "prop-types";
 import { Key } from 'react'
 import ProductBox from './specialsProductBox'
 import {Product} from "../../types/index"

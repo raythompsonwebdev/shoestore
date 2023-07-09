@@ -8,14 +8,14 @@ import AccordianMenu from '../components/accordianMenu'
 import FindShoes from '../components/homepage/FindShoes'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-type Posts = {
+type HomePageProds = {
   product: []
   accordian: []
 }
 
 export default function Home(props: InferGetStaticPropsType<typeof getStaticProps> ) {
 
-  const {product, accordian} = props.posts;
+  const {product, accordian} = props.products;
 
   const [visibility, setVisibility] = useState<boolean>(false)
 
@@ -63,16 +63,16 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
 }
 
 export const getStaticProps: GetStaticProps<{
-  posts: Posts
+  products: HomePageProds
 }> = async () => {
   // Call an external API endpoint to get posts
   const res = await fetch('http:localhost:3000/api/homepagedata')
-  const posts = await res.json()
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+  const products = await res.json()
+  // By returning { props: { products } }, the Product component
+  // will receive `products` as a prop at build time
   return {
     props:  {
-      posts,
+      products,
       revalidate: 10,
     }
   }

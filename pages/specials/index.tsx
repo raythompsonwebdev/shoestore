@@ -8,14 +8,7 @@ import Head from 'next/head'
 import Layout from '../../components/Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import {FilteredData} from "../../types/index"
-
-type AllData = {
-  product: [];
-  accordian: [];
-  searchresults :[];
-  selectresults: [];
-}
+import {FilteredData , AllData} from "../../types/index"
 
 export default function Specials(props: InferGetStaticPropsType<typeof getStaticProps> ) {
 

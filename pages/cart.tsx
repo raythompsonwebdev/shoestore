@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import clientPromise from '../lib/mongodb'
+//import clientPromise from '../lib/mongodb'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 // import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
@@ -15,36 +15,40 @@ const myComponentStyle = {
   margin: '10px',
 }
 
-export const getServerSideProps: GetServerSideProps = async (context: any) => {
-  const cookies = context.req.cookies;
-  console.log( cookies)
+export const getServerSideProps: GetServerSideProps = async () => {
+  // const cookies = context.req.cookies;
+  // console.log( cookies)
 
-  try {
-    //await clientPromise
-    const client = await clientPromise
-    const db = client.db('shoestore')
-    const results = await db.collection('products').find({}).toArray()
-    const products = JSON.parse(JSON.stringify(results))
+  // try {
+  //   //await clientPromise
+  //   const client = await clientPromise
+  //   const db = client.db('shoestore')
+  //   const results = await db.collection('products').find({}).toArray()
+  //   const products = JSON.parse(JSON.stringify(results))
 
-    return {
-      props: {
-        products,
-      },
-    }
-  } catch (e) {
-    console.error(e)
-    return {
-      props: { isConnected: false },
-    }
+  //   return {
+  //     props: {
+  //       products,
+  //     },
+  //   }
+  // } catch (e) {
+  //   console.error(e)
+  //   return {
+  //     props: { isConnected: false },
+  //   }
+  // }
+
+  return {
+         props: { message:"under maintenance" },
   }
 }
 
 export default function Cart(
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
-  const { products } = props
+  const { message } = props
 
-  console.log(products)
+  console.log(message)
 
   //const [cartItems, setCartItems] = useState<Array<any>>([])
   const { data: session, status } = useSession()

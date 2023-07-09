@@ -2,8 +2,8 @@ import { Key } from 'react'
 
 interface SearchSelector {
   selectBarData: []
-  changesOrders: any
-  handleChange: any
+  changesOrders: (orderbyval: string , dir: string) => void;
+  handleChange: (selected: string ) => void;
   orderByVal: string
   orderDir: string
 }
@@ -11,9 +11,10 @@ interface SearchSelector {
 export default function SearchSelect(props: SearchSelector) {
   const { selectBarData, changesOrders, handleChange, orderDir } = props
 
-  function onItemChange(evt: { target: { value: string | undefined } }) {
-    handleChange(evt.target.value)
-    changesOrders(evt.target.value, orderDir)
+  function onItemChange(e: { target: { value: string } }) {
+    const {value} = e.target;
+    handleChange(value)
+    changesOrders(value, orderDir)
   }
 
   return (

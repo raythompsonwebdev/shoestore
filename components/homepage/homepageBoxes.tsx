@@ -1,7 +1,8 @@
 import { Key } from 'react'
 import HomePageBox from './homePageBox'
+import {Product} from "../../types/index"
 
-export default function HomePageBoxes(props: { productData: Array<any> }) {
+export default function HomePageBoxes(props: { productData: Product[] }) {
   const { productData } = { ...props }
 
   const NewProduct = productData
