@@ -40,7 +40,7 @@ export default function ServerSidePage( props : any ) {
 export async function getServerSideProps(context: GetServerSidePropsContext) {
 
 
-  let session :Session | null = await getServerSession(context.req, context.res, authOptions);
+  const session :Session | null = await getServerSession(context.req, context.res, authOptions);
 
   //user image in user object inside the session object is undefined -
   // causing Error Serializing as JSON - JSON stringyfied session object.
