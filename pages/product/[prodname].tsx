@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import type { InferGetStaticPropsType } from 'next'
+import type { InferGetServerSidePropsType } from 'next'
 import LikesSection from '../../components/LikesSection'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-
+import clientPromise from '../../lib/mongodb'
+import sanitize from 'mongo-sanitize'
 
 type SingleProduct = {
   product:[]
@@ -23,12 +24,12 @@ type Product = {
   name?:string
 }
 
-export default function SingleProduct(props: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function SingleProduct(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
 
   const {singleProduct} = props;
-  const [productItem] = singleProduct;
+  //const [productItem] = singleProduct;
 
-  const { _id, color, imgUrl, likes, name, price, size, style, text } = productItem as Product
+  const { _id, color, imgUrl, likes, name, price, size, style, text } = singleProduct as Product
 
   const [productInfo, setProductInfo] = useState({ likes: likes })
 
@@ -96,65 +97,52 @@ export default function SingleProduct(props: InferGetStaticPropsType<typeof getS
   )
 }
 
-export const getStaticProps = async (context:{params:{prodname:string}}) => {
+export const getServerSideProps = async (context:{params:{prodname:string}}) => {
 
  const {params} = context
 
- const productName = params?.prodname;
+ const productName = sanitize(params?.prodname);
 
   // Call an external API endpoint to get posts
-  // try {
+  try {
 
-  //   const client = await clientPromise;
+    const client = await clientPromise;
 
-  //   const db = client.db("shoestore");
+    const db = client.db("shoestore");
 
-  //   const results = await db
-  //     .collection("products")
-  //     .findOne({ name: productName });
+    const results = await db
+      .collection("products")
+      .findOne({ name: productName });
 
-  //   const singleProduct = JSON.parse(JSON.stringify(results));
+    const singleProduct = JSON.parse(JSON.stringify(results));
 
-  //   return {
-  //     props:  {
-  //       singleProduct,
-  //       revalidate: 10,
-  //     }
-  //   }
-
-  // } catch (e) {
-  //   console.error(e)
-
-  // }
-
-  const res = await fetch('/api/singleproduct')
-  const result = await res.json()
-
-  const { product } = {...result} as SingleProduct
-
-  const singleProduct = product.filter((prod:{name:string})=> prod.name === productName)
-
-  return {
-    props:  {
-      singleProduct,
-      revalidate: 10,
+    return {
+      props:  {
+        singleProduct,
+        revalidate: 10,
+      }
     }
+
+  } catch (e) {
+    console.error(e)
+
   }
 
+  //const res = await fetch('/api/homepagedata/', { cache: 'no-store' })
+  //const result = await res.json()
+
+
+  //const { product } = {...result} as SingleProduct
+
+  //const singleProduct = product.filter((prod:{name:string})=> prod.name === productName)
+
+  // return {
+  //   props:  {
+  //     singleProduct,
+  //     revalidate: 10,
+  //   }
+  // }
+
 }
 
-export async function getStaticPaths() {
 
-  // Call an external API endpoint to get posts
-  const res = await fetch('/api/singleproduct')
-  const products = await res.json()
-
-  const{product} = products
-
-  // Get the paths we want to pre-render based on posts
-  const paths = product.map((prod: { name: string }) => ({
-    params: { prodname: prod.name.toString() },
-  }))
-
- return { paths, fallback: false }
-}

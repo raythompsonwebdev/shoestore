@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+// import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+import type { InferGetServerSidePropsType } from 'next'
+import clientPromise from '../lib/mongodb'
 import Layout from '../components/Layout'
 import BannerImg from '../components/homepage/bannerImg'
 import HomePageBoxes from '../components/homepage/homepageBoxes'
@@ -13,9 +15,9 @@ type HomePageProds = {
   accordian: []
 }
 
-export default function Home(props: InferGetStaticPropsType<typeof getStaticProps> ) {
+export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
 
-  const {product, accordian} = props.products;
+  const {product, accordian} = props.products as HomePageProds;
 
   const [visibility, setVisibility] = useState<boolean>(false)
 
@@ -62,19 +64,43 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
   )
 }
 
-export const getStaticProps: GetStaticProps<{
-  products: HomePageProds
-}> = async () => {
+export const getServerSideProps = async () => {
   // Call an external API endpoint to get posts
-  const res = await fetch('/api/homepagedata')
-  const products = await res.json()
-  // By returning { props: { products } }, the Product component
-  // will receive `products` as a prop at build time
-  return {
-    props:  {
-      products,
-      revalidate: 10,
+
+  try {
+    //await clientPromise
+    // `await clientPromise` will use the default database passed in the MONGODB_URI
+    // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
+    //
+    const client = await clientPromise
+    const db = client.db('shoestore')
+    //
+    // Then you can execute queries against your database like so:
+    // db.find({}) or any of the MongoDB Node Driver commands
+
+    const results = await db.collection('products').find({}).toArray()
+    const resultstwo = await db.collection('accordianData').find({}).toArray()
+
+    if (results.length > 0) {
+      console.log(`${results.length} customers found`)
+      // Here you could build your html or put the results in some other data structure you want to work with
+    } else {
+      console.log(`No customers found`)
     }
+
+    const product = JSON.parse(JSON.stringify(results))
+    const accordian = JSON.parse(JSON.stringify(resultstwo))
+
+    return {
+      props:  {
+        products:{product,accordian},
+        revalidate: 10,
+      }
+    }
+
+  } catch (e) {
+    console.error(e)
+
   }
 }
 

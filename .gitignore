@@ -34,8 +34,11 @@ pages/(protected)/session.tsx
 lib/cookies.ts
 lib/validate.ts
 
-
-pages/api/index.ts
+pages/api/homepagedata.ts
+pages/api/alldata.ts
+pages/api/newproductsdata.ts
+pages/api/singleproduct.ts
+pages/api/examples/
 
 
 

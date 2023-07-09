@@ -4,7 +4,6 @@ import Layout from '../../components/Layout'
 import AccessDenied from '../../components/access-denied'
 import Head from 'next/head'
 import Image from 'next/image'
-// import {verifyJwt} from "../../lib/jwt"
 
 export default function Profile() {
 

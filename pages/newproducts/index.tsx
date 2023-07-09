@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
-import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+import type { InferGetServerSidePropsType } from 'next'
+// import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+import clientPromise from '../../lib/mongodb'
 import Layout from '../../components/Layout'
 import NewProductBoxes from '../../components/newProduct/newProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
@@ -13,7 +15,7 @@ type NewProductsData = {
   searchresults :[];
 }
 
-export default function NewProducts(props: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function NewProducts(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
 
   const {product, accordian,searchresults} : NewProductsData = props.newData;
 
@@ -68,19 +70,51 @@ export default function NewProducts(props: InferGetStaticPropsType<typeof getSta
   )
 }
 
-export const getStaticProps: GetStaticProps<{
-  newData: NewProductsData
-}> = async () => {
-  // Call an external API endpoint to get posts
-  const res = await fetch('/api/newproductsdata')
-  const newData = await res.json()
+export const getServerSideProps = async () => {
+  // Call an external DB to get products
 
-  return {
-    props:  {
-      newData,
-      //unstable_revalidate: 10,
-      revalidate: 10,
+  try {
+    //await clientPromise
+    const client = await clientPromise
+    const db = client.db('shoestore')
+
+    const results = await db.collection('products').find({}).toArray()
+    const resultstwo = await db.collection('accordianData').find({}).toArray()
+    const resultsfour = await db.collection('searchBarData').find({}).toArray()
+
+    if (results.length > 0) {
+      console.log(`${results.length} customers found`)
+      // Here you could build your html or put the results in some other data structure you want to work with
+    } else {
+      console.log(`No customers found`)
     }
+
+    const product = JSON.parse(JSON.stringify(results))
+    const accordian = JSON.parse(JSON.stringify(resultstwo))
+    const searchresults = JSON.parse(JSON.stringify(resultsfour))
+
+    return {
+      props:  {
+        newData:{ product, accordian, searchresults },
+        //unstable_revalidate: 10,
+        revalidate: 10,
+      }
+    }
+
+    //res.status(200).send({ product, accordian, searchresults });
+
+  } catch (e) {
+    console.error(e)
+
   }
+
+
+  // return {
+  //   props:  {
+  //     newData,
+  //     //unstable_revalidate: 10,
+  //     revalidate: 10,
+  //   }
+  // }
 }
 
