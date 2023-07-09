@@ -19,17 +19,39 @@ export interface AllData {
   selectresults: [];
 }
 
-export interface FiliterProp {
-    [x: string]: string | number
-    color: string
-    style: string
-    size: string
-    gender: string
-    price: string
+export interface FilteredData {
+  [x: string]: string | number
+  color: string
+  style: string
+  size: string
+  gender: string
+  price: string
+  cartImg: string;
+  imgUrl:string;
+  name: string;
+  prodId:number;
+  _id: string;
 }
 
 export interface NewData {
   product: [];
   accordian: [];
   searchresults :[];
+}
+
+export interface Product{
+    all?:string;
+    cartImg: string;
+    color: string;
+    gender: string;
+    imgUrl:string;
+    likes?: number;
+    name: string;
+    price: string
+    prodId:number;
+    qty?: string;
+    size: string;
+    style:string;
+    text?:string;
+    _id: string;
 }

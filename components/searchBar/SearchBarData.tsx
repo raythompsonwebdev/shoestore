@@ -17,7 +17,7 @@ interface OptionsProp {
 
 export function SelectColor(props: {
   aria: string
-  colorHandler: any
+  colorHandler: (event: { target: {value :string} }) => void;
   colors: OptionsProp
   name: string
   value: string
@@ -51,7 +51,7 @@ export function SelectColor(props: {
 
 export function SelectGender(props: {
   aria: string
-  genderHandler: any
+  genderHandler: (event: { target: {value :string} }) => void;
   genders: OptionsProp
   name: string
   value: string
@@ -85,7 +85,7 @@ export function SelectGender(props: {
 export function SelectSize(props: {
   aria: string
   name: string
-  sizeHandler: any
+  sizeHandler: (event: { target: {value :string} }) => void;
   sizes: OptionsProp
   value: string
 }) {
@@ -118,7 +118,7 @@ export function SelectSize(props: {
 export function SelectStyle(props: {
   aria: string
   name: string
-  styleHandler: any
+  styleHandler: (event: { target: {value :string} }) => void;
   styles: OptionsProp
   value: string
 }) {

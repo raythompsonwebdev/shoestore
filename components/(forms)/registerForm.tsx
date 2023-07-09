@@ -5,7 +5,7 @@ export default function RegisterForm() {
   const [username, setUserName] = useState<string>(' ')
   const [useremail, setEmail] = useState<string>(' ')
   const [password, setPassword] = useState<string>(' ')
-  const [error, setError] = useState<string>(' ')
+  //const [error, setError] = useState<string>(' ')
 
   const router = useRouter()
 
@@ -31,24 +31,23 @@ export default function RegisterForm() {
     setUserName(value)
   }
 
-  const handleEmails = (e: { target: { value: SetStateAction<any> } }) => {
+  const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
     const { value } = e.target
     // regex to detect valid email
-    const emailRegExp =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    //const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
     // check if input matches pattern
-    if (!emailRegExp.test(value)) {
-      //error.classList.add("show-error");
-      //error.classList.remove("hide-error");
-      setError('Please provide a valid e-mail address!')
-      //srcElement.classList.add("dirty");
-    } else {
-      // error.classList.add("hide-error");
-      // error.classList.remove("show-error");
-      setError(' ')
-      // srcElement.classList.add("dirty");
-    }
+    // if (!emailRegExp.test(value)) {
+    //   //error.classList.add("show-error");
+    //   //error.classList.remove("hide-error");
+    //   setError('Please provide a valid e-mail address!')
+    //   //srcElement.classList.add("dirty");
+    // } else {
+    //   // error.classList.add("hide-error");
+    //   // error.classList.remove("show-error");
+    //   setError(' ')
+    //   // srcElement.classList.add("dirty");
+    //}
     setEmail(value)
   }
 
@@ -85,9 +84,9 @@ export default function RegisterForm() {
 
   return (
     <form id="contact-form" onSubmit={submit}>
-      <span id="form-error" className="hide-error">
+      {/* <span id="form-error" className="hide-error">
         {error ? error : ''}
-      </span>
+      </span> */}
       <ul id="contact-form-fields">
         <li className="contact-form-item">
           <label htmlFor="username">

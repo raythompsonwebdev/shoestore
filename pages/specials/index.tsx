@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from 'react'
+import { SetStateAction, useState, useEffect } from 'react'
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import SpecialsProductBoxes from '../../components/specials/specialsProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
@@ -8,6 +8,8 @@ import Head from 'next/head'
 import Layout from '../../components/Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import {FilteredData} from "../../types/index"
+
 type AllData = {
   product: [];
   accordian: [];
@@ -15,26 +17,19 @@ type AllData = {
   selectresults: [];
 }
 
-type FiliterProp = {
-  [x: string]: string | number
-  color: string
-  style: string
-  size: string
-  gender: string
-  price: string
-}
-
 export default function Specials(props: InferGetStaticPropsType<typeof getStaticProps> ) {
 
   const {product, accordian,searchresults,selectresults } : AllData = props.allData;
 
-  // const [accordianData] = useState<Array<any>>(accordian)
-  const [productData] = useState<Array<FiliterProp>>(product)
-  // const [searchBarData] = useState<Array<any>>(searchresults)
-  // const [selectBarData] = useState<Array<any>>(selectresults)
+  const [productData, setProductData] = useState<Array<FilteredData>>([])
   const [OrderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
+
+  useEffect(() => {
+    // Update products state
+    setProductData(product)
+  },[product]);
 
   const handleChange = (selected: SetStateAction<string>) => {
     setOrderByVal(selected)

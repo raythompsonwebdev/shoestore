@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import Layout from '../../components/Layout'
@@ -13,16 +13,30 @@ type NewData = {
   searchresults :[];
 }
 
+type FiliterProp = {
+  [x: string]: string | number
+  color: string
+  style: string
+  size: string
+  gender: string
+  price: string
+}
+
 export default function NewProducts(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const {product, accordian,searchresults} : NewData = props.newData;
 
-  // const [productData] = useState(product)
-  // const [accordianData] = useState<Array<string>>(accordian)
-  // const [searchbarData] = useState<Array<string>>(searchresults)
+  const [productData, setProductData] = useState<Array<FiliterProp>>([])
   const [visibility, setVisibility] = useState<boolean>(false)
 
-  const sidebarVisibility = (e: { preventDefault: () => void }) => {
+  useEffect(() => {
+    // Update products state
+    setProductData(product)
+  },[product]);
+
+
+
+  const sidebarVisibility = (e: { preventDefault: () => void }) :void => {
     e.preventDefault()
     setVisibility(!visibility)
   }
@@ -54,7 +68,7 @@ export default function NewProducts(props: InferGetStaticPropsType<typeof getSta
           </aside>
 
           <section id="right-content-section">
-            <NewProductBoxes productData={product} />
+            <NewProductBoxes productData={productData} />
 
             <br />
             <br />

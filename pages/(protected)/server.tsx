@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import type { GetServerSidePropsContext } from "next";
 import type { Session } from "next-auth";
 
-export default function ServerSidePage( props : any ) {
+export default function ServerSidePage( props : {result:object}) {
   // As this page uses Server Side Rendering, the `session` will be already
   // populated on render without needing to go through a loading stage.
   const {result } = props;

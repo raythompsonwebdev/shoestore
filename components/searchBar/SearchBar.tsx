@@ -29,19 +29,19 @@ export default function SearchBar(props: SearchBarProps) {
   const [styleVal, setStyleVal] = useState<string>(' ')
   const [colorVal, setColorVal] = useState<string>(' ')
 
-  const genderHandler = (event: { target: {value :string} }) => {
+  const genderHandler = (event: { target: {value :string} }) :void => {
     const { target } = event
     const { value } = target
     setGenderVal(value)
   }
 
-  const styleHandler = (event: { target: {value :string} }) => {
+  const styleHandler = (event: { target: {value :string} }) :void => {
     const { target } = event
     const { value } = target
     setStyleVal(value)
   }
 
-  const sizeHandler = (event: { target: {value :string} }) => {
+  const sizeHandler = (event: { target: {value :string} }) :void => {
     const { target } = event
     const { value } = target
     setSizeVal(value)

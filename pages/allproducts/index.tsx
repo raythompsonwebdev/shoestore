@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from 'react'
+import { SetStateAction, useState, useEffect } from 'react'
 import Head from 'next/head'
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import Layout from '../../components/Layout'
@@ -28,15 +28,18 @@ export default function Allproducts(props: InferGetStaticPropsType<typeof getSta
 
   const {product, accordian,searchresults,selectresults } :AllData = props.allData;
 
-  const [accordianData] = useState(accordian)
-  const [productData] = useState<Array<FiliterProp>>(product)
-  const [searchbarData] = useState(searchresults)
-  const [selectbarData] = useState(selectresults)
+  const [productData, setProductData] = useState<Array<FiliterProp>>([])
   const [orderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
 
-  const handleChange = (selectedSize: SetStateAction<string>) => {
+  useEffect(() => {
+    // Update products state
+    setProductData(product)
+  },[product]);
+
+
+  const handleChange = (selectedSize: SetStateAction<string>) :void => {
     setOrderByVal(selectedSize)
     setOrderByDir('asc')
   }
@@ -81,7 +84,7 @@ export default function Allproducts(props: InferGetStaticPropsType<typeof getSta
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <SearchBar labelname="All Products" searchData={searchbarData} />
+          <SearchBar labelname="All Products" searchData={searchresults} />
 
           <button
             id="sidebar-toggle-btn"
@@ -95,7 +98,7 @@ export default function Allproducts(props: InferGetStaticPropsType<typeof getSta
           <aside
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
-            <AccordianMenu accordianData={accordianData} />
+            <AccordianMenu accordianData={accordian} />
           </aside>
 
           <main id="right-content-section" className="group">
@@ -104,7 +107,7 @@ export default function Allproducts(props: InferGetStaticPropsType<typeof getSta
               orderDir={orderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={selectbarData}
+              selectBarData={selectresults}
             />
             <AllProductBoxes productData={filteredApts} />
           </main>

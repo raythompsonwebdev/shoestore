@@ -1,7 +1,6 @@
-/**
- * @param {any} props
- */
+
 export default function LikesSection(props: any) {
+
   const { likes, productName, setProductInfo }: any = { ...props }
 
   const likeProduct = async () => {

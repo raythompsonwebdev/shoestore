@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../components/Layout'
 import clientPromise from '../lib/mongodb'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 //import Basket from '../components/Basket';
 // import Image from "next/image";
@@ -16,8 +16,8 @@ const myComponentStyle = {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context: any) => {
-  //const cookies = context.req.cookies;
-  //console.log( cookies)
+  const cookies = context.req.cookies;
+  console.log( cookies)
 
   try {
     //await clientPromise
@@ -44,9 +44,9 @@ export default function Cart(
 ) {
   const { products } = props
 
-  // console.log(products)
+  console.log(products)
 
-  const [cartItems, setCartItems] = useState<Array<any>>([])
+  //const [cartItems, setCartItems] = useState<Array<any>>([])
   const { data: session, status } = useSession()
 
   // used to stop infinte loops
@@ -54,32 +54,32 @@ export default function Cart(
   // 	setCartItems(products);
   // }, [products])
 
-  const onAdd = (product: { id: string }) => {
-    const exist = cartItems.find((x) => x.id === product.id)
+  // const onAdd = (product: { id: string }) => {
+  //   const exist = cartItems.find((x) => x.id === product.id)
 
-    if (exist) {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-        )
-      )
-    } else {
-      setCartItems([...cartItems, { ...product, qty: 1 }])
-    }
-  }
+  //   if (exist) {
+  //     setCartItems(
+  //       cartItems.map((x) =>
+  //         x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+  //       )
+  //     )
+  //   } else {
+  //     setCartItems([...cartItems, { ...product, qty: 1 }])
+  //   }
+  // }
 
-  const onRemove = (product: { id: string }) => {
-    const exist = cartItems.find((x) => x.id === product.id)
-    if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== product.id))
-    } else {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      )
-    }
-  }
+  // const onRemove = (product: { id: string }) => {
+  //   const exist = cartItems.find((x) => x.id === product.id)
+  //   if (exist.qty === 1) {
+  //     setCartItems(cartItems.filter((x) => x.id !== product.id))
+  //   } else {
+  //     setCartItems(
+  //       cartItems.map((x) =>
+  //         x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+  //       )
+  //     )
+  //   }
+  // }
 
   if (status === 'authenticated') {
     return (

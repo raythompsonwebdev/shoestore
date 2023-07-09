@@ -6,7 +6,7 @@ import { InferGetServerSidePropsType } from 'next'
 import Layout from '../../components/Layout'
 import Image from 'next/image'
 
-export const getServerSideProps = async (context:any) => {
+export const getServerSideProps = async (context:{query: {resultArray :[string,string,string,string]}}) => {
 
    const [val1,val2,val3,val4] = context.query.resultArray
 

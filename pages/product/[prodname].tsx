@@ -1,5 +1,8 @@
 import { useState } from 'react'
-import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+//import type { InferGetStaticPropsType, GetStaticProps } from 'next'
+import type { InferGetStaticPropsType } from 'next'
+import sanitize from "mongo-sanitize";
+import clientPromise from '../../lib/mongodb'
 import LikesSection from '../../components/LikesSection'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
@@ -10,6 +13,7 @@ import { useRouter } from 'next/router'
 type SingleProduct = []
 
 type Product = {
+  _id?:string;
   style: string;
   price: string;
   size :string;
@@ -17,13 +21,12 @@ type Product = {
   text:string;
   likes:number;
   imgUrl:string;
+  name?:string
 }
 
 export default function SingleProduct(props: InferGetStaticPropsType<typeof getStaticProps>) {
 
   const {singleProduct} = props;
-
-  const [product] : Array<Product> = [singleProduct][0];
 
   const [productInfo, setProductInfo] = useState({ likes: 0 })
 
@@ -31,10 +34,9 @@ export default function SingleProduct(props: InferGetStaticPropsType<typeof getS
 
   const { prodname } = router.query
 
-  const { _id, color, imgUrl, name, price, size, style, text }: any = {...product}
+  const { _id, color, imgUrl, name, price, size, style, text } = {...singleProduct} as Product
 
-
-  return product ? (
+  return singleProduct.name === prodname ? (
     <Layout>
       <>
         <Head>
@@ -93,23 +95,24 @@ export default function SingleProduct(props: InferGetStaticPropsType<typeof getS
   )
 }
 
-export const getStaticProps: GetStaticProps<{
-  singleProduct: SingleProduct
-}> = async (context:any) => {
+export const getStaticProps = async (context:{params:{prodname:string}}) => {
 
-  const {params} = context
+ const {params} = context
 
-  console.log(params)
+ const productName = sanitize(params?.prodname);
 
   // Call an external API endpoint to get posts
-  // const res = await fetch('http:localhost:3000/api/singleproduct') // get single product from database
-  const res = await fetch('http:localhost:3000/api/homepagedata')
-  const products = await res.json();
+  try {
 
-  const{product, accordian} = products
+    const client = await clientPromise;
 
-  //
-  const singleProduct = product.filter((prod: { name: string })=> prod.name === params.prodname)
+    const db = client.db("shoestore");
+
+    const results = await db
+      .collection("products")
+      .findOne({ name: productName });
+
+    const singleProduct = JSON.parse(JSON.stringify(results));
 
     return {
       props:  {
@@ -118,15 +121,20 @@ export const getStaticProps: GetStaticProps<{
       }
     }
 
+  } catch (e) {
+    console.error(e)
+
+  }
+
 }
 
 export async function getStaticPaths() {
 
   // Call an external API endpoint to get posts
-  const res = await fetch('http:localhost:3000/api/homepagedata')
+  const res = await fetch('http:localhost:3000/api/singleproduct')
   const products = await res.json()
 
-  const{product, accordian} = products
+  const{product} = products
 
   // Get the paths we want to pre-render based on posts
   const paths = product.map((prod: { name: string }) => ({

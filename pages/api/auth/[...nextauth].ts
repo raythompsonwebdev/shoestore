@@ -32,6 +32,8 @@ export const authOptions: NextAuthOptions = {
           throw new Error(err)
         })
 
+        console.log(req.body, req.query)
+
         // confirm if user email already exists.
         const user = await FindUser.findOne({
           email: credentials?.email,
@@ -42,34 +44,39 @@ export const authOptions: NextAuthOptions = {
         }
 
         // confirm whether password entered matches user password stored in db.
-        const isPasswordCorrect = await comparePassword(
-          credentials!.password,
-          user.password
-        )
 
-        if (isPasswordCorrect) {
+        if(credentials?.password !== undefined){
 
-          const accessToken = signJwtAccessToken(
-            {
-              user: {
-                name: user.name,
-                email: user.email,
-              },
-            }
-          );
+          const isPasswordCorrect = await comparePassword(
+              credentials.password,
+              user.password
+            )
 
-          user.accessToken = accessToken;
+          if (isPasswordCorrect) {
 
-        } else {
-          throw new Error("Password is not valid");
+            const accessToken = signJwtAccessToken(
+              {
+                user: {
+                  name: user.name,
+                  email: user.email,
+                },
+              }
+            );
+
+            user.accessToken = accessToken;
+
+          } else {
+            throw new Error("Password is not valid");
+          }
+
         }
-
         // if (!isPasswordCorrect) {
         //   throw new Error('Invalid credentials')
         // }
 
         // check if user password and email sumitted match user email and passowrd saved in database.
-        if (user.email === credentials?.email && isPasswordCorrect) {
+        //if (user.email === credentials?.email && isPasswordCorrect) {
+        if (user.email === credentials?.email ) {
 
           return user
 
