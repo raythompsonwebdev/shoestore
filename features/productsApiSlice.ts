@@ -6,7 +6,6 @@ interface Products {
   accordian:[];
 }
 
-
 // Define our single API slice object
 export const apiSlice = createApi({
   // The cache reducer expects to be added at `state.api` (already default - this is optional)
