@@ -112,11 +112,7 @@ export default function SearchBar(props: SearchBarProps) {
             className="search-category-btn"
             type="submit"
           >
-            <button name="find">Go</button>
-
-            {/* <button onClick={() => router.push('/about')}>
-      Click here to read more
-    </button> */}
+            Go
           </Link>
         </fieldset>
       </form>

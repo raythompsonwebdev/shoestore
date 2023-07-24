@@ -1,7 +1,6 @@
 import { SetStateAction, useState, useEffect } from 'react'
 import Head from 'next/head'
 import type { InferGetServerSidePropsType } from 'next'
-//import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import Layout from '../../components/Layout'
 import AllProductBoxes from '../../components/allproducts/allProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
@@ -113,9 +112,7 @@ export default function Allproducts(props: InferGetServerSidePropsType<typeof ge
 }
 
 export const getServerSideProps = async () => {
-  // Call an external API endpoint to get posts
-  // const res = await fetch('http://localhost:3000/api/alldata')
-  // const allData = await res.json()
+
   try {
     //await clientPromise
     const client = await clientPromise
@@ -134,21 +131,11 @@ export const getServerSideProps = async () => {
     return {
       props:  {
         allData :{product,accordian,searchresults,selectresults},
-        revalidate: 10,
       }
     }
-    // res.status(200).send({product,accordian,searchresults,selectresults});
 
   } catch (e) {
     console.error(e)
   }
 
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  // return {
-  //   props:  {
-  //     allData,
-  //     revalidate: 10,
-  //   }
-  // }
 }

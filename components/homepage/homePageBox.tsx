@@ -24,7 +24,7 @@ const FrontPageBox = (props: {
         <p className="product-box-price">{price}</p>
         <Link href={`/product/${name}`} className="product-box-icon-link">
           <Image
-            className="product-box-price-icon"
+            className="product-box-icon"
             src={cartImg}
             alt="shoppingcart icon"
             width="34"

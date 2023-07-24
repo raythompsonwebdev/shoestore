@@ -96,25 +96,13 @@ export const getServerSideProps = async () => {
     return {
       props:  {
         newData:{ product, accordian, searchresults },
-        //unstable_revalidate: 10,
-        revalidate: 10,
       }
     }
-
-    //res.status(200).send({ product, accordian, searchresults });
 
   } catch (e) {
     console.error(e)
 
   }
 
-
-  // return {
-  //   props:  {
-  //     newData,
-  //     //unstable_revalidate: 10,
-  //     revalidate: 10,
-  //   }
-  // }
 }
 

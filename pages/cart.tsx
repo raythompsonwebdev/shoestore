@@ -6,6 +6,9 @@ import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
 //import Basket from '../components/Basket';
 // import Image from "next/image";
+//import { useDispatch, useSelector } from 'react-redux';
+// import CartItem from '../components/CartItem';
+import { useGetProductsQuery } from '../features/productsApiSlice'
 
 const myComponentStyle = {
   width: '98%',
@@ -44,8 +47,19 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 
 export default function Cart(
+
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
+
+  // const dispatch = useDispatch();
+  // const { cartItems, total, amount } = useSelector((store) => store.cart);
+
+  const {
+    data = [], isFetching
+  } = useGetProductsQuery()
+
+  console.log(data, isFetching)
+
   const { message } = props
 
   console.log(message)
@@ -104,6 +118,25 @@ export default function Cart(
               onAdd={onAdd}
               onRemove={onRemove}
             ></Basket> */}
+             {/* <header>
+              <h2>your bag</h2>
+              </header>
+              <div>
+                {cartItems.map((item) => {
+                  return <CartItem key={item.id} {...item} />;
+                })}
+              </div>
+              <footer>
+                <hr />
+                <div className='cart-total'>
+                  <h4>
+                    total <span>${total.toFixed(2)}</span>
+                  </h4>
+                </div>
+                <button className='btn clear-btn' onClick={() => dispatch(openModal())}>
+                  clear cart
+                </button>
+              </footer> */}
             </section>
           </main>
         </>

@@ -1,6 +1,5 @@
 import { SetStateAction, useState, useEffect } from 'react'
 import type { InferGetServerSidePropsType } from 'next'
-//import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import SpecialsProductBoxes from '../../components/specials/specialsProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
@@ -10,6 +9,35 @@ import Layout from '../../components/Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import clientPromise from '../../lib/mongodb'
 import {FilteredData , AllData} from "../../types/index"
+
+export const getServerSideProps = async () => {
+  try {
+    //await clientPromise
+    const client = await clientPromise
+    const db = client.db('shoestore')
+
+    const results = await db.collection('products').find({}).toArray()
+    const resultstwo = await db.collection('accordianData').find({}).toArray()
+    const resultsthree = await db.collection('selectBarData').find({}).toArray()
+    const resultsfour = await db.collection('searchBarData').find({}).toArray()
+
+    const product = JSON.parse(JSON.stringify(results))
+    const accordian = JSON.parse(JSON.stringify(resultstwo))
+    const searchresults = JSON.parse(JSON.stringify(resultsfour))
+    const selectresults = JSON.parse(JSON.stringify(resultsthree))
+
+    return {
+      props:  {
+        allData :{product,accordian,searchresults,selectresults},
+      }
+    }
+
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+
 
 export default function Specials(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
 
@@ -107,42 +135,3 @@ export default function Specials(props: InferGetServerSidePropsType<typeof getSe
   )
 }
 
-export const getServerSideProps = async () => {
-  // Call an external API endpoint to get posts
-  //const res = await fetch('http://localhost:3000/api/alldata')
-  //const allData = await res.json()
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  try {
-    //await clientPromise
-    const client = await clientPromise
-    const db = client.db('shoestore')
-
-    const results = await db.collection('products').find({}).toArray()
-    const resultstwo = await db.collection('accordianData').find({}).toArray()
-    const resultsthree = await db.collection('selectBarData').find({}).toArray()
-    const resultsfour = await db.collection('searchBarData').find({}).toArray()
-
-    const product = JSON.parse(JSON.stringify(results))
-    const accordian = JSON.parse(JSON.stringify(resultstwo))
-    const searchresults = JSON.parse(JSON.stringify(resultsfour))
-    const selectresults = JSON.parse(JSON.stringify(resultsthree))
-
-    return {
-      props:  {
-        allData :{product,accordian,searchresults,selectresults},
-        revalidate: 10,
-      }
-    }
-    // res.status(200).send({product,accordian,searchresults,selectresults});
-
-  } catch (e) {
-    console.error(e)
-  }
-  // return {
-  //   props:  {
-  //     allData,
-  //     revalidate: 10,
-  //   }
-  // }
-}

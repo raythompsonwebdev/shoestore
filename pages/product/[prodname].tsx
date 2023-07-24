@@ -24,10 +24,43 @@ type Product = {
   name?:string
 }
 
+export const getServerSideProps = async (context:{params:{prodname:string}}) => {
+
+  const {params} = context
+
+  const productName = sanitize(params?.prodname);
+
+   try {
+
+     const client = await clientPromise;
+
+     const db = client.db("shoestore");
+
+     const results = await db
+       .collection("products")
+       .findOne({ name: productName });
+
+     const singleProduct = JSON.parse(JSON.stringify(results));
+
+     return {
+       props:  {
+         singleProduct,
+         revalidate: 10,
+       }
+     }
+
+   } catch (e) {
+
+
+    console.error(e);
+
+
+   }
+ }
+
 export default function SingleProduct(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
 
   const {singleProduct} = props;
-  //const [productItem] = singleProduct;
 
   const { _id, color, imgUrl, likes, name, price, size, style, text } = singleProduct as Product
 
@@ -97,52 +130,5 @@ export default function SingleProduct(props: InferGetServerSidePropsType<typeof 
   )
 }
 
-export const getServerSideProps = async (context:{params:{prodname:string}}) => {
-
- const {params} = context
-
- const productName = sanitize(params?.prodname);
-
-  // Call an external API endpoint to get posts
-  try {
-
-    const client = await clientPromise;
-
-    const db = client.db("shoestore");
-
-    const results = await db
-      .collection("products")
-      .findOne({ name: productName });
-
-    const singleProduct = JSON.parse(JSON.stringify(results));
-
-    return {
-      props:  {
-        singleProduct,
-        revalidate: 10,
-      }
-    }
-
-  } catch (e) {
-    console.error(e)
-
-  }
-
-  //const res = await fetch('/api/homepagedata/', { cache: 'no-store' })
-  //const result = await res.json()
-
-
-  //const { product } = {...result} as SingleProduct
-
-  //const singleProduct = product.filter((prod:{name:string})=> prod.name === productName)
-
-  // return {
-  //   props:  {
-  //     singleProduct,
-  //     revalidate: 10,
-  //   }
-  // }
-
-}
 
 

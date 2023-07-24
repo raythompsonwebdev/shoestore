@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import LikesSection from '../../components/LikesSection'
 import Head from 'next/head'
 import clientPromise from '../../lib/mongodb'
 import { InferGetServerSidePropsType } from 'next'
@@ -40,7 +39,6 @@ export default function SearchProduct({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 
   const [products] = useState(productsearch)
-  const [productInfo, setProductInfo] = useState({ likes: 0 })
 
   return products.length === 0 ? (
     <Layout>
@@ -95,11 +93,7 @@ export default function SearchProduct({
                 <p className="product-page-title">{shoes.color}</p>
                 <p>{''}</p>
 
-                <LikesSection
-                  likes={productInfo.likes}
-                  productName={shoes.name}
-                  setProductInfo={setProductInfo}
-                />
+
               </figcaption>
             </figure>
           ))}

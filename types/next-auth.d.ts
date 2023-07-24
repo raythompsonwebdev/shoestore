@@ -1,4 +1,3 @@
-import NextAuth from "next-auth";
 import { JWT } from "next-auth/jwt";
 import { User } from "./index";
 
@@ -7,8 +6,13 @@ import * as React from 'react'
 
 declare module 'next-auth/jwt' {
   interface JWT {
-    id_token?: string
-    userRole?: "admin";
+    refreshTokenExpires?: number;
+    accessTokenExpires?: number;
+    refreshToken?: string;
+    token: string;
+    exp?: number;
+    iat?: number;
+    jti?: string;
   }
 }
 declare module "next-auth" {
