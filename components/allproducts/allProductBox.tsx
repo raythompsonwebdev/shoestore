@@ -6,7 +6,7 @@ export default function productBox(props: {
   imgUrl: Key | null | undefined
   name: string
   cartImg: string
-  price: string
+  price: number
   style: string
 }) {
   const { imgUrl, name, cartImg, price, style } = props

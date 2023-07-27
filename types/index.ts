@@ -40,18 +40,19 @@ export interface NewProductsData {
 }
 
 export interface Product{
-    all?:string;
-    cartImg: string;
+    all:string;
+    cartImg?: string;
     color: string;
     gender: string;
-    imgUrl:string;
-    likes?: number;
+    imgUrl?:string;
+    likes: number;
     name: string;
-    price: string
+    price: number
     prodId:number;
-    qty?: string;
+    qty: number;
     size: string;
     style:string;
-    text?:string | undefined | null ;
+    text:string | undefined | null ;
     _id: string;
+
 }

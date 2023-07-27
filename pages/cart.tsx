@@ -2,21 +2,23 @@ import Head from 'next/head'
 import Layout from '../components/Layout'
 //import clientPromise from '../lib/mongodb'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
+import CartContainer from '../features/cart/CartContainer'
 // import { useState, useEffect } from 'react'
+import { useEffect } from 'react';
 import { useSession } from 'next-auth/react'
 //import Basket from '../components/Basket';
 // import Image from "next/image";
-//import { useDispatch, useSelector } from 'react-redux';
-// import CartItem from '../components/CartItem';
-import { useGetProductsQuery } from '../features/productsApiSlice'
+import { useAppDispatch, useAppSelector } from '../hooks/hooks';
+import { calculateTotals, getCartItems} from '../features/cart/cartSlice';
 
-const myComponentStyle = {
-  width: '98%',
-  height: '1200px',
-  backgroundColor: 'red',
-  display: 'block',
-  margin: '10px',
-}
+
+// const myComponentStyle = {
+//   width: '98%',
+//   height: '1200px',
+//   //backgroundColor: 'red',
+//   display: 'block',
+//   margin: '10px',
+// }
 
 export const getServerSideProps: GetServerSideProps = async () => {
   // const cookies = context.req.cookies;
@@ -47,24 +49,25 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 
 export default function Cart(
-
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
 
-  // const dispatch = useDispatch();
-  // const { cartItems, total, amount } = useSelector((store) => store.cart);
+  const { cartItems, isLoading } = useAppSelector((store) => store.cart);
 
-  const {
-    data = [], isFetching
-  } = useGetProductsQuery()
+  console.log(cartItems, isLoading, props)
 
-  console.log(data, isFetching)
+  const dispatch = useAppDispatch();
 
-  const { message } = props
+  useEffect(() => {
+    dispatch(calculateTotals());
+  }, [cartItems,dispatch]);
 
-  console.log(message)
+  useEffect(() => {
+    dispatch(getCartItems());
+  },[dispatch]);
 
   //const [cartItems, setCartItems] = useState<Array<any>>([])
+
   const { data: session, status } = useSession()
 
   // used to stop infinte loops
@@ -112,32 +115,15 @@ export default function Cart(
             <h1 id="main-content-title">Cart - Logged In</h1>
             <p>{session.user?.name ? session.user?.name : "name not available"}</p>
             <p>{session.user?.email ? session.user?.email  : "email not available"}</p>
-            <section style={myComponentStyle}>
+            <CartContainer />
+            {/* <section style={myComponentStyle}> */}
+
               {/* <Basket
               cartItems={cartItems}
               onAdd={onAdd}
               onRemove={onRemove}
             ></Basket> */}
-             {/* <header>
-              <h2>your bag</h2>
-              </header>
-              <div>
-                {cartItems.map((item) => {
-                  return <CartItem key={item.id} {...item} />;
-                })}
-              </div>
-              <footer>
-                <hr />
-                <div className='cart-total'>
-                  <h4>
-                    total <span>${total.toFixed(2)}</span>
-                  </h4>
-                </div>
-                <button className='btn clear-btn' onClick={() => dispatch(openModal())}>
-                  clear cart
-                </button>
-              </footer> */}
-            </section>
+            {/* </section> */}
           </main>
         </>
       </Layout>
@@ -153,7 +139,8 @@ export default function Cart(
           </Head>
           <main id="main-content" className="clearfix">
             <h1 id="main-content-title">Cart - Not Logged In</h1>
-            <section style={myComponentStyle}></section>
+            <CartContainer />
+            {/* <section style={myComponentStyle}></section> */}
           </main>
         </>
       </Layout>

@@ -1,8 +1,7 @@
 import { Key } from 'react'
 import ProductBox from './allProductBox'
-import {Product} from "../../types/index"
 
-export default function ProductBoxes(props: { productData: Product[] }) {
+export default function ProductBoxes(props: { productData: [] }) {
   const { productData } = props
 
   const Product = productData
@@ -12,7 +11,7 @@ export default function ProductBoxes(props: { productData: Product[] }) {
         _id: Key | null | undefined
         name: string
         imgUrl: string
-        price: string
+        price: number
         cartImg: string
         style: string
       }) => (

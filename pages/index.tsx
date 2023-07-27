@@ -8,7 +8,7 @@ import HomePageBoxes from '../components/homepage/homepageBoxes'
 import AccordianMenu from '../components/accordianMenu'
 import FindShoes from '../components/homepage/FindShoes'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import { useGetProductsQuery } from '../features/productsApiSlice'
 
 
 type HomePageProds = {
@@ -20,12 +20,15 @@ type HomePageProds = {
 
 export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
 
-
-
-
   const {product, accordian} = props.products as HomePageProds;
 
   const [visibility, setVisibility] = useState<boolean>(false)
+
+  const {
+    data = [], isFetching
+  } = useGetProductsQuery()
+
+  console.log(data, isFetching)
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
     e.preventDefault()

@@ -5,7 +5,7 @@ const FrontPageBox = (props: {
   imgUrl: string
   name: string
   cartImg: string
-  price: string
+  price: number
   style: string
 }) => {
   const { imgUrl, name, cartImg, price, style } = props
