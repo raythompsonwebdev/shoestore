@@ -1,8 +1,8 @@
 // Import the RTK Query methods from the React-specific entry point
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-interface Products {
-  products:[];
+interface ApiProducts {
+  product:[];
   accordian:[];
 }
 
@@ -15,7 +15,7 @@ export const apiSlice = createApi({
   // The "endpoints" represent operations and requests for this server
   endpoints: builder => ({
     // The `getPosts` endpoint is a "query" operation that returns data
-    getProducts: builder.query<Products, object|void>({
+    getProducts: builder.query<ApiProducts, object|void>({
       // The URL for the request is '/fakeApi/posts'
       query: () => '/homepagedata'
     })

@@ -1,6 +1,7 @@
 import React from 'react';
 import CartItem from './CartItem';
-import { useAppSelector } from '../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { clearCart } from './cartSlice';
 // import { openModal } from '../features/modal/modalSlice';
 type Props ={
   prodId :number;
@@ -12,6 +13,8 @@ type Props ={
 
 
 const CartContainer = () => {
+
+  const dispatch = useAppDispatch();
 
   const { cartItems, total, qty } = useAppSelector((store) => store.cart);
 
@@ -43,9 +46,9 @@ const CartContainer = () => {
             total <span>${total.toFixed(2)}</span>
           </h4>
         </div>
-        {/* <button className='btn clear-btn' onClick={() => dispatch(openModal())}>
+        <button className='btn clear-btn' onClick={() => dispatch(clearCart())}>
           clear cart
-        </button> */}
+        </button>
       </footer>
     </section>
   );

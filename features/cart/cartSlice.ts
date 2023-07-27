@@ -6,7 +6,7 @@ const url = 'http://localhost:3000/api/cartitems';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const initialState = {
     cartItems: [],
-    qty: 0,
+    qty: 21,
     total: 0,
     isLoading: true,
 };

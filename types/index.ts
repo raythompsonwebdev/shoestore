@@ -46,7 +46,7 @@ export interface Product{
     gender: string;
     imgUrl?:string;
     likes: number;
-    name: string;
+    name?: string;
     price: number
     prodId:number;
     qty: number;

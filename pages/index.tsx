@@ -25,10 +25,10 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
   const [visibility, setVisibility] = useState<boolean>(false)
 
   const {
-    data = [], isFetching
+    data , isFetching
   } = useGetProductsQuery()
 
-  console.log(data, isFetching)
+  console.log(data?.product, isFetching)
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
     e.preventDefault()
