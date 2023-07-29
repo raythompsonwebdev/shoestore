@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-import type { InferGetServerSidePropsType } from 'next'
-import clientPromise from '../lib/mongodb'
+//import type { InferGetServerSidePropsType } from 'next'
+//import clientPromise from '../lib/mongodb'
 import Layout from '../components/Layout'
 import BannerImg from '../components/homepage/bannerImg'
 import HomePageBoxes from '../components/homepage/homepageBoxes'
@@ -9,26 +9,32 @@ import AccordianMenu from '../components/accordianMenu'
 import FindShoes from '../components/homepage/FindShoes'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useGetProductsQuery } from '../features/productsApiSlice'
+import {Product , AccordianProp} from '../types/index'
 
 
-type HomePageProds = {
-  product: []
-  accordian: []
-}
+// type HomePageProds = {
+//   product: []
+//   accordian: []
+// }
 
 
 
-export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
+//export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
+export default function Home() {
 
-  const {product, accordian} = props.products as HomePageProds;
+ // const {product, accordian} = props.products as HomePageProds;
 
   const [visibility, setVisibility] = useState<boolean>(false)
 
   const {
-    data , isFetching
+    data
   } = useGetProductsQuery()
 
-  console.log(data?.product, isFetching)
+  const otherproducts = data?.product as Product[]
+  const otheraccordian = data?.accordian as AccordianProp[]
+
+  //const {product, accordian} = data as HomePageProds;
+
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
     e.preventDefault()
@@ -58,14 +64,14 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
             <FindShoes />
-            <AccordianMenu accordianData={accordian} />
+            <AccordianMenu accordianData={otheraccordian} />
           </aside>
 
           <section id="right-content-section" className="group">
             <BannerImg />
 
             <h1 id="right-content-section-header">Featured</h1>
-            <HomePageBoxes productData={product} />
+            <HomePageBoxes productData={otherproducts} />
           </section>
         </main>
       </>
@@ -73,35 +79,35 @@ export default function Home(props: InferGetServerSidePropsType<typeof getServer
   )
 }
 
-export const getServerSideProps = async () => {
+// export const getServerSideProps = async () => {
 
-  try {
-    //await clientPromise
-    const client = await clientPromise
-    const db = client.db('shoestore')
+//   try {
+//     //await clientPromise
+//     const client = await clientPromise
+//     const db = client.db('shoestore')
 
-    const results = await db.collection('products').find({}).toArray()
-    const resultstwo = await db.collection('accordianData').find({}).toArray()
+//     const results = await db.collection('products').find({}).toArray()
+//     const resultstwo = await db.collection('accordianData').find({}).toArray()
 
-    if (results.length > 0) {
-      console.log(`${results.length} customers found`)
-    } else {
-      console.log(`No customers found`)
-    }
+//     if (results.length > 0) {
+//       console.log(`${results.length} customers found`)
+//     } else {
+//       console.log(`No customers found`)
+//     }
 
-    const product = JSON.parse(JSON.stringify(results))
-    const accordian = JSON.parse(JSON.stringify(resultstwo))
+//     const product = JSON.parse(JSON.stringify(results))
+//     const accordian = JSON.parse(JSON.stringify(resultstwo))
 
-    return {
-      props:  {
-        products:{product,accordian},
-      }
-    }
+//     return {
+//       props:  {
+//         products:{product,accordian},
+//       }
+//     }
 
-  } catch (e) {
-    console.error(e)
+//   } catch (e) {
+//     console.error(e)
 
-  }
-}
+//   }
+// }
 
 

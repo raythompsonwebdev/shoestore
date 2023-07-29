@@ -1,31 +1,28 @@
-import { Key } from 'react'
+//import { Key } from 'react'
 import HomePageBox from './homePageBox'
+import {Product} from '../../types/index'
 
-export default function HomePageBoxes(props: { productData : []}) {
+export default function HomePageBoxes(props: { productData : Product[] }) {
   const { productData } = { ...props }
 
-  const NewProduct = productData
-    .slice(0, 8)
-    .map(
-      (item: {
-        _id: Key | null | undefined
-        name: string
-        imgUrl: string
-        price: number
-        cartImg: string
-        style: string
+  if(productData !== undefined){
 
-      }) => (
-        <HomePageBox
-          key={item._id}
-          name={item.name}
-          imgUrl={item.imgUrl}
-          price={item.price}
-          cartImg={item.cartImg}
-          style={item.style}
-        />
+    const NewProduct = productData
+      .slice(0, 8)
+      .map(
+        (item) => (
+          <HomePageBox
+            key={item._id}
+            name={item.name}
+            imgUrl={item.imgUrl}
+            price={item.price}
+            cartImg={item.cartImg}
+            style={item.style}
+          />
+        )
       )
-    )
 
-  return <div className="product-boxes">{NewProduct}</div>
+
+    return <div className="product-boxes">{NewProduct}</div>
+  }
 }

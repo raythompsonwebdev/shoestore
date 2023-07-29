@@ -39,20 +39,26 @@ export interface NewProductsData {
   searchresults :[];
 }
 
-export interface Product{
+export interface Product {
     all:string;
-    cartImg?: string;
+    cartImg: string;
     color: string;
     gender: string;
-    imgUrl?:string;
+    imgUrl:string ;
     likes: number;
-    name?: string;
+    name: string;
     price: number
     prodId:number;
     qty: number;
     size: string;
     style:string;
-    text:string | undefined | null ;
+    text:string ;
     _id: string;
+}
 
+export interface AccordianProp {
+  _id:string
+  id:number;
+  title:string;
+  items:[]
 }

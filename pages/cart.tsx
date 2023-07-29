@@ -1,16 +1,14 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
-//import clientPromise from '../lib/mongodb'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
-import CartContainer from '../features/cart/CartContainer'
-// import { useState, useEffect } from 'react'
-import { useEffect } from 'react';
 import { useSession } from 'next-auth/react'
-//import Basket from '../components/Basket';
+// import { useState, useEffect } from 'react'
+// import { useEffect } from 'react';
+// import Basket from '../components/Basket';
 // import Image from "next/image";
-import { useAppDispatch, useAppSelector } from '../hooks/hooks';
-import { calculateTotals, getCartItems} from '../features/cart/cartSlice';
-
+// import CartContainer from '../features/cart/CartContainer'
+// import { useAppDispatch, useAppSelector } from '../hooks/hooks';
+// import { calculateTotals, getCartItems} from '../features/cart/cartSlice';
 
 // const myComponentStyle = {
 //   width: '98%',
@@ -52,19 +50,19 @@ export default function Cart(
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
 
-  const { cartItems, isLoading } = useAppSelector((store) => store.cart);
+  // const { cartItems, isLoading } = useAppSelector((store) => store.cart);
 
-  console.log(cartItems, isLoading, props)
+  console.log(props)
 
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    dispatch(calculateTotals());
-  }, [cartItems,dispatch]);
+  // useEffect(() => {
+  //   dispatch(calculateTotals());
+  // }, [cartItems,dispatch]);
 
-  useEffect(() => {
-    dispatch(getCartItems());
-  },[dispatch]);
+  // useEffect(() => {
+  //   dispatch(getCartItems());
+  // },[dispatch]);
 
   //const [cartItems, setCartItems] = useState<Array<any>>([])
 
@@ -115,7 +113,7 @@ export default function Cart(
             <h1 id="main-content-title">Cart - Logged In</h1>
             <p>{session.user?.name ? session.user?.name : "name not available"}</p>
             <p>{session.user?.email ? session.user?.email  : "email not available"}</p>
-            <CartContainer />
+            {/* <CartContainer /> */}
             {/* <section style={myComponentStyle}> */}
 
               {/* <Basket
@@ -139,8 +137,15 @@ export default function Cart(
           </Head>
           <main id="main-content" className="clearfix">
             <h1 id="main-content-title">Cart - Not Logged In</h1>
-            <CartContainer />
-            {/* <section style={myComponentStyle}></section> */}
+            {/* <CartContainer /> */}
+            {/* <section style={myComponentStyle}> */}
+
+              {/* <Basket
+              cartItems={cartItems}
+              onAdd={onAdd}
+              onRemove={onRemove}
+            ></Basket> */}
+            {/* </section> */}
           </main>
         </>
       </Layout>

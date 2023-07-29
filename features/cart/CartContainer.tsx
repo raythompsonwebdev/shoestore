@@ -2,6 +2,7 @@ import React from 'react';
 import CartItem from './CartItem';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { clearCart } from './cartSlice';
+import './index.css';
 // import { openModal } from '../features/modal/modalSlice';
 type Props ={
   prodId :number;
