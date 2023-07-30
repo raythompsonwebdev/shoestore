@@ -39,6 +39,7 @@ pages/api/alldata.ts
 pages/api/newproductsdata.ts
 pages/api/singleproduct.ts
 pages/api/examples/
+hooks/
 
 
 
