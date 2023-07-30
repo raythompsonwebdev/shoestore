@@ -1,24 +1,7 @@
 import type { RootState } from '../../app/store'
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
-//import {Product} from '../../types/index'
-export interface Product {
-    _id: string;
-    prodId:number;
-    name: string;
-    style:string;
-    color: string;
-    size: string;
-    gender: string;
-    imgUrl:string;
-    price: number;
-    cartImg: string;
-    text:string;
-    all:string;
-    likes: number;
-    qty: number;
-}
-
+import {Product} from '../../types/index'
 export interface ProductsState {
   productItems: Product[];
   status: string;
@@ -44,7 +27,6 @@ export const fetchProducts = createAsyncThunk(
     }
   }
 );
-
 
 export const productSlice = createSlice({
   name: "products",

@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import type { RootState } from '../../app/store'
-import {AccordianProps} from '../../types/index'
+import {Accordian} from '../../types/index'
 
 export interface AccordianState {
-  accordianItems: AccordianProps[];
+  accordianItems: Array<Accordian>;
   status: string;
   error: string | undefined | null;
 }
@@ -32,7 +32,7 @@ export const accordianSlice = createSlice({
   name: "accordian",
   initialState,
   reducers: {
-    accordianAdded: (state, action: PayloadAction<AccordianProps>) => {
+    accordianAdded: (state, action: PayloadAction<Accordian>) => {
       state.accordianItems.push(action.payload);
     },
   },
@@ -41,7 +41,7 @@ export const accordianSlice = createSlice({
       .addCase(fetchAccordian.pending, (state) => {
         state.status = 'loading'
       })
-      .addCase(fetchAccordian.fulfilled, (state, action : PayloadAction<AccordianProps[]>) => {
+      .addCase(fetchAccordian.fulfilled, (state, action : PayloadAction<Array<Accordian>>) => {
         state.status = 'succeeded'
         state.accordianItems = action.payload;
       })

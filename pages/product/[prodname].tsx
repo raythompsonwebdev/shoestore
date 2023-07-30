@@ -13,15 +13,15 @@ type SingleProduct = {
 }
 
 type Product = {
-  _id?:string;
+  _id:string;
   style: string;
-  price: string;
+  price: number;
   size :string;
   color: string;
   text:string;
   likes:number;
   imgUrl:string;
-  name?:string
+  name:string
 }
 
 export const getServerSideProps = async (context:{params:{prodname:string}}) => {
@@ -105,7 +105,7 @@ export default function SingleProduct(props: InferGetServerSidePropsType<typeof 
             />
             <figcaption id="product-page-caption">
               <p className="product-page-title"> {name}</p>
-              <p id="product-page-price">£{price}</p>
+              <p id="product-page-price">£ {price.toFixed(2)}</p>
               <p className="product-page-title">Size : {size}</p>
               <p className="product-page-title">Color : {color}</p>
               <p>{text}</p>

@@ -1,6 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+
+const formatPrice = (price: number) => {
+  if(!price){
+    return "number is needed"
+  }
+    const result = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(price);
+    return result;
+}
+
 const FrontPageBox = (props: {
   imgUrl: string
   name: string
@@ -21,7 +30,7 @@ const FrontPageBox = (props: {
       />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>
-        <p className="product-box-price">{price}</p>
+        <p className="product-box-price">{formatPrice(price)}</p>
         <Link href={`/product/${name}`} className="product-box-icon-link">
           <Image
             className="product-box-icon"

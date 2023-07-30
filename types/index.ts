@@ -11,7 +11,6 @@ export interface LoginUserParams {
   password: string;
 }
 
-
 export interface AllData {
   product: [];
   accordian: [];
@@ -40,25 +39,49 @@ export interface NewProductsData {
 }
 
 export interface Product {
-    all:string;
-    cartImg: string;
-    color: string;
-    gender: string;
-    imgUrl:string ;
-    likes: number;
-    name: string;
-    price: number
-    prodId:number;
-    qty: number;
-    size: string;
-    style:string;
-    text:string ;
-    _id: string;
+  _id: string;
+  prodId:number;
+  name: string;
+  style:string;
+  color: string;
+  size: string;
+  gender: string;
+  imgUrl:string;
+  price: number;
+  cartImg: string;
+  text:string;
+  all:string;
+  likes: number;
+  qty: number;
 }
 
-export interface AccordianProps {
-  _id:string
-  id:number;
-  title:string;
-  items:Array<string>
+export interface Accordian {
+    _id:string | number
+    id: number;
+    title:string | null;
+    items:Array<string>
 }
+
+export interface SearchBar {
+  _id:string;
+  id:number;
+  name:string;
+  options:Array<{
+    id:number;
+    value:string | null;
+    displayValue:string;
+  }>;
+}
+
+export interface SelectBar {
+  _id:string;
+  id:number;
+  name:string;
+  value:string;
+  options:Array<{
+    id:number;
+    value:string;
+    displayValue:string;
+  }>;
+}
+

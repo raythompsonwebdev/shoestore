@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-// import {Product , AccordianProps} from '../types/index'
+//import {Product , Accordian} from '../types/index'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../components/Layout'
 import BannerImg from '../components/homepage/bannerImg'
@@ -37,11 +37,12 @@ export default function Home() {
     }
   }, [accordianDataStatus,dispatch])
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {products} :any = productItems
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {accordian} :any  = accordianItems
+  const {products} = productItems as any
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {accordian} = accordianItems as any
 
   //const {product, accordian} = props.products as HomePageProds;
 
