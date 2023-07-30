@@ -1,37 +1,61 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-//import type { InferGetServerSidePropsType } from 'next'
-//import clientPromise from '../lib/mongodb'
+// import {Product , AccordianProps} from '../types/index'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../components/Layout'
 import BannerImg from '../components/homepage/bannerImg'
 import HomePageBoxes from '../components/homepage/homepageBoxes'
 import AccordianMenu from '../components/accordianMenu'
 import FindShoes from '../components/homepage/FindShoes'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { useGetProductsQuery } from '../features/productsApiSlice'
-import {Product , AccordianProp} from '../types/index'
+import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../features/accordian/accordianSlice'
+import { selectAllProducts, fetchProducts, getProductsStatus} from "../features/products/productSlice";
+import { useAppSelector, useAppDispatch } from '../app/store';
+import { useEffect } from "react";
 
-
-// type HomePageProds = {
-//   product: []
-//   accordian: []
-// }
-
-
-
-//export default function Home(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
 export default function Home() {
 
- // const {product, accordian} = props.products as HomePageProds;
+  const dispatch  = useAppDispatch();
+  // get Products
+  const productItems = useAppSelector(selectAllProducts);
+  const productItemsStatus = useAppSelector(getProductsStatus);
+  //const productItemsError = useAppSelector(getProductsError);
+
+  // acoordian data
+  const accordianItems = useAppSelector(selectAllAccordian);
+  const accordianDataStatus = useAppSelector(getAccordianStatus);
+  //const accordianDataError = useAppSelector(getAccordianError);
+
+  useEffect(() => {
+    if (productItemsStatus === 'idle') {
+        dispatch(fetchProducts())
+    }
+  }, [productItemsStatus,dispatch])
+
+  useEffect(() => {
+    if(accordianDataStatus === 'idle'){
+      dispatch(fetchAccordian())
+    }
+  }, [accordianDataStatus,dispatch])
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {products} :any = productItems
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {accordian} :any  = accordianItems
+
+  //const {product, accordian} = props.products as HomePageProds;
 
   const [visibility, setVisibility] = useState<boolean>(false)
 
-  const {
-    data
-  } = useGetProductsQuery()
+  console.log(products, accordian)
 
-  const otherproducts = data?.product as Product[]
-  const otheraccordian = data?.accordian as AccordianProp[]
+  /** API slice */
+  // const {
+  //   data
+  // } = useGetProductsQuery()
+
+  // const otherproducts = data?.product as Product[]
+  // const otheraccordian = data?.accordian as AccordianProp[]
 
   //const {product, accordian} = data as HomePageProds;
 
@@ -64,14 +88,14 @@ export default function Home() {
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
             <FindShoes />
-            <AccordianMenu accordianData={otheraccordian} />
+            <AccordianMenu accordianData={accordian} />
           </aside>
 
           <section id="right-content-section" className="group">
             <BannerImg />
 
             <h1 id="right-content-section-header">Featured</h1>
-            <HomePageBoxes productData={otherproducts} />
+            <HomePageBoxes productData={products} />
           </section>
         </main>
       </>

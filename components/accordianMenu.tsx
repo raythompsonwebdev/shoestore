@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Accordion } from 'react-bootstrap'
 
+type AccordianProp = {
+  _id:string
+  id:number;
+  title:string;
+  items:[]
 
+}
 
-
-
-export default function AccordianMenu(props: { accordianData:any }) {
+export default function AccordianMenu(props: { accordianData:AccordianProp[] }) {
   const { accordianData } = { ...props }
 
   return (

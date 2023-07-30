@@ -13,11 +13,12 @@ export const apiSlice = createApi({
   // All of our requests will have URLs starting with '/fakeApi'
   baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
   // The "endpoints" represent operations and requests for this server
+  tagTypes: ['Products', 'Accordian'],
   endpoints: builder => ({
     // The `getPosts` endpoint is a "query" operation that returns data
     getProducts: builder.query<ApiProducts, object|void>({
       // The URL for the request is '/fakeApi/posts'
-      query: () => '/homepagedata'
+      query: () => '/productsdata'
     })
   })
 })

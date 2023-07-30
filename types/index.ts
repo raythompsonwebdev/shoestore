@@ -56,9 +56,9 @@ export interface Product {
     _id: string;
 }
 
-export interface AccordianProp {
+export interface AccordianProps {
   _id:string
   id:number;
   title:string;
-  items:[]
+  items:Array<string>
 }

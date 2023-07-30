@@ -1,28 +1,26 @@
-import { configureStore , type ThunkAction, type Action} from "@reduxjs/toolkit";
-import productReducer from "../features/products/productSlice";
+import { configureStore } from "@reduxjs/toolkit";
+import productsReducer from "../features/products/productSlice";
 import cartReducer from "../features/cart/cartSlice";
-import { apiSlice } from '../features/productsApiSlice'
+import accordianReducer from "../features/accordian/accordianSlice";
+import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+//import { apiSlice } from '../features/productsApiSlice'
 
 export const store = configureStore({
   reducer: {
     cart: cartReducer,
-    products: productReducer,
-    [apiSlice.reducerPath]: apiSlice.reducer
+    products: productsReducer,
+    accordian: accordianReducer,
+    //[apiSlice.reducerPath]: apiSlice.reducer
   },
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(apiSlice.middleware)
+  devTools: true,
+  // middleware: getDefaultMiddleware =>
+  //   getDefaultMiddleware().concat(apiSlice.middleware)
 })
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>
+export const useAppDispatch: () => typeof store.dispatch = useDispatch;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
-/* Types */
-export type ReduxStore = typeof store
-export type ReduxState = ReturnType<typeof store.getState>
-export type ReduxDispatch = typeof store.dispatch
-export type ReduxThunkAction<ReturnType = void> = ThunkAction<
-  ReturnType,
-  ReduxState,
-  unknown,
-  Action
->
+
+

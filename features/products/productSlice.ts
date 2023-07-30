@@ -1,41 +1,82 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface Product{
-  all?:string;
-  cartImg: string;
-  color: string;
-  gender: string;
-  imgUrl:string;
-  likes?: number;
-  name: string;
-  price: string
-  prodId:number;
-  qty?: string;
-  size: string;
-  style:string;
-  text?:string | undefined | null ;
-  _id: string;
+import type { RootState } from '../../app/store'
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import axios from 'axios';
+//import {Product} from '../../types/index'
+export interface Product {
+    _id: string;
+    prodId:number;
+    name: string;
+    style:string;
+    color: string;
+    size: string;
+    gender: string;
+    imgUrl:string;
+    price: number;
+    cartImg: string;
+    text:string;
+    all:string;
+    likes: number;
+    qty: number;
 }
 
-export interface ProductState {
-  value: Product[] ;
+export interface ProductsState {
+  productItems: Product[];
+  status: string;
+  error: string | undefined | null;
 }
 
-const initialState: ProductState = {
-  value: [],
-};
+const initialState : ProductsState = {
+  productItems: [] ,
+  status: 'idle', //'idle' | 'loading' | 'succeeded' | 'failed'
+  error: null
+} ;
+
+const url = 'http://localhost:3000/api/productsdata';
+
+export const fetchProducts = createAsyncThunk(
+  'products/fetchProducts',
+  async (name, thunkAPI) => {
+    try {
+      const resp = await axios.get(url);
+      return resp.data ;
+    } catch (error) {
+      return thunkAPI.rejectWithValue('something went wrong');
+    }
+  }
+);
 
 
 export const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    addProduct: (state, action: PayloadAction<Product>) => {
-      state.value.push(action.payload);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    productAdded: (state , action: PayloadAction<Product>) => {
+      console.log(state)
+      state.productItems.push(action.payload);
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchProducts.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(fetchProducts.fulfilled, (state, action : PayloadAction<Product[]>) => {
+        // console.log(action.payload);
+        state.status = 'succeeded'
+        state.productItems = action.payload ;
+      })
+      .addCase(fetchProducts.rejected, (state, action) => {
+        state.status = 'failed'
+        state.error = action.error.message
+      });
   },
 });
 
-export const { addProduct } = productSlice.actions;
+export const selectAllProducts = (state: RootState ) => state.products.productItems;
+export const getProductsStatus = (state: RootState ) => state.products.status;
+export const getProductsError = (state: RootState ) => state.products.error;
+
+export const { productAdded } = productSlice.actions;
 
 export default productSlice.reducer;
