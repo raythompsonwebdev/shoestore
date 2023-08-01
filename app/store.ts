@@ -3,6 +3,7 @@ import productsReducer from "../features/products/productSlice";
 import cartReducer from "../features/cart/cartSlice";
 import accordianReducer from "../features/accordian/accordianSlice";
 import searchbarReducer from "../features/searchbar/searchbarSlice";
+import selectbarReducer from "../features/selectbar/selectbarSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 //import { apiSlice } from '../features/productsApiSlice'
 
@@ -12,6 +13,7 @@ export const store = configureStore({
     products: productsReducer,
     accordian: accordianReducer,
     searchbar:searchbarReducer,
+    selectbar: selectbarReducer,
     //[apiSlice.reducerPath]: apiSlice.reducer
   },
   devTools: true,

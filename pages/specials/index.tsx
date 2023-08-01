@@ -43,7 +43,7 @@ export default function Specials(props: InferGetServerSidePropsType<typeof getSe
 
   const {product, accordian,searchresults,selectresults } : AllData = props.allData;
 
-  const [productData, setProductData] = useState<Array<FilteredData>>([])
+  const [productData, setProductData] = useState<FilteredData[]>([])
   const [OrderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
@@ -81,8 +81,8 @@ export default function Specials(props: InferGetServerSidePropsType<typeof getSe
         item.color === value ||
         item.style === value ||
         item.size === value ||
-        item.gender === value ||
-        item.price === value
+        item.gender === value
+
       ) {
         return item
       }

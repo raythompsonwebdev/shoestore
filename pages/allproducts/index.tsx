@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { SetStateAction, useState, useEffect } from 'react'
 import Head from 'next/head'
 import type { InferGetServerSidePropsType } from 'next'
@@ -6,10 +7,14 @@ import AllProductBoxes from '../../components/allproducts/allProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import clientPromise from '../../lib/mongodb'
-
 import {FilteredData} from "../../types/index"
+
+//  import { selectAllSearchBar, fetchSearchBar, getSearchBarStatus } from '../../features/searchbar/searchbarSlice'
+//  import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
+//  import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
+//  import { selectAllSelectBar, fetchSelectData , getSelectBarStatus} from "../../features/products/selectbarSlice";
+//  import { useAppSelector, useAppDispatch } from '../../app/store';
 
 type AllData = {
   product: [];
@@ -22,16 +27,74 @@ export default function Allproducts(props: InferGetServerSidePropsType<typeof ge
 
   const {product, accordian,searchresults,selectresults } :AllData = props.allData;
 
-  const [productData, setProductData] = useState<Array<FilteredData>>([])
+  const [productData, setProductData] = useState<FilteredData[]>([])
   const [orderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
+
+  // const dispatch  = useAppDispatch();
+  // // get Products
+  // const productItems = useAppSelector(selectAllProducts);
+  // const productItemsStatus = useAppSelector(getProductsStatus);
+  // //const productItemsError = useAppSelector(getProductsError);
+
+  // // acoordian data
+  // const accordianItems = useAppSelector(selectAllAccordian);
+  // const accordianDataStatus = useAppSelector(getAccordianStatus);
+  // //const accordianDataError = useAppSelector(getAccordianError);
+
+  // // searchbar data
+  // const searchbarItems = useAppSelector(selectAllSearchBar);
+  // const searchbarDataStatus = useAppSelector(getSearchBarStatus);
+  // //const searchbarDataError = useAppSelector(getSearchBarError);
+
+  // // selectbar data
+  // const selectbarItems = useAppSelector(selectAllSelectBar);
+  // const selectbarDataStatus = useAppSelector(getSelectBarStatus);
+  // //const selectbarDataError = useAppSelector(getSelectBarError);
+
+  // useEffect(() => {
+  //   if (productItemsStatus === 'idle') {
+  //       dispatch(fetchProducts())
+  //   }
+  // }, [productItemsStatus,dispatch])
+
+  // useEffect(() => {
+  //   if(accordianDataStatus === 'idle'){
+  //     dispatch(fetchAccordian())
+  //   }
+  // }, [accordianDataStatus,dispatch])
+
+  // useEffect(() => {
+  //   if(searchbarDataStatus === 'idle'){
+  //     dispatch(fetchSearchBar())
+  //   }
+  // }, [searchbarDataStatus ,dispatch])
+
+    // useEffect(() => {
+  //   if(selectbarDataStatus === 'idle'){
+  //     dispatch(fetchSelectData())
+  //   }
+  // }, [selectbarDataStatus ,dispatch])
+
+  // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // const {products: newproducts} = productItems as any
 
   useEffect(() => {
     // Update products state
     setProductData(product)
   },[product]);
 
+  // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // const {accordian: newaccordian} = accordianItems as any
+
+  // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // const {searchresults: newsearchresults} = searchbarItems as any
+
+  // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // const {selectresults: newselectresults} = searchbarItems as any
+
+  // console.log(newaccordian, newproducts, newsearchresults, newselectresults)
 
   const handleChange = (selectedSize: SetStateAction<string>) :void => {
     setOrderByVal(selectedSize)
@@ -60,8 +123,7 @@ export default function Allproducts(props: InferGetServerSidePropsType<typeof ge
         item.color === value ||
         item.style === value ||
         item.size === value ||
-        item.gender === value ||
-        item.price === value
+        item.gender === value
       ) {
         return item
       }

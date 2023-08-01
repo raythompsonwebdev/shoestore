@@ -20,16 +20,13 @@ export interface AllData {
 
 export interface FilteredData {
   [x: string]: string | number
-  color: string
-  style: string
-  size: string
-  gender: string
-  price: string
-  cartImg: string;
-  imgUrl:string;
-  name: string;
-  prodId:number;
   _id: string;
+  prodId:number;
+  name: string;
+  style:string;
+  color: string;
+  size: string;
+  gender: string;
 }
 
 export interface NewProductsData {

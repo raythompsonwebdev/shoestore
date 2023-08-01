@@ -1,6 +1,6 @@
 //import { ChevronDown, ChevronUp } from '../icons';
 import { removeItem, increase, decrease } from './cartSlice';
-import { useAppDispatch } from '../../hooks/hooks';
+import { useAppDispatch } from '../../app/store';
 import Image from 'next/image'
 
 type Props ={

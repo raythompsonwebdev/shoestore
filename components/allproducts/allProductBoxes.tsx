@@ -1,7 +1,8 @@
 import { Key } from 'react'
 import ProductBox from './allProductBox'
 
-export default function ProductBoxes(props: { productData: [] }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function ProductBoxes(props: { productData: any }) {
   const { productData } = props
 
   const Product = productData

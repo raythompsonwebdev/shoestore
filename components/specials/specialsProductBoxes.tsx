@@ -3,7 +3,8 @@ import ProductBox from './specialsProductBox'
 
 
 export default function SpecialsProductBoxes(props: {
-  productData: []}) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  productData: any}) {
 
   const { productData } = props
 
@@ -14,7 +15,7 @@ export default function SpecialsProductBoxes(props: {
         _id: Key | null | undefined
         name: string
         imgUrl: string
-        price: string
+        price: number
         cartImg: string
         style: string
       }) => (

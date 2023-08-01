@@ -48,7 +48,7 @@ export default function Home() {
 
   const [visibility, setVisibility] = useState<boolean>(false)
 
-  console.log(products, accordian)
+  //console.log(products, accordian)
 
   /** API slice */
   // const {
