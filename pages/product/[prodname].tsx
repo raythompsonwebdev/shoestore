@@ -7,6 +7,8 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import clientPromise from '../../lib/mongodb'
 import sanitize from 'mongo-sanitize'
+// import { useAppSelector, useAppDispatch } from '../../app/store';
+// import { selectProductByName } from '../../features/products/productSlice'
 
 type SingleProduct = {
   product:[]
@@ -27,21 +29,16 @@ type Product = {
 export const getServerSideProps = async (context:{params:{prodname:string}}) => {
 
   const {params} = context
-
   const productName = sanitize(params?.prodname);
 
    try {
 
      const client = await clientPromise;
-
      const db = client.db("shoestore");
-
      const results = await db
        .collection("products")
        .findOne({ name: productName });
-
      const singleProduct = JSON.parse(JSON.stringify(results));
-
      return {
        props:  {
          singleProduct,
@@ -50,11 +47,7 @@ export const getServerSideProps = async (context:{params:{prodname:string}}) => 
      }
 
    } catch (e) {
-
-
     console.error(e);
-
-
    }
  }
 
@@ -63,6 +56,8 @@ export default function SingleProduct(props: InferGetServerSidePropsType<typeof 
   const {singleProduct} = props;
 
   const { _id, color, imgUrl, likes, name, price, size, style, text } = singleProduct as Product
+
+   // const singleProd = useAppSelector((state) => selectProductByName(state, prodname))
 
   const [productInfo, setProductInfo] = useState({ likes: likes })
 

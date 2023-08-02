@@ -21,10 +21,12 @@ export const store = configureStore({
   //   getDefaultMiddleware().concat(apiSlice.middleware)
 })
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>
 export const useAppDispatch: () => typeof store.dispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type ReduxStore = typeof store
+export type RootState = ReturnType<typeof store.getState>
 
 
 

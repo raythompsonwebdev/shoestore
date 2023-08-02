@@ -59,6 +59,9 @@ export const selectAllProducts = (state: RootState ) => state.products.productIt
 export const getProductsStatus = (state: RootState ) => state.products.status;
 export const getProductsError = (state: RootState ) => state.products.error;
 
+// export const selectProductByName = (state, postName) =>
+//     state.products.productItems.find(product => post.name === postName);
+
 export const { productAdded } = productSlice.actions;
 
 export default productSlice.reducer;
