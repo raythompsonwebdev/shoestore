@@ -6,7 +6,6 @@ import {
   // ReactPortal,
 } from 'react'
 
-
 interface OptionsProp {
   _id:string
   id:number
@@ -14,14 +13,13 @@ interface OptionsProp {
   options:[]
 }
 
-
-export function SelectColor(props: {
+export const SelectColor = (props: {
   aria: string
   colorHandler: (event: { target: {value :string} }) => void;
   colors: OptionsProp
   name: string
   value: string
-}) {
+}) => {
   const { aria, colorHandler, colors, name, value } = props
 
   const { options }= colors
@@ -49,13 +47,13 @@ export function SelectColor(props: {
   )
 }
 
-export function SelectGender(props: {
+export const SelectGender = (props: {
   aria: string
   genderHandler: (event: { target: {value :string} }) => void;
   genders: OptionsProp
   name: string
   value: string
-}) {
+}) => {
   const { aria, genderHandler, genders, name, value } = props
   const { options } = genders
 
@@ -82,13 +80,13 @@ export function SelectGender(props: {
   )
 }
 
-export function SelectSize(props: {
+export const SelectSize = (props: {
   aria: string
   name: string
   sizeHandler: (event: { target: {value :string} }) => void;
   sizes: OptionsProp
   value: string
-}) {
+}) => {
   const { aria, name, sizeHandler, sizes, value } = props
   const { options } = sizes
 
@@ -115,13 +113,13 @@ export function SelectSize(props: {
   )
 }
 
-export function SelectStyle(props: {
+export const SelectStyle = (props: {
   aria: string
   name: string
   styleHandler: (event: { target: {value :string} }) => void;
   styles: OptionsProp
   value: string
-}) {
+}) => {
   const { aria, name, styleHandler, styles, value } = props
   const { options } = styles
 

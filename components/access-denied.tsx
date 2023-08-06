@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { signIn } from 'next-auth/react'
 
-export default function AccessDenied() {
+const AccessDenied = () => {
   return (
     <main id="main-content" className="clearfix">
       <h1 id="main-content-title">Access Denied</h1>
@@ -20,3 +20,5 @@ export default function AccessDenied() {
     </main>
   )
 }
+
+export default AccessDenied

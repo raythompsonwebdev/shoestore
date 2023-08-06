@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../../components/Layout'
 import LoginForm from '../../components/(forms)/loginForm'
 
-export default function Login() {
+const Login = () => {
   return (
     <Layout>
       <>
@@ -72,3 +72,5 @@ export default function Login() {
     </Layout>
   )
 }
+
+export default Login

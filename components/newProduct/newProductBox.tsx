@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function NewProductBox(props: {
+const NewProductBox = (props: {
   imgUrl: string
   name: string
   cartImg: string
   price: string
   text: string
-}) {
+}) => {
   const { imgUrl, name, cartImg, price, text } = props
   const myComponentStyle = {
     backgroundImage: "url('/images/product_headline_bg.png')",
@@ -46,3 +46,5 @@ export default function NewProductBox(props: {
     </figure>
   )
 }
+
+export default NewProductBox

@@ -51,7 +51,7 @@ export const getServerSideProps = async (context:{params:{prodname:string}}) => 
    }
  }
 
-export default function SingleProduct(props: InferGetServerSidePropsType<typeof getServerSideProps> ) {
+const SingleProduct = (props: InferGetServerSidePropsType<typeof getServerSideProps> ) => {
 
   const {singleProduct} = props;
 
@@ -139,5 +139,5 @@ export default function SingleProduct(props: InferGetServerSidePropsType<typeof 
   )
 }
 
-
+export default SingleProduct
 

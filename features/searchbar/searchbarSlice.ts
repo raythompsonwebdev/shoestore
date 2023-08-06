@@ -4,7 +4,7 @@ import type { RootState } from '../../app/store'
 import {SearchBar} from '../../types/index'
 
 export interface SearchBarState {
-  searchbarItems: Array<SearchBar>;
+  searchbarItems: SearchBar[];
   status: string;
   error: string | undefined | null;
 }
@@ -16,13 +16,13 @@ const initialState : SearchBarState = {
 
 const url = 'http://localhost:3000/api/searchbardata';
 
-export const fetchSearchBar = createAsyncThunk(
-  'accordian/fetchSearchBar',
+export const fetchSearchBarData = createAsyncThunk(
+  'searchbar/fetchSearchBar',
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url);
-      console.log(resp)
       return resp.data;
+
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }
@@ -34,20 +34,20 @@ export const searchbarSlice = createSlice({
   initialState,
   reducers: {
     searchbarAdded: (state, action: PayloadAction<SearchBar>) => {
-
+      console.log(action)
       state.searchbarItems.push(action.payload);
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchSearchBar.pending, (state) => {
+      .addCase(fetchSearchBarData.pending, (state) => {
         state.status = 'loading'
       })
-      .addCase(fetchSearchBar.fulfilled, (state, action : PayloadAction<Array<SearchBar>>) => {
+      .addCase(fetchSearchBarData.fulfilled, (state, action : PayloadAction<Array<SearchBar>>) => {
         state.status = 'succeeded'
         state.searchbarItems = action.payload;
       })
-      .addCase(fetchSearchBar.rejected, (state, action) => {
+      .addCase(fetchSearchBarData.rejected, (state, action) => {
         state.status = 'failed'
         state.error = action.error.message
       });

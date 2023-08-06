@@ -9,7 +9,7 @@ type AccordianProp = {
 
 }
 
-export default function AccordianMenu(props: { accordianData:AccordianProp[] }) {
+const AccordianMenu = (props: { accordianData:AccordianProp[] }) => {
   const { accordianData } = { ...props }
 
   return (
@@ -35,3 +35,5 @@ export default function AccordianMenu(props: { accordianData:AccordianProp[] }) 
     </Accordion>
   )
 }
+
+export default AccordianMenu

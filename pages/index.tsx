@@ -12,7 +12,7 @@ import { selectAllProducts, fetchProducts, getProductsStatus} from "../features/
 import { useAppSelector, useAppDispatch } from '../app/store';
 import { useEffect } from "react";
 
-export default function Home() {
+const Home = () => {
 
   const dispatch  = useAppDispatch();
   // get Products
@@ -104,35 +104,5 @@ export default function Home() {
   )
 }
 
-// export const getServerSideProps = async () => {
-
-//   try {
-//     //await clientPromise
-//     const client = await clientPromise
-//     const db = client.db('shoestore')
-
-//     const results = await db.collection('products').find({}).toArray()
-//     const resultstwo = await db.collection('accordianData').find({}).toArray()
-
-//     if (results.length > 0) {
-//       console.log(`${results.length} customers found`)
-//     } else {
-//       console.log(`No customers found`)
-//     }
-
-//     const product = JSON.parse(JSON.stringify(results))
-//     const accordian = JSON.parse(JSON.stringify(resultstwo))
-
-//     return {
-//       props:  {
-//         products:{product,accordian},
-//       }
-//     }
-
-//   } catch (e) {
-//     console.error(e)
-
-//   }
-// }
-
+export default Home
 

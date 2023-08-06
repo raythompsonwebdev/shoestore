@@ -5,7 +5,7 @@ import AccessDenied from '../../components/access-denied'
 import Head from 'next/head'
 import Image from 'next/image'
 
-export default function Profile() {
+const Profile = () => {
 
   const { data: session, status } = useSession()
 
@@ -71,5 +71,7 @@ export default function Profile() {
     )
 
 }
+
+export default Profile
 
 

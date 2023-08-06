@@ -1,10 +1,8 @@
 import { Key } from 'react'
 import ProductBox from './specialsProductBox'
 
-
-export default function SpecialsProductBoxes(props: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  productData: any}) {
+const SpecialsProductBoxes = (props: { productData: any}) => {
 
   const { productData } = props
 
@@ -32,3 +30,5 @@ export default function SpecialsProductBoxes(props: {
 
   return <div className="product-boxes">{Product}</div>
 }
+
+export default SpecialsProductBoxes

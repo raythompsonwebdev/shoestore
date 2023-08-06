@@ -3,7 +3,7 @@ import HomePageBox from './homePageBox'
 import {Product} from '../../types/index'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function HomePageBoxes(props: { productData : Product[]}) {
+const HomePageBoxes = (props: { productData : Product[]}) => {
   const { productData } = { ...props }
 
   let NewProduct
@@ -34,6 +34,7 @@ export default function HomePageBoxes(props: { productData : Product[]}) {
   }
 
   return <div className="product-boxes">{NewProduct}</div>
-  // return <div className="product-boxes"></div>
 
 }
+
+export default HomePageBoxes

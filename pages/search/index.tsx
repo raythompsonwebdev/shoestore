@@ -34,9 +34,9 @@ export const getServerSideProps = async (context:{query: {resultArray :[string,s
   }
 }
 
-export default function SearchProduct({
+const SearchProduct = ({
   productsearch,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
 
   const [products] = useState(productsearch)
 
@@ -102,3 +102,6 @@ export default function SearchProduct({
     </Layout>
   )
 }
+
+
+export default SearchProduct

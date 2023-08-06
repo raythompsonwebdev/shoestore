@@ -2,13 +2,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Key } from 'react'
 
-export default function productBox(props: {
+const productBox = (props: {
   imgUrl: Key | null | undefined
   name: string
   cartImg: string
   price: number
   style: string
-}) {
+}) => {
   const { imgUrl, name, cartImg, price, style } = props
 
   return (
@@ -37,3 +37,5 @@ export default function productBox(props: {
     </figure>
   )
 }
+
+export default productBox

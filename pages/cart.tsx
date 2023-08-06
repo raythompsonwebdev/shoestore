@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 import { useSession } from 'next-auth/react'
 // import { useState, useEffect } from 'react'
 // import { useEffect } from 'react';
@@ -18,42 +17,9 @@ import { useSession } from 'next-auth/react'
 //   margin: '10px',
 // }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  // const cookies = context.req.cookies;
-  // console.log( cookies)
-
-  // try {
-  //   //await clientPromise
-  //   const client = await clientPromise
-  //   const db = client.db('shoestore')
-  //   const results = await db.collection('products').find({}).toArray()
-  //   const products = JSON.parse(JSON.stringify(results))
-
-  //   return {
-  //     props: {
-  //       products,
-  //     },
-  //   }
-  // } catch (e) {
-  //   console.error(e)
-  //   return {
-  //     props: { isConnected: false },
-  //   }
-  // }
-
-  return {
-         props: { message:"under maintenance" },
-  }
-}
-
-export default function Cart(
-  props: InferGetServerSidePropsType<typeof getServerSideProps>
-) {
+const Cart = () => {
 
   // const { cartItems, isLoading } = useAppSelector((store) => store.cart);
-
-  console.log(props)
-
   // const dispatch = useAppDispatch();
 
   // useEffect(() => {
@@ -152,3 +118,5 @@ export default function Cart(
     )
   }
 }
+
+export default Cart

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-function BannerImg() {
+const BannerImg = () => {
   return (
     <section id="front-page-banner">
       <hgroup>

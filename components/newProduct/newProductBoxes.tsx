@@ -2,7 +2,7 @@ import { Key } from 'react'
 import NewProductBox from './newProductBox'
 
 
-export default function newProductBoxes(props: { productData:[] }) {
+const newProductBoxes = (props: { productData:[] }) => {
   const { productData } = { ...props }
 
   const NewProduct = productData
@@ -29,3 +29,5 @@ export default function newProductBoxes(props: { productData:[] }) {
 
   return <div className="larger-product-boxes">{NewProduct}</div>
 }
+
+export default newProductBoxes

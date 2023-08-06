@@ -7,7 +7,7 @@ import Layout from '../../components/Layout'
 import NewProductBoxes from '../../components/newProduct/newProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
- import { selectAllSearchBar, fetchSearchBar, getSearchBarStatus } from '../../features/searchbar/searchbarSlice'
+ import { selectAllSearchBar, fetchSearchBarData, getSearchBarStatus } from '../../features/searchbar/searchbarSlice'
  import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
  import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
  import { useAppSelector, useAppDispatch } from '../../app/store';
@@ -19,12 +19,7 @@ import SearchBar from '../../components/searchBar/SearchBar'
 //   searchresults :[];
 // }
 
-// export default function NewProducts(props: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  export default function NewProducts() {
-    //const {product, accordian, searchresults} = props.products as HomePageProds;
-
-  //const {product, accordian,searchresults} : NewProductsData = props.newData;
-
+const NewProducts = () => {
 
   const dispatch  = useAppDispatch();
   // get Products
@@ -56,7 +51,7 @@ import SearchBar from '../../components/searchBar/SearchBar'
 
   useEffect(() => {
     if(searchbarDataStatus === 'idle'){
-      dispatch(fetchSearchBar())
+      dispatch(fetchSearchBarData())
     }
   }, [searchbarDataStatus ,dispatch])
 
@@ -80,12 +75,6 @@ import SearchBar from '../../components/searchBar/SearchBar'
     // Update products state
     setProductData(newproducts)
   },[newproducts]);
-
-
-  // useEffect(() => {
-  //   // Update products state
-  //   setProductData(product)
-  // },[product]);
 
   const sidebarVisibility = (e: { preventDefault: () => void }) :void => {
     e.preventDefault()
@@ -133,39 +122,4 @@ import SearchBar from '../../components/searchBar/SearchBar'
   )
 }
 
-// export const getServerSideProps = async () => {
-//   // Call an external DB to get products
-
-//   try {
-//     //await clientPromise
-//     const client = await clientPromise
-//     const db = client.db('shoestore')
-
-//     const results = await db.collection('products').find({}).toArray()
-//     const resultstwo = await db.collection('accordianData').find({}).toArray()
-//     const resultsfour = await db.collection('searchBarData').find({}).toArray()
-
-//     if (results.length > 0) {
-//       console.log(`${results.length} customers found`)
-//       // Here you could build your html or put the results in some other data structure you want to work with
-//     } else {
-//       console.log(`No customers found`)
-//     }
-
-//     const product = JSON.parse(JSON.stringify(results))
-//     const accordian = JSON.parse(JSON.stringify(resultstwo))
-//     const searchresults = JSON.parse(JSON.stringify(resultsfour))
-
-//     return {
-//       props:  {
-//         newData:{ product, accordian, searchresults },
-//       }
-//     }
-
-//   } catch (e) {
-//     console.error(e)
-
-//   }
-
-// }
-
+export default NewProducts

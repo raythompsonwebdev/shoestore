@@ -7,7 +7,7 @@ type LikesType ={
   setProductInfo: ( likes: {likes:number}) => void;
 }
 
-export default function LikesSection(props:LikesType ) {
+const LikesSection = (props:LikesType ) => {
 
   const { likes, productName, setProductInfo } = { ...props }
 
@@ -49,3 +49,5 @@ export default function LikesSection(props:LikesType ) {
     </div>
   )
 }
+
+export default LikesSection

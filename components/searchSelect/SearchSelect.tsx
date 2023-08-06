@@ -1,5 +1,5 @@
-import { Key } from 'react'
-
+// import { Key } from 'react'
+import React, { Key } from 'react'
 interface SearchSelector {
   selectBarData: []
   changesOrders: (orderbyval: string , dir: string) => void;
@@ -8,10 +8,10 @@ interface SearchSelector {
   orderDir: string
 }
 
-export default function SearchSelect(props: SearchSelector) {
+const SearchSelect = (props: SearchSelector) => {
   const { selectBarData, changesOrders, handleChange, orderDir } = props
 
-  function onItemChange(e: { target: { value: string } }) {
+  const onItemChange = (e: { target: { value: string } }) => {
     const {value} = e.target;
     handleChange(value)
     changesOrders(value, orderDir)
@@ -47,3 +47,5 @@ export default function SearchSelect(props: SearchSelector) {
     </form>
   )
 }
+
+export default SearchSelect

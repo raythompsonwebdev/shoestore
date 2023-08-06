@@ -20,9 +20,11 @@ type SearchDataProps = {
   options: []
 }
 
-export default function SearchBar(props: SearchBarProps) {
+const SearchBar = (props: SearchBarProps) => {
 
   const { labelname, searchData } = props
+
+  //console.log(searchData)
 
   const [genderVal, setGenderVal] = useState<string>(' ')
   const [sizeVal, setSizeVal] = useState<string>(' ')
@@ -119,3 +121,5 @@ export default function SearchBar(props: SearchBarProps) {
     </aside>
   )
 }
+
+export default SearchBar

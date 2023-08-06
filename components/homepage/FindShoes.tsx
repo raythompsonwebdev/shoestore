@@ -5,7 +5,7 @@ const myComponentStyle = {
   backgroundCize: 'cover',
 }
 
-export default function FindShoes() {
+const FindShoes = () => {
   return (
     <article id="front-page-form-container" style={myComponentStyle}>
       <h1 id="front-page-form-header"> FIND YOUR SHOES </h1>
@@ -39,3 +39,5 @@ export default function FindShoes() {
     </article>
   )
 }
+
+export default FindShoes

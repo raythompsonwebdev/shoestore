@@ -18,7 +18,7 @@ const initialState : SelectBarState = {
 const url = 'http://localhost:3000/api/selectdata';
 
 export const fetchSelectData = createAsyncThunk(
-  'selectdata/fetchSelectData',
+  'selectbar/fetchSelectData',
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url);
@@ -59,6 +59,7 @@ export const selectbarSlice = createSlice({
 export const selectAllSelectBar = (state: RootState ) => state.selectbar.selectbarItems;
 export const getSelectBarStatus = (state: RootState ) => state.selectbar.status;
 export const getSelectBarError = (state: RootState ) => state.selectbar.error;
+
 
 export const { selectbarAdded } = selectbarSlice.actions;
 
