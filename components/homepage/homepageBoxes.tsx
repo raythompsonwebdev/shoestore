@@ -1,9 +1,9 @@
 import { Key } from 'react'
 import HomePageBox from './homePageBox'
-import {Product} from '../../types/index'
+import {ProductType} from '../../types/index'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const HomePageBoxes = (props: { productData : Product[]}) => {
+const HomePageBoxes = (props: { productData : ProductType[]}) => {
   const { productData } = { ...props }
 
   let NewProduct

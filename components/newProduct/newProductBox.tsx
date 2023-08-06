@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { formatPrice} from '../../helpers/index'
 
 const NewProductBox = (props: {
   imgUrl: string
   name: string
   cartImg: string
-  price: string
+  price: number
   text: string
 }) => {
   const { imgUrl, name, cartImg, price, text } = props
@@ -29,7 +30,7 @@ const NewProductBox = (props: {
           {name}
         </h1>
         <p className="larger-product-box-text">{text}</p>
-        <span className="larger-product-box-price">Price :£ {price}</span>
+        <span className="larger-product-box-price">Price: {formatPrice(price)}</span>
         <span className="larger-product-box-add-to-cart">
           <Link href={`/product/${name}`} className="larger-product-box-link">
             <Image

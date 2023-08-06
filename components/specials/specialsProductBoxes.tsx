@@ -1,8 +1,8 @@
 import { Key } from 'react'
 import ProductBox from './specialsProductBox'
-
+import {ProductType} from '../../types/index'
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const SpecialsProductBoxes = (props: { productData: any}) => {
+const SpecialsProductBoxes = (props: { productData: ProductType[]}) => {
 
   const { productData } = props
 

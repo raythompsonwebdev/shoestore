@@ -1,8 +1,8 @@
-import { Key } from 'react'
+import React, {Key} from 'react'
 import NewProductBox from './newProductBox'
+import {ProductType} from '../../types/index'
 
-
-const newProductBoxes = (props: { productData:[] }) => {
+const newProductBoxes = (props: { productData:ProductType[] }) => {
   const { productData } = { ...props }
 
   const NewProduct = productData
@@ -10,11 +10,12 @@ const newProductBoxes = (props: { productData:[] }) => {
     .map(
       (item: {
         _id: Key | null | undefined
-        cartImg: string
-        imgUrl: string
         name: string
-        price: string
-        text: string
+        imgUrl: string
+        price: number
+        cartImg: string
+        style: string
+        text:string
       }) => (
         <NewProductBox
           key={item._id}

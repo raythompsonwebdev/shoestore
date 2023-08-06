@@ -1,14 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
-
-const formatPrice = (price: number) => {
-  if(!price){
-    return "number is needed"
-  }
-    const result = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(price);
-    return result;
-}
+import { formatPrice} from '../../helpers/index'
 
 const FrontPageBox = (props: {
   imgUrl: string

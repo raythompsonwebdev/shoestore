@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+import { formatPrice} from '../../helpers/index'
+
 const SpecialsproductBox = (props: {
   imgUrl: string
   name: string
@@ -21,7 +23,7 @@ const SpecialsproductBox = (props: {
       />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>
-        <p className="product-box-price ">£{price}</p>
+        <p className="product-box-price ">{formatPrice(price)}</p>
         <Link href={`/product/${name}`} className="product-box-icon-link">
           <Image
             className="product-box-icon"
