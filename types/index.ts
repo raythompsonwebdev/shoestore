@@ -27,6 +27,13 @@ export interface FilteredData {
   color: string;
   size: string;
   gender: string;
+  imgUrl:string;
+  price: number;
+  cartImg: string;
+  text:string;
+  all:string;
+  likes: number;
+  qty: number;
 }
 
 export interface NewProductsData {

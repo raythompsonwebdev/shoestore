@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 import {
   SelectGender,
   SelectColor,
@@ -7,6 +7,7 @@ import {
   SelectSize,
 } from './SearchBarData'
 import {SearchBarType} from '../../types/index'
+import { useRouter } from "next/navigation"
 
 
 type SearchBarProps =  {
@@ -18,7 +19,7 @@ const SearchBar = (props: SearchBarProps) => {
 
   const { labelname, searchData } = props
 
-  console.log(searchData)
+  const router = useRouter()
 
   const [gender, style, size, color]  = [...searchData]
 
@@ -51,12 +52,22 @@ const SearchBar = (props: SearchBarProps) => {
     setColorVal(value)
   }
 
-  const resultArray : string[] = [genderVal, styleVal, sizeVal, colorVal]
-
   const submit = (event: { preventDefault: () => void }) => {
-    event.preventDefault()
-  }
+    event.preventDefault();
+    //get form
+    const SearchFormData = document.querySelector("#search-category-form") as HTMLFormElement;
+    // get form data
+    const formData: FormData = new FormData(SearchFormData);
+    // get url query params
+    const style : FormDataEntryValue | null = formData.get('styleVal');
+    const gender : FormDataEntryValue | null = formData.get('genderVal');
+    const color : FormDataEntryValue | null = formData.get('colorVal');
+    const size  : FormDataEntryValue | null = formData.get('sizeVal');
+    // send data to search results page as url query params
+    router.push(`/search?genderVal=${gender ?? ''}&styleVal=${style ?? ''}&sizeVal=${size ?? ''}&colorVal=${color ?? ''}`)
 
+    return false;
+  }
 
   const aria = 'search-category-label'
 
@@ -101,7 +112,7 @@ const SearchBar = (props: SearchBarProps) => {
             colorHandler={colorHandler}
             aria={aria}
           />
-          <Link
+          {/* <Link
             href={{
               pathname: '/search',
               query: { resultArray },
@@ -110,7 +121,8 @@ const SearchBar = (props: SearchBarProps) => {
             type="submit"
           >
             Go
-          </Link>
+          </Link> */}
+          <input type="submit" className="search-category-btn" value="GO" />
         </fieldset>
       </form>
     </aside>

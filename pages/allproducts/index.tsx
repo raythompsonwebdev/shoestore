@@ -93,7 +93,7 @@ const Allproducts = () => {
   const {selectresults} = selectbarItems as any
 
 
-  console.log(newaccordian, newproducts, searchbarItems, selectbarItems)
+  //console.log(newaccordian, newproducts, searchbarItems, selectbarItems)
 
   const handleChange = (selectedSize: SetStateAction<string>) :void => {
     setOrderByVal(selectedSize)

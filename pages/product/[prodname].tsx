@@ -1,80 +1,48 @@
 import { useState } from 'react'
-import type { InferGetServerSidePropsType } from 'next'
 import LikesSection from '../../components/LikesSection'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import clientPromise from '../../lib/mongodb'
-import sanitize from 'mongo-sanitize'
 import { useAppSelector } from '../../app/store';
 import { selectAllProducts} from '../../features/products/productSlice'
+import { formatPrice} from '../../helpers/index'
 
-type SingleProduct = {
-  product:[]
-}
-
-type Product = {
-  _id:string;
-  style: string;
-  price: number;
-  size :string;
+type UnoProduct = {
+  all :string;
+  cartImg:string;
   color: string;
-  text:string;
-  likes:number;
+  gender:string;
   imgUrl:string;
-  name:string
+  likes:number;
+  name:string;
+  price: number;
+  prodId :number;
+  qty:number;
+  size :string;
+  style: string;
+  text:string;
+  _id:string;
 }
 
-export const getServerSideProps = async (context:{params:{prodname:string}}) => {
-
-  const {params} = context
-  const productName = sanitize(params?.prodname);
-
-   try {
-
-     const client = await clientPromise;
-     const db = client.db("shoestore");
-     const results = await db
-       .collection("products")
-       .findOne({ name: productName });
-     const singleProduct = JSON.parse(JSON.stringify(results));
-     return {
-       props:  {
-         singleProduct,
-         revalidate: 10,
-       }
-     }
-
-   } catch (e) {
-    console.error(e);
-   }
- }
-
-const SingleProduct = (props: InferGetServerSidePropsType<typeof getServerSideProps> ) => {
-
-  const {singleProduct} = props;
-
-  const { _id, color, imgUrl, likes, name, price, size, style, text } = singleProduct as Product
-
-  const [productInfo, setProductInfo] = useState({ likes: likes })
-
-  const router = useRouter()
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { prodname } = router.query
+const SingleProduct = () => {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const singleProd:any = useAppSelector(selectAllProducts)
-  // const pister = useAppSelector((state) => selectProductByName(state, prodname))
+
+  const router = useRouter()
+
+  const { prodname } = router.query
 
   console.log(prodname)
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const result = singleProd.products.find((product:Product) => product.name === prodname) as Product
+  const result = singleProd.products?.find((product:UnoProduct) => product.name === prodname)
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { all, cartImg, color, gender, imgUrl, likes, name, price, prodId, qty, size, style, text,_id } = result as UnoProduct
 
-console.log(result)
+  const [productInfo, setProductInfo] = useState({ likes: likes })
+//console.log(all, cartImg, color, gender, imgUrl, likes, name, price, prodId, qty, size, style, text,_id)
 
   // const onAdd = (product: { id: string }) => {
   //   const exist = cartItems.find((x) => x.id === product.id)
@@ -90,7 +58,7 @@ console.log(result)
   //   }
   // }
 
-  return name === prodname ? (
+  return result !== undefined ? (
 
     <Layout>
       <>
@@ -111,9 +79,11 @@ console.log(result)
             />
             <figcaption id="product-page-caption">
               <p className="product-page-title"> {name}</p>
-              <p id="product-page-price">£ {price.toFixed(2)}</p>
+              <p id="product-page-price">{formatPrice(price)}</p>
+              <p className="product-page-title">Gender : {gender}</p>
               <p className="product-page-title">Size : {size}</p>
               <p className="product-page-title">Color : {color}</p>
+              <p className="product-page-title">Prod SKU : {prodId}</p>
               <p>{text}</p>
 
               <LikesSection

@@ -1,46 +1,47 @@
-import { useState } from 'react'
+//import { useState } from 'react'
 import Head from 'next/head'
-import clientPromise from '../../lib/mongodb'
-import { InferGetServerSidePropsType } from 'next'
 import Layout from '../../components/Layout'
 import Image from 'next/image'
+import {ProductType} from '../../types/index'
+import { useAppSelector } from '../../app/store';
+import { selectAllProducts} from '../../features/products/productSlice'
+import { formatPrice} from '../../helpers/index'
 
-export const getServerSideProps = async (context:{query: {resultArray :[string,string,string,string]}}) => {
+const SearchProduct = () => {
 
-   const [val1,val2,val3,val4] = context.query.resultArray
+  const queryString = window.location.search;
 
-  try {
-    const client = await clientPromise
-    const db = client.db('shoestore')
-    const results = await db.collection('products').find({$or:[{ "size":  `${val1}`} ,{ "color": `${val2}` },{ "gender": `${val3}` },{ "style": `${val4}` }]} ).toArray()
+  console.log(queryString);
 
-    if (results.length > 0) {
-      console.log(`${results.length} customers found`)
-      // Here you could build your html or put the results in some other data structure you want to work with
-    } else {
-      console.log(`No customers found`)
-    }
+  const urlParams = new URLSearchParams(queryString);
 
-    const productsearch = JSON.parse(JSON.stringify(results))
+  const searchGender = urlParams.get('genderVal')
+  const searchStyle = urlParams.get('styleVal')
+  const searchSize = urlParams.get('sizeVal')
+  const searchColor = urlParams.get('colorVal')
 
-    return {
-      props: { productsearch },
-    }
-  } catch (e) {
-    console.error(e)
-    return {
-      props: { isConnected: false },
-    }
-  }
-}
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const searchProducts:any = useAppSelector(selectAllProducts)
 
-const SearchProduct = ({
-  productsearch,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  console.log(searchProducts.products);
 
-  const [products] = useState(productsearch)
+  console.log(searchGender, searchStyle , searchSize, searchColor);
 
-  return products.length === 0 ? (
+  //filter product from the products array
+  const products = searchProducts.products.filter(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (product :any) =>
+      product.gender === searchGender ||
+      product.style === searchStyle ||
+      product.size === searchSize ||
+      product.color === searchColor  ? product: false
+  );
+
+  //const [products] = useState(productsearch)
+
+  //const products : ProductType[] = [];
+
+  return products === undefined ? (
     <Layout>
       <>
         <Head>
@@ -68,15 +69,7 @@ const SearchProduct = ({
         </Head>
         <main id="main-content" className="clearfix">
           <h1 id="main-content-title">Single Product Search</h1>
-          {products.map((shoes: {
-            prodId:string,
-            imgUrl:string,
-            name:string,
-            price:string,
-            gender:string,
-            size:string,
-            color:string
-          }) => (
+          {products.map((shoes: ProductType) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <Image
                 id="product-page-img"
@@ -87,7 +80,7 @@ const SearchProduct = ({
               />
               <figcaption id="product-page-caption">
                 <p className="product-page-title"> {shoes.name}</p>
-                <p id="product -page-price">£{shoes.price}</p>
+                <p id="product -page-price">{formatPrice(shoes.price)}</p>
                 <p className="product-page-title">{shoes.gender}</p>
                 <p className="product-page-title">{shoes.size}</p>
                 <p className="product-page-title">{shoes.color}</p>

@@ -86,7 +86,7 @@ const Specials = () => {
   const {selectresults: newselectresults} = selectbarItems as any
 
 
-  console.log(newaccordian, newproducts, newsearchresults, newselectresults)
+  // console.log(newaccordian, newproducts, newsearchresults, newselectresults)
 
   const handleChange = (selected: SetStateAction<string>) => {
     setOrderByVal(selected)

@@ -62,7 +62,7 @@ const NewProducts = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {searchresults: newsearchresults} = searchbarItems as any
 
- console.log(newaccordian, newproducts, newsearchresults)
+ //console.log(newaccordian, newproducts, newsearchresults)
 
   const [productData, setProductData] = useState<[]>([])
 
