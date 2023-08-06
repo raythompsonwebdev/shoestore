@@ -6,38 +6,27 @@ import {ProductType} from '../../types/index'
 import { useAppSelector } from '../../app/store';
 import { selectAllProducts} from '../../features/products/productSlice'
 import { formatPrice} from '../../helpers/index'
+import { useRouter } from 'next/router';
 
 const SearchProduct = () => {
 
-  const queryString = window.location.search;
+  const router = useRouter();
+  const { colorVal, sizeVal, genderVal, styleVal } = router.query;
 
-  console.log(queryString);
-
-  const urlParams = new URLSearchParams(queryString);
-
-  const searchGender = urlParams.get('genderVal')
-  const searchStyle = urlParams.get('styleVal')
-  const searchSize = urlParams.get('sizeVal')
-  const searchColor = urlParams.get('colorVal')
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const searchProducts:any = useAppSelector(selectAllProducts)
-
-  console.log(searchProducts.products);
-
-  console.log(searchGender, searchStyle , searchSize, searchColor);
 
   //filter product from the products array
   const products = searchProducts.products.filter(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (product :any) =>
-      product.gender === searchGender ||
-      product.style === searchStyle ||
-      product.size === searchSize ||
-      product.color === searchColor  ? product: false
+      product.gender === genderVal ||
+      product.style === styleVal ||
+      product.size === sizeVal ||
+      product.color === colorVal  ? product: false
   );
 
-  //const [products] = useState(productsearch)
 
   //const products : ProductType[] = [];
 

@@ -10,9 +10,12 @@ const roboto = Old_Standard_TT({
 })
 
 const Layout = ({ children }: { children: ReactNode }) => {
+
+
+
   return (
     <div id="wrapper" className={roboto.className}>
-      <Header />
+      <Header  />
       <MainNav />
       {children}
       <Footer />

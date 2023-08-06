@@ -1,21 +1,13 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import { useSession } from 'next-auth/react'
-// import { useState, useEffect } from 'react'
-// import { useEffect } from 'react';
-// import Basket from '../components/Basket';
-// import Image from "next/image";
+import { useState, SetStateAction } from 'react'
+import Basket from '../components/Basket';
+//import {ProductType } from '../types/index'
 // import CartContainer from '../features/cart/CartContainer'
 // import { useAppDispatch, useAppSelector } from '../hooks/hooks';
 // import { calculateTotals, getCartItems} from '../features/cart/cartSlice';
 
-// const myComponentStyle = {
-//   width: '98%',
-//   height: '1200px',
-//   //backgroundColor: 'red',
-//   display: 'block',
-//   margin: '10px',
-// }
 
 const Cart = () => {
 
@@ -34,37 +26,35 @@ const Cart = () => {
 
   const { data: session, status } = useSession()
 
-  // used to stop infinte loops
-  // useEffect(()=>{
-  // 	setCartItems(products);
-  // }, [products])
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [cartItems, setCartItems] = useState<any[]>([]);
 
-  // const onAdd = (product: { id: string }) => {
-  //   const exist = cartItems.find((x) => x.id === product.id)
+  const onAdd = (product: { id: SetStateAction<number> }) => {
+    const exist = cartItems.find((x:{prodId:number}) => x.prodId === product.id)
 
-  //   if (exist) {
-  //     setCartItems(
-  //       cartItems.map((x) =>
-  //         x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-  //       )
-  //     )
-  //   } else {
-  //     setCartItems([...cartItems, { ...product, qty: 1 }])
-  //   }
-  // }
+    if (exist) {
+      setCartItems(
+        cartItems.map((x:{prodId:number | string}) =>
+          x.prodId === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      )
+    } else {
+      setCartItems([...cartItems, { ...product, qty: 1 }])
+    }
+  }
 
-  // const onRemove = (product: { id: string }) => {
-  //   const exist = cartItems.find((x) => x.id === product.id)
-  //   if (exist.qty === 1) {
-  //     setCartItems(cartItems.filter((x) => x.id !== product.id))
-  //   } else {
-  //     setCartItems(
-  //       cartItems.map((x) =>
-  //         x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-  //       )
-  //     )
-  //   }
-  // }
+  const onRemove = (product: { id: SetStateAction<number | string> }) => {
+    const exist = cartItems.find((x:{prodId:number}) => x.prodId === product.id)
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x:{prodId:number}) => x.prodId !== product.id))
+    } else {
+      setCartItems(
+        cartItems.map((x:{prodId:number}) =>
+          x.prodId === product.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      )
+    }
+  }
 
   if (status === 'authenticated') {
     return (
@@ -80,14 +70,11 @@ const Cart = () => {
             <p>{session.user?.name ? session.user?.name : "name not available"}</p>
             <p>{session.user?.email ? session.user?.email  : "email not available"}</p>
             {/* <CartContainer /> */}
-            {/* <section style={myComponentStyle}> */}
-
-              {/* <Basket
+              <Basket
               cartItems={cartItems}
               onAdd={onAdd}
               onRemove={onRemove}
-            ></Basket> */}
-            {/* </section> */}
+            ></Basket>
           </main>
         </>
       </Layout>
@@ -106,11 +93,11 @@ const Cart = () => {
             {/* <CartContainer /> */}
             {/* <section style={myComponentStyle}> */}
 
-              {/* <Basket
+              <Basket
               cartItems={cartItems}
               onAdd={onAdd}
               onRemove={onRemove}
-            ></Basket> */}
+            ></Basket>
             {/* </section> */}
           </main>
         </>

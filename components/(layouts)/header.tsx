@@ -1,4 +1,5 @@
 import Image from 'next/image'
+//import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -19,15 +20,15 @@ export default function Header() {
         </a>
       </div>
       <div>
-        {/* <a href="#/cart">
-          Cart{" "}
+        <Link href="/cart">
+          Cart{' '}
           {props.countCartItems ? (
             <button className="badge">{props.countCartItems}</button>
           ) : (
-            ""
+            ''
           )}
-        </a>{" "}
-      </div>*/}
+        </Link>{' '}
+      </div> */}
     </header>
   )
 }

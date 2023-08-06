@@ -18,7 +18,6 @@ export default async function productHandler(
     const resultsfour = await db.collection('searchBarData').find({}).toArray()
 
     const searchresults = JSON.parse(JSON.stringify(resultsfour))
-    console.log(searchresults)
 
     res.status(200).send({searchresults});
 
