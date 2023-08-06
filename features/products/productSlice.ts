@@ -1,9 +1,9 @@
 import type { RootState } from '../../app/store'
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
-import {Product} from '../../types/index'
+import {ProductType} from '../../types/index'
 export interface ProductsState {
-  productItems: Product[];
+  productItems: ProductType[];
   status: string;
   error: string | undefined | null;
 }
@@ -33,7 +33,7 @@ export const productSlice = createSlice({
   initialState,
   reducers: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    productAdded: (state , action: PayloadAction<Product>) => {
+    productAdded: (state , action: PayloadAction<ProductType>) => {
       console.log(state)
       state.productItems.push(action.payload);
     },
@@ -43,7 +43,7 @@ export const productSlice = createSlice({
       .addCase(fetchProducts.pending, (state) => {
         state.status = 'loading'
       })
-      .addCase(fetchProducts.fulfilled, (state, action : PayloadAction<Product[]>) => {
+      .addCase(fetchProducts.fulfilled, (state, action : PayloadAction<ProductType[]>) => {
         // console.log(action.payload);
         state.status = 'succeeded'
         state.productItems = action.payload ;
@@ -59,8 +59,8 @@ export const selectAllProducts = (state: RootState ) => state.products.productIt
 export const getProductsStatus = (state: RootState ) => state.products.status;
 export const getProductsError = (state: RootState ) => state.products.error;
 
-// export const selectProductByName = (state, postName) =>
-//     state.products.productItems.find(product => post.name === postName);
+export const selectProductByName = (state : RootState, name:string) =>
+    state.products.productItems.find((product: { name: string; }) => product.name === name);
 
 export const { productAdded } = productSlice.actions;
 

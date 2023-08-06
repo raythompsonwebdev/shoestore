@@ -7,8 +7,8 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import clientPromise from '../../lib/mongodb'
 import sanitize from 'mongo-sanitize'
-// import { useAppSelector, useAppDispatch } from '../../app/store';
-// import { selectProductByName } from '../../features/products/productSlice'
+import { useAppSelector } from '../../app/store';
+import { selectAllProducts} from '../../features/products/productSlice'
 
 type SingleProduct = {
   product:[]
@@ -57,13 +57,24 @@ const SingleProduct = (props: InferGetServerSidePropsType<typeof getServerSidePr
 
   const { _id, color, imgUrl, likes, name, price, size, style, text } = singleProduct as Product
 
-   // const singleProd = useAppSelector((state) => selectProductByName(state, prodname))
-
   const [productInfo, setProductInfo] = useState({ likes: likes })
 
   const router = useRouter()
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { prodname } = router.query
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const singleProd:any = useAppSelector(selectAllProducts)
+  // const pister = useAppSelector((state) => selectProductByName(state, prodname))
+
+  console.log(prodname)
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const result = singleProd.products.find((product:Product) => product.name === prodname) as Product
+
+
+console.log(result)
 
   // const onAdd = (product: { id: string }) => {
   //   const exist = cartItems.find((x) => x.id === product.id)

@@ -6,25 +6,21 @@ import {
   SelectStyle,
   SelectSize,
 } from './SearchBarData'
+import {SearchBarType} from '../../types/index'
 
 
 type SearchBarProps =  {
   labelname: string
-  searchData: []
-}
-
-type SearchDataProps = {
-  _id:string
-  id:number
-  name:string
-  options: []
+  searchData: SearchBarType[]
 }
 
 const SearchBar = (props: SearchBarProps) => {
 
   const { labelname, searchData } = props
 
-  //console.log(searchData)
+  console.log(searchData)
+
+  const [gender, style, size, color]  = [...searchData]
 
   const [genderVal, setGenderVal] = useState<string>(' ')
   const [sizeVal, setSizeVal] = useState<string>(' ')
@@ -61,7 +57,6 @@ const SearchBar = (props: SearchBarProps) => {
     event.preventDefault()
   }
 
-  const [gender, style, size, color] :SearchDataProps[] = searchData
 
   const aria = 'search-category-label'
 

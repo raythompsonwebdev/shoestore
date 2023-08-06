@@ -8,10 +8,10 @@ import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
 import {FilteredData} from "../../types/index"
-import { selectAllSearchBar, fetchSearchBarData, getSearchBarStatus } from '../../features/searchbar/searchbarSlice'
+import { getSearchData, fetchSearchData, getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
 import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
 import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
-import { selectAllSelectBar, fetchSelectData , getSelectBarStatus} from "../../features/selectbar/selectbarSlice";
+import { getSelectData , fetchSelectData , getSelectDataStatus} from "../../features/selectdata/selectdataSlice";
 import { useAppSelector, useAppDispatch } from '../../app/store';
 
 const Specials = () => {
@@ -33,13 +33,13 @@ const Specials = () => {
   //const accordianDataError = useAppSelector(getAccordianError);
 
   // searchbar data
-  const searchbarItems = useAppSelector(selectAllSearchBar);
+  const searchbarItems = useAppSelector(getSearchData);
   const searchbarDataStatus = useAppSelector(getSearchBarStatus);
   //const searchbarDataError = useAppSelector(getSearchBarError);
 
   // selectbar data
-  const selectbarItems = useAppSelector(selectAllSelectBar);
-  const selectbarDataStatus = useAppSelector(getSelectBarStatus);
+  const selectbarItems = useAppSelector(getSelectData);
+  const selectbarDataStatus = useAppSelector(getSelectDataStatus);
   //const selectbarDataError = useAppSelector(getSelectBarError);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Specials = () => {
 
   useEffect(() => {
     if(searchbarDataStatus === 'idle'){
-      dispatch(fetchSearchBarData())
+      dispatch(fetchSearchData())
     }
   }, [searchbarDataStatus ,dispatch])
 
@@ -135,8 +135,8 @@ const Specials = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          {/* <SearchBar labelname="Specials" searchData={searchresults} /> */}
-          <SearchBar labelname="Specials" searchData={newsearchresults} />
+        { newsearchresults !== undefined ?  <SearchBar labelname="Specials" searchData={newsearchresults} /> : <div> No results </div>}
+          {/* <SearchBar labelname="Specials" searchData={newsearchresults} /> */}
 
           <button
             id="sidebar-toggle-btn"
@@ -155,14 +155,14 @@ const Specials = () => {
           </aside>
 
           <section id="right-content-section" role="main">
-            <SearchSelect
+            { newselectresults !== undefined ? <SearchSelect
               orderByVal={OrderByVal}
               orderDir={OrderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
               // selectBarData={selectresults}
               selectBarData={newselectresults}
-            />
+            /> : <div> No results </div>}
             <SpecialsProductBoxes productData={filteredApts} />
 
             <br />

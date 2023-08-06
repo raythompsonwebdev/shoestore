@@ -1,16 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
-//import type { InferGetServerSidePropsType } from 'next'
-//import clientPromise from '../../lib/mongodb'
 import Layout from '../../components/Layout'
 import NewProductBoxes from '../../components/newProduct/newProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
- import { selectAllSearchBar, fetchSearchBarData, getSearchBarStatus } from '../../features/searchbar/searchbarSlice'
- import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
- import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
- import { useAppSelector, useAppDispatch } from '../../app/store';
+import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
+import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
+import { getSearchData, fetchSearchData, getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
+import { useAppSelector, useAppDispatch } from '../../app/store';
 
 
 // type NewProductsData = {
@@ -33,7 +31,7 @@ const NewProducts = () => {
   //const accordianDataError = useAppSelector(getAccordianError);
 
   // searchbar data
-  const searchbarItems = useAppSelector(selectAllSearchBar);
+  const searchbarItems = useAppSelector(getSearchData);
   const searchbarDataStatus = useAppSelector(getSearchBarStatus);
   //const searchbarDataError = useAppSelector(getAccordianError);
 
@@ -51,7 +49,7 @@ const NewProducts = () => {
 
   useEffect(() => {
     if(searchbarDataStatus === 'idle'){
-      dispatch(fetchSearchBarData())
+      dispatch(fetchSearchData())
     }
   }, [searchbarDataStatus ,dispatch])
 
@@ -64,9 +62,8 @@ const NewProducts = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {searchresults: newsearchresults} = searchbarItems as any
 
-  //console.log(newaccordian, newproducts, newsearchresults)
+ console.log(newaccordian, newproducts, newsearchresults)
 
-  // const [productData, setProductData] = useState<[]>([])
   const [productData, setProductData] = useState<[]>([])
 
   const [visibility, setVisibility] = useState<boolean>(false)
@@ -90,8 +87,8 @@ const NewProducts = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          {/* <SearchBar labelname="New Products" searchData={searchresults} /> */}
-          <SearchBar labelname="New Products" searchData={newsearchresults} />
+          { newsearchresults !== undefined ? <SearchBar labelname="New Products" searchData={newsearchresults} /> : <div> No results </div>}
+          {/* <SearchBar labelname="New Products" searchData={newsearchresults} /> */}
 
           <button
             id="sidebar-toggle-btn"

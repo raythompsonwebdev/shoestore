@@ -1,7 +1,9 @@
 // import { Key } from 'react'
 import React, { Key } from 'react'
+import {SelectBarType} from '../../types/index'
+
 interface SearchSelector {
-  selectBarData: []
+  selectBarData: SelectBarType[]
   changesOrders: (orderbyval: string , dir: string) => void;
   handleChange: (selected: string ) => void;
   orderByVal: string
@@ -27,11 +29,7 @@ const SearchSelect = (props: SearchSelector) => {
         className="search-products-select"
       >
         {selectBarData.map(
-          (options: {
-            value: string | undefined
-            id: Key | null | undefined
-            options: []
-          }) => (
+          (options) => (
             // eslint-disable-next-line react/no-array-index-key
             <optgroup label={options.value} key={options.id}>
               {options.options.map((option :{id:Key | number, value:string | undefined, displayValue:string | undefined}) => (

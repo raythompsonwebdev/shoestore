@@ -6,17 +6,13 @@ import {
   // ReactPortal,
 } from 'react'
 
-interface OptionsProp {
-  _id:string
-  id:number
-  name:string
-  options:[]
-}
+
 
 export const SelectColor = (props: {
   aria: string
   colorHandler: (event: { target: {value :string} }) => void;
-  colors: OptionsProp
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  colors: any
   name: string
   value: string
 }) => {
@@ -50,7 +46,8 @@ export const SelectColor = (props: {
 export const SelectGender = (props: {
   aria: string
   genderHandler: (event: { target: {value :string} }) => void;
-  genders: OptionsProp
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  genders: any
   name: string
   value: string
 }) => {
@@ -84,7 +81,8 @@ export const SelectSize = (props: {
   aria: string
   name: string
   sizeHandler: (event: { target: {value :string} }) => void;
-  sizes: OptionsProp
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  sizes: any
   value: string
 }) => {
   const { aria, name, sizeHandler, sizes, value } = props
@@ -117,7 +115,8 @@ export const SelectStyle = (props: {
   aria: string
   name: string
   styleHandler: (event: { target: {value :string} }) => void;
-  styles: OptionsProp
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  styles: any
   value: string
 }) => {
   const { aria, name, styleHandler, styles, value } = props

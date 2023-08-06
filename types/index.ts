@@ -35,7 +35,7 @@ export interface NewProductsData {
   searchresults :[];
 }
 
-export interface Product {
+export interface ProductType {
   _id: string;
   prodId:number;
   name: string;
@@ -52,14 +52,14 @@ export interface Product {
   qty: number;
 }
 
-export interface Accordian {
+export interface AccordianType {
     _id:string | number
     id: number;
     title:string | null;
     items:Array<string>
 }
 
-export interface SearchBar {
+export interface SearchBarType {
   _id:string;
   id:number;
   name:string;
@@ -70,7 +70,7 @@ export interface SearchBar {
   }>;
 }
 
-export interface SelectBar {
+export interface SelectBarType {
   _id:string;
   id:number;
   name:string;

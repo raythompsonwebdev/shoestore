@@ -6,12 +6,13 @@ import AllProductBoxes from '../../components/allproducts/allProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
+import {FilteredData} from "../../types/index"
 import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
 import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
-import { selectAllSearchBar, fetchSearchBarData , getSearchBarStatus } from '../../features/searchbar/searchbarSlice'
-import { selectAllSelectBar, fetchSelectData , getSelectBarStatus} from "../../features/selectbar/selectbarSlice";
+import { getSearchData, fetchSearchData , getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
+import { getSelectData, fetchSelectData , getSelectDataStatus} from "../../features/selectdata/selectdataSlice";
+
 import { useAppSelector, useAppDispatch } from '../../app/store';
-import {FilteredData} from "../../types/index"
 
 // type AllData = {
 //   product: [];
@@ -39,13 +40,13 @@ const Allproducts = () => {
   //const accordianDataError = useAppSelector(getAccordianError);
 
   // searchbar data
-  const searchbarItems = useAppSelector(selectAllSearchBar);
+  const searchbarItems = useAppSelector(getSearchData);
   const searchbarDataStatus = useAppSelector(getSearchBarStatus);
   //const searchbarDataError = useAppSelector(getSearchBarError);
 
   // selectbar data
-  const selectbarItems = useAppSelector(selectAllSelectBar);
-  const selectbarDataStatus = useAppSelector(getSelectBarStatus);
+  const selectbarItems = useAppSelector(getSelectData);
+  const selectbarDataStatus = useAppSelector(getSelectDataStatus);
   //const selectbarDataError = useAppSelector(getSelectBarError);
 
   useEffect(() => {
@@ -62,7 +63,7 @@ const Allproducts = () => {
 
   useEffect(() => {
     if(searchbarDataStatus === 'idle'){
-      dispatch(fetchSearchBarData())
+      dispatch(fetchSearchData())
     }
   }, [searchbarDataStatus ,dispatch])
 
@@ -138,8 +139,8 @@ const Allproducts = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
+        { searchresults !== undefined ? <SearchBar labelname="All Products" searchData={searchresults} /> : <div> No results </div>}
           {/* <SearchBar labelname="All Products" searchData={searchresults} /> */}
-          <SearchBar labelname="All Products" searchData={searchresults} />
 
           <button
             id="sidebar-toggle-btn"
@@ -158,14 +159,13 @@ const Allproducts = () => {
           </aside>
 
           <main id="right-content-section" className="group">
-            <SearchSelect
+            { selectresults !== undefined ? <SearchSelect
               orderByVal={OrderByVal}
               orderDir={orderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              // selectBarData={selectresults}
               selectBarData={selectresults}
-            />
+            /> : <div> No results </div>}
             <AllProductBoxes productData={filteredApts} />
           </main>
         </main>

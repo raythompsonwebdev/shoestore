@@ -1,16 +1,16 @@
 import type { RootState } from '../../app/store'
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
-import {SelectBar} from '../../types/index'
+import {SelectBarType} from '../../types/index'
 
 export interface SelectBarState {
-  selectbarItems: SelectBar[];
+  selectdataItems: SelectBarType[];
   status: string;
   error: string | undefined | null;
 }
 
 const initialState : SelectBarState = {
-  selectbarItems: [] ,
+  selectdataItems: [] ,
   status: 'idle', //'idle' | 'loading' | 'succeeded' | 'failed'
   error: null
 } ;
@@ -18,7 +18,7 @@ const initialState : SelectBarState = {
 const url = 'http://localhost:3000/api/selectdata';
 
 export const fetchSelectData = createAsyncThunk(
-  'selectbar/fetchSelectData',
+  'selectdata/fetchSelectData',
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url);
@@ -29,14 +29,14 @@ export const fetchSelectData = createAsyncThunk(
   }
 );
 
-export const selectbarSlice = createSlice({
-  name: "selectbar",
+export const selectdataSlice = createSlice({
+  name: "selectdata",
   initialState,
   reducers: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    selectbarAdded: (state , action: PayloadAction<SelectBar>) => {
+    selectdataAdded: (state , action: PayloadAction<SelectBarType>) => {
       console.log(state)
-      state.selectbarItems.push(action.payload);
+      state.selectdataItems.push(action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -44,10 +44,10 @@ export const selectbarSlice = createSlice({
       .addCase(fetchSelectData.pending, (state) => {
         state.status = 'loading'
       })
-      .addCase(fetchSelectData.fulfilled, (state, action : PayloadAction<SelectBar[]>) => {
+      .addCase(fetchSelectData.fulfilled, (state, action : PayloadAction<SelectBarType[]>) => {
         // console.log(action.payload);
         state.status = 'succeeded'
-        state.selectbarItems = action.payload ;
+        state.selectdataItems = action.payload ;
       })
       .addCase(fetchSelectData.rejected, (state, action) => {
         state.status = 'failed'
@@ -56,11 +56,11 @@ export const selectbarSlice = createSlice({
   },
 });
 
-export const selectAllSelectBar = (state: RootState ) => state.selectbar.selectbarItems;
-export const getSelectBarStatus = (state: RootState ) => state.selectbar.status;
-export const getSelectBarError = (state: RootState ) => state.selectbar.error;
+export const getSelectData = (state: RootState ) => state.selectdata.selectdataItems;
+export const getSelectDataStatus = (state: RootState ) => state.selectdata.status;
+export const getSelectDataError = (state: RootState ) => state.selectdata.error;
 
 
-export const { selectbarAdded } = selectbarSlice.actions;
+export const { selectdataAdded } = selectdataSlice.actions;
 
-export default selectbarSlice.reducer;
+export default selectdataSlice.reducer;
