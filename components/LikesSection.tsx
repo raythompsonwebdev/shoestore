@@ -2,7 +2,7 @@
 
 type LikesType ={
   likes:number;
-  prodid?:string | undefined;
+  prodid?:string;
   productName:string | string[] | undefined;
   setProductInfo: ( likes: {likes:number}) => void;
 }

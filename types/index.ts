@@ -10,9 +10,27 @@ export interface LoginUserParams {
   password: string;
 }
 
+export interface FilteredData {
+  [x: string]: string | number
+  _id: string;
+  prodId:number;
+  name: string;
+  style:string;
+  color: string;
+  size: string;
+  gender: string;
+  imgUrl:string;
+  price: number;
+  cartImg: string;
+  text:string;
+  all:string;
+  likes: number;
+  qty: number;
+}
+
 export interface ProductType {
-  [x: string]: string | number | undefined
-  _id:string;
+  [x: string]: string | number
+  _id: string;
   prodId:number;
   name: string;
   style:string;

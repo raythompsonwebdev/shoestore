@@ -3,6 +3,7 @@ import LikesSection from '../../components/LikesSection'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 import Image from 'next/image'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAppSelector } from '../../app/store';
 import { selectAllProducts} from '../../features/products/productSlice'
@@ -29,9 +30,12 @@ const SingleProduct = () => {
   console.log(qty, cartItems )
   const [productInfo, setProductInfo] = useState<{likes:number | undefined}>({ likes: likes })
 
-  localStorage.setItem("cart", JSON.stringify(cartItems));
+  useEffect(() => {
 
-
+    if(window.localStorage){
+      localStorage.setItem("cart", JSON.stringify(cartItems));
+    }
+  },[cartItems]);
 
   const onAdd = (product: { prodId: SetStateAction<number> }) => {
     const exist = cartItems.find((x:{prodId:number}) => x.prodId === product.prodId)
