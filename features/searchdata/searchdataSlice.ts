@@ -21,8 +21,7 @@ export const fetchSearchData = createAsyncThunk(
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url);
-      return resp.data;
-
+      return resp.data.searchresults;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }
@@ -34,6 +33,8 @@ export const searchdataSlice = createSlice({
   initialState,
   reducers: {
     searchdataAdded: (state, action: PayloadAction<SearchBarType>) => {
+
+      console.log(action.payload)
       state.searchdataItems.push(action.payload);
     },
   },

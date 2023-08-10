@@ -22,7 +22,8 @@ export const fetchSelectData = createAsyncThunk(
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url);
-      return resp.data ;
+      console.log(resp.data)
+      return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }

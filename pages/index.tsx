@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
-//import {Product , Accordian} from '../types/index'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../components/Layout'
 import BannerImg from '../components/homepage/bannerImg'
@@ -8,7 +7,7 @@ import HomePageBoxes from '../components/homepage/homepageBoxes'
 import AccordianMenu from '../components/accordianMenu'
 import FindShoes from '../components/homepage/FindShoes'
 import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../features/accordian/accordianSlice'
-import { selectAllProducts, fetchProducts, getProductsStatus} from "../features/products/productSlice";
+import { productAdded, selectAllProducts, fetchProducts, getProductsStatus} from "../features/products/productSlice";
 import { useAppSelector, useAppDispatch } from '../app/store';
 import { useEffect } from "react";
 
@@ -29,6 +28,7 @@ const Home = () => {
     if (productItemsStatus === 'idle') {
         dispatch(fetchProducts())
     }
+    dispatch(productAdded)
   }, [productItemsStatus,dispatch])
 
   useEffect(() => {
@@ -37,14 +37,6 @@ const Home = () => {
     }
   }, [accordianDataStatus,dispatch])
 
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {products} = productItems as any
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {accordian} = accordianItems as any
-
-  //const {product, accordian} = props.products as HomePageProds;
 
   const [visibility, setVisibility] = useState<boolean>(false)
 
@@ -89,14 +81,15 @@ const Home = () => {
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
             <FindShoes />
-            <AccordianMenu accordianData={accordian} />
+            <AccordianMenu accordianData={accordianItems} />
           </aside>
 
           <section id="right-content-section" className="group">
             <BannerImg />
 
             <h1 id="right-content-section-header">Featured</h1>
-            <HomePageBoxes productData={products} />
+             <HomePageBoxes productData={productItems} />
+
           </section>
         </main>
       </>

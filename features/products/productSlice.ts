@@ -3,13 +3,13 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import {ProductType} from '../../types/index'
 export interface ProductsState {
-  productItems: ProductType[];
+  productItems: Array<ProductType>;
   status: string;
   error: string | undefined | null;
 }
 
 const initialState : ProductsState = {
-  productItems: [] ,
+  productItems: [],
   status: 'idle', //'idle' | 'loading' | 'succeeded' | 'failed'
   error: null
 } ;
@@ -21,7 +21,7 @@ export const fetchProducts = createAsyncThunk(
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url);
-      return resp.data ;
+      return resp.data.products ;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }
@@ -34,7 +34,6 @@ export const productSlice = createSlice({
   reducers: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     productAdded: (state , action: PayloadAction<ProductType>) => {
-      console.log(state)
       state.productItems.push(action.payload);
     },
   },
@@ -43,8 +42,7 @@ export const productSlice = createSlice({
       .addCase(fetchProducts.pending, (state) => {
         state.status = 'loading'
       })
-      .addCase(fetchProducts.fulfilled, (state, action : PayloadAction<ProductType[]>) => {
-        // console.log(action.payload);
+      .addCase(fetchProducts.fulfilled, (state, action : PayloadAction<Array<ProductType>>) => {
         state.status = 'succeeded'
         state.productItems = action.payload ;
       })
@@ -60,7 +58,7 @@ export const getProductsStatus = (state: RootState ) => state.products.status;
 export const getProductsError = (state: RootState ) => state.products.error;
 
 export const selectProductByName = (state : RootState, name:string) =>
-    state.products.productItems.find((product: { name: string; }) => product.name === name);
+    state.products.productItems.find((product) => product.name === name);
 
 export const { productAdded } = productSlice.actions;
 

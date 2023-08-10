@@ -5,17 +5,9 @@ export interface IUser {
   accessToken?: string;
   role?: string;
 }
-
 export interface LoginUserParams {
   email: string;
   password: string;
-}
-
-export interface AllData {
-  product: [];
-  accordian: [];
-  searchresults :[];
-  selectresults: [];
 }
 
 export interface FilteredData {
@@ -36,13 +28,8 @@ export interface FilteredData {
   qty: number;
 }
 
-export interface NewProductsData {
-  product: [];
-  accordian: [];
-  searchresults :[];
-}
-
 export interface ProductType {
+  [x: string]: string | number
   _id: string;
   prodId:number;
   name: string;
@@ -60,21 +47,21 @@ export interface ProductType {
 }
 
 export interface AccordianType {
-    _id:string | number
+    _id:string
     id: number;
     title:string | null;
     items:Array<string>
 }
 
 export interface SearchBarType {
-  _id:string;
-  id:number;
-  name:string;
-  options:Array<{
+    _id:string;
     id:number;
-    value:string | null;
-    displayValue:string;
-  }>;
+    name:string;
+    options:Array<{
+      id:number;
+      value:string;
+      displayValue:string;
+    }>;
 }
 
 export interface SelectBarType {

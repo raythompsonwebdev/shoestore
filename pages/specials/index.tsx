@@ -1,5 +1,4 @@
 
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { SetStateAction, useState, useEffect } from 'react'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
@@ -7,23 +6,26 @@ import SpecialsProductBoxes from '../../components/specials/specialsProductBoxes
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
-import {FilteredData} from "../../types/index"
+import {ProductType} from "../../types/index"
 import { getSearchData, fetchSearchData, getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
 import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
 import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
 import { getSelectData , fetchSelectData , getSelectDataStatus} from "../../features/selectdata/selectdataSlice";
 import { useAppSelector, useAppDispatch } from '../../app/store';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+
 
 const Specials = () => {
 
-  const [productData, setProductData] = useState<FilteredData[]>([])
+  const [productData, setProductData] = useState<ProductType[]>([])
   const [OrderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
 
   const dispatch  = useAppDispatch();
   // get Products
-  const productItems = useAppSelector(selectAllProducts);
+  const productItems  = useAppSelector(selectAllProducts);
   const productItemsStatus = useAppSelector(getProductsStatus);
   //const productItemsError = useAppSelector(getProductsError);
 
@@ -66,27 +68,18 @@ const Specials = () => {
     }
   }, [selectbarDataStatus ,dispatch])
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {products: newproducts} = productItems as any
-
+  //set products data
   useEffect(() => {
-    // Update products state
-  //   setProductData(product)
-  // },[product]);
-  setProductData(newproducts)
-},[newproducts]);
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {accordian: newaccordian} = accordianItems as any
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {searchresults: newsearchresults} = searchbarItems as any
+    if(productItemsStatus === 'succeeded'){
+   setProductData(productItems)
+  }
+},[productItemsStatus, productItems]);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {selectresults: newselectresults} = selectbarItems as any
 
+  console.log(selectbarItems)
 
-  // console.log(newaccordian, newproducts, newsearchresults, newselectresults)
 
   const handleChange = (selected: SetStateAction<string>) => {
     setOrderByVal(selected)
@@ -110,7 +103,7 @@ const Specials = () => {
 
   const value = OrderByVal
 
-  filteredApts = filteredApts.filter(
+  filteredApts = filteredApts?.filter(
     (item ) => {
       if (
         item.color === value ||
@@ -127,6 +120,7 @@ const Specials = () => {
   )
 
   return (
+
     <Layout>
       <>
         <Head>
@@ -135,8 +129,8 @@ const Specials = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-        { newsearchresults !== undefined ?  <SearchBar labelname="Specials" searchData={newsearchresults} /> : <div> No results </div>}
-          {/* <SearchBar labelname="Specials" searchData={newsearchresults} /> */}
+
+        {searchbarItems !== undefined ? <SearchBar labelname="Specials" searchData={searchbarItems} /> : <div>No results</div>}
 
           <button
             id="sidebar-toggle-btn"
@@ -150,8 +144,7 @@ const Specials = () => {
           <aside
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
-            {/* <AccordianMenu accordianData={accordian} /> */}
-            <AccordianMenu accordianData={newaccordian} />
+            <AccordianMenu accordianData={accordianItems} />
           </aside>
 
           <section id="right-content-section" role="main">
@@ -160,9 +153,9 @@ const Specials = () => {
               orderDir={OrderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              // selectBarData={selectresults}
               selectBarData={newselectresults}
             /> : <div> No results </div>}
+
             <SpecialsProductBoxes productData={filteredApts} />
 
             <br />

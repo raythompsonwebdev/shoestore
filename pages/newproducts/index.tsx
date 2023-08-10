@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
@@ -9,17 +8,15 @@ import { selectAllProducts, fetchProducts, getProductsStatus} from "../../featur
 import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
 import { getSearchData, fetchSearchData, getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
 import { useAppSelector, useAppDispatch } from '../../app/store';
+import { ProductType } from '../../types'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-
-// type NewProductsData = {
-//   product: [];
-//   accordian: [];
-//   searchresults :[];
-// }
 
 const NewProducts = () => {
 
   const dispatch  = useAppDispatch();
+
+  const [productData, setProductData] = useState<ProductType[]>([])
   // get Products
   const productItems = useAppSelector(selectAllProducts);
   const productItemsStatus = useAppSelector(getProductsStatus);
@@ -39,7 +36,8 @@ const NewProducts = () => {
     if (productItemsStatus === 'idle') {
         dispatch(fetchProducts())
     }
-  }, [productItemsStatus,dispatch])
+    setProductData(productItems)
+  }, [productItemsStatus,productItems,dispatch])
 
   useEffect(() => {
     if(accordianDataStatus === 'idle'){
@@ -53,25 +51,11 @@ const NewProducts = () => {
     }
   }, [searchbarDataStatus ,dispatch])
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {products: newproducts} = productItems as any
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {accordian: newaccordian} = accordianItems as any
+  console.log(searchbarItems)
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {searchresults: newsearchresults} = searchbarItems as any
-
- //console.log(newaccordian, newproducts, newsearchresults)
-
-  const [productData, setProductData] = useState<[]>([])
 
   const [visibility, setVisibility] = useState<boolean>(false)
-
-  useEffect(() => {
-    // Update products state
-    setProductData(newproducts)
-  },[newproducts]);
 
   const sidebarVisibility = (e: { preventDefault: () => void }) :void => {
     e.preventDefault()
@@ -87,8 +71,8 @@ const NewProducts = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          { newsearchresults !== undefined ? <SearchBar labelname="New Products" searchData={newsearchresults} /> : <div> No results </div>}
-          {/* <SearchBar labelname="New Products" searchData={newsearchresults} /> */}
+          {searchbarItems !== undefined ? <SearchBar labelname="New Products" searchData={searchbarItems} /> : <div>No results</div>}
+
 
           <button
             id="sidebar-toggle-btn"
@@ -102,12 +86,11 @@ const NewProducts = () => {
           <aside
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
-            {/* <AccordianMenu accordianData={accordian} /> */}
-            <AccordianMenu accordianData={newaccordian} />
+            <AccordianMenu accordianData={accordianItems} />
           </aside>
 
           <section id="right-content-section">
-            {/* <NewProductBoxes productData={productData} /> */}
+
             <NewProductBoxes productData={productData} />
 
             <br />

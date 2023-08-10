@@ -48,13 +48,13 @@ const SingleProduct = () => {
 
   const [productInfo, setProductInfo] = useState<{likes:number}>({ likes: likes })
 
-  const onAdd = (product: { id: SetStateAction<number | string> }) => {
-    const exist = cartItems.find((x:{prodId:number | string}) => x.prodId === product.id)
+  const onAdd = (product: { prodId: SetStateAction<number | string> }) => {
+    const exist = cartItems.find((x:{prodId:number | string}) => x.prodId === product.prodId)
 
     if (exist) {
       setCartItems(
         cartItems.map((x:{prodId:number | string}) =>
-          x.prodId === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          x.prodId === product.prodId ? { ...exist, qty: exist.qty + 1 } : x
         )
       )
     } else {

@@ -21,7 +21,7 @@ export const fetchAccordian = createAsyncThunk(
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url);
-      return resp.data;
+       return resp.data.accordian;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }

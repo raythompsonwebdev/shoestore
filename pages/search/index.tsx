@@ -17,6 +17,8 @@ const SearchProduct = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const searchProducts:any = useAppSelector(selectAllProducts)
 
+  console.log(searchProducts)
+
   //filter product from the products array
   const products = searchProducts.products.filter(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

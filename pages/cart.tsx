@@ -29,13 +29,13 @@ const Cart = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [cartItems, setCartItems] = useState<any[]>([]);
 
-  const onAdd = (product: { id: SetStateAction<number> }) => {
-    const exist = cartItems.find((x:{prodId:number}) => x.prodId === product.id)
+  const onAdd = (product: { prodId: SetStateAction<number> }) => {
+    const exist = cartItems.find((x:{prodId:number}) => x.prodId === product.prodId)
 
     if (exist) {
       setCartItems(
         cartItems.map((x:{prodId:number | string}) =>
-          x.prodId === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          x.prodId === product.prodId ? { ...exist, qty: exist.qty + 1 } : x
         )
       )
     } else {
@@ -43,14 +43,14 @@ const Cart = () => {
     }
   }
 
-  const onRemove = (product: { id: SetStateAction<number | string> }) => {
-    const exist = cartItems.find((x:{prodId:number}) => x.prodId === product.id)
+  const onRemove = (product: { prodId: SetStateAction<number | string> }) => {
+    const exist = cartItems.find((x:{prodId:number}) => x.prodId === product.prodId)
     if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x:{prodId:number}) => x.prodId !== product.id))
+      setCartItems(cartItems.filter((x:{prodId:number}) => x.prodId !== product.prodId))
     } else {
       setCartItems(
         cartItems.map((x:{prodId:number}) =>
-          x.prodId === product.id ? { ...exist, qty: exist.qty - 1 } : x
+          x.prodId === product.prodId ? { ...exist, qty: exist.qty - 1 } : x
         )
       )
     }

@@ -1,22 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Accordion } from 'react-bootstrap'
+import { AccordianType } from '../types'
 
-type AccordianProp = {
-  _id:string
-  id:number;
-  title:string;
-  items:[]
 
-}
+const AccordianMenu = (props: { accordianData : AccordianType[]}) => {
 
-const AccordianMenu = (props: { accordianData:AccordianProp[] }) => {
   const { accordianData } = { ...props }
 
   return (
     <Accordion defaultActiveKey={['0']} alwaysOpen>
       <nav id="accordian-nav" aria-label="secondary">
         <div id="accordian-nav-container">
-          {accordianData?.map((element: {_id:string, title:string, items:[]}) => (
+          {accordianData.map((element) => (
             <Accordion.Item eventKey={element._id} key={element._id}>
               <Accordion.Header>{element.title}</Accordion.Header>
               <Accordion.Body>

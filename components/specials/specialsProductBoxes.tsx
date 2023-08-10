@@ -6,7 +6,7 @@ const SpecialsProductBoxes = (props: { productData: FilteredData[]}) => {
 
   const { productData } = props
 
-  const Product = productData
+  const Product = productData !== undefined ? productData
     .slice(0, 20)
     .map(
       (item: {
@@ -26,7 +26,7 @@ const SpecialsProductBoxes = (props: { productData: FilteredData[]}) => {
           style={item.style}
         />
       )
-    )
+    ) : false;
 
   return <div className="product-boxes">{Product}</div>
 }
