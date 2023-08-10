@@ -14,8 +14,6 @@ import { getSelectData , fetchSelectData , getSelectDataStatus} from "../../feat
 import { useAppSelector, useAppDispatch } from '../../app/store';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-
-
 const Specials = () => {
 
   const [productData, setProductData] = useState<ProductType[]>([])
@@ -74,11 +72,6 @@ const Specials = () => {
    setProductData(productItems)
   }
 },[productItemsStatus, productItems]);
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {selectresults: newselectresults} = selectbarItems as any
-
-  console.log(selectbarItems)
 
 
   const handleChange = (selected: SetStateAction<string>) => {
@@ -148,14 +141,13 @@ const Specials = () => {
           </aside>
 
           <section id="right-content-section" role="main">
-            { newselectresults !== undefined ? <SearchSelect
+            <SearchSelect
               orderByVal={OrderByVal}
               orderDir={OrderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={newselectresults}
-            /> : <div> No results </div>}
-
+              selectBarData={selectbarItems || ''}
+            />
             <SpecialsProductBoxes productData={filteredApts} />
 
             <br />

@@ -13,22 +13,16 @@ const SearchProduct = () => {
   const router = useRouter();
   const { colorVal, sizeVal, genderVal, styleVal } = router.query;
 
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const searchProducts:any = useAppSelector(selectAllProducts)
-
-  console.log(searchProducts)
+  const searchProducts = useAppSelector(selectAllProducts)
 
   //filter product from the products array
-  const products = searchProducts.products.filter(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (product :any) =>
+  const products = searchProducts.filter(
+    (product :ProductType) =>
       product.gender === genderVal ||
       product.style === styleVal ||
       product.size === sizeVal ||
       product.color === colorVal  ? product: false
   );
-
 
   //const products : ProductType[] = [];
 

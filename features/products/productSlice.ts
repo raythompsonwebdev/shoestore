@@ -32,7 +32,6 @@ export const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     productAdded: (state , action: PayloadAction<ProductType>) => {
       state.productItems.push(action.payload);
     },

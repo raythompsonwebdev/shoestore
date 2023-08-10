@@ -22,8 +22,7 @@ export const fetchSelectData = createAsyncThunk(
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url);
-      console.log(resp.data)
-      return resp.data;
+      return resp.data.selectresults;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }
@@ -34,7 +33,6 @@ export const selectdataSlice = createSlice({
   name: "selectdata",
   initialState,
   reducers: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     selectdataAdded: (state , action: PayloadAction<SelectBarType>) => {
       console.log(state)
       state.selectdataItems.push(action.payload);
@@ -46,7 +44,6 @@ export const selectdataSlice = createSlice({
         state.status = 'loading'
       })
       .addCase(fetchSelectData.fulfilled, (state, action : PayloadAction<SelectBarType[]>) => {
-        // console.log(action.payload);
         state.status = 'succeeded'
         state.selectdataItems = action.payload ;
       })

@@ -65,18 +65,11 @@ const Allproducts = () => {
     }
   }, [selectbarDataStatus ,dispatch])
 
-
   useEffect(() => {
     if(productItemsStatus === 'succeeded'){
       setProductData(productItems)
     }
   },[productItems, productItemsStatus]);
-
-  console.log(searchbarItems)
-
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {selectresults} = selectbarItems as any
 
   //console.log(newaccordian, newproducts, searchbarItems, selectbarItems)
 
@@ -143,13 +136,13 @@ const Allproducts = () => {
           </aside>
 
           <main id="right-content-section" className="group">
-            { selectresults !== undefined ? <SearchSelect
+            <SearchSelect
               orderByVal={OrderByVal}
               orderDir={orderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={selectresults}
-            /> : <div> No results </div>}
+              selectBarData={selectbarItems || ' '}
+            />
             <AllProductBoxes productData={filteredApts} />
           </main>
         </main>

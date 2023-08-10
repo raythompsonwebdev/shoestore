@@ -7,58 +7,43 @@ import { useRouter } from 'next/router'
 import { useAppSelector } from '../../app/store';
 import { selectAllProducts} from '../../features/products/productSlice'
 import { formatPrice} from '../../helpers/index'
-//import {ProductType} from '../../types/index'
+import {ProductType} from '../../types/index'
 
-type UnoProduct = {
-  color: string;
-  gender:string;
-  imgUrl:string;
-  likes:number;
-  name:string;
-  price: number;
-  prodId :number;
-  qty:number;
-  size :string;
-  style: string;
-  text:string;
-  _id:string;
-}
 
 const SingleProduct = () => {
 
-  const singleProd = useAppSelector(selectAllProducts)
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [cartItems, setCartItems] = useState<any>([]);
+
+  const singleProd = useAppSelector(selectAllProducts)
 
   const router = useRouter()
 
   const { prodname } = router.query
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { products } :any = singleProd
 
-  const result = products.find((product:UnoProduct) => product.name === prodname)
+  const result = singleProd.find((product) => product.name === prodname)
 
-  const { color, gender, imgUrl, likes, name, price, prodId, qty, size, style, text,_id } = result as UnoProduct
+  const { color, gender, imgUrl, likes, name, price, prodId, qty, size, style, text,_id } = {...result}
 
   console.log(qty, cartItems )
+  const [productInfo, setProductInfo] = useState<{likes:number | undefined}>({ likes: likes })
 
   localStorage.setItem("cart", JSON.stringify(cartItems));
 
-  const [productInfo, setProductInfo] = useState<{likes:number}>({ likes: likes })
 
-  const onAdd = (product: { prodId: SetStateAction<number | string> }) => {
-    const exist = cartItems.find((x:{prodId:number | string}) => x.prodId === product.prodId)
+
+  const onAdd = (product: { prodId: SetStateAction<number> }) => {
+    const exist = cartItems.find((x:{prodId:number}) => x.prodId === product.prodId)
 
     if (exist) {
       setCartItems(
-        cartItems.map((x:{prodId:number | string}) =>
+        cartItems.map((x:ProductType) =>
           x.prodId === product.prodId ? { ...exist, qty: exist.qty + 1 } : x
         )
       )
     } else {
-      setCartItems([...cartItems, { ...product, qty: 1 }])
+      setCartItems([...cartItems , { ...product, qty: 1 }])
     }
   }
 
@@ -76,14 +61,14 @@ const SingleProduct = () => {
           <figure id="product-page-box">
             <Image
               id="product-page-img"
-              src={imgUrl}
-              alt={style}
+              src={imgUrl || ' '}
+              alt={style || ' '}
               width={175}
               height={150}
             />
             <figcaption id="product-page-caption">
               <p className="product-page-title"> {name}</p>
-              <p id="product-page-price">{formatPrice(price)}</p>
+              <p id="product-page-price">{formatPrice(price || 0)}</p>
               <p className="product-page-title">Gender : {gender}</p>
               <p className="product-page-title">Size : {size}</p>
               <p className="product-page-title">Color : {color}</p>
@@ -91,7 +76,7 @@ const SingleProduct = () => {
               <p>{text}</p>
 
               <LikesSection
-                likes={productInfo.likes}
+                likes={productInfo.likes || 0}
                 productName={prodname}
                 setProductInfo={setProductInfo}
                 prodid={_id}

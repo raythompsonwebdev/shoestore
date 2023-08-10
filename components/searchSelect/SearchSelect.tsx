@@ -13,6 +13,8 @@ interface SearchSelector {
 const SearchSelect = (props: SearchSelector) => {
   const { selectBarData, changesOrders, handleChange, orderDir } = props
 
+  console.log(selectBarData)
+
   const onItemChange = (e: { target: { value: string } }) => {
     const {value} = e.target;
     handleChange(value)
