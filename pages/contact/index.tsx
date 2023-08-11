@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../../components/Layout'
 import ContactForm from '../../components/(forms)/contactForm'
 
-export default function Contact() {
+const Contact = () => {
   return (
     <Layout>
       <>
@@ -71,3 +71,5 @@ export default function Contact() {
     </Layout>
   )
 }
+
+export default Contact

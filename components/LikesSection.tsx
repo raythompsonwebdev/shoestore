@@ -1,8 +1,16 @@
-/**
- * @param {any} props
- */
-export default function LikesSection(props: any) {
-  const { likes, productName, setProductInfo }: any = { ...props }
+//import { SetStateAction } from 'react'
+
+type LikesType ={
+  likes:number;
+  prodid?:string;
+  productName:string | string[] | undefined;
+  setProductInfo: ( likes: {likes:number}) => void;
+}
+
+const LikesSection = (props:LikesType ) => {
+
+  const { likes, productName, setProductInfo } = { ...props }
+
 
   const likeProduct = async () => {
     try {
@@ -16,6 +24,8 @@ export default function LikesSection(props: any) {
       const result = await response.json()
 
       setProductInfo({ likes: result.likes })
+
+      return result;
     } catch (err) {
       console.error('not working : ' + err)
     }
@@ -32,9 +42,12 @@ export default function LikesSection(props: any) {
       >
         Add Like
       </button>
+
       <p className="upvotes-section-text">
         This product has {likes} likes so far !
       </p>
     </div>
   )
 }
+
+export default LikesSection

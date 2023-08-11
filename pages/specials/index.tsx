@@ -1,60 +1,78 @@
-import { SetStateAction, useState } from 'react'
-import clientPromise from '../../lib/mongodb'
-import { InferGetServerSidePropsType } from 'next'
+
+import { SetStateAction, useState, useEffect } from 'react'
+import Head from 'next/head'
+import Layout from '../../components/Layout'
 import SpecialsProductBoxes from '../../components/specials/specialsProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
-import Head from 'next/head'
-import Layout from '../../components/Layout'
+import {ProductType} from "../../types/index"
+import { getSearchData, fetchSearchData, getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
+import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
+import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
+import { getSelectData , fetchSelectData , getSelectDataStatus} from "../../features/selectdata/selectdataSlice";
+import { useAppSelector, useAppDispatch } from '../../app/store';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export const getServerSideProps = async (context: any) => {
-  try {
-    //await clientPromise
-    const client = await clientPromise
-    const db = client.db('shoestore')
+const Specials = () => {
 
-    const results = await db.collection('products').find({}).toArray()
-    const resultstwo = await db.collection('accordianData').find({}).toArray()
-    const resultsthree = await db.collection('selectBarData').find({}).toArray()
-    const resultsfour = await db.collection('searchBarData').find({}).toArray()
-
-    const product = JSON.parse(JSON.stringify(results))
-    const accordian = JSON.parse(JSON.stringify(resultstwo))
-    const searchresults = JSON.parse(JSON.stringify(resultsfour))
-    const selectresults = JSON.parse(JSON.stringify(resultsthree))
-
-    return {
-      props: {
-        product,
-        searchresults,
-        selectresults,
-        accordian,
-      },
-    }
-  } catch (e) {
-    console.error(e)
-    return {
-      props: { isConnected: false },
-    }
-  }
-}
-
-export default function Specials({
-  accordian,
-  product,
-  searchresults,
-  selectresults,
-  isConnected,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [accordianData] = useState<Array<any>>(accordian)
-  const [productData] = useState<Array<any>>(product)
-  const [searchBarData] = useState<Array<any>>(searchresults)
-  const [selectBarData] = useState<Array<any>>(selectresults)
+  const [productData, setProductData] = useState<ProductType[]>([])
   const [OrderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
+
+  const dispatch  = useAppDispatch();
+  // get Products
+  const productItems  = useAppSelector(selectAllProducts);
+  const productItemsStatus = useAppSelector(getProductsStatus);
+  //const productItemsError = useAppSelector(getProductsError);
+
+  // acoordian data
+  const accordianItems = useAppSelector(selectAllAccordian);
+  const accordianDataStatus = useAppSelector(getAccordianStatus);
+  //const accordianDataError = useAppSelector(getAccordianError);
+
+  // searchbar data
+  const searchbarItems = useAppSelector(getSearchData);
+  const searchbarDataStatus = useAppSelector(getSearchBarStatus);
+  //const searchbarDataError = useAppSelector(getSearchBarError);
+
+  // selectbar data
+  const selectbarItems = useAppSelector(getSelectData);
+  const selectbarDataStatus = useAppSelector(getSelectDataStatus);
+  //const selectbarDataError = useAppSelector(getSelectBarError);
+
+  useEffect(() => {
+    if (productItemsStatus === 'idle') {
+        dispatch(fetchProducts())
+    }
+  }, [productItemsStatus,dispatch])
+
+  useEffect(() => {
+    if(accordianDataStatus === 'idle'){
+      dispatch(fetchAccordian())
+    }
+  }, [accordianDataStatus,dispatch])
+
+  useEffect(() => {
+    if(searchbarDataStatus === 'idle'){
+      dispatch(fetchSearchData())
+    }
+  }, [searchbarDataStatus ,dispatch])
+
+    useEffect(() => {
+    if(selectbarDataStatus === 'idle'){
+      dispatch(fetchSelectData())
+    }
+  }, [selectbarDataStatus ,dispatch])
+
+  //set products data
+  useEffect(() => {
+    if(productItemsStatus === 'succeeded'){
+   setProductData(productItems)
+  }
+},[productItemsStatus, productItems]);
+
 
   const handleChange = (selected: SetStateAction<string>) => {
     setOrderByVal(selected)
@@ -78,21 +96,14 @@ export default function Specials({
 
   const value = OrderByVal
 
-  filteredApts = filteredApts.filter(
-    (item: {
-      [x: string]: any
-      color: string
-      style: string
-      size: string
-      gender: string
-      price: string
-    }) => {
+  filteredApts = filteredApts?.filter(
+    (item ) => {
       if (
         item.color === value ||
         item.style === value ||
         item.size === value ||
-        item.gender === value ||
-        item.price === value
+        item.gender === value
+
       ) {
         return item
       }
@@ -102,6 +113,7 @@ export default function Specials({
   )
 
   return (
+
     <Layout>
       <>
         <Head>
@@ -110,7 +122,8 @@ export default function Specials({
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <SearchBar labelname="Specials" searchData={searchBarData} />
+
+        {searchbarItems !== undefined ? <SearchBar labelname="Specials" searchData={searchbarItems} /> : <div>No results</div>}
 
           <button
             id="sidebar-toggle-btn"
@@ -124,7 +137,7 @@ export default function Specials({
           <aside
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
-            <AccordianMenu accordianData={accordianData} />
+            <AccordianMenu accordianData={accordianItems} />
           </aside>
 
           <section id="right-content-section" role="main">
@@ -133,7 +146,7 @@ export default function Specials({
               orderDir={OrderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={selectBarData}
+              selectBarData={selectbarItems || ''}
             />
             <SpecialsProductBoxes productData={filteredApts} />
 
@@ -144,3 +157,5 @@ export default function Specials({
     </Layout>
   )
 }
+
+export default Specials

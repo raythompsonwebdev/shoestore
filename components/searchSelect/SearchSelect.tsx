@@ -1,19 +1,24 @@
-import { Key } from 'react'
+// import { Key } from 'react'
+import React, { Key } from 'react'
+import {SelectBarType} from '../../types/index'
 
 interface SearchSelector {
-  selectBarData: Array<any>
-  changesOrders: any
-  handleChange: any
+  selectBarData: SelectBarType[]
+  changesOrders: (orderbyval: string , dir: string) => void;
+  handleChange: (selected: string ) => void;
   orderByVal: string
   orderDir: string
 }
 
-export default function SearchSelect(props: SearchSelector) {
+const SearchSelect = (props: SearchSelector) => {
   const { selectBarData, changesOrders, handleChange, orderDir } = props
 
-  function onItemChange(evt: { target: { value: string } }) {
-    handleChange(evt.target.value)
-    changesOrders(evt.target.value, orderDir)
+  console.log(selectBarData)
+
+  const onItemChange = (e: { target: { value: string } }) => {
+    const {value} = e.target;
+    handleChange(value)
+    changesOrders(value, orderDir)
   }
 
   return (
@@ -26,14 +31,10 @@ export default function SearchSelect(props: SearchSelector) {
         className="search-products-select"
       >
         {selectBarData.map(
-          (options: {
-            value: string | undefined
-            id: Key | null | undefined
-            options: Array<any>
-          }) => (
+          (options) => (
             // eslint-disable-next-line react/no-array-index-key
             <optgroup label={options.value} key={options.id}>
-              {options.options.map((option) => (
+              {options.options.map((option :{id:Key | number, value:string | undefined, displayValue:string | undefined}) => (
                 // eslint-disable-next-line react/no-array-index-key
                 <option key={option.id} value={option.value}>
                   {option.displayValue}
@@ -46,3 +47,5 @@ export default function SearchSelect(props: SearchSelector) {
     </form>
   )
 }
+
+export default SearchSelect

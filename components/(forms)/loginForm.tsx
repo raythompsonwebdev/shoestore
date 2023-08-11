@@ -27,7 +27,7 @@ export default function LoginForm() {
       if (loginRes && !loginRes.ok) {
         console.log(loginRes.error || '')
       } else {
-        router.push('/(protected)/profile')
+        router.push('/profile')
       }
     } catch (error) {
       if (error) {

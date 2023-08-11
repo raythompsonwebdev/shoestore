@@ -1,62 +1,79 @@
-import { SetStateAction, useState } from 'react'
+import { SetStateAction, useState, useEffect } from 'react'
 import Head from 'next/head'
-import clientPromise from '../../lib/mongodb'
-import { InferGetServerSidePropsType } from 'next'
 import Layout from '../../components/Layout'
 import AllProductBoxes from '../../components/allproducts/allProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
+import {ProductType} from "../../types/index"
+import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
+import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
+import { getSearchData, fetchSearchData , getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
+import { getSelectData, fetchSelectData , getSelectDataStatus} from "../../features/selectdata/selectdataSlice";
+import { useAppSelector, useAppDispatch } from '../../app/store';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export const getServerSideProps = async (context: any) => {
-  try {
-    //await clientPromise
-    const client = await clientPromise
-    const db = client.db('shoestore')
+const Allproducts = () => {
 
-    const results = await db.collection('products').find({}).toArray()
-    const resultstwo = await db.collection('accordianData').find({}).toArray()
-    const resultsthree = await db.collection('selectBarData').find({}).toArray()
-    const resultsfour = await db.collection('searchBarData').find({}).toArray()
-
-    const product = JSON.parse(JSON.stringify(results))
-    const accordian = JSON.parse(JSON.stringify(resultstwo))
-    const searchresults = JSON.parse(JSON.stringify(resultsfour))
-    const selectresults = JSON.parse(JSON.stringify(resultsthree))
-
-    return {
-      props: {
-        product,
-        searchresults,
-        selectresults,
-        accordian,
-      },
-    }
-  } catch (e) {
-    console.error(e)
-    return {
-      props: { isConnected: false },
-    }
-  }
-}
-
-export default function Allproducts({
-  accordian,
-  product,
-  searchresults,
-  selectresults,
-  isConnected,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const [accordianData] = useState<Array<any>>(accordian)
-  const [productData] = useState<Array<any>>(product)
-  const [searchbarData] = useState<Array<any>>(searchresults)
-  const [selectbarData] = useState<Array<any>>(selectresults)
+  const [productData, setProductData] = useState<ProductType[]>([])
   const [orderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
 
-  const handleChange = (selectedSize: SetStateAction<string>) => {
+  const dispatch  = useAppDispatch();
+  // get Products
+  const productItems = useAppSelector(selectAllProducts);
+  const productItemsStatus = useAppSelector(getProductsStatus);
+  //const productItemsError = useAppSelector(getProductsError);
+
+  // acoordian data
+  const accordianItems = useAppSelector(selectAllAccordian);
+  const accordianDataStatus = useAppSelector(getAccordianStatus);
+  //const accordianDataError = useAppSelector(getAccordianError);
+
+  // searchbar data
+  const searchbarItems = useAppSelector(getSearchData);
+  const searchbarDataStatus = useAppSelector(getSearchBarStatus);
+  //const searchbarDataError = useAppSelector(getSearchBarError);
+
+  // selectbar data
+  const selectbarItems = useAppSelector(getSelectData);
+  const selectbarDataStatus = useAppSelector(getSelectDataStatus);
+  //const selectbarDataError = useAppSelector(getSelectBarError);
+
+  useEffect(() => {
+    if (productItemsStatus === 'idle') {
+        dispatch(fetchProducts())
+    }
+  }, [productItemsStatus,dispatch])
+
+  useEffect(() => {
+    if(accordianDataStatus === 'idle'){
+      dispatch(fetchAccordian())
+    }
+  }, [accordianDataStatus,dispatch])
+
+  useEffect(() => {
+    if(searchbarDataStatus === 'idle'){
+      dispatch(fetchSearchData())
+    }
+  }, [searchbarDataStatus ,dispatch])
+
+  useEffect(() => {
+    if(selectbarDataStatus === 'idle'){
+      dispatch(fetchSelectData())
+    }
+  }, [selectbarDataStatus ,dispatch])
+
+  useEffect(() => {
+    if(productItemsStatus === 'succeeded'){
+      setProductData(productItems)
+    }
+  },[productItems, productItemsStatus]);
+
+  //console.log(newaccordian, newproducts, searchbarItems, selectbarItems)
+
+  const handleChange = (selectedSize: SetStateAction<string>) :void => {
     setOrderByVal(selectedSize)
     setOrderByDir('asc')
   }
@@ -78,20 +95,12 @@ export default function Allproducts({
   const value = OrderByVal
 
   filteredApts = filteredApts.filter(
-    (item: {
-      [x: string]: any
-      color: string
-      style: string
-      size: string
-      gender: string
-      price: string
-    }) => {
+    (item) => {
       if (
         item.color === value ||
         item.style === value ||
         item.size === value ||
-        item.gender === value ||
-        item.price === value
+        item.gender === value
       ) {
         return item
       }
@@ -108,7 +117,8 @@ export default function Allproducts({
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <SearchBar labelname="All Products" searchData={searchbarData} />
+
+        {searchbarItems !== undefined ?  <SearchBar labelname="All Products" searchData={searchbarItems} /> : <div>No results</div>}
 
           <button
             id="sidebar-toggle-btn"
@@ -122,7 +132,7 @@ export default function Allproducts({
           <aside
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
-            <AccordianMenu accordianData={accordianData} />
+            <AccordianMenu accordianData={accordianItems} />
           </aside>
 
           <main id="right-content-section" className="group">
@@ -131,7 +141,7 @@ export default function Allproducts({
               orderDir={orderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={selectbarData}
+              selectBarData={selectbarItems || ' '}
             />
             <AllProductBoxes productData={filteredApts} />
           </main>
@@ -140,3 +150,6 @@ export default function Allproducts({
     </Layout>
   )
 }
+
+
+export default Allproducts;

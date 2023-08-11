@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../../components/Layout'
 import RegisterForm from '../../components/(forms)/registerForm'
 
-export default function Register() {
+const Register = () => {
   return (
     <Layout>
       <>
@@ -72,3 +72,5 @@ export default function Register() {
     </Layout>
   )
 }
+
+export default Register

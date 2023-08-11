@@ -1,14 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Key } from 'react'
+import React from 'react'
+import { formatPrice} from '../../helpers/index'
 
-export default function productBox(props: {
-  imgUrl: Key | null | undefined
+const productBox = (props: {
+  imgUrl: string
   name: string
   cartImg: string
-  price: string
+  price: number
   style: string
-}) {
+}) => {
   const { imgUrl, name, cartImg, price, style } = props
 
   return (
@@ -23,7 +24,7 @@ export default function productBox(props: {
       />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>
-        <p className="product-box-price ">£{price}</p>
+        <p className="product-box-price ">{formatPrice(price)}</p>
         <Link href={`/product/${name}`} className="product-box-icon-link">
           <Image
             className="product-box-icon"
@@ -37,3 +38,5 @@ export default function productBox(props: {
     </figure>
   )
 }
+
+export default productBox

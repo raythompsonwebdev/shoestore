@@ -1,17 +1,23 @@
 import { Key } from 'react'
 import HomePageBox from './homePageBox'
+import {ProductType} from '../../types/index'
 
-export default function HomePageBoxes(props: { productData: Array<any> }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const HomePageBoxes = (props: { productData : ProductType[]}) => {
   const { productData } = { ...props }
 
-  const NewProduct = productData
+  let NewProduct
+
+  if(productData !== undefined){
+
+    NewProduct = productData
     .slice(0, 8)
     .map(
       (item: {
         _id: Key | null | undefined
         name: string
         imgUrl: string
-        price: string
+        price: number
         cartImg: string
         style: string
       }) => (
@@ -25,6 +31,10 @@ export default function HomePageBoxes(props: { productData: Array<any> }) {
         />
       )
     )
+  }
 
   return <div className="product-boxes">{NewProduct}</div>
+
 }
+
+export default HomePageBoxes

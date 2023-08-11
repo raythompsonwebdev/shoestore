@@ -1,26 +1,30 @@
-# Shoestore web app - Next.js
+# Shoestore web app - Next.js - Pages Router
 
 ![shoestore](/)
 
 # Introduction
 
-Web application is based on a photoshop templates downloaded from website [php.jabber.com](https://www.phpjabbers.com/). mockup of online shoe store selling mens, womens and childrens shoes.
+Web application is based on a photoshop templates downloaded from website [php.jabber.com](https://www.phpjabbers.com/). mockup of online shoe store selling mens, womens and childrens shoes and accessories.
+
 
 ## Features
 
-- Wide selection of shoes and accessories for men , women and children.
-
-- product search and filter search.
+- Product filter search.
 
 - Responsive design viewable on most mobile devices.
 
+- Shopping cart ( in progress)
+
+- user registration/login
+
 ## Technologies
 
-- NextJS
-- React
+- NextJS 13
+- React 18
 - Typescript
 - Sass
 - MungoDb
+- Redux Toolkit
 
 ## Tools
 
@@ -30,7 +34,9 @@ Web application is based on a photoshop templates downloaded from website [php.j
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
 - [postcss](https://postcss.org/)
-- [stylelint](https://stylelint.io/)-
+- [stylelint](https://stylelint.io/)
+- [redux toolkit](https://redux-toolkit.js.org/)-
+
 
 Install next, react and react-dom :
 

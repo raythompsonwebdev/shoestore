@@ -9,13 +9,18 @@ const roboto = Old_Standard_TT({
   subsets: ['latin'],
 })
 
-export default function Layout({ children }: { children: ReactNode }) {
+const Layout = ({ children }: { children: ReactNode }) => {
+
+
+
   return (
     <div id="wrapper" className={roboto.className}>
-      <Header />
+      <Header  />
       <MainNav />
       {children}
       <Footer />
     </div>
   )
 }
+
+export default Layout

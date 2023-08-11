@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 
-export default function Custom404() {
+const Custom404 = () => {
   return (
     <Layout>
       <>
@@ -29,3 +29,5 @@ export default function Custom404() {
     </Layout>
   )
 }
+
+export default Custom404

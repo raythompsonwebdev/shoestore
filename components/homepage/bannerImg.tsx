@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-function BannerImg() {
+const BannerImg = () => {
   return (
     <section id="front-page-banner">
       <hgroup>
@@ -70,6 +70,7 @@ function BannerImg() {
           width="500"
           height="346"
           alt="shoestore-banner"
+          priority={true}
         />
       </figure>
     </section>

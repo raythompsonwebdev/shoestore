@@ -1,32 +1,17 @@
-import { useState, useEffect } from 'react'
+// import { useState, useEffect, ReactElement } from 'react'
 import { useSession } from 'next-auth/react'
 import Layout from '../../components/Layout'
 import AccessDenied from '../../components/access-denied'
 import Head from 'next/head'
 import Image from 'next/image'
 
-export default function Profile() {
+const Profile = () => {
+
   const { data: session, status } = useSession()
 
-  const [content, setContent] = useState<any>({})
+  console.log(session);
 
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch('/api/examples/protected')
-      const json = await res.json()
-      if (json.content) {
-        setContent(json.content)
-      }
-    }
-    fetchData()
-  }, [session])
-
-  console.log(content)
-
-  // If no session exists, display access denied message
   if (status === 'unauthenticated') {
-    // if (!content) {
     return (
       <Layout>
         <>
@@ -39,7 +24,7 @@ export default function Profile() {
         </>
       </Layout>
     )
-  } else {
+  }
     return (
       <Layout>
         <>
@@ -52,9 +37,10 @@ export default function Profile() {
             <h1 id="main-content-title">Profile</h1>
             <br />
             <figure id="profile-image">
-              {content.user?.image ? (
+              {session ? (
                 <Image
-                  src={content?.image}
+                  // src={session.user?.image} // not included as database field yet.
+                  src={'/images/placeholder.jpg'}
                   className="user-image"
                   alt="Profile"
                   width="200"
@@ -69,28 +55,23 @@ export default function Profile() {
                 />
               )}
               <figcaption id="profile-image-text">
-                <p>Username : {content?.name as string}</p>
+                <p>Username : {session?.user.name ?  session?.user.name as string : "username not found"}</p>
                 <br />
-                <p>Email :{content?.email as string}</p>
-                <h1>API Example</h1>
-                <p>
-                  The examples below show responses from the example API
-                  endpoints.
-                </p>
+                <p>Email :{session?.user.email ?  session?.user.email as string : "useremail not found"}</p>
+<br/>
                 <p>
                   <em>You must be signed in to see responses.</em>
                 </p>
-                <h2>Session</h2>
-                <p>/api/examples/session</p>
-                <iframe src="/api/examples/session" />
-                <h2>JSON Web Token</h2>
-                <p>/api/examples/jwt</p>
-                <iframe src="/api/examples/jwt" />
+
               </figcaption>
             </figure>
           </main>
         </>
       </Layout>
     )
-  }
+
 }
+
+export default Profile
+
+

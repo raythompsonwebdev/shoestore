@@ -1,7 +1,8 @@
-import { Key } from 'react'
+import React, {Key} from 'react'
 import NewProductBox from './newProductBox'
+import {ProductType} from '../../types/index'
 
-export default function newProductBoxes(props: { productData: Array<any> }) {
+const newProductBoxes = (props: { productData:ProductType[] }) => {
   const { productData } = { ...props }
 
   const NewProduct = productData
@@ -11,16 +12,17 @@ export default function newProductBoxes(props: { productData: Array<any> }) {
         _id: Key | null | undefined
         name: string
         imgUrl: string
-        price: string
+        price: number
         cartImg: string
-        text: string
+        style: string
+        text:string
       }) => (
         <NewProductBox
           key={item._id}
-          name={item.name}
-          imgUrl={item.imgUrl}
-          price={item.price}
           cartImg={item.cartImg}
+          imgUrl={item.imgUrl}
+          name={item.name}
+          price={item.price}
           text={item.text}
         />
       )
@@ -28,3 +30,5 @@ export default function newProductBoxes(props: { productData: Array<any> }) {
 
   return <div className="larger-product-boxes">{NewProduct}</div>
 }
+
+export default newProductBoxes

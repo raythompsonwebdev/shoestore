@@ -4,9 +4,11 @@ import Layout from "../../components/Layout";
 import type { GetServerSidePropsContext } from "next";
 import type { Session } from "next-auth";
 
-export default function ServerSidePage({ session }: { session: Session }) {
+export default function ServerSidePage( props : {result:object}) {
   // As this page uses Server Side Rendering, the `session` will be already
   // populated on render without needing to go through a loading stage.
+  const {result } = props;
+
   return (
     <Layout>
 
@@ -29,7 +31,7 @@ export default function ServerSidePage({ session }: { session: Session }) {
         The disadvantage of Server Side Rendering is that this page is slower to
         render.
       </p>
-      <pre>{}</pre>
+      <pre>{JSON.stringify(result, null, 2)}</pre>
       </main>
     </Layout>
   );
@@ -37,11 +39,12 @@ export default function ServerSidePage({ session }: { session: Session }) {
 // Export the `session` prop to use sessions with Server Side Rendering
 export async function getServerSideProps(context: GetServerSidePropsContext) {
 
-  let session :Session | null = await getServerSession(context.req, context.res, authOptions);
+
+  const session :Session | null = await getServerSession(context.req, context.res, authOptions);
 
   //user image in user object inside the session object is undefined -
   // causing Error Serializing as JSON - JSON stringyfied session object.
-  session = JSON.parse(JSON.stringify(session));
+  const result = JSON.parse(JSON.stringify(session));
 
   if (!session) {
     return {
@@ -54,7 +57,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
   return {
     props: {
-      session,
+      result
+
     },
   };
 }

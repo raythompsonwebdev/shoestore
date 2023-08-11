@@ -1,20 +1,19 @@
-// import PropTypes from "prop-types";
 import { Key } from 'react'
 import ProductBox from './specialsProductBox'
+import {FilteredData} from '../../types/index'
 
-export default function SpecialsProductBoxes(props: {
-  productData: Array<any>
-}) {
+const SpecialsProductBoxes = (props: { productData: FilteredData[]}) => {
+
   const { productData } = props
 
-  const Product = productData
+  const Product = productData !== undefined ? productData
     .slice(0, 20)
     .map(
       (item: {
         _id: Key | null | undefined
         name: string
         imgUrl: string
-        price: string
+        price: number
         cartImg: string
         style: string
       }) => (
@@ -27,7 +26,9 @@ export default function SpecialsProductBoxes(props: {
           style={item.style}
         />
       )
-    )
+    ) : false;
 
   return <div className="product-boxes">{Product}</div>
 }
+
+export default SpecialsProductBoxes

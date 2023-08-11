@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function SpecialsproductBox(props: {
+import { formatPrice} from '../../helpers/index'
+
+const SpecialsproductBox = (props: {
   imgUrl: string
   name: string
   cartImg: string
-  price: string
+  price: number
   style: string
-}) {
+}) => {
   const { imgUrl, name, cartImg, price, style } = props
 
   return (
@@ -16,12 +18,12 @@ export default function SpecialsproductBox(props: {
         className="product-box-img"
         src={imgUrl}
         alt={name}
-        width="175"
-        height="150"
+        width={175}
+        height={150}
       />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>
-        <p className="product-box-price ">£{price}</p>
+        <p className="product-box-price ">{formatPrice(price)}</p>
         <Link href={`/product/${name}`} className="product-box-icon-link">
           <Image
             className="product-box-icon"
@@ -35,3 +37,5 @@ export default function SpecialsproductBox(props: {
     </figure>
   )
 }
+
+export default SpecialsproductBox
