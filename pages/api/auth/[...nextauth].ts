@@ -5,8 +5,6 @@ import clientPromise from '../../../lib/mongodb'
 import { connectToMongoDB } from '../../../lib/dbConnect'
 import FindUser from '../../../models/users'
 import { comparePassword } from '../../../lib/hashPassword'
-// import {signJwtAccessToken} from "../../../lib/jwt"
-
 
 export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers/oauth
@@ -26,12 +24,10 @@ export const authOptions: NextAuthOptions = {
         email: { label: 'Email', type: 'email' },
         password: { label: 'Password', type: 'password' },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         await connectToMongoDB().catch((err) => {
           throw new Error(err)
         })
-
-        console.log(req.body, req.query)
 
         // confirm if user email already exists.
         const user = await FindUser.findOne({
@@ -43,16 +39,13 @@ export const authOptions: NextAuthOptions = {
         }
 
         // confirm whether password entered matches user password stored in db.
-
         if(credentials?.password !== undefined){
 
           const isPasswordCorrect = await comparePassword(
               credentials.password,
               user.password
             )
-
           // if (isPasswordCorrect) {
-
           //   const accessToken = signJwtAccessToken(
           //     {
           //       user: {
@@ -61,9 +54,7 @@ export const authOptions: NextAuthOptions = {
           //       },
           //     }
           //   );
-
           //   user.accessToken = accessToken;
-
           // } else {
           //   throw new Error("Password is not valid");
           // }
@@ -71,20 +62,13 @@ export const authOptions: NextAuthOptions = {
           if (!isPasswordCorrect) {
             throw new Error('Invalid credentials')
           }
-
-
         }
-
         // check if user password and email sumitted match user email and passowrd saved in database.
         //if (user.email === credentials?.email && isPasswordCorrect) {
         if (user.email === credentials?.email ) {
-
           return user
-
         } else {
-
           return null
-
         }
       },
     }),
@@ -99,8 +83,6 @@ export const authOptions: NextAuthOptions = {
     // The maximum age of the NextAuth.js issued JWT in seconds.
     // Defaults to `session.maxAge`.
     maxAge: 60 * 60 * 24 * 14,
-
-
   },
 
   callbacks: {

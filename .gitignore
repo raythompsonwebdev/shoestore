@@ -23,21 +23,13 @@ files/
 build/
 .next/*
 .env.local
-components/Basket.tsx
 public/js/*js
 next-env.d.ts
 .vscode
 
-pages/(protected)/admin.tsx
-pages/(protected)/session.tsx
-
 lib/cookies.ts
 lib/validate.ts
 
-pages/api/homepagedata.ts
-pages/api/alldata.ts
-pages/api/newproductsdata.ts
-pages/api/singleproduct.ts
 pages/api/examples/
 hooks/
 

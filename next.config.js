@@ -6,6 +6,9 @@ const __dirname = path.dirname(__filename)
 
 const nextConfig = {
   reactStrictMode: true,
+  env: {
+    BASE_URL: process.env.LOCAL_URL,
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },

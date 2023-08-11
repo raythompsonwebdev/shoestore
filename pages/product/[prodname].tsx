@@ -22,12 +22,12 @@ const SingleProduct = () => {
 
   const { prodname } = router.query
 
-
   const result = singleProd.find((product) => product.name === prodname)
 
   const { color, gender, imgUrl, likes, name, price, prodId, qty, size, style, text,_id } = {...result}
 
-  console.log(qty, cartItems )
+  console.log(qty )
+
   const [productInfo, setProductInfo] = useState<{likes:number | undefined}>({ likes: likes })
 
   useEffect(() => {

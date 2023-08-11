@@ -76,3 +76,19 @@ export interface SelectBarType {
   }>;
 }
 
+export interface CartItemType {
+  all :string;
+  cartImg:string;
+  color:string;
+  gender:string;
+  imgUrl:string;
+  likes:number;
+  name:string;
+  price:number;
+  prodId:number;
+  qty:number;
+  size:string;
+  style:string;
+  text:string;
+  _id:string;
+}

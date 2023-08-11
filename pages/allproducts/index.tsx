@@ -71,8 +71,6 @@ const Allproducts = () => {
     }
   },[productItems, productItemsStatus]);
 
-  //console.log(newaccordian, newproducts, searchbarItems, selectbarItems)
-
   const handleChange = (selectedSize: SetStateAction<string>) :void => {
     setOrderByVal(selectedSize)
     setOrderByDir('asc')

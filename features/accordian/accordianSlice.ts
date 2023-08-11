@@ -14,7 +14,7 @@ const initialState : AccordianState = {
   error: null
 } ;
 
-const url = 'http://localhost:3000/api/accordiandata';
+const url = '/api/accordiandata'
 
 export const fetchAccordian = createAsyncThunk(
   'accordian/fetchAccordian',

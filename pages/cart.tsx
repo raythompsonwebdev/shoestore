@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import { useSession } from 'next-auth/react'
 import { useState, SetStateAction } from 'react'
 import Basket from '../components/Basket';
-//import {ProductType } from '../types/index'
+// import {ProductType } from '../types/index'
 // import CartContainer from '../features/cart/CartContainer'
 // import { useAppDispatch, useAppSelector } from '../hooks/hooks';
 // import { calculateTotals, getCartItems} from '../features/cart/cartSlice';
@@ -91,14 +91,11 @@ const Cart = () => {
           <main id="main-content" className="clearfix">
             <h1 id="main-content-title">Cart - Not Logged In</h1>
             {/* <CartContainer /> */}
-            {/* <section style={myComponentStyle}> */}
-
               <Basket
               cartItems={cartItems}
               onAdd={onAdd}
               onRemove={onRemove}
             ></Basket>
-            {/* </section> */}
           </main>
         </>
       </Layout>

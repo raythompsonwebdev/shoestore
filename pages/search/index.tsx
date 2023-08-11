@@ -70,8 +70,6 @@ const SearchProduct = () => {
                 <p className="product-page-title">{shoes.size}</p>
                 <p className="product-page-title">{shoes.color}</p>
                 <p>{''}</p>
-
-
               </figcaption>
             </figure>
           ))}

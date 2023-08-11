@@ -15,7 +15,7 @@ const initialState : SelectBarState = {
   error: null
 } ;
 
-const url = 'http://localhost:3000/api/selectdata';
+const url = '/api/selectdata';
 
 export const fetchSelectData = createAsyncThunk(
   'selectdata/fetchSelectData',

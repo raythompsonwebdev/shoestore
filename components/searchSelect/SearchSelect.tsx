@@ -13,8 +13,6 @@ interface SearchSelector {
 const SearchSelect = (props: SearchSelector) => {
   const { selectBarData, changesOrders, handleChange, orderDir } = props
 
-  console.log(selectBarData)
-
   const onItemChange = (e: { target: { value: string } }) => {
     const {value} = e.target;
     handleChange(value)
@@ -32,10 +30,8 @@ const SearchSelect = (props: SearchSelector) => {
       >
         {selectBarData.map(
           (options) => (
-            // eslint-disable-next-line react/no-array-index-key
             <optgroup label={options.value} key={options.id}>
               {options.options.map((option :{id:Key | number, value:string | undefined, displayValue:string | undefined}) => (
-                // eslint-disable-next-line react/no-array-index-key
                 <option key={option.id} value={option.value}>
                   {option.displayValue}
                 </option>

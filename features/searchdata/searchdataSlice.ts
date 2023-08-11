@@ -14,7 +14,7 @@ const initialState : SearchBarState = {
   error: null
 } ;
 
-const url = 'http://localhost:3000/api/searchdata';
+const url = '/api/searchdata';
 
 export const fetchSearchData = createAsyncThunk(
   'searchdata/fetchSearchData',
@@ -33,8 +33,6 @@ export const searchdataSlice = createSlice({
   initialState,
   reducers: {
     searchdataAdded: (state, action: PayloadAction<SearchBarType>) => {
-
-      console.log(action.payload)
       state.searchdataItems.push(action.payload);
     },
   },

@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'http://localhost:3000/api/cartitems';
+const url = '/api/cartitems';
 
 const initialState = {
     cartItems: [],
@@ -18,7 +18,6 @@ export const getCartItems = createAsyncThunk(
       // console.log(thunkAPI);
       // console.log(thunkAPI.getState());
       const resp = await axios.get(url);
-      // console.log(resp)
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
@@ -65,7 +64,6 @@ const cartSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getCartItems.fulfilled, (state, action) => {
-        // console.log(action);
         state.isLoading = false;
         state.cartItems = action.payload;
       })

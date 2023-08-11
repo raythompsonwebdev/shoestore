@@ -1,6 +1,6 @@
 # Shoestore web app - Next.js - Pages Router
 
-![shoestore](/)
+![shoestore](/www-shoestore-home-page-large.jpg)
 
 # Introduction
 
@@ -9,13 +9,13 @@ Web application is based on a photoshop templates downloaded from website [php.j
 
 ## Features
 
-- Product filter search.
+- Filtered search.
 
 - Responsive design viewable on most mobile devices.
 
-- Shopping cart ( in progress)
+- Shopping Cart ( in progress)
 
-- user registration/login
+- User Registration/Login
 
 ## Technologies
 
@@ -41,11 +41,9 @@ Web application is based on a photoshop templates downloaded from website [php.j
 Install next, react and react-dom :
 
 `npm install next react react-dom`
-
 ## or
 
 `yarn add next react react-dom`
-
 ## or
 
 `pnpm add next react react-dom`
@@ -61,7 +59,6 @@ Open package.json and add the following scripts:
 }
 
 ```
-
 `npm run dev`
 
 Runs next dev to start Next.js in development mode.
@@ -81,7 +78,6 @@ Runs next start to start a Next.js production server
 `npm run lint`
 
 Runs next lint to set up Next.js' built-in ESLint configuration
-
 ## Learn More
 
 You can learn more in the [Next.js documentation](https://nextjs.org/docs/getting-started).
