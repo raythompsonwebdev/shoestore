@@ -36,14 +36,17 @@ export default function RegisterForm() {
         body: JSON.stringify({ name: username, email: useremail, password }),
       })
 
-      if (response.ok) {
+      if (!response.ok) {
         console.log(response.status)
       }
 
       const result = await response.json()
 
       if (result) {
-        router.push('/')
+        router.push({
+          pathname: '/thankyou',
+          query: { username,useremail},
+        })
       }
     } catch (err) {
       console.error('Something went wrong', err)
@@ -100,7 +103,7 @@ export default function RegisterForm() {
               name="password"
               id="password"
               required={true}
-              minLength={4}
+              minLength={6}
               maxLength={20}
               aria-describedby="form-error"
             />

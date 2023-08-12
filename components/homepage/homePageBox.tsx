@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import CartIcon from '../Images/CartIcon'
 import { formatPrice } from '../../helpers/index'
 
 const FrontPageBox = (props: {
@@ -24,13 +25,7 @@ const FrontPageBox = (props: {
         <p className="product-box-title"> {style}</p>
         <p className="product-box-price">{formatPrice(price)}</p>
         <Link href={`/product/${name}`} className="product-box-icon-link">
-          <Image
-            className="product-box-icon"
-            src={cartImg}
-            alt="shoppingcart icon"
-            width="34"
-            height="48"
-          />
+          <CartIcon src={cartImg}/>
         </Link>
       </figcaption>
     </figure>

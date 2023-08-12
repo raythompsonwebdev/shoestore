@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { formatPrice } from '../helpers/index'
+//import Image from 'next/image'
+// import ProductImage from '../Images/ProductImage'
+//import { formatPrice } from '../helpers/index'
 
 type CartItemType = {
   all: string
@@ -33,30 +34,33 @@ const Basket = (props: {
     let cartItems: any = []
     // Get the value from local storage if it exists
     try {
-      cartItems = localStorage.getItem('cart') || ''
+
+      if(localStorage){
+        cartItems = localStorage.getItem('cart') || []
+        setCartItems(JSON.parse(cartItems))
+      }
+
     } catch (e) {
       console.log(e)
     }
-    //  console.log(JSON.parse(cartItemsTest))
-    setCartItems(JSON.parse(cartItems))
+
   }, [])
 
   console.log(cartItemResult)
 
-  const itemsPrice = cartItemResult.reduce(
-    (a: number, c: { qty: number; price: number }) => a + c.qty * c.price,
-    0
-  )
-  const taxPrice = itemsPrice * 0.14
-  const shippingPrice = itemsPrice > 2000 ? 0 : 20
-  const totalPrice = itemsPrice + taxPrice + shippingPrice
+  // const itemsPrice = cartItemResult.reduce(
+  //   (a: number, c: { qty: number; price: number }) => a + c.qty * c.price,
+  //   0
+  // )
+  // const taxPrice = itemsPrice * 0.14
+  // const shippingPrice = itemsPrice > 2000 ? 0 : 20
+  // const totalPrice = itemsPrice + taxPrice + shippingPrice
 
   return (
     <>
       <main id="main-content" className="clearfix">
-        {cartItemResult.length === 0 && <div>Cart is empty</div>}
+        {/* {cartItemResult.length === 0 && <div>Cart is empty</div>}
         {cartItemResult.map(
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (product: any) => (
             <figure id="product-page-box" key={product.prodId}>
               <Image
@@ -89,9 +93,9 @@ const Basket = (props: {
               </figcaption>
             </figure>
           )
-        )}
+        )} */}
 
-        {cartItemResult.length !== 0 && (
+        {/* {cartItemResult.length !== 0 && (
           <>
             <hr></hr>
             <div className="row">
@@ -124,7 +128,7 @@ const Basket = (props: {
               </button>
             </div>
           </>
-        )}
+        )} */}
       </main>
     </>
   )

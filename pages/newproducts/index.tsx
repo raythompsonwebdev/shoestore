@@ -61,7 +61,6 @@ const NewProducts = () => {
     }
   }, [searchbarDataStatus, dispatch])
 
-  console.log(searchbarItems)
 
   const [visibility, setVisibility] = useState<boolean>(false)
 

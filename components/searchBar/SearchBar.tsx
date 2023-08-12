@@ -16,10 +16,10 @@ type SearchBarProps = {
 }
 
 const SearchBar = (props: SearchBarProps) => {
-  const [genderVal, setGenderVal] = useState<string>(' ')
-  const [sizeVal, setSizeVal] = useState<string>(' ')
-  const [styleVal, setStyleVal] = useState<string>(' ')
-  const [colorVal, setColorVal] = useState<string>(' ')
+  const [genderVal, setGenderVal] = useState<string>('')
+  const [sizeVal, setSizeVal] = useState<string>('')
+  const [styleVal, setStyleVal] = useState<string>('')
+  const [colorVal, setColorVal] = useState<string>('')
 
   const { labelname, searchData } = props
 
@@ -64,13 +64,13 @@ const SearchBar = (props: SearchBarProps) => {
     const gender: FormDataEntryValue | null = formData.get('genderVal')
     const color: FormDataEntryValue | null = formData.get('colorVal')
     const size: FormDataEntryValue | null = formData.get('sizeVal')
-    // send data to search results page as url query params
+
+    // send data to search results page as url query params -query string
     router.push(
       `/search?genderVal=${gender ?? ''}&styleVal=${style ?? ''}&sizeVal=${
         size ?? ''
       }&colorVal=${color ?? ''}`
     )
-
     return false
   }
 
