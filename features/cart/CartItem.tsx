@@ -1,22 +1,21 @@
 //import { ChevronDown, ChevronUp } from '../icons';
-import { removeItem, increase, decrease } from './cartSlice';
-import { useAppDispatch } from '../../app/store';
+import { removeItem, increase, decrease } from './cartSlice'
+import { useAppDispatch } from '../../app/store'
 import Image from 'next/image'
 
-type Props ={
-  prodId :number;
-  imgUrl:string;
-  name:string;
-  price:number;
-  qty:number;
+type Props = {
+  prodId: number
+  imgUrl: string
+  name: string
+  price: number
+  qty: number
 }
 
 const CartItem = ({ prodId, imgUrl, name, price, qty }: Props) => {
-
- const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch()
 
   return (
-    <article className='cart-item'>
+    <article className="cart-item">
       <Image
         className="product-box-icon"
         src={imgUrl}
@@ -26,11 +25,11 @@ const CartItem = ({ prodId, imgUrl, name, price, qty }: Props) => {
       />
       <div>
         <h4>{name}</h4>
-        <h4 className='item-price'>${price}</h4>
+        <h4 className="item-price">${price}</h4>
         <button
-          className='remove-btn'
+          className="remove-btn"
           onClick={() => {
-           dispatch(removeItem(prodId));
+            dispatch(removeItem(prodId))
           }}
         >
           remove
@@ -38,28 +37,28 @@ const CartItem = ({ prodId, imgUrl, name, price, qty }: Props) => {
       </div>
       <div>
         <button
-          className='amount-btn'
+          className="amount-btn"
           onClick={() => {
-           dispatch(increase({ prodId }));
+            dispatch(increase({ prodId }))
           }}
         >
-         + {/* <ChevronUp /> */}
+          + {/* <ChevronUp /> */}
         </button>
-        <p className='amount'>{qty}</p>
+        <p className="amount">{qty}</p>
         <button
-          className='amount-btn'
+          className="amount-btn"
           onClick={() => {
-             if (qty === 1) {
-              dispatch(removeItem(prodId));
-              return;
+            if (qty === 1) {
+              dispatch(removeItem(prodId))
+              return
             }
-            dispatch(decrease({ prodId }));
+            dispatch(decrease({ prodId }))
           }}
         >
-         - {/* <ChevronDown /> */}
+          - {/* <ChevronDown /> */}
         </button>
       </div>
     </article>
-  );
-};
-export default CartItem;
+  )
+}
+export default CartItem

@@ -23,7 +23,7 @@ const Login = () => {
           <br />
           <br />
 
-          <section id="contact-form-section">
+          <section id="login-form-section">
             <LoginForm />
           </section>
 

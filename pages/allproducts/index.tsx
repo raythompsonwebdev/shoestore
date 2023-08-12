@@ -5,73 +5,88 @@ import AllProductBoxes from '../../components/allproducts/allProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
-import {ProductType} from "../../types/index"
-import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
-import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
-import { getSearchData, fetchSearchData , getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
-import { getSelectData, fetchSelectData , getSelectDataStatus} from "../../features/selectdata/selectdataSlice";
-import { useAppSelector, useAppDispatch } from '../../app/store';
+import { ProductType } from '../../types/index'
+import {
+  selectAllProducts,
+  fetchProducts,
+  getProductsStatus,
+} from '../../features/products/productSlice'
+import {
+  selectAllAccordian,
+  fetchAccordian,
+  getAccordianStatus,
+} from '../../features/accordian/accordianSlice'
+import {
+  getSearchData,
+  fetchSearchData,
+  getSearchBarStatus,
+} from '../../features/searchdata/searchdataSlice'
+import {
+  getSelectData,
+  fetchSelectData,
+  getSelectDataStatus,
+} from '../../features/selectdata/selectdataSlice'
+import { useAppSelector, useAppDispatch } from '../../app/store'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Allproducts = () => {
-
   const [productData, setProductData] = useState<ProductType[]>([])
   const [orderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
 
-  const dispatch  = useAppDispatch();
+  const dispatch = useAppDispatch()
   // get Products
-  const productItems = useAppSelector(selectAllProducts);
-  const productItemsStatus = useAppSelector(getProductsStatus);
+  const productItems = useAppSelector(selectAllProducts)
+  const productItemsStatus = useAppSelector(getProductsStatus)
   //const productItemsError = useAppSelector(getProductsError);
 
   // acoordian data
-  const accordianItems = useAppSelector(selectAllAccordian);
-  const accordianDataStatus = useAppSelector(getAccordianStatus);
+  const accordianItems = useAppSelector(selectAllAccordian)
+  const accordianDataStatus = useAppSelector(getAccordianStatus)
   //const accordianDataError = useAppSelector(getAccordianError);
 
   // searchbar data
-  const searchbarItems = useAppSelector(getSearchData);
-  const searchbarDataStatus = useAppSelector(getSearchBarStatus);
+  const searchbarItems = useAppSelector(getSearchData)
+  const searchbarDataStatus = useAppSelector(getSearchBarStatus)
   //const searchbarDataError = useAppSelector(getSearchBarError);
 
   // selectbar data
-  const selectbarItems = useAppSelector(getSelectData);
-  const selectbarDataStatus = useAppSelector(getSelectDataStatus);
+  const selectbarItems = useAppSelector(getSelectData)
+  const selectbarDataStatus = useAppSelector(getSelectDataStatus)
   //const selectbarDataError = useAppSelector(getSelectBarError);
 
   useEffect(() => {
     if (productItemsStatus === 'idle') {
-        dispatch(fetchProducts())
+      dispatch(fetchProducts())
     }
-  }, [productItemsStatus,dispatch])
+  }, [productItemsStatus, dispatch])
 
   useEffect(() => {
-    if(accordianDataStatus === 'idle'){
+    if (accordianDataStatus === 'idle') {
       dispatch(fetchAccordian())
     }
-  }, [accordianDataStatus,dispatch])
+  }, [accordianDataStatus, dispatch])
 
   useEffect(() => {
-    if(searchbarDataStatus === 'idle'){
+    if (searchbarDataStatus === 'idle') {
       dispatch(fetchSearchData())
     }
-  }, [searchbarDataStatus ,dispatch])
+  }, [searchbarDataStatus, dispatch])
 
   useEffect(() => {
-    if(selectbarDataStatus === 'idle'){
+    if (selectbarDataStatus === 'idle') {
       dispatch(fetchSelectData())
     }
-  }, [selectbarDataStatus ,dispatch])
+  }, [selectbarDataStatus, dispatch])
 
   useEffect(() => {
-    if(productItemsStatus === 'succeeded'){
+    if (productItemsStatus === 'succeeded') {
       setProductData(productItems)
     }
-  },[productItems, productItemsStatus]);
+  }, [productItems, productItemsStatus])
 
-  const handleChange = (selectedSize: SetStateAction<string>) :void => {
+  const handleChange = (selectedSize: SetStateAction<string>): void => {
     setOrderByVal(selectedSize)
     setOrderByDir('asc')
   }
@@ -92,19 +107,17 @@ const Allproducts = () => {
   let filteredApts = productData
   const value = OrderByVal
 
-  filteredApts = filteredApts.filter(
-    (item) => {
-      if (
-        item.color === value ||
-        item.style === value ||
-        item.size === value ||
-        item.gender === value
-      ) {
-        return item
-      }
-      return item[value]
+  filteredApts = filteredApts.filter((item) => {
+    if (
+      item.color === value ||
+      item.style === value ||
+      item.size === value ||
+      item.gender === value
+    ) {
+      return item
     }
-  )
+    return item[value]
+  })
 
   return (
     <Layout>
@@ -115,8 +128,11 @@ const Allproducts = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-
-        {searchbarItems !== undefined ?  <SearchBar labelname="All Products" searchData={searchbarItems} /> : <div>No results</div>}
+          {searchbarItems !== undefined ? (
+            <SearchBar labelname="All Products" searchData={searchbarItems} />
+          ) : (
+            <div>No results</div>
+          )}
 
           <button
             id="sidebar-toggle-btn"
@@ -149,5 +165,4 @@ const Allproducts = () => {
   )
 }
 
-
-export default Allproducts;
+export default Allproducts

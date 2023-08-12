@@ -1,12 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from '../../lib/mongodb'
 
 export default async function productHandler(
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ) {
-
-  if(req.method !== 'GET'){
+  if (req.method !== 'GET') {
     res.status(405).send({ message: 'Only GET requests allowed' })
     return
   }
@@ -19,10 +18,8 @@ export default async function productHandler(
 
     const selectresults = JSON.parse(JSON.stringify(resultsthree))
 
-    res.status(200).send({selectresults});
-
+    res.status(200).send({ selectresults })
   } catch (e) {
     console.error(e)
   }
-
 }

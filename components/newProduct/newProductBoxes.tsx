@@ -1,8 +1,8 @@
-import React, {Key} from 'react'
+import React, { Key } from 'react'
 import NewProductBox from './newProductBox'
-import {ProductType} from '../../types/index'
+import { ProductType } from '../../types/index'
 
-const newProductBoxes = (props: { productData:ProductType[] }) => {
+const newProductBoxes = (props: { productData: ProductType[] }) => {
   const { productData } = { ...props }
 
   const NewProduct = productData
@@ -15,7 +15,7 @@ const newProductBoxes = (props: { productData:ProductType[] }) => {
         price: number
         cartImg: string
         style: string
-        text:string
+        text: string
       }) => (
         <NewProductBox
           key={item._id}

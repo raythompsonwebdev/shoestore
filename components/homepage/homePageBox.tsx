@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { formatPrice} from '../../helpers/index'
+import { formatPrice } from '../../helpers/index'
 
 const FrontPageBox = (props: {
   imgUrl: string

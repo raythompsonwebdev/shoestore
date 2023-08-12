@@ -4,60 +4,68 @@ import Layout from '../../components/Layout'
 import NewProductBoxes from '../../components/newProduct/newProductBoxes'
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
-import { selectAllProducts, fetchProducts, getProductsStatus} from "../../features/products/productSlice";
-import { selectAllAccordian, fetchAccordian, getAccordianStatus } from '../../features/accordian/accordianSlice'
-import { getSearchData, fetchSearchData, getSearchBarStatus } from '../../features/searchdata/searchdataSlice'
-import { useAppSelector, useAppDispatch } from '../../app/store';
+import {
+  selectAllProducts,
+  fetchProducts,
+  getProductsStatus,
+} from '../../features/products/productSlice'
+import {
+  selectAllAccordian,
+  fetchAccordian,
+  getAccordianStatus,
+} from '../../features/accordian/accordianSlice'
+import {
+  getSearchData,
+  fetchSearchData,
+  getSearchBarStatus,
+} from '../../features/searchdata/searchdataSlice'
+import { useAppSelector, useAppDispatch } from '../../app/store'
 import { ProductType } from '../../types'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-
 const NewProducts = () => {
-
-  const dispatch  = useAppDispatch();
+  const dispatch = useAppDispatch()
 
   const [productData, setProductData] = useState<ProductType[]>([])
   // get Products
-  const productItems = useAppSelector(selectAllProducts);
-  const productItemsStatus = useAppSelector(getProductsStatus);
+  const productItems = useAppSelector(selectAllProducts)
+  const productItemsStatus = useAppSelector(getProductsStatus)
   //const productItemsError = useAppSelector(getProductsError);
 
   // acoordian data
-  const accordianItems = useAppSelector(selectAllAccordian);
-  const accordianDataStatus = useAppSelector(getAccordianStatus);
+  const accordianItems = useAppSelector(selectAllAccordian)
+  const accordianDataStatus = useAppSelector(getAccordianStatus)
   //const accordianDataError = useAppSelector(getAccordianError);
 
   // searchbar data
-  const searchbarItems = useAppSelector(getSearchData);
-  const searchbarDataStatus = useAppSelector(getSearchBarStatus);
+  const searchbarItems = useAppSelector(getSearchData)
+  const searchbarDataStatus = useAppSelector(getSearchBarStatus)
   //const searchbarDataError = useAppSelector(getAccordianError);
 
   useEffect(() => {
     if (productItemsStatus === 'idle') {
-        dispatch(fetchProducts())
+      dispatch(fetchProducts())
     }
     setProductData(productItems)
-  }, [productItemsStatus,productItems,dispatch])
+  }, [productItemsStatus, productItems, dispatch])
 
   useEffect(() => {
-    if(accordianDataStatus === 'idle'){
+    if (accordianDataStatus === 'idle') {
       dispatch(fetchAccordian())
     }
-  }, [accordianDataStatus,dispatch])
+  }, [accordianDataStatus, dispatch])
 
   useEffect(() => {
-    if(searchbarDataStatus === 'idle'){
+    if (searchbarDataStatus === 'idle') {
       dispatch(fetchSearchData())
     }
-  }, [searchbarDataStatus ,dispatch])
-
+  }, [searchbarDataStatus, dispatch])
 
   console.log(searchbarItems)
 
-
   const [visibility, setVisibility] = useState<boolean>(false)
 
-  const sidebarVisibility = (e: { preventDefault: () => void }) :void => {
+  const sidebarVisibility = (e: { preventDefault: () => void }): void => {
     e.preventDefault()
     setVisibility(!visibility)
   }
@@ -71,8 +79,11 @@ const NewProducts = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          {searchbarItems !== undefined ? <SearchBar labelname="New Products" searchData={searchbarItems} /> : <div>No results</div>}
-
+          {searchbarItems !== undefined ? (
+            <SearchBar labelname="New Products" searchData={searchbarItems} />
+          ) : (
+            <div>No results</div>
+          )}
 
           <button
             id="sidebar-toggle-btn"
@@ -90,7 +101,6 @@ const NewProducts = () => {
           </aside>
 
           <section id="right-content-section">
-
             <NewProductBoxes productData={productData} />
 
             <br />

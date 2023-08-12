@@ -4,8 +4,8 @@ import { loginUser } from '../../helpers'
 import Link from 'next/link'
 
 export default function LoginForm() {
-  const [email, setEmail] = useState<string>(' ')
-  const [password, setPassword] = useState<string>(' ')
+  const [email, setEmail] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
   const router = useRouter()
 
   const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
@@ -38,9 +38,9 @@ export default function LoginForm() {
   }
 
   return (
-    <form id="contact-form" onSubmit={submit}>
-      <ul id="contact-form-fields">
-        <li className="contact-form-item">
+    <form id="login-form" onSubmit={submit}>
+      <ul id="login-form-fields">
+        <li className="login-form-item">
           <label htmlFor="email">
             E-mail:&#32;
             <input
@@ -49,11 +49,11 @@ export default function LoginForm() {
               id="useremail"
               value={email}
               onChange={handleEmails}
-              required
+              required={true}
             />
           </label>
         </li>
-        <li className="contact-form-item">
+        <li className="login-form-item">
           <label htmlFor="message">
             Password:&#32;
             <input
@@ -62,11 +62,11 @@ export default function LoginForm() {
               onChange={handlePassword}
               name="password"
               id="password"
-              required
+              required={true}
             />
           </label>
         </li>
-        <li className="contact-form-item">
+        <li className="login-form-item">
           <label htmlFor="submit">
             <input type="submit" value="Send" id="submit" name="submit" />
           </label>

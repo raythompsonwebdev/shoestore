@@ -1,11 +1,11 @@
 // import { Key } from 'react'
 import React, { Key } from 'react'
-import {SelectBarType} from '../../types/index'
+import { SelectBarType } from '../../types/index'
 
 interface SearchSelector {
   selectBarData: SelectBarType[]
-  changesOrders: (orderbyval: string , dir: string) => void;
-  handleChange: (selected: string ) => void;
+  changesOrders: (orderbyval: string, dir: string) => void
+  handleChange: (selected: string) => void
   orderByVal: string
   orderDir: string
 }
@@ -14,7 +14,7 @@ const SearchSelect = (props: SearchSelector) => {
   const { selectBarData, changesOrders, handleChange, orderDir } = props
 
   const onItemChange = (e: { target: { value: string } }) => {
-    const {value} = e.target;
+    const { value } = e.target
     handleChange(value)
     changesOrders(value, orderDir)
   }
@@ -28,17 +28,21 @@ const SearchSelect = (props: SearchSelector) => {
         onChange={onItemChange}
         className="search-products-select"
       >
-        {selectBarData.map(
-          (options) => (
-            <optgroup label={options.value} key={options.id}>
-              {options.options.map((option :{id:Key | number, value:string | undefined, displayValue:string | undefined}) => (
+        {selectBarData.map((options) => (
+          <optgroup label={options.value} key={options.id}>
+            {options.options.map(
+              (option: {
+                id: Key | number
+                value: string | undefined
+                displayValue: string | undefined
+              }) => (
                 <option key={option.id} value={option.value}>
                   {option.displayValue}
                 </option>
-              ))}
-            </optgroup>
-          )
-        )}
+              )
+            )}
+          </optgroup>
+        ))}
       </select>
     </form>
   )

@@ -550,7 +550,8 @@ p {
   text-transform: uppercase;
 }
 
-/* contact form container */
+/* form containers */
+#login-form-section,
 #register-form-section,
 #contact-form-section {
   width: 90%;
@@ -559,19 +560,24 @@ p {
   display: block;
   margin: 1em auto;
 }
-/* contact form */
+/* forms */
+#login-form,
 #register-form,
 #contact-form {
   width: 100%;
   padding: 0;
   font-family: $font-list;
 }
+
+#login-form-fields,
 #register-form-fields,
 #contact-form-fields {
   height: auto;
   display: block;
   padding: 0;
 }
+
+#login-form-fields .login-form-item,
 #register-form-fields .register-form-item,
 #contact-form-fields .contact-form-item {
   height: auto;
@@ -579,6 +585,8 @@ p {
   margin: 0 0 0.5em;
   padding: 0;
 }
+
+.login-form-item > label,
 .register-form-item > label,
 .contact-form-item > label {
   width: 100%;
@@ -592,6 +600,7 @@ p {
   align-items: flex-start;
   justify-content: space-between;
 }
+
 #password,
 #username,
 #useremail {
@@ -604,11 +613,12 @@ p {
   margin: 0;
   padding: 0;
 }
+
 #password:focus,
 #username:focus,
-#useremai:focus,
+#useremail:focus,
 #message:focus {
-  background-color: $color-white-bg;
+  border: 1px solid #ffcccc;
   outline: 0;
 }
 #submit {
@@ -696,9 +706,8 @@ p {
     float: left;
     line-height: 30px;
     text-align: left;
-    text-indent:0.5em;
-    font-weight:bold
-
+    text-indent: 0.5em;
+    font-weight: bold;
   }
 }
 .search-products-select {
@@ -1252,7 +1261,7 @@ p {
   letter-spacing: 0.1em;
 }
 
-@media only screen and (min-width: 1025px){
+@media only screen and (min-width: 1025px) {
   #wrapper {
     width: 1024px;
     margin-right: auto;
@@ -1462,30 +1471,40 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
+
+  #login-form-section,
   #register-form-section,
   #contact-form-section {
-    width: 50%;
+    width: 60%;
     float: left;
     margin: 0 1em;
   }
+
+  #login-form,
   #register-form,
   #contact-form {
     padding: 0;
   }
+
+  #login-form-fields,
   #register-form-fields,
   #contact-form-fields {
     height: auto;
     display: block;
   }
-  #register-form-fields .register-form-item,
+
+  #login-form-fields .login-form-item #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
   }
+
+  .login-form-form-item > label,
   .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
-  #reg-password,
+
+  #password,
   #username,
   #email {
     width: 98%;
@@ -1493,13 +1512,31 @@ p {
   #message {
     width: 98%;
   }
-  #reg-password:focus,
+  #password:focus,
   #username:focus,
-  #emai:focus,
+  #useremail:focus,
   #message:focus {
-    background-color: $color-white-bg;
+    border:solid 2px #020202;
     outline: 0;
   }
+
+  #password:invalid:focus,
+  #username:invalid:focus,
+  #useremail:invalid:focus,
+  #message:invalid:focus {
+    background:#ffcccc;
+    border:solid 2px #e78686;
+    outline: 0;
+  }
+
+  #password:valid:focus,
+  #username:valid:focus,
+  #useremail:valid:focus,
+  #message:valid:focus {
+    border:solid 2px #06ad5a;
+    outline: 0;
+  }
+
   #submit {
     margin: 0 auto;
     width: 50%;
@@ -1833,7 +1870,6 @@ p {
   }
 }
 
-
 @media only screen and (min-width: 861px) and (max-width: 1024px) {
   #wrapper {
     width: 100%;
@@ -2045,31 +2081,42 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
+
+  #login-form-section,
   #register-form-section,
   #contact-form-section {
     width: 60%;
     float: left;
     margin: 0 1em;
   }
+
+  #login-form,
   #register-form,
   #contact-form {
     padding: 0;
   }
+
+  #login-form-fields,
   #register-form-fields,
   #contact-form-fields {
     height: auto;
     display: block;
   }
+
+  #login-form-fields .login-form-item,
   #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+
+  .login-form-item > label,
   .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
-  #reg-password,
+
+  #password,
   #username,
   #email {
     width: 98%;
@@ -2077,13 +2124,7 @@ p {
   #message {
     width: 98%;
   }
-  #reg-password:focus,
-  #username:focus,
-  #emai:focus,
-  #message:focus {
-    background-color: $color-white-bg;
-    outline: 0;
-  }
+
   #submit {
     margin: 0 auto;
     width: 50%;
@@ -2640,45 +2681,52 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
+
+  #login-form-section,
   #register-form-section,
   #contact-form-section {
     width: 91%;
     float: none;
     margin: 1em auto;
   }
+
+  #login-form,
   #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+
+  #login-form-fields,
   #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+
+  #login-form-fields .login-form-item,
   #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+
+  .login-form-item > label,
   .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
-  #reg-password,
+
+  #password,
   #username,
   #email {
     width: 98%;
   }
+
   #message {
     width: 98%;
   }
-  #reg-password:focus,
-  #username:focus,
-  #emai:focus,
-  #message:focus {
-    background-color: $color-white-bg;
-    outline: 0;
-  }
+
+
   #submit {
     font-size: 1.2em;
     height: 45px;
@@ -3219,31 +3267,42 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
+
+  #login-form-section,
   #register-form-section,
   #contact-form-section {
     width: 91%;
     margin: 1em auto;
     float: none;
   }
+
+  #login-form,
   #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+
+  #login-form-fields,
   #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+
+  #login-form-fields .login-form-item,
   #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+
+  .login-form-item > label,
   .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
-  #reg-password,
+
+  #password,
   #username,
   #email {
     width: 98%;
@@ -3251,13 +3310,7 @@ p {
   #message {
     width: 98%;
   }
-  #reg-password:focus,
-  #username:focus,
-  #emai:focus,
-  #message:focus {
-    background-color: $color-white-bg;
-    outline: 0;
-  }
+
   #submit {
     font-size: 1.2em;
     height: 45px;
@@ -3303,7 +3356,7 @@ p {
     margin-bottom: 1em;
     label {
       font-size: 1em;
-      width:23%;
+      width: 23%;
     }
   }
   .search-products-select {
@@ -3801,31 +3854,40 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
+  #login-form-section,
   #register-form-section,
   #contact-form-section {
     width: 91%;
     margin: 1em auto;
     float: none;
   }
+
+  #login-form,
   #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+
+  #login-form-fields,
   #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+
+  #login-form-fields .login-form-item,
   #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+
+  .login-form-item > label,
   .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
-  #reg-password,
+  #password,
   #username,
   #email {
     width: 98%;
@@ -3833,13 +3895,7 @@ p {
   #message {
     width: 98%;
   }
-  #reg-password:focus,
-  #username:focus,
-  #emai:focus,
-  #message:focus {
-    background-color: $color-white-bg;
-    outline: 0;
-  }
+
   #submit {
     font-size: 1.2em;
     height: 45px;
@@ -3885,7 +3941,7 @@ p {
     margin-bottom: 1em;
     label {
       font-size: 1em;
-      width:26%;
+      width: 26%;
     }
   }
   .search-products-select {
@@ -4385,31 +4441,36 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
+  #login-form-section,
   #register-form-section,
   #contact-form-section {
     width: 91%;
     margin: 1em auto;
     float: none;
   }
+  #login-form,
   #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+  #login-form-fields,
   #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+  #login-form-fields .login-form-item,
   #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .login-form-item > label,
   .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
-  #reg-password,
+  #password,
   #username,
   #email {
     width: 98%;
@@ -4417,13 +4478,7 @@ p {
   #message {
     width: 98%;
   }
-  #reg-password:focus,
-  #username:focus,
-  #emai:focus,
-  #message:focus {
-    background-color: $color-white-bg;
-    outline: 0;
-  }
+
   #submit {
     font-size: 1.2em;
     height: 45px;
@@ -4469,7 +4524,7 @@ p {
     margin-bottom: 1em;
     label {
       font-size: 1em;
-      width:30%;
+      width: 30%;
     }
   }
   .search-products-select {
@@ -4972,31 +5027,36 @@ p {
     font-size: 0.9em;
     line-height: 1.6em;
   }
+  #login-form-section,
   #register-form-section,
   #contact-form-section {
     width: 91%;
     margin: 1em auto;
     float: none;
   }
+  #login-form,
   #register-form,
   #contact-form {
     padding: 0;
     width: 100%;
   }
+  #login-form-fields,
   #register-form-fields,
   #contact-form-fields {
     height: auto;
   }
+  #login-form-fields .login-form-item,
   #register-form-fields .register-form-item,
   #contact-form-fields .contact-form-item {
     margin: 0 0 1em;
     display: flex;
   }
+  .login-form-item > label,
   .register-form-item > label,
   .contact-form-item > label {
     font-size: 1em;
   }
-  #reg-password,
+  #password,
   #username,
   #email {
     width: 98%;
@@ -5004,13 +5064,7 @@ p {
   #message {
     width: 98%;
   }
-  #reg-password:focus,
-  #username:focus,
-  #emai:focus,
-  #message:focus {
-    background-color: $color-white-bg;
-    outline: 0;
-  }
+
   #submit {
     font-size: 1.2em;
     height: 45px;
@@ -5056,7 +5110,7 @@ p {
     margin-bottom: 1em;
     label {
       font-size: 1em;
-      width:35%;
+      width: 35%;
     }
   }
   .search-products-select {

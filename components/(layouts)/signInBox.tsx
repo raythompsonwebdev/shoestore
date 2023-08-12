@@ -1,7 +1,6 @@
 import { signIn, signOut, useSession } from 'next-auth/react'
 import Link from 'next/link'
 
-
 export default function signInBox() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { data: session, status } = useSession()
@@ -24,11 +23,7 @@ export default function signInBox() {
           >
             Login
           </Link>
-          <Link
-            href="/profile"
-            className="signin-box-link"
-            title=""
-          >
+          <Link href="/profile" className="signin-box-link" title="">
             Account
           </Link>
           <Link href="/cart" className="signin-box-link" title="">
@@ -49,11 +44,7 @@ export default function signInBox() {
           >
             Log Out
           </Link>
-          <Link
-            href="/profile"
-            className="signin-box-link"
-            title=""
-          >
+          <Link href="/profile" className="signin-box-link" title="">
             Account
           </Link>
           <Link href="/cart" className="signin-box-link" title="">

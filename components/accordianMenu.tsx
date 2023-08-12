@@ -2,8 +2,7 @@
 import { Accordion } from 'react-bootstrap'
 import { AccordianType } from '../types'
 
-const AccordianMenu = (props: { accordianData : AccordianType[]}) => {
-
+const AccordianMenu = (props: { accordianData: AccordianType[] }) => {
   const { accordianData } = { ...props }
 
   return (

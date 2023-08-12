@@ -39,12 +39,11 @@ export const authOptions: NextAuthOptions = {
         }
 
         // confirm whether password entered matches user password stored in db.
-        if(credentials?.password !== undefined){
-
+        if (credentials?.password !== undefined) {
           const isPasswordCorrect = await comparePassword(
-              credentials.password,
-              user.password
-            )
+            credentials.password,
+            user.password
+          )
           // if (isPasswordCorrect) {
           //   const accessToken = signJwtAccessToken(
           //     {
@@ -65,7 +64,7 @@ export const authOptions: NextAuthOptions = {
         }
         // check if user password and email sumitted match user email and passowrd saved in database.
         //if (user.email === credentials?.email && isPasswordCorrect) {
-        if (user.email === credentials?.email ) {
+        if (user.email === credentials?.email) {
           return user
         } else {
           return null
@@ -86,18 +85,18 @@ export const authOptions: NextAuthOptions = {
   },
 
   callbacks: {
-    jwt: async ({token, account, user})=> {
+    jwt: async ({ token, account, user }) => {
       if (account) {
-        token.accessToken = account.access_token;
+        token.accessToken = account.access_token
       }
-      return {...token, ...user};
+      return { ...token, ...user }
     },
-    session: async ({session, token}) => {
-      session.user = token;
+    session: async ({ session, token }) => {
+      session.user = token
       return {
         ...session,
-      };
-    }
+      }
+    },
   },
   pages: {
     signIn: '/login',

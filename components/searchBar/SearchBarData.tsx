@@ -1,41 +1,39 @@
-import {SearchBarType} from '../../types/index'
+import { SearchBarType } from '../../types/index'
 
 export const SelectGender = (props: {
   aria: string
-  genderHandler: (event: { target: {value :string} }) => void;
+  genderHandler: (event: { target: { value: string } }) => void
   genders: SearchBarType
   name: string
   value: string
 }) => {
-
   const { aria, genderHandler, genders, name, value } = props
 
   const { options } = genders
 
-
-  return options && (
-    <select
-      name={name}
-      value={value}
-      onChange={genderHandler}
-      aria-labelledby={aria}
-      className="search-category-input"
-    >
-      {options?.map(
-        (option) => (
+  return (
+    options && (
+      <select
+        name={name}
+        value={value}
+        onChange={genderHandler}
+        aria-labelledby={aria}
+        className="search-category-input"
+      >
+        {options?.map((option) => (
           <option value={option.value} key={option.id}>
             {option.displayValue}
           </option>
-        )
-      )}
-    </select>
+        ))}
+      </select>
+    )
   )
 }
 
 export const SelectStyle = (props: {
   aria: string
   name: string
-  styleHandler: (event: { target: {value :string} }) => void;
+  styleHandler: (event: { target: { value: string } }) => void
   styles: SearchBarType
   value: string
 }) => {
@@ -50,13 +48,11 @@ export const SelectStyle = (props: {
       aria-labelledby={aria}
       className="search-category-input"
     >
-      {options?.map(
-        (option) => (
-          <option value={option.value} key={option.id}>
-            {option.displayValue}
-          </option>
-        )
-      )}
+      {options?.map((option) => (
+        <option value={option.value} key={option.id}>
+          {option.displayValue}
+        </option>
+      ))}
     </select>
   )
 }
@@ -64,7 +60,7 @@ export const SelectStyle = (props: {
 export const SelectSize = (props: {
   aria: string
   name: string
-  sizeHandler: (event: { target: {value :string} }) => void;
+  sizeHandler: (event: { target: { value: string } }) => void
   sizes: SearchBarType
   value: string
 }) => {
@@ -79,28 +75,25 @@ export const SelectSize = (props: {
       aria-labelledby={aria}
       className="search-category-input"
     >
-      {options?.map(
-        (option) => (
-          <option value={option.value} key={option.id}>
-            {option.displayValue}
-          </option>
-        )
-      )}
+      {options?.map((option) => (
+        <option value={option.value} key={option.id}>
+          {option.displayValue}
+        </option>
+      ))}
     </select>
   )
 }
 
 export const SelectColor = (props: {
   aria: string
-  colorHandler: (event: { target: {value :string} }) => void;
+  colorHandler: (event: { target: { value: string } }) => void
   colors: SearchBarType
   name: string
   value: string
 }) => {
-
   const { aria, colorHandler, colors, name, value } = props
 
- const { options }= colors
+  const { options } = colors
 
   return (
     <select
@@ -110,15 +103,11 @@ export const SelectColor = (props: {
       aria-labelledby={aria}
       className="search-category-input"
     >
-      {options?.map(
-        (option) => (
-          <option value={option.value} key={option.id}>
-            {option.displayValue}
-          </option>
-        )
-      )}
+      {options?.map((option) => (
+        <option value={option.value} key={option.id}>
+          {option.displayValue}
+        </option>
+      ))}
     </select>
   )
 }
-
-

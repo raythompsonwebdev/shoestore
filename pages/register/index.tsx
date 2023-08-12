@@ -23,7 +23,7 @@ const Register = () => {
           <br />
           <br />
 
-          <section id="contact-form-section">
+          <section id="register-form-section">
             <RegisterForm />
           </section>
 

@@ -2,8 +2,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 interface ApiProducts {
-  product:[];
-  accordian:[];
+  product: []
+  accordian: []
 }
 
 // Define our single API slice object
@@ -14,13 +14,13 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
   // The "endpoints" represent operations and requests for this server
   tagTypes: ['Products', 'Accordian'],
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     // The `getPosts` endpoint is a "query" operation that returns data
-    getProducts: builder.query<ApiProducts, object|void>({
+    getProducts: builder.query<ApiProducts, object | void>({
       // The URL for the request is '/fakeApi/posts'
-      query: () => '/productsdata'
-    })
-  })
+      query: () => '/productsdata',
+    }),
+  }),
 })
 
 // Export the auto-generated hook for the `getPosts` query endpoint

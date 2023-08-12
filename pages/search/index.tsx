@@ -2,27 +2,27 @@
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 import Image from 'next/image'
-import {ProductType} from '../../types/index'
-import { useAppSelector } from '../../app/store';
-import { selectAllProducts} from '../../features/products/productSlice'
-import { formatPrice} from '../../helpers/index'
-import { useRouter } from 'next/router';
+import { ProductType } from '../../types/index'
+import { useAppSelector } from '../../app/store'
+import { selectAllProducts } from '../../features/products/productSlice'
+import { formatPrice } from '../../helpers/index'
+import { useRouter } from 'next/router'
 
 const SearchProduct = () => {
-
-  const router = useRouter();
-  const { colorVal, sizeVal, genderVal, styleVal } = router.query;
+  const router = useRouter()
+  const { colorVal, sizeVal, genderVal, styleVal } = router.query
 
   const searchProducts = useAppSelector(selectAllProducts)
 
   //filter product from the products array
-  const products = searchProducts.filter(
-    (product :ProductType) =>
-      product.gender === genderVal ||
-      product.style === styleVal ||
-      product.size === sizeVal ||
-      product.color === colorVal  ? product: false
-  );
+  const products = searchProducts.filter((product: ProductType) =>
+    product.gender === genderVal ||
+    product.style === styleVal ||
+    product.size === sizeVal ||
+    product.color === colorVal
+      ? product
+      : false
+  )
 
   //const products : ProductType[] = [];
 
@@ -78,6 +78,5 @@ const SearchProduct = () => {
     </Layout>
   )
 }
-
 
 export default SearchProduct

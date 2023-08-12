@@ -2,52 +2,20 @@ import { SetStateAction, useState } from 'react'
 import { useRouter } from 'next/router'
 
 export default function RegisterForm() {
-  const [username, setUserName] = useState<string>(' ')
-  const [useremail, setEmail] = useState<string>(' ')
-  const [password, setPassword] = useState<string>(' ')
+  const [username, setUserName] = useState<string>('')
+  const [useremail, setEmail] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
   //const [error, setError] = useState<string>(' ')
 
   const router = useRouter()
 
   const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
     const { value } = e.target
-    // const { srcElement }: any = e;
-    // // check if input matches pattern
-    // if (
-    //   srcElement.validity.patternMismatch ||
-    //   srcElement.validity.tooShort ||
-    //   srcElement.validity.tooLong
-    // ) {
-    //   //error.classList.remove("hide-error");
-    //   //error.classList.add("show-error");
-    //   setError("Name must not contain numbers or be less than 3 characters.");
-    //   //srcElement.classList.add("dirty");
-    // } else {
-    //   //error.classList.add("hide-error");
-    //   //error.classList.remove("show-error");
-    //   setError(" ");
-    //   // srcElement.classList.add("dirty");
-    // }
     setUserName(value)
   }
 
   const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
     const { value } = e.target
-    // regex to detect valid email
-    //const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-
-    // check if input matches pattern
-    // if (!emailRegExp.test(value)) {
-    //   //error.classList.add("show-error");
-    //   //error.classList.remove("hide-error");
-    //   setError('Please provide a valid e-mail address!')
-    //   //srcElement.classList.add("dirty");
-    // } else {
-    //   // error.classList.add("hide-error");
-    //   // error.classList.remove("show-error");
-    //   setError(' ')
-    //   // srcElement.classList.add("dirty");
-    //}
     setEmail(value)
   }
 
@@ -83,12 +51,12 @@ export default function RegisterForm() {
   }
 
   return (
-    <form id="contact-form" onSubmit={submit}>
+    <form id="register-form" onSubmit={submit}>
       {/* <span id="form-error" className="hide-error">
         {error ? error : ''}
       </span> */}
-      <ul id="contact-form-fields">
-        <li className="contact-form-item">
+      <ul id="register-form-fields">
+        <li className="register-form-item">
           <label htmlFor="username">
             Name:&#32;
             <input
@@ -97,13 +65,15 @@ export default function RegisterForm() {
               id="username"
               value={username}
               onChange={handleUserName}
-              required
+              minLength={4}
+              maxLength={30}
               pattern="^[a-zA-Z\s]+$"
+              required={true}
               aria-describedby="form-error"
             />
           </label>
         </li>
-        <li className="contact-form-item">
+        <li className="register-form-item">
           <label htmlFor="email">
             E-mail:&#32;
             <input
@@ -112,12 +82,15 @@ export default function RegisterForm() {
               id="useremail"
               value={useremail}
               onChange={handleEmails}
-              required
+              required={true}
+              minLength={10}
+              maxLength={50}
+              // pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i"
               aria-describedby="form-error"
             />
           </label>
         </li>
-        <li className="contact-form-item">
+        <li className="register-form-item">
           <label htmlFor="password">
             Password:&#32;
             <input
@@ -126,12 +99,14 @@ export default function RegisterForm() {
               onChange={handlePassword}
               name="password"
               id="password"
-              required
+              required={true}
+              minLength={4}
+              maxLength={20}
               aria-describedby="form-error"
             />
           </label>
         </li>
-        <li className="contact-form-item">
+        <li className="register-form-item">
           <label htmlFor="submit">
             <input type="submit" value="Send" id="submit" name="submit" />
           </label>

@@ -6,7 +6,6 @@
 
 Web application is based on a photoshop templates downloaded from website [php.jabber.com](https://www.phpjabbers.com/). mockup of online shoe store selling mens, womens and childrens shoes and accessories.
 
-
 ## Features
 
 - Filtered search.
@@ -37,13 +36,14 @@ Web application is based on a photoshop templates downloaded from website [php.j
 - [stylelint](https://stylelint.io/)
 - [redux toolkit](https://redux-toolkit.js.org/)-
 
-
 Install next, react and react-dom :
 
 `npm install next react react-dom`
+
 ## or
 
 `yarn add next react react-dom`
+
 ## or
 
 `pnpm add next react react-dom`
@@ -59,6 +59,7 @@ Open package.json and add the following scripts:
 }
 
 ```
+
 `npm run dev`
 
 Runs next dev to start Next.js in development mode.
@@ -78,6 +79,7 @@ Runs next start to start a Next.js production server
 `npm run lint`
 
 Runs next lint to set up Next.js' built-in ESLint configuration
+
 ## Learn More
 
 You can learn more in the [Next.js documentation](https://nextjs.org/docs/getting-started).

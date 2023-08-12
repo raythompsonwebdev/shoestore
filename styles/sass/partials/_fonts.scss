@@ -4,7 +4,9 @@
   font-weight: 400;
   font-display: swap;
   src: url('/font/OldStandard/old-standard-tt-v7-latin-regular.eot');
-  src: local('Old Standard TT Regular'), local('OldStandardTT-Regular'),
+  src:
+    local('Old Standard TT Regular'),
+    local('OldStandardTT-Regular'),
     url('/font/OldStandard/old-standard-tt-v7-latin-regular.eot?#iefix')
       format('embedded-opentype'),
     url('/font/OldStandard/old-standard-tt-v7-latin-regular.woff2')
@@ -23,7 +25,9 @@
   font-weight: 700;
   font-display: swap;
   src: url('/font/OldStandard/old-standard-tt-v7-latin-700.eot');
-  src: local('Old Standard TT Bold'), local('OldStandardTT-Bold'),
+  src:
+    local('Old Standard TT Bold'),
+    local('OldStandardTT-Bold'),
     url('/font/OldStandard/old-standard-tt-v7-latin-700.eot?#iefix')
       format('embedded-opentype'),
     url('/font/OldStandard/old-standard-tt-v7-latin-700.woff2') format('woff2'),

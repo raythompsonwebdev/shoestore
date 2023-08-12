@@ -1,41 +1,41 @@
 import type { RootState } from '../../app/store'
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import axios from 'axios';
-import {SelectBarType} from '../../types/index'
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import axios from 'axios'
+import { SelectBarType } from '../../types/index'
 
 export interface SelectBarState {
-  selectdataItems: SelectBarType[];
-  status: string;
-  error: string | undefined | null;
+  selectdataItems: SelectBarType[]
+  status: string
+  error: string | undefined | null
 }
 
-const initialState : SelectBarState = {
-  selectdataItems: [] ,
+const initialState: SelectBarState = {
+  selectdataItems: [],
   status: 'idle', //'idle' | 'loading' | 'succeeded' | 'failed'
-  error: null
-} ;
+  error: null,
+}
 
-const url = '/api/selectdata';
+const url = '/api/selectdata'
 
 export const fetchSelectData = createAsyncThunk(
   'selectdata/fetchSelectData',
   async (name, thunkAPI) => {
     try {
-      const resp = await axios.get(url);
-      return resp.data.selectresults;
+      const resp = await axios.get(url)
+      return resp.data.selectresults
     } catch (error) {
-      return thunkAPI.rejectWithValue('something went wrong');
+      return thunkAPI.rejectWithValue('something went wrong')
     }
   }
-);
+)
 
 export const selectdataSlice = createSlice({
-  name: "selectdata",
+  name: 'selectdata',
   initialState,
   reducers: {
-    selectdataAdded: (state , action: PayloadAction<SelectBarType>) => {
+    selectdataAdded: (state, action: PayloadAction<SelectBarType>) => {
       console.log(state)
-      state.selectdataItems.push(action.payload);
+      state.selectdataItems.push(action.payload)
     },
   },
   extraReducers: (builder) => {
@@ -43,22 +43,25 @@ export const selectdataSlice = createSlice({
       .addCase(fetchSelectData.pending, (state) => {
         state.status = 'loading'
       })
-      .addCase(fetchSelectData.fulfilled, (state, action : PayloadAction<SelectBarType[]>) => {
-        state.status = 'succeeded'
-        state.selectdataItems = action.payload ;
-      })
+      .addCase(
+        fetchSelectData.fulfilled,
+        (state, action: PayloadAction<SelectBarType[]>) => {
+          state.status = 'succeeded'
+          state.selectdataItems = action.payload
+        }
+      )
       .addCase(fetchSelectData.rejected, (state, action) => {
         state.status = 'failed'
         state.error = action.error.message
-      });
+      })
   },
-});
+})
 
-export const getSelectData = (state: RootState ) => state.selectdata.selectdataItems;
-export const getSelectDataStatus = (state: RootState ) => state.selectdata.status;
-export const getSelectDataError = (state: RootState ) => state.selectdata.error;
+export const getSelectData = (state: RootState) =>
+  state.selectdata.selectdataItems
+export const getSelectDataStatus = (state: RootState) => state.selectdata.status
+export const getSelectDataError = (state: RootState) => state.selectdata.error
 
+export const { selectdataAdded } = selectdataSlice.actions
 
-export const { selectdataAdded } = selectdataSlice.actions;
-
-export default selectdataSlice.reducer;
+export default selectdataSlice.reducer

@@ -13,9 +13,12 @@ export const loginUser = async ({ email, password }: LoginUserParams) => {
 }
 
 export const formatPrice = (price: number) => {
-  if(!price){
-    return "number is needed"
+  if (!price) {
+    return 'number is needed'
   }
-    const result = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(price);
-    return result;
+  const result = new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP',
+  }).format(price)
+  return result
 }

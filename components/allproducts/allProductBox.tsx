@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
-import { formatPrice} from '../../helpers/index'
+import { formatPrice } from '../../helpers/index'
 
 const productBox = (props: {
   imgUrl: string

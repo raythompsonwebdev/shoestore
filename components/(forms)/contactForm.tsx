@@ -1,9 +1,9 @@
 import { SetStateAction, useState } from 'react'
 
 export default function ContactForm() {
-  const [username, setUserName] = useState<string>(' ')
-  const [email, setEmail] = useState<string>(' ')
-  const [comments, setComments] = useState<string>(' ')
+  const [username, setUserName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [comments, setComments] = useState<string>('')
 
   const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
     setUserName(e.target.value)
@@ -19,6 +19,8 @@ export default function ContactForm() {
 
   const submit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
+
+    console.log(username, email, comments)
   }
 
   return (
@@ -46,7 +48,7 @@ export default function ContactForm() {
               id="useremail"
               value={email}
               onChange={handleEmails}
-              required
+              required={true}
             />
           </label>
         </li>
@@ -59,6 +61,8 @@ export default function ContactForm() {
               name="message"
               id="message"
               rows={10}
+              minLength={10}
+              maxLength={250}
             />
           </label>
         </li>

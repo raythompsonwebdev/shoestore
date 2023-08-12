@@ -1,16 +1,14 @@
 //import { SetStateAction } from 'react'
 
-type LikesType ={
-  likes:number;
-  prodid?:string;
-  productName:string | string[] | undefined;
-  setProductInfo: ( likes: {likes:number}) => void;
+type LikesType = {
+  likes: number
+  prodid?: string
+  productName: string | string[] | undefined
+  setProductInfo: (likes: { likes: number }) => void
 }
 
-const LikesSection = (props:LikesType ) => {
-
+const LikesSection = (props: LikesType) => {
   const { likes, productName, setProductInfo } = { ...props }
-
 
   const likeProduct = async () => {
     try {
@@ -25,7 +23,7 @@ const LikesSection = (props:LikesType ) => {
 
       setProductInfo({ likes: result.likes })
 
-      return result;
+      return result
     } catch (err) {
       console.error('not working : ' + err)
     }
