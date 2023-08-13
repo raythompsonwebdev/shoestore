@@ -1,13 +1,96 @@
-import { SetStateAction, useState } from 'react'
+import { SetStateAction, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 export default function RegisterForm() {
   const [username, setUserName] = useState<string>('')
   const [useremail, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
-  //const [error, setError] = useState<string>(' ')
+  const [error, setError] = useState<string>('')
 
   const router = useRouter()
+
+  useEffect(() => {
+
+    const form = document.querySelectorAll('#register-form input') ;
+    const formError = document.querySelector('#form-error');
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const formElements : any = Array.from(form)
+
+    formElements[0].addEventListener('focusout',(e: {
+      preventDefault: () => void;
+      target: HTMLInputElement;
+    }): void => {
+      e.preventDefault();
+
+
+      if(formError?.textContent !== ""){
+        setError("")
+      }
+
+
+      const {target} = e;
+
+      if(target.validity.tooShort === true ){
+        setError("Full name should be at least 4 characters long")
+      }
+
+      if(target.validity.tooLong === true ){
+        setError("Full name should be less than 30 characters")
+      }
+
+      if(target.validity.patternMismatch === true ){
+        setError("No Numbers or Special Characters")
+      }
+    })
+
+    formElements[1].addEventListener('focusout',(e: {
+      preventDefault: () => void;
+      target: HTMLInputElement;
+    }): void =>{
+      e.preventDefault();
+
+      if(formError?.textContent !== ""){
+        setError("")
+      }
+
+      const {target} = e;
+
+      if(target.validity.tooShort === true ){
+        setError("Full email should be more than 4 characters long")
+      }
+
+      if(target.validity.tooLong === true ){
+        setError("Full name should be less than 50 characters")
+      }
+
+    })
+
+    formElements[2].addEventListener('focusout',(e: {
+      preventDefault: () => void;
+      target: HTMLInputElement;
+    }): void =>{
+      e.preventDefault();
+
+      if(formError?.textContent !== ""){
+        setError("")
+      }
+
+      const {target} = e;
+
+      if(target.validity.tooShort === true ){
+        setError("Full name should be at least 12 characters long")
+      }
+
+      if(target.validity.tooLong === true ){
+        setError("Full name should be less than 25 characters")
+      }
+
+    })
+
+
+  }, [])
+
 
   const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
     const { value } = e.target
@@ -55,9 +138,10 @@ export default function RegisterForm() {
 
   return (
     <form id="register-form" onSubmit={submit}>
-      {/* <span id="form-error" className="hide-error">
+      {/* <span id="form-error" className="hide-error"> */}
+      <span id="form-error" >
         {error ? error : ''}
-      </span> */}
+      </span>
       <ul id="register-form-fields">
         <li className="register-form-item">
           <label htmlFor="username">
@@ -69,8 +153,8 @@ export default function RegisterForm() {
               value={username}
               onChange={handleUserName}
               minLength={4}
-              maxLength={30}
-              pattern="^[a-zA-Z\s]+$"
+              maxLength={29}
+              pattern="^[a-zA-Z]+$"
               required={true}
               aria-describedby="form-error"
             />
@@ -85,9 +169,9 @@ export default function RegisterForm() {
               id="useremail"
               value={useremail}
               onChange={handleEmails}
+              minLength={4}
+              maxLength={30}
               required={true}
-              minLength={10}
-              maxLength={50}
               // pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i"
               aria-describedby="form-error"
             />
@@ -102,9 +186,9 @@ export default function RegisterForm() {
               onChange={handlePassword}
               name="password"
               id="password"
+              minLength={12}
+              maxLength={25}
               required={true}
-              minLength={6}
-              maxLength={20}
               aria-describedby="form-error"
             />
           </label>

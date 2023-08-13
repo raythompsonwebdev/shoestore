@@ -12,6 +12,8 @@ const UserSchema = new Schema({
     type: String,
     unique: true,
     required: [true, 'Email is required'],
+    minLength: [4, 'Full name should be at least 2 characters long'],
+    maxLength: [50, 'Full name should be less than 30 characters'],
     lowercase: true,
     trim: true,
     validate: (value: string) => {
@@ -21,6 +23,8 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: [true, 'Password is required'],
+    minLength: [12, 'Full name should be at least 12 characters long'],
+    maxLength: [25, 'Full name should be less than 25 characters'],
     select: false,
   },
   date: {
