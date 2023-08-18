@@ -1,8 +1,7 @@
-import { Key } from 'react'
 import ProductBox from './specialsProductBox'
-import { FilteredData } from '../../types/index'
+import { ProductType } from '../../types/index'
 
-const SpecialsProductBoxes = (props: { productData: FilteredData[] }) => {
+const SpecialsProductBoxes = (props: { productData: ProductType[] }) => {
   const { productData } = props
 
   const Product =
@@ -10,14 +9,7 @@ const SpecialsProductBoxes = (props: { productData: FilteredData[] }) => {
       ? productData
           .slice(0, 20)
           .map(
-            (item: {
-              _id: Key | null | undefined
-              name: string
-              imgUrl: string
-              price: number
-              cartImg: string
-              style: string
-            }) => (
+            (item :ProductType) => (
               <ProductBox
                 key={item._id}
                 name={item.name}

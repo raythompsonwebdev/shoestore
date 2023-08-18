@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const CartIcon = (props:{src:string}) => {
+const CartIcon = (props:{src:string , alt:string, cname:string}) => {
 
   const{src} =props
   return (

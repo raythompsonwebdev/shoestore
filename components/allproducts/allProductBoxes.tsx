@@ -1,13 +1,13 @@
 import React from 'react'
 import ProductBox from './allProductBox'
-import { FilteredData } from '../../types/index'
+import { ProductType } from '../../types/index'
 
-const ProductBoxes = (props: { productData: FilteredData[] }) => {
+const ProductBoxes = (props: { productData: ProductType[] }) => {
   const { productData } = props
 
   const Product = productData
     .slice(0, 16)
-    .map((item: FilteredData) => (
+    .map((item: ProductType) => (
       <ProductBox
         key={item._id}
         name={item.name}

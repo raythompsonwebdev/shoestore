@@ -6,30 +6,30 @@ export interface IUser {
   role?: string
 }
 export interface LoginUserParams {
-  email: string
-  password: string
+  email: string;
+  password: string;
 }
 
 export interface FilteredData {
-  [x: string]: string | number
-  _id: string
-  prodId: number
-  name: string
-  style: string
-  color: string
-  size: string
-  gender: string
-  imgUrl: string
-  price: number
-  cartImg: string
-  text: string
-  all: string
-  likes: number
-  qty: number
+  [x: string]: string | number;
+  _id: string;
+  prodId: number;
+  name: string;
+  style: string;
+  color: string;
+  size: string;
+  gender: string ;
+  imgUrl: string;
+  price: number;
+  cartImg: string;
+  text: string;
+  all: string;
+  likes: number;
+  qty: number;
 }
 
 export interface ProductType {
-  [x: string]: string | number
+  [x: string]: string | number | string[] | undefined
   _id: string
   prodId: number
   name: string
@@ -77,6 +77,7 @@ export interface SelectBarType {
 }
 
 export interface CartItemType {
+  [x: string]: string | number | string[] | undefined
   all: string
   cartImg: string
   color: string

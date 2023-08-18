@@ -4,12 +4,21 @@ import {
   type PayloadAction,
 } from '@reduxjs/toolkit'
 import axios from 'axios'
+import type { RootState } from '../../app/store'
+import {CartItemType} from '../../types/index'
+
+export interface CartItemState {
+  cartItems: Array<CartItemType>
+  qty: number,
+  total: number,
+  isLoading: boolean
+}
 
 const url = '/api/cartitems'
 
-const initialState = {
+const initialState : CartItemState = {
   cartItems: [],
-  qty: 21,
+  qty: 0,
   total: 0,
   isLoading: true,
 }
@@ -30,30 +39,33 @@ export const getCartItems = createAsyncThunk(
 )
 
 const cartSlice = createSlice({
-  name: 'cart',
+  name: 'cartItems',
   initialState,
   reducers: {
+    addToCart: (state, action : PayloadAction<CartItemType>) => {
+      state.cartItems = [action.payload, ...state.cartItems]
+    },
     clearCart: (state) => {
       state.cartItems = []
     },
     removeItem: (state, action: PayloadAction<number>) => {
       const itemId = action.payload
       state.cartItems = state.cartItems.filter(
-        (item: { prodId: number }) => item.prodId !== itemId
+        (item) => item.prodId !== itemId
       )
     },
-    increase: (state, { payload }) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    increase: (state, action: PayloadAction<number>) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const cartItem: any = state.cartItems.find(
-        (item: { prodId: number }) => item.prodId === payload.prodId
+        (item: { prodId: number }) => item.prodId === action.payload
       )
       console.log(cartItem)
-      cartItem.qty = cartItem?.qty + 1
+      cartItem.qty = cartItem.qty + 1
     },
     decrease: (state, { payload }) => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const cartItem: any = state.cartItems.find(
-        (item: { prodId: number }) => item.prodId === payload.prodId
+        (item: { prodId: number }) => item.prodId === payload
       )
       cartItem.qty = cartItem?.qty - 1
     },
@@ -73,7 +85,7 @@ const cartSlice = createSlice({
       .addCase(getCartItems.pending, (state) => {
         state.isLoading = true
       })
-      .addCase(getCartItems.fulfilled, (state, action) => {
+      .addCase(getCartItems.fulfilled, (state, action: PayloadAction<Array<CartItemType>>) => {
         state.isLoading = false
         state.cartItems = action.payload
       })
@@ -84,10 +96,10 @@ const cartSlice = createSlice({
   },
 })
 
-//export const selectAllProducts = (state) => state.cartItems.cartItems;
+export const selectAllCartItems = (state: RootState) => state.cartItems;
 
 // console.log(cartSlice);
-export const { clearCart, removeItem, increase, decrease, calculateTotals } =
+export const { addToCart, clearCart, removeItem, increase, decrease, calculateTotals } =
   cartSlice.actions
 
 export default cartSlice.reducer

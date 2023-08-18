@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-const ProductImage = (props:{src:string, name:string}) => {
+const ProductImage = (props:{src:string, alt:string , cname:string}) => {
 
-  const{src, name} =props
+  const{src, alt, cname} =props
   return (
     <Image
-        className="product-box-img"
+        className={cname}
         src={src}
-        alt={name}
+        alt={alt}
         width={175}
         height={150}
         priority={true}

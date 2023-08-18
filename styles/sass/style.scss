@@ -430,7 +430,7 @@ body {
   justify-content: space-evenly;
   align-items: flex-start;
 }
-#product-page-img {
+.product-page-img {
   width: 175px;
   display: block;
   height: auto;
@@ -450,6 +450,15 @@ body {
   text-transform: uppercase;
   margin: 0;
   text-indent: 0.2em;
+  a[href^="/product/"]{
+    display:inline-block;
+    margin:0 ;
+    padding:0;
+    img{
+      margin:0;
+    }
+
+  }
 }
 #product-page-price {
   height: auto;
@@ -468,11 +477,13 @@ body {
   transform: rotate(360deg);
   cursor: pointer;
 }
+#addtocart-section,
 #upvotes-section {
   margin: 1em 0;
 }
 
 /* Upvotes */
+#addtocart-section > .addtocart-section-btn,
 #upvotes-section > .upvotes-section-btn {
   font-family: $font-list;
   margin: 0;
@@ -486,6 +497,8 @@ body {
   border: 0;
   float: right;
 }
+
+#addtocart-section > .addtocart-section-btn:hover,
 #upvotes-section > .upvotes-section-btn:hover {
   background-color: $color-white;
   color: $color-orange;
@@ -493,6 +506,8 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
+
+#addtocart-section > .addtocart-section-text,
 #upvotes-section > .upvotes-section-text {
   line-height: 50px;
   font-size: 0.85em;
@@ -1423,7 +1438,7 @@ p {
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  #product-page-img {
+  .product-page-img {
     padding: 2em;
   }
   #product-page-caption {
@@ -2033,7 +2048,7 @@ p {
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  #product-page-img {
+  .product-page-img {
     padding: 2em;
   }
   #product-page-caption {
@@ -2633,7 +2648,7 @@ p {
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  #product-page-img {
+  .product-page-img {
     padding: 2em;
   }
   #product-page-caption {
@@ -3219,7 +3234,7 @@ p {
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  #product-page-img {
+  .product-page-img {
     padding: 2em;
   }
   #product-page-caption {
@@ -3806,7 +3821,7 @@ p {
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  #product-page-img {
+  .product-page-img {
     padding: 2em;
   }
   #product-page-caption {
@@ -4393,7 +4408,7 @@ p {
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  #product-page-img {
+  .product-page-img {
     padding: 3em;
   }
   #product-page-caption {
@@ -4979,7 +4994,7 @@ p {
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  #product-page-img {
+  .product-page-img {
     padding: 2em;
   }
   #product-page-caption {

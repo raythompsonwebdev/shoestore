@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-// import React from 'react'
-//import Link from 'next/link'
 import {
-  SelectGender,
-  SelectColor,
   SelectStyle,
+  SelectColor,
+  SelectGender,
   SelectSize,
 } from './SearchBarData'
 import { SearchBarType } from '../../types/index'
@@ -16,14 +14,15 @@ type SearchBarProps = {
 }
 
 const SearchBar = (props: SearchBarProps) => {
-  const [genderVal, setGenderVal] = useState<string>('')
   const [sizeVal, setSizeVal] = useState<string>('')
-  const [styleVal, setStyleVal] = useState<string>('')
   const [colorVal, setColorVal] = useState<string>('')
+  const [genderVal, setGenderVal] = useState<string>('')
+  const [styleVal, setStyleVal] = useState<string>('')
+
 
   const { labelname, searchData } = props
 
-  const [gender, style, size, color] = searchData
+  const [size, color, gender, style ] = searchData
 
   const genderHandler = (event: { target: { value: string } }): void => {
     const { target } = event
@@ -59,17 +58,21 @@ const SearchBar = (props: SearchBarProps) => {
     ) as HTMLFormElement
     //get form data
     const formData: FormData = new FormData(SearchFormData)
+
     //get url query params
-    const style: FormDataEntryValue | null = formData.get('styleVal')
-    const gender: FormDataEntryValue | null = formData.get('genderVal')
-    const color: FormDataEntryValue | null = formData.get('colorVal')
     const size: FormDataEntryValue | null = formData.get('sizeVal')
+    const color: FormDataEntryValue | null = formData.get('colorVal')
+    const gender: FormDataEntryValue | null = formData.get('genderVal')
+    const style: FormDataEntryValue | null = formData.get('styleVal')
+
+
+
+
+console.log(formData.get('styleVal'))
 
     // send data to search results page as url query params -query string
     router.push(
-      `/search?genderVal=${gender ?? ''}&styleVal=${style ?? ''}&sizeVal=${
-        size ?? ''
-      }&colorVal=${color ?? ''}`
+      `/search?genderVal=${gender}&styleVal=${style}&sizeVal=${size}&colorVal=${color}`
     )
     return false
   }
@@ -89,22 +92,6 @@ const SearchBar = (props: SearchBarProps) => {
           >
             {labelname}
           </legend>
-          <SelectGender
-            name="genderVal"
-            genders={gender || ''}
-            value={genderVal}
-            genderHandler={genderHandler}
-            aria={aria}
-          />
-
-          <SelectStyle
-            name="styleVal"
-            styles={style || ''}
-            value={styleVal}
-            styleHandler={styleHandler}
-            aria={aria}
-          />
-
           <SelectSize
             name="sizeVal"
             sizes={size || ''}
@@ -112,23 +99,27 @@ const SearchBar = (props: SearchBarProps) => {
             sizeHandler={sizeHandler}
             aria={aria}
           />
-          <SelectColor
+           <SelectColor
             name="colorVal"
             colors={color || ''}
             value={colorVal}
             colorHandler={colorHandler}
             aria={aria}
           />
-          {/* <Link
-            href={{
-              pathname: '/search',
-              query: { resultArray },
-            }}
-            className="search-category-btn"
-            type="submit"
-          >
-            Go
-          </Link> */}
+          <SelectGender
+            name="genderVal"
+            genders={gender || ''}
+            value={genderVal}
+            genderHandler={genderHandler}
+            aria={aria}
+          />
+          <SelectStyle
+            name="styleVal"
+            styles={style || ''}
+            value={styleVal}
+            styleHandler={styleHandler}
+            aria={aria}
+          />
           <input type="submit" className="search-category-btn" value="GO" />
         </fieldset>
       </form>

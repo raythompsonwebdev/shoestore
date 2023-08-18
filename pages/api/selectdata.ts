@@ -10,7 +10,6 @@ export default async function productHandler(
     return
   }
   try {
-    //await clientPromise
     const client = await clientPromise
     const db = client.db('shoestore')
 

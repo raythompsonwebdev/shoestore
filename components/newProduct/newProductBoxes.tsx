@@ -1,4 +1,4 @@
-import React, { Key } from 'react'
+import React from 'react'
 import NewProductBox from './newProductBox'
 import { ProductType } from '../../types/index'
 
@@ -8,15 +8,7 @@ const newProductBoxes = (props: { productData: ProductType[] }) => {
   const NewProduct = productData
     .slice(0, 6)
     .map(
-      (item: {
-        _id: Key | null | undefined
-        name: string
-        imgUrl: string
-        price: number
-        cartImg: string
-        style: string
-        text: string
-      }) => (
+      (item: ProductType) => (
         <NewProductBox
           key={item._id}
           cartImg={item.cartImg}

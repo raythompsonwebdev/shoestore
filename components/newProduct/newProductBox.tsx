@@ -1,6 +1,8 @@
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { formatPrice } from '../../helpers/index'
+import ProductImage from '../Images/ProductImage'
+import CartIcon from '../Images/CartIcon'
 
 const NewProductBox = (props: {
   imgUrl: string
@@ -18,13 +20,7 @@ const NewProductBox = (props: {
   }
   return (
     <figure className="larger-product-box">
-      <Image
-        className="larger-product-box-image"
-        src={imgUrl}
-        alt={name}
-        width={175}
-        height={150}
-      />
+       <ProductImage src={imgUrl} alt={name} cname={'larger-product-box-image'} />
       <figcaption className="larger-product-box-caption">
         <h1 style={myComponentStyle} className="larger-product-box-title">
           {name}
@@ -35,13 +31,7 @@ const NewProductBox = (props: {
         </span>
         <span className="larger-product-box-add-to-cart">
           <Link href={`/product/${name}`} className="larger-product-box-link">
-            <Image
-              className="larger-product-box-icon"
-              src={cartImg}
-              alt="shopping-cart icon"
-              width="34"
-              height="48"
-            />
+          <CartIcon src={cartImg} alt={"shopping-cart icon"} cname={"larger-product-box-icon"}/>
           </Link>{' '}
           Add to Cart
         </span>

@@ -1,75 +1,30 @@
-import { useEffect, useState } from 'react'
-//import Image from 'next/image'
-// import ProductImage from '../Images/ProductImage'
-//import { formatPrice } from '../helpers/index'
+// import { useEffect, useState } from 'react'
+import ProductImage from '../components/Images/ProductImage'
+import { formatPrice } from '../helpers/index'
+import {  useAppDispatch } from '../app/store'
+import { increase, decrease, clearCart} from '../features/cart/cartSlice';
+import { CartItemType } from '../types/index'
 
-type CartItemType = {
-  all: string
-  cartImg: string
-  color: string
-  gender: string
-  imgUrl: string
-  likes: number
-  name: string
-  price: number
-  prodId: number
-  qty: number
-  size: string
-  style: string
-  text: string
-  _id: string
-}
+const Basket = (props :{cartItems:CartItemType[]}) => {
 
-const Basket = (props: {
-  cartItems: CartItemType[]
-  onAdd: (product: { prodId: number }) => void
-  onRemove: (product: { prodId: number }) => void
-}) => {
-  console.log(props)
+  const dispatch = useAppDispatch()
 
-  const [cartItemResult, setCartItems] = useState([])
-
-  useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let cartItems: any = []
-    // Get the value from local storage if it exists
-    try {
-
-      if(localStorage){
-        cartItems = localStorage.getItem('cart') || []
-        setCartItems(JSON.parse(cartItems))
-      }
-
-    } catch (e) {
-      console.log(e)
-    }
-
-  }, [])
-
-  console.log(cartItemResult)
-
-  // const itemsPrice = cartItemResult.reduce(
-  //   (a: number, c: { qty: number; price: number }) => a + c.qty * c.price,
-  //   0
-  // )
-  // const taxPrice = itemsPrice * 0.14
-  // const shippingPrice = itemsPrice > 2000 ? 0 : 20
-  // const totalPrice = itemsPrice + taxPrice + shippingPrice
+  const itemsPrice = props.cartItems.reduce(
+    (a: number, c: { qty: number; price: number }) => a + c.qty * c.price,
+    0
+  )
+  const taxPrice = itemsPrice * 0.14
+  const shippingPrice = itemsPrice > 2000 ? 0 : 20
+  const totalPrice = itemsPrice + taxPrice + shippingPrice
 
   return (
     <>
       <main id="main-content" className="clearfix">
-        {/* {cartItemResult.length === 0 && <div>Cart is empty</div>}
-        {cartItemResult.map(
-          (product: any) => (
+        {props.cartItems.length === 0 && <div>Cart is empty</div>}
+        {props.cartItems.map(
+          (product: CartItemType) => (
             <figure id="product-page-box" key={product.prodId}>
-              <Image
-                id="product-page-img"
-                src={product.imgUrl}
-                alt={'test'}
-                width={175}
-                height={150}
-              />
+              <ProductImage src={product.imgUrl} alt={product.style} cname={'product-page-img'} />
               <figcaption id="product-page-caption">
                 <p className="product-page-title"> {product.name}</p>
                 <p className="product-page-title">{product.gender}</p>
@@ -77,12 +32,12 @@ const Basket = (props: {
                 <p className="product-page-title">{product.color}</p>
                 <div className="col-2">
                   <button
-                    onClick={() => props.onRemove(product)}
+                    onClick={() => dispatch(decrease(product.prodId))}
                     className="remove"
                   >
                     -
                   </button>{' '}
-                  <button onClick={() => props.onAdd(product)} className="add">
+                  <button onClick={() => dispatch(increase(product.prodId))} className="add">
                     +
                   </button>
                 </div>
@@ -93,9 +48,9 @@ const Basket = (props: {
               </figcaption>
             </figure>
           )
-        )} */}
+        )}
 
-        {/* {cartItemResult.length !== 0 && (
+        {props.cartItems.length !== 0 && (
           <>
             <hr></hr>
             <div className="row">
@@ -126,9 +81,13 @@ const Basket = (props: {
               <button onClick={() => alert('Implement Checkout!')}>
                 Checkout
               </button>
+              <hr />
+              <button onClick={() => dispatch(clearCart())}>
+                Clear Cart
+              </button>
             </div>
           </>
-        )} */}
+        )}
       </main>
     </>
   )
