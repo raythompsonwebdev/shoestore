@@ -11,8 +11,6 @@ const Thankyou = () => {
 
   const {username, useremail} = router.query;
 
-  console.log(username, useremail)
-
   return (
     <Layout>
       <>

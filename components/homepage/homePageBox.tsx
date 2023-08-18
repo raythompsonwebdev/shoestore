@@ -14,7 +14,7 @@ const FrontPageBox = (props: {
 
   return (
     <figure className="product-box">
-      <ProductImage src={imgUrl} name={name} cname={'product-box-image'} />
+      <ProductImage src={imgUrl} alt={name} cname={'product-box-image'} />
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>
         <p className="product-box-price">{formatPrice(price)}</p>
