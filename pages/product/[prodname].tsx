@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 import ProductImage from '../../components/Images/ProductImage'
 import { useRouter } from 'next/router'
 import { useAppSelector, useAppDispatch } from '../../app/store'
-import { selectAllProducts, selectProductByName } from '../../features/products/productSlice'
+import { selectProductByName } from '../../features/products/productSlice'
 import { formatPrice } from '../../helpers/index'
 import { addToCart} from '../../features/cart/cartSlice';
 
@@ -13,17 +13,11 @@ const SingleProduct = () => {
 
   const dispatch = useAppDispatch()
 
-  const singleProd = useAppSelector(selectAllProducts)
-
   const router = useRouter()
 
   const { prodname } = router.query
 
-  const post = useAppSelector((state) => selectProductByName(state, prodname))
-
-  console.log(post)
-
-  const result = singleProd.find((product) => product.name === prodname)
+  const singleProd = useAppSelector((state) => selectProductByName(state, prodname))
 
   const {
     color,
@@ -38,7 +32,7 @@ const SingleProduct = () => {
     style,
     text,
     _id,
-  } = { ...result }
+  } = { ...singleProd }
 
   console.log(qty)
 
@@ -63,7 +57,7 @@ const SingleProduct = () => {
   //   }
   // }
 
-  return result !== undefined ? (
+  return singleProd ? (
     <Layout>
       <>
         <Head>
@@ -72,7 +66,7 @@ const SingleProduct = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Product Page</h1>
+          <h1 id="main-content-title">Single Product</h1>
           <figure id="product-page-box">
           <ProductImage src={`${imgUrl}`} alt={`${style}`} cname={'product-page-img'} />
             <figcaption id="product-page-caption">
@@ -94,7 +88,7 @@ const SingleProduct = () => {
               <div id="addtocart-section">
                 <button
                   type="submit"
-                  onClick={() => dispatch(addToCart(result))}
+                  onClick={() => dispatch(addToCart(singleProd))}
                   className="addtocart-section-btn"
                 >
                   Add To Cart
@@ -112,24 +106,24 @@ const SingleProduct = () => {
       </>
     </Layout>
   ) : (
-    <Layout>
-      <>
-        <Head>
-          <title>Single New Product</title>
-          <meta name="description" content="Single Product - All" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">New Product Page</h1>
-          <figure id="product-page-box">
-            <figcaption id="product-page-caption">
-              <p className="product-page-title">product not found</p>
-            </figcaption>
-          </figure>
-        </main>
-      </>
-    </Layout>
-  )
+  <Layout>
+    <>
+      <Head>
+        <title>Single Product</title>
+        <meta name="description" content="Single Product - All" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main id="main-content" className="clearfix">
+        <h1 id="main-content-title">Single Product</h1>
+        <figure id="product-page-box">
+          <figcaption id="product-page-caption">
+            <p className="product-page-title">Product not found!</p>
+          </figcaption>
+        </figure>
+      </main>
+    </>
+  </Layout>
+)
 }
 
 export default SingleProduct

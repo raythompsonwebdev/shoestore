@@ -30,21 +30,21 @@ const Basket = (props :{cartItems:CartItemType[]}) => {
                 <p className="product-page-title">{product.gender}</p>
                 <p className="product-page-title">{product.size}</p>
                 <p className="product-page-title">{product.color}</p>
-                <div className="col-2">
+                <p className="product-page-title">
                   <button
+                    className="product-page-btn"
                     onClick={() => dispatch(decrease(product.prodId))}
-                    className="remove"
                   >
-                    -
-                  </button>{' '}
-                  <button onClick={() => dispatch(increase(product.prodId))} className="add">
-                    +
+                    REMOVE
                   </button>
-                </div>
-
-                <div className="col-2 text-right">
-                  {product.qty} x {formatPrice(product.price)}
-                </div>
+                  <button onClick={() => dispatch(increase(product.prodId))} className="product-page-btn">
+                    ADD
+                  </button>
+                  Qty : {product.qty}
+                </p>
+                <p className="product-page-title">
+                  Sub Total : {formatPrice(product.price)}
+                </p>
               </figcaption>
             </figure>
           )
@@ -53,35 +53,34 @@ const Basket = (props :{cartItems:CartItemType[]}) => {
         {props.cartItems.length !== 0 && (
           <>
             <hr></hr>
-            <div className="row">
-              <div className="col-2">Items Price</div>
-              <div className="col-1 text-right">{formatPrice(itemsPrice)}</div>
+            <div className="items-price">
+              <div className="result-title">Items Price</div>
+              <div className="final-result">{formatPrice(itemsPrice)}</div>
             </div>
-            <div className="row">
-              <div className="col-2">Tax Price</div>
-              <div className="col-1 text-right">{formatPrice(taxPrice)}</div>
+            <div className="tax-price">
+              <div className="result-title">Tax Price</div>
+              <div className="final-result">{formatPrice(taxPrice)}</div>
             </div>
-            <div className="row">
-              <div className="col-2">Shipping Price</div>
-              <div className="col-1 text-right">
+            <div className="shipping-price">
+              <div className="result-title">Shipping Price</div>
+              <div className="final-result">
                 {formatPrice(shippingPrice)}
               </div>
             </div>
 
-            <div className="row">
-              <div className="col-2">
+            <div className="total-price">
+              <div className="result-title">
                 <strong>Total Price</strong>
               </div>
-              <div className="col-1 text-right">
+              <div className="final-result">
                 <strong>{formatPrice(totalPrice)}</strong>
               </div>
             </div>
             <hr />
-            <div className="row">
+            <div className="clear-cart-checkout">
               <button onClick={() => alert('Implement Checkout!')}>
                 Checkout
               </button>
-              <hr />
               <button onClick={() => dispatch(clearCart())}>
                 Clear Cart
               </button>

@@ -1,7 +1,13 @@
 import Image from 'next/image'
-//import Link from 'next/link'
+import Link from 'next/link'
+import { CartIcon } from '../Images/Icons';
+import { useAppSelector} from '../../app/store'
+import {selectAllCartItems} from '../../features/cart/cartSlice';
 
 export default function Header() {
+
+  const { cartItems } = useAppSelector(selectAllCartItems)
+
   return (
     <header id="site-header">
       <figure id="logo">
@@ -14,21 +20,17 @@ export default function Header() {
         />
       </figure>
 
-      {/* <div>
-        <a href="#/">
-          <h1>Small Shopping Cart</h1>
-        </a>
-      </div>
-      <div>
-        <Link href="/cart">
-          Cart{' '}
-          {props.countCartItems ? (
-            <button className="badge">{props.countCartItems}</button>
+      <div id="cart-icon">
+      <CartIcon />
+        <Link href="/cart" id="cart-icon-btn">
+
+          {cartItems ? (
+            cartItems.length
           ) : (
             ''
           )}
         </Link>{' '}
-      </div> */}
+      </div>
     </header>
   )
 }

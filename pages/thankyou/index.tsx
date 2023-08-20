@@ -23,6 +23,8 @@ const Thankyou = () => {
           <h1 id="main-content-title">Your Message Has Been Received</h1>
 
           <section id="main-inner-content" className="group">
+
+
           <h3 className="context-title">Thank you for your message {username}</h3>
           <h3 className="context-title">Thank you for your message {useremail}</h3>
           <p>An email has been sent to your email address {useremail}</p>

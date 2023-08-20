@@ -31,12 +31,12 @@ const SearchProduct = () => {
     <Layout>
       <>
         <Head>
-          <title>Single Product</title>
+          <title>Search Results</title>
           <meta name="description" content="Search Product - All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Single Product Search</h1>
+          <h1 id="main-content-title">Search Results</h1>
           {products.map((shoes: ProductType) => (
             <figure id="product-page-box" key={shoes.prodId}>
               <ProductImage src={shoes.imgUrl} alt={'test'} cname={'product-page-img'} />
@@ -61,15 +61,15 @@ const SearchProduct = () => {
     <Layout>
       <>
         <Head>
-          <title>Single Search Product</title>
+          <title>Search Resultst</title>
           <meta name="description" content="Search Product - All" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          <h1 id="main-content-title">Search Products page</h1>
+          <h1 id="main-content-title">Search Results</h1>
           <figure id="product-page-box">
             <figcaption id="product-page-caption">
-              <p className="product-page-title">Sorry! No Products Found</p>
+              <p className="product-page-title">No Products Found!</p>
             </figcaption>
           </figure>
         </main>
