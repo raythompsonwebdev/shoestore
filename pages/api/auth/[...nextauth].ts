@@ -12,8 +12,6 @@ export const authOptions: NextAuthOptions = {
     CredentialsProvider({
       id: 'credentials',
       name: 'credentials',
-      // email:'credentials',
-
       credentials: {
         name: { label: 'Username', type: 'text' },
         email: { label: 'Email', type: 'email' },
@@ -71,7 +69,7 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.SECRET_KEY,
   jwt: {
     secret: process.env.SECRET_KEY,
     maxAge: 60 * 60 * 24 * 14,

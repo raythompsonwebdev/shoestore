@@ -26,10 +26,6 @@ build/
 public/js/*js
 next-env.d.ts
 .vscode
-
-lib/cookies.ts
-lib/validate.ts
-
 pages/api/examples/
 hooks/
 
