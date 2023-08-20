@@ -92,7 +92,7 @@ body {
   width: 100%;
   margin-bottom: 0.25em;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 /* logo */
@@ -107,9 +107,10 @@ body {
   margin: 0.5em 0.5em 0 0;
   text-align:center;
   position:relative;
+
 }
 
-#cart-icon svg {
+svg {
   width:35px;
 }
 
@@ -130,6 +131,7 @@ body {
   top: 38%;
   left: 40%;
   z-index:2;
+  text-decoration:none;
 }
 
 /* site navigation */
@@ -226,7 +228,6 @@ body {
   background: $color-black;
   position: fixed;
   z-index: 4;
-  border: 1px solid $color-black;
   height: 290px;
   top: -290px;
   padding: 0;
@@ -354,7 +355,7 @@ body {
 
 /* main content */
 #main-content {
-  height: auto;
+  min-height: 600px;
   width: 99%;
   margin: 0 0.5%;
   font-family: $font-list;
@@ -374,7 +375,7 @@ body {
   margin: 1% 0 0;
   height: 40px;
   color: $color-white;
-  font-size: 1.2em;
+  font-size: 1em;
   text-indent: 1%;
   line-height: 40px;
   text-transform: uppercase;
@@ -549,7 +550,7 @@ body {
   font-family: $font-list;
   margin: 0 0.75em 0 0;
   height: 30px;
-  width: 15%;
+  width: 20%;
   display: block;
   font-size: 1em;
   line-height: 30px;
@@ -569,8 +570,8 @@ body {
   font-weight: bold;
 }
 
-#addtocart-section > .addtocart-section-btn,
-#upvotes-section > .upvotes-section-btn {
+.addtocart-section-btn,
+.upvotes-section-btn {
   font-family: $font-list;
   margin: 0;
   height: 45px;
@@ -584,8 +585,8 @@ body {
   float: right;
 }
 
-#addtocart-section > .addtocart-section-btn:hover,
-#upvotes-section > .upvotes-section-btn:hover {
+.addtocart-section-btn:hover,
+.upvotes-section-btn:hover {
   background-color: $color-white;
   color: $color-orange;
   border: 0;
@@ -593,8 +594,8 @@ body {
   font-weight: bold;
 }
 
-#addtocart-section > .addtocart-section-text,
-#upvotes-section > .upvotes-section-text {
+.addtocart-section-text,
+.upvotes-section-text {
   line-height: 50px;
   font-size: 0.85em;
 }
@@ -1341,7 +1342,7 @@ p {
 }
 .footer-inner-nav-link {
   text-align: center;
-  line-height: 50px;
+  line-height: 15px;
   height: auto;
   color: $color-black;
   display: block;
@@ -1378,7 +1379,7 @@ p {
   }
 
   #site-header {
-    height: auto;
+    justify-content: space-between;
     margin-bottom: 0.5em;
   }
 
@@ -1544,13 +1545,16 @@ p {
     margin: 0;
   }
 
-  #upvotes-section > .upvotes-section-btn {
+  .addtocart-section-btn,
+  .upvotes-section-btn {
     height: 45px;
     width: 20%;
     font-size: 1.2em;
     line-height: 30px;
   }
-  #upvotes-section > .upvotes-section-text {
+
+  .addtocart-section-text,
+  .upvotes-section-text {
     line-height: 50px;
     font-size: 1em;
   }
@@ -1987,8 +1991,7 @@ p {
   }
 
   #site-header {
-    height: auto;
-
+    justify-content: space-between;
     margin-bottom: 0.5em;
   }
 
@@ -2153,14 +2156,15 @@ p {
   #upvotes-section {
     margin: 1em 0;
   }
-
-  #upvotes-section > .upvotes-section-btn {
+  .addtocart-section-btn,
+  .upvotes-section-btn {
     height: 45px;
     width: 20%;
     font-size: 1.2em;
     line-height: 30px;
   }
-  #upvotes-section > .upvotes-section-text {
+  .addtocart-section-text,
+  .upvotes-section-text {
     line-height: 50px;
     font-size: 0.9em;
   }
@@ -2584,8 +2588,8 @@ p {
   }
 
   #site-header {
-    height: auto;
     margin-bottom: 0.5em;
+    justify-content: flex-start;
   }
 
   #logo {
@@ -2754,11 +2758,13 @@ p {
     margin: 1em 0;
   }
 
-  #upvotes-section > .upvotes-section-btn {
+  .addtocart-section-btn,
+  .upvotes-section-btn {
     width: 30%;
     font-size: 1.1em;
   }
-  #upvotes-section > .upvotes-section-text {
+  .addtocart-section-text,
+  .upvotes-section-text {
     line-height: 50px;
     font-size: 0.9em;
   }
@@ -3171,7 +3177,7 @@ p {
   }
 
   #site-header {
-    height: auto;
+    justify-content: flex-start;
     margin-bottom: 0.5em;
   }
 
@@ -3340,11 +3346,13 @@ p {
     margin: 1em 0;
   }
 
-  #upvotes-section > .upvotes-section-btn {
+  .addtocart-section-btn,
+  .upvotes-section-btn {
     width: 30%;
     font-size: 1.1em;
   }
-  #upvotes-section > .upvotes-section-text {
+  .addtocart-section-text,
+  .upvotes-section-text {
     line-height: 50px;
     font-size: 0.85em;
   }
@@ -3729,7 +3737,7 @@ p {
   }
   .footer-inner-nav-link {
     line-height: 50px;
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
 
   .copyr {
@@ -3758,7 +3766,7 @@ p {
   }
 
   #site-header {
-    height: auto;
+    justify-content: flex-start;
     margin-bottom: 0.25em;
   }
 
@@ -3870,7 +3878,7 @@ p {
 
   #main-content-title {
     height: 40px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 40px;
   }
 
@@ -3927,11 +3935,13 @@ p {
     margin: 1em 0;
   }
 
-  #upvotes-section > .upvotes-section-btn {
+  .addtocart-section-btn,
+  .upvotes-section-btn {
     width: 30%;
     font-size: 1.1em;
   }
-  #upvotes-section > .upvotes-section-text {
+  .addtocart-section-text,
+  .upvotes-section-text {
     line-height: 50px;
     font-size: 0.85em;
   }
@@ -4314,7 +4324,7 @@ p {
     height: 50px;
   }
   .footer-inner-nav-link {
-    line-height: 50px;
+    line-height: 20px;
     font-size: 0.65em;
   }
 
@@ -4345,7 +4355,7 @@ p {
   }
 
   #site-header {
-    height: auto;
+    justify-content: flex-start;
     margin-bottom: 0.25em;
   }
 
@@ -4457,7 +4467,7 @@ p {
 
   #main-content-title {
     height: 40px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 40px;
   }
 
@@ -4514,11 +4524,13 @@ p {
     margin: 1em 0;
   }
 
-  #upvotes-section > .upvotes-section-btn {
+  .addtocart-section-btn,
+  .upvotes-section-btn {
     width: 30%;
     font-size: 1.1em;
   }
-  #upvotes-section > .upvotes-section-text {
+  .addtocart-section-text,
+  .upvotes-section-text {
     line-height: 50px;
     font-size: 0.85em;
   }
@@ -4900,7 +4912,7 @@ p {
     height: 50px;
   }
   .footer-inner-nav-link {
-    line-height: 50px;
+    line-height: 15px;
     font-size: 0.65em;
   }
 
@@ -4931,7 +4943,7 @@ p {
   }
 
   #site-header {
-    height: auto;
+    justify-content: flex-start;
     margin-bottom: 0.25em;
   }
 
@@ -5043,7 +5055,7 @@ p {
 
   #main-content-title {
     height: 40px;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 40px;
   }
 
@@ -5100,11 +5112,13 @@ p {
     margin: 1em 0;
   }
 
-  #upvotes-section > .upvotes-section-btn {
+  .addtocart-section-btn,
+  .upvotes-section-btn {
     width: 30%;
     font-size: 1.1em;
   }
-  #upvotes-section > .upvotes-section-text {
+  .addtocart-section-text,
+  .upvotes-section-text {
     line-height: 50px;
     font-size: 0.85em;
   }
@@ -5486,7 +5500,7 @@ p {
     height: 50px;
   }
   .footer-inner-nav-link {
-    line-height: 50px;
+    line-height: 15px;
     font-size: 0.55em;
   }
 

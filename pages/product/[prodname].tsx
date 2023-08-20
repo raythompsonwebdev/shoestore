@@ -8,6 +8,7 @@ import { useAppSelector, useAppDispatch } from '../../app/store'
 import { selectProductByName } from '../../features/products/productSlice'
 import { formatPrice } from '../../helpers/index'
 import { addToCart} from '../../features/cart/cartSlice';
+import { CartIcon } from '../../components/Images/Icons';
 
 const SingleProduct = () => {
 
@@ -76,7 +77,7 @@ const SingleProduct = () => {
               <p className="product-page-title">Size : {size}</p>
               <p className="product-page-title">Color : {color}</p>
               <p className="product-page-title">Prod SKU : {prodId}</p>
-              <p>{text}</p>
+              <p className="product-page-title">{text}</p>
 
               <LikesSection
                 likes={productInfo.likes || 0}
@@ -91,11 +92,11 @@ const SingleProduct = () => {
                   onClick={() => dispatch(addToCart(singleProd))}
                   className="addtocart-section-btn"
                 >
-                  Add To Cart
+                  <CartIcon />
                 </button>
 
                 <p className="addtocart-section-text">
-                  Click here to add shoes to shopping cart!
+                  Add to Cart
                 </p>
               </div>
 
