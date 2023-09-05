@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from '../../lib/mongodb'
-// import sanitize from 'mongo-sanitize'
+import sanitize from 'mongo-sanitize'
 
 export default async function likeproduct(
   req: NextApiRequest,
@@ -15,10 +15,10 @@ export default async function likeproduct(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   //const cartItemId = cartResults.map(( id: any )=> id._id)
 
-  console.log(cartResults, cartUserId.email)
-  console.log("------------------------")
+  //console.log(cartResults, cartUserId.email)
+  //console.log("------------------------")
 
-  //const product = sanitize(cartItemId)
+  const useremail = sanitize(cartUserId.email)
 
 
   if (req.method !== 'POST') {
@@ -30,12 +30,12 @@ export default async function likeproduct(
     const client = await clientPromise
     const db = client.db('shoestore')
 
-    const productsInfo = await db
+    const updatedUser = await db
       .collection('users')
-      .findOne({email:cartUserId.email})
+      .findOne({email:useremail})
 
-      console.log(productsInfo)
-      console.log("db cart items------------------------")
+      //console.log(productsInfo)
+      //console.log("db cart items------------------------")
 
     // The optional chaining operator (?.)-fixes object is possible null error for productsInfo variable. The non-null assertion operator (!.) or the nullish coalescing operator (??) & if (typeof myName === 'string').
 
@@ -46,7 +46,7 @@ export default async function likeproduct(
     //   .collection('cartItems')
     //   .findOne({ product })
 
-    res.status(200).json({message:"success"})
+    res.status(200).json({updatedUser})
     ///res.status(200).json(updatedProductInfo)
   } catch (err) {
     console.log(err)
