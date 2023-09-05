@@ -29,7 +29,7 @@ const Profile = () => {
 
   console.log(cookies, user);
 
-  if (status === 'unauthenticated' && session === null) {
+  if (status === 'unauthenticated' && user !== undefined ) {
     return (
       <Layout>
         <>
