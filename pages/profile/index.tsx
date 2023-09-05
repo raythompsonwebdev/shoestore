@@ -3,7 +3,7 @@ import { useSession } from 'next-auth/react'
 import Layout from '../../components/Layout'
 import AccessDenied from '../../components/access-denied'
 import Head from 'next/head'
-// import Image from 'next/image'
+import Image from 'next/image'
 
 const Profile = () => {
 
@@ -55,7 +55,7 @@ const Profile = () => {
           <h1 id="main-content-title">Profile</h1>
           <br />
           <figure id="profile-image">
-            {/* {user.name !== "" ? (
+            {user?.picture === './images/one.jpg' ? (
               <Image
                 src={'/images/placeholder.jpg'}
                 className="user-image"
@@ -65,25 +65,25 @@ const Profile = () => {
               />
             ) : (
               <Image
-                src={'/images/placeholder.jpg'} // not included as database field yet.
+                src={user.picture} // not included as database field yet.
                 alt="Profile"
                 width="200"
                 height="200"
               />
-            )} */}
+            )}
             <figcaption id="profile-image-text">
               <p>
                 Username :{' '}
-                {/* {user.name
+                {user?.name
                   ? (user.name as string)
-                  : 'username not found'} */}
+                  : 'username not found'}
               </p>
               <br />
               <p>
                 Email :
-                {/* {user.email
+                {user?.email
                   ? (user.email as string)
-                  : 'useremail not found'} */}
+                  : 'useremail not found'}
               </p>
               <br />
               <p>

@@ -7,7 +7,7 @@ export default async function getApiCookie(
   res: NextApiResponse
 ) {
   try {
-    const currentCookie = getCookie('next-auth.session-token', { req, res })
+    const currentCookie = getCookie('__Secure-next-auth.session-token', { req, res })
     //const allCookies = getCookies({ req, res })
     // console.log('currentCookie: ', currentCookie)
     // console.log('allCookies: ', allCookies)
