@@ -69,14 +69,14 @@ const Cart = () => {
           </Head>
           <main id="main-content" className="clearfix">
             <h1 id="main-content-title">Cart - Logged In</h1>
-            <p>
+            {/* <p>
               {user.name ? user.name : 'name not available'}
             </p>
             <p>
               {user.email
                 ? user.email
                 : 'email not available'}
-            </p>
+            </p> */}
             <Basket cartItems={cartItems}></Basket>
           </main>
         </>
