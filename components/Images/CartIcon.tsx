@@ -1,8 +1,7 @@
 import Image from 'next/image'
 
-const CartIcon = (props:{src:string , alt:string, cname:string}) => {
-
-  const{src} =props
+const CartIcon = (props: { src: string; alt: string; cname: string }) => {
+  const { src } = props
   return (
     <Image
       className="product-box-icon"

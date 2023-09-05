@@ -15,14 +15,17 @@ const productBox = (props: {
 
   return (
     <figure className="product-box">
-
       <ProductImage src={imgUrl} alt={name} cname={'product-page-img'} />
 
       <figcaption className="product-box-caption">
         <p className="product-box-title"> {style}</p>
         <p className="product-box-price ">{formatPrice(price)}</p>
         <Link href={`/product/${name}`} className="product-box-icon-link">
-        <CartIcon src={cartImg} alt={"shopping-cart icon"} cname={"product-box-icon"}/>
+          <CartIcon
+            src={cartImg}
+            alt={'shopping-cart icon'}
+            cname={'product-box-icon'}
+          />
         </Link>
       </figcaption>
     </figure>

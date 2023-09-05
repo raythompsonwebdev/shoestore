@@ -60,8 +60,10 @@ export const selectAllProducts = (state: RootState) =>
 export const getProductsStatus = (state: RootState) => state.products.status
 export const getProductsError = (state: RootState) => state.products.error
 
-export const selectProductByName = (state: RootState, name: string | string[] | undefined) =>
-  state.products.productItems.find((product) => product.name === name)
+export const selectProductByName = (
+  state: RootState,
+  name: string | string[] | undefined
+) => state.products.productItems.find((product) => product.name === name)
 
 export const { productAdded } = productSlice.actions
 

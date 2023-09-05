@@ -1,4 +1,4 @@
-// import { useState, useEffect, ReactElement } from 'react'
+import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import Layout from '../../components/Layout'
 import AccessDenied from '../../components/access-denied'
@@ -6,9 +6,30 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 const Profile = () => {
-  const { data: session, status } = useSession()
 
-  if (status === 'unauthenticated') {
+  const { data: session, status, update } = useSession()
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [ cookies, setCookies ] = useState<any>(null)
+
+  useEffect(() => {
+    if(session !== undefined){
+      const fetchData = async()=> {
+        const res = await fetch('/api/helpers/cookiegetter');
+        const result = await res.json();
+        setCookies(result)
+        return result;
+      }
+      fetchData()
+    }
+  },[session]);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const {user} :any = {...session};
+
+  console.log(cookies);
+
+  if (status === 'unauthenticated' && session === null) {
     return (
       <Layout>
         <>
@@ -34,9 +55,8 @@ const Profile = () => {
           <h1 id="main-content-title">Profile</h1>
           <br />
           <figure id="profile-image">
-            {session ? (
+            {user.picture === './images/one.jpg' ? (
               <Image
-                // src={session.user?.image} // not included as database field yet.
                 src={'/images/placeholder.jpg'}
                 className="user-image"
                 alt="Profile"
@@ -45,7 +65,7 @@ const Profile = () => {
               />
             ) : (
               <Image
-                src={'/images/placeholder.jpg'}
+                src={user.picture} // not included as database field yet.
                 alt="Profile"
                 width="200"
                 height="200"
@@ -54,15 +74,15 @@ const Profile = () => {
             <figcaption id="profile-image-text">
               <p>
                 Username :{' '}
-                {session?.user.name
-                  ? (session?.user.name as string)
+                {user.name
+                  ? (user.name as string)
                   : 'username not found'}
               </p>
               <br />
               <p>
                 Email :
-                {session?.user.email
-                  ? (session?.user.email as string)
+                {user.email
+                  ? (user.email as string)
                   : 'useremail not found'}
               </p>
               <br />
@@ -71,6 +91,13 @@ const Profile = () => {
               </p>
             </figcaption>
           </figure>
+        {/*
+          * Only trigger a session update, assuming you already updated the value server-side.
+          * All `useSession().data` references will be updated.
+          */}
+        <button onClick={() => update()}>
+          Edit Cookie
+        </button>
         </main>
       </>
     </Layout>

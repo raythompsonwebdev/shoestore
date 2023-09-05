@@ -28,6 +28,7 @@ next-env.d.ts
 .vscode
 pages/api/examples/
 hooks/
+middleware.txt
 
 
 

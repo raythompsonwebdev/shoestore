@@ -1,11 +1,11 @@
 // import { useEffect, useState } from 'react'
 import ProductImage from '../components/Images/ProductImage'
 import { formatPrice } from '../helpers/index'
-import {  useAppDispatch } from '../app/store'
-import { increase, decrease, clearCart} from '../features/cart/cartSlice';
+import { useAppDispatch } from '../app/store'
+import { increase, decrease, clearCart } from '../features/cart/cartSlice'
 import { CartItemType } from '../types/index'
 
-const Basket = (props :{cartItems:CartItemType[]}) => {
+const Basket = (props: { cartItems: CartItemType[] }) => {
 
   const dispatch = useAppDispatch()
 
@@ -21,34 +21,39 @@ const Basket = (props :{cartItems:CartItemType[]}) => {
     <>
       <main id="main-content" className="clearfix">
         {props.cartItems.length === 0 && <div>Cart is empty</div>}
-        {props.cartItems.map(
-          (product: CartItemType) => (
-            <figure id="product-page-box" key={product.prodId}>
-              <ProductImage src={product.imgUrl} alt={product.style} cname={'product-page-img'} />
-              <figcaption id="product-page-caption">
-                <p className="product-page-title"> {product.name}</p>
-                <p className="product-page-title">{product.gender}</p>
-                <p className="product-page-title">{product.size}</p>
-                <p className="product-page-title">{product.color}</p>
-                <p className="product-page-title">
-                  <button
-                    className="product-page-btn"
-                    onClick={() => dispatch(decrease(product.prodId))}
-                  >
-                    REMOVE
-                  </button>
-                  <button onClick={() => dispatch(increase(product.prodId))} className="product-page-btn">
-                    ADD
-                  </button>
-                  Qty : {product.qty}
-                </p>
-                <p className="product-page-title">
-                  Sub Total : {formatPrice(product.price)}
-                </p>
-              </figcaption>
-            </figure>
-          )
-        )}
+        {props.cartItems.map((product: CartItemType) => (
+          <figure id="product-page-box" key={product.prodId}>
+            <ProductImage
+              src={product.imgUrl}
+              alt={product.style}
+              cname={'product-page-img'}
+            />
+            <figcaption id="product-page-caption">
+              <p className="product-page-title"> {product.name}</p>
+              <p className="product-page-title">{product.gender}</p>
+              <p className="product-page-title">{product.size}</p>
+              <p className="product-page-title">{product.color}</p>
+              <p className="product-page-title">
+                <button
+                  className="product-page-btn"
+                  onClick={() => dispatch(decrease(product.prodId))}
+                >
+                  REMOVE
+                </button>
+                <button
+                  onClick={() => dispatch(increase(product.prodId))}
+                  className="product-page-btn"
+                >
+                  ADD
+                </button>
+                Qty : {product.qty}
+              </p>
+              <p className="product-page-title">
+                Sub Total : {formatPrice(product.price)}
+              </p>
+            </figcaption>
+          </figure>
+        ))}
 
         {props.cartItems.length !== 0 && (
           <>
@@ -63,9 +68,7 @@ const Basket = (props :{cartItems:CartItemType[]}) => {
             </div>
             <div className="shipping-price">
               <div className="result-title">Shipping Price</div>
-              <div className="final-result">
-                {formatPrice(shippingPrice)}
-              </div>
+              <div className="final-result">{formatPrice(shippingPrice)}</div>
             </div>
 
             <div className="total-price">
@@ -81,9 +84,7 @@ const Basket = (props :{cartItems:CartItemType[]}) => {
               <button onClick={() => alert('Implement Checkout!')}>
                 Checkout
               </button>
-              <button onClick={() => dispatch(clearCart())}>
-                Clear Cart
-              </button>
+              <button onClick={() => dispatch(clearCart())}>Clear Cart</button>
             </div>
           </>
         )}

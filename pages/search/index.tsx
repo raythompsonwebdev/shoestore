@@ -10,10 +10,9 @@ import { useRouter } from 'next/router'
 import CartIcon from '../../components/Images/CartIcon'
 
 const SearchProduct = () => {
-
   const router = useRouter()
 
-  const { sizeVal, colorVal, genderVal, styleVal }  = router.query
+  const { sizeVal, colorVal, genderVal, styleVal } = router.query
 
   const searchProducts = useAppSelector(selectAllProducts)
 
@@ -39,18 +38,29 @@ const SearchProduct = () => {
           <h1 id="main-content-title">Search Results</h1>
           {products.map((shoes: ProductType) => (
             <figure id="product-page-box" key={shoes.prodId}>
-              <ProductImage src={shoes.imgUrl} alt={'test'} cname={'product-page-img'} />
+              <ProductImage
+                src={shoes.imgUrl}
+                alt={'test'}
+                cname={'product-page-img'}
+              />
               <figcaption id="product-page-caption">
-
                 <p className="product-page-title"> {shoes.name}</p>
                 <p id="product -page-price">{formatPrice(shoes.price)}</p>
                 <p className="product-page-title">{shoes.gender}</p>
                 <p className="product-page-title">{shoes.size}</p>
                 <p className="product-page-title">{shoes.color}</p>
                 <p className="product-page-title">
-                  <Link href={`/product/${shoes.name}`} className="product-box-icon-link">
-                  <CartIcon src={shoes.cartImg} alt={"shopping-cart icon"} cname={"product-box-icon-link"}/>
-                      </Link></p>
+                  <Link
+                    href={`/product/${shoes.name}`}
+                    className="product-box-icon-link"
+                  >
+                    <CartIcon
+                      src={shoes.cartImg}
+                      alt={'shopping-cart icon'}
+                      cname={'product-box-icon-link'}
+                    />
+                  </Link>
+                </p>
               </figcaption>
             </figure>
           ))}

@@ -7,18 +7,19 @@ import { useRouter } from 'next/router'
 import { useAppSelector, useAppDispatch } from '../../app/store'
 import { selectProductByName } from '../../features/products/productSlice'
 import { formatPrice } from '../../helpers/index'
-import { addToCart} from '../../features/cart/cartSlice';
-import { CartIcon } from '../../components/Images/Icons';
+import { addToCart } from '../../features/cart/cartSlice'
+import { CartIcon } from '../../components/Images/Icons'
 
 const SingleProduct = () => {
-
   const dispatch = useAppDispatch()
 
   const router = useRouter()
 
   const { prodname } = router.query
 
-  const singleProd = useAppSelector((state) => selectProductByName(state, prodname))
+  const singleProd = useAppSelector((state) =>
+    selectProductByName(state, prodname)
+  )
 
   const {
     color,
@@ -40,7 +41,6 @@ const SingleProduct = () => {
   const [productInfo, setProductInfo] = useState<{ likes: number | undefined }>(
     { likes: likes }
   )
-
 
   // const onAdd = (product: ProductType ) => {
   //   const exist = cartItems.find(
@@ -69,7 +69,11 @@ const SingleProduct = () => {
         <main id="main-content" className="clearfix">
           <h1 id="main-content-title">Single Product</h1>
           <figure id="product-page-box">
-          <ProductImage src={`${imgUrl}`} alt={`${style}`} cname={'product-page-img'} />
+            <ProductImage
+              src={`${imgUrl}`}
+              alt={`${style}`}
+              cname={'product-page-img'}
+            />
             <figcaption id="product-page-caption">
               <p className="product-page-title"> {name}</p>
               <p id="product-page-price">{formatPrice(price || 0)}</p>
@@ -95,36 +99,32 @@ const SingleProduct = () => {
                   <CartIcon />
                 </button>
 
-                <p className="addtocart-section-text">
-                  Add to Cart
-                </p>
+                <p className="addtocart-section-text">Add to Cart</p>
               </div>
-
-
             </figcaption>
           </figure>
         </main>
       </>
     </Layout>
   ) : (
-  <Layout>
-    <>
-      <Head>
-        <title>Single Product</title>
-        <meta name="description" content="Single Product - All" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main id="main-content" className="clearfix">
-        <h1 id="main-content-title">Single Product</h1>
-        <figure id="product-page-box">
-          <figcaption id="product-page-caption">
-            <p className="product-page-title">Product not found!</p>
-          </figcaption>
-        </figure>
-      </main>
-    </>
-  </Layout>
-)
+    <Layout>
+      <>
+        <Head>
+          <title>Single Product</title>
+          <meta name="description" content="Single Product - All" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main id="main-content" className="clearfix">
+          <h1 id="main-content-title">Single Product</h1>
+          <figure id="product-page-box">
+            <figcaption id="product-page-caption">
+              <p className="product-page-title">Product not found!</p>
+            </figcaption>
+          </figure>
+        </main>
+      </>
+    </Layout>
+  )
 }
 
 export default SingleProduct

@@ -1,33 +1,33 @@
 export interface IUser {
-  id?: string
-  name?: string | null | undefined
-  email?: string
-  accessToken?: string
-  role?: string
+  id:string | number
+  name: string
+  email: string
+  password:string
+  date:string
+  image:string
+  cartitems: []
 }
 export interface LoginUserParams {
-  email: string;
-  password: string;
+  email: string
+  password: string
 }
-
 export interface FilteredData {
-  [x: string]: string | number;
-  _id: string;
-  prodId: number;
-  name: string;
-  style: string;
-  color: string;
-  size: string;
-  gender: string ;
-  imgUrl: string;
-  price: number;
-  cartImg: string;
-  text: string;
-  all: string;
-  likes: number;
-  qty: number;
+  [x: string]: string | number
+  _id: string
+  prodId: number
+  name: string
+  style: string
+  color: string
+  size: string
+  gender: string
+  imgUrl: string
+  price: number
+  cartImg: string
+  text: string
+  all: string
+  likes: number
+  qty: number
 }
-
 export interface ProductType {
   [x: string]: string | number | string[] | undefined
   _id: string
@@ -45,14 +45,12 @@ export interface ProductType {
   likes: number
   qty: number
 }
-
 export interface AccordianType {
   _id: string
   id: number
   title: string | null
   items: Array<string>
 }
-
 export interface SearchBarType {
   _id: string
   id: number
@@ -63,7 +61,6 @@ export interface SearchBarType {
     displayValue: string
   }>
 }
-
 export interface SelectBarType {
   _id: string
   id: number
@@ -75,7 +72,6 @@ export interface SelectBarType {
     displayValue: string
   }>
 }
-
 export interface CartItemType {
   [x: string]: string | number | string[] | undefined
   all: string

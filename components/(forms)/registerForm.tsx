@@ -10,87 +10,79 @@ export default function RegisterForm() {
   const router = useRouter()
 
   useEffect(() => {
-
-    const form = document.querySelectorAll('#register-form input') ;
-    const formError = document.querySelector('#form-error');
+    const form = document.querySelectorAll('#register-form input')
+    const formError = document.querySelector('#form-error')
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const formElements : any = Array.from(form)
+    const formElements: any = Array.from(form)
 
-    formElements[0].addEventListener('focusout',(e: {
-      preventDefault: () => void;
-      target: HTMLInputElement;
-    }): void => {
-      e.preventDefault();
+    formElements[0].addEventListener(
+      'focusout',
+      (e: { preventDefault: () => void; target: HTMLInputElement }): void => {
+        e.preventDefault()
 
+        if (formError?.textContent !== '') {
+          setError('')
+        }
 
-      if(formError?.textContent !== ""){
-        setError("")
+        const { target } = e
+
+        if (target.validity.tooShort === true) {
+          setError('Full name should be at least 4 characters long')
+        }
+
+        if (target.validity.tooLong === true) {
+          setError('Full name should be less than 30 characters')
+        }
+
+        if (target.validity.patternMismatch === true) {
+          setError('No Numbers or Special Characters')
+        }
       }
+    )
 
+    formElements[1].addEventListener(
+      'focusout',
+      (e: { preventDefault: () => void; target: HTMLInputElement }): void => {
+        e.preventDefault()
 
-      const {target} = e;
+        if (formError?.textContent !== '') {
+          setError('')
+        }
 
-      if(target.validity.tooShort === true ){
-        setError("Full name should be at least 4 characters long")
+        const { target } = e
+
+        if (target.validity.tooShort === true) {
+          setError('Full email should be more than 4 characters long')
+        }
+
+        if (target.validity.tooLong === true) {
+          setError('Full name should be less than 50 characters')
+        }
       }
+    )
 
-      if(target.validity.tooLong === true ){
-        setError("Full name should be less than 30 characters")
+    formElements[2].addEventListener(
+      'focusout',
+      (e: { preventDefault: () => void; target: HTMLInputElement }): void => {
+        e.preventDefault()
+
+        if (formError?.textContent !== '') {
+          setError('')
+        }
+
+        const { target } = e
+
+        if (target.validity.tooShort === true) {
+          setError('Full name should be at least 12 characters long')
+        }
+
+        if (target.validity.tooLong === true) {
+          setError('Full name should be less than 25 characters')
+        }
       }
-
-      if(target.validity.patternMismatch === true ){
-        setError("No Numbers or Special Characters")
-      }
-    })
-
-    formElements[1].addEventListener('focusout',(e: {
-      preventDefault: () => void;
-      target: HTMLInputElement;
-    }): void =>{
-      e.preventDefault();
-
-      if(formError?.textContent !== ""){
-        setError("")
-      }
-
-      const {target} = e;
-
-      if(target.validity.tooShort === true ){
-        setError("Full email should be more than 4 characters long")
-      }
-
-      if(target.validity.tooLong === true ){
-        setError("Full name should be less than 50 characters")
-      }
-
-    })
-
-    formElements[2].addEventListener('focusout',(e: {
-      preventDefault: () => void;
-      target: HTMLInputElement;
-    }): void =>{
-      e.preventDefault();
-
-      if(formError?.textContent !== ""){
-        setError("")
-      }
-
-      const {target} = e;
-
-      if(target.validity.tooShort === true ){
-        setError("Full name should be at least 12 characters long")
-      }
-
-      if(target.validity.tooLong === true ){
-        setError("Full name should be less than 25 characters")
-      }
-
-    })
-
-
+    )
   }, [])
-
 
   const handleUserName = (e: { target: { value: SetStateAction<string> } }) => {
     const { value } = e.target
@@ -128,7 +120,7 @@ export default function RegisterForm() {
       if (result) {
         router.push({
           pathname: '/thankyou',
-          query: { username,useremail},
+          query: { username, useremail },
         })
       }
     } catch (err) {
@@ -139,9 +131,7 @@ export default function RegisterForm() {
   return (
     <form id="register-form" onSubmit={submit}>
       {/* <span id="form-error" className="hide-error"> */}
-      <span id="form-error" >
-        {error ? error : ''}
-      </span>
+      <span id="form-error">{error ? error : ''}</span>
       <ul id="register-form-fields">
         <li className="register-form-item">
           <label htmlFor="username">
@@ -154,7 +144,7 @@ export default function RegisterForm() {
               onChange={handleUserName}
               minLength={4}
               maxLength={29}
-              pattern="^[a-zA-Z]+$"
+              pattern="^\w+( \w+)*$" // allow spaces between words
               required={true}
               aria-describedby="form-error"
             />

@@ -19,10 +19,9 @@ const SearchBar = (props: SearchBarProps) => {
   const [genderVal, setGenderVal] = useState<string>('')
   const [styleVal, setStyleVal] = useState<string>('')
 
-
   const { labelname, searchData } = props
 
-  const [size, color, gender, style ] = searchData
+  const [size, color, gender, style] = searchData
 
   const genderHandler = (event: { target: { value: string } }): void => {
     const { target } = event
@@ -65,11 +64,6 @@ const SearchBar = (props: SearchBarProps) => {
     const gender: FormDataEntryValue | null = formData.get('genderVal')
     const style: FormDataEntryValue | null = formData.get('styleVal')
 
-
-
-
-console.log(formData.get('styleVal'))
-
     // send data to search results page as url query params -query string
     router.push(
       `/search?genderVal=${gender}&styleVal=${style}&sizeVal=${size}&colorVal=${color}`
@@ -99,7 +93,7 @@ console.log(formData.get('styleVal'))
             sizeHandler={sizeHandler}
             aria={aria}
           />
-           <SelectColor
+          <SelectColor
             name="colorVal"
             colors={color || ''}
             value={colorVal}

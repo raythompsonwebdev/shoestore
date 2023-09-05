@@ -7,18 +7,16 @@ const newProductBoxes = (props: { productData: ProductType[] }) => {
 
   const NewProduct = productData
     .slice(0, 6)
-    .map(
-      (item: ProductType) => (
-        <NewProductBox
-          key={item._id}
-          cartImg={item.cartImg}
-          imgUrl={item.imgUrl}
-          name={item.name}
-          price={item.price}
-          text={item.text}
-        />
-      )
-    )
+    .map((item: ProductType) => (
+      <NewProductBox
+        key={item._id}
+        cartImg={item.cartImg}
+        imgUrl={item.imgUrl}
+        name={item.name}
+        price={item.price}
+        text={item.text}
+      />
+    ))
 
   return <div className="larger-product-boxes">{NewProduct}</div>
 }

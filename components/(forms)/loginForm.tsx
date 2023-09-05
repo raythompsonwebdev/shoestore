@@ -6,6 +6,7 @@ import Link from 'next/link'
 export default function LoginForm() {
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
+  const [error, setError] = useState<string | null>('')
   const router = useRouter()
 
   const handleEmails = (e: { target: { value: SetStateAction<string> } }) => {
@@ -26,6 +27,7 @@ export default function LoginForm() {
 
       if (loginRes && !loginRes.ok) {
         console.log(loginRes.error || '')
+        setError(loginRes.error)
       } else {
         router.push('/profile')
       }
@@ -39,6 +41,7 @@ export default function LoginForm() {
 
   return (
     <form id="login-form" onSubmit={submit}>
+      <p>{error}</p>
       <ul id="login-form-fields">
         <li className="login-form-item">
           <label htmlFor="email">

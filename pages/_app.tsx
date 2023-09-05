@@ -11,9 +11,9 @@ const MyApp = ({
 }: AppProps<{ session: Session }>) => {
   return (
     <SessionProvider session={session}>
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
     </SessionProvider>
   )
 }

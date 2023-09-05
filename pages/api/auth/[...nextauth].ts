@@ -3,11 +3,12 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 import clientPromise from '../../../lib/mongodb'
 import { connectToMongoDB } from '../../../lib/dbConnect'
-import FindUser from '../../../models/users'
+// import {IUser} from '../../../types/index'
+import User from '../../../models/users'
 import { comparePassword } from '../../../lib/hashPassword'
 
+
 export const authOptions: NextAuthOptions = {
-  // https://next-auth.js.org/configuration/providers/oauth
   providers: [
     CredentialsProvider({
       id: 'credentials',
@@ -18,17 +19,23 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
+
         await connectToMongoDB().catch((err) => {
           throw new Error(err)
         })
 
         // confirm if user email already exists.
-        const user = await FindUser.findOne({
+        const user = await User.findOne({
           email: credentials?.email,
         }).select('+password')
 
+
         if (!user) {
-          throw new Error('Invalid credentials')
+          throw new Error('Invalid credentials! Please enter valid credentials')
+        }
+
+        if(user.email !== credentials?.email){
+          throw new Error('Invalid email! Please enter valid email')
         }
 
         // confirm whether password entered matches user password stored in db.
@@ -37,27 +44,14 @@ export const authOptions: NextAuthOptions = {
             credentials.password,
             user.password
           )
-          // if (isPasswordCorrect) {
-          //   const accessToken = signJwtAccessToken(
-          //     {
-          //       user: {
-          //         name: user.name,
-          //         email: user.email,
-          //       },
-          //     }
-          //   );
-          //   user.accessToken = accessToken;
-          // } else {
-          //   throw new Error("Password is not valid");
-          // }
 
           if (!isPasswordCorrect) {
-            throw new Error('Invalid credentials')
+            throw new Error('Invalid password Please enter valid password')
           }
         }
         // check if user password and email sumitted match user email and passowrd saved in database.
         //if (user.email === credentials?.email && isPasswordCorrect) {
-        if (user.email === credentials?.email) {
+        if (user) {
           return user
         } else {
           return null
@@ -69,23 +63,23 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
-  secret: process.env.SECRET_KEY,
   jwt: {
-    secret: process.env.SECRET_KEY,
-    maxAge: 60 * 60 * 24 * 14,
+    secret: process.env.NEXTAUTH_SECRET,
+    maxAge: 60 * 60 * 24 * 30,
   },
-
   callbacks: {
-    jwt: async ({ token, account, user }) => {
+    jwt: async ({ token, user, account}) => {
       if (account) {
         token.accessToken = account.access_token
       }
       return { ...token, ...user }
     },
-    session: async ({ session, token }) => {
+    session: async ({ session, token}) => {
       session.user = token
+      session.user.id = token.id
       return {
         ...session,
+
       }
     },
   },

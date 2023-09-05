@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import { useSession } from 'next-auth/react'
-import { useAppSelector} from '../app/store'
+import { useEffect, useState } from 'react'
+import { useAppSelector } from '../app/store'
 import Basket from '../components/Basket'
-import {selectAllCartItems} from '../features/cart/cartSlice';
-
+import { selectAllCartItems } from '../features/cart/cartSlice'
 
 const Cart = () => {
 
@@ -12,7 +12,53 @@ const Cart = () => {
 
   const { data: session, status } = useSession()
 
-  if (status === 'authenticated') {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [ cookies, setCookies ] = useState<any>(null)
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+ const {user} :any = {...session};
+
+ console.log(cookies)
+
+  useEffect(() => {
+
+    if(status === 'authenticated'){
+
+      try{
+
+        const fetchCookie = async()=> {
+          const res = await fetch('/api/helpers/cookiegetter');
+          const result = await res.json();
+          setCookies(result)
+          return result;
+        }
+
+        const addData = async()=> {
+          const res = await fetch('/api/addcartitems', {
+            method: 'POST',
+            body: JSON.stringify({cartItems , user}),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
+          const result = await res.json();
+          return result;
+        }
+
+        fetchCookie()
+        addData()
+
+      }catch(err){
+
+        console.log(err)
+
+      }
+    }
+
+  },[status, cartItems, user]);
+
+
+  if (status === 'authenticated' ) {
     return (
       <Layout>
         <>
@@ -24,16 +70,14 @@ const Cart = () => {
           <main id="main-content" className="clearfix">
             <h1 id="main-content-title">Cart - Logged In</h1>
             <p>
-              {session.user?.name ? session.user?.name : 'name not available'}
+              {user.name ? user.name : 'name not available'}
             </p>
             <p>
-              {session.user?.email
-                ? session.user?.email
+              {user.email
+                ? user.email
                 : 'email not available'}
             </p>
-            <Basket
-              cartItems={cartItems}
-            ></Basket>
+            <Basket cartItems={cartItems}></Basket>
           </main>
         </>
       </Layout>
@@ -49,9 +93,7 @@ const Cart = () => {
           </Head>
           <main id="main-content" className="clearfix">
             <h1 id="main-content-title">Cart - Not Logged In</h1>
-            <Basket
-              cartItems={cartItems}
-            ></Basket>
+            <Basket cartItems={cartItems}></Basket>
           </main>
         </>
       </Layout>
@@ -60,4 +102,3 @@ const Cart = () => {
 }
 
 export default Cart
-

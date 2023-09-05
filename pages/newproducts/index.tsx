@@ -61,7 +61,6 @@ const NewProducts = () => {
     }
   }, [searchbarDataStatus, dispatch])
 
-
   const [visibility, setVisibility] = useState<boolean>(false)
 
   const sidebarVisibility = (e: { preventDefault: () => void }): void => {
