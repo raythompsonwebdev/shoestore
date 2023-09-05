@@ -58,7 +58,7 @@ const Cart = () => {
   },[status, cartItems, user]);
 
 
-  if (status === 'authenticated' ) {
+  if (status === 'authenticated' && user !== undefined ) {
     return (
       <Layout>
         <>
