@@ -27,7 +27,7 @@ const Profile = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const {user} :any = {...session};
 
-  console.log(cookies, user);
+  console.log(cookies);
 
   if (status === 'unauthenticated' && session === null) {
     return (

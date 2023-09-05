@@ -58,7 +58,7 @@ const Cart = () => {
   },[status, cartItems, user]);
 
 
-  if (status === 'authenticated' && session === null ) {
+  if (status === 'authenticated' && session !== null ) {
     return (
       <Layout>
         <>
@@ -70,10 +70,10 @@ const Cart = () => {
           <main id="main-content" className="clearfix">
             <h1 id="main-content-title">Cart - Logged In</h1>
             <p>
-              {user?.name ? user.name : 'name not available'}
+              {user ? user.name : 'name not available'}
             </p>
             <p>
-              {user?.email
+              {user
                 ? user.email
                 : 'email not available'}
             </p>
