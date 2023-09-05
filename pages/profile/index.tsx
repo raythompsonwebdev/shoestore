@@ -29,7 +29,7 @@ const Profile = () => {
 
   console.log(cookies, user);
 
-  if (status === 'unauthenticated' && user !== undefined ) {
+  if (status === 'unauthenticated' && session === null) {
     return (
       <Layout>
         <>
@@ -55,7 +55,7 @@ const Profile = () => {
           <h1 id="main-content-title">Profile</h1>
           <br />
           <figure id="profile-image">
-            {user?.picture === './images/one.jpg' ? (
+            {user === undefined ? (
               <Image
                 src={'/images/placeholder.jpg'}
                 className="user-image"
@@ -74,14 +74,14 @@ const Profile = () => {
             <figcaption id="profile-image-text">
               <p>
                 Username :{' '}
-                {user?.name
+                {user
                   ? (user.name as string)
                   : 'username not found'}
               </p>
               <br />
               <p>
                 Email :
-                {user?.email
+                {user
                   ? (user.email as string)
                   : 'useremail not found'}
               </p>
