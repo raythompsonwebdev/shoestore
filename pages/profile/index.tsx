@@ -55,7 +55,7 @@ const Profile = () => {
           <h1 id="main-content-title">Profile</h1>
           <br />
           <figure id="profile-image">
-            {user.picture === './images/one.jpg' ? (
+            {user.name !== "" ? (
               <Image
                 src={'/images/placeholder.jpg'}
                 className="user-image"
@@ -65,7 +65,7 @@ const Profile = () => {
               />
             ) : (
               <Image
-                src={user.picture} // not included as database field yet.
+                src={'/images/placeholder.jpg'} // not included as database field yet.
                 alt="Profile"
                 width="200"
                 height="200"
