@@ -20,5 +20,6 @@ export const formatPrice = (price: number) => {
     style: 'currency',
     currency: 'GBP',
   }).format(price)
+
   return result
 }

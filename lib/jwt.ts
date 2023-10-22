@@ -18,15 +18,13 @@ export function signJwtAccessToken(
   return token
 }
 
-export function verifyJwt(token: string) {
-
+export async function verifyJwt(token: string) {
   const secret_key = process.env.NEXTAUTH_SECRET
 
   try {
-
     const decoded = jwt.verify(token, secret_key)
+    console.log(decoded)
     return decoded as JwtPayload
-
   } catch (error) {
     console.error(error)
     return null

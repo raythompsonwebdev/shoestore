@@ -5,7 +5,6 @@ const AccessDenied = () => {
   return (
     <main id="main-content" className="clearfix">
       <h1 id="main-content-title">Access Denied</h1>
-
       <p>
         <Link
           href="/api/auth/signin"

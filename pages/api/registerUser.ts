@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { connectToMongoDB } from '../../lib/dbConnect'
 // import {IUser} from '../../types/index'
 import User from '../../models/users'
-import { hashPassword } from '../../lib/hashPassword'
 import sanitize from 'mongo-sanitize'
 
 export default async function registerUser(
@@ -17,7 +16,6 @@ export default async function registerUser(
   const name = sanitize(req.body.name)
   const email = sanitize(req.body.email)
   const password = sanitize(req.body.password)
-  const dateSubmitted = new Date().toString().substring(0, 24)
 
   try {
     // connect to mungodb
@@ -29,23 +27,21 @@ export default async function registerUser(
     if (userExists) {
       return res.status(409).json({ error: 'User Already exists' })
     } else {
-      if (password.length < 12)
+      if (password.length < 10)
         return res
           .status(409)
-          .json({ error: 'Password should be greater than 12 characters long' })
+          .json({ error: 'Password should be greater than 10 characters long' })
 
       // Hash password
-      const hashpassword = await hashPassword(password)
+      // const hashpassword = await hashPassword(password)
 
       // create new user
       const user = User.create({
-        //id: Date.now(),
         name,
         email,
-        password: hashpassword,
-        date: dateSubmitted,
-        image:"./images/one.jpg",
-        cartitems:[]
+        password,
+        image: ' ',
+        cartitems: [],
       })
 
       return res.status(200).json({
@@ -54,6 +50,6 @@ export default async function registerUser(
       })
     }
   } catch (err) {
-    console.log(err)
+    res.status(400).send({ message: err })
   }
 }

@@ -96,7 +96,6 @@ const cartSlice = createSlice({
 
 export const selectAllCartItems = (state: RootState) => state.cartItems
 
-
 export const {
   addToCart,
   clearCart,

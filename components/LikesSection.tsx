@@ -1,5 +1,3 @@
-//import { SetStateAction } from 'react'
-
 type LikesType = {
   likes: number
   prodid?: string

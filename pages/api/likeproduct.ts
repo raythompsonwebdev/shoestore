@@ -37,7 +37,6 @@ export default async function likeproduct(
 
     res.status(200).json(updatedProductInfo)
   } catch (err) {
-    console.log(err)
-    res.status(500).json({message:err})
+    res.status(400).send({ message: err })
   }
 }

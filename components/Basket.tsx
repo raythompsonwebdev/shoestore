@@ -6,7 +6,6 @@ import { increase, decrease, clearCart } from '../features/cart/cartSlice'
 import { CartItemType } from '../types/index'
 
 const Basket = (props: { cartItems: CartItemType[] }) => {
-
   const dispatch = useAppDispatch()
 
   const itemsPrice = props.cartItems.reduce(

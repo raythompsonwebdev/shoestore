@@ -784,6 +784,17 @@ p {
   background-color: $color-white-bg;
   border: 2px $content-color1 solid;
   padding: 0.5em;
+
+  p {
+    line-height: 35px;
+  }
+}
+
+.profile-image-text-title {
+  line-height: 35px;
+  display: block;
+  color: $color-black;
+  border-bottom: 2px solid $content-color;
 }
 
 /* rightside content section */
@@ -1659,7 +1670,7 @@ p {
   }
 
   #profile-image {
-    width: 90%;
+    width: 96%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1671,7 +1682,7 @@ p {
   }
 
   #profile-image-text {
-    width: 73%;
+    width: 80%;
     margin: auto;
   }
 
@@ -2259,7 +2270,7 @@ p {
   }
 
   #profile-image-text {
-    width: 73%;
+    width: 60%;
     margin: 0 0 0 2%;
   }
 

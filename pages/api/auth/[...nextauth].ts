@@ -6,20 +6,17 @@ import { connectToMongoDB } from '../../../lib/dbConnect'
 // import {IUser} from '../../../types/index'
 import User from '../../../models/users'
 import { comparePassword } from '../../../lib/hashPassword'
-
+// import jwt from 'jsonwebtoken'
 
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
-      id: 'credentials',
-      name: 'credentials',
+      name: 'Credentials',
       credentials: {
-        name: { label: 'Username', type: 'text' },
         email: { label: 'Email', type: 'email' },
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-
         await connectToMongoDB().catch((err) => {
           throw new Error(err)
         })
@@ -29,12 +26,11 @@ export const authOptions: NextAuthOptions = {
           email: credentials?.email,
         }).select('+password')
 
-
         if (!user) {
           throw new Error('Invalid credentials! Please enter valid credentials')
         }
 
-        if(user.email !== credentials?.email){
+        if (user.email !== credentials?.email) {
           throw new Error('Invalid email! Please enter valid email')
         }
 
@@ -60,27 +56,21 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   adapter: MongoDBAdapter(clientPromise),
+  secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: 'jwt',
   },
   jwt: {
-    secret: process.env.NEXTAUTH_SECRET,
     maxAge: 60 * 60 * 24 * 30,
   },
   callbacks: {
-    jwt: async ({ token, user, account}) => {
-      if (account) {
-        token.accessToken = account.access_token
-      }
-      return { ...token, ...user }
+    jwt: async ({ token }) => {
+      return token
     },
-    session: async ({ session, token}) => {
+    session: async ({ session, token }) => {
       session.user = token
-      session.user.id = token.id
-      return {
-        ...session,
-
-      }
+      // session.user.id = token.id
+      return session
     },
   },
   pages: {

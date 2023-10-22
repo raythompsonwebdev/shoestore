@@ -19,16 +19,16 @@ next-env.d.ts
 .vercel
 .env*.local
 
-files/
-build/
 .next/*
 .env.local
 public/js/*js
+public/font/
 next-env.d.ts
 .vscode
 pages/api/examples/
 hooks/
 middleware.txt
+features/rtk-queries/
 
 
 

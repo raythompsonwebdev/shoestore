@@ -1,5 +1,4 @@
 import Link from 'next/link'
-// import Image from 'next/image'
 import { formatPrice } from '../../helpers/index'
 import ProductImage from '../Images/ProductImage'
 import CartIcon from '../Images/CartIcon'

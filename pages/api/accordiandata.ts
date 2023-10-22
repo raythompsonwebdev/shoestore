@@ -16,6 +16,6 @@ export default async function productHandler(
     const accordian = JSON.parse(JSON.stringify(resultstwo))
     res.status(200).send({ accordian })
   } catch (e) {
-    console.error(e)
+    res.status(400).send({ message: e })
   }
 }

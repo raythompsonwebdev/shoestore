@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Accordion } from 'react-bootstrap'
 import { AccordianType } from '../types'
 

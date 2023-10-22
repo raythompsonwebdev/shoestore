@@ -1,7 +1,5 @@
-// import { Key } from 'react'
 import React, { Key } from 'react'
 import { SelectBarType } from '../../types/index'
-
 interface SearchSelector {
   selectBarData: SelectBarType[]
   changesOrders: (orderbyval: string, dir: string) => void
