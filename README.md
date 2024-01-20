@@ -2,7 +2,7 @@
 
 ![shoestore](/www-shoestore-home-page-large.jpg)
 
-# Description
+## Description
 
 Ecommerce Web application based on photoshop website template design downloaded from website [php.jabber.com](https://www.phpjabbers.com/).
 
@@ -30,35 +30,46 @@ Built using JS framework NextJS (pages router), NextAuth.js, Typescript, MungoDB
 - [Typescript](https://www.typescriptlang.org/)
 - [Nextauth](https://next-auth.js.org/)
 
-## Quick Start
+## Prerequisites
 
-Install next, react and react-dom :
+This is an example of how to list things you need to use the software and how to install them.
 
-`npm install next react react-dom`
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+Clone the repo
+
+```sh
+git clone git@github.com:raythompsonwebdev/shoestore.git
+```
+
+Install NPM packages :
+
+```sh
+npm install
+```
 
 ### or
 
-`yarn add next react react-dom`
+```sh
+yarn install
+```
 
 ### or
 
-`pnpm add next react react-dom`
+```sh
+pnpm install
+```
 
 Open package.json and add the following scripts:
 
-```
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint"
-}
-
-```
+Runs next dev to start Next.js in development mode.
 
 `npm run dev`
-
-Runs next dev to start Next.js in development mode.
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -66,15 +77,21 @@ The page will reload when you make changes. You may also see any lint errors in 
 
 Runs next build to build the application for production usage
 
-`npm run build`
+```sh
+npm run build
+```
 
 Runs next start to start a Next.js production server
 
-`npm run start`
+```sh
+npm run start
+```
 
 Runs next lint to set up Next.js' built-in ESLint configuration
 
-`npm run lint`
+```sh
+npm run lint
+```
 
 ## Learn More
 
