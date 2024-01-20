@@ -1,50 +1,46 @@
-# Shoestore web app - Next.js - Pages Router
+# Shoestore
 
 ![shoestore](/www-shoestore-home-page-large.jpg)
 
-# Introduction
+# Description
 
-Web application is based on a photoshop templates downloaded from website [php.jabber.com](https://www.phpjabbers.com/). mockup of online shoe store selling mens, womens and childrens shoes and accessories.
+Ecommerce Web application based on photoshop website template design downloaded from website [php.jabber.com](https://www.phpjabbers.com/).
+
+Built using JS framework NextJS (pages router), NextAuth.js, Typescript, MungoDB database and Redux Toolkit this web application allows users to register and login into thier accounts, add products to a shopping cart and search for products using various filters.
 
 ## Features
 
-- Filtered search.
-
-- Responsive design viewable on most mobile devices.
-
-- Shopping Cart ( in progress)
-
-- User Registration/Login
-
-## Technologies
-
-- NextJS 13
-- React 18
-- Typescript
-- Sass
-- MungoDb
-- Redux Toolkit
+- User Registration/User Login
+- Products Search Filters
+- Shopping Cart
+- Responsive Design viewable on most mobile devices.
 
 ## Tools
 
-- [node](https://nodejs.org/en)
-- [nextjs](https://nextjs.org/learn/foundations/about-nextjs)
-- [mungodb](https://www.mongodb.com/)
-- [prettier](https://prettier.io/)
-- [eslint](https://eslint.org/)
-- [postcss](https://postcss.org/)
-- [stylelint](https://stylelint.io/)
-- [redux toolkit](https://redux-toolkit.js.org/)-
+- [React](https://react.dev/)
+- [Sass](https://sass-lang.com/)
+- [Node](https://nodejs.org/en)
+- [Nextjs](https://nextjs.org/learn/foundations/about-nextjs)
+- [Mungodb](https://www.mongodb.com/)
+- [Prettier](https://prettier.io/)
+- [Eslint](https://eslint.org/)
+- [Postcss](https://postcss.org/)
+- [Stylelint](https://stylelint.io/)
+- [Redux toolkit](https://redux-toolkit.js.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Nextauth](https://next-auth.js.org/)
+
+## Quick Start
 
 Install next, react and react-dom :
 
 `npm install next react react-dom`
 
-## or
+### or
 
 `yarn add next react react-dom`
 
-## or
+### or
 
 `pnpm add next react react-dom`
 
@@ -68,17 +64,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes. You may also see any lint errors in the console.
 
-`npm run build`
-
 Runs next build to build the application for production usage
 
-`npm run start`
+`npm run build`
 
 Runs next start to start a Next.js production server
 
-`npm run lint`
+`npm run start`
 
 Runs next lint to set up Next.js' built-in ESLint configuration
+
+`npm run lint`
 
 ## Learn More
 
