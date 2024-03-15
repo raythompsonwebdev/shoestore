@@ -34,7 +34,6 @@ export const selectdataSlice = createSlice({
   initialState,
   reducers: {
     selectdataAdded: (state, action: PayloadAction<SelectBarType>) => {
-
       state.selectdataItems.push(action.payload)
     },
   },

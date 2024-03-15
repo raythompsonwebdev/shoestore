@@ -29,15 +29,16 @@ const UserSchema = new Schema({
     type: String,
     default: Date.now,
   },
-  image:{
+  image: {
     type: String,
     required: true,
   },
-  cartitems : [{
-    type: [String],
-    required:true
-  }],
-
+  cartitems: [
+    {
+      type: [String],
+      required: true,
+    },
+  ],
 })
 
 const User = models.User || model('User', UserSchema)

@@ -7,7 +7,6 @@ import { connectToMongoDB } from '../../../lib/dbConnect'
 import User from '../../../models/users'
 import { comparePassword } from '../../../lib/hashPassword'
 
-
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
@@ -19,7 +18,6 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-
         await connectToMongoDB().catch((err) => {
           throw new Error(err)
         })
@@ -29,12 +27,11 @@ export const authOptions: NextAuthOptions = {
           email: credentials?.email,
         }).select('+password')
 
-
         if (!user) {
           throw new Error('Invalid credentials! Please enter valid credentials')
         }
 
-        if(user.email !== credentials?.email){
+        if (user.email !== credentials?.email) {
           throw new Error('Invalid email! Please enter valid email')
         }
 
@@ -68,18 +65,17 @@ export const authOptions: NextAuthOptions = {
     maxAge: 60 * 60 * 24 * 30,
   },
   callbacks: {
-    jwt: async ({ token, user, account}) => {
+    jwt: async ({ token, user, account }) => {
       if (account) {
         token.accessToken = account.access_token
       }
       return { ...token, ...user }
     },
-    session: async ({ session, token}) => {
+    session: async ({ session, token }) => {
       session.user = token
       session.user.id = token.id
       return {
         ...session,
-
       }
     },
   },

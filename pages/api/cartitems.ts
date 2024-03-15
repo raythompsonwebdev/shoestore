@@ -27,6 +27,6 @@ export default async function productHandler(
 
     res.status(200).send(product)
   } catch (e) {
-    res.status(500).send({message: e})
+    res.status(500).send({ message: e })
   }
 }

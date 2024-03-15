@@ -44,8 +44,8 @@ export default async function registerUser(
         email,
         password: hashpassword,
         date: dateSubmitted,
-        image:"./images/one.jpg",
-        cartitems:[]
+        image: './images/one.jpg',
+        cartitems: [],
       })
 
       return res.status(200).json({

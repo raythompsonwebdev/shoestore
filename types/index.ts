@@ -1,10 +1,10 @@
 export interface IUser {
-  id:string | number
+  id: string | number
   name: string
   email: string
-  password:string
-  date:string
-  image:string
+  password: string
+  date: string
+  image: string
   cartitems: []
 }
 export interface LoginUserParams {

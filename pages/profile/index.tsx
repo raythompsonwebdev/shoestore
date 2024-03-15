@@ -6,28 +6,27 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 const Profile = () => {
-
   const { data: session, status, update } = useSession()
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [ cookies, setCookies ] = useState<any>(null)
+  const [cookies, setCookies] = useState<any>(null)
 
   useEffect(() => {
-    if(session !== undefined){
-      const fetchData = async()=> {
-        const res = await fetch('/api/helpers/cookiegetter');
-        const result = await res.json();
+    if (session !== undefined) {
+      const fetchData = async () => {
+        const res = await fetch('/api/helpers/cookiegetter')
+        const result = await res.json()
         setCookies(result)
-        return result;
+        return result
       }
       fetchData()
     }
-  },[session]);
+  }, [session])
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const {user} :any = {...session};
+  const { user }: any = { ...session }
 
-  console.log(cookies);
+  console.log(cookies)
 
   if (status === 'unauthenticated' && session === null) {
     return (
@@ -73,17 +72,11 @@ const Profile = () => {
             )}
             <figcaption id="profile-image-text">
               <p>
-                Username :{' '}
-                {user
-                  ? (user.name as string)
-                  : 'username not found'}
+                Username : {user ? (user.name as string) : 'username not found'}
               </p>
               <br />
               <p>
-                Email :
-                {user
-                  ? (user.email as string)
-                  : 'useremail not found'}
+                Email :{user ? (user.email as string) : 'useremail not found'}
               </p>
               <br />
               <p>
@@ -91,13 +84,11 @@ const Profile = () => {
               </p>
             </figcaption>
           </figure>
-        {/*
-          * Only trigger a session update, assuming you already updated the value server-side.
-          * All `useSession().data` references will be updated.
-          */}
-        <button onClick={() => update()}>
-          Edit Cookie
-        </button>
+          {/*
+           * Only trigger a session update, assuming you already updated the value server-side.
+           * All `useSession().data` references will be updated.
+           */}
+          <button onClick={() => update()}>Edit Cookie</button>
         </main>
       </>
     </Layout>
