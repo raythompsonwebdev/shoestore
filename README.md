@@ -69,7 +69,9 @@ Open package.json and add the following scripts:
 
 Runs next dev to start Next.js in development mode.
 
-`npm run dev`
+```sh
+npm run dev
+```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
