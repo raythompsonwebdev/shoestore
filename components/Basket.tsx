@@ -1,12 +1,12 @@
 // import { useEffect, useState } from 'react'
 import ProductImage from '../components/Images/ProductImage'
 import { formatPrice } from '../helpers/index'
-import { useAppDispatch } from '../app/store'
+import { useDispatch } from '../features/store'
 import { increase, decrease, clearCart } from '../features/cart/cartSlice'
 import { CartItemType } from '../types/index'
 
 const Basket = (props: { cartItems: CartItemType[] }) => {
-  const dispatch = useAppDispatch()
+  const dispatch = useDispatch()
 
   const itemsPrice = props.cartItems.reduce(
     (a: number, c: { qty: number; price: number }) => a + c.qty * c.price,

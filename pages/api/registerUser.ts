@@ -54,6 +54,6 @@ export default async function registerUser(
       })
     }
   } catch (err) {
-    console.log(err)
+    res.status(500).json({ Error: err })
   }
 }

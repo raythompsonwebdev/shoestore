@@ -1,5 +1,6 @@
-import type { RootState } from '../../app/store'
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import type { ReduxState } from '../store'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAppAsyncThunk } from '../createAppAsyncThunk'
 import axios from 'axios'
 import { ProductType } from '../../types/index'
 export interface ProductsState {
@@ -16,14 +17,14 @@ const initialState: ProductsState = {
 
 const url = '/api/productsdata'
 
-export const fetchProducts = createAsyncThunk(
+export const fetchProducts = createAppAsyncThunk(
   'products/fetchProducts',
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url)
       return resp.data.products
     } catch (error) {
-      return thunkAPI.rejectWithValue('something went wrong')
+      return thunkAPI.rejectWithValue(`${error}`)
     }
   }
 )
@@ -38,9 +39,6 @@ export const productSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchProducts.pending, (state) => {
-        state.status = 'loading'
-      })
       .addCase(
         fetchProducts.fulfilled,
         (state, action: PayloadAction<Array<ProductType>>) => {
@@ -48,6 +46,9 @@ export const productSlice = createSlice({
           state.productItems = action.payload
         }
       )
+      .addCase(fetchProducts.pending, (state) => {
+        state.status = 'loading'
+      })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = 'failed'
         state.error = action.error.message
@@ -55,13 +56,17 @@ export const productSlice = createSlice({
   },
 })
 
-export const selectAllProducts = (state: RootState) =>
+export const selectAllProducts = (state: ReduxState) =>
   state.products.productItems
-export const getProductsStatus = (state: RootState) => state.products.status
-export const getProductsError = (state: RootState) => state.products.error
+export const getProductsStatus = (state: ReduxState) => state.products.status
+export const getProductsError = (state: ReduxState) => state.products.error
+
+// function should only accept one argument - state - function returns function with name parameter added as an argument
+// export const selectProductByName = (state: ReduxState) => (name: string) =>
+//   state.products.productItems.find((product) => product.name === name)
 
 export const selectProductByName = (
-  state: RootState,
+  state: ReduxState,
   name: string | string[] | undefined
 ) => state.products.productItems.find((product) => product.name === name)
 

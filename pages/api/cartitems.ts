@@ -26,7 +26,7 @@ export default async function productHandler(
     const product = JSON.parse(JSON.stringify(results))
 
     res.status(200).send(product)
-  } catch (e) {
-    res.status(500).send({ message: e })
+  } catch (err) {
+    res.status(500).send({ message: err })
   }
 }
