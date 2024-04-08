@@ -17,18 +17,19 @@ next-env.d.ts
 
 .next
 .vercel
-.env*.local
 
 files/
-build/
 .next/*
 .env.local
 public/js/*js
-next-env.d.ts
 .vscode
-pages/api/examples/
-hooks/
-middleware.txt
+
+models/accordianData.ts
+models/cartItems.ts
+models/products.ts
+models/searchBarData.ts
+models/selectBarData.ts
+
 
 
 

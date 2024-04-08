@@ -3,7 +3,7 @@ import Layout from '../../components/Layout'
 import ProductImage from '../../components/Images/ProductImage'
 import Link from 'next/link'
 import { ProductType } from '../../types/index'
-import { useAppSelector } from '../../features/store'
+import { useSelector } from '../../features/store'
 import { selectAllProducts } from '../../features/products/productSlice'
 import { formatPrice } from '../../helpers/index'
 import { useRouter } from 'next/router'
@@ -14,10 +14,10 @@ const SearchProduct = () => {
 
   const { sizeVal, colorVal, genderVal, styleVal } = router.query
 
-  const searchProducts = useAppSelector(selectAllProducts)
+  const searchProducts = useSelector(selectAllProducts)
 
   //filter product from the products array
-  const products = searchProducts.filter((product) =>
+  const products = searchProducts.filter((product: ProductType) =>
     product.gender === genderVal ||
     product.style === styleVal ||
     product.size === sizeVal ||

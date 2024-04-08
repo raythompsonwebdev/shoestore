@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { connectToMongoDB } from '../../lib/dbConnect'
+import { connectToMongoose } from '../../lib/dbConnect'
 // import {IUser} from '../../types/index'
 import User from '../../models/users'
 import { hashPassword } from '../../lib/hashPassword'
@@ -21,7 +21,7 @@ export default async function registerUser(
 
   try {
     // connect to mungodb
-    connectToMongoDB().catch((err) => res.json(err))
+    connectToMongoose().catch((err) => res.json(err))
 
     // confirm whether email already exist in database.
     const userExists = await User.findOne({ email }).exec()

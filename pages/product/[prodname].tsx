@@ -44,7 +44,14 @@ const SingleProduct = () => {
     { likes: likes }
   )
 
-  // const onAdd = (product: ProductType ) => {
+  // useEffect(() => {
+  //   if (window.localStorage) {
+  //     localStorage.setItem('cart', JSON.stringify(cartItems))
+  //   }
+  // }, [cartItems])
+  // }, [])
+
+  // const onAdd = (product: Product) => {
   //   const exist = cartItems.find(
   //     (x: { prodId: number }) => x.prodId === product.prodId
   //   )
