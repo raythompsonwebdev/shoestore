@@ -16,17 +16,16 @@ const SearchProduct = () => {
 
   const searchProducts = useSelector(selectAllProducts)
 
-  //filter product from the products array
-  const products = searchProducts.filter((product: ProductType) =>
-    product.gender === genderVal ||
-    product.style === styleVal ||
-    product.size === sizeVal ||
-    product.color === colorVal
-      ? product
-      : false
-  )
+  //filter product from the products array using chaining
+  const products = searchProducts
+    .filter((prodgen: ProductType) => prodgen.gender === genderVal)
+    .filter((prodstyle) => prodstyle.style === styleVal)
+    .filter((prodsize) => prodsize.size === sizeVal)
+    .filter((prodcol) => prodcol.color === colorVal)
 
-  return products ? (
+  console.log(products)
+
+  return products.length > 0 ? (
     <Layout>
       <>
         <Head>
