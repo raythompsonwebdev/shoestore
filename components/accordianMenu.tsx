@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Accordion } from 'react-bootstrap'
 import { AccordianType } from '../types'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const AccordianMenu = (props: { accordianData: AccordianType[] }) => {
   const { accordianData } = { ...props }

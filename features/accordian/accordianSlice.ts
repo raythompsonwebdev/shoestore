@@ -1,10 +1,7 @@
-import {
-  createSlice,
-  createAsyncThunk,
-  type PayloadAction,
-} from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAppAsyncThunk } from '../createAppAsyncThunk'
 import axios from 'axios'
-import type { RootState } from '../../app/store'
+import type { ReduxState } from '../store'
 import { AccordianType } from '../../types/index'
 
 export interface AccordianState {
@@ -20,14 +17,14 @@ const initialState: AccordianState = {
 
 const url = '/api/accordiandata'
 
-export const fetchAccordian = createAsyncThunk(
+export const fetchAccordian = createAppAsyncThunk(
   'accordian/fetchAccordian',
   async (name, thunkAPI) => {
     try {
       const resp = await axios.get(url)
       return resp.data.accordian
     } catch (error) {
-      return thunkAPI.rejectWithValue('something went wrong')
+      return thunkAPI.rejectWithValue(`${error}`)
     }
   }
 )
@@ -59,10 +56,10 @@ export const accordianSlice = createSlice({
   },
 })
 
-export const selectAllAccordian = (state: RootState) =>
+export const selectAllAccordian = (state: ReduxState) =>
   state.accordian.accordianItems
-export const getAccordianStatus = (state: RootState) => state.accordian.status
-export const getAccordianError = (state: RootState) => state.accordian.error
+export const getAccordianStatus = (state: ReduxState) => state.accordian.status
+export const getAccordianError = (state: ReduxState) => state.accordian.error
 
 export const { accordianAdded } = accordianSlice.actions
 

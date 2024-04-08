@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../components/Layout'
 import BannerImg from '../components/homepage/bannerImg'
 import HomePageBoxes from '../components/homepage/homepageBoxes'
@@ -12,50 +11,40 @@ import {
   getAccordianStatus,
 } from '../features/accordian/accordianSlice'
 import {
-  productAdded,
   selectAllProducts,
   fetchProducts,
   getProductsStatus,
 } from '../features/products/productSlice'
-import { useAppSelector, useAppDispatch } from '../app/store'
-import { useEffect } from 'react'
+import { useSelector, useDispatch } from '../features/store'
 
 const Home = () => {
-  const dispatch = useAppDispatch()
-  // get Products
-  const productItems = useAppSelector(selectAllProducts)
-  const productItemsStatus = useAppSelector(getProductsStatus)
-  //const productItemsError = useAppSelector(getProductsError);
+  const [visibility, setVisibility] = useState<boolean>(false)
 
-  // acoordian data
-  const accordianItems = useAppSelector(selectAllAccordian)
-  const accordianDataStatus = useAppSelector(getAccordianStatus)
-  //const accordianDataError = useAppSelector(getAccordianError);
+  const dispatch = useDispatch()
+
+  // get Products
+  const productData = useSelector(selectAllProducts)
+  const productItemsStatus = useSelector(getProductsStatus)
+  // const productItemsError = useAppSelector(getProductsError);
+
+  // accordian data
+  const accordianData = useSelector(selectAllAccordian)
+  const accordianDataStatus = useSelector(getAccordianStatus)
+  // const accordianDataError = useAppSelector(getAccordianError);
 
   useEffect(() => {
     if (productItemsStatus === 'idle') {
       dispatch(fetchProducts())
     }
-    dispatch(productAdded)
+    // setProductData(productItems)
   }, [productItemsStatus, dispatch])
 
   useEffect(() => {
     if (accordianDataStatus === 'idle') {
       dispatch(fetchAccordian())
     }
+    // setAccordianData(accordianItems)
   }, [accordianDataStatus, dispatch])
-
-  const [visibility, setVisibility] = useState<boolean>(false)
-
-  /** API slice */
-  // const {
-  //   data
-  // } = useGetProductsQuery()
-
-  // const otherproducts = data?.product as Product[]
-  // const otheraccordian = data?.accordian as AccordianProp[]
-
-  //const {product, accordian} = data as HomePageProds;
 
   const sidebarVisibility = (e: { preventDefault: () => void }) => {
     e.preventDefault()
@@ -85,14 +74,14 @@ const Home = () => {
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
             <FindShoes />
-            <AccordianMenu accordianData={accordianItems} />
+            <AccordianMenu accordianData={accordianData} />
           </aside>
 
           <section id="right-content-section" className="group">
             <BannerImg />
 
             <h1 id="right-content-section-header">Featured</h1>
-            <HomePageBoxes productData={productItems} />
+            <HomePageBoxes productData={productData} />
           </section>
         </main>
       </>

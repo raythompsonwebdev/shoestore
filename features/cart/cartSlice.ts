@@ -4,7 +4,7 @@ import {
   type PayloadAction,
 } from '@reduxjs/toolkit'
 import axios from 'axios'
-import type { RootState } from '../../app/store'
+import type { ReduxState } from '../store'
 import { CartItemType } from '../../types/index'
 
 export interface CartItemState {
@@ -31,7 +31,7 @@ export const getCartItems = createAsyncThunk(
       const resp = await axios.get(url)
       return resp.data
     } catch (error) {
-      return thunkAPI.rejectWithValue('something went wrong')
+      return thunkAPI.rejectWithValue(`${error}`)
     }
   }
 )
@@ -94,7 +94,7 @@ const cartSlice = createSlice({
   },
 })
 
-export const selectAllCartItems = (state: RootState) => state.cartItems
+export const selectAllCartItems = (state: ReduxState) => state.cartItems
 
 export const {
   addToCart,

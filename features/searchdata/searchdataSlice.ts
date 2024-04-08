@@ -4,7 +4,7 @@ import {
   type PayloadAction,
 } from '@reduxjs/toolkit'
 import axios from 'axios'
-import type { RootState } from '../../app/store'
+import type { ReduxState } from '../store'
 import { SearchBarType } from '../../types/index'
 
 export interface SearchBarState {
@@ -27,7 +27,7 @@ export const fetchSearchData = createAsyncThunk(
       const resp = await axios.get(url)
       return resp.data.searchresults
     } catch (error) {
-      return thunkAPI.rejectWithValue('something went wrong')
+      return thunkAPI.rejectWithValue(`${error}`)
     }
   }
 )
@@ -59,10 +59,10 @@ export const searchdataSlice = createSlice({
   },
 })
 
-export const getSearchData = (state: RootState) =>
+export const getSearchData = (state: ReduxState) =>
   state.searchdata.searchdataItems
-export const getSearchBarStatus = (state: RootState) => state.searchdata.status
-export const getSearchBarError = (state: RootState) => state.searchdata.error
+export const getSearchBarStatus = (state: ReduxState) => state.searchdata.status
+export const getSearchBarError = (state: ReduxState) => state.searchdata.error
 
 export const { searchdataAdded } = searchdataSlice.actions
 

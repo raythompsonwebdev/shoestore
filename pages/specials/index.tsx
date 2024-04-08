@@ -5,7 +5,6 @@ import SpecialsProductBoxes from '../../components/specials/specialsProductBoxes
 import AccordianMenu from '../../components/accordianMenu'
 import SearchBar from '../../components/searchBar/SearchBar'
 import SearchSelect from '../../components/searchSelect/SearchSelect'
-import { ProductType } from '../../types/index'
 import {
   getSearchData,
   fetchSearchData,
@@ -26,34 +25,32 @@ import {
   fetchSelectData,
   getSelectDataStatus,
 } from '../../features/selectdata/selectdataSlice'
-import { useAppSelector, useAppDispatch } from '../../app/store'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { useSelector, useDispatch } from '../../features/store'
 
 const Specials = () => {
-  const [productData, setProductData] = useState<ProductType[]>([])
   const [OrderDir, setOrderByDir] = useState<string>('asc')
   const [OrderByVal, setOrderByVal] = useState<string>('all')
   const [visibility, setVisibility] = useState<boolean>(false)
 
-  const dispatch = useAppDispatch()
+  const dispatch = useDispatch()
   // get Products
-  const productItems = useAppSelector(selectAllProducts)
-  const productItemsStatus = useAppSelector(getProductsStatus)
+  const productData = useSelector(selectAllProducts)
+  const productItemsStatus = useSelector(getProductsStatus)
   //const productItemsError = useAppSelector(getProductsError);
 
   // acoordian data
-  const accordianItems = useAppSelector(selectAllAccordian)
-  const accordianDataStatus = useAppSelector(getAccordianStatus)
+  const accordianData = useSelector(selectAllAccordian)
+  const accordianDataStatus = useSelector(getAccordianStatus)
   //const accordianDataError = useAppSelector(getAccordianError);
 
   // searchbar data
-  const searchbarItems = useAppSelector(getSearchData)
-  const searchbarDataStatus = useAppSelector(getSearchBarStatus)
+  const searchData = useSelector(getSearchData)
+  const searchbarDataStatus = useSelector(getSearchBarStatus)
   //const searchbarDataError = useAppSelector(getSearchBarError);
 
   // selectbar data
-  const selectbarItems = useAppSelector(getSelectData)
-  const selectbarDataStatus = useAppSelector(getSelectDataStatus)
+  const selectData = useSelector(getSelectData)
+  const selectbarDataStatus = useSelector(getSelectDataStatus)
   //const selectbarDataError = useAppSelector(getSelectBarError);
 
   useEffect(() => {
@@ -79,13 +76,6 @@ const Specials = () => {
       dispatch(fetchSelectData())
     }
   }, [selectbarDataStatus, dispatch])
-
-  //set products data
-  useEffect(() => {
-    if (productItemsStatus === 'succeeded') {
-      setProductData(productItems)
-    }
-  }, [productItemsStatus, productItems])
 
   const handleChange = (selected: SetStateAction<string>) => {
     setOrderByVal(selected)
@@ -131,11 +121,7 @@ const Specials = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          {searchbarItems !== undefined ? (
-            <SearchBar labelname="Specials" searchData={searchbarItems} />
-          ) : (
-            <div>No results</div>
-          )}
+          <SearchBar labelname="Specials" searchData={searchData} />
 
           <button
             id="sidebar-toggle-btn"
@@ -149,7 +135,7 @@ const Specials = () => {
           <aside
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
-            <AccordianMenu accordianData={accordianItems} />
+            <AccordianMenu accordianData={accordianData} />
           </aside>
 
           <section id="right-content-section" role="main">
@@ -158,7 +144,7 @@ const Specials = () => {
               orderDir={OrderDir}
               changesOrders={changesOrders}
               handleChange={handleChange}
-              selectBarData={selectbarItems || ''}
+              selectBarData={selectData}
             />
             <SpecialsProductBoxes productData={filteredApts} />
 

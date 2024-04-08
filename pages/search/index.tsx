@@ -3,7 +3,7 @@ import Layout from '../../components/Layout'
 import ProductImage from '../../components/Images/ProductImage'
 import Link from 'next/link'
 import { ProductType } from '../../types/index'
-import { useAppSelector } from '../../app/store'
+import { useSelector } from '../../features/store'
 import { selectAllProducts } from '../../features/products/productSlice'
 import { formatPrice } from '../../helpers/index'
 import { useRouter } from 'next/router'
@@ -14,19 +14,18 @@ const SearchProduct = () => {
 
   const { sizeVal, colorVal, genderVal, styleVal } = router.query
 
-  const searchProducts = useAppSelector(selectAllProducts)
+  const searchProducts = useSelector(selectAllProducts)
 
-  //filter product from the products array
-  const products = searchProducts.filter((product) =>
-    product.gender === genderVal ||
-    product.style === styleVal ||
-    product.size === sizeVal ||
-    product.color === colorVal
-      ? product
-      : false
-  )
+  //filter product from the products array using chaining
+  const products = searchProducts
+    .filter((prodgen: ProductType) => prodgen.gender === genderVal)
+    .filter((prodstyle) => prodstyle.style === styleVal)
+    .filter((prodsize) => prodsize.size === sizeVal)
+    .filter((prodcol) => prodcol.color === colorVal)
 
-  return products ? (
+  console.log(products)
+
+  return products.length > 0 ? (
     <Layout>
       <>
         <Head>

@@ -18,36 +18,33 @@ import {
   getSearchData,
   fetchSearchData,
   getSearchBarStatus,
+  // getSearchBarError,
 } from '../../features/searchdata/searchdataSlice'
-import { useAppSelector, useAppDispatch } from '../../app/store'
-import { ProductType } from '../../types'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { useSelector, useDispatch } from '../../features/store'
 
 const NewProducts = () => {
-  const dispatch = useAppDispatch()
+  const dispatch = useDispatch()
 
-  const [productData, setProductData] = useState<ProductType[]>([])
   // get Products
-  const productItems = useAppSelector(selectAllProducts)
-  const productItemsStatus = useAppSelector(getProductsStatus)
+  const productData = useSelector(selectAllProducts)
+  const productItemsStatus = useSelector(getProductsStatus)
   //const productItemsError = useAppSelector(getProductsError);
 
   // acoordian data
-  const accordianItems = useAppSelector(selectAllAccordian)
-  const accordianDataStatus = useAppSelector(getAccordianStatus)
+  const accordianData = useSelector(selectAllAccordian)
+  const accordianDataStatus = useSelector(getAccordianStatus)
   //const accordianDataError = useAppSelector(getAccordianError);
 
   // searchbar data
-  const searchbarItems = useAppSelector(getSearchData)
-  const searchbarDataStatus = useAppSelector(getSearchBarStatus)
-  //const searchbarDataError = useAppSelector(getAccordianError);
+  const searchData = useSelector(getSearchData)
+  const searchbarDataStatus = useSelector(getSearchBarStatus)
+  // const searchbarDataError = useSelector(getSearchBarError)
 
   useEffect(() => {
     if (productItemsStatus === 'idle') {
       dispatch(fetchProducts())
     }
-    setProductData(productItems)
-  }, [productItemsStatus, productItems, dispatch])
+  }, [productItemsStatus, dispatch])
 
   useEffect(() => {
     if (accordianDataStatus === 'idle') {
@@ -77,11 +74,7 @@ const NewProducts = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main id="main-content" className="clearfix">
-          {searchbarItems !== undefined ? (
-            <SearchBar labelname="New Products" searchData={searchbarItems} />
-          ) : (
-            <div>No results</div>
-          )}
+          <SearchBar labelname="New Products" searchData={searchData} />
 
           <button
             id="sidebar-toggle-btn"
@@ -95,7 +88,7 @@ const NewProducts = () => {
           <aside
             className={`left-side-content ${visibility ? 'is-expanded' : ' '}`}
           >
-            <AccordianMenu accordianData={accordianItems} />
+            <AccordianMenu accordianData={accordianData} />
           </aside>
 
           <section id="right-content-section">

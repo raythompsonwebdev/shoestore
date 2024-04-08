@@ -18,7 +18,7 @@ export default async function productHandler(
     const searchresults = JSON.parse(JSON.stringify(resultsfour))
 
     res.status(200).send({ searchresults })
-  } catch (e) {
-    console.error(e)
+  } catch (err) {
+    res.status(500).json({ Error: err })
   }
 }

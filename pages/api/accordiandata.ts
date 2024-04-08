@@ -15,7 +15,7 @@ export default async function productHandler(
     const resultstwo = await db.collection('accordianData').find({}).toArray()
     const accordian = JSON.parse(JSON.stringify(resultstwo))
     res.status(200).send({ accordian })
-  } catch (e) {
-    console.error(e)
+  } catch (err) {
+    res.status(500).json({ Error: err })
   }
 }

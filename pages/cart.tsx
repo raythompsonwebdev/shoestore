@@ -2,12 +2,12 @@ import Head from 'next/head'
 import Layout from '../components/Layout'
 import { useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
-import { useAppSelector } from '../app/store'
+import { useSelector } from '../features/store'
 import Basket from '../components/Basket'
 import { selectAllCartItems } from '../features/cart/cartSlice'
 
 const Cart = () => {
-  const { cartItems } = useAppSelector(selectAllCartItems)
+  const { cartItems } = useSelector(selectAllCartItems)
 
   const { data: session, status } = useSession()
 

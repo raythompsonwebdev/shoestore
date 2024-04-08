@@ -1,23 +1,25 @@
+// import { useState, useEffect } from 'react'
 import { useState } from 'react'
 import LikesSection from '../../components/LikesSection'
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 import ProductImage from '../../components/Images/ProductImage'
 import { useRouter } from 'next/router'
-import { useAppSelector, useAppDispatch } from '../../app/store'
+import { useSelector, useDispatch } from '../../features/store'
 import { selectProductByName } from '../../features/products/productSlice'
 import { formatPrice } from '../../helpers/index'
 import { addToCart } from '../../features/cart/cartSlice'
 import { CartIcon } from '../../components/Images/Icons'
+// import { ProductType } from '../../types/index'
 
 const SingleProduct = () => {
-  const dispatch = useAppDispatch()
+  const dispatch = useDispatch()
 
   const router = useRouter()
 
   const { prodname } = router.query
 
-  const singleProd = useAppSelector((state) =>
+  const singleProd = useSelector((state) =>
     selectProductByName(state, prodname)
   )
 
@@ -42,7 +44,14 @@ const SingleProduct = () => {
     { likes: likes }
   )
 
-  // const onAdd = (product: ProductType ) => {
+  // useEffect(() => {
+  //   if (window.localStorage) {
+  //     localStorage.setItem('cart', JSON.stringify(cartItems))
+  //   }
+  // }, [cartItems])
+  // }, [])
+
+  // const onAdd = (product: Product) => {
   //   const exist = cartItems.find(
   //     (x: { prodId: number }) => x.prodId === product.prodId
   //   )

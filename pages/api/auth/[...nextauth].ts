@@ -2,12 +2,13 @@ import NextAuth, { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 import clientPromise from '../../../lib/mongodb'
-import { connectToMongoDB } from '../../../lib/dbConnect'
+import { connectToMongoose } from '../../../lib/dbConnect'
 // import {IUser} from '../../../types/index'
 import User from '../../../models/users'
 import { comparePassword } from '../../../lib/hashPassword'
 
 export const authOptions: NextAuthOptions = {
+  adapter: MongoDBAdapter(clientPromise),
   providers: [
     CredentialsProvider({
       id: 'credentials',
@@ -17,10 +18,12 @@ export const authOptions: NextAuthOptions = {
         email: { label: 'Email', type: 'email' },
         password: { label: 'Password', type: 'password' },
       },
-      async authorize(credentials) {
-        await connectToMongoDB().catch((err) => {
+      async authorize(credentials, req) {
+        await connectToMongoose().catch((err) => {
           throw new Error(err)
         })
+
+        console.log(req)
 
         // confirm if user email already exists.
         const user = await User.findOne({
@@ -46,8 +49,7 @@ export const authOptions: NextAuthOptions = {
             throw new Error('Invalid password Please enter valid password')
           }
         }
-        // check if user password and email sumitted match user email and passowrd saved in database.
-        //if (user.email === credentials?.email && isPasswordCorrect) {
+
         if (user) {
           return user
         } else {
@@ -56,7 +58,6 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
-  adapter: MongoDBAdapter(clientPromise),
   session: {
     strategy: 'jwt',
   },

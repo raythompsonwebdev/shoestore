@@ -1,4 +1,4 @@
-import type { RootState } from '../../app/store'
+import type { ReduxState } from '../store'
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { SelectBarType } from '../../types/index'
@@ -24,7 +24,7 @@ export const fetchSelectData = createAsyncThunk(
       const resp = await axios.get(url)
       return resp.data.selectresults
     } catch (error) {
-      return thunkAPI.rejectWithValue('something went wrong')
+      return thunkAPI.rejectWithValue(`${error}`)
     }
   }
 )
@@ -56,10 +56,11 @@ export const selectdataSlice = createSlice({
   },
 })
 
-export const getSelectData = (state: RootState) =>
+export const getSelectData = (state: ReduxState) =>
   state.selectdata.selectdataItems
-export const getSelectDataStatus = (state: RootState) => state.selectdata.status
-export const getSelectDataError = (state: RootState) => state.selectdata.error
+export const getSelectDataStatus = (state: ReduxState) =>
+  state.selectdata.status
+export const getSelectDataError = (state: ReduxState) => state.selectdata.error
 
 export const { selectdataAdded } = selectdataSlice.actions
 

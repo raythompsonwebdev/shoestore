@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { CartIcon } from '../Images/Icons'
-import { useAppSelector } from '../../app/store'
+import { useSelector } from '../../features/store'
 import { selectAllCartItems } from '../../features/cart/cartSlice'
 
 export default function Header() {
-  const { cartItems } = useAppSelector(selectAllCartItems)
+  const { cartItems } = useSelector(selectAllCartItems)
 
   return (
     <header id="site-header">

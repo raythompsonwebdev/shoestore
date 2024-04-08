@@ -6,7 +6,7 @@ if (!MONGODB_URI) {
   throw new Error('Invalid environment variable: MONGODB_URI')
 }
 
-export const connectToMongoDB = async () => {
+export const connectToMongoose = async () => {
   try {
     const { connection } = await mongoose.connect(MONGODB_URI)
 
