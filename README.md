@@ -22,13 +22,11 @@ Built using JS framework NextJS (pages router), NextAuth.js, Typescript, MungoDB
 - [Node](https://nodejs.org/en)
 - [Nextjs](https://nextjs.org/learn/foundations/about-nextjs)
 - [Mungodb](https://www.mongodb.com/)
-- [Prettier](https://prettier.io/)
-- [Eslint](https://eslint.org/)
-- [Postcss](https://postcss.org/)
-- [Stylelint](https://stylelint.io/)
 - [Redux toolkit](https://redux-toolkit.js.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Nextauth](https://next-auth.js.org/)
+- [Mongoose](https://mongoosejs.com/docs/)
+- [json webtokens](https://www.npmjs.com/package/jsonwebtoken)
 
 ## Prerequisites
 
